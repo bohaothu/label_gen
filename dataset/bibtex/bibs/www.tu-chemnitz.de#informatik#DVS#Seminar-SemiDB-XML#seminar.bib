@@ -1,0 +1,559 @@
+%% Annett Priemel
+%% TU Chemnitz, Professur DVS
+%% 2004-06-23
+%% annett.priemel@informatik.tu-chemnitz.de
+
+%% Dieses bibtex-File ist auf der Grundlage von entstanden:
+%% BibTeX database for AFT at i3A
+%% bibtexfile{
+%%  author	= " ",
+%%  version	= "1.0",
+%%  date	= "10 April 2003",
+%%  filename	= "fuzzy.bib",
+%%  adress	= "Fachhochschule Trier
+%%		   University of Applied Sciences Trier
+%%		   Postfach 1826
+%%		   D-54208 Trier
+%%		   Germany",
+%%  email	= "<i3a.fh-trier.de>",
+%%  url 	= "http://www.i3a.fh-trier.de/service/download/misc/aft.bib" }
+
+% Anmerkungen:
+% Latex verträgt keine Unterstriche _ mit Backslash auskommentieren
+% doppelte geschweifte Klammern hält Latex davon ab, die Groß/Kleinschreibung zu verändern
+
+% Within this .bib-file use 'and' to specify more than one author. 
+% You have to use only the english abbreviations WITHOUT curly brackets
+% for months! e.g.: 'jan', 'feb', 'mar', 'apr', 'mai', 'jun', 'jul',
+% 'aug', 'sep', 'oct', 'nov', 'dec'.
+
+% Short explanation of entry types:
+%
+% Article:          An article from a journal or magazine.
+% Book:             A Book with an explicit publisher.
+% Booklet:          A work that is printed and bound, but without a 
+%                   named publisher or sponsoring institution.
+% InBook:           A part of a book which may be a chapter (or section
+%                   or whatever) and/or a range of pages.
+% InCollection:     A part of a book having ots own title.
+% InProceedings:    An article in a conference proceedings.
+% Manual:           Technical documentation.
+% Mastersthesis:    A Master's thesis.
+% Misc:             Use this type when nothing else fits.
+% PhDthesis:        A PhD thesis.
+% Proceedings:      The proceedings of a conference. See also: inproceedings.
+% Techreport:       A report published by a school or other institution, 
+%                   usally numbered within a series.
+%
+% Further Information may be found at www.din1505.informationskompetenz.net
+
+%% Innerhalb des Bibtex-Files können Abkürzungen definiert werden
+%% Journal ----------------------------------------------------
+@string{sigmod-rec = "ACM SIGMOD Record"}
+@string{ieee-bulletin = "IEEE Data Eng. Bulletin"} 
+@string{ieee= "IEEE Transactions on Computers"}
+@string{ieeekde= "IEEE Transactions on Knowledge and Data Engineering"}
+@string{cacm= "Commun. ACM"}
+@string{dbs= {Datenbank-Spektrum}}
+%% Conference ----------------------------------------------------
+@string{sigmod="ACM SIGMOD"}
+@string{vldb="VLDB"}
+
+
+
+
+%%%%%%%% article, Zeitschriftenaufsätze
+%%
+%% An article from a journal or magazine.
+%%
+%% Required fields:
+%% author, title, journal, year
+%%
+%% Optional fields:
+%% volume, number, pages, month, note
+
+@ARTICLE{sa:Berners-Leeetal:2001,
+  AUTHOR = {T. Berners-Lee and J. Hendler and O. Lassila},
+  TITLE = {The Semantic Web},
+  JOURNAL = {Scientific American},
+  YEAR = {2001},
+  VOLUME = {284},
+  NUMBER = {5},
+  PAGES = {35--43},
+  SUBJECT = {Semantic Web},
+  NOTES = {\newline Essay about the possibilities of the semantic web.}
+}
+
+@Article{dbs:KlettkeMeyer:2003,
+  author = {Meike Klettke AND Holger Meyer},
+  title = {{Speicherung von XML-Dokumenten - eine Klassifikation}},
+  keywords = {XML Datenbank Indexierung},
+  journal = dbs,
+  volume = {5},
+  number = {},
+  year = {2003},
+  pages = {40-50},
+  abstract = {Die Autoren klassifizieren XML-Dokumenten und wenden darauf verschiedene Methoden der Speicherung, Indexierung und Abfrage an.},
+  notes = {Ansatz von Klassifikation auf Speicherung ist gut},
+  STANDORT  = {Kopie},
+  PFAD = {./Klettke, Meike, Meyer, Holger, 2003, Speicherung von XML-Dokumenten - eine Klassifikation.excerpt}
+}
+
+@Article{dbs:Benn:2002,
+  author = {Wolfgang Benn},
+  title = {{Semistrukturierte Datenmodelle}},
+  keywords = {Semi},
+  journal = dbs,
+  volume = {3},
+  year = {2002},
+  pages = {65-66},
+  abstract = {},
+  notes = {},
+  STANDORT = {Kopie},
+}
+
+@article{acm:Minsky:2000,
+author = {N. H. Minsky and V. Ungureanu},
+title = {Law-Governed Interaction: A Coordination and Control Mechanism for Heterogeneous Distributed Systems},
+journal = {ACM Transaction on Software Engineering and Methodology},
+year = 2000,
+volume = 9,
+number = 3,
+pages = {273--305},
+month = {July},
+keywords = {Distributed Systems} 
+}
+
+@article{VLDB:Buneman:2000,
+   Author = {Buneman, Peter and Fernandez, Mary and Suciu, Dan},
+   Title = {UnQL: a query language and algebra for semistructured data based on structural recursion},
+   Journal = {The VLDB Journal},
+   Volume = {9},
+   Number = {1},
+   Pages = {76-110},
+   Abstract = {This paper presents structural recursion as the basis of the syntax and semantics of query languages for semistructured data and XML. We describe a simple and powerful query language based on pattern matching and show that it can be expressed using structural recursion, which is introduced as a top-down, recursive function, similar to the way XSL is defined on XML trees. On cyclic data, structural recursion can be defined in two equivalent ways: as a recursive function which evaluates the data top-down and remembers all its calls to avoid infinite loops, or as a bulk evaluation which processes the entire data in parallel using only traditional relational algebra operators. The latter makes it possible for optimization techniques in relational queries to be applied to structural recursion. We show that the composition of two structural recursion queries can be expressed as a single such query, and this is used as the basis of an optimization method for mediator systems. Several other formal properties are established: structural recursion can be expressed in first-order logic extended with transitive closure; its data complexity is PTIME; and over relational data it is a conservative extension of the relational calculus. The underlying data model is based on value equality, formally defined with bisimulation. Structural recursion is shown to be invariant with respect to value equality.},
+ Keywords = {Query language, Semistructured data, Structural recursion, Optimization, XML, XSL},
+   Year = {2000} }
+
+
+@article{acm:Codd:1970,
+ author = 	{E. F. Codd},
+ title = 	{A relational model of data for large shared data banks},
+ journal = 	cacm,
+ volume = 	{13},
+ number = 	{6},
+ year = 	{1970},
+ issn = 	{0001-0782},
+ pages = 	{377--387},
+ doi = 		{http://doi.acm.org/10.1145/362384.362685},
+ publisher = 	{ACM Press},
+ }
+
+@article{acm:Chen:1976,
+ author = {Peter Pin-Shan Chen},
+ title = {The entity-relationship model \-toward a unified view of data},
+ journal = {ACM Trans. Database Syst.},
+ volume = {1},
+ number = {1},
+ year = {1976},
+ issn = {0362-5915},
+ pages = {9--36},
+ doi = {http://doi.acm.org/10.1145/320434.320440},
+ publisher = {ACM Press},
+}
+
+
+@Article{SIGMOD:MAGQ:1997,
+  author = "J. McHugh and S. Abiteboul and R. Goldman and D. Quass and
+  J. Widom",
+  title =       {Lore: A Database Management System for Semistructured Data},
+  journal =      sigmod-rec,
+  year =         "1997",
+  month =         "Sep.",
+  volume =       "26",
+  number =       "3",
+  pages =        "54--66",
+}
+
+@Article{SIGMOD:FLM:1998,
+  author =       "D. Florescu and A.~Y. Levy and A. Mendelzon",
+  title =        {Database Techniques for the World-Wide Web: A Survery},
+  journal =      sigmod-rec,
+  year =         "1998",
+  month =         "Sep.",
+  volume =       "27",
+  number =       "3",
+  pages =        "59--74",
+}
+
+@Article{ieee:FK:1999,
+  author =       "D. Florescu and D. Kossmann",
+  title =        {Storing and Querying XML Data Using an RDBMS},
+  journal =      ieee-bulletin,
+  year =         "1999",
+  month =         "Sep.",
+  volume =       "22",
+  number =       "3",
+  pages =        "27--34",
+}
+
+@Article{SIGMOD:LC:2000,
+  author =       {D. Lee and W. W. Chu},
+  title =        {Comparative Analysis of Six XML Schema Languages},
+  journal =      sigmod-rec,
+  year =         "2000",
+  month =         "Sep.",
+  volume =       "29",
+  number =       "3",
+  pages =        "76--87",
+}
+
+
+%%%%%%%% book, Monografien
+%%
+%% A Book with an explicit publisher.
+%%
+%% Required fields:
+%% author or editor, title, publisher, year
+%%
+%% Optional fields:
+%% volume or number, series, address, edition, month, isbn, note
+
+@BOOK{dpunkt:Eckstein:2004,
+   author = {Silke Eckstein AND Rainer Eckstein},
+   title = {XML und Datenmodellierung},
+   adress ={Heidelberg},
+   publisher = {dpunkt.verlag},
+   year = {2004},
+   notes = {},
+   STANDORT = {vom Prof ausgeliehen},
+}
+
+@BOOK{dpunkt:RahmVossen:2004,
+   title = {Web \& Datenbanken},
+   year = {2004},
+   editor = {Erhard Rahm AND Gottfried Vossen},
+   adress ={Heidelberg},
+   publisher = {dpunkt.verlag},
+   keywords = {Datenbank XML},
+}
+
+@BOOK{dpunkt:KlettkeMeyer:2003,
+   author = {Meike Klettke AND Holger Meyer},
+   title = {XML \& Datenbanken - Konzepte, Sprachen und Systeme},
+   adress ={Heidelberg},
+   publisher = {dpunkt.verlag},
+   year = {2003},
+   keywords = {Datenbank XML},
+}
+  
+@book{morgan:Abiteboul:2000,
+   Author = {Serge Abiteboul AND Peter Buneman AND Dan Suciu},
+   Title = {Data on the Web - From Relations to Semistructures Data and XML},
+   Publisher = {Morgan Kaufman},
+   Year = {2000} ,
+}
+
+@book{morgan:ElmasriNavathe:2002,
+   Author = {Ramez Elmasri AND Shamkant B. Navathe},
+   Title = {Grundlagen von Datenbank-Systemen},
+   Publisher = {Morgan Kaufman},
+   Year = {2000} ,
+   edition = {3., überarb.},
+}
+
+@book{oreilly:HaroldMeans:2001,
+   author	= {Elliot Rusty Harold and W.Scott Means},
+   title		= {{XML in a nutshell}},
+   publisher	= {O'Reilly Verlag},
+   address       = {K{\"o}ln},
+   year		= 2001,
+   edition	= {1.},
+   isbn		= {3-89721-198-X}
+}
+
+@book{ieee:Laplante:1996,
+   author	= {Phillip Laplante},
+   title		= {{Great Papers in Computer Science}},
+   publisher	= {IEEE Press},
+   year		= 1996,
+   isbn		= {0-703-1112-4}
+}
+	
+
+%%%%%%%% booklet
+%%
+%% A work that is printed and bound, but without a named publisher or
+%% sponsoring institution.
+%%
+%% Required fields:
+%% title
+%%
+%% Optional fields:
+%% author, howpublished, address, month, year, note
+
+
+
+%%%%%%%% inbook
+%%
+%% A part of a book which may be a chapter (or section or whatever) and/or 
+%% a range of pages.
+%%
+%% Required fields:
+%% author or editor, title, chapter and/or pages, publisher, year
+%%
+%% Optional fields:
+%% volume or number, series, type, address, edition, month, note
+
+
+%%%%%%%% inproceedings, Konferenzbeiträge
+%%
+%% An article in a conference preceedings.
+%%
+%% Required fields:
+%% author, title, booktitle, year
+%%
+%% Optional fields:
+%% editor, volume or number, series, pages, address, month, organization, 
+%% publisher, note
+
+@inproceedings{ieee:PGW:1995,
+   author = {Yannis Papakonstantinou and Hector Garcia-Molina and Jennifer Widom},
+   title = {Object Exchange Across Heterogeneous Information Sources},
+   booktitle = {Proceedings of the Eleventh International Conference on Data Engineering},
+   year = {1995},
+   isbn = {0-8186-6910-1},
+   pages = {251--260},
+   publisher = {IEEE Computer Society},
+   url = "citeseer.ist.psu.edu/papakonstantinou95object.html" ,
+}
+
+@inproceedings{acm:Bunemann:1997,
+   Author = {Buneman, Peter},
+   Title = {Semistructured Data},
+   BookTitle = {Principles of Database Systems (PODS)},
+   Address= {Tuscon Arizona, USA},
+   Publisher = {ACM},
+   Pages = {117-121},
+   Keywords = {Semi},
+   Year = {1997} }
+
+@InProceedings{SIGMOD:DFS:1998,
+   author =       "A. Deutsch and M. F. Fernandez and D. Suciu",
+   title =        {Storing Semistructured Data with STORED},
+   booktitle =    sigmod,
+   address =      "Philadephia, PA",
+   year =         "1998",
+   month =        "Jun.",
+} 
+
+@InProceedings{VLDB:STH:1999,
+   author =       "J. Shanmugasundaram and K. Tufte and G. He and C. Zhang and D. DeWitt and J. Naughton",
+   title =        {Relational Databases for Querying XML Documents: Limitations and Opportunities},
+   booktitle =    vldb,
+   address =      "Edinburgh, Scotland",
+   year =         "1999",
+   month =        "Sep.",
+}
+
+SIGMODceedings{WWW:MSL:2001,
+   author =       "A. Brown and M. Fuchs and J. Robie and P. Wadler",
+   title = 	{MSL: A Model for W3C XML Schema},
+   booktitle =    "10th International World Wide Web Conference",
+   address =      "Hong Kong",
+   year =         "2001",
+   month =        "May",
+}
+
+@inproceedings{acm:Vianu:2001,
+   author = {Victor Vianu},
+   title = {A Web Odyssey: from Codd to XML},
+   booktitle = {Proceedings of the twentieth ACM SIGMOD-SIGACT-SIGART symposium on Principles of database systems},
+   year = {2001},
+   isbn = {1-58113-361-8},
+   pages = {1--15},
+   location = {Santa Barbara, California, United States},
+   doi = {http://doi.acm.org/10.1145/375551.375554},
+   publisher = {ACM Press},
+ }
+
+
+%%%%%%%% incollection, Aufsätze aus einem Sammelband
+%%
+%% A part of a book having its own title.
+%%
+%% Required fields:
+%% author, title, booktitle, publisher, year
+%%
+%% Optional fields:
+%% editor, volume or number, series, type, chapter, pages, address, 
+%% edition, month, note
+
+
+@incollection{dpunkt:Benn:2003,
+   author = {Wolfgang Benn AND Oliver Langer},
+   title = {{Semistrukturierte Datenmodelle und XML}},
+   editor = {Erhard Rahm AND Gottfried Vossen},
+   booktitle = {Web \& Datenbanken},
+   pages = {3--32},
+   publisher = {dpunkt.verlag},
+   year = {2003},
+}
+
+
+%%%%%%%% techreport
+%%
+%% A report published by a school or other institution, usally 
+%% numbered within a series.
+%%
+%% Required fields:
+%% author, title, institution, year
+%%
+%% Optional fields:
+%% type, number, address, month, note
+
+@techreport{WWW:XML:2000,
+   author = {{W3C}},
+   title = {{Extensible Markup Language (XML) 1.0 (Second Edition)}},
+   type= {Recommendation},
+   month = {October},
+   year = 2000,
+   note = {http://www.w3.org/TR/2000/REC-xml-20001006},
+   keywords = {Standards and Specifications} ,
+}
+
+@techreport{WWW:XML:2004,
+   author = {{W3C}},
+   title = {{Extensible Markup Language (XML) 1.0 (Third Edition)}},
+   type= {Recommendation},
+   month = {February},
+   year = 2004,
+   note = {http://www.w3.org/TR/2004/REC-xml-20040204/},
+   keywords = {Standards and Specifications} ,
+}
+
+@techreport{WWW:XML-Schema:2001,
+   author = {{W3C}},
+   title = {{XML Schema Part 0: Primer}},
+   type = {Recommendation},
+   year = {2001},
+   month = {May},
+   note = {http://www.w3.org/TR/2001/REC-xmlschema-0-20010502/},
+}
+
+@TechReport{WWW:RDF:1999,
+   author = {{W3C}},
+   title = {{Resource Description Framework (RDF) Model and Syntax Specification}},
+   type = {Recommendation},
+   year = {1999},
+   month = {February},
+   note = {http://www.w3.org/TR/1999/REC-rdf-syntax-19990222},
+}
+
+@TechReport{WWW:RDF:2004,
+   author = {{W3C}},
+   title = {{RDF Primer}},
+   type = {Recommendation},
+   year = {2004},
+   month = {February},
+   note = {http://www.w3.org/TR/2004/REC-rdf-primer-20040210/},
+}
+
+@TechReport{WWW:RDF-Schema:2004,
+   author = {{W3C}},
+   title = {{RDF Vocabulary Description Language 1.0: RDF Schema}},
+   type = {Recommendation},
+   year = {2004},
+   month = {February},
+   note = {http://www.w3.org/TR/2004/REC-rdf-schema-20040210/},
+}
+
+%%%%%%%% manual
+%%
+%% Technical documentation.
+%%
+%% Required fields:
+%% title
+%%
+%% Optional fields:
+%% author, editor, organization, address, edition, month, year, note
+
+
+
+%%%%%%%% mastersthesis
+%%
+%% A Master's thesis.
+%%
+%% Required fields:
+%% author, title, school, year
+%%
+%% Optional fields:
+%% type, address, month, note
+
+@mastersthesis{Weinhold:2003,
+   author      = {Jens Ole Weinhold},
+   title       = {{Effiziente L{\"o}sung restringierter Least-Squares                    Probleme zur Parameteroptimierung in TSK-Fuzzy-Systemen}},
+   school      = {Universit{\"a}t zu L{\"u}beck, 
+                  Technisch-Naturwissenschaftliche Fakult{\"a}t, 
+                  Institut f{\"u}r Mathematik},
+   year        = 2003,
+   type 	= {Diplomarbeit},
+   month       = Apr,
+}
+
+
+
+
+%%%%%%%% misc
+%%
+%% Use this type when nothing else fits.
+%%
+%% Required fields:
+%% none.
+%%
+%% Optional fields:
+%% author, title, url, month, year, note
+
+@Misc{WWW:Meuss:2003,
+   author = {Holger Meuss},
+   title = {{XML Anfragesprachen. Skriptum zum Hauptseminar 2002/03}},
+   year = {Centrum für Informations- und Sprachverarbeitung, LMU München, 21. Januar 2003},
+   note = {http://www.cis.uni-muenchen.de/people/Meuss/XMLanfragen/skriptum.pdf},
+}
+
+@Misc{WWW:DIN1505:2003,
+   title = {{Bibliografische Regeln entsprechend der DIN 1505-Norm}},
+   note = {{\newline http://www.phil-fak.uni-duesseldorf.de/ie/competence/09\_schriftkom/bibdin.html (zuletzt aktualisiert: 2003-04-01)}},
+}
+   
+   
+
+%%%%%%%% phdthesis
+%%
+%% A PhD thesis.
+%%
+%% Required fields:
+%% author, title, school, year
+%% 
+%% Optional fields:
+%% type, address, month, note
+   
+@phdthesis{Setnes:2001,
+    author    = {Magne Setnes},
+    title     = {{Complexity Reduction in Fuzzy Systems}},
+    school    = {Technische Universität Delft},
+    year      = 2001
+}
+
+
+%%%%%%%% proceedings
+%%
+%% The proceedings of a conference. See also: inproceedings.
+%%
+%% Required fields:
+%% title, year
+%%
+%% Optional fields:
+%% editor, volume or number, series, address, month, organization, publisher, note
+
+

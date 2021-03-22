@@ -1,0 +1,1030 @@
+
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>
+  aschatt / Spread the Word / source &mdash; Bitbucket
+</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="description" content="" />
+  <meta name="keywords" content="" />
+  <!--[if lt IE 9]>
+  <script src="https://dwz7u9t8u8usb.cloudfront.net/m/46c15ee9bc85/js/lib/html5.js"></script>
+  <![endif]-->
+
+  <script>
+    (function (window) {
+      // prevent stray occurrences of `console.log` from causing errors in IE
+      var console = window.console || (window.console = {});
+      console.log || (console.log = function () {});
+
+      var BB = window.BB || (window.BB = {});
+      BB.debug = false;
+      BB.cname = false;
+      BB.CANON_URL = 'https://bitbucket.org';
+      BB.MEDIA_URL = 'https://dwz7u9t8u8usb.cloudfront.net/m/46c15ee9bc85/';
+      BB.user || (BB.user = {});
+      BB.user.has = (function () {
+        var betaFeatures = [];
+        
+        return function (feature) {
+          return _.contains(betaFeatures, feature);
+        };
+      }());
+      BB.repo || (BB.repo = {});
+  
+  
+      BB.user.isAdmin = false
+      BB.repo.id = 19510;
+    
+    
+      BB.repo.slug = 'spread\u002Dthe\u002Dword';
+    
+    
+      BB.repo.owner = {
+        username: 'aschatt'
+      };
+    
+      // Coerce `BB.repo` to a string to get
+      // "davidchambers/mango" or whatever.
+      BB.repo.toString = function () {
+        return this.owner.username + '/' + this.slug;
+      }
+    
+      BB.changeset = 'b165cb97a76e'
+    
+    
+  
+    }(this));
+  </script>
+
+  
+    <link rel="stylesheet" href="https://dwz7u9t8u8usb.cloudfront.net/m/46c15ee9bc85/bun/css/bundle.css"/>
+  
+
+  <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="Bitbucket" />
+  <link rel="icon" href="https://dwz7u9t8u8usb.cloudfront.net/m/46c15ee9bc85/img/logo_new.png" type="image/png" />
+  <link type="text/plain" rel="author" href="/humans.txt" />
+
+
+  
+    <script src="https://dwz7u9t8u8usb.cloudfront.net/m/46c15ee9bc85/bun/js/bundle.js"></script>
+  
+
+
+
+</head>
+
+<body class="">
+  <script type="text/javascript">
+    if (!RegExp(" AppleWebKit/").test(navigator.userAgent)) {
+    $('body').addClass('non-webkit');
+    }
+  </script>
+  <!--[if IE 8]>
+  <script>jQuery(document.body).addClass('ie8')</script>
+  <![endif]-->
+  <!--[if IE 9]>
+  <script>jQuery(document.body).addClass('ie9')</script>
+  <![endif]-->
+
+  <div id="wrapper">
+
+
+
+  <div id="header-wrap">
+    <div id="header">
+    <ul id="global-nav">
+      <li><a class="home" href="http://www.atlassian.com">Atlassian Home</a></li>
+      <li><a class="docs" href="http://confluence.atlassian.com/display/BITBUCKET">Documentation</a></li>
+      <li><a class="support" href="/support">Support</a></li>
+      <li><a class="blog" href="http://blog.bitbucket.org">Blog</a></li>
+      <li><a class="forums" href="http://groups.google.com/group/bitbucket-users">Forums</a></li>
+    </ul>
+    <a href="/" id="logo">Bitbucket by Atlassian</a>
+
+    <div id="main-nav" class="clearfix">
+    
+      <ul class="clearfix">
+        <li><a href="/features">Features</a></li>
+        <li><a href="/plans">Pricing &amp; signup</a></li>
+        <li><a href="/explore">Explore Bitbucket</a></li>
+        <li><a href="/account/signin/?next=/aschatt/spread-the-word/src/b165cb97a76e/documentation/vision/stw_vision.bib">Log in</a></li>
+        
+
+<li class="search-box">
+  
+    <form action="/repo/all">
+      <input type="search" results="5" autosave="bitbucket-explore-search"
+             name="name" id="searchbox"
+             placeholder="Find a project" />
+  
+  </form>
+</li>
+
+      </ul>
+    
+    </div>
+    </div>
+  </div>
+
+    <div id="header-messages">
+  
+  
+    
+    
+    
+    
+  
+
+    
+   </div>
+
+
+
+    <div id="content">
+      <div id="unnamed">
+      
+  
+  
+
+
+
+
+
+  <script>
+    jQuery(function ($) {
+        var cookie = $.cookie,
+            cookieOptions, date,
+            $content = $('#content'),
+            $pane = $('#what-is-bitbucket'),
+            $hide = $pane.find('[href="#hide"]').css('display', 'block').hide();
+
+        date = new Date();
+        date.setTime(date.getTime() + 365 * 24 * 60 * 60 * 1000);
+        cookieOptions = { path: '/', expires: date };
+
+        if (cookie('toggle_status') == 'hide') $content.addClass('repo-desc-hidden');
+
+        $('#toggle-repo-content').click(function (event) {
+            event.preventDefault();
+            $content.toggleClass('repo-desc-hidden');
+            cookie('toggle_status', cookie('toggle_status') == 'show' ? 'hide' : 'show', cookieOptions);
+        });
+
+        if (!cookie('hide_intro_message')) $pane.show();
+
+        $hide.click(function (event) {
+            event.preventDefault();
+            cookie('hide_intro_message', true, cookieOptions);
+            $pane.slideUp('slow');
+        });
+
+        $pane.hover(
+            function () { $hide.fadeIn('fast'); },
+            function () { $hide.fadeOut('fast'); });
+
+      (function () {
+        // Update "recently-viewed-repos" cookie for
+        // the "repositories" drop-down.
+        var
+          id = BB.repo.id,
+          cookieName = 'recently-viewed-repos_' + BB.user.id,
+          rvr = cookie(cookieName),
+          ids = rvr? rvr.split(','): [],
+          idx = _.indexOf(ids, '' + id);
+
+        // Remove `id` from `ids` if present.
+        if (~idx) ids.splice(idx, 1);
+
+        cookie(
+          cookieName,
+          // Insert `id` as the first item, then call
+          // `join` on the resulting array to produce
+          // something like "114694,27542,89002,84570".
+          [id].concat(ids.slice(0, 4)).join(),
+          {path: '/', expires: 1e6} // "never" expires
+        );
+      }());
+    });
+  </script>
+
+
+
+  
+  
+  
+  
+  
+    <div id="what-is-bitbucket" class="new-to-bitbucket">
+      <h2>Alexander Schatten <span id="slogan">is sharing code with you</span></h2>
+      <img src="https://bitbucket-assetroot.s3.amazonaws.com:443/c/photos/2009/Aug/24/alexander_schatten_bw_avatar.jpg" alt="" class="avatar" />
+      <p>Bitbucket is a code hosting site. Unlimited public and private repositories. Free for small teams.</p>
+      <div class="primary-action-link signup"><a href="/account/signup/?utm_source=internal&utm_medium=banner&utm_campaign=what_is_bitbucket">Try Bitbucket free</a></div>
+      <a href="#hide" title="Don't show this again">Don't show this again</a>
+    </div>
+  
+
+
+<div id="tabs">
+  <ul class="tabs">
+    <li>
+      <a href="/aschatt/spread-the-word/overview">Overview</a>
+    </li>
+
+    <li>
+      <a href="/aschatt/spread-the-word/downloads">Downloads (<span id="downloads-count">0</span>)</a>
+    </li>
+
+    
+
+    <li>
+      <a href="/aschatt/spread-the-word/pull-requests">Pull requests (0)</a>
+    </li>
+
+    <li class="selected">
+      
+        <a href="/aschatt/spread-the-word/src">Source</a>
+      
+    </li>
+
+    <li>
+      <a href="/aschatt/spread-the-word/changesets">Commits</a>
+    </li>
+
+    
+      
+        <li class="dropdown">
+          <a href="/aschatt/spread-the-word/wiki">Wiki</a>
+        </li>
+      
+    
+
+    
+      
+        <li class="dropdown inertial-hover">
+          <a href="/aschatt/spread-the-word/issues?status=new&amp;status=open">Issues (3) &raquo;</a>
+          <ul>
+            <li><a href="/aschatt/spread-the-word/issues/new">Create new issue</a></li>
+            <li><a href="/aschatt/spread-the-word/issues?status=new">New issues</a></li>
+            <li><a href="/aschatt/spread-the-word/issues?status=new&amp;status=open">Open issues</a></li>
+            <li><a href="/aschatt/spread-the-word/issues?status=duplicate&amp;status=invalid&amp;status=resolved&amp;status=wontfix">Closed issues</a></li>
+            
+            <li><a href="/aschatt/spread-the-word/issues">All issues</a></li>
+            <li><a href="/aschatt/spread-the-word/issues/query">Advanced query</a></li>
+          </ul>
+        </li>
+      
+    
+
+    
+
+    <li class="secondary">
+      <a href="/aschatt/spread-the-word/descendants">Forks/queues (0)</a>
+    </li>
+
+    <li class="secondary">
+      <a href="/aschatt/spread-the-word/zealots">Followers (<span id="followers-count">3</span>)</a>
+    </li>
+  </ul>
+</div>
+
+
+  <div class="repo-menu" id="repo-menu">
+    <ul id="repo-menu-links">
+    
+      <li>
+        <a href="/aschatt/spread-the-word/rss" class="rss" title="RSS feed for Spread the Word">RSS</a>
+      </li>
+
+      <li><a href="/aschatt/spread-the-word/fork" class="fork">fork</a></li>
+      
+        
+          <li><a href="/aschatt/spread-the-word/hack" class="patch-queue">patch queue</a></li>
+        
+      
+      <li>
+        <a rel="nofollow" href="/aschatt/spread-the-word/follow" class="follow">follow</a>
+      </li>
+      
+          
+      
+      
+        <li class="get-source inertial-hover">
+          <a class="source">get source</a>
+          <ul class="downloads">
+            
+              
+              <li><a rel="nofollow" href="/aschatt/spread-the-word/get/b165cb97a76e.zip">zip</a></li>
+              <li><a rel="nofollow" href="/aschatt/spread-the-word/get/b165cb97a76e.tar.gz">gz</a></li>
+              <li><a rel="nofollow" href="/aschatt/spread-the-word/get/b165cb97a76e.tar.bz2">bz2</a></li>
+            
+          </ul>
+        </li>
+      
+    </ul>
+
+  
+    <ul class="metadata">
+      
+      
+        <li class="branches inertial-hover">branches
+          <ul>
+            <li><a href="/aschatt/spread-the-word/src/b90d6d78c037">default</a>
+              
+              
+            </li>
+          </ul>
+        </li>
+      
+      
+      <li class="tags inertial-hover">tags
+        <ul>
+          <li><a href="/aschatt/spread-the-word/src/b90d6d78c037">tip</a>
+            
+            </li>
+        </ul>
+      </li>
+     
+     
+    </ul>
+  
+</div>
+<div class="repo-menu" id="repo-desc">
+  
+    <ul id="repo-menu-links-mini">
+      <li><a rel="nofollow" class="compare-link"
+             href="/aschatt/spread-the-word/compare/../"
+             title="Show changes between Spread the Word and "
+             ></a></li>
+      
+  
+
+      
+      <li>
+        <a href="/aschatt/spread-the-word/rss" class="rss" title="RSS feed for Spread the Word"></a>
+      </li>
+
+      <li><a href="/aschatt/spread-the-word/fork" class="fork" title="Fork"></a></li>
+      
+        
+          <li><a href="/aschatt/spread-the-word/hack" class="patch-queue" title="Patch queue"></a></li>
+        
+      
+      <li>
+        <a rel="nofollow" href="/aschatt/spread-the-word/follow" class="follow">follow</a>
+      </li>
+      
+          
+      
+    
+      
+        <li>
+          <a class="source" title="Get source"></a>
+          <ul class="downloads">
+            
+              
+                <li><a rel="nofollow" href="/aschatt/spread-the-word/get/b90d6d78c037.zip">zip</a></li>
+                <li><a rel="nofollow" href="/aschatt/spread-the-word/get/b90d6d78c037.tar.gz">gz</a></li>
+                <li><a rel="nofollow" href="/aschatt/spread-the-word/get/b90d6d78c037.tar.bz2">bz2</a></li>
+              
+            
+          </ul>
+        </li>
+      
+    
+    </ul>
+
+    <h3 id="repo-heading">
+      <a class="owner-username" href="/aschatt">aschatt</a> /
+      <a class="repo-name" href="/aschatt/spread-the-word/wiki/Home">Spread the Word</a>
+    
+      <span><a href="http://bitbucket.org/aschatt/spread-the-word/wiki/Home">http://bitbucket.org/aschatt/spread-the-word/wiki/Home</a></span>
+    
+
+    
+    </h3>
+
+
+  <p class="repo-desc-description">The &quot;Spread the Word&quot; project aims at building a new social communication network that should support a variety of clients (mobile, desktop). The focus is on reliable communication that still provides anonymity, availability and robustness against censorship and other types of attacks in order to support freedom of speech. </p>
+
+
+  <div id="repo-desc-cloneinfo">Clone this repository (size: 24.4 MB):
+    <a href="https://bitbucket.org/aschatt/spread-the-word" class="https">HTTPS</a> /
+    <a href="ssh://hg@bitbucket.org/aschatt/spread-the-word" class="ssh">SSH</a>
+    <pre id="clone-url-https">hg clone https://bitbucket.org/aschatt/spread-the-word</pre>
+    <pre id="clone-url-ssh">hg clone ssh://hg@bitbucket.org/aschatt/spread-the-word</pre>
+    
+  </div>
+
+  <a href="#" id="toggle-repo-content"></a>
+
+  
+
+</div>
+
+
+
+
+      
+
+  <div id="source-path">
+    <h1>
+      <a href="/aschatt/spread-the-word/src">Spread the Word</a> /
+
+  
+    
+      <a href="/aschatt/spread-the-word/src/b165cb97a76e/documentation/">documentation</a> /
+    
+  
+
+  
+    
+      <a href="/aschatt/spread-the-word/src/b165cb97a76e/documentation/vision/">vision</a> /
+    
+  
+
+  
+    
+      stw_vision.bib
+    
+  
+
+    </h1>
+  </div>
+
+
+  
+  <div id="source-view">
+    <div class="header">
+      <ul class="metadata">
+        <li><code>b165cb97a76e</code></li>
+        <li>228 loc</li>
+        <li>7.0 KB</li>
+      </ul>
+      <ul class="source-view-links">
+        
+        <li><a id="embed-link" href="https://bitbucket.org/aschatt/spread-the-word/src/b165cb97a76e/documentation/vision/stw_vision.bib?embed=t">embed</a></li>
+        
+        <li><a href="/aschatt/spread-the-word/history/documentation/vision/stw_vision.bib">history</a></li>
+        
+        <li><a href="/aschatt/spread-the-word/annotate/b165cb97a76e/documentation/vision/stw_vision.bib">annotate</a></li>
+        
+        <li><a href="/aschatt/spread-the-word/raw/b165cb97a76e/documentation/vision/stw_vision.bib">raw</a></li>
+        <li>
+          <form action="/aschatt/spread-the-word/diff/documentation/vision/stw_vision.bib" class="source-view-form">
+          
+            <input type="hidden" name="diff2" value="b165cb97a76e" />
+            <select name="diff1">
+            
+              
+                <option value="18c81a77b6c3">18c81a77b6c3</option>
+              
+            
+              
+                <option value="c12806e653bf">c12806e653bf</option>
+              
+            
+              
+            
+              
+                <option value="723b3dc1de87">723b3dc1de87</option>
+              
+            
+              
+                <option value="c063342a311a">c063342a311a</option>
+              
+            
+              
+                <option value="c08c2c4ad545">c08c2c4ad545</option>
+              
+            
+            </select>
+            <input type="submit" value="diff" />
+          
+          </form>
+        </li>
+      </ul>
+    </div>
+  
+    <div>
+    <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><a href="#cl-1">  1</a>
+<a href="#cl-2">  2</a>
+<a href="#cl-3">  3</a>
+<a href="#cl-4">  4</a>
+<a href="#cl-5">  5</a>
+<a href="#cl-6">  6</a>
+<a href="#cl-7">  7</a>
+<a href="#cl-8">  8</a>
+<a href="#cl-9">  9</a>
+<a href="#cl-10"> 10</a>
+<a href="#cl-11"> 11</a>
+<a href="#cl-12"> 12</a>
+<a href="#cl-13"> 13</a>
+<a href="#cl-14"> 14</a>
+<a href="#cl-15"> 15</a>
+<a href="#cl-16"> 16</a>
+<a href="#cl-17"> 17</a>
+<a href="#cl-18"> 18</a>
+<a href="#cl-19"> 19</a>
+<a href="#cl-20"> 20</a>
+<a href="#cl-21"> 21</a>
+<a href="#cl-22"> 22</a>
+<a href="#cl-23"> 23</a>
+<a href="#cl-24"> 24</a>
+<a href="#cl-25"> 25</a>
+<a href="#cl-26"> 26</a>
+<a href="#cl-27"> 27</a>
+<a href="#cl-28"> 28</a>
+<a href="#cl-29"> 29</a>
+<a href="#cl-30"> 30</a>
+<a href="#cl-31"> 31</a>
+<a href="#cl-32"> 32</a>
+<a href="#cl-33"> 33</a>
+<a href="#cl-34"> 34</a>
+<a href="#cl-35"> 35</a>
+<a href="#cl-36"> 36</a>
+<a href="#cl-37"> 37</a>
+<a href="#cl-38"> 38</a>
+<a href="#cl-39"> 39</a>
+<a href="#cl-40"> 40</a>
+<a href="#cl-41"> 41</a>
+<a href="#cl-42"> 42</a>
+<a href="#cl-43"> 43</a>
+<a href="#cl-44"> 44</a>
+<a href="#cl-45"> 45</a>
+<a href="#cl-46"> 46</a>
+<a href="#cl-47"> 47</a>
+<a href="#cl-48"> 48</a>
+<a href="#cl-49"> 49</a>
+<a href="#cl-50"> 50</a>
+<a href="#cl-51"> 51</a>
+<a href="#cl-52"> 52</a>
+<a href="#cl-53"> 53</a>
+<a href="#cl-54"> 54</a>
+<a href="#cl-55"> 55</a>
+<a href="#cl-56"> 56</a>
+<a href="#cl-57"> 57</a>
+<a href="#cl-58"> 58</a>
+<a href="#cl-59"> 59</a>
+<a href="#cl-60"> 60</a>
+<a href="#cl-61"> 61</a>
+<a href="#cl-62"> 62</a>
+<a href="#cl-63"> 63</a>
+<a href="#cl-64"> 64</a>
+<a href="#cl-65"> 65</a>
+<a href="#cl-66"> 66</a>
+<a href="#cl-67"> 67</a>
+<a href="#cl-68"> 68</a>
+<a href="#cl-69"> 69</a>
+<a href="#cl-70"> 70</a>
+<a href="#cl-71"> 71</a>
+<a href="#cl-72"> 72</a>
+<a href="#cl-73"> 73</a>
+<a href="#cl-74"> 74</a>
+<a href="#cl-75"> 75</a>
+<a href="#cl-76"> 76</a>
+<a href="#cl-77"> 77</a>
+<a href="#cl-78"> 78</a>
+<a href="#cl-79"> 79</a>
+<a href="#cl-80"> 80</a>
+<a href="#cl-81"> 81</a>
+<a href="#cl-82"> 82</a>
+<a href="#cl-83"> 83</a>
+<a href="#cl-84"> 84</a>
+<a href="#cl-85"> 85</a>
+<a href="#cl-86"> 86</a>
+<a href="#cl-87"> 87</a>
+<a href="#cl-88"> 88</a>
+<a href="#cl-89"> 89</a>
+<a href="#cl-90"> 90</a>
+<a href="#cl-91"> 91</a>
+<a href="#cl-92"> 92</a>
+<a href="#cl-93"> 93</a>
+<a href="#cl-94"> 94</a>
+<a href="#cl-95"> 95</a>
+<a href="#cl-96"> 96</a>
+<a href="#cl-97"> 97</a>
+<a href="#cl-98"> 98</a>
+<a href="#cl-99"> 99</a>
+<a href="#cl-100">100</a>
+<a href="#cl-101">101</a>
+<a href="#cl-102">102</a>
+<a href="#cl-103">103</a>
+<a href="#cl-104">104</a>
+<a href="#cl-105">105</a>
+<a href="#cl-106">106</a>
+<a href="#cl-107">107</a>
+<a href="#cl-108">108</a>
+<a href="#cl-109">109</a>
+<a href="#cl-110">110</a>
+<a href="#cl-111">111</a>
+<a href="#cl-112">112</a>
+<a href="#cl-113">113</a>
+<a href="#cl-114">114</a>
+<a href="#cl-115">115</a>
+<a href="#cl-116">116</a>
+<a href="#cl-117">117</a>
+<a href="#cl-118">118</a>
+<a href="#cl-119">119</a>
+<a href="#cl-120">120</a>
+<a href="#cl-121">121</a>
+<a href="#cl-122">122</a>
+<a href="#cl-123">123</a>
+<a href="#cl-124">124</a>
+<a href="#cl-125">125</a>
+<a href="#cl-126">126</a>
+<a href="#cl-127">127</a>
+<a href="#cl-128">128</a>
+<a href="#cl-129">129</a>
+<a href="#cl-130">130</a>
+<a href="#cl-131">131</a>
+<a href="#cl-132">132</a>
+<a href="#cl-133">133</a>
+<a href="#cl-134">134</a>
+<a href="#cl-135">135</a>
+<a href="#cl-136">136</a>
+<a href="#cl-137">137</a>
+<a href="#cl-138">138</a>
+<a href="#cl-139">139</a>
+<a href="#cl-140">140</a>
+<a href="#cl-141">141</a>
+<a href="#cl-142">142</a>
+<a href="#cl-143">143</a>
+<a href="#cl-144">144</a>
+<a href="#cl-145">145</a>
+<a href="#cl-146">146</a>
+<a href="#cl-147">147</a>
+<a href="#cl-148">148</a>
+<a href="#cl-149">149</a>
+<a href="#cl-150">150</a>
+<a href="#cl-151">151</a>
+<a href="#cl-152">152</a>
+<a href="#cl-153">153</a>
+<a href="#cl-154">154</a>
+<a href="#cl-155">155</a>
+<a href="#cl-156">156</a>
+<a href="#cl-157">157</a>
+<a href="#cl-158">158</a>
+<a href="#cl-159">159</a>
+<a href="#cl-160">160</a>
+<a href="#cl-161">161</a>
+<a href="#cl-162">162</a>
+<a href="#cl-163">163</a>
+<a href="#cl-164">164</a>
+<a href="#cl-165">165</a>
+<a href="#cl-166">166</a>
+<a href="#cl-167">167</a>
+<a href="#cl-168">168</a>
+<a href="#cl-169">169</a>
+<a href="#cl-170">170</a>
+<a href="#cl-171">171</a>
+<a href="#cl-172">172</a>
+<a href="#cl-173">173</a>
+<a href="#cl-174">174</a>
+<a href="#cl-175">175</a>
+<a href="#cl-176">176</a>
+<a href="#cl-177">177</a>
+<a href="#cl-178">178</a>
+<a href="#cl-179">179</a>
+<a href="#cl-180">180</a>
+<a href="#cl-181">181</a>
+<a href="#cl-182">182</a>
+<a href="#cl-183">183</a>
+<a href="#cl-184">184</a>
+<a href="#cl-185">185</a>
+<a href="#cl-186">186</a>
+<a href="#cl-187">187</a>
+<a href="#cl-188">188</a>
+<a href="#cl-189">189</a>
+<a href="#cl-190">190</a>
+<a href="#cl-191">191</a>
+<a href="#cl-192">192</a>
+<a href="#cl-193">193</a>
+<a href="#cl-194">194</a>
+<a href="#cl-195">195</a>
+<a href="#cl-196">196</a>
+<a href="#cl-197">197</a>
+<a href="#cl-198">198</a>
+<a href="#cl-199">199</a>
+<a href="#cl-200">200</a>
+<a href="#cl-201">201</a>
+<a href="#cl-202">202</a>
+<a href="#cl-203">203</a>
+<a href="#cl-204">204</a>
+<a href="#cl-205">205</a>
+<a href="#cl-206">206</a>
+<a href="#cl-207">207</a>
+<a href="#cl-208">208</a>
+<a href="#cl-209">209</a>
+<a href="#cl-210">210</a>
+<a href="#cl-211">211</a>
+<a href="#cl-212">212</a>
+<a href="#cl-213">213</a>
+<a href="#cl-214">214</a>
+<a href="#cl-215">215</a>
+<a href="#cl-216">216</a>
+<a href="#cl-217">217</a>
+<a href="#cl-218">218</a>
+<a href="#cl-219">219</a>
+<a href="#cl-220">220</a>
+<a href="#cl-221">221</a>
+<a href="#cl-222">222</a>
+<a href="#cl-223">223</a>
+<a href="#cl-224">224</a>
+<a href="#cl-225">225</a>
+<a href="#cl-226">226</a>
+<a href="#cl-227">227</a>
+<a href="#cl-228">228</a>
+</pre></div></td><td class="code"><div class="highlight"><pre><a name="cl-1"></a>@misc{gb_TED,
+<a name="cl-2"></a>title =  &quot;Wiring a web for global good&quot;,
+<a name="cl-3"></a>author =  &quot;Brown, Gordon&quot;,
+<a name="cl-4"></a>howpublished = &quot;\url{http://www.ted.com/talks/gordon_brown.html}&quot;,
+<a name="cl-5"></a>year = &quot;2009&quot;
+<a name="cl-6"></a>}
+<a name="cl-7"></a>
+<a name="cl-8"></a>@misc{ja_Revo,
+<a name="cl-9"></a>title =  &quot;U Say U Want A Revolution&quot;,
+<a name="cl-10"></a>author =  &quot;Adelman, Jacob&quot;,
+<a name="cl-11"></a>howpublished = &quot;\url{http://www.time.com/time/magazine/article/0,9171,660984,00.html}&quot;,
+<a name="cl-12"></a>year = &quot;2004&quot;
+<a name="cl-13"></a>}
+<a name="cl-14"></a>
+<a name="cl-15"></a>@misc{nm_Zimb,
+<a name="cl-16"></a>title =  &quot;Zimbabwe: Using New Technologies to Fight for Democracy&quot;,
+<a name="cl-17"></a>author =  &quot;Macha, Ndesanjo&quot;,
+<a name="cl-18"></a>howpublished = &quot;\url{http://globalvoicesonline.org/2008/05/06/zimbabwe-using-new-technologies-to-fight-for-democracy/}&quot;,
+<a name="cl-19"></a>year = &quot;2008&quot;
+<a name="cl-20"></a>}
+<a name="cl-21"></a>
+<a name="cl-22"></a>@misc{us_Earth,
+<a name="cl-23"></a>title =  &quot;Chengdu Earthquake&quot;,
+<a name="cl-24"></a>author =  &quot;US Embassy of China&quot;,
+<a name="cl-25"></a>howpublished = &quot;\url{http://chengdu.usembassy-china.org.cn/chengdu_earthquake.html}&quot;,
+<a name="cl-26"></a>year = &quot;2008&quot;
+<a name="cl-27"></a>}
+<a name="cl-28"></a>
+<a name="cl-29"></a>@misc{wiki_Earth,
+<a name="cl-30"></a>title =  &quot;Sichuan earthquake&quot;,
+<a name="cl-31"></a>author =  &quot;Wikipedia&quot;,
+<a name="cl-32"></a>howpublished = &quot;\url{http://en.wikipedia.org/wiki/2008_Sichuan_earthquake#cite_note-Chengdu_quake-7}&quot;,
+<a name="cl-33"></a>year = &quot;2009&quot;
+<a name="cl-34"></a>}
+<a name="cl-35"></a>
+<a name="cl-36"></a>@misc{cs_History,
+<a name="cl-37"></a>title =  &quot;How cellphones, twitter and facebook can make history&quot;,
+<a name="cl-38"></a>author =  &quot;Shirky, Clay&quot;,
+<a name="cl-39"></a>howpublished = &quot;\url{http://blog.ted.com/2009/06/clay_shirky_how.php}&quot;,
+<a name="cl-40"></a>year = &quot;2009&quot;
+<a name="cl-41"></a>}
+<a name="cl-42"></a>
+<a name="cl-43"></a>@misc{cs_Iran,
+<a name="cl-44"></a>title =  &quot;On Twitter and Iran&quot;,
+<a name="cl-45"></a>author =  &quot;Shirky, Clay&quot;,
+<a name="cl-46"></a>howpublished = &quot;\url{http://blog.ted.com/2009/06/qa_with_clay_sh.php}&quot;,
+<a name="cl-47"></a>year = &quot;2009&quot;
+<a name="cl-48"></a>}
+<a name="cl-49"></a>
+<a name="cl-50"></a>@misc{on_Riots,
+<a name="cl-51"></a>title =  &quot;China shuts down Internet in Xinjiang region after riots&quot;,
+<a name="cl-52"></a>author =  &quot;Heacock, Rebekah&quot;,
+<a name="cl-53"></a>howpublished = &quot;\url{http://opennet.net/blog/2009/07/china-shuts-down-internet-xinjiang-region-after-riots}&quot;,
+<a name="cl-54"></a>year = &quot;2009&quot;
+<a name="cl-55"></a>}
+<a name="cl-56"></a>
+<a name="cl-57"></a>@misc{ai_Death,
+<a name="cl-58"></a>title =  &quot;The death penalty in 2008&quot;,
+<a name="cl-59"></a>author =  &quot;Amnesty International&quot;,
+<a name="cl-60"></a>howpublished = &quot;\url{http://www.amnesty.org/en/death-penalty/death-sentences-and-executions-in-2008}&quot;,
+<a name="cl-61"></a>year = &quot;2009&quot;
+<a name="cl-62"></a>}
+<a name="cl-63"></a>
+<a name="cl-64"></a>@article{skd_Nokia,
+<a name="cl-65"></a>Title = &quot;Iranian consumers boycott Nokia for &#39;collaboration&#39;&quot;,
+<a name="cl-66"></a>Author = &quot;Dehghan, Saeed Kamali&quot;,
+<a name="cl-67"></a>Journal = &quot;Guardian.co.uk&quot;,
+<a name="cl-68"></a>Year = &quot;2009&quot;,
+<a name="cl-69"></a>note = &quot;\url{http://www.guardian.co.uk/world/2009/jul/14/nokia-boycott-iran-election-protests}&quot;
+<a name="cl-70"></a>}
+<a name="cl-71"></a>
+<a name="cl-72"></a>@article{mw_Urumqi,
+<a name="cl-73"></a>Title = &quot;China clampdown on tech in Urumqi&quot;,
+<a name="cl-74"></a>Author = &quot;Ward, Mark&quot;,
+<a name="cl-75"></a>Journal = &quot;bbc.co.uk&quot;,
+<a name="cl-76"></a>Year = &quot;2009&quot;,
+<a name="cl-77"></a>note = &quot;\url{http://news.bbc.co.uk/2/hi/technology/8136944.stm}&quot;
+<a name="cl-78"></a>}
+<a name="cl-79"></a>
+<a name="cl-80"></a>@techreport{itu_Dev,
+<a name="cl-81"></a>author = &quot;ITU&quot;,
+<a name="cl-82"></a>title = &quot;The ICT Development Index&quot;,
+<a name="cl-83"></a>institution = &quot;International Telecommunication Union&quot;,
+<a name="cl-84"></a>year = &quot;2009&quot;,
+<a name="cl-85"></a>address = &quot;\url{http://www.itu.int/ITU-D/ict/publications/idi/2009/material/IDI2009_w5.pdf}&quot;
+<a name="cl-86"></a>}
+<a name="cl-87"></a>
+<a name="cl-88"></a>@techreport{oni_China,
+<a name="cl-89"></a>author = &quot;ONI&quot;,
+<a name="cl-90"></a>title = &quot;Internet Filtering in China&quot;,
+<a name="cl-91"></a>institution = &quot;OpenNet Initiative&quot;,
+<a name="cl-92"></a>year = &quot;2009&quot;,
+<a name="cl-93"></a>address = &quot;\url{http://opennet.net/sites/opennet.net/files/ONI_China_2009.pdf}&quot;
+<a name="cl-94"></a>}
+<a name="cl-95"></a>
+<a name="cl-96"></a>@techreport{oni_Iran,
+<a name="cl-97"></a>author = &quot;ONI&quot;,
+<a name="cl-98"></a>title = &quot;Internet Filtering in Iran&quot;,
+<a name="cl-99"></a>institution = &quot;OpenNet Initiative&quot;,
+<a name="cl-100"></a>year = &quot;2009&quot;,
+<a name="cl-101"></a>address = &quot;\url{http://opennet.net/sites/opennet.net/files/ONI_Iran_2009.pdf}&quot;
+<a name="cl-102"></a>}
+<a name="cl-103"></a>
+<a name="cl-104"></a>@article{dg_onion,
+<a name="cl-105"></a> author = {Goldschlag, David and Reed, Michael and Syverson, Paul},
+<a name="cl-106"></a> title = {Onion routing},
+<a name="cl-107"></a> journal = {Commun. ACM},
+<a name="cl-108"></a> volume = {42},
+<a name="cl-109"></a> number = {2},
+<a name="cl-110"></a> year = {1999},
+<a name="cl-111"></a> issn = {0001-0782},
+<a name="cl-112"></a> pages = {39--41},
+<a name="cl-113"></a> doi = {http://doi.acm.org/10.1145/293411.293443},
+<a name="cl-114"></a> publisher = {ACM},
+<a name="cl-115"></a> address = {New York, NY, USA},
+<a name="cl-116"></a> }
+<a name="cl-117"></a>
+<a name="cl-118"></a> @misc{dd_tor_pir,
+<a name="cl-119"></a> author = {Dahlmeier, Daniel},
+<a name="cl-120"></a> title = {Tor Onion Routing und Private Information Retrieval in Peer-to-Peer Informationssystemen},
+<a name="cl-121"></a> year = {2006},
+<a name="cl-122"></a> howpublished = &quot;\url{http://avalon.ira.uka.de/iaks-calmet/stdip/SA-Dahlmeier.pdf}&quot;
+<a name="cl-123"></a> }
+<a name="cl-124"></a>
+<a name="cl-125"></a> @book{ao_p2p,
+<a name="cl-126"></a> author = {Oram, Andy},
+<a name="cl-127"></a> title = {Peer-to-Peer -- Harnessing the Power of Disruptive Technology},
+<a name="cl-128"></a> publisher = {O&#39;Reilly},
+<a name="cl-129"></a> year = {2001}
+<a name="cl-130"></a> }
+<a name="cl-131"></a>
+<a name="cl-132"></a> @inproceedings{ab_stealth_dht,
+<a name="cl-133"></a> author = {Brampton, Andrew and MacQuire, Andrew and Rai, Idris A. and Race, Nicholas J. P. and Mathy, Laurent},
+<a name="cl-134"></a> title = {Stealth distributed hash table: a robust and flexible super-peered DHT},
+<a name="cl-135"></a> booktitle = {CoNEXT &#39;06: Proceedings of the 2006 ACM CoNEXT conference},
+<a name="cl-136"></a> year = {2006},
+<a name="cl-137"></a> isbn = {1-59593-456-1},
+<a name="cl-138"></a> pages = {1--12},
+<a name="cl-139"></a> location = {Lisboa, Portugal},
+<a name="cl-140"></a> doi = {http://doi.acm.org/10.1145/1368436.1368462},
+<a name="cl-141"></a> publisher = {ACM},
+<a name="cl-142"></a> address = {New York, NY, USA},
+<a name="cl-143"></a> }
+<a name="cl-144"></a>
+<a name="cl-145"></a> @article{bc_PIR,
+<a name="cl-146"></a> author = {Chor, Benny and Kushilevitz, Eyal and Goldreich, Oded and Sudan, Madhu},
+<a name="cl-147"></a> title = {Private information retrieval},
+<a name="cl-148"></a> journal = {J. ACM},
+<a name="cl-149"></a> volume = {45},
+<a name="cl-150"></a> number = {6},
+<a name="cl-151"></a> year = {1998},
+<a name="cl-152"></a> issn = {0004-5411},
+<a name="cl-153"></a> pages = {965--981},
+<a name="cl-154"></a> doi = {http://doi.acm.org/10.1145/293347.293350},
+<a name="cl-155"></a> publisher = {ACM},
+<a name="cl-156"></a> address = {New York, NY, USA},
+<a name="cl-157"></a> }
+<a name="cl-158"></a>
+<a name="cl-159"></a>@mastersthesis{eb_Mdsn,
+<a name="cl-160"></a>author = &quot;Bozkaya, Emrah&quot;,
+<a name="cl-161"></a>title = &quot;Improvement of Life-Quality in the Developing Regions through Mobile Device Social Networks&quot;,
+<a name="cl-162"></a>school = &quot;Vienna University of Technology&quot;,
+<a name="cl-163"></a>year = &quot;2009&quot;
+<a name="cl-164"></a>}
+<a name="cl-165"></a>
+<a name="cl-166"></a>@misc{ai_iran,
+<a name="cl-167"></a>author = &quot;Amnesty International&quot;,
+<a name="cl-168"></a>title = &quot;IRAN: CIVIL SOCIETY ACTIVISTS AND HUMAN RIGHTS DEFENDERS UNDER ATTACK&quot;,
+<a name="cl-169"></a>address = &quot;\url{http://www.amnesty.org/en/library/info/MDE13/045/2004}&quot;,
+<a name="cl-170"></a>year = {2004}
+<a name="cl-171"></a>}
+<a name="cl-172"></a>
+<a name="cl-173"></a>@misc{android_dev_guide,
+<a name="cl-174"></a>author = &quot;Google&quot;,
+<a name="cl-175"></a>title = &quot;Android Developers Guide&quot;,
+<a name="cl-176"></a>year = &quot;2009&quot;,
+<a name="cl-177"></a>address = &quot;\url{http://developer.android.com/guide/publishing/app-signing.html}&quot;
+<a name="cl-178"></a>}
+<a name="cl-179"></a>
+<a name="cl-180"></a>@inproceedings{gnutella_paper,
+<a name="cl-181"></a> author = {Portmann, Marius and Sookavatana, Pipat and Ardon, S\&#39;{e}bastien and Seneviratne, Aruna},
+<a name="cl-182"></a> title = {The Cost of Peer Discovery and Searching in the Gnutella Peer-to-peer File Sharing Protocol},
+<a name="cl-183"></a> booktitle = {ICON &#39;01: Proceedings of the 9th IEEE International Conference on Networks},
+<a name="cl-184"></a> year = {2001},
+<a name="cl-185"></a> isbn = {0-7695-1186-4},
+<a name="cl-186"></a> pages = {263},
+<a name="cl-187"></a> publisher = {IEEE Computer Society},
+<a name="cl-188"></a> address = {Washington, DC, USA},
+<a name="cl-189"></a> }
+<a name="cl-190"></a>
+<a name="cl-191"></a> @inproceedings{sherif_botros,
+<a name="cl-192"></a> author = {Botros, Sherif and Waterhouse, Steve},
+<a name="cl-193"></a> title = {Search in JXTA and Other Distributed Networks},
+<a name="cl-194"></a> booktitle = {P2P &#39;01: Proceedings of the First International Conference on Peer-to-Peer Computing},
+<a name="cl-195"></a> year = {2001},
+<a name="cl-196"></a> isbn = {0-7695-1503-7},
+<a name="cl-197"></a> pages = {30},
+<a name="cl-198"></a> publisher = {IEEE Computer Society},
+<a name="cl-199"></a> address = {Washington, DC, USA},
+<a name="cl-200"></a> }
+<a name="cl-201"></a>
+<a name="cl-202"></a> @article{resilient_societies,
+<a name="cl-203"></a> author = {Allenby, Brad and Fink, Jonathan},
+<a name="cl-204"></a> title = {Toward Inherently Secure and Resilient Societies},
+<a name="cl-205"></a> journal = {Science},
+<a name="cl-206"></a> number = {309},
+<a name="cl-207"></a> year = {2005},
+<a name="cl-208"></a> issn = {0036-8075},
+<a name="cl-209"></a> pages = {1034-1036},
+<a name="cl-210"></a> doi = {10.1126/science.1111534},
+<a name="cl-211"></a> publisher = {AAAS},
+<a name="cl-212"></a> address = {1200 New York Avenue NW, Washington, DC 20005},
+<a name="cl-213"></a> }
+<a name="cl-214"></a>
+<a name="cl-215"></a>@inproceedings{freehaven-berk,
+<a name="cl-216"></a>  title = {The Free Haven Project: Distributed Anonymous Storage Service}, 
+<a name="cl-217"></a>  author = {Roger Dingledine and Michael J. Freedman and David Molnar}, 
+<a name="cl-218"></a>  booktitle = {Proceedings of Designing Privacy Enhancing Technologies: Workshop on Design
+<a name="cl-219"></a>        Issues in Anonymity and Unobservability}, 
+<a name="cl-220"></a>  year = {2000}, 
+<a name="cl-221"></a>  month = {July}, 
+<a name="cl-222"></a>  editor = {H. Federrath}, 
+<a name="cl-223"></a>  publisher = {Springer-Verlag, LNCS 2009}, 
+<a name="cl-224"></a>  www_important = {1}, 
+<a name="cl-225"></a>  www_tags = {selected}, 
+<a name="cl-226"></a>  www_ps_url = {http://freehaven.net/doc/berk/freehaven-berk.ps}, 
+<a name="cl-227"></a>  www_section = {Anonymous publication} 
+<a name="cl-228"></a>}
+</pre></div>
+</td></tr></table>
+    </div>
+  
+  </div>
+  
+
+
+
+      </div>
+    </div>
+
+  </div>
+
+  <div id="footer">
+    <ul id="footer-nav">
+      <li>Copyright © 2011 <a href="http://atlassian.com">Atlassian</a></li>
+      <li><a href="http://www.atlassian.com/hosted/terms.jsp">Terms of Service</a></li>
+      <li><a href="http://www.atlassian.com/about/privacy.jsp">Privacy</a></li>
+      <li><a href="//bitbucket.org/site/master/issues/new">Report a Bug to Bitbucket</a></li>
+      <li><a href="http://confluence.atlassian.com/x/IYBGDQ">API</a></li>
+      <li><a href="http://status.bitbucket.org/">Server Status</a></li>
+    </ul>
+    <ul id="social-nav">
+      <li class="blog"><a href="http://blog.bitbucket.org">Bitbucket Blog</a></li>
+      <li class="twitter"><a href="http://www.twitter.com/bitbucket">Twitter</a></li>
+    </ul>
+    <h5>We run</h5>
+    <ul id="technologies">
+      <li><a href="http://www.djangoproject.com/">Django 1.3.0</a></li>
+      <li><a href="//bitbucket.org/jespern/django-piston/">Piston 0.3dev</a></li>
+      <li><a href="http://www.selenic.com/mercurial/">Hg 1.8.2</a></li>
+      <li><a href="http://www.python.org">Python 2.7.2</a></li>
+      <li>r12427:b7404d13ceac | bitbucket01</li>
+    </ul>
+  </div>
+
+  <script src="https://dwz7u9t8u8usb.cloudfront.net/m/46c15ee9bc85/js/lib/global.js"></script>
+
+
+
+
+
+
+  <script>
+    BB.gaqPush(['_trackPageview']);
+  
+    BB.gaqPush(['atl._trackPageview']);
+
+    
+
+    
+
+    (function () {
+        var ga = document.createElement('script');
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        ga.setAttribute('async', 'true');
+        document.documentElement.firstChild.appendChild(ga);
+    }());
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,231 @@
+%Bibliography related to Learning Language in Logic 
+%at the Jozef Stefan Institute
+%et, 2005-01-17
+		  
+#new - 1999 -- 2004
+
+@article{lemma-aai04,
+        author = "Toma\v{z} Erjavec and Sa\v{s}o D\v{z}eroski",
+        title =  "{Machine Learning of Language Structure: 
+                  Lemmatising Unknown Slovene Words}",
+        journal = "Applied Artificial Intelligence",
+        publisher =  "Taylor \& Francis",
+        volume = {18}, 
+        number = {1}, 
+        pages =  "17--41",
+        year = {2004}
+        abstract = {
+  Automatic lemmatisation is a core application for many language
+  processing tasks. In inflectionally rich languages, such as Slovene,
+  assigning the correct lemma (base form) to each word in a running
+  text is not trivial, as, for instance, nouns inflect for number and
+  case, with a complex configuration of endings and stem
+  modifications. The problem is especially difficult for unknown
+  words, as word-forms cannot be matched against a morphological
+  lexicon. The paper discusses a machine learning approach to the
+  automatic lemmatisation of unknown words in Slovene texts. We
+  decompose the problem of learning to perform lemmatisation into two
+  subproblems: learning to perform morphosyntactic tagging of words in
+  a text, and learning to perform morphological analysis, which
+  produces the lemma from the word-form given the correct
+  morphosyntactic tag. A statistics-based trigram tagger is used to
+  learn morphosyntactic tagging and a first-order decision list
+  learning system is used to learn rules for morphological
+  analysis. We train the analyser on open-class inflecting Slovene
+  words, namely nouns, adjectives, and main verbs, together being
+  characterised by more than 400 different morphosyntactic tags. Our
+  training sets consist of a morphological lexicon containing 15,000
+  lemmas and a manually annotated corpus consisting of 100,000 running
+  words.  We evaluate the learned model on word lists extracted from a
+  corpus of Slovene texts containing 500,000 words, and show that our
+  morphological analysis module achieves 98.6\% accuracy, while the
+  combination of the tagger and analyser is 92.0\% accurate on unknown
+  inflecting Slovene words.
+    }  }
+
+@InCollection{dzerj00,
+  author =       "Sa\v{s}o D\v{z}eroski and Toma\v{z} Erjavec",
+  title =        "{Learning to Lemmatise Slovene Words}",
+  editor =       "James Cussens and Sa\v{s}o D\v{z}eroski",
+  booktitle =    "Learning Language in Logic",
+  publisher =    "Springer-Verlag",
+  address =      "Berlin",
+  pages =        "69-88",
+  number =       1925,
+  year =         2000,
+  series =       "Lecture notes in artificial intelligence"
+}
+
+
+@inproceedings{lrec04-mte,
+  author = "Toma\v{z} Erjavec",
+  title  = "{{MULTEXT-East Version 3: 
+Multilingual Morphosyntactic Specifications, Lexicons and Corpora}}",
+  booktitle = "Fourth International Conference on Language Resources
+         and Evaluation, LREC'04",
+  pages =        {1535 -- 1538},
+  organization = "ELRA",
+  address =      "Paris",
+  year = "2004",
+  note = "http://nl.ijs.si/et/Bib/LREC04/"
+}
+
+#Publications on learning:
+
+
+@InProceedings{cussens99:_morph_taggin_sloven_progol,
+  author =       {James Cussens and Sa\v{s}o D\v{z}eroski and Toma\v{z} Erjavec},
+  title =        {Morphosyntactic Tagging of {S}lovene using {P}rogol},
+  booktitle =    {Inductive Logic Programming: Proc.\ of the 9th International Workshop (ILP-99)},
+  year =         1999,
+  editor =       {Sa\v{s}o D\v{z}eroski and Peter Flach},
+  address =      {Bled, Slovenia},
+  month =        {June},
+  publisher =    {Springer-Verlag},
+  abstract = {We consider the task of tagging Slovene words with morphosyntactic
+  descriptions (MSDs). MSDs contain not only part-of-speech
+  information but also attributes such as gender and case. In the case
+  of Slovene there are 2,083 possible MSDs. P-Progol was used to learn
+  morphosyntactic disambiguation rules from annotated data (consisting
+  of 161,314 examples) produced by the MULTEXT-East project.  P-Progol
+  produced 1,148 rules taking 36 hours.  Using simple grammatical
+  background knowledge, e.g.\ looking for case disagreement, P-Progol
+  induced 4,094 clauses in eight parallel runs.  These rules have
+  proved effective at detecting and explaining incorrect MSD
+  annotations in an independent test set, but have not so far produced
+  a tagger comparable to other existing taggers in terms of accuracy.}
+}
+
+@InProceedings{kazakov99:_learn,
+  author =       {Dimitar Kazakov and Suresh Manandhar and Toma\v{z} Erjavec},
+  title =        {Learning word segmentation rules for tag prediction},
+  booktitle =    {Inductive Logic Programming: Proc.\ of the 9th International Workshop (ILP-99)},
+  year =         1999,
+  editor =       {Sa\v{s}o D\v{z}eroski and Peter Flach},
+  address =      {Bled, Slovenia},
+  month =        {June},
+  publisher =    {Springer-Verlag}
+}
+		  
+@techreport{dzerza99,
+	author = "Sa\v{s}o D\v{z}eroski and Toma\v{z} Erjavec and Jakub Zavrel",
+	title  = "Morphosyntactic Tagging of Slovene: Evaluating PoS Taggers and Tagsets",
+	type = "Research Report",
+	number = "IJS-DP 8018",
+        institution = "Jo\v{z}ef Stefan Institute",
+	address = "Ljubljana",
+	year = "1999",
+        url = "http://nl.ijs.si/lll/bib/dzerza-report/"
+}
+
+@InProceedings{ManDzeErj:Clog,
+  author = 	 "Suresh Manandhar and Sa\v{s}o D\v{z}eroski 
+		  and Toma\v{z} Erjavec",
+  title = 	 "Learning Multilingual Morphology with CLOG",
+  editor =       "David Page",
+  booktitle =    "Inductive Logic Programming; 8th International
+		  Workshop ILP-98, Proceedings",
+  series =	 "Lecture Notes in Artificial Intelligence",
+  number =	 1446,
+  pages =        "135-144",
+  publisher = 	 "Springer",
+  year =	 "1998"
+}
+
+@article{er98,
+	author = "Sa\v{s}o D\v{z}eroski and Toma\v{z} Erjavec",
+	title =  "Inductive Learning of Multilingual Morphology",
+	journal = "Electrotechnical Review",
+	address = "Ljubljana, Slovenia",
+	volume =  "65", 
+	number =  "6", 
+        pages =	  "296-302",
+	year =    "1998"
+  }
+
+@InProceedings{DzeErj:ILPW,
+  author = 	 "Sa\v{s}o D\v{z}eroski and Toma\v{z} Erjavec",
+  title = 	 "Induction of Slovene Nominal Paradigms",
+  editor =	 "Nada Lavra\v{c} and Sa\v{s}o D\v{z}eroski",
+  booktitle =    "Inductive Logic Programming; 7th International
+		  Workshop ILP-97, Proceedings",
+  number =	 1297,
+  series =	 "Lecture Notes in Artificial Intelligence",
+  pages =	 "141--148",
+  year =	 1997,
+  note =	 "ISBN 3-540-63514-9",
+  publisher =	 "Springer"
+}
+
+%Publications on the MULTEXT-East dataset:
+
+@InProceedings{erk:mtelex,
+  author = 	 "Toma\v{z} Erjavec",
+  title = 	 "The {Multext-East Slovene Lexicon}",
+  booktitle =	 "Proceedings of the 7th Slovene Electrotechnical
+		  Conference, ERK '98 ",
+  pages =        "189-192",
+  address =      "Portoro\v{z}, Slovenia",
+  year =	 1998,
+  url = "http://nl.ijs.si/et/Bib/ERK98/"
+}
+		  
+@InProceedings{coling:mte,
+  author = 	 "Ludmila Dimitrova and Toma\v{z} Erjavec and Nancy
+		  Ide and Heiki-Jan Kaalep 
+		  and Vladim\'{\i}r Petkevi\v{c} and 
+                  Dan Tufi\c{s}",
+  title = 	 "{Multext-East: Parallel and Comparable Corpora 
+		  and Lexicons for Six Central and Eastern
+                  European Languages}",
+  booktitle =	 "COLING-ACL '98",
+  pages =        "315-319",
+  address =      "Montr\'eal, Qu\'ebec, Canada",
+  year =	 1998
+}
+
+@InProceedings{lrec:lex,
+  author = 	 "Nancy Ide and Dan Tufi\c{s} and Toma\v{z} Erjavec",
+  title = 	 "{Development and Assessment of Common Lexical Specifications
+                  for Six Central and Eastern European Languages}",
+  pages =	 "233--240",
+  booktitle =	 "First International Conference on Language Resources
+		  and Evaluation, LREC'98",
+  address =      "Granada",
+  year =	 1998,
+  organization = "ELRA"
+}
+
+@InProceedings{lrec:corp,
+  author = 	 "Toma\v{z} Erjavec and Nancy Ide",
+  title = 	 "The {MULTEXT-East} Corpus",
+  pages =	 "971--974",
+  booktitle =	 "First International Conference on Language Resources
+		  and Evaluation, LREC'98",
+  address =      "Granada",
+  year =	 1998,
+  organization = "ELRA"
+}
+
+@Misc{telri:CD,
+  author =	 "Toma\v{z} Erjavec and Ann Lawson and Laurent Romary",
+  title =	 "{East meets West: A Compendium of Multilingual Resources}",
+  howpublished = "CD-ROM",
+  year =	 1998,
+  organization = "TELRI Association e.V",
+  note =	 "ISBN: 3-922641-46-6"
+}
+
+@InProceedings{lrec:CD,
+  author = 	 "Toma\v{z} Erjavec and Ann Lawson and Laurent Romary",
+  title = 	 "{East meets West: 
+		  Producing Multilingual Resources in a European Context}",
+  pages =	 "233--240",
+  booktitle =	 "First International Conference on Language Resources
+		  and Evaluation, LREC'98",
+  address =      "Granada",
+  year =	 1998,
+  organization = "ELRA",
+  note =	 "http://www.ids-mannheim.de/telri/cdrom.html"
+}
+

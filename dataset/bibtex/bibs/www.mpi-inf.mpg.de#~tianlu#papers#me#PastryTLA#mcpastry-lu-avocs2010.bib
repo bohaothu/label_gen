@@ -1,0 +1,28 @@
+@INPROCEEDINGS{LuTX2009,
+  author = {Lu, Tianxiang and Merz, Stephan and Weidenbach, Christoph},
+  title = {Model Checking the Pastry Routing Protocol},
+  booktitle = {10th Intl. Workshop Automatic Verification of Critical Systems (AVOCS
+	2010)},
+  year = {2010},
+  editor = {Bendisposto, Jens and Leuschel, Michael and Roggenbach, Markus},
+  volume = {10},
+  pages = {19--21},
+  address = {D{\"u}sseldorf, Germany},
+  month = {September},
+  organization = {Microsoft Research},
+  publisher = {Universit{\"a}t D{\"u}seldorf},
+  note = {Short contribution},
+  abstract = {Pastry is an algorithm for implementing a scalable distributed hash
+	table over an underlying P2P network, an active area of research
+	in distributed systems.
+	
+	Several implementations of Pastry are available and have been applied
+	in practice, but no attempt has so far been made to formally describe
+	the algorithm or to verify its properties. Since Pastry combines
+	rather complex data structures, asynchronous communication, concurrency,
+	resilience to \emph{churn} and fault tolerance, it makes an interesting
+	target for verification. We have modeled Pastry's core routing algorithms
+	in the specification language \texorpdfstring{\textrm{\upshape TLA\textsuperscript{+}}}{TLA+}
+	and used its model checker \textsc{tlc} to analyze qualitative properties
+	of Pastry such as \emph{correctness} and \emph{consistency}.}
+}

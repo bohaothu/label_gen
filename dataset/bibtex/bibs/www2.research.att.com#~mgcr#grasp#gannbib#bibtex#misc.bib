@@ -1,0 +1,411 @@
+@techreport{BoeRibBlo03a,
+        author = {M.C. Boeres and C.C. Ribeiro and I. Bloch},
+        title = {{Randomized algorithms for scene recognition by inexact 
+		graph matching}},
+        institution = {Computer Science Department, Catholic University of
+	               Rio de Janeiro},
+	address = {Rio de Janeiro, Brazil},
+        annote = {This paper proposes a new algorithm to suboptimally solve 
+		non-bijective graph matching for model-based pattern 
+		recognition. 
+                The algorithm consists of a randomized construction 
+		procedure and a local search procedure. 
+		In the construction procedure, the used greedy function has 
+		two terms representing respectively the node and edge 
+		contributions to the measure of the solution quality 
+		associated with the corrispondence. 
+		Given a feasible solution $x$, the neighborhood structure 
+		used during local search considers as neighbors of $x$ 
+		all feasible solutions that can be obtained by changing 
+		some association.},
+        year = {2003}
+}
+
+@inproceedings{FraBoe02a,
+        author = "H. Fra\c cois and O. Bo{\"e}ffard",
+        title = "The greedy algorithm and its application to the 
+		construction of a continuous speech database",
+        booktitle = "Proceedings of LREC-2002",
+        city = "Las Palmas de Gran Canaria, Spain",
+        month = "May 29-31",
+        year = "2002",
+	volume = "5",
+        pages = "1420--1426",
+	annote = "This paper deals with the general framework of the 
+		construction of databases characterized by different linguistic 
+		features. 
+		A small sized continuous speech database is needed, at the same 
+		time based on a maximum number of phonetic units. 
+		After recorded, the set of sentences constitutes the source 
+		from which the  text-to-speech syntheziser draws the needed 
+		acoustic units. 
+		The problem is to find the smallest subset of sentences that 
+		covers all needed units. 
+		The authors propose a greedy algorithm for solving the problem 
+		and sketch as future work the development of a {GRASP}."
+}
+
+@Article{Fer01a,
+        author = "T. Ferreira de Noronha",
+        title = "Algoritmos e estrat\'egias de solu\c c\~ao para o 
+		problema do gerenciamento de sondas de produ\c c\~ao 
+		terrestre na bacia petrol\'{\i}fera potiguar",
+        journal = "Revista Electr\^onica de Inicia\c c\~ao Cientifica",
+        volume = "1",
+        year = "2001",
+        annote   =     "Several different heuristics are proposed, including 
+			a {GRASP}. 
+			The greedy function is a simple cost function related to the 
+			production, while the local search phase looks for 
+			improving solutions by swapping paths. 
+			In Portuguese.",
+}
+
+@techreport{CarMedPer96a,
+        author = "C. Carvalho de Souza and C. Bauzer Medeiros and
+                  R. Scachetti Pereira",
+        title = "Integrating heuristics and spatial databases: 
+                 {A} case study",
+        number = "IC-96-18",
+        institution = "Institute of Computing, Universidade Estadual 
+			de Campinas",
+        address = "Campinas, Brazil",
+        year = "1996",
+	annote = "This paper presents part of the ongoing efforts at 
+		IC-UNICAMP to apply heuristic algorithms to 
+		vectorial georeferenced data to help decision 
+		support in urban planning. 
+		The authors describe a first prototye implemented 
+		in C++ and tested on support planning activities 
+		for the S\~ao Paulo State Post Office System in 
+		Brazil. 
+		The problem is a special partition problem, whose 
+		goal is to minimize the number of clusters in the 
+		partition (number of districts in the distribution 
+		zone). 
+		The authors chose to represent the problem by building 
+		a special undirected graph that has two main 
+		characteristics: connectivity and information 
+		about the mailman daily loads. 
+		For solving the problem, the authors propose 
+		a set of randomized heuristics, including a {GRASP}."
+}
+
+@techreport{DemEks98a,
+        author = "R. Demirer and B. Eksioglu",
+        title = "Subset selection in multiple linear regression: {A} new 
+		mathematical programming approach",
+        number = "School of business working paper no. 284",
+        institution = "School of business,
+                       University of Kansas",
+        address = "Lawrence, Kansas, USA",
+	annote = "The new mathematical programming model here proposed 
+		is parametrically solved to obtain a collection of efficient 
+		subsets. 
+		The parametric solution requires repeatedtly solving a 
+		mathematical program and the authors choose to solve it 
+		by using either a Langrangian relaxation based heuristic or 
+		a {GRASP}. 
+		The greedy function is based on the change in the objective 
+		function value if a variable of the problem is set equal 
+		to $1$. 
+		The improvement phase is based on the change in the objective
+                function value if a variable of the problem is complemented.",
+        year = "1998"
+}
+
+@inproceedings{FesRai01a,
+        author = "P. Festa and G. Raiconi",
+        title = "{GRASP} in switching input optimal control synthesis",
+        booktitle = "Proceedings of MIC'2001",
+        city = "Porto, Portugal",
+        month = "July 16-20",
+        year = "2001",
+        pages = "381--385",
+	annote = "Several optimal control problems are introduced in 
+		this paper and a {GRASP} is also designed. 
+		In the construction phase of the proposed {GRASP}, the 
+		greedy criterion minimizes the quadratic costs in the 
+		Riccati equation. 
+		The neighborhood structure used in the local search 
+		phase is defined on the Hamming distance."
+}
+
+@techreport{GanVanTuy98a,
+	author = "X. Gandibleux and D. Vancoppenolle and D. Tuyttens",
+        title = "A first making use of {GRASP} for solving {MOCO} problems",
+        institution = "University of Valenciennes, France",
+	year = "1998",
+	annote = 	"An extension of {GRASP}, to solve multi-objective
+               		combinatorial optimization (MOCO) problems, is 
+			considered.
+               		In particular, classical covering, assignment, 
+			knapsack, and scheduling problems with multiple 
+			objectives are used as benchmarks.
+               		Computational results compare {GRASP} solutions for a 
+			benchmark set of test problems and results are 
+			discussed in comparison with an exact method, when 
+			available. In French."
+}
+
+@Article{Gho96a,
+	author = "J.B. Ghosh",
+	title = "Computational aspects of the maximum diversity problem",
+	journal = "Operations Research Letters",
+        volume = "19",
+        pages = "175--181",
+	year = "1996",
+        annote   =     "This paper addresses two variations of the
+                	maximum diversity problem.
+                	This problem arises when $m$ elements
+                	are to be selected from an $n$-element population based
+                	on inter-element distances. Using a reduction from the
+                	vertex cover problem, the authors prove that the problem
+                	is NP-hard and propose a {GRASP} for approximately
+                	solving it. The neighborhood of a solution is the set of
+                	all solutions that can be obtained by replacing an 
+			element in the incumbent solution with one element 
+			that is not in it.",
+}
+
+@inproceedings{GomOli01a,
+        author = "A.M. Gomes and J.F. Oliveira",
+        title = "A {GRASP} approach to the nesting problem",
+        booktitle = "Proceedings of MIC'2001",
+        city = "Porto, Portugal",
+        month = "July 16-20",
+        year = "2001",
+        pages = "47--52",
+	annote = "In this paper, a {GRASP} is proposed for solving a 
+		variant of the classical nesting problem, whose objective is 
+		to minimize the length of a single plate used to 
+		produce a given set of smaller pieces. 
+		Two greedy criteria have been tried. 
+		The first one is the layout length, measured as the maximum 
+		coordinate in the current layout, while the second one 
+		is the added internal waste, measured as the potential area 
+		lost when placing one piece. 
+		The local search phase uses neighbors obtained by exchanging 
+		pairs of pieces in the sequence output of the construction 
+		phase."
+}
+
+@inproceedings{JuiPol98a,
+        author = "H. Juill\'e and J.B. Pollack",
+        title = "A sampling-based heuristic for tree search applied 
+		to grammar induction",
+        booktitle = "Proceedings of the Fifteenth National Conference 
+		    on Artificial Intelligence",
+        city = "Madison, Wisconsin, USA",
+	annote = "In this paper, the authors present SAGE, a new search 
+		algorithm that incorporates the same fundamental 
+		mechanisms as the most popular metaheuristics. 
+		It is an iterative search procedure that at each 
+		iteration performs a construction phase and a competition 
+		phase. 
+		In the construction phase, SAGE implements a set of 
+		elementary randomized searches 
+		and a meta-level heuristic that controls the search procedure 
+		by distributing the alternatives among the searches. 
+		Scope of the competition phase is to favor the most promising 
+		search alternatives.",
+        month = "July 26-30",
+        year = "1998"
+}
+
+@techreport{Loc98a,
+	author = {M. Locatelli},
+	title = {{A class of heuristic methods for the maximization of
+	          the $l_1$-norm over parallelotopes}},
+	institution = {Dipartimento di Sistemi ed Informatica, 
+	               Universit\'a di Firenze},
+	address = {Firenze, Italy},
+	year = {1998},
+	annote = "For the maximization of the $l_1$-norm over 
+		parallelotopes, a class of heuristics is proposed 
+		that includes a slightly modified {GRASP}, in which between 
+		a greedy construction and local search phases a filter 
+		phase is inserted to avoid to perform local search 
+		from not enough good solutions. 
+		The local search uses is a variant of a $1$-flip 
+		neighbirhood."
+}
+
+@Article{MedResVei01a,
+	author = "M.C. Medeiros and M.G.C. Resende and A. Veiga",
+	title = "Piecewise linear time series estimation with {GRASP}",
+	journal = "Computational Optimization and Applications",
+	volume = "19",
+	pages = "127--144",
+	year = "2001",
+        annote   =     "This paper describes a {GRASP} to build piecewise linear
+                	statistical models with multivariate thresholds. The
+                	construction phase consists of sequentially choosing
+                	hyperplanes until the maximum number of hyperplanes
+                	is reached. The greedy function orders the possible
+                	hyperplanes with respect to the sum of squared errors
+                	of the fitted data. The local search is a $2$-exchange
+                	heuristic.",
+}
+
+@Article{MedVeiRes02a,
+        author = "M.C. Medeiros and A. Veiga and M.G.C. Resende",
+        title = "A combinatorial approach to piecewise linear time 
+		analysis",
+        journal = "Journal of Computational and Graphical Statistics",
+        volume = "11",
+        pages = "236--258",
+        year = "2002",
+        annote   =     "This paper presents a new approach to modeling threshold
+                	processes, based on a linear model with time-varying
+                	parameters. The authors show that this formulation is
+                	closely related to the self-exciting threshold
+                	autoregressive models (SETAR) with the advantage that 
+			it incorporates linear multivariate thresholds. 
+			A {GRASP} is proposed to estimate the parameters of 
+			the model. 
+			The greedy choice takes into account the sum of 
+			squared errors of the fitted data. 
+			The local search is a $2$-exchange heuristic.",
+}
+
+@inproceedings{MilPesBraLabRey01a,
+        author = "R.L. Milid\'{\i}u and A.A. Pessoa and 
+	          V. Braconi and E.S. Laber and P.A, Rey",
+        title = {{Um algoritmo {GRASP} para o problema
+	          de transporte de derivados de petr\'oleo em oleodutos}},
+        booktitle = {{Proceedings of te XXXIII Brazilan Symposium on
+	              Operations Research}},
+        city = "Campos do Jord\~ao, Brazil",
+        month = "November 6--9",
+        year = "2001",
+        pages = "237--246",
+	annote = "This paper describes a {GRASP} for petroleum 
+		derivatives transportation in pipelines. 
+		The greedy function of the {GRASP} proposed in this 
+		paper is a simple cost function obtained as sum of the 
+		total volumes of the product. 
+		The local search noeighborhood structure is defined by small 
+		perturbations of the current solution involving priorities."
+}
+
+@book{MocEddMocMocRek97a,
+	author = "J. Mockus and E. Eddy and A. Mockus and L. Mockus and
+                  G.V. Reklaitis",
+	title = "Bayesian discrete and global optimization",
+	publisher = "Kluwer Academic Publishers",
+        address =   "",
+	year = "1997",
+	annote = 	"This book describes the Bayesian approach to discrete
+                	optimization.  A Bayesian heuristic algorithm version
+                	of {GRASP} is described."
+}
+
+@inproceedings{NetPed01a,
+        author = "T. Neto and J.P. Pedroso",
+        title = "{GRASP} for linear integer programming",
+        booktitle = "Proceedings of MIC'2001",
+        city = "Porto, Portugal",
+        month = "July 16-20",
+        year = "2001",
+        pages = "377--380",
+	annote = "In this paper, the {GRASP} framework is extended 
+		for solving general linear integer problems. 
+		The key is to split the variables into a set of integer 
+		and a set of linear variables. 
+		Then, {GRASP} finds values of the integer variables that 
+		are replaced in the original problem, which becomes a 
+		pure continuous problem solvable by any linear programming 
+		solver."
+}
+
+@Incollection{NetPed03a,
+	author = "T. Neto and J.P. Pedroso",
+     	title = "{GRASP} for linear integer programming",
+	booktitle = "Metaheuristics: Computer decision-making", 
+        editor = "M.G.C. Resende and J.P. de Sousa",
+	publisher = {Kluwer Academic Publishers},
+        pages = "545--574",
+        year = "2003",
+        annote = "A preliminary version in this paper appeared in 
+		Neto and Pedroso (2001). 
+		Here, the {GRASP} framework is extended
+                for solving general linear integer problems.
+                The key is to split the variables into a set of integer
+                and a set of linear variables.
+                Then, {GRASP} finds values of the integer variables that
+                are replaced in the original problem, which becomes a
+                pure continuous problem, solvable by any linear programming
+                solver.",
+}
+
+@Article{PalTom02a,
+        author = "G. Palubeckis and A. Tomkevicius",
+        title = "{GRASP} implementations for the unconstrained binary 
+		 quadratic optimization problem",
+        journal = "Information Technology and Control",
+        volume = "24",
+        pages = "14--20",
+        year = "2002",
+        annote   =     "In this paper, the authors propose a classical {GRASP} 
+			framework and an enhanced {GRASP} that uses a simple 
+			tabu search as local search. 
+			Numerical results show that the enhancement introduced 
+			in the classical {GRASP} implementation produces 
+			higher quality solutions.",
+}
+
+@inproceedings{SelHar02a,
+        author = {M. Sellmann and W. Harvey},
+        title = {{Heuristic constraint propagation using local search 
+		for incomplete pruning and domain filtering of reduntant 
+		constraints for the social golfer problem}},
+        booktitle = {{CPAIOR 2002)}},
+        annote = {For NP-hard problems constraint satisfaction problems 
+		establish the existence of a feasible solution can not be 
+		done efficiently. 
+		The most common approach is to implictly explore the 
+		feasible region. 
+		In this paper, the authors propose to add tight redundant 
+		constraints, possibly hard to be verified exactly, but that 
+		can be checked by applying some heuristics. 
+		One heuristic strategy they consider follows a {GRASP} 
+		strategy.}, 
+        year = {2002}
+}
+
+@techreport{SilOchMar03a,
+        author = "G.C. Silva and L.S. Ochi and S.L. Martins",
+        title = {Experimental comparision of Greedy Randomized 
+		Adaptive Search Procedures for the Maximum Diversity 
+		Problem},
+        institution = {Department of Computer Science, Federal Fluminense 
+		University},
+        address = "Niter{\'o}i, Brazil",
+        annote = {Given a large collection $C$ of elements, the maximum 
+		diversity problem consists in finding optimally diverse 
+		subsets of $C$. 
+		Ghosh (1996) proposed a {GRASP} for 
+		approaching this problem. 
+		In this paper, a new {GRASP} is depicted, whose construction 
+		phase implements three different strategies based on 
+		distance greedy function. 
+		The local search phase uses two neighborhood structures. 
+		One is the structure defined by Ghosh, while the second 
+		one is a $2$-exchange neighborhood.},
+        year = "2003"
+}
+
+@techreport{RolMil02a,
+        author = "A. Roli and M. Milano",
+        title = "{MAGMA}: A multiagent architecture for Metaheuristics",
+        number = "DEIS-LIA-02-007",
+        institution = "DEIS,
+                       Universit\`a degli Studi di Bologna",
+        address = "Bologna, Italy",
+	annote = "In this paper, the main metaheuristic schemes, including 
+		{GRASP}, are revisited in a multiagent perspective and a 
+		uniform framework called MAGMA is provided.",
+        year = "2002"
+}
+

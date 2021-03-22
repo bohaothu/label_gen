@@ -1,0 +1,861 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><title>
+	
+    WinCE 6.00 and platform.bib
+    -
+    microsoft.public.windowsce.platbuilder
+    |
+    Microsoft Newsgroups
+</title>
+    <meta name="keywords" content="microsoft.public.windowsce.platbuilder" />
+    <meta name="description" content="<eUUuBr6sKHA.3536@TK2MSFTNGP06.phx.gbl> Hi all,I'am porting a BSP to our board and I have a little interrogation about a directive in the platform.bib file.I've seen some lines with following syntaxe:; @XIPREGION IF PACKAGE_OEMDRIVERS....;  " />
+<script type="text/javascript" src="/js/jquery.js"></script>
+    <script type="text/javascript" src="/js/main.js"></script>
+    <link rel="Stylesheet" href="/css/main.css" /><script src="/jq/tb/tb.js" type="text/javascript"></script>
+    <link href="/jq/tb/tb.css" rel="stylesheet" type="text/css" />
+
+    <script type="text/javascript" src="/js/Thread.js"></script>
+
+</head>
+<body class="MainBody">
+
+       
+<script type="text/javascript">
+(function(){
+  var bsa = document.createElement('script');
+     bsa.type = 'text/javascript';
+     bsa.async = true;
+     bsa.src = '//s3.buysellads.com/ac/bsa.js';
+  (document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(bsa);
+})();
+</script>
+ 
+
+    <table class="MainTable" cellspacing="0"   >
+        <tr class="TopHeader">
+            <td colspan="3" >
+                    <table style="width: 100%; " cellpadding="0"
+                        cellspacing="0">
+                        <tr>
+                    <td style="width:200px">   
+       
+</td>
+       <td align="right"><img src="/img/mswindows.png" />&nbsp;</td>
+                            <td>      
+                            <a href="/">MSGROUPS.NET</a> | <img src="/img/icn/add.png" /><a href="/article~post">Post Question</a> | <img src="/img/icn/i.png" /><a href="/site~about">About</a> | <img src="/img/icn/group.png" /><a href="/groups">Groups</a> | <img src="/img/icn/comment.png" /><a href="/site~contact">Contact</a> |  
+<b><img src="/img/icn/adduser.png"/><a onclick="parent.location='/site-/register'">Register</a> | <a onclick="OpenTB('/ifr/login', 350, 150 )"><img src="/img/icn/key.png" />Login</a></b>
+ 
+                    </td>
+                       <td align="right" > </td>
+                        </tr>
+                    </table>
+            </td>
+        </tr>         
+        <tr>
+            <td valign="top" style="width: 150px"  class="MainLeft"> 
+                <br /><br /><br />      
+                      
+<a href="/microsoft.public.crm/">
+    <img src="/img/icn/group.png" />microsoft public crm
+    (27518)</a><img src="/img/icn/rss.png" / onclick="window.location='/microsoft.public.crm.rss'"><br />
+<br />
+
+<a href="/microsoft.public.access/">
+    <img src="/img/icn/group.png" />microsoft public access
+    (17032)</a><img src="/img/icn/rss.png" / onclick="window.location='/microsoft.public.access.rss'"><br />
+<br />
+
+<a href="/microsoft.public.excel.misc/">
+    <img src="/img/icn/group.png" />microsoft public excel misc
+    (9093)</a><img src="/img/icn/rss.png" / onclick="window.location='/microsoft.public.excel.misc.rss'"><br />
+<br />
+
+<a href="/microsoft.public.access.formscoding/">
+    <img src="/img/icn/group.png" />microsoft public access formscoding
+    (7572)</a><img src="/img/icn/rss.png" / onclick="window.location='/microsoft.public.access.formscoding.rss'"><br />
+<br />
+
+<a href="/microsoft.public.outlook.general/">
+    <img src="/img/icn/group.png" />microsoft public outlook general
+    (7339)</a><img src="/img/icn/rss.png" / onclick="window.location='/microsoft.public.outlook.general.rss'"><br />
+<br />
+
+<a href="/microsoft.public.access.forms/">
+    <img src="/img/icn/group.png" />microsoft public access forms
+    (6944)</a><img src="/img/icn/rss.png" / onclick="window.location='/microsoft.public.access.forms.rss'"><br />
+<br />
+
+<a href="/microsoft.public.excel.programming/">
+    <img src="/img/icn/group.png" />microsoft public excel programming
+    (6569)</a><img src="/img/icn/rss.png" / onclick="window.location='/microsoft.public.excel.programming.rss'"><br />
+<br />
+
+<a href="/microsoft.public.access.queries/">
+    <img src="/img/icn/group.png" />microsoft public access queries
+    (6397)</a><img src="/img/icn/rss.png" / onclick="window.location='/microsoft.public.access.queries.rss'"><br />
+<br />
+
+<a href="/microsoft.public.word.docmanagement/">
+    <img src="/img/icn/group.png" />microsoft public word docmanagement
+    (5607)</a><img src="/img/icn/rss.png" / onclick="window.location='/microsoft.public.word.docmanagement.rss'"><br />
+<br />
+
+<a href="/microsoft.public.excel.worksheet.functions/">
+    <img src="/img/icn/group.png" />microsoft public excel worksheet functions
+    (5040)</a><img src="/img/icn/rss.png" / onclick="window.location='/microsoft.public.excel.worksheet.functions.rss'"><br />
+<br />
+
+<a href="/microsoft.public.access.reports/">
+    <img src="/img/icn/group.png" />microsoft public access reports
+    (4496)</a><img src="/img/icn/rss.png" / onclick="window.location='/microsoft.public.access.reports.rss'"><br />
+<br />
+
+<a href="/microsoft.public.windowsxp.general/">
+    <img src="/img/icn/group.png" />microsoft public windowsxp general
+    (3949)</a><img src="/img/icn/rss.png" / onclick="window.location='/microsoft.public.windowsxp.general.rss'"><br />
+<br />
+
+<a href="/microsoft.public.access.conversion/">
+    <img src="/img/icn/group.png" />microsoft public access conversion
+    (3222)</a><img src="/img/icn/rss.png" / onclick="window.location='/microsoft.public.access.conversion.rss'"><br />
+<br />
+
+<a href="/microsoft.public.windows.vista.mail/">
+    <img src="/img/icn/group.png" />microsoft public windows vista mail
+    (3011)</a><img src="/img/icn/rss.png" / onclick="window.location='/microsoft.public.windows.vista.mail.rss'"><br />
+<br />
+
+<a href="/microsoft.public.windows.vista.general/">
+    <img src="/img/icn/group.png" />microsoft public windows vista general
+    (2858)</a><img src="/img/icn/rss.png" / onclick="window.location='/microsoft.public.windows.vista.general.rss'"><br />
+<br />
+
+<a href="/microsoft.public.windows.live.mail.desktop/">
+    <img src="/img/icn/group.png" />microsoft public windows live mail desktop
+    (2760)</a><img src="/img/icn/rss.png" / onclick="window.location='/microsoft.public.windows.live.mail.desktop.rss'"><br />
+<br />
+
+<a href="/microsoft.public.office.misc/">
+    <img src="/img/icn/group.png" />microsoft public office misc
+    (2268)</a><img src="/img/icn/rss.png" / onclick="window.location='/microsoft.public.office.misc.rss'"><br />
+<br />
+
+<a href="/microsoft.public.greatplains/">
+    <img src="/img/icn/group.png" />microsoft public greatplains
+    (2192)</a><img src="/img/icn/rss.png" / onclick="window.location='/microsoft.public.greatplains.rss'"><br />
+<br />
+
+<a href="/microsoft.public.powerpoint/">
+    <img src="/img/icn/group.png" />microsoft public powerpoint
+    (2030)</a><img src="/img/icn/rss.png" / onclick="window.location='/microsoft.public.powerpoint.rss'"><br />
+<br />
+
+<a href="/microsoft.public.windows.server.sbs/">
+    <img src="/img/icn/group.png" />microsoft public windows server sbs
+    (1994)</a><img src="/img/icn/rss.png" / onclick="window.location='/microsoft.public.windows.server.sbs.rss'"><br />
+<br />
+
+<a href="/microsoft.public.dotnet.languages.csharp/">
+    <img src="/img/icn/group.png" />microsoft public dotnet languages csharp
+    (1964)</a><img src="/img/icn/rss.png" / onclick="window.location='/microsoft.public.dotnet.languages.csharp.rss'"><br />
+<br />
+
+<a href="/microsoft.public.sqlserver.programming/">
+    <img src="/img/icn/group.png" />microsoft public sqlserver programming
+    (1894)</a><img src="/img/icn/rss.png" / onclick="window.location='/microsoft.public.sqlserver.programming.rss'"><br />
+<br />
+
+<a href="/microsoft.public.mac.office.entourage/">
+    <img src="/img/icn/group.png" />microsoft public mac office entourage
+    (1868)</a><img src="/img/icn/rss.png" / onclick="window.location='/microsoft.public.mac.office.entourage.rss'"><br />
+<br />
+
+<a href="/microsoft.public.internetexplorer.general/">
+    <img src="/img/icn/group.png" />microsoft public internetexplorer general
+    (1706)</a><img src="/img/icn/rss.png" / onclick="window.location='/microsoft.public.internetexplorer.general.rss'"><br />
+<br />
+
+<a href="/microsoft.public.mac.office.word/">
+    <img src="/img/icn/group.png" />microsoft public mac office word
+    (1699)</a><img src="/img/icn/rss.png" / onclick="window.location='/microsoft.public.mac.office.word.rss'"><br />
+<br />
+
+<a href="/microsoft.public.access.modulesdaovba/">
+    <img src="/img/icn/group.png" />microsoft public access modulesdaovba
+    (1691)</a><img src="/img/icn/rss.png" / onclick="window.location='/microsoft.public.access.modulesdaovba.rss'"><br />
+<br />
+
+<a href="/microsoft.public.dotnet.framework.aspnet/">
+    <img src="/img/icn/group.png" />microsoft public dotnet framework aspnet
+    (1467)</a><img src="/img/icn/rss.png" / onclick="window.location='/microsoft.public.dotnet.framework.aspnet.rss'"><br />
+<br />
+
+<a href="/microsoft.public.outlook.calendaring/">
+    <img src="/img/icn/group.png" />microsoft public outlook calendaring
+    (1436)</a><img src="/img/icn/rss.png" / onclick="window.location='/microsoft.public.outlook.calendaring.rss'"><br />
+<br />
+
+<a href="/microsoft.public.project.server/">
+    <img src="/img/icn/group.png" />microsoft public project server
+    (1356)</a><img src="/img/icn/rss.png" / onclick="window.location='/microsoft.public.project.server.rss'"><br />
+<br />
+
+<a href="/microsoft.public.windowsupdate/">
+    <img src="/img/icn/group.png" />microsoft public windowsupdate
+    (1353)</a><img src="/img/icn/rss.png" / onclick="window.location='/microsoft.public.windowsupdate.rss'"><br />
+<br />
+
+<a href="/microsoft.public.sqlserver.server/">
+    <img src="/img/icn/group.png" />microsoft public sqlserver server
+    (1347)</a><img src="/img/icn/rss.png" / onclick="window.location='/microsoft.public.sqlserver.server.rss'"><br />
+<br />
+
+<a href="/microsoft.public.project/">
+    <img src="/img/icn/group.png" />microsoft public project
+    (1285)</a><img src="/img/icn/rss.png" / onclick="window.location='/microsoft.public.project.rss'"><br />
+<br />
+
+<a href="/microsoft.public.excel/">
+    <img src="/img/icn/group.png" />microsoft public excel
+    (1277)</a><img src="/img/icn/rss.png" / onclick="window.location='/microsoft.public.excel.rss'"><br />
+<br />
+
+<a href="/microsoft.public.windowsxp.help_and_support/">
+    <img src="/img/icn/group.png" />microsoft public windowsxp help and support
+    (1204)</a><img src="/img/icn/rss.png" / onclick="window.location='/microsoft.public.windowsxp.help_and_support.rss'"><br />
+<br />
+
+<a href="/microsoft.public.exchange.admin/">
+    <img src="/img/icn/group.png" />microsoft public exchange admin
+    (1185)</a><img src="/img/icn/rss.png" / onclick="window.location='/microsoft.public.exchange.admin.rss'"><br />
+<br />
+
+<a href="/microsoft.public.windowsmedia.player/">
+    <img src="/img/icn/group.png" />microsoft public windowsmedia player
+    (1165)</a><img src="/img/icn/rss.png" / onclick="window.location='/microsoft.public.windowsmedia.player.rss'"><br />
+<br />
+
+<a href="/microsoft.public.mac.office.excel/">
+    <img src="/img/icn/group.png" />microsoft public mac office excel
+    (1160)</a><img src="/img/icn/rss.png" / onclick="window.location='/microsoft.public.mac.office.excel.rss'"><br />
+<br />
+
+<a href="/microsoft.public.windows.server.general/">
+    <img src="/img/icn/group.png" />microsoft public windows server general
+    (1100)</a><img src="/img/icn/rss.png" / onclick="window.location='/microsoft.public.windows.server.general.rss'"><br />
+<br />
+
+<a href="/microsoft.public.dataprotectionmanager/">
+    <img src="/img/icn/group.png" />microsoft public dataprotectionmanager
+    (1096)</a><img src="/img/icn/rss.png" / onclick="window.location='/microsoft.public.dataprotectionmanager.rss'"><br />
+<br />
+
+<a href="/microsoft.public.outlook/">
+    <img src="/img/icn/group.png" />microsoft public outlook
+    (1035)</a><img src="/img/icn/rss.png" / onclick="window.location='/microsoft.public.outlook.rss'"><br />
+<br />
+
+<a href="/microsoft.public.word.vba.general/">
+    <img src="/img/icn/group.png" />microsoft public word vba general
+    (1029)</a><img src="/img/icn/rss.png" / onclick="window.location='/microsoft.public.word.vba.general.rss'"><br />
+<br />
+
+<a href="/microsoft.public.vb.general.discussion/">
+    <img src="/img/icn/group.png" />microsoft public vb general discussion
+    (1023)</a><img src="/img/icn/rss.png" / onclick="window.location='/microsoft.public.vb.general.discussion.rss'"><br />
+<br />
+
+<a href="/microsoft.public.development.device.drivers/">
+    <img src="/img/icn/group.png" />microsoft public development device drivers
+    (990)</a><img src="/img/icn/rss.png" / onclick="window.location='/microsoft.public.development.device.drivers.rss'"><br />
+<br />
+
+<a href="/microsoft.public.outlook.contacts/">
+    <img src="/img/icn/group.png" />microsoft public outlook contacts
+    (953)</a><img src="/img/icn/rss.png" / onclick="window.location='/microsoft.public.outlook.contacts.rss'"><br />
+<br />
+
+<a href="/microsoft.public.windows.server.active_directory/">
+    <img src="/img/icn/group.png" />microsoft public windows server active directory
+    (930)</a><img src="/img/icn/rss.png" / onclick="window.location='/microsoft.public.windows.server.active_directory.rss'"><br />
+<br />
+
+<a href="/microsoft.public.dotnet.languages.vb/">
+    <img src="/img/icn/group.png" />microsoft public dotnet languages vb
+    (843)</a><img src="/img/icn/rss.png" / onclick="window.location='/microsoft.public.dotnet.languages.vb.rss'"><br />
+<br />
+
+<a href="/microsoft.public.outlook.installation/">
+    <img src="/img/icn/group.png" />microsoft public outlook installation
+    (820)</a><img src="/img/icn/rss.png" / onclick="window.location='/microsoft.public.outlook.installation.rss'"><br />
+<br />
+
+<a href="/microsoft.public.word.newusers/">
+    <img src="/img/icn/group.png" />microsoft public word newusers
+    (808)</a><img src="/img/icn/rss.png" / onclick="window.location='/microsoft.public.word.newusers.rss'"><br />
+<br />
+
+<a href="/microsoft.public.word.pagelayout/">
+    <img src="/img/icn/group.png" />microsoft public word pagelayout
+    (783)</a><img src="/img/icn/rss.png" / onclick="window.location='/microsoft.public.word.pagelayout.rss'"><br />
+<br />
+
+<a href="/microsoft.public.windowsce.platbuilder/">
+    <img src="/img/icn/group.png" />microsoft public windowsce platbuilder
+    (757)</a><img src="/img/icn/rss.png" / onclick="window.location='/microsoft.public.windowsce.platbuilder.rss'"><br />
+<br />
+
+<a href="/microsoft.public.excel.charting/">
+    <img src="/img/icn/group.png" />microsoft public excel charting
+    (733)</a><img src="/img/icn/rss.png" / onclick="window.location='/microsoft.public.excel.charting.rss'"><br />
+<br />
+
+<a href="/microsoft.public.pos/">
+    <img src="/img/icn/group.png" />microsoft public pos
+    (729)</a><img src="/img/icn/rss.png" / onclick="window.location='/microsoft.public.pos.rss'"><br />
+<br />
+
+<a href="/microsoft.public.publisher/">
+    <img src="/img/icn/group.png" />microsoft public publisher
+    (728)</a><img src="/img/icn/rss.png" / onclick="window.location='/microsoft.public.publisher.rss'"><br />
+<br />
+
+<a href="/microsoft.public.excel.newusers/">
+    <img src="/img/icn/group.png" />microsoft public excel newusers
+    (711)</a><img src="/img/icn/rss.png" / onclick="window.location='/microsoft.public.excel.newusers.rss'"><br />
+<br />
+
+<a href="/microsoft.public.windows.powershell/">
+    <img src="/img/icn/group.png" />microsoft public windows powershell
+    (697)</a><img src="/img/icn/rss.png" / onclick="window.location='/microsoft.public.windows.powershell.rss'"><br />
+<br />
+
+<a href="/microsoft.public.vc.mfc/">
+    <img src="/img/icn/group.png" />microsoft public vc mfc
+    (651)</a><img src="/img/icn/rss.png" / onclick="window.location='/microsoft.public.vc.mfc.rss'"><br />
+<br />
+
+<a href="/microsoft.public.access.gettingstarted/">
+    <img src="/img/icn/group.png" />microsoft public access gettingstarted
+    (630)</a><img src="/img/icn/rss.png" / onclick="window.location='/microsoft.public.access.gettingstarted.rss'"><br />
+<br />
+
+<a href="/microsoft.public.word.application.errors/">
+    <img src="/img/icn/group.png" />microsoft public word application errors
+    (629)</a><img src="/img/icn/rss.png" / onclick="window.location='/microsoft.public.word.application.errors.rss'"><br />
+<br />
+
+<a href="/microsoft.public.sharepoint.general/">
+    <img src="/img/icn/group.png" />microsoft public sharepoint general
+    (604)</a><img src="/img/icn/rss.png" / onclick="window.location='/microsoft.public.sharepoint.general.rss'"><br />
+<br />
+
+<a href="/microsoft.public.scripting.vbscript/">
+    <img src="/img/icn/group.png" />microsoft public scripting vbscript
+    (587)</a><img src="/img/icn/rss.png" / onclick="window.location='/microsoft.public.scripting.vbscript.rss'"><br />
+<br />
+
+<a href="/microsoft.public.office.setup/">
+    <img src="/img/icn/group.png" />microsoft public office setup
+    (584)</a><img src="/img/icn/rss.png" / onclick="window.location='/microsoft.public.office.setup.rss'"><br />
+<br />
+
+<a href="/microsoft.public.onenote/">
+    <img src="/img/icn/group.png" />microsoft public onenote
+    (556)</a><img src="/img/icn/rss.png" / onclick="window.location='/microsoft.public.onenote.rss'"><br />
+<br />
+
+<a href="/microsoft.public.sqlserver.reportingsvcs/">
+    <img src="/img/icn/group.png" />microsoft public sqlserver reportingsvcs
+    (550)</a><img src="/img/icn/rss.png" / onclick="window.location='/microsoft.public.sqlserver.reportingsvcs.rss'"><br />
+<br />
+
+<a href="/microsoft.public.outlookexpress.general/">
+    <img src="/img/icn/group.png" />microsoft public outlookexpress general
+    (539)</a><img src="/img/icn/rss.png" / onclick="window.location='/microsoft.public.outlookexpress.general.rss'"><br />
+<br />
+
+<a href="/microsoft.public.windows.64bit.general/">
+    <img src="/img/icn/group.png" />microsoft public windows 64bit general
+    (535)</a><img src="/img/icn/rss.png" / onclick="window.location='/microsoft.public.windows.64bit.general.rss'"><br />
+<br />
+
+<a href="/microsoft.public.frontpage.client/">
+    <img src="/img/icn/group.png" />microsoft public frontpage client
+    (532)</a><img src="/img/icn/rss.png" / onclick="window.location='/microsoft.public.frontpage.client.rss'"><br />
+<br />
+
+<a href="/microsoft.public.access.tablesdbdesign/">
+    <img src="/img/icn/group.png" />microsoft public access tablesdbdesign
+    (529)</a><img src="/img/icn/rss.png" / onclick="window.location='/microsoft.public.access.tablesdbdesign.rss'"><br />
+<br />
+
+<a href="/microsoft.public.outlook.program_vba/">
+    <img src="/img/icn/group.png" />microsoft public outlook program vba
+    (502)</a><img src="/img/icn/rss.png" / onclick="window.location='/microsoft.public.outlook.program_vba.rss'"><br />
+<br />
+
+<a href="/microsoft.public.windows.live.messenger/">
+    <img src="/img/icn/group.png" />microsoft public windows live messenger
+    (434)</a><img src="/img/icn/rss.png" / onclick="window.location='/microsoft.public.windows.live.messenger.rss'"><br />
+<br />
+
+<a href="/microsoft.public.windowsxp.hardware/">
+    <img src="/img/icn/group.png" />microsoft public windowsxp hardware
+    (416)</a><img src="/img/icn/rss.png" / onclick="window.location='/microsoft.public.windowsxp.hardware.rss'"><br />
+<br />
+
+<a href="/microsoft.public.money/">
+    <img src="/img/icn/group.png" />microsoft public money
+    (397)</a><img src="/img/icn/rss.png" / onclick="window.location='/microsoft.public.money.rss'"><br />
+<br />
+
+<a href="/microsoft.public.windowsxp.basics/">
+    <img src="/img/icn/group.png" />microsoft public windowsxp basics
+    (367)</a><img src="/img/icn/rss.png" / onclick="window.location='/microsoft.public.windowsxp.basics.rss'"><br />
+<br />
+
+<a href="/microsoft.public.dotnet.general/">
+    <img src="/img/icn/group.png" />microsoft public dotnet general
+    (316)</a><img src="/img/icn/rss.png" / onclick="window.location='/microsoft.public.dotnet.general.rss'"><br />
+<br />
+
+<a href="/microsoft.public.windows.mediacenter/">
+    <img src="/img/icn/group.png" />microsoft public windows mediacenter
+    (300)</a><img src="/img/icn/rss.png" / onclick="window.location='/microsoft.public.windows.mediacenter.rss'"><br />
+<br />
+
+<a href="/microsoft.public.windows.inetexplorer.ie6_outlookexpress/">
+    <img src="/img/icn/group.png" />microsoft public windows inetexplorer ie6 outlookexpress
+    (276)</a><img src="/img/icn/rss.png" / onclick="window.location='/microsoft.public.windows.inetexplorer.ie6_outlookexpress.rss'"><br />
+<br />
+
+<a href="/microsoft.public.mac.office/">
+    <img src="/img/icn/group.png" />microsoft public mac office
+    (272)</a><img src="/img/icn/rss.png" / onclick="window.location='/microsoft.public.mac.office.rss'"><br />
+<br />
+
+<a href="/microsoft.public.win98.gen_discussion/">
+    <img src="/img/icn/group.png" />microsoft public win98 gen discussion
+    (243)</a><img src="/img/icn/rss.png" / onclick="window.location='/microsoft.public.win98.gen_discussion.rss'"><br />
+<br />
+
+<a href="/microsoft.public.sharepoint.setup_and_administration/">
+    <img src="/img/icn/group.png" />microsoft public sharepoint setup and administration
+    (225)</a><img src="/img/icn/rss.png" / onclick="window.location='/microsoft.public.sharepoint.setup_and_administration.rss'"><br />
+<br />
+
+<a href="/microsoft.public.nntp.test/">
+    <img src="/img/icn/group.png" />microsoft public nntp test
+    (184)</a><img src="/img/icn/rss.png" / onclick="window.location='/microsoft.public.nntp.test.rss'"><br />
+<br />
+
+<a href="/microsoft.public.windows.vista.hardware_devices/">
+    <img src="/img/icn/group.png" />microsoft public windows vista hardware devices
+    (183)</a><img src="/img/icn/rss.png" / onclick="window.location='/microsoft.public.windows.vista.hardware_devices.rss'"><br />
+<br />
+
+<a href="/microsoft.public.windows.vista.music_pictures_video/">
+    <img src="/img/icn/group.png" />microsoft public windows vista music pictures video
+    (178)</a><img src="/img/icn/rss.png" / onclick="window.location='/microsoft.public.windows.vista.music_pictures_video.rss'"><br />
+<br />
+
+<a href="/microsoft.public.windows.vista.performance_maintenance/">
+    <img src="/img/icn/group.png" />microsoft public windows vista performance maintenance
+    (148)</a><img src="/img/icn/rss.png" / onclick="window.location='/microsoft.public.windows.vista.performance_maintenance.rss'"><br />
+<br />
+
+<a href="/microsoft.public.dotnet.framework/">
+    <img src="/img/icn/group.png" />microsoft public dotnet framework
+    (148)</a><img src="/img/icn/rss.png" / onclick="window.location='/microsoft.public.dotnet.framework.rss'"><br />
+<br />
+
+<a href="/microsoft.public.visio/">
+    <img src="/img/icn/group.png" />microsoft public visio
+    (128)</a><img src="/img/icn/rss.png" / onclick="window.location='/microsoft.public.visio.rss'"><br />
+<br />
+
+<a href="/microsoft.public.access.3rdpartyusrgrp/">
+    <img src="/img/icn/group.png" />microsoft public access 3rdpartyusrgrp
+    (68)</a><img src="/img/icn/rss.png" / onclick="window.location='/microsoft.public.access.3rdpartyusrgrp.rss'"><br />
+<br />
+
+<a href="/microsoft.public.dotnet.xml/">
+    <img src="/img/icn/group.png" />microsoft public dotnet xml
+    (58)</a><img src="/img/icn/rss.png" / onclick="window.location='/microsoft.public.dotnet.xml.rss'"><br />
+<br />
+
+<a href="/microsoft.public.pt.windowsxp/">
+    <img src="/img/icn/group.png" />microsoft public pt windowsxp
+    (38)</a><img src="/img/icn/rss.png" / onclick="window.location='/microsoft.public.pt.windowsxp.rss'"><br />
+<br />
+
+<a href="/microsoft.public.access.developers.toolkitode/">
+    <img src="/img/icn/group.png" />microsoft public access developers toolkitode
+    (34)</a><img src="/img/icn/rss.png" / onclick="window.location='/microsoft.public.access.developers.toolkitode.rss'"><br />
+<br />
+
+<a href="/microsoft.public.windows.live.photogallery/">
+    <img src="/img/icn/group.png" />microsoft public windows live photogallery
+    (32)</a><img src="/img/icn/rss.png" / onclick="window.location='/microsoft.public.windows.live.photogallery.rss'"><br />
+<br />
+
+<a href="/microsoft.public.dotnet.faqs/">
+    <img src="/img/icn/group.png" />microsoft public dotnet faqs
+    (19)</a><img src="/img/icn/rss.png" / onclick="window.location='/microsoft.public.dotnet.faqs.rss'"><br />
+<br />
+
+<a href="/microsoft.public.dotnet.framework.aspnet.datagridcontrol/">
+    <img src="/img/icn/group.png" />microsoft public dotnet framework aspnet datagridcontrol
+    (16)</a><img src="/img/icn/rss.png" / onclick="window.location='/microsoft.public.dotnet.framework.aspnet.datagridcontrol.rss'"><br />
+<br />
+
+                               
+                
+            </td>
+            <td class="MainContent">            <form action="http://msgroups.net/site~search/" id="cse-search-box">
+  <div>
+    <input type="hidden" name="cx" value="001993386287184627138:v5hn5uatsvu" />
+    <input type="hidden" name="cof" value="FORID:10" />
+    <input type="hidden" name="ie" value="UTF-8" />
+    <input type="text" name="q" size="50" />
+    <input type="submit" name="sa" value="Search" />
+  </div>
+</form>
+<script type="text/javascript" src="http://www.google.com/cse/brand?form=cse-search-box&lang=en"></script>
+    
+    <h4>
+        WinCE 6.00 and platform.bib
+        <a href="#reply">
+            <img src="/img/icn/arrow1.png" />Reply</a></h4>
+    <table cellpadding="0" cellspacing="1" class="BordersTopSides" width="100%">
+        <tr class="Value">
+            <td style="width: 67px">
+                Group: <a href="/microsoft.public.windowsce.platbuilder/">
+                    microsoft.public.windowsce.platbuilder</a>
+            </td>
+            <td style="width: 50px">
+                <a onclick="OpenTB('/ifr/Subscribe?MessageId=<eUUuBr6sKHA.3536@TK2MSFTNGP06.phx.gbl>', 350, 100)">
+                    <img src="/img/icn/star2.gif" /><b>Subscribe</b></a>
+            </td>
+            <td style="width: 100px">
+                Posted:<span title='2/22/2010 10:35:28 AM'>2/22/2010 10:35:28 AM</span>
+            </td>
+            <td style="width: 50px">
+                Replies:2
+            </td>
+            <td style="width: 50px">
+                Views:261
+            </td>
+            <td style="width: 50px" align="right">
+    Items(2) 
+            </td>
+        </tr>
+    </table>
+      
+  <table width="100%" class="PostReply"><tr><td>
+
+        <script type="text/javascript">
+            <!--
+google_ad_client = "pub-8691502151377303";
+/* MSG-Rectangle */
+google_ad_slot = "5535871960";
+google_ad_width = 336;
+google_ad_height = 280;
+//-->
+        </script>
+        <script type="text/javascript"
+        src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+        </script>
+
+    </td><td align="right">
+        
+     <div class="lqm_ad"  lqm_channel="1" lqm_publisher="533" lqm_zone="1" lqm_format="7"></div>
+
+         </td> </tr></table>  
+<table width="100%"  class="PostArticle">
+    <tr>
+        <td >
+     <div class="ForumPostContentText"   >   Hi all,
+<br />I'am porting a BSP to our board and I have a little interrogation about 
+<br />a directive in the platform.bib file.
+<br />I've seen some lines with following syntaxe:
+<br />
+<br />; @XIPREGION IF PACKAGE_OEMDRIVERS
+<br />
+<br />....
+<br />
+<br />; @XIPREGION ENDIF PACKAGE_OEMXIPKERNEL
+<br />
+<br />I can't find any description about @XIPREGION in MSDN.
+<br />Is there someone who knows anything about this directive?
+<br />
+<br />Thanks for any reply.
+<br />
+<br />Fabrice
+<br /></div>   </   
+        </td>
+        <td valign="top" style="width: 150px">
+            Fabrice MOUSSET &lt;fabrice.mous...@laposte.net&gt;<br />
+            <span title='2/22/2010 10:35:28 AM'>2/22/2010 10:35:28 AM</span>
+            <br />
+            <br />
+            <div style="font-size: 8pt">
+                <img src="/img/icn/header.gif" /> <a onclick="OpenTB('/ifr/HdrA?m=%3ceUUuBr6sKHA.3536%40TK2MSFTNGP06.phx.gbl%3e',600,400)">Header</a>
+                      <br /> 
+                    <img src="/img/icn/warn.png" /><a onclick="ReportSpamArticle('<eUUuBr6sKHA.3536@TK2MSFTNGP06.phx.gbl>')">Report as Spam</a> 
+                    </div>
+        </td>
+    </tr>
+</table>
+
+<table width="100%" class="PostReply">
+    <tr>
+        <td>
+            
+            This is not useful to windows ce. This is must for windows Mobile image 
+<br />creation.
+<br />-- 
+<br />vinoth.R
+<br />http://vinoth-vinothblog.blogspot.com
+<br />http://www.e-consystems.com
+<br />
+<br />
+<br />&quot;Fabrice MOUSSET&quot; wrote:
+<br />
+<br />&gt; Hi all,
+<br />&gt; I'am porting a BSP to our board and I have a little interrogation about 
+<br />&gt; a directive in the platform.bib file.
+<br />&gt; I've seen some lines with following syntaxe:
+<br />&gt; 
+<br />&gt; ; @XIPREGION IF PACKAGE_OEMDRIVERS
+<br />&gt; 
+<br />&gt; ....
+<br />&gt; 
+<br />&gt; ; @XIPREGION ENDIF PACKAGE_OEMXIPKERNEL
+<br />&gt; 
+<br />&gt; I can't find any description about @XIPREGION in MSDN.
+<br />&gt; Is there someone who knows anything about this directive?
+<br />&gt; 
+<br />&gt; Thanks for any reply.
+<br />&gt; 
+<br />&gt; Fabrice
+<br />&gt; .
+<br />&gt; 
+<br />
+        </td>
+        <td valign="top" style="width: 150px; background-color: lightyellow">
+            =?Utf-8?B?Vmlub3RoIFtNQ1RTXQ==?= &lt;vin...@discussions.microsoft.com&gt;<br />
+            <span title='2/22/2010 12:16:01 PM'>2/22/2010 12:16:01 PM</span>
+            <br />
+            <br />
+            <div style="font-size: 8pt">
+                <img src="/img/icn/header.gif" />
+                <a onclick="OpenTB('/ifr/HdrR?m=%3c220D3189-4739-44BD-9133-4B73C0AC7C74%40microsoft.com%3e',600,400)">
+                    Header</a>
+                <br />
+                <img src="/img/icn/warn.png" /><a onclick="ReportSpamReply('<220D3189-4739-44BD-9133-4B73C0AC7C74@microsoft.com>')">Report
+                            as Spam</a>
+                
+            </div>
+        </td>
+    </tr>
+</table>
+
+<table width="100%" class="PostReply">
+    <tr>
+        <td>
+            
+            On 2/22/2010 11:35 AM, Fabrice MOUSSET wrote:
+<br />&gt; Hi all,
+<br />&gt; I'am porting a BSP to our board and I have a little interrogation about
+<br />&gt; a directive in the platform.bib file.
+<br />&gt; I've seen some lines with following syntaxe:
+<br />&gt;
+<br />&gt; ; @XIPREGION IF PACKAGE_OEMDRIVERS
+<br />&gt;
+<br />&gt; ...
+<br />&gt;
+<br />&gt; ; @XIPREGION ENDIF PACKAGE_OEMXIPKERNEL
+<br />&gt;
+<br />&gt; I can't find any description about @XIPREGION in MSDN.
+<br />&gt; Is there someone who knows anything about this directive?
+<br />
+<br />This may apply to multiple XIP images. It is a feature that allows you 
+<br />to run your OS image from flash and let you update a single &quot;region&quot; 
+<br />instead of replacing the whole image (and NK region).
+<br />As Vinoth said is usually found in BSP that are shared between CE and 
+<br />Windows Mobile and I never saw multiple XIP images configured on a 
+<br />&quot;regular&quot; CE BSP (it will require a lot of work and very careful 
+<br />definitions of XIP areas to allow some room for updates without wasting 
+<br />too much space...).
+<br />
+<br />-- 
+<br />Valter Minute (eMVP)
+<br />Training, support and development for Windows CE:
+<br />www.fortechembeddedlabs.it
+<br />My embedded programming and cooking blog:
+<br />www.geekswithblogs.net/WindowsEmbeddedCookbook
+<br />Windows Embedded support forums in Italian:
+<br />http://social.msdn.microsoft.com/Forums/it-IT/windowsembeddedit/threads
+<br />(the reply address of this message is invalid)
+<br />
+        </td>
+        <td valign="top" style="width: 150px; background-color: lightyellow">
+            &quot;Valter Minute [eMVP]&quot; &lt;valter.min...@_REMOVEME_gmail.com&gt;<br />
+            <span title='2/23/2010 9:10:39 AM'>2/23/2010 9:10:39 AM</span>
+            <br />
+            <br />
+            <div style="font-size: 8pt">
+                <img src="/img/icn/header.gif" />
+                <a onclick="OpenTB('/ifr/HdrR?m=%3cuFwKSgGtKHA.1608%40TK2MSFTNGP05.phx.gbl%3e',600,400)">
+                    Header</a>
+                <br />
+                <img src="/img/icn/warn.png" /><a onclick="ReportSpamReply('<uFwKSgGtKHA.1608@TK2MSFTNGP05.phx.gbl>')">Report
+                            as Spam</a>
+                
+            </div>
+        </td>
+    </tr>
+</table>
+
+    <br />
+    
+    <form id="FormReply">
+    <table id="reply">
+        <tr>
+            <td>
+                <b>Reply:</b><br />
+                <textarea id="Body" name="Body" cols="60" rows="5" style="background-color: #e9e9e9"></textarea>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                
+                | or Email(not shown):<input name="Email" type="text" />
+                Name:<input id="Name" name="Name" type="text" />
+                
+                |
+                
+<b><img src="/img/icn/adduser.png"/><a onclick="parent.location='/site-/register'">Register</a> | <a onclick="OpenTB('/ifr/login', 350, 150 )"><img src="/img/icn/key.png" />Login</a></b>
+
+                <br />
+                <br />
+                <input type="button" onclick="Post()" value="Post" />
+                <input name="Alert" type="checkbox" checked="checked" />Alert me when someone responds
+                to this posting.
+            </td>
+        </tr>
+    </table>
+    
+    <br /><br />
+    <b>Web Resources:</b><br /><br />
+    <a href="http://www.tech-archive.net/Archive/WindowsCE/microsoft.public.windowsce.platbuilder/2010-02/msg00357.html" target="_blank" ><b>Re: WinCE 6.00 and platform.bib</b></a> WinCE 6.00 and platform.bib. From: Fabrice MOUSSET; Prev by Date: Re: Calculating Frequency from the Mode definition? Next by Date: Re: ERROR: More then 1 thread waiting on the same ... <br /><a href="http://www.eggheadcafe.com/software/aspnet/35788733/wince-600-and-platformbib.aspx" target="_blank" ><b>WinCE 6.00 and platform.bib in WindowsCE Platform Builder</b></a> WinCE 6. 00 and platform. bib in WindowsCE Platform Builder. . . bib file. I have seen some lines with following syntaxe: ; @ XIPREGION IF PACKAGE_OEMDRIVERS . . .XIPREGION <br /><a href="http://www.tech-archive.net/Archive/WindowsCE/microsoft.public.windowsce.platbuilder/2010-02/msg00330.html" target="_blank" ><b>WinCE 6.00 and platform.bib</b></a> Previous by thread: Re: How to remove standard desktop icons in Win CE 5.0; Next by thread: RE: WinCE 6.00 and platform.bib; Index(es): Date; Thread <br /><a href="http://www.eggheadcafe.com/software/aspnet/35806924/how-to-speed-up-wince-600-boot.aspx" target="_blank" ><b>How to speed up WinCE 6.00 boot in WindowsCE Platform Builder</b></a> WinCE 6. 00 and platform. bib in WindowsCE Platform Builder. . . some lines w" WinCE 6. 00 and platform. bib Fabrice MOUSSET posted on Monday, February 22, 2010 5:35 AM Hi . . <br /><a href="http://www.mofeel.net/archive/1023/2.aspx" target="_blank" ><b>microsoft.public.windowsce.platbuilder >> Archive Page 2</b></a> 55: WinCE 6.00 and platform.bib 56: Registry Persistence 57: cqHOieVxKkbNSVMdnMw 58: Buy used scrap rails 59: WinCE or Windows Mobile - Virtual Printer support <br /><a href="http://codeconnect.net/microsoft-news.windowsce-platbuilder/including-my-fasld-driver-and-excluding-microsoft" target="_blank" ><b>Including my FASLD driver and excluding Microsoft FASLD driver ...</b></a> ... sure you can change the name of the BSP DLL in the sources file and in your platform.bib ... questions about wince 6.00 arm assembler and linker registry on cepc unhandled win32 ... <br /><a href="http://unix.derkeiler.com/Newsgroups/comp.os.vms/2005-11/0256.html" target="_blank" ><b>comp.os.vms: VMS magtape handling</b></a> Re: Keyboard problem with RemoteDisplay on WinCE 6.00... Fabrice MOUSSET wrote: ... I have added BSP_KEYBD_NOP and also modify my platform.bib to include the driver like this: <br /><a href="http://www.pocketpcjunkies.com/Uwe/Forum.aspx/wince-pb/17335/WinCE-6-0-Boot-Problem-Continued" target="_blank" ><b>WinCE 6.0 Boot Problem - Continued</b></a> WinCE 6.0 Boot Problem - Continued ... My platform.bib file: MODULES Hello.exe $(_FLATRELEASEDIR ... Booting Windows CE version 6.00 for (ARM) &pTOC = 802fbb9c ... <br /><a href="http://www.pocketpcjunkies.com/Uwe/Forums.aspx/wince-pb/200904/1" target="_blank" ><b>Developers - topics related to Windows CE Platform Builder</b></a> I am usimg WinCE 6.00 on PXA 270 based platform. I implemented SD card driver. and the ... doesnt work.I think maybe I do some wrong settings. My setting are following: platform.bib: <br /><a href="http://www.eminsenay.com/blog/?tag=windows-embedded-ce-6-0" target="_blank" ><b>Emin Şenay – Blog » Windows Embedded CE 6.0</b></a> After WinCE boot, you can open the source code and set ... the $(WINCEROOT)\PLATFORM\VirtualPC\FILES\platform.bib file ... the %ProgramFiles%\Microsoft Platform Builder\6.00 ... <br /><a href="http://www.eminsenay.com/blog/?cat=207" target="_blank" ><b>Emin Şenay – Blog » WinCE Tutorial</b></a> After WinCE boot, you can open the source code and set ... the $(WINCEROOT)\PLATFORM\VirtualPC\FILES\platform.bib file ... the %ProgramFiles%\Microsoft Platform Builder\6.00 ... <br />
+    <input id="MessageId" name="MessageId" type="hidden" value="&lt;eUUuBr6sKHA.3536@TK2MSFTNGP06.phx.gbl>" />
+    </form>
+
+    <script type="text/javascript">
+        function Post() {
+
+            $.ajax({
+                type: 'POST',
+                url: '/Article-/Post',
+                data: $('#FormReply').serialize(),
+                success: function(r) {
+                    if (r == 'True') {
+                        AlertMsg('Your post was uploaded successfully and will appear in a few minutes.');
+                        $('#FormReply')[0].reset();
+                        window.scrollTo(0, 0);
+                    }
+                    else AlertMsg(r, 'red')
+                },
+                error: function(x) { AlertError(x) }
+            });
+
+        }
+ 
+    </script>
+
+    <br />
+                    
+                      <table width="100%"><tr><td>
+             <script type="text/javascript">
+            <!--
+google_ad_client = "pub-8691502151377303";
+/* MSG-Rectangle */
+google_ad_slot = "5535871960";
+google_ad_width = 336;
+google_ad_height = 280;
+//-->
+        </script>
+        <script type="text/javascript"
+        src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+        </script>
+        </td><td align="right"> </td> </tr></table>  
+                    
+                
+            </td>
+            <td valign="top" style="width: 150px;  text-align: right;" class="MainRight">
+                
+                       
+
+      <div class="lqm_ad"  lqm_channel="1" lqm_publisher="533" lqm_zone="1" lqm_format="2"></div>
+
+    <br /><br />
+ 
+
+             <!--   
+
+    <div class="lqm_ad"  lqm_channel="1" lqm_publisher="533" lqm_zone="1" lqm_format="2"></div>
+
+     
+                <br /><br />
+                       
+
+      <div class="lqm_ad"  lqm_channel="1" lqm_publisher="533" lqm_zone="1" lqm_format="2"></div>
+
+       <br /><br />
+                
+
+    <div class="lqm_ad"  lqm_channel="1" lqm_publisher="533" lqm_zone="1" lqm_format="2"></div>
+
+     -->                   
+                <br />
+ 
+                             
+                
+                    <!--  
+   <div class="lqm_ad"  lqm_channel="1" lqm_publisher="533" lqm_zone="1" lqm_format="18"></div>
+    --> 
+                
+             
+            </td>
+        </tr>
+        <tr >
+        <td  class="MainLeft"></td>
+        <td class="Footer" style="text-align:center;">           
+        <a href="/site~privacy">Privacy Policy</a> <br /><br /> All Times Are GMT(UTC)
+        </td>
+        <td  class="MainRight"></td>
+        </tr>
+    </table>    
+
+
+
+        <script src="http://static.getclicky.com/js" type="text/javascript"></script>
+        <script type="text/javascript">clicky.init(173496);</script>    
+
+
+<script type='text/javascript'>//
+    if (typeof jQuery == 'undefined') {
+        document.write(unescape("%3Cscript src='http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.4.2.min.js' type='text/javascript' %3E%3C/script%3E"));
+    }//</script>
+<script type='text/javascript' language='Javascript' src='http://s1.lqcdn.com/m.min.js'></script>
+<script type='text/javascript' language='Javascript'> if(jQuery.LqmAds)jQuery.LqmAds();</script>
+   
+    
+</body>
+</html>

@@ -1,0 +1,3779 @@
+
+@COMMENT{ ==================================================================== }
+@COMMENT{           BibTeX database file, for use with LaTeX/BibTeX            }
+@COMMENT{ ==================================================================== }
+@COMMENT{ database : Testing Embedded-Core Based System Chips                  }
+@COMMENT{            (TECS Bibliograph)                                        }
+@COMMENT{ URL      : http://www.extra.research.philips.com/itc02socbenchm/bib/  }
+@COMMENT{ ==================================================================== }
+@COMMENT{ author   : Erik Jan Marinissen                                       }
+@COMMENT{ address  : Philips Research Laboratories                             }
+@COMMENT{            Prof. Holstlaan 4, WAY-41                                 }
+@COMMENT{            5656 AA Eindhoven                                         }
+@COMMENT{            The Netherlands                                           }
+@COMMENT{ e-mail   : Erik.Jan.Marinissen(at)philips.com                        }
+@COMMENT{ ==================================================================== }
+
+@PREAMBLE{"\newcommand{\noopsort}[1]{}"}
+
+@COMMENT{ ==================================================================== }
+@COMMENT{                        Predefined journals                           }
+@COMMENT{ ==================================================================== }
+
+@STRING{acmtodaes  = "ACM Transactions on Design Automation of Electronic Systems"}
+@STRING{cacm       = "Communications of the ACM"}
+@STRING{edn        = "EDN"}
+@STRING{ieepcds    = "IEE Proceedings, Circuits, Devices and Systems"}
+@STRING{ieepcdt    = "IEE Proceedings, Computers and Digital Techniques"}
+@STRING{ieeecomp   = "IEEE Computer"}
+@STRING{ieeedt     = "IEEE Design \& Test of Computers"}
+@STRING{ieeejssc   = "IEEE Journal of Solid-State Circuits"}
+@STRING{ieeeproc   = "Proceedings of the IEEE"}
+@STRING{ieeetc     = "IEEE Transactions on Computers"}
+@STRING{ieeetcad   = "IEEE Transactions on Computer-Aided Design"}
+@STRING{ieeetec    = "IEEE Transactions on Electronic Computers"}
+@STRING{ieeetsp    = "IEEE Transactions on Signal Processing"}
+@STRING{ieeevlsi   = "IEEE Transactions on VLSI Systems"}
+@STRING{ieeespec   = "IEEE Spectrum"}
+@STRING{integration= "Integration, the VLSI journal"}
+@STRING{jacm       = "Journal of the ACM"}
+@STRING{jetta      = "Journal of Electronic Testing: Theory and Applications"}
+@STRING{jcss       = "Journal of Computer and System Sciences"}
+@STRING{test       = "Test - The European Test Industry Journal"}
+@STRING{vlsisp     = "Journal of VLSI Signal Processing"}
+
+@COMMENT{ ==================================================================== }
+@COMMENT{                       Predefined publishers                          }
+@COMMENT{ ==================================================================== }
+
+@STRING{acm     = "Association for Computing Machinery, Inc."}
+@STRING{ap      = "Academic Press"}
+@STRING{aw      = "Addison-Wesley"} 
+@STRING{csp     = "Computer Science Press"}
+@STRING{cwi     = "CWI"}   
+@STRING{esp     = "Elsevier Science Publishers"}
+@STRING{icsp    = "IEEE Computer Society Press"}
+@STRING{iee     = "IEE"}
+@STRING{ieee    = "IEEE Press"}
+@STRING{ios     = "IOS Press"}
+@STRING{kap     = "Kluwer Academic Publishers"}
+@STRING{mit     = "MIT Press"}
+@STRING{ph      = "Prentice-Hall"}
+@STRING{springer= "Springer-Verlag"}
+@STRING{wiley   = "John Wiley \& Sons"}
+
+@COMMENT{ ==================================================================== }
+@COMMENT{                       Predefined series                              }
+@COMMENT{ ==================================================================== }
+
+@STRING{csn  = "Computing Science Notes"}
+@STRING{cstut= "IEEE Computer Society Press Tutorial"}
+@STRING{fet  = "Frontiers in Electronics Testing"}
+@STRING{lncs = "Lecture Notes in Computer Science"}
+
+@COMMENT{ ==================================================================== }
+@COMMENT{               Predefined conference proceedings                      }
+@COMMENT{ ==================================================================== }
+
+@STRING{aspdac  = "Proceedings IEEE Asia South Pacific Design Automation Conference (ASP-DAC)"}
+@STRING{ats     = "Proceedings IEEE Asian Test Symposium (ATS)"}
+@STRING{cicc    = "Proceedings IEEE Custom Integrated Circuits Conference (CICC)"}
+@STRING{dac     = "Proceedings ACM/IEEE Design Automation Conference (DAC)"}
+@STRING{date    = "Proceedings Design, Automation, and Test in Europe (DATE)"}
+@STRING{datedf  = "Proceedings Design, Automation, and Test in Europe (DATE) Designers Forum"}
+@STRING{ddecs   = "Proceedings IEEE Design and Diagnostics of Electronic Circuits and Systems Workshop (DDECS)"}
+@STRING{edac    = "Proceedings European Conference on Design Automation (EDAC)"}
+@STRING{edtc    = "Proceedings European Design and Test Conference (ED\&TC)"}
+@STRING{eurodac = "Proceedings European Design Automation Conference (EURO-DAC)"}
+@STRING{esscirc = "Proceedings European Solid-State Circuits Conference (ESSCIRC)"}
+@STRING{etc     = "Proceedings IEEE European Test Conference (ETC)"}
+@STRING{etwdig  = "Digest of Papers of IEEE European Test Workshop (ETW)"}
+@STRING{etw     = "Proceedings IEEE European Test Workshop (ETW)"}
+@STRING{etsdig  = "Digest of Papers of IEEE European Test Symposium (ETS)"}
+@STRING{ets     = "Proceedings IEEE European Test Symposium (ETS)"}
+@STRING{ftcs    = "Proceedings International Symposium on Fault-Tolerant Computing (FTCS)"}
+@STRING{iccad   = "Proceedings International Conference on Computer-Aided Design (ICCAD)"}
+@STRING{iccd    = "Proceedings International Conference on Computer Design (ICCD)"}
+@STRING{icvd    = "Proceedings IEEE International Conference on VLSI Design (ICVD)"}
+@STRING{iip     = "Digest of Papers of IEEE International Infrastructure IP Workshop (IIP)"}
+@STRING{ioltw   = "Proceedings IEEE International On-Line Testing Workshop (IOLTW)"}
+@STRING{iscas   = "Proceedings International Symposium on Circuits and Systems (ISCS)"}
+@STRING{iscas   = "Proceedings International Symposium on Circuits and Systems (ISCAS)"}
+@STRING{isqed   = "Proceedings International Symposium on Quality of Electronic Design (ISQED)"}
+@STRING{isscc   = "Proceedings International Solid State Circuits Conference (ISSCC)"}
+@STRING{itc     = "Proceedings IEEE International Test Conference (ITC)"}
+@STRING{itsw    = "IEEE International Test Synthesis Workshop (ITSW)"}
+@STRING{ivlsi   = "Proceedings International Conference on VLSI Design"}
+@STRING{vlsi-soc= "Proceedings IFIP International Conference on Very Large Scale Integration (VLSI-SOC)"}
+@STRING{iwls    = "Proceedings International Workshop on Logic Synthesis"}
+@STRING{natw    = "Proceedings North-American Test Workshop (NATW)"}
+@STRING{prorisc = "Proceedings of the {IEEE/ProRISC} Symposium on Circuits, Systems and Signal Processing"}
+@STRING{socc    = "Proceedings IEEE International SOC Conference (SOCC)"}
+@STRING{tecs    = "Digest of Papers of IEEE International Workshop on Testing Embedded Core-Based Systems (TECS)"}
+@STRING{trp     = "Digest of Papers of IEEE International Workshop on Test Resource Partitioning (TRP)"}
+@STRING{vts     = "Proceedings IEEE VLSI Test Symposium (VTS)"}
+
+@STRING{ta = "(To appear)"}
+
+@COMMENT{ ==================================================================== }
+@COMMENT{                     Timeless References                              }
+@COMMENT{ ==================================================================== }
+
+@Misc{socbenchmweb,
+  author =       "Erik Jan Marinissen and Vikram Iyengar and
+                 Krishnendu Chakrabarty",
+  title =        "{ITC'02 SOC Test Benchmarks Web Site}",
+  howpublished = "http://www.extra.research.philips.com/itc02socbenchm/",
+}
+
+@BOOK{ieee1500,
+  editor	= "DaSilva, Francisco",
+  title	        = "{IEEE Std 1500$^{\rm TM}$-2005, IEEE Standard Testability
+		  Method for Embedded Core-based Integrated Circuits}",
+  publisher	= "IEEE",
+  address	= "New York, NY, USA",
+  month         = aug,
+  year	        = "2005",
+}
+
+@Misc{p1500web,
+  author =       "Alan Hales and Erik Jan Marinissen",
+  title =        "{IEEE P1500 Web Site}",
+  howpublished = "http://grouper.ieee.org/groups/1500/",
+}
+
+@Misc{tecsbib,
+  author =       "Erik Jan Marinissen",
+  title =        "{The TECS Bibliography ({\sc Bib}\TeX)\ database file {\tt
+                 tecs.bib}}",
+  howpublished = "http://www.extra.research.philips.com/itc02socbenchm/bib/tecs.bib.gz",
+}
+
+@Misc{tecsbibweb,
+  author =       "Erik Jan Marinissen",
+  title =        "{The TECS Bibliography Homepage}",
+  howpublished = "http://www.extra.research.philips.com/itc02socbenchm/bib/",
+}
+
+@Misc{vsiaweb,
+  author =       "VSIA",
+  title =        "{Virtual Socket Interface Alliance Web Site}",
+  howpublished = "http://www.vsi.org/",
+}
+
+
+@COMMENT{ ==================================================================== }
+@COMMENT{                        Body of database                              }
+@COMMENT{ ==================================================================== }
+
+@InProceedings{Abraham-tecs00,
+  author =       "Jais Abraham and others",
+  booktitle =    tecs,
+  title =        "{Test Methodology Framework for Embedded Core Based Systems}",
+  address =      "Montreal, Canada",
+  pages =        "3.4--1-5",
+  month =        may,
+  year =         "2000",
+}
+
+@InProceedings{Adham-vts99,
+  author =       "Saman Adham and others",
+  booktitle =    vts,
+  title =        "{Preliminary Outline of IEEE P1500 Scalable Architecture for Testing Embedded Cores}",
+    address =      "Dana Point, CA, USA",
+  pages =        "483--488",
+  month =        apr,
+  year =         "1999",
+}
+
+@MastersThesis{Aerts98,
+  author =       "Joep Aerts",
+  title =        "{Test Time Reduction Algorithms for Core-Based ICs}",
+  school =       "Eindhoven University of Technology",
+  address =      "Eindhoven, The Netherlands",
+  month =        apr,
+  year =         "1998",
+}
+
+@InProceedings{Aerts-itc98,
+  author =       "Joep Aerts and Erik Jan Marinissen",
+  booktitle =    itc,
+  title =        "{Scan Chain Design for Test Time Reduction in
+                 Core-Based ICs}",
+  address =      "Washington, DC, USA",
+  pages =        "448--457",
+  month =        oct,
+  year =         "1998",
+}
+
+@Article{Anderson-test99,
+  author =       "Thomas Anderson",
+  title =        "{This is Hard Core}",
+  journal =      test,
+  volume =       "Vol.\ 25",
+  number =       "No.\ 5",
+  publisher =    "Inside Communications, London, U.K.",
+  pages =        "S-5--6",
+  month =        jun,
+  year =         "1999",
+}
+
+@InProceedings{Aitken-itc99,
+  author =       "Rob Aitken and Fidel Muradali",
+  booktitle =    itc,
+  title =        "{Trends in SLI Design and their Effect on Test}",
+  pages =        "628--637",
+  address =      "Atlantic City, NJ, USA",
+  month =        sep,
+  year =         "1999",
+}
+
+@InProceedings{Amory-vlsisoc03,
+  author =       "Alexandre M.\ Amory and Leandro A.\ Oliveira and Fernando G.\ Moraes",
+  booktitle =    vlsi-soc,
+  title =        "{Software-Based Test for Non-Programmable Cores in Bus-Based System-on-Chip Architectures}",
+  pages =        "174--179",
+  address =      "Darmstadt, Germany",
+  month =        dec,
+  year =         "2003",
+}
+
+@InProceedings{Appelo-tecs01,
+  author =       "David Appelo and others",
+  booktitle =    tecs,
+  title =        "{Full Built-In Self-Test Solution for System-on-Chip}",
+  address =      "Marina del Rey, CA, USA",
+  pages =        "1.2--1-5",
+  month =        may,
+  year =         "2001",
+}
+
+@InProceedings{Arendsen-tecs98,
+  author =       "Robert Arendsen and Maurice Lousberg",
+  booktitle =    tecs,
+  title =        "{Core Based Test for a System on Chip Architecture
+                 Framework}",
+  address =      "Washington, DC, USA",
+  pages =        "5.1--1--8",
+  month =        oct,
+  year =         "1998",
+}
+
+@Manual{Arm95,
+  title =        "{The ARM7TDMI Debug Architecture}",
+  organization = "Advanced RISC Machines Ltd.",
+  month =        dec,
+  year =         "1995",
+  note =         "ARM DAI 0028A,
+                 http://www.arm.com/Documentation/AppNotes/Apps28vA",
+}
+
+@Article{Atwell-moto89,
+  author =       "William D. Atwell and William C. {Bruce Jr.} and Grady L. Giles",
+  title =        "{Tester On A Chip (TOAC) or Apparatus for Application of
+                 Tests for Embedded Test Points}",
+  journal =      "{Motorola Technical Developments}",
+  volume =       "Vol.\ 9",
+  publisher =    "Motorola, Inc.",
+  pages =        "21--25",
+  month =        aug,
+  year =         "1989",
+}
+
+@InProceedings{Balaz-etw03,
+  author =       "Marcel Bal{\'{a}}{\u{z}} and Elena Gramatov{\'{a}}",
+  booktitle =    etwdig,
+  title =        "{Optimization Techniques for Parallel Interface of
+                 Test Wrapper for Embedded Cores}",
+  pages =        "25--26",
+  address =      "Maastricht, The Netherlands",
+  month =        may,
+  year =         "2003",
+}
+
+@InProceedings{Basto-itc99,
+  author =       "Luis Basto and Asif Khan and Pete Hodakievic",
+  booktitle =    itc,
+  title =        "{Embedded X86 Testing Methodology}",
+  pages =        "487--492",
+  address =      "Atlantic City, NJ, USA",
+  month =        sep,
+  year =         "1999",
+}
+
+@Article{Basu-jetta02,
+  author =       "Subhayu Basu and Indranil Sengupta and Dipanwita Roy Chowdhury
+                 and Sudipta Bhawmik",
+  title =        "{An Integrated Approach to Testing Embedded Cores and Interconnects
+                 Using Test Access Mechanism (TAM) Switch}",
+  journal =      jetta,
+  volume =       18,
+  number =       "4/5",
+  publisher =    kap,
+  pages =        "475--485",
+  month =        aug,
+  year =         "2002",
+}
+
+@InProceedings{Basu-jettabook02,
+  author =       "Subhayu Basu and Indranil Sengupta and Dipanwita Roy Chowdhury
+                 and Sudipta Bhawmik",
+  title =        "{An Integrated Approach to Testing Embedded Cores and Interconnects
+                 Using Test Access Mechanism (TAM) Switch}",
+  editor =       "Krishnendu Chakrabarty",
+  booktitle =    "SOC (System-on-a-Chip) Testing for Plug and Play Test Automation",
+  series =       fet,
+  volume =       21,
+  publisher =    kap,
+  pages =        "111-121",
+  month =        sep,
+  year =         "2002",
+}
+
+@InProceedings{Batcher-vts99,
+  author =       "Ken Batcher and Christos Papachristou",
+  booktitle =    vts,
+  title =        "{Instruction Randomization Self Test for Processor Cores}",
+  address =      "Dana Point, CA, USA",
+  pages =        "34--40",
+  month =        apr,
+  year =         "1999",
+}
+
+@InProceedings{Bederr-tecs99,
+  author =       "Hakim Bederr and Franck Chirat",
+  booktitle =    tecs,
+  title =        "{At-Speed Test of a DSP Subsystem Embeed in a Wireless Application Chip}",
+  address =      "Dana Point, CA, USA",
+  pages =        "1.3--1--11",
+  month =        apr,
+  year =         "1999",
+}
+
+@Article{Beenker-dt86,
+  author =       "Frans Beenker and Karel van Eerdewijk and Robert
+                 Gerritsen and Frank Peacock and Max van der Star",
+  title =        "{Macro Testing: Unifying IC and Board Test}",
+  journal =      ieeedt,
+  volume =       "Vol.\ 3",
+  number =       "No.\ 4",
+  pages =        "26--32",
+  month =        dec,
+  year =         "1986",
+}
+
+@InProceedings{Beenker-itc89,
+  author =       "Frans Beenker and Rob Dekker and Rudi Stans and Max
+                 van der Star",
+  booktitle =    itc,
+  title =        "{A Testability Strategy for Silicon Compilers}",
+  pages =        "660--696",
+  month =        sep,
+  year =         "1989",
+}
+
+@Article{Beenker-dt90,
+  author =       "Frans Beenker and Rob Dekker and Rudi Stans and Max
+                 van der Star",
+  title =        "{Implementing Macro Test in Silicon Compiler
+                 Designs}",
+  journal =      ieeedt,
+  volume =       "Vol.\ 7",
+  number =       "No.\ 2",
+  pages =        "41--51",
+  month =        apr,
+  year =         "1990",
+}
+
+@PhdThesis{Beenker94,
+  author =       "Frans Beenker",
+  title =        "{Testability Concepts for Digital ICs}",
+  school =       "Twente University",
+  address =      "Enschede, The Netherlands",
+  month =        apr,
+  year =         "1994",
+}
+
+@Book{Beenker95,
+  author =       "Frans Beenker and Ben Bennetts and Loek Thijssen",
+  title =        "{Testability Concepts for Digital ICs - The Macro Test
+                 Approach}",
+  volume =       "3",
+  publisher =    kap,
+  address =      "Boston, MA, USA",
+  year =         "1995",
+  series =       fet,
+}
+
+@InProceedings{Beers-itc99,
+  author =       "Jos van Beers and Harry van Herten",
+  booktitle =    itc,
+  title =        "{Test Features of a Core-Based Co-Processor Array for Video
+                 Applications}",
+  pages =        "638--647",
+  address =      "Atlantic City, NJ, USA",
+  month =        sep,
+  year =         "1999",
+}
+
+@InProceedings{Benabdenbi-date00,
+  author =       "Mounir Benabdenbi and Walid Maroufi and Meryem Marzouki",
+  booktitle =    date,
+  title =        "{CAS-BUS: A Scalable and Reconfigurable Test Access
+                 Mechanism for Systems on a Chip}",
+  pages =        "141--145",
+  address =      "Paris, France",
+  month =        mar,
+  year =         "2000",
+}
+
+@InProceedings{Benabdenbi-date01,
+  author =       "Mounir Benabdenbi and Walid Maroufi and Meryem Marzouki",
+  booktitle =    date,
+  title =        "{Testing TAPed Cores and Wrapped Cores With The Same Test
+                 Access Mechanism}",
+  pages =        "150--155",
+  address =      "Munich, Germany",
+  month =        mar,
+  year =         "2001",
+}
+
+@Article{Benabdenbi-jetta02,
+  author =       "Mounir Benabdenbi and Walid Maroufi and Meryem Marzouki",
+  title =        "{CAS-BUS: A Test Access Mechanism and a Toolbox Environment
+                 for Core-Based System Chip Testing}",
+  journal =      jetta,
+  volume =       18,
+  number =       "4/5",
+  publisher =    kap,
+  pages =        "455--473",
+  month =        aug,
+  year =         "2002",
+}
+
+@InProceedings{Benabdenbi-jettabook02,
+  author =       "Mounir Benabdenbi and Walid Maroufi and Meryem Marzouki",
+  title =        "{CAS-BUS: A Test Access Mechanism and a Toolbox Environment
+                 for Core-Based System Chip Testing}",
+  editor =       "Krishnendu Chakrabarty",
+  booktitle =    "SOC (System-on-a-Chip) Testing for Plug and Play Test Automation",
+  series =       fet,
+  volume =       21,
+  publisher =    kap,
+  pages =        "91--109",
+  month =        sep,
+  year =         "2002",
+}
+
+@InProceedings{Benabdenbi-date04,
+  author =       "M. Benabdenbi and A. Greiner and F. Pecheux and
+                 E. Viaud and M. Tuna",
+  booktitle =    date,
+  title =        "{STEPS: Experimenting a New Software-based Strategy
+                 for Testing SoCs Containing P1500-compliant IP Cores}",
+  address =      "Paris, France",
+  pages =        "712--713",
+  month =        feb,
+  year =         "2004",
+}
+
+@Article{Bennetts-ep97,
+  author =       "Ben Bennetts",
+  title =        "{A Design Strategy for System-on-a-Chip Testing}",
+  journal =      "Electronic Products",
+  pages =        "57--59",
+  month =        jun,
+  year =         "1997",
+}
+
+@InProceedings{Benso-tecs98,
+  author =       "A. Benso and G. Borgonovo and D. Grassi and M.
+                 Lobetti-Bodoni and A. Pricco",
+  booktitle =    tecs,
+  title =        "{An Industrial Approach to Core Testing}",
+  address =      "Washington, DC, USA",
+  pages =        "1.3--1--4",
+  month =        oct,
+  year =         "1998",
+}
+
+@InProceedings{Benso-tecs98a,
+  author =       "A. Benso and S. Chiusano and P. Prinetto and
+                 Y. Zorian",
+  booktitle =    tecs,
+  title =        "{HD-BIST: A Hierarchical Distributed BIST Architecture
+                 for System-on-a-Chip}",
+  address =      "Washington, DC, USA",
+  pages =        "2.4--1--5",
+  month =        oct,
+  year =         "1998",
+}
+
+@InProceedings{Benso-tecs99,
+  author =       "Alfredo Benso and Silvia Cataldo and Silvia Chiusano
+                 and Paolo Prinetto and Yervant Zorian",
+  booktitle =    tecs,
+  title =        "{A High-Level EDA Environment for the Automatic Insertion
+                 of HD-BIST Structures}",
+  address =      "Dana Point, CA, USA",
+  pages =        "4.3--1--5",
+  month =        apr,
+  year =         "1999",
+}
+
+@InProceedings{Benso-itc99,
+  author =       "Alfredo Benso and Silvia Cataldo and Silvia Chiusano
+                 and Paolo Prinetto and Yervant Zorian",
+  booktitle =    itc,
+  title =        "{HD-BIST: A Hierarchical Framework for BIST Scheduling
+                 and Diagnosis in SOCs}",
+  pages =        "1038--1044",
+  address =      "Atlantic City, NJ, USA",
+  month =        sep,
+  year =         "1999",
+}
+
+@InProceedings{Benso-tecs00,
+  author =       "Alfredo Benso and others",
+  booktitle =    tecs,
+  title =        "{HD$^{2}$BIST: A Hierarchical Framework for BIST Scheduling,
+                 Data Patterns Delivering and Diagnosis in SoCs}",
+  address =      "Montreal, Canada",
+  pages =        "3.3--1-8",
+  month =        may,
+  year =         "2000",
+}
+
+@InProceedings{Benso-itc00,
+  author =       "Alfredo Benso and others",
+  booktitle =    itc,
+  title =        "{HD$^{2}$BIST: A Hierarchical Framework for BIST Scheduling,
+                 Data Patterns Delivering and Diagnosis in SoCs}",
+  address =      "Atlantic City, NJ, USA",
+  pages =        "892--901",
+  month =        oct,
+  year =         "2000",
+}
+
+@InProceedings{Bhatia-itc96,
+  author =       "Sandeep Bhatia and Tushar Gheewala and Prab Varma",
+  booktitle =    itc,
+  title =        "{A Unifying Methodology for Intellectual Property and
+                 Custom Logic Testing}",
+  address =      "Washington, DC, USA",
+  pages =        "639--648",
+  month =        oct,
+  year =         "1996",
+}
+
+@InProceedings{Bhattacharya-vts98,
+  author =       "Debashis Bhattacharya",
+  booktitle =    vts,
+  title =        "{Hierarchical Test Access Architecture for Embedded
+                 Cores in an Integrated Circuit}",
+  address =      "Monterey, CA, USA",
+  pages =        "8--14",
+  month =        apr,
+  year =         "1998",
+}
+
+@InProceedings{Bhattacharya-vts99,
+  author =       "Debashis Bhattacharya",
+  booktitle =    vts,
+  title =        "{Instruction-Driven Wake-Up Mechanisms for Snoopy TAP Controller}",
+  address =      "Dana Point, CA, USA",
+  pages =        "467--472",
+  month =        apr,
+  year =         "1999",
+}
+
+@InProceedings{Bommireddy-vts00,
+  author =       "A. Bommireddy and J. Khare and S. Shaikh and S-T. Su",
+  booktitle =    vts,
+  title =        "{Test and Debug of Networking SoCs - A Case Study}",
+  address =      "Montreal, Canada",
+  pages =        "121--126",
+  month =        apr,
+  year =         "2000",
+}
+
+@MastersThesis{Boosten94,
+  author =       "Marcel Boosten and Harro Jacobs",
+  title =        "{Test Protocol Expansion: Memory Handling and
+                 Efficiency Improvements}",
+  school =       "Eindhoven University of Technology",
+  address =      "Eindhoven, The Netherlands",
+  month =        jun,
+  year =         "1994",
+}
+
+@InProceedings{Bouwman-itc92,
+  author =       "Frank Bouwman and Steven Oostdijk and Rudi Stans and
+                 Ben Bennetts and Frans Beenker",
+  booktitle =    itc,
+  title =        "{Macro Testability; The Results of Production Device
+                 Applications}",
+  pages =        "232--241",
+  month =        sep,
+  year =         "1992",
+}
+
+@MastersThesis{Bouwmeester92,
+  author =       "Hans Bouwmeester",
+  title =        "{Reducing the Test Time of VLSI Devices by Exploiting
+                 Parallelism in Macro Test}",
+  school =       "Delft University of Technology",
+  address =      "Delft, The Netherlands",
+  month =        jul,
+  year =         "1992",
+}
+
+@InProceedings{Bouwmeester-itc93,
+  author =       "Hans Bouwmeester and Steven Oostdijk and Frank Bouwman
+                 and Rudi Stans and Loek Thijssen and Frans Beenker",
+  booktitle =    itc,
+  title =        "{Minimizing Test Time by Exploiting Parallelism in
+                 Macro Test}",
+  pages =        "451--460",
+  month =        sep,
+  year =         "1993",
+}
+
+@InProceedings{Burdass-tecs00,
+  author =       "Andrew Burdass and Gary Campbell and Richard Grisenthwaite
+                 and Richard York",
+  booktitle =    tecs,
+  title =        "{Testing Embedded Synthesizable IP - A Case Study}",
+  address =      "Montreal, Canada",
+  pages =        "3.2--1-5",
+  month =        may,
+  year =         "2000",
+}
+
+@InProceedings{Burdass-etw00,
+  author =       "Andrew Burdass and others",
+  booktitle =    etw,
+  title =        "{Embedded Test and Debug of Full Custom and Synthesisable
+                 Microprocessor Cores}",
+  address =      "Cascais, Portugal",
+  pages =        "17--22",
+  month =        may,
+  year =         "2000",
+}
+
+@InProceedings{Chakrabarty-iccad99,
+  author =       "Krishnendu Chakrabarty",
+  booktitle =    iccad,
+  title =        "{Test Scheduling for Core-Based Systems}",
+  address =      "San Jose, CA, USA",
+  pages =        "391--394",
+  month =        nov,
+  year =         "1999",
+}
+
+@InProceedings{Chakrabarty-vts00,
+  author =       "Krishnendu Chakrabarty",
+  booktitle =    vts,
+  title =        "{Design of System-on-a-Chip Test Access Architectures Using
+                 Integer Linear Programming}",
+  address =      "Montreal, Canada",
+  pages =        "127--134",
+  month =        apr,
+  year =         "2000",
+}
+
+@InProceedings{Chakrabarty-dac00,
+  author =       "Krishnendu Chakrabarty",
+  booktitle =    dac,
+  title =        "{Design of System-on-a-Chip Test Access Architectures
+                 Under Place-and-Route and Power Constraints}",
+  address =      "Los Angeles, CA, USA",
+  pages =        "432--437",
+  month =        jun,
+  year =         "2000",
+}
+
+@Article{Chakrabarty-tcad00,
+  author =       "Krishnendu Chakrabarty",
+  title =        "{Test Scheduling for Core-Based Systems Using Mixed-Integer
+                 Linear Programming}",
+  journal =      ieeetcad,
+  volume =       "19",
+  number =       "10",
+  publisher =    ieee,
+  pages =        "1163--1174",
+  month =        oct,
+  year =         "2000",
+}
+
+@InProceedings{Chakrabarty-icvd01,
+  author =       "Krishnendu Chakrabarty and Rajatish Mukherjee and Andrew
+                 S. Exnicios",
+  booktitle =    icvd,
+  title =        "{Synthesis of Transparent Circuits for Hierarchical and
+                 System-on-a-Chip Test}",
+  address =      "Bangalore, India",
+  pages =        "431--436",
+  month =        jan,
+  year =         "2001",
+}
+
+@Article{Chakrabarty-todaes01,
+  author =       "Krishnendu Chakrabarty",
+  title =        "{Optimal Test Access Architectures for System-on-a-Chip}",
+  journal =      acmtodaes,
+  volume =       "6",
+  number =       "1",
+  publisher =    acm,
+  pages =        "26--49",
+  month =        jan,
+  year =         "2001",
+}
+
+@Article{Chakrabarty-dt02,
+  author =       "Krishnendu Chakrabarty and Erik Jan Marinissen",
+  title =        "{TECS'02 Panel Summary: How Useful Are The ITC'02 SOC Test
+                 Benchmarks?}",
+  journal =      ieeedt,
+  volume =       "19",
+  number =       "5",
+  publisher =    icsp,
+  pages =        "119-120",
+  month =        sep,
+  year =         "2002",
+}
+
+@InProceedings{Chakraborty-tecs00,
+  author =       "Tapan J. Chakraborty and Sudipta Bhawmik and Chen-Huan Chiang",
+  booktitle =    tecs,
+  title =        "{Test Access Methodology for System-On-Chip Testing}",
+  address =      "Montreal, Canada",
+  pages =        "1.1--1-7",
+  month =        may,
+  year =         "2000",
+}
+
+@InProceedings{Chandra-trp02,
+  author =       "Anshuman Chandra and Sharon Schweizer and Vikram Iyengar and
+                 Krishnendu Chakrabarty",
+  booktitle =    trp,
+  title =        "{A Unified Approach for SOC Test Resource Partitioning Using
+                 Test Data Compression and TAM Optimization}",
+  address =      "Baltimore, MD, USA",
+  pages =        "4.4-1--7",
+  month =        oct,
+  year =         "2002",
+}
+
+@Article{Chandramouli-spec96,
+  author =       "R. Chandramouli and Stephen Pateras",
+  title =        "{Testing Systems on a Chip}",
+  journal =      ieeespec,
+  publisher =    ieee,
+  pages =        "42--47",
+  month =        nov,
+  year =         "1996",
+}
+
+@InProceedings{Chen-dac00,
+  author =       "Li Chen and others",
+  booktitle =    dac,
+  title =        "{Embedded Hardware and Software Self-Testing Methodologies
+                 for Processor Cores}",
+  address =      "Los Angeles, CA, USA",
+  pages =        "625--630",
+  month =        jun,
+  year =         "2000",
+}
+
+@InProceedings{Cheng-itc04,
+  author =       "Kuo-Liang Cheng and others",
+  booktitle =    itc,
+  title =        "{An SOC Test Integration Platform and Its Industrial Realization}",
+  address =      "Charlotte, NC, USA",
+  pages =        "1213--1222",
+  month =        oct,
+  year =         "2004",
+}
+
+@InProceedings{Chin-date04,
+  author =       "James Chin and Mehrdad Nourani",
+  booktitle =    date,
+  title =        "{SOC Test Schedulin With Power-Time Tradeoff and Hot Spot
+                 Avoidance}",
+  address =      "Paris, France",
+  pages =        "710--711",
+  month =        feb,
+  year =         "2004",
+}
+
+@InProceedings{Cota-vts03,
+  author =       "{\'{E}}rika Cota and others",
+  booktitle =    vts,
+  title =        "{The Impact of NoC Reuse on the Testing of Core-based Systems}",
+  address =      "Napa, CA, USA",
+  pages =        "128--133",
+  month =        apr,
+  year =         "2003",
+}
+
+@InProceedings{Cota-trp03,
+  author =       "{\'{E}}rika Cota and Luigi Carro and Fl{\'{a}}vio Wagner and
+                 Marcelo Lubaszewski",
+  booktitle =    trp,
+  title =        "{BISTed cores and Test Time Minimization in NOC-based Systems}",
+  address =      "Napa, CA, USA",
+  pages =        "1--6",
+  month =        apr,
+  year =         "2003",
+}
+
+@InProceedings{Cota-etw03,
+  author =       "{\'{E}}rika Cota and Luigi Carro and Fl{\'{a}}vio Wagner and
+                 Marcelo Lubaszewski",
+  booktitle =    etwdig,
+  title =        "{Power-Aware NoC Reuse on the Testing of Core-Based Systems}",
+  pages =        "123--128",
+  address =      "Maastricht, The Netherlands",
+  month =        may,
+  year =         "2003",
+}
+
+@InProceedings{Cota-itc03,
+  author =       "{\'{E}}rika Cota and Luigi Carro and Fl{\'{a}}vio Wagner and
+                 Marcel Lubaszewski",
+  booktitle =    itc,
+  title =        "{Power-Aware NoC Reuse on the Testing of Core-Based Systems}",
+  address =      "Charlotte, NC, USA",
+  pages =        "612--621",
+  month =        sep,
+  year =         "2003",
+}
+
+@Article{Cota-todaes04,
+  author =       "Erika Cota and Luigi Carro and Marcelo Lubaszewski",
+  title =        "{Reusing an On-Chip Network for the Test of Core-Based Systems}",
+  journal =      acmtodaes,
+  volume =       "Vol.\ 9",
+  number =       "No.\ 4",
+  publisher =    acm,
+  pages =        "471--499",
+  month =        oct,
+  year =         "2004",
+}
+
+@Article{Crouch-test98,
+  author =       "Al Crouch and Jeff Freeman",
+  title =        "{ColdFire Processor is Hot for DfT}",
+  journal =      test,
+  volume =       "Vol.\ 24",
+  number =       "No.\ 6",
+  publisher =    "Inside Communications, London, U.K.",
+  pages =        "15--16",
+  month =        jul,
+  year =         "1998",
+}
+
+@InProceedings{DaSilva-itc03,
+  author =       "Francisco DaSilva and Yervant Zorian and Lee Whetsel and Karim
+                 Arabi and Rohit Kapur",
+  booktitle =    itc,
+  title =        "{Overview of the IEEE P1500 Standard}",
+  address =      "Charlotte, NC, USA",
+  pages =        "988--997",
+  month =        sep,
+  year =         "2003",
+}
+
+@InProceedings{Date-ats02,
+  author =       "Hiroshi Date and Toshinori Hosokawa and Michiaki Muraoka",
+  booktitle =    ats,
+  title =        "{A SoC Test Strategy Based on a Non-Scan DFT Method}",
+  address =      "Tamuning, Guam, USA",
+  pages =        "305--310",
+  month =        nov,
+  year =         "2002",
+}
+
+@InProceedings{De-vts97,
+  author =       "Kaushik De",
+  booktitle =    vts,
+  title =        "{Test Methodology for Embedded Cores which Protects
+                 Intellectual Property}",
+  address =      "Monterey, CA, USA",
+  pages =        "2--9",
+  month =        apr,
+  year =         "1997",
+}
+
+@InProceedings{Dervisoglu-tecs00,
+  author =       "Bulent Dervisoglu and Janardhana Swamy",
+  booktitle =    tecs,
+  title =        "{A Novel Approach for Designing a Hierarchical Test Access
+                 Controller for Embedded Core Designs in an SoC Environment}",
+  address =      "Montreal, Canada",
+  pages =        "1.4--1-7",
+  month =        may,
+  year =         "2000",
+}
+
+@InProceedings{Dervisoglu-etw01,
+  author =       "Bulent Dervisoglu",
+  booktitle =    etwdig,
+  title =        "{Designing Hierarchical Test Access Controllers for Embedded
+                 Cores using IEEE P1500 and VSIA Compliant Architectures}",
+  address =      "Saltsjobaden, Sweden",
+  pages =        "101--106",
+  month =        may,
+  year =         "2001",
+}
+
+@Article{Dey-isd99,
+  author =       "Sujit Dey and Erik Jan Marinissen and Yervant Zorian",
+  title =        "{Testing System Chips: Methodologies and Experiences}",
+  journal =      "Integrated System Design",
+  volume =       "Vol.\ 11",
+  number =       "No.\ 123",
+  publisher =    "Miller Freeman, Inc., San Mateo, CA, USA",
+  pages =        "36--48",
+  month =        sep,
+  year =         "1999",
+}
+
+@InProceedings{Dias-tecs99,
+  author =       "O.P. Dias and J. Semiao and I.M. Teixeira and J.P. Teixeira",
+  booktitle =    tecs,
+  title =        "{Soft Wrapper Design for Embedded Cores Using a System Level Approach}",
+  address =      "Dana Point, CA, USA",
+  pages =        "4.4--1--7",
+  month =        apr,
+  year =         "1999",
+}
+
+@InProceedings{Dorsch-itc02,
+  author =       "Rainer Dorsch and Ramon Huerta Rivera and
+                 Hans-Joachim Wunderlich and Martin Fischer",
+  booktitle =    itc,
+  title =        "{Adapting an SoC to ATE Concurrent Test Capabilities}",
+  address =      "Baltimore, MD, USA",
+  pages =        "1169--1175",
+  month =        oct,
+  year =         "2002",
+}
+
+@InProceedings{Ebadi-ats01,
+  author =       "Zahra sadat Ebadi and Andre Ivanov",
+  booktitle =    ats,
+  title =        "{Design of an Optimal Test Access Architecture Using a Genetic
+                 Algorithm}",
+  address =      "Kyoto, Japan",
+  pages =        "205--210",
+  month =        nov,
+  year =         "2001",
+}
+
+@InProceedings{Ebadi-date03,
+  author =       "Zahra sadat Ebadi and Andre Ivanov",
+  booktitle =    date,
+  title =        "{Time Domain Multiplexed TAM: Implementation and Comparison}",
+  address =      "Munich, Germany",
+  pages =        "732--737",
+  month =        mar,
+  year =         "2003",
+}
+
+@Article{Eory-dt97,
+  author =       "Frank S. Eory",
+  title =        "{A Core-Based System-to-Silicon Design Methodology}",
+  journal =      ieeedt,
+  volume =       "14",
+  number =       "4",
+  pages =        "36--41",
+  month =        dec,
+  year =         "1997",
+}
+
+@Article{Falter-sse00,
+  author =       "T. Falter and D. Richter",
+  title =        "{Overview of Status and Challenges of System Testing on Chip
+                 with Embedded DRAMs}",
+  journal =      "Solid State Electronics",
+  volume =       "44",
+  number =       "5",
+  pages =        "761",
+  year =         "2000",
+}
+
+@InProceedings{Feige-etw98,
+  author =       "Chris Feige and Jan ten Pierick and Clemens Wouters
+                 and Ronald Tangelder and Hans Kerkhoff",
+  booktitle =    etwdig,
+  title =        "{Integration of the Scan-Test Method into an
+                 Architecture Specific Core-Test Approach}",
+  address =      "Barcelona, Spain",
+  month =        may,
+  year =         "1998",
+}
+
+@InProceedings{Feige-tecs98,
+  author =       "Chris Feige and Clemens Wouters",
+  booktitle =    tecs,
+  title =        "{Integration of Structural Test Methods into a
+                 Architecture Specific Core-Test Approach}",
+  address =      "Washington, DC, USA",
+  pages =        "5.2--1--8",
+  month =        oct,
+  year =         "1998",
+}
+
+@Article{Feige-jetta99,
+  author =       "Chris Feige and Jan ten Pierick and Clemens Wouters and
+                 Ronald Tangelder and Hans G. Kerkhoff",
+  title =        "{Integration of the Scan-Test Method into an Architecture
+                 Specific Core-Test Approach}",
+  journal =      jetta,
+  volume =       "14",
+  number =       "1--2",
+  pages =        "125--131",
+  month =        feb,
+  year =         "1999",
+}
+
+@Article{Ferrandi-dt97,
+  author =       "Fabrizio Ferrandi and others",
+  title =        "{Testing Core-Based Systems: A Symbolic Methodology}",
+  journal =      ieeedt,
+  volume =       "14",
+  number =       "4",
+  pages =        "69--77",
+  month =        dec,
+  year =         "1997",
+}
+
+@InProceedings{Fischer-etw02,
+  author =       "Martin Fischer and Ramon Huerta Rivera and Rainer Dorsch
+                 and Hans-Joachim Wunderlich",
+  booktitle =    etwdig,
+  title =        "{Adapting an SoC to ATE Concurrent Test Capabilities}",
+  address =      "Corfu, Greece",
+  pages =        "275--280",
+  month =        may,
+  year =         "2002",
+}
+
+@InProceedings{Flottes-vlsi01,
+  author =       "Marie-Lise Flottes and Julien Pouget and Bruno Rouzeyre",
+  booktitle =    vlsi-soc,
+  title =        "{Sessionless Test Scheme: Power-Constrained Test
+                 Scheduling for System-on-a-Chip}",
+  address =      "Montpellier, France",
+  pages =        "105--110",
+  month =        dec,
+  year =         "2001",
+}
+
+@InProceedings{Flottes-vlsi01book,
+  author =       "Marie-Lise Flottes and Julien Pouget and Bruno Rouzeyre",
+  title =        "{Power-Constrained Test Scheduling for SOCs Under a
+                 ``No Session'' Scheme}",
+  booktitle =    "SOC Design Methodologies",
+  editor =       "Michel Robert and Bruno Rouzeyre and Christian Piguet and Marie-Lise Flottes",
+  publisher =    kap,
+  pages =        "401--412",
+  year =         "2002",
+}
+
+@InProceedings{Gallagher-itc01,
+  author =       "Patrick Gallagher and others",
+  booktitle =    itc,
+  title =        "{A Building Block BIST Methodology for SOC Designs: A Case Study}",
+  address =      "Baltimore, MD, USA",
+  pages =        "111--120",
+  month =        oct,
+  year =         "2001",
+}
+
+@InProceedings{Ghosh-itc97,
+  author =       "Indradeep Ghosh and Niraj K. Jha and Sujit Dey",
+  booktitle =    itc,
+  title =        "{A Low Overhead Design for Testability and Test
+                 Generation Technique for Core-Based Systems}",
+  address =      "Washington, DC, USA",
+  pages =        "50--59",
+  month =        nov,
+  year =         "1997",
+}
+
+@InProceedings{Ghosh-dac98,
+  author =       "Indradeep Ghosh and Sujit Dey and Niraj K. Jha",
+  booktitle =    dac,
+  title =        "{A Fast and Low Cost Testing Technique for Core-based
+                 System-on-Chip}",
+  publisher =    acm,
+  address =      "San Francisco, CA, USA",
+  pages =        "542--547",
+  month =        jun,
+  year =         "1998",
+}
+
+@Article{Ghosh-tcad99,
+  author =       "Indradeep Ghosh and Niraj K. Jha and Sujit Dey",
+  title =        "{Low Overhead Design for Testability and Test    
+                 Generation Technique for Core-Based Systems-on-a-Chip}",
+  journal =      ieeetcad,
+  volume =       "18",
+  number =       "11",
+  publisher =    ieee,
+  pages =        "1661",
+  month =        nov,
+  year =         "1999",
+}
+
+@Article{Ghosh-tcad00,
+  author =       "Indradeep Ghosh and Sujit Dey and Niraj K. Jha",
+  title =        "{A Fast and Low-Cost Testing Technique for Core-Based
+                 System-Chips}",
+  journal =      ieeetcad,
+  volume =       "19",
+  number =       "8",
+  publisher =    ieee,
+  pages =        "863",
+  month =        aug,
+  year =         "2000",
+}
+
+@MastersThesis{Goel99,
+  author =       "Sandeep Kumar Goel",
+  title =        "{Test Access Planning for Embedded Core-Based System ICs}",
+  school =       "Indian Institute of Technology Delhi",
+  address =      "New Delhi, India",
+  month =        dec,
+  year =         "1999",
+}
+
+@InProceedings{Goel-tecs01,
+  author =       "Sandeep Kumar Goel and Erik Jan Marinissen",
+  booktitle =    tecs,
+  title =        "{TAM Architectures and Their Implication on Test
+                 Application Time}",
+  address =      "Marina del Rey, CA, USA",
+  pages =        "3.3--1-10",
+  month =        may,
+  year =         "2001",
+}
+
+@InProceedings{Goel-vts02,
+  author =       "Sandeep Kumar Goel and Erik Jan Marinissen",
+  booktitle =    vts,
+  title =        "{Cluster-Based Test Architecture Design for System-on-Chip}",
+  address =      "Monterey, CA, USA",
+  month =        apr,
+  year =         "2002",
+  pages =        "259--264",
+}
+
+@InProceedings{Goel-etw02,
+  author =       "Sandeep Kumar Goel and Erik Jan Marinissen",
+  booktitle =    etw,
+  title =        "{A Novel Test Time Reduction Algorithm for Test Architecture
+                 Design for Core-Based System Chips}",
+  address =      "Corfu, Greece",
+  pages =        "7--12",
+  month =        may,
+  year =         "2002",
+}
+
+@InProceedings{Goel-itc02,
+  author =       "Sandeep Kumar Goel and Erik Jan Marinissen",
+  booktitle =    itc,
+  title =        "{Effective and Efficient Test Architecture Design for SOCs}",
+  address =      "Baltimore, MD, USA",
+  pages =        "529--538",
+  month =        oct,
+  year =         "2002",
+}
+
+@InProceedings{Goel-date03,
+  author =       "Sandeep Kumar Goel and Erik Jan Marinissen",
+  booktitle =    date,
+  title =        "{Layout-Driven SOC Test Architecture Design for Test Time
+                 and Wire Length Minimization}",
+  address =      "Munich, Germany",
+  pages =        "738--743",
+  month =        mar,
+  year =         "2003",
+}
+
+@InProceedings{Goel-etw03,
+  author =       "Sandeep Kumar Goel and Erik Jan Marinissen",
+  booktitle =    etw,
+  title =        "{Control-Aware Test Architecture Design for Modular SOC Testing}",
+  pages =        "57--62",
+  address =      "Maastricht, The Netherlands",
+  month =        may,
+  year =         "2003",
+}
+
+@Article{Goel-jetta03,
+  author =       "Sandeep Kumar Goel and Erik Jan Marinissen",
+  title =        "{A Test Time Reduction Algorithm for Test Architecture Design
+                 for Core-Based System Chips}",
+  journal =      jetta,
+  volume =       "19",
+  number =       "4",
+  pages =        "425-435",
+  publisher =    kap,
+  month =        aug,
+  year =         "2003",
+}
+
+@Article{Goel-todaes03,
+  author =       "Sandeep Kumar Goel and Erik Jan Marinissen",
+  title =        "{SOC Test Architecture Design for Efficient Utilization
+                 of Test Bandwidth}",
+  journal =      acmtodaes,
+  volume =       "8",
+  number =       "4",
+  pages =        "399-429",
+  publisher =    acm,
+  month =        oct,
+  year =         "2003",
+}
+
+@InProceedings{Goel-date04,
+  author =       "Sandeep Kumar Goel and Kuoshu Chiu and Erik Jan Marinissen
+                 and Toan Nguyen and Steven Oostdijk",
+  booktitle =    datedf,
+  title =        "{Test Infrastructure Design for the Nexperia$^{\rm TM}$
+                 Home Platform PNX8550 System Chip}",
+  address =      "Paris, France",
+  pages =        "108--113",
+  month =        feb,
+  year =         "2004",
+}
+
+@InProceedings{Goel-ets04,
+  author =       "Sandeep Kumar Goel",
+  booktitle =    etsdig,
+  title =        "{A Novel Wrapper Cell Design for Efficient Testing of
+                 Hierarchical Cores in System Chips}",
+  address =      "Ajaccio, Corsica, France",
+  pages =        "147--152",
+  month =        may,
+  year =         "2004",
+}
+
+@InProceedings{Goel-iip04,
+  author =       "Sandeep Kumar Goel and Erik Jan Marinissen",
+  booktitle =    iip,
+  title =        "{On-Chip Test Infrastructure Design for High-Throughput Multi-Site Testing of SOCs}",
+  address =      "Charlotte, NC, USA",
+  pages =        "1.1",
+  month =        oc,
+  year =         "2004",
+}
+
+@InProceedings{Goel-prorisc04,
+  author =       "Sandeep Kumar Goel and Erik Jan Marinissen",
+  booktitle =    prorisc,
+  title =        "{TR-Architect: DfT and Test Support for SOC Designers}",
+  address =      "Veldhoven, The Netherlands",
+  month =        nov,
+  year =         "2004",
+}
+
+@InProceedings{Goel-date05,
+  author =       "Sandeep Kumar Goel and Erik Jan Marinissen",
+  booktitle =    date,
+  title =        "{On-Chip Test Infrastructure Design for Optimal Multi-Site Testing of System Chips}",
+  address =      "Munich, Germany",
+  pages =        "44--49",
+  month =        mar,
+  year =         "2005",
+}
+
+@InProceedings{Goessel-vts99,
+  author =       "M. Goessel and E.S. Sogomonyan and A. Morosov",
+  booktitle =    vts,
+  title =        "{A New Totally Error Propagating Compactor for Arbitrary Cores
+                 With Digital Interfaces}",
+  address =      "Dana Point, CA, USA",
+  pages =        "49--56",
+  month =        apr,
+  year =         "1999",
+}
+
+@InProceedings{Gonciari-vts02,
+  author =       "Paul T. Gonciari and Bashir M. Al-Hashimi and Nicola Nicolici",
+  booktitle =    vts,
+  title =        "{Useless Memory Allocation in System-on-a-Chip Test: Problems and Solutions}",
+  address =      "Monterey, CA, USA",
+  month =        apr,
+  year =         "2002",
+  pages =        "423--429",
+}
+
+@InProceedings{Gonciari-itc02,
+  author =       "Paul T. Gonciari and Bashir M. Al-Hashimi and Nicola Nicolici",
+  booktitle =    itc,
+  title =        "{Integrated Test Data Decompression and Core Wrapper Design
+                 for Low-Cost System-on-a-Chip Testing}",
+  address =      "Baltimore, MD, USA",
+  pages =        "64--73",
+  month =        oct,
+  year =         "2002",
+}
+
+@Misc{Goudge98,
+  author =       "Liam Goudge",
+  title =        "{Debugging Embedded Systems}",
+  howpublished = "http://www.arm.com/Documentation/WhitePapers/DebugEmbSys",
+  year =         "1998",
+}
+
+@InProceedings{Greene-tecs99,
+  author =       "Bruce S. Greene and Samiha Mourad",
+  booktitle =    tecs,
+  title =        "{Accessing Cores through Scan Path Chains}",
+  address =      "Dana Point, CA, USA",
+  pages =        "4.2--1--4",
+  month =        apr,
+  year =         "1999",
+}
+
+@InProceedings{Grosselfinger-tecs98,
+  author =       "Kevin M. Grosselfinger and James A. Monzel",
+  booktitle =    tecs,
+  title =        "{A Production Test Environment for Complex System On a
+                 Chip ASIC Products Incorporating the Rambus ASIC
+                 Cell}",
+  address =      "Washington, DC, USA",
+  pages =        "3.3--1--6",
+  month =        oct,
+  year =         "1998",
+}
+
+@Article{Gupta-dt97,
+  author =       "Rajesh K. Gupta and Yervant Zorian",
+  title =        "{Introducing Core-Based System Design}",
+  journal =      ieeedt,
+  volume =       "14",
+  number =       "4",
+  pages =        "15--25",
+  month =        dec,
+  year =         "1997",
+}
+
+@InProceedings{Harrod-itc99,
+  author =       "Peter Harrod",
+  booktitle =    itc,
+  title =        "{Testing Reusable IP - A Case Study}",
+  
+  pages =        "493--498",
+  address =      "Atlantic City, NJ, USA",
+  month =        sep,
+  year =         "1999",
+}
+
+@InProceedings{Hemmady-supercon97,
+  author =       "Shankar Hemmady and Tom Anderson and Yervant Zorian",
+  booktitle =    "Proceedings of Design SuperCon",
+  title =        "{Verification and Testing of Embedded Cores}",
+  pages =        "S122--1--19",
+  month =        jan,
+  year =         "1997",
+}
+
+@InProceedings{Hosseinabady-date06,
+  author =       "Mohammad Hosseinabady and Abbas Banaiyan and
+                 Mahdi Nazm Bojnordi and Zainalabedin Navabi",
+  booktitle =    date,
+  title =        "{A Concurrent Testing Method for NoC Switches}",
+  address =      "Munich, Germany",
+  pages =        "1--6",
+  month =        mar,
+  year =         "2006",
+}
+
+@InProceedings{Hsu-ats02,
+  author =       "Huan-Shan Hsu and others",
+  booktitle =    ats,
+  title =        "{Test Scheduling and Test Access Architecture Optimization for 
+                 System-on-Chip}",
+  address =      "Tamuning, Guam, USA",
+  pages =        "411--416",
+  month =        nov,
+  year =         "2002",
+}
+
+@InProceedings{Huang-vts01,
+  author =       "Jing-Reng Huang and Madhu K. Iyer and Kwang-Ting Cheng",
+  booktitle =    vts,
+  title =        "{A Self-Test Methodology for IP Cores in Bus-Based
+                 Programmable SOCs}",
+  address =      "Marina del Rey, CA, USA",
+  pages =        "198--203",
+  month =        may,
+  year =         "2001",
+}
+
+@InProceedings{Huang-ats01,
+  author =       "Yu Huang and others",
+  booktitle =    ats,
+  title =        "{Resource Allocation and Test Scheduling for Concurrent Test
+                 of Core-Based SOC Design}",
+  address =      "Kyoto, Japan",
+  pages =        "265--270",
+  month =        nov,
+  year =         "2001",
+}
+
+@InProceedings{Huang-aspdac02,
+  author =       "Yu Huang and others",
+  booktitle =    aspdac,
+  title =        "{Constraint-Driven Pin Mapping for Concurrent SOC Testing}",
+  address =      "Bangelore, India",
+  month =        jan,
+  year =         "2002",
+}
+
+@InProceedings{Huang-etw02,
+  author =       "Yu Huang and others",
+  booktitle =    etwdig,
+  title =        "{Optimal Core Wrapper Width Selection and SOC Test Scheduling
+                 Based on 3-D Bin Packing Algorithm}",
+  address =      "Corfu, Greece",
+  month =        may,
+  year =         "2002",
+  pages =        "35--40",
+}
+
+@Article{Huang-jetta02,
+  author =       "Yu Huang and others",
+  title =        "{On Concurrent Test of Core-Based SOC Design}",
+  journal =      jetta,
+  volume =       18,
+  number =       "4/5",
+  publisher =    kap,
+  pages =        "401--414",
+  month =        aug,
+  year =         "2002",
+}
+
+@InProceedings{Huang-jettabook02,
+  author =       "Yu Huang and others",
+  title =        "{On Concurrent Test of Core-Based SOC Design}",
+  editor =       "Krishnendu Chakrabarty",
+  booktitle =    "SOC (System-on-a-Chip) Testing for Plug and Play Test Automation",
+  series =       fet,
+  volume =       21,
+  publisher =    kap,
+  pages =        "37--50",
+  month =        sep,
+  year =         "2002",
+}
+
+@InProceedings{Huang-itc02,
+  author =       "Yu Huang and others",
+  booktitle =    itc,
+  title =        "{Optimal Core Wrapper Width Selection and SOC Test Scheduling
+                 Based on 3-D Bin Packing Algorithm}",
+  address =      "Baltimore, MD, USA",
+  pages =        "74--82",
+  month =        oct,
+  year =         "2002",
+}
+
+@InProceedings{Huang-ats02,
+  author =       "Yu Huang and Sudhakar M. Reddy and Wu-Tung Cheng",
+  booktitle =    ats,
+  title =        "{Core-Clustering Based SOC Test Scheduling Optimization}",
+  address =      "Tamuning, Guam, USA",
+  pages =        "405--410",
+  month =        nov,
+  year =         "2002",
+}
+
+@InProceedings{Hughes-etw02,
+  author =       "Paul Hughes and Peter Harrod and Gary Campbell",
+  booktitle =    etwdig,
+  title =        "{Embedded CPU Test Strategies}",
+  address =      "Corfu, Greece",
+  pages =        "281--285",
+  month =        may,
+  year =         "2002",
+}
+
+@InProceedings{Hwang-tecs01,
+  author =       "Sungbae Hwang and Jacob A. Abraham",
+  booktitle =    tecs,
+  title =        "{Microprocessor Based Test Structure for SOC}",
+  address =      "Marina del Rey, CA, USA",
+  pages =        "4.3--1-7",
+  month =        may,
+  year =         "2001",
+}
+
+@InProceedings{Hwang-asicsocc01,
+  author =       "Sungbae Hwang and Jacob A. Abraham",
+  booktitle =    "Proceedings IEEE International ASIC/SOC Conference",
+  title =        "{Reuse of Addressable System Bus for SOC Testing}",
+  address =      "Washington, DC, USA",
+  pages =        "215--219",
+  month =        sep,
+  year =         "2001",
+}
+
+@Article{Hunt-spec96,
+  author =       "Merrill Hunt and James A. Rowson",
+  title =        "{Blocking in a System on a Chip}",
+  journal =      ieeespec,
+  publisher =    ieee,
+  pages =        "35--41",
+  month =        nov,
+  year =         "1996",
+}
+
+@InProceedings{Ingelsson-ets05,
+  author =       "Urban Ingelsson and Sandeep Kumar Goel and Erik Larsson and Erik Jan Marinissen",
+  booktitle =    ets,
+  title =        "{Test Scheduling for Modular SOCs in an Abort-on-Fail Environment}",
+  address =      "Tallinn, Estonia",
+  pages =        "8--13",
+  month =        may,
+  year =         "2005",
+}
+
+@InProceedings{Immaneni-itc90,
+  author =       "Venkata Immaneni and Srinivas Raman",
+  booktitle =    itc,
+  title =        "{Direct Access Test Scheme - Design of Block and Core
+                 Cells for Embedded ASICs}",
+  pages =        "488--492",
+  month =        sep,
+  year =         "1990",
+}
+
+@InProceedings{Iyengar-tecs00,
+  author =       "Vikram Iyengar and Makoto Sugihara and Hiroshi Date and
+                 Krishnendu Chakrabarty",
+  booktitle =    tecs,
+  title =        "{Intellectual Property Protection Using Partially-Mergeable
+                 Cores}",
+  address =      "Montreal, Canada",
+  pages =        "4.3--1-7",
+  month =        may,
+  year =         "2000",
+}
+
+@InProceedings{Iyengar-vts01,
+  author =       "Vikram Iyengar and Krishnendu Chakrabarty",
+  booktitle =    vts,
+  title =        "{Precedence-Based, Preemptive, and Power-Constrained Test
+                 Scheduling for System-on-a-Chip}",
+  address =      "Marina del Rey, CA, USA",
+  pages =        "368--374",
+  month =        may,
+  year =         "2001",
+}
+
+@InProceedings{Iyengar-tecs01,
+  author =       "Vikram Iyengar and Krishnendu Chakrabarty",
+  booktitle =    tecs,
+  title =        "{Iterative Test Wrapper and Test Access Mechanism
+                 Co-Optimization}",
+  address =      "Marina del Rey, CA, USA",
+  pages =        "1.4--1-7",
+  month =        may,
+  year =         "2001",
+}
+
+@InProceedings{Iyengar-etw01,
+  author =       "Vikram Iyengar and Krishnendu Chakrabarty",
+  booktitle =    etwdig,
+  title =        "{Co-Optimization of Test Wrapper and Test Access Architecture
+                 for Embedded Cores}",
+  address =      "Saltsjobaden, Sweden",
+  pages =        "189--194",
+  month =        may,
+  year =         "2001",
+}
+
+@InProceedings{Iyengar-itc01,
+  author =       "Vikram Iyengar and Krishnendu Chakrabarty and
+                 Erik Jan Marinissen",
+  booktitle =    itc,
+  title =        "{Test Wrapper and Test Access Mechanism Co-Optimization for
+                 System-on-Chip}",
+  address =      "Baltimore, MD, USA",
+  pages =        "1023--1032",
+  month =        oct,
+  year =         "2001",
+}
+
+@InProceedings{Iyengar-date02,
+  author =       "Vikram Iyengar and Krishnendu Chakrabarty and
+                 Erik Jan Marinissen",
+  booktitle =    date,
+  title =        "{Efficient Wrapper/TAM Co-Optimization for Large SOCs}",
+  address =      "Paris, France",
+  pages =        "491--498",
+  month =        mar,
+  year =         "2002",
+}
+
+@Article{Iyengar-jetta02,
+  author =       "Vikram Iyengar and Krishnendu Chakrabarty and
+                 Erik Jan Marinissen",
+  title =        "{Co-Optimization of Test Wrapper and Test Access Architecture
+                 for Embedded Cores}",
+  journal =      jetta,
+  volume =       18,
+  number =       2,
+  publisher =    kap,
+  pages =        "213--230",
+  month =        apr,
+  year =         "2002",
+}
+
+@InProceedings{Iyengar-vts02,
+  author =       "Vikram Iyengar and Krishnendu Chakrabarty and
+                 Erik Jan Marinissen",
+  booktitle =    vts,
+  title =        "{On Using Rectangle Packing for SOC Wrapper/TAM Co-Optimization}",
+  address =      "Monterey, CA, USA",
+  month =        apr,
+  year =         "2002",
+  pages =        "253--258",
+}
+
+@InProceedings{Iyengar-etw02,
+  author =       "Vikram Iyengar and Krishnendu Chakrabarty and
+                 Erik Jan Marinissen",
+  booktitle =    etwdig,
+  title =        "{Test Resource Optimization for Multi-Site Testing of
+                 Embedded-Core-Based SOCs Using ATE With Memory Depth Constraints}",
+  address =      "Corfu, Greece",
+  month =        may,
+  year =         "2002",
+  pages =        "29--34",
+}
+
+@InProceedings{Iyengar-natw02,
+  author =       "Vikram Iyengar and Sandeep Kumar Goel and
+                 Erik Jan Marinissen and Krishnendu Chakrabarty",
+  booktitle =    natw,
+  title =        "{On SOC Test Resource Optimization for Multi-Site Testing
+                 Using ATE With Memory Depth Constraints}",
+  address =      "Montauk, NY, USA",
+  month =        may,
+  year =         "2002",
+  pages =        "77-83",
+}
+
+@Article{Iyengar-tc02,
+  author =       "Vikram Iyengar and Krishnendu Chakrabarty",
+  title =        "{Test Bus Sizing for System-on-a-Chip}",
+  journal =      ieeetc,
+  volume =       51,
+  publisher =    ieee,
+  pages =        "449--459",
+  month =        may,
+  year =         "2002",
+}
+
+@InProceedings{Iyengar-dac02,
+  author =       "Vikram Iyengar and Krishnendu Chakrabarty and
+                 Erik Jan Marinissen",
+  booktitle =    dac,
+  title =        "{Integrated Wrapper/TAM Co-Optimization, Constraint-Driven Test
+                 Scheduling, and Tester Data Volume Reduction for SOCs}",
+  address =      "New Orleans, LO, USA",
+  pages =        "685--690",
+  month =        jun,
+  year =         "2002",
+}
+
+@InProceedings{Iyengar-itc02,
+  author =       "Vikram Iyengar and Sandeep Kumar Goel and
+                 Krishnendu Chakrabarty and Erik Jan Marinissen",
+  booktitle =    itc,
+  title =        "{Test Resource Optimization for Multi-Site Testing of
+                 SOCs Under ATE Memory Depth Constraints}",
+  address =      "Baltimore, MD, USA",
+  pages =        "1159--1168",
+  month =        oct,
+  year =         "2002",
+}
+
+@InProceedings{Iyengar-ats02,
+  author =       "Vikram Iyengar and Krishnendu Chakrabarty and
+                 Erik Jan Marinissen",
+  booktitle =    ats,
+  title =        "{Recent Advances in Test Planning for Modular Testing of
+                 Core-Based SOCs}",
+  address =      "Tamuning, Guam, USA",
+  pages =        "320--325",
+  month =        nov,
+  year =         "2002",
+}
+
+@InProceedings{Iyengar-date03,
+  author =       "Vikram Iyengar and Anshuman Chandra and Sharon Schweizer and
+                 Krishnendu Chakrabarty",
+  booktitle =    date,
+  title =        "{A Unified Approach for SOC Testing Using
+                 Test Data Compression and TAM Optimization}",
+  address =      "Munich, Germany",
+  pages =        "1188--1189",
+  month =        mar,
+  year =         "2003",
+}
+
+@InProceedings{Iyengar-vts03,
+  author =       "Vikram Iyengar and Krishnendu Chakrabarty and
+                 Mark~D. Krasniewski and Gopind N. Kumar",
+  booktitle =    vts,
+  title =        "{Design and Optimization of Multi-level TAM Architectures
+                 for Hierarchical SOCs}",
+  address =      "Napa, CA, USA",
+  pages =        "299--304",
+  month =        apr,
+  year =         "2003",
+}
+
+@Article{Iyengar-tcad03,
+  author =       "Vikram Iyengar and Krishnendu Chakrabarty and
+                 Erik Jan Marinissen",
+  title =        "{Efficient Test Access Mechanism Optimization for System-on-Chip}",
+  journal =      ieeetcad,
+  volume =       22,
+  number =       5,
+  publisher =    ieee,
+  pages =        "635--643",
+  month =        may,
+  year =         "2003",
+}
+
+@Article{Iyengar-tcomp03,
+  author =       "Vikram Iyengar and Krishnendu Chakrabarty and
+                 Erik Jan Marinissen",
+  title =        "{Test Access Mechanism Optimization, Test Scheduling and Tester Data Volume Reduction for System-on-Chip}",
+  journal =      ieeetc,
+  volume =       52,
+  number =       12,
+  publisher =    ieee,
+  pages =        "1619--1632",
+  month =        dec,
+  year =         "2003",
+}
+
+@InProceedings{Jas-itc98,
+  author =       "Abhijit Jas and Nur Touba",
+  booktitle =    itc,
+  title =        "{Test Vector Decompression Via Cyclical Scan Chains
+                 and Its Application to Testing Core-Based Designs}",
+  address =      "Washington, DC, USA",
+  pages =        "458--464",
+  month =        oct,
+  year =         "1998",
+}
+
+@InProceedings{Jas-iccd99,
+  author =       "Abhijit Jas and Nur Touba",
+  booktitle =    iccd,
+  title =        "{Using an Embedded Processor for Efficient Deterministic
+                 Testing of Systems-on-a-Chip}",
+  address =      "Austin, TX, USA",
+  month =        oct,
+  year =         "1999",
+}
+
+@InProceedings{Jas-tecs99,
+  author =       "Abhijit Jas and Bahram Pouya and Nur Touba",
+  booktitle =    tecs,
+  title =        "{Scan Length Reduction in Cores Using Virtual Scan Chains}",
+  address =      "Dana Point, CA, USA",
+  pages =        "4.1--1--6",
+  month =        apr,
+  year =         "1999",
+}
+
+@InProceedings{Jas-vts00,
+  author =       "Abhijit Jas and Bahram Pouya and Nur Touba",
+  booktitle =    vts,
+  title =        "{Virtual Scan Chains: A Means for Reducing Scan Length in Cores}",
+  address =      "Montreal, Canada",
+  pages =        "73--78",
+  month =        apr,
+  year =         "2000",
+}
+
+@InProceedings{Kapur-vts99,
+  author =       "Rohit Kapur and others",
+  booktitle =    vts,
+  title =        "{P1500-CTL: Towards a Standard Core Test Language}",
+  address =      "Dana Point, CA, USA",
+  pages =        "489--490",
+  month =        apr,
+  year =         "1999",
+}
+
+@InProceedings{Kapur-itc01,
+  author =       "Rohit Kapur and others",
+  booktitle =    itc,
+  title =        "{CTL -- The Language for Describing Core-Based Test}",
+  address =      "Baltimore, MD, USA",
+  pages =        "131--139",
+  month =        oct,
+  year =         "2001",
+}
+
+@InProceedings{Kapur-ats02,
+  author =       "Rohit Kapur and Tom W. Williams",
+  booktitle =    ats,
+  title =        "{Manufacturing Test of SoCs}",
+  address =      "Tamuning, Guam, USA",
+  pages =        "317--319",
+  month =        nov,
+  year =         "2002",
+}
+
+@InProceedings{Karrfal-tecs98,
+  author =       "Jake Karrfalt and Zainalabedin Navabi and Casper Stoel",
+  booktitle =    tecs,
+  title =        "{A Novel Approach to Optimization IEEE~1149.1 for
+                 Systems with Multiple Embedded Cores}",
+  address =      "Washington, DC, USA",
+  pages =        "2.2--1--10",
+  month =        oct,
+  year =         "1998",
+}
+
+@InProceedings{Kessler-etw01,
+  author =       "Michael Kessler and Gundolf Kiefer and Jens Leenstra and
+                 Kunt Schuenemann and Thomas Schwarz and Hans-Joachim Wunderlich",
+  booktitle =    etwdig,
+  title =        "{Using a Hierarchical DfT Methodology in High Frequency
+                 Processor Designs for Improved Delay Fault Testability}",
+  address =      "Saltsjobaden, Sweden",
+  pages =        "237--241",
+  month =        may,
+  year =         "2001",
+}
+
+@InProceedings{Kessler-itc01,
+  author =       "Michael Kessler and others",
+  booktitle =    itc,
+  title =        "{Using a Hierarchical DfT Methodology in High Frequency
+                 Processor Designs for Improved Delay Fault Testability}",
+  address =      "Baltimore, MD, USA",
+  pages =        "461--469",
+  month =        oct,
+  year =         "2001",
+}
+
+@InProceedings{Kim-ftcs98,
+  author =       "Hyungwon Kim and John P. Hayes",
+  booktitle =    "IEEE Fault-Tolerant Computing Symposium (FTCS)",
+  title =        "{Realization-Independent Testing of IP-Based Systems}",
+  year =         "1998",
+}
+
+@InProceedings{Kim-itc98,
+  author =       "Hyungwon Kim and John P. Hayes",
+  booktitle =    itc,
+  title =        "{High-Coverage ATPG for Datapath Circuits with
+                 Unimplemented Blocks}",
+  address =      "Washington, DC, USA",
+  pages =        "577--586",
+  month =        oct,
+  year =         "1998",
+}
+
+@InProceedings{Kim-vts99,
+  author =       "Hyungwon Kim and John P. Hayes",
+  booktitle =    vts,
+  title =        "{Delay Fault Testing of Designs with Embedded IP Cores}",
+  address =      "Dana Point, CA, USA",
+  pages =        "160--167",
+  month =        apr,
+  year =         "1999",
+}
+
+@InProceedings{Kim-ioltw99,
+  author =       "Hyungwon Kim and John P. Hayes",
+  booktitle =    ioltw,
+  title =        "{On-Line Delay Fault Testing of IP-Based Systems
+                 Via Selectively Transparent Scan}",
+  address =      "Rhodos, Greece",
+  month =        jul,
+  year =         "1999",
+}
+
+@InProceedings{Kim-itc99,
+  author =       "Hyungwon Kim and John P. Hayes",
+  booktitle =    itc,
+  title =        "{Delay Fault Testing of IP-Based Designs Via Symbolic
+                 Path Modeling}",
+  pages =        "1045--1054",
+  address =      "Atlantic City, NJ, USA",
+  month =        sep,
+  year =         "1999",
+}
+
+@InProceedings{Kim-socc04,
+  author =       "Jong-Sun Kim and others",
+  booktitle =    socc,
+  title =        "{On-Chip Network Based Embedded Core Testing}",
+  pages =        "223--226",
+  address =      "Santa Clara, CA, USA",
+  month =        sep,
+  year =         "2004",
+}
+
+@InProceedings{Ko-ats02,
+  author =       "K.Y. Ko and Mike W.T. Wong and Y.S. Lee",
+  booktitle =    ats,
+  title =        "{Testing System-On-Chip by Summation of Cores' Test Output Voltages}",
+  address =      "Tamuning, Guam, USA",
+  pages =        "350--355",
+  month =        nov,
+  year =         "2002",
+}
+
+@Misc{Koenemann97,
+  author =       "Bernd Koenemann and Ken Wagner",
+  title =        "{Test Sockets: A Test Framework for System-On-Chip
+                 Designs}",
+  howpublished = "http://grouper.ieee.org/groups/1500/pastmeetings.html\#970427",
+  month =        apr,
+  year =         "1997",
+  note =         "Presentation at IEEE P1500 Working Group Meeting,
+                 Monterey, CA, April 1997",
+}
+
+@InProceedings{Koranne-ecco01,
+  author =       "Sandeep Koranne",
+  booktitle =    "{Proceedings of ECCO XIV}",
+  title =        "{On Test Planning for Core-Based SOCs}",
+  month =        may,
+  year =         "2001",
+}
+
+@InProceedings{Koranne-vlsi02,
+  author =       "Sandeep Koranne",
+  booktitle =    ivlsi,
+  title =        "{On Test Scheduling for Core-Based SOCs}",
+  pages =        "505--510",
+  address =      "Bangelore, India",
+  month =        jan,
+  year =         "2002",
+}
+
+@InProceedings{Koranne-date02,
+  author =       "Sandeep Koranne and Vishal Choudhary",
+  booktitle =    date,
+  title =        "{Formulating SOC Test Scheduling as a Network
+                 Transportation Problem}",
+  address =      "Paris, France",
+  month =        mar,
+  year =         "2002",
+}
+
+@InProceedings{Koranne-isqed02,
+  author =       "Sandeep Koranne",
+  booktitle =    isqed,
+  title =        "{Design of Reconfigurable Core Wrappers for Embedded Core
+                 Based SOC Test}",
+  address =      "San Jose, CA, USA",
+  month =        mar,
+  year =         "2002",
+}
+
+@InProceedings{Koranne-itsw02,
+  author =       "Sandeep Koranne",
+  booktitle =    itsw,
+  title =        "{A Novel Test Access Wrapper Design for Embedded Cores}",
+  address =      "Santa Barbara, CA, USA",
+  month =        mar,
+  year =         "2002",
+}
+
+@Article{Koranne-jetta02,
+  author =       "Sandeep Koranne",
+  title =        "{A Novel Reconfigurable Wrapper for Testing of
+                 Embedded Core-Based SOCs and its Associated Scheduling 
+                 Algorithm}",
+  journal =      jetta,
+  volume =       "18",
+  number =       "4/5",
+  publisher =    kap,
+  pages =        "415--434",
+  month =        aug,
+  year =         "2002",
+}
+
+@InProceedings{Koranne-jettabook02,
+  author =       "Sandeep Koranne",
+  title =        "{A Novel Reconfigurable Wrapper for Testing of
+                 Embedded Core-Based SOCs and its Associated Scheduling 
+                 Algorithm}",
+  editor =       "Krishnendu Chakrabarty",
+  booktitle =    "SOC (System-on-a-Chip) Testing for Plug and Play Test Automation",
+  series =       fet,
+  volume =       21,
+  publisher =    kap,
+  pages =        "51--70",
+  month =        sep,
+  year =         "2002",
+}
+
+@InProceedings{Koranne-itc02,
+  author =       "Sandeep Koranne and Vikram Iyengar",
+  booktitle =    itc,
+  title =        "{On the Use of k-tuples for SoC Test Schedule Representation}",
+  address =      "Baltimore, MD, USA",
+  pages =        "539--548",
+  month =        oct,
+  year =         "2002",
+}
+
+@InProceedings{Koranne-trp02,
+  author =       "Sandeep Koranne",
+  booktitle =    trp,
+  title =        "{Test Resource Partitioning and Scheduling Using
+                 Graph Factoring}",
+  address =      "Baltimore, MD, USA",
+  pages =        "3.1-1--8",
+  month =        oct,
+  year =         "2002",
+}
+
+@Article{Koranne-tcad02,
+  author =       "Sandeep Koranne",
+  title =        "{Formulating SoC Test Scheduling as a Network Transportation
+                 Problem}",
+  journal =      ieeetcad,
+  volume =       21,
+  number =       12,
+  pages =        "1517--1525",
+  month =        dec,
+  year =         "2002",
+}
+
+@InProceedings{Koranne-isqed03,
+  author =       "Sandeep Koranne",
+  booktitle =    isqed,
+  title =        "{Solving the SoC Test Scheduling Problem Using Network Flow
+                 and Reconfigurable Wrappers}",
+  address =      "San Jose, CA, USA",
+  pages =        "93--98",
+  month =        mar,
+  year =         "2003",
+}
+
+@InProceedings{Krundel-ets04,
+  author =       "Ludovic Krundel and Sandeep Kumar Goel and Erik Jan Marinissen
+                 and Marie-Lise Flottes and Bruno Rouzeyre",
+  booktitle =    ets,
+  title =        "{User-Constrained Test Architecture Design for Modular SOC Testing}",
+  address =      "Ajaccio, Corsica, France",
+  pages =        "80--85",
+  month =        may,
+  year =         "2004",
+}
+
+@PhdThesis{Larsson00,
+  author =       "Erik Larsson",
+  title =        "{An Integrated System-Level Design for Testability Methodology}",
+  school =       "Link{\"o}pings Universitet",
+  address =      "Link{\"o}ping, Sweden",
+  month =        nov,
+  year =         "2000",
+}
+
+@InProceedings{Larsson-date01,
+  author =       "Erik Larsson and Zebo Peng",
+  booktitle =    date,
+  title =        "{An Integrated System-on-Chip Test Framework}",
+  address =      "Munich, Germany",
+  pages =        "138--144",
+  month =        mar,
+  year =         "2001",
+}
+
+@InProceedings{Larsson-etw01,
+  author =       "Erik Larsson and Zebo Peng",
+  booktitle =    etwdig,
+  title =        "{System-on-Chip Test Parallelization under Power Constraints}",
+  address =      "Saltsjobaden, Sweden",
+  pages =        "281--283",
+  month =        may,
+  year =         "2001",
+}
+
+@InProceedings{Larsson-ats01,
+  author =       "Erik Larsson and Zebo Peng",
+  booktitle =    ats,
+  title =        "{Test Scheduling  and Scan-Chain Division Under Power Constraint}",
+  address =      "Kyoto, Japan",
+  pages =        "259--264",
+  month =        nov,
+  year =         "2001",
+}
+
+@InProceedings{Larsson-iccad01,
+  author =       "Erik Larsson and Zebo Peng and Gunnar Carlsson",
+  booktitle =    iccad,
+  title =        "{The Design and Optimization of SOC Test Solutions}",
+  address =      "San Jose, CA, USA",
+  pages =        "523--530",
+  month =        nov,
+  year =         "2001",
+}
+
+@InProceedings{Larsson-etw02,
+  author =       "Erik Larsson and Hideo Fujiwara",
+  booktitle =    etw,
+  title =        "{Power Constrained Preemptive TAM Scheduling}",
+  address =      "Corfu, Greece",
+  pages =        "119--126",
+  month =        may,
+  year =         "2002",
+}
+
+@InProceedings{Larsson-ats02,
+  author =       "Erik Larsson and Klas Arvidsson and Hideo Fujiwara and
+                 Zebo Peng",
+  booktitle =    ats,
+  title =        "{Integrated Test Scheduling, Test Parallelization and TAM Design}",
+  address =      "Tamuning, Guam, USA",
+  pages =        "397--404",
+  month =        nov,
+  year =         "2002",
+}
+
+@Article{Larsson-jetta02,
+  author =       "Erik Larsson and Zebo Peng",
+  title =        "{An Integrated Framework for the Design and Optimization of
+                 SOC Test Solutions}",
+  journal =      jetta,
+  volume =       18,
+  number =       "4/5",
+  publisher =    kap,
+  pages =        "385--400",
+  month =        aug,
+  year =         "2002",
+}
+
+@InProceedings{Larsson-jettabook02,
+  author =       "Erik Larsson and Zebo Peng",
+  title =        "{An Integrated Framework for the Design and Optimization of
+                 SOC Test Solutions}",
+  editor =       "Krishnendu Chakrabarty",
+  booktitle =    "SOC (System-on-a-Chip) Testing for Plug and Play Test Automation",
+  series =       fet,
+  volume =       21,
+  publisher =    kap,
+  pages =        "21--36",
+  month =        sep,
+  year =         "2002",
+}
+
+@InProceedings{Larsson-vts03,
+  author =       "Erik Larsson and Hideo Fujiwara",
+  booktitle =    vts,
+  title =        "{Test Resource Partitioning and Optimization for SOC Designs}",
+  address =      "Napa, CA, USA",
+  pages =        "319--324",
+  month =        apr,
+  year =         "2003",
+}
+
+@InProceedings{Larsson-itc03,
+  author =       "Erik Larsson and Zebo Peng",
+  booktitle =    itc,
+  title =        "{A Reconfigurable Power-Conscious Core Wrapper and its
+                 Application to SOC Test Scheduling}",
+  address =      "Charlotte, NC, USA",
+  pages =        "1135--1144",
+  month =        sep,
+  year =         "2003",
+}
+
+@InProceedings{Larsson-itc04,
+  author =       "Erik Larsson",
+  booktitle =    itc,
+  title =        "{Integrating Core Selection in the SOC Test Solution Design-Flow}",
+  address =      "Charlotte, NC, USA",
+  pages =        "1349--1358",
+  month =        oct,
+  year =         "2004",
+}
+
+@Article{Larsson-tc06,
+  author =       "Erik Larsson and Zebo Peng",
+  title =        "{Power-Aware Test Planning in the Early System-On-Chip Design Exploration Process}",
+  journal =      ieeetc,
+  volume =       6,
+  number =       2,
+  pages =        "227--239",
+  month =        feb,
+  year =         "1996",
+}
+
+@Article{Lipman-edn96,
+  author =       "Jim Lipman",
+  title =        "{The Hard Facts about Soft Cores}",
+  journal =      edn,
+  pages =        "35",
+  month =        sep,
+  year =         "1996",
+}
+
+@Article{Lipman-edn98,
+  author =       "Jim Lipman",
+  title =        "{Add Testability Now to Core-Based Chips, or Pay
+                 Later}",
+  journal =      edn,
+  volume =       "43",
+  number =       "4",
+  pages =        "65--78",
+  month =        feb,
+  year =         "1998",
+}
+
+@InProceedings{Liu-date03,
+  author =       "Chunsheng Liu and Krishnendu Chakrabarty",
+  booktitle =    date,
+  title =        "{A Partition-Based Approach for Identifying Failing Scan Cells
+                 in Scan-BIST with Applications to System-on-Chip Fault Diagnosis}",
+  address =      "Munich, Germany",
+  pages =        "230--235",
+  month =        mar,
+  year =         "2003",
+}
+
+@InProceedings{Liu-itc04,
+  author =       "Chunsheng Liu and Erika Cota and Hamid Sharif and D.K.\ Pradhan",
+  booktitle =    itc,
+  title =        "{Test Scheduling for Network-on-Chip with BIST and Precedence
+                 Constraints}",
+  address =      "Charlotte, NC, USA",
+  pages =        "1369--1378",
+  month =        oct,
+  year =         "2004",
+}
+
+@InProceedings{Liu-vts05,
+  author =       "Chunsheng Liu and Jiangfan Shi and Erika Cota and Vikram Iyengar",
+  booktitle =    vts,
+  title =        "{Power-Aware Test Scheduling in Network-on-Chip Using Variable-Rate On-Chip Clocking}",
+  address =      "Palm Springs, CA, USA",
+  pages =        "349--354",
+  month =        may,
+  year =         "2005",
+}
+
+@InProceedings{Liu-date06a,
+  author =       "Chunsheng Liu and Vikram Iyengar",
+  booktitle =    date,
+  title =        "{Test Scheduling with Thermal Optimization for
+                 Network-on-Chip Systems Using Variable-Rate On-Chip Clocking}",
+  address =      "Munich, Germany",
+  pages =        "1--6",
+  month =        mar,
+  year =         "2006",
+}
+
+@InProceedings{Liu-date06b,
+  author =       "Chunsheng Liu and Zach Link and D.K.\ Pradhan",
+  booktitle =    date,
+  title =        "{Reuse-Based Test Access and Integrated Test Scheduling for Network-on-Chip}",
+  address =      "Munich, Germany",
+  pages =        "1--6",
+  month =        mar,
+  year =         "2006",
+}
+
+@InProceedings{Liu-vts06,
+  author =       "Chunsheng Liu and Vikram Iyengar and D.K.\ Pradhan",
+  booktitle =    vts,
+  title =        "{Thermal-Aware Testing of Network-on-Chip Using Multiple-Frequency Clocking}",
+  address =      "Berkeley, CA, USA",
+  pages =        "46--51",
+  month =        may,
+  year =         "2006",
+}
+
+@InProceedings{Makar-tecs99,
+  author =       "Samy Makar",
+  booktitle =    tecs,
+  title =        "{Strategies for Testing Embedded Cores at Cirrus Logic}",
+  address =      "Dana Point, CA, USA",
+  pages =        "1.2--1--5",
+  month =        apr,
+  year =         "1999",
+}
+
+@InProceedings{Makar-trp03,
+  author =       "Samy Makar",
+  booktitle =    trp,
+  title =        "{Beyond the Standard}",
+  address =      "Napa, CA, USA",
+  pages =        "1--7",
+  month =        apr,
+  year =         "2003",
+}
+
+@InProceedings{Makris-vts01,
+  author =       "Yiorgos Makris and Vishal Patel and Alex Orailoglu",
+  booktitle =    vts,
+  title =        "{Efficient Transparency Extraction and Utilization in
+                 Hierarchical Test}",
+  address =      "Marina del Rey, CA, USA",
+  pages =        "246--251",
+  month =        may,
+  year =         "2001",
+}
+
+@InProceedings{Marinissen-etc93,
+  author =       "Erik Jan Marinissen and Krijn Kuiper and Clemens
+                 Wouters",
+  booktitle =    etc,
+  title =        "{Test Protocol Expansion in Hierarchical Macro
+                 Testing}",
+  address =      "Rotterdam, The Netherlands",
+  pages =        "28--36",
+  month =        apr,
+  year =         "1993",
+}
+
+@InProceedings{Marinissen-tecs97,
+  author =       "Erik Jan Marinissen and Maurice Lousberg",
+  booktitle =    tecs,
+  title =        "{Macro Test: A Liberal Test Approach for Embedded
+                 Reusable Cores}",
+  address =      "Washington, DC, USA",
+  pages =        "1.2--1--9",
+  month =        nov,
+  year =         "1997",
+}
+
+@InProceedings{Marinissen-itc98,
+  author =       "Erik Jan Marinissen and others",
+  booktitle =    itc,
+  title =        "{A Structured And Scalable Mechanism for Test Access
+                 to Embedded Reusable Cores}",
+  address =      "Washington, DC, USA",
+  pages =        "284--293",
+  month =        oct,
+  year =         "1998",
+}
+
+@InProceedings{Marinissen-tecs98,
+  author =       "Erik Jan Marinissen and Joep Aerts",
+  booktitle =    tecs,
+  title =        "{Test Protocol Scheduling for Embedded-Core Based System ICs}",
+  address =      "Washington, DC, USA",
+  pages =        "5.3--1--9",
+  month =        oct,
+  year =         "1998",
+}
+
+@Article{Marinissen-commag99,
+  author =       "Erik Jan Marinissen and Yervant Zorian",
+  title =        "{Challenges in Testing Core-Based System ICs}",
+  journal =      "IEEE Communications Magazine",
+  volume =       "37",
+  number =       "6",
+  pages =        "104--109",
+  month =        jun,
+  year =         "1999",
+}
+
+@InProceedings{Marinissen-etw99,
+  author =       "Erik Jan Marinissen and Maurice Lousberg",
+  booktitle =    etw,
+  title =        "{The Role of Test Protocols in Testing Embedded-Core-Based System ICs}",
+  address =      "Konstanz, Germany",
+  pages =        "70--75",
+  month =        may,
+  year =         "1999",
+}
+
+@InProceedings{Marinissen-itc99,
+  author =       "Erik Jan Marinissen and Yervant Zorian and Rohit Kapur and
+                 Tony Taylor and Lee Whetsel",
+  booktitle =    itc,
+  title =        "{Towards a Standard for Embedded Core Test: An Example}",
+  address =      "Atlantic City, NJ, USA",
+  pages =        "616--627",
+  month =        sep,
+  year =         "1999",
+}
+
+@InProceedings{Marinissen-itc00,
+  author =       "Erik Jan Marinissen and Rohit Kapur and Yervant Zorian",
+  booktitle =    itc,
+  title =        "{On Using IEEE P1500 SECT for Test Plug-n-Play}",
+  address =      "Atlantic City, NJ, USA",
+  pages =        "770--777",
+  month =        oct,
+  year =         "2000",
+}
+
+@InProceedings{Marinissen-itc00a,
+  author =       "Erik Jan Marinissen and Sandeep Kumar Goel and
+                 Maurice Lousberg",
+  booktitle =    itc,
+  title =        "{Wrapper Design for Embedded Core Test}",
+  address =      "Atlantic City, NJ, USA",
+  pages =        "911--920",
+  month =        oct,
+  year =         "2000",
+}
+
+@InProceedings{Marinissen-ddecs01,
+  author =       "Erik Jan Marinissen",
+  booktitle =    ddecs,
+  title =        "{Philips' Approach to Core-Based System Chip Testing}",
+  address =      "{Gy\"or, Hungary}",
+  pages =        "15--24",
+  month =        apr,
+  year =         "2001",
+  isbn =	 "963 7175 16 4",
+}
+
+@InProceedings{Marinissen-tecs01,
+  author =       "Erik Jan Marinissen",
+  booktitle =    tecs,
+  title =        "{Philips' Approach to Core-Based System Chip Testing}",
+  address =      "Marina del Rey, CA, USA",
+  pages =        "1.1--1-10",
+  month =        may,
+  year =         "2001",
+}
+
+@InProceedings{Marinissen-vlsi01,
+  author =       "Erik Jan Marinissen",
+  booktitle =    vlsi-soc,
+  title =        "{Philips' Approach to Core-Based System Chip Testing}",
+  publisher =    "LIRMM, France",
+  address =      "{Montpellier, France}",
+  pages =        "201--210",
+  month =        dec,
+  year =         "2001",
+}
+
+@InProceedings{Marinissen-vlsi01book,
+  author =       "Erik Jan Marinissen",
+  title =        "{An Industrial Approach to Core-Based System Chip Testing}",
+  booktitle =    "SOC Design Methodologies",
+  editor =       "Michel Robert and Bruno Rouzeyre and Christian Piguet and Marie-Lise Flottes",
+  publisher =    kap,
+  pages =        "389--400",
+  year =         "2002",
+}
+
+@Article{Marinissen-jetta02-p1500,
+  author =       "Erik Jan Marinissen and others",
+  title =        "{On IEEE P1500's Standard for Embedded Core Test}",
+  journal =      jetta,
+  volume =       18,
+  number =       "4/5",
+  publisher =    kap,
+  pages =        "365--383",
+  month =        aug,
+  year =         "2002",
+}
+
+@Article{Marinissen-jetta02-prot,
+  author =       "Erik Jan Marinissen",
+  title =        "{The Role of Test Protocols in Automated Test Generation
+                 for Embedded-Core-Based System ICs}",
+  journal =      jetta,
+  volume =       18,
+  number =       "4/5",
+  publisher =    kap,
+  pages =        "435--454",
+  month =        aug,
+  year =         "2002",
+}
+
+@InProceedings{Marinissen-jettabook02-p1500,
+  author =       "Erik Jan Marinissen and others",
+  title =        "{On IEEE P1500's Standard for Embedded Core Test}",
+  editor =       "Krishnendu Chakrabarty",
+  booktitle =    "SOC (System-on-a-Chip) Testing for Plug and Play Test Automation",
+  series =       fet,
+  volume =       21,
+  publisher =    kap,
+  pages =        "1--19",
+  month =        sep,
+  year =         "2002",
+}
+
+@InProceedings{Marinissen-jettabook02-prot,
+  author =       "Erik Jan Marinissen",
+  title =        "{The Role of Test Protocols in Automated Test Generation
+                 for Embedded-Core-Based System ICs}",
+  editor =       "Krishnendu Chakrabarty",
+  booktitle =    "SOC (System-on-a-Chip) Testing for Plug and Play Test Automation",
+  series =       fet,
+  volume =       21,
+  publisher =    kap,
+  pages =        "71--90",
+  month =        sep,
+  year =         "2002",
+}
+
+@InProceedings{Marinissen-ddecs02,
+  author =       "Erik Jan Marinissen and Sandeep Kumar Goel",
+  booktitle =    ddecs,
+  title =        "{Analysis of Test Bandwidth Utilization in Test Bus and
+                 TestRail Architectures for SOCs}",
+  address =      "{Brno, Czech Republic}",
+  pages =        "52--60",
+  month =        apr,
+  year =         "2002",
+}
+
+@InProceedings{Marinissen-itc02,
+  author =       "Erik Jan Marinissen and Vikram Iyengar and
+                 Krishnendu Chakrabarty",
+  booktitle =    itc,
+  title =        "{A Set of Benchmarks for Modular Testing of SOCs}",
+  address =      "Baltimore, MD, USA",
+  pages =        "519--528",
+  month =        oct,
+  year =         "2002",
+}
+
+@InProceedings{Marinissen-vts03,
+  author =       "Erik Jan Marinissen and Sandeep Kumar Goel",
+  booktitle =    vts,
+  title =        "{SOC Test Infrastructure Optimization Under Layout Constraints}",
+  address =      "Napa, CA, USA",
+  month =        apr,
+  year =         "2003",
+}
+
+@InProceedings{Marinissen-cicc04,
+  author =       "Erik Jan Marinissen and Tom Waayers",
+  booktitle =    cicc,
+  title =        "{Infrastructure for Modular SOC Testing}",
+  address =      "Orlando, FL, USA",
+  pages =        "671--678",
+  month =        oct,
+  year =         "2004",
+}
+
+@InProceedings{Maroufi-tecs00,
+  author =       "Walid Maroufi and Mounir Benabdenbi and Meryem Marzouki",
+  booktitle =    tecs,
+  title =        "{Controlloing the CAS-BUS TAM With The 1149.1 Features:
+                 A Way of Testing Systems on a Chip}",
+  address =      "Montreal, Canada",
+  pages =        "4.5--1-6",
+  month =        may,
+  year =         "2000",
+}
+
+@InProceedings{Martin-tecs99,
+  author =       "F. Martin and C. Papachristou",
+  booktitle =    tecs,
+  title =        "{Microprocessor Based Testing for Core-Based System-on-Chip}",
+  address =      "Dana Point, CA, USA",
+  pages =        "2.3--1--6",
+  month =        apr,
+  year =         "1999",
+}
+
+@Misc{Mathewson98,
+  author =       "Bruce Mathewson",
+  title =        "{Core Provider's Test Experience}",
+  howpublished = "http://grouper.ieee.org/groups/1500/pastmeetings.html\#dac98",
+  month =        jun,
+  year =         "1998",
+  note =         "Presentation at IEEE P1500 Working Group Meeting,
+                 Sunnyvale, CA, USA, June 1998",
+}
+
+@InProceedings{McLaurin-tecs00,
+  author =       "Teresa McLaurin and John C. Potter",
+  booktitle =    tecs,
+  title =        "{On-The-Shelf Core Pattern Methodology for ColdFire Cores}",
+  address =      "Montreal, Canada",
+  pages =        "3.1--1-7",
+  month =        may,
+  year =         "2000",
+}
+
+@InProceedings{McLaurin-itc00,
+  author =       "Teresa McLaurin and John C. Potter",
+  booktitle =    itc,
+  title =        "{On-The-Shelf Core Pattern Methodology for ColdFire
+                 Microprocessor Cores}",
+  address =      "Atlantic City, NJ, USA",
+  pages =        "1100--1107",
+  month =        oct,
+  year =         "2000",
+}
+
+@InProceedings{McLaurin-itc03,
+  author =       "Teresa L. McLaurin and Frank Frederick and Rich Slobodnik",
+  booktitle =    itc,
+  title =        "{The Testability Features of the ARM1026EJ Microprocessor Core}",
+  address =      "Charlotte, NC, USA",
+  pages =        "773--782",
+  month =        sep,
+  year =         "2003",
+}
+
+@Article{McLaurin-eedesign04,
+  author =       "Teresa McLaurin and Rohit Kapur",
+  title =        "{'Wrap' Your Cores to Enable SoC Test}",
+  journal =      "EE Design",
+  publisher =    "CMP United Business Media",
+  month =        "November 24",
+  year =         "2004",
+  howpublished = "http://www.eedesign.com/news/showArticle.jhtml?articleId=54200629",
+}
+
+@MastersThesis{Moerenhout96,
+  author =       "Micle Moerenhout",
+  title =        "{Reducing IC Test Time through Parallel Composition of
+                 Test Protocols}",
+  school =       "Eindhoven University of Technology",
+  address =      "Eindhoven, The Netherlands",
+  month =        jan,
+  year =         "1996",
+}
+
+@InProceedings{Monzel-tecs97,
+  author =       "James Monzel and Edward Orosz",
+  booktitle =    tecs,
+  title =        "{Testing `Systems-on-a-Chip' in a Low Cost ASIC Test
+                 Environment}",
+  address =      "Washington, DC, USA",
+  pages =        "5.1--1--8",
+  month =        nov,
+  year =         "1997",
+}
+
+@InProceedings{Muhmenthaler-tecs97,
+  author =       "Peter Muhmenthaler and J{\"u}rgen Alt",
+  booktitle =    tecs,
+  title =        "{An Approach to Embedded Core-Based Systems Test}",
+  address =      "Washington, DC, USA",
+  pages =        "1.3--1--3",
+  month =        nov,
+  year =         "1997",
+}
+
+@InProceedings{Mukherji-tecs98,
+  author =       "Sobhan Mukherji and Loc Nguyen and Dwayne Burek and
+                 Steve Baird",
+  booktitle =    tecs,
+  title =        "{IP/VC-Based Test Methodology (Part-1): A Case
+                 Study}",
+  address =      "Washington, DC, USA",
+  pages =        "1.2--1--9",
+  month =        oct,
+  year =         "1998",
+}
+
+@InProceedings{Muradali-tecs99,
+  author =       "Fidel Muradali and Rob Aitken and Neal Jaarsma",
+  booktitle =    tecs,
+  title =        "{System-Level-Integration Test Hardware and its Impact on Reuse and Design}",
+  address =      "Dana Point, CA, USA",
+  pages =        "1.1--1--6",
+  month =        apr,
+  year =         "1999",
+}
+
+@Article{Murray-tcad90,
+  author =       "Brian T. Murray and John P. Hayes",
+  title =        "{Hierarchical Test Generation Using Precomputed Tests
+                 for Modules}",
+  journal =      ieeetcad,
+  volume =       "9",
+  number =       "6",
+  publisher =    ieee,
+  pages =        "594--603",
+  month =        jun,
+  year =         "1990",
+}
+
+@InProceedings{Murray-itc91,
+  author =       "Brian T. Murray and John P. Hayes",
+  booktitle =    itc,
+  title =        "{Test Propagation Through Modules and Circuits}",
+  address =      "Washington, DC, USA",
+  pages =        "748--757",
+  month =        sep,
+  year =         "1991",
+}
+
+@PhdThesis{Murray94,
+  author =       "Brian T. Murray",
+  title =        "{Hierarchical Testing Using Precomputed Tests for
+                 Modules}",
+  school =       "University of Michigan",
+  address =      "Ann Arbor, MI, USA",
+  month =        dec,
+  year =         "1994",
+}
+
+@Article{Murray-comp96,
+  author =       "Brian T. Murray and John P. Hayes",
+  title =        "{Testing ICs: Getting to the Core of the Problem}",
+  journal =      ieeecomp,
+  volume =       "29",
+  number =       "11",
+  pages =        "32--38",
+  month =        nov,
+  year =         "1996",
+}
+
+@InProceedings{Nahvi-itc02,
+  author =       "Mohsen Nahvi and Andre Ivanov and Resve Saleh",
+  booktitle =    itc,
+  title =        "{Dedicated Autonomous Scan-Based Testing (DAST) for Embedded Cores}",
+  address =      "Baltimore, MD, USA",
+  pages =        "1176--1183",
+  month =        oct,
+  year =         "2002",
+}
+
+@InProceedings{Nahvi-vts03,
+  author =       "Mohsen Nahvi and Andre Ivanov",
+  booktitle =    vts,
+  title =        "{An Embedded Autonomous Scan-Based Results Analyzer (EARA)
+                 for SoC Cores}",
+  address =      "Napa, CA, USA",
+  pages =        "293--298",
+  month =        apr,
+  year =         "2003",
+}
+
+@InProceedings{Nikolos-date99,
+  author =       "D. Nikolos and Th. Haniotakis and H.T. Vergos and
+                 Y. Tsiatouhas",
+  booktitle =    date,
+  title =        "{Path Delay Fault Testing of ICs with Embedded
+                 Intellectual Property Blocks}",
+  address =      "Munich, Germany",
+  pages =        "112--116",
+  month =        mar,
+  year =         "1999",
+}
+
+InProceedings{Nordholz-vts98,
+  author =       "Petra Nordholz and others",
+  booktitle =    vts,
+  title =        "{Signal Integrity Problems in Deep Submicron Arising
+                 from Interconnects between Cores}",
+  address =      "Monterey, CA, USA",
+  pages =        "28--33",
+  month =        apr,
+  year =         "1998",
+}
+
+@InProceedings{Nourani-vts98,
+  author =       "Mehrdad Nourani and Chris Papachristou",
+  booktitle =    vts,
+  title =        "{Parallelism in Structural Fault Testing of Embedded
+                 Cores}",
+  address =      "Monterey, CA, USA",
+  pages =        "15--20",
+  month =        apr,
+  year =         "1998",
+}
+
+@Article{Nourani-jetta99,
+  author =       "Mehrdad Nourani and Chris Papachristou",
+  title =        "{Structural Fault Testing of Embedded Cores Using Pipelining}",
+  journal =      jetta,
+  volume =       "15",
+  number =       "1",
+  publisher =    kap,
+  pages =        "129",
+  year =         "1999",
+}
+
+@InProceedings{Nourani-itc00,
+  author =       "Mehrdad Nourani and Chris Papachristou",
+  booktitle =    itc,
+  title =        "{An ILP Formulation to Optimize Test Access Mechanism
+                 in System-on-Chip Testing}",
+  address =      "Atlantic City, NJ, USA",
+  pages =        "902--910",
+  month =        oct,
+  year =         "2000",
+}
+
+@InProceedings{Nahvi-etw01,
+  author =       "Mohsen Nahvi and Andre Ivanov",
+  booktitle =    etwdig,
+  title =        "{A Packet Switching Communication-Based Test Access
+                 Mechanism for System Chips}",
+  address =      "Saltsjobaden, Sweden",
+  pages =        "195--200",
+  month =        may,
+  year =         "2001",
+}
+
+@InProceedings{Parulkar-itc02,
+  author =       "Ishwar Parulkar and others",
+  booktitle =    itc,
+  title =        "{A Scalable, Low Cost Design-for-Test Architecture for
+                 UltraSPARC Chip Multi-Processors}",
+  address =      "Baltimore, MD, USA",
+  pages =        "726--735",
+  month =        oct,
+  year =         "2002",
+}
+
+@InProceedings{Polian-trp03,
+  author =       "Ilia Polian and Bernd Becker",
+  booktitle =    trp,
+  title =        "{Reducing ATE Cost in System-on-Chip Test}",
+  address =      "Napa, CA, USA",
+  pages =        "1--8",
+  month =        apr,
+  year =         "2003",
+}
+
+@InProceedings{Pomeranz-tecs97,
+  author =       "Irith Pomeranz and Yervant Zorian",
+  booktitle =    tecs,
+  title =        "{On Providing a Set of Alternative Tests for an
+                 Embedded Core by Test-Point Insertion}",
+  address =      "Washington, DC, USA",
+  pages =        "2.3--1--8",
+  month =        nov,
+  year =         "1997",
+}
+
+@InProceedings{Pomeranz-tecs98,
+  author =       "Irith Pomeranz and Yervant Zorian",
+  booktitle =    tecs,
+  title =        "{Issues in Testing of Non-Isolated Embedded Cores and
+                 their Surrounding Logic}",
+  address =      "Washington, DC, USA",
+  pages =        "2.1--1--7",
+  month =        oct,
+  year =         "1998",
+}
+
+@InProceedings{Pomeranz-vts99,
+  author =       "Irith Pomeranz and Yervant Zorian",
+  booktitle =    vts,
+  title =        "{On Testing of Non-Isolated Embedded Legacy Cores and their Surrounding Logic}",
+  address =      "Dana Point, CA, USA",
+  pages =        "41--48",
+  month =        apr,
+  year =         "1999",
+}
+
+@InProceedings{Pomeranz-tecs99,
+  author =       "Irith Pomeranz and Yervant Zorian",
+  booktitle =    tecs,
+  title =        "{On Testing of Non-Isolated Sequential Embedded Legacy Cores and their Surrounding Logic}",
+  address =      "Dana Point, CA, USA",
+  pages =        "2.2--1--7",
+  month =        apr,
+  year =         "1999",
+}
+
+@InProceedings{Pomeranz-tecs00,
+  author =       "Irith Pomeranz and Yervant Zorian",
+  booktitle =    tecs,
+  title =        "{On Design-for-Testability for Circuits Comprised of
+                 Non-Isolated Legacy Cores}",
+  address =      "Montreal, Canada",
+  pages =        "2.1--1-7",
+  month =        may,
+  year =         "2000",
+}
+
+@InProceedings{Pomeranz-tecs01,
+  author =       "Irith Pomeranz and Yervant Zorian",
+  booktitle =    tecs,
+  title =        "{Using a Scan Simulation Model of a Random-Logic Embedded Core
+                 to Facilitate Test Generation for the Surrounding Logic}",
+  address =      "Marina del Rey, CA, USA",
+  pages =        "2.3--1-7",
+  month =        may,
+  year =         "2001",
+}
+
+@InProceedings{Pouget-etw03,
+  author =       "Julien Pouget and Erik Larsson and Zebo Peng and Marie-Lise
+                 Flottes and Bruno Rouzeyre",
+  booktitle =    etw,
+  title =        "{An Efficient Approach to SoC Wrapper Design, TAM Configuration
+                 and Test Scheduling}",
+  pages =        "51--56",
+  address =      "Maastricht, The Netherlands",
+  month =        may,
+  year =         "2003",
+}
+
+@InProceedings{Pouya-itc97,
+  author =       "Bahram Pouya and Nur Touba",
+  booktitle =    itc,
+  title =        "{Modifying User-Defined Logic for Test Access to
+                 Embedded Cores}",
+  address =      "Washington, DC, USA",
+  pages =        "60--68",
+  month =        nov,
+  year =         "1997",
+}
+
+@InProceedings{Puig-dac00,
+  author =       "Marin{\'e}s Puig-Medina and Gulbin Ezer and Pavlos Konas",
+  booktitle =    dac,
+  title =        "{Verification of Configurable Processor Cores}",
+  publisher =    acm,
+  address =      "Los Angeles, CA, USA",
+  pages =        "426--431",
+  month =        jun,
+  year =         "2000",
+}
+
+@InProceedings{Quasem-tecs00,
+  author =       "Md. Saffat Quasem and Sandeep K. Gupta",
+  booktitle =    tecs,
+  title =        "{Test Information for Cores: Comparative Analysis and
+                 Recommendations}",
+  address =      "Montreal, Canada",
+  pages =        "2.3--1-4",
+  month =        may,
+  year =         "2000",
+}
+
+@InProceedings{Rajski-tecs97,
+  author =       "Janusz Rajski and Tom Eberle and Jerzy Tyszer",
+  booktitle =    tecs,
+  title =        "{Modular Logic Built-In Self-Test for IP Cores}",
+  address =      "Washington, DC, USA",
+  pages =        "3.3--1--5",
+  month =        nov,
+  year =         "1997",
+}
+
+@InProceedings{Rajski-itc98,
+  author =       "Janusz Rajski and Jerzy Tyszer",
+  booktitle =    itc,
+  title =        "{Modular Logic Built-In Self Test for IP Cores}",
+  address =      "Washington, DC, USA",
+  pages =        "313--321",
+  month =        oct,
+  year =         "1998",
+}
+
+@InProceedings{Rajsuman-itc96,
+  author =       "Rochit Rajsuman",
+  booktitle =    itc,
+  title =        "{Challenge of the 90's: Testing CoreWare$^{TM}$ Based
+                 ASICs}",
+  address =      "Washington, DC, USA",
+  month =        nov,
+  year =         "1996",
+}
+
+@InProceedings{Rajsuman-tecs98,
+  author =       "Rochit Rajsuman",
+  booktitle =    tecs,
+  title =        "{A New Test Methodology for Testing Embedded Memories
+                 in Core Based System-on-a-Chip ICs}",
+  address =      "Washington, DC, USA",
+  pages =        "3.4--1--6",
+  month =        oct,
+  year =         "1998",
+}
+
+@InProceedings{Rajsuman-itc99,
+  author =       "Rochit Rajsuman",
+  booktitle =    itc,
+  title =        "{Testing a System-on-a-Chip with Embedded Microprocessor}",
+  pages =        "499--508",
+  address =      "Atlantic City, NJ, USA",
+  month =        sep,
+  year =         "1999",
+}
+
+@InProceedings{Ravi-iccad99,
+  author =       "S. Ravi and N. Jha and G. Lakshiminarayana",
+  booktitle =    iccad,
+  title =        "{A Framework for Testing Core-Based Systems-on-a-Chip}",
+  address =      "San Jose, CA, USA",
+  month =        nov,
+  year =         "1999",
+}
+
+@InProceedings{Remmers-itc04,
+  author =       "Jeff Remmers and Moe Villalba and Richard Fisette",
+  booktitle =    itc,
+  title =        "{Hierarchical DFT Methodology -- A Case Study}",
+  address =      "Charlotte, NC, USA",
+  pages =        "847--856",
+  month =        oct,
+  year =         "2004",
+}
+
+@InProceedings{Richter-tecs99,
+  author =       "Detlev Richter and Volker Kilian",
+  booktitle =    tecs,
+  title =        "{The Embedded DRAM Test Dilemma}",
+  address =      "Dana Point, CA, USA",
+  pages =        "3.3--1--6",
+  month =        apr,
+  year =         "1999",
+}
+
+@Article{Rincon-dt97,
+  author =       "Ann Marie Rincon and others",
+  title =        "{Core Design and System-on-a-Chip Integration}",
+  journal =      ieeedt,
+  volume =       "14",
+  number =       "4",
+  pages =        "26--35",
+  month =        dec,
+  year =         "1997",
+}
+
+@InProceedings{Rosinger-iscas01,
+  author =       "Paul Rosinger and Bashir Al-Hashimi and Nicola Nicolici",
+  booktitle =    iscas,
+  title =        "{Power Constrained Test Scheduling Using Power Profile
+                 Manipulation}",
+  volume =       "V",
+  pages =        "V251--V254",
+  month =        may,
+  year =         "2001",
+}
+
+@InProceedings{Ross-itc00,
+  author =       "Don E. Ross and Tim Wood and Grady Giles",
+  booktitle =    itc,
+  title =        "{Conversion of Small Functional Test Sets of Nonscan Blocks
+                 to Scan Patterns}",
+  address =      "Atlantic City, NJ, USA",
+  pages =        "691--700",
+  month =        oct,
+  year =         "2000",
+}
+
+@InProceedings{Saxena-tecs98,
+  author =       "Jayashree Saxena and Paul Policke and Ken Cyr and
+                 Agapito Benavides and Harry Malpass",
+  booktitle =    tecs,
+  title =        "{Test Strategy for TI's TMS320AV7100 Device}",
+  address =      "Washington, DC, USA",
+  pages =        "3.2--1--6",
+  month =        oct,
+  year =         "1998",
+}
+
+@InProceedings{Sehgal-dac03,
+  author =       "Anuja Sehgal and Vikram Iyengar and Mark D. Krasniewski and
+                 Krishnendu Chakrabarty",
+  booktitle =    dac,
+  title =        "{Test Cost Reduction for SOCs Using Virtual TAMs and Lagrange
+                 Multipliers}",
+  address =      "Anaheim, CA, USA",
+  pages =        "738--743",
+  month =        jun,
+  year =         "2003",
+}
+
+@InProceedings{Sehgal-date04,
+  author =       "Anuja Sehgal and Krishnendu Chakrabarty",
+  booktitle =    date,
+  title =        "{Efficient Modular Testing of SOCs Using Dual-Speed
+                 TAM Architectures}",
+  address =      "Paris, France",
+  pages =        "422--427",
+  month =        feb,
+  year =         "2004",
+}
+
+@InProceedings{Sehgal-itc04,
+  author =       "Anuja Sehgal and Sandeep Kumar Goel and Erik Jan Marinissen
+                 and Krishnendu Chakrabarty",
+  booktitle =    itc,
+  title =        "{IEEE P1500-Compliant Test Wrapper Design for Hierarchical Cores}",
+  address =      "Charlotte, NC, USA",
+  pages =        "1203--1212",
+  month =        oct,
+  year =         "2004",
+}
+
+@InProceedings{Sehgal-date06,
+  author =       "Anuja Sehgal and Sandeep Kumar Goel and Erik Jan Marinissen and Krishnendu Chakrabarty",
+  booktitle =    date,
+  title =        "{Hierarchy-Aware and Area-Efficient Test Infrastructure Design for Core-Based System Chips}",
+  address =      "Munich, Germany",
+  pages =        "285-290",
+  month =        mar,
+  year =         "2006",
+}
+
+@InProceedings{Sehgal-itc07,
+  author =       "Anuja Sehgal and Jeff Fitzgerald and Jeff Rearick",
+  booktitle =    itc,
+  title =        "{Test Cost Reduction for the AMD$^{\rm TM}$ Athlon Processor using
+                 Test Partitioning}",
+  address =      "Santa Clara, CA, USA",
+  month =        oct,
+  year =         "2007",
+}
+
+@InProceedings{Seuren-itc04,
+  author =       "Geert Seuren and Tom Waayers",
+  booktitle =    itc,
+  title =        "{Extending the Digital Core-Based Test Methodology
+                 to Support Mixed-Signal}",
+  address =      "Charlotte, NC, USA",
+  pages =        "281--289",
+  month =        oct,
+  year =         "2004",
+}
+
+@InProceedings{Seuring-vts00,
+  author =       "Markus Seuring and Krishnendu Chakrabarty",
+  booktitle =    vts,
+  title =        "{Space Compaction of Test Responses for IP Cores using
+                 Orthogonal Transmission Functions}",
+  address =      "Montreal, Canada",
+  pages =        "213--219",
+  month =        apr,
+  year =         "2000",
+}
+
+@InProceedings{Sinanoglu-itc04,
+  author =       "Ozgur Sinanoglu and Alex Orailoglu",
+  booktitle =    itc,
+  title =        "{Autonomous Yet Determistic Test of SOC Cores}",
+  address =      "Charlotte, NC, USA",
+  pages =        "1359--1368",
+  month =        oct,
+  year =         "2004",
+}
+
+@InProceedings{Sinanoglu-date08,
+  author =       "Ozgur Sinanoglu and Erik Jan Marinissen",
+  booktitle =    date,
+  title =        "{Analysis of the Test Data Volume Reduction Benefit of Modular
+                 SOC Testing}",
+  address =      "Munich, Germany",
+  pages =        "182--187",
+  month =        mar,
+  year =         "2008",
+}
+
+@Article{Smith-dt97,
+  author =       "Gary Smith",
+  title =        "{Test and System Level Integration}",
+  journal =      ieeedt,
+  volume =       "14",
+  number =       "4",
+  pages =        "19",
+  month =        dec,
+  year =         "1997",
+}
+
+@InProceedings{Song-ats02,
+  author =       "Jaehoon Song and Sungju Park",
+  booktitle =    ats,
+  title =        "{A Simple Wrapped Core Linking Module for SoC Test Access}",
+  address =      "Tamuning, Guam, USA",
+  pages =        "344--349",
+  month =        nov,
+  year =         "2002",
+}
+
+@InProceedings{Spadari-tecs99,
+  author =       "Maurizio Spadari and Ted Vaida and Pradipta Ghosh",
+  booktitle =    tecs,
+  title =        "{A Hierarchical Test Methodology Involving Multiple Embedded Cores Having Different DfT Mechanisms}",
+  address =      "Dana Point, CA, USA",
+  pages =        "1.4--1--8",
+  month =        apr,
+  year =         "1999",
+}
+
+@InProceedings{Srinivasa-tecs99,
+  author =       "B.S. Srinivasa and M.S. Rao and J. Abraham and R.A. Parekhji",
+  booktitle =    tecs,
+  title =        "{Design for Test in TMS320C27xx: Techniques for Achieving High Fault Coverage in Embedded Cores}",
+  address =      "Dana Point, CA, USA",
+  pages =        "3.2--1--11",
+  month =        apr,
+  year =         "1999",
+}
+
+@InProceedings{Stancic-itc02,
+  author =       "Milan Stancic and others",
+  booktitle =    itc,
+  title =        "{A New Test Generation Approach for Embedded Analogue Cores
+                 in SoC}",
+  address =      "Baltimore, MD, USA",
+  pages =        "861--869",
+  month =        oct,
+  year =         "2002",
+}
+
+@InProceedings{Su-itc01,
+  author =       "Chauchin Su and Wenliang Tseng",
+  booktitle =    itc,
+  title =        "{Configuration Free SoC Interconnect BIST Methodology}",
+  address =      "Baltimore, MD, USA",
+  pages =        "1033--1038",
+  month =        oct,
+  year =         "2001",
+}
+
+@InProceedings{Su-ddecs02,
+  author =       "Chih-Ping Su and Cheng-Wen Wu",
+  booktitle =    ddecs,
+  title =        "{Graph-Based Power-Constrained Test Scheduling for SOC}",
+  address =      "{Brno, Czech Republic}",
+  pages =        "61--68",
+  month =        apr,
+  year =         "2002",
+}
+
+@InProceedings{Sugihara-itc98,
+  author =       "Makoto Sugihara and Hiroshi Date and Hiroto Yasuura",
+  booktitle =    itc,
+  title =        "{A Novel Test Methodology for Core-Based System LSIs
+                 and a Testing Time Minimization Problem}",
+  address =      "Washington, DC, USA",
+  pages =        "465--472",
+  month =        oct,
+  year =         "1998",
+}
+
+@InProceedings{Taylor-tecs01,
+  author =       "Tony Taylor and others",
+  booktitle =    tecs,
+  title =        "{A Test Language for Core Based Test}",
+  address =      "Marina del Rey, CA, USA",
+  pages =        "3.1--1-8",
+  month =        may,
+  year =         "2001",
+}
+
+@InProceedings{Tragoudas-tecs99,
+  author =       "S. Tragoudas and M. Michael",
+  booktitle =    tecs,
+  title =        "{A Method for Path Delay Fault ATPG in Embedded Cores}",
+  address =      "Dana Point, CA, USA",
+  pages =        "2.1--1--8",
+  month =        apr,
+  year =         "1999",
+}
+
+@InProceedings{Touba-vts97,
+  author =       "Nur Touba and Bahram Pouya",
+  booktitle =    vts,
+  title =        "{Testing Embedded Cores Using Partial Isolation
+                 Rings}",
+  address =      "Monterey, CA, USA",
+  pages =        "10--16",
+  month =        apr,
+  year =         "1997",
+}
+
+@Article{Touba-dt97,
+  author =       "Nur Touba and Bahram Pouya",
+  title =        "{Using Partial Isolation Rings to Test Core-Based
+                 Designs}",
+  journal =      ieeedt,
+  volume =       "14",
+  number =       "4",
+  pages =        "52--59",
+  month =        dec,
+  year =         "1997",
+}
+
+@Article{Varma-isd97,
+  author =       "Prab Varma",
+  title =        "{Evolving Strategies for Testing Systems on Silicon}",
+  journal =      "Integrated System Design- Virtual Chip Design
+                 Supplement",
+  month =        sep,
+  year =         "1997",
+}
+
+@InProceedings{Varma-tecs97,
+  author =       "Prab Varma and Sandeep Bhatia",
+  booktitle =    tecs,
+  title =        "{A Structured Test Re-Use Methodology for Systems on
+                 Silicon}",
+  address =      "Washington, DC, USA",
+  pages =        "3.1--1--8",
+  month =        nov,
+  year =         "1997",
+}
+
+@InProceedings{Varma-itc98,
+  author =       "Prab Varma and Sandeep Bhatia",
+  booktitle =    itc,
+  title =        "{A Structured Test Re-Use Methodology for Core-Based
+                 System Chips}",
+  address =      "Washington, DC, USA",
+  pages =        "294--302",
+  month =        oct,
+  year =         "1998",
+}
+
+@InProceedings{Vermaak-etw03,
+  author =       "H.J. Vermaak and H.G. Kerkhoff",
+  booktitle =    etwdig,
+  title =        "{Enhanced P1500 Compliant Wrapper suitable for Delay Fault
+                 Testing of Embedded Cores}",
+  pages =        "257--262",
+  address =      "Maastricht, The Netherlands",
+  month =        may,
+  year =         "2003",
+}
+
+@InProceedings{Vermeulen-etw01,
+  author =       "Bart Vermeulen and Steven Oostdijk and Frank Bouwman",
+  booktitle =    etwdig,
+  title =        "{Test and Debug Strategy of a Nexperia$^{\rm TM}$ Digital
+                 Video Platform System Chips}",
+  address =      "Saltsjobaden, Sweden",
+  pages =        "129--138",
+  month =        may,
+  year =         "2001",
+}
+
+@InProceedings{Vermeulen-itc01,
+  author =       "Bart Vermeulen and Steven Oostdijk and Frank Bouwman",
+  booktitle =    itc,
+  title =        "{Test and Debug Strategy of the PNX8525 Nexperia$^{\rm TM}$
+                 Digital Video Platform System Chip}",
+  address =      "Baltimore, MD, USA",
+  pages =        "121--130",
+  month =        oct,
+  year =         "2001",
+}
+
+@InProceedings{Vermeulen-itc02,
+  author =       "Bart Vermeulen and Tom Waayers and Sjaak Bakker",
+  booktitle =    itc,
+  title =        "{IEEE 1149.1-Compliant Access Architecture for Multiple
+                 Core Debug on Digital System Chips}",
+  address =      "Baltimore, MD, USA",
+  pages =        "55--63",
+  month =        oct,
+  year =         "2002",
+}
+
+@InProceedings{Vermeulen-itc02ls,
+  author =       "Bart Vermeulen and Tom Waayers and Sandeep Kumar Goel",
+  booktitle =    itc,
+  title =        "{Core-Based Scan Architecture for Silicon Debug}",
+  address =      "Baltimore, MD, USA",
+  pages =        "638--647",
+  month =        oct,
+  year =         "2002",
+}
+
+@InProceedings{Voorakaranam-vts99,
+  author =       "Ramakrishna Voorakaranam and Abhijit Chatterjee",
+  booktitle =    vts,
+  title =        "{Hierarchical Test Generation for Analog Circuits Using Incremental Test Development}",
+  address =      "Dana Point, CA, USA",
+  pages =        "296--301",
+  month =        apr,
+  year =         "1999",
+}
+
+@InProceedings{Waayers-etw03,
+  author =       "Tom Waayers",
+  booktitle =    etwdig,
+  title =        "{An Improved Test Control Architecture for Core-Based System Chips}",
+  pages =        "333--338",
+  address =      "Maastricht, The Netherlands",
+  month =        may,
+  year =         "2003",
+}
+
+@InProceedings{Waayers-itc03,
+  author =       "Tom Waayers",
+  booktitle =    itc,
+  title =        "{An Improved Test Control Architecture and Test Control Expansion
+                 for Core-Based System Chips}",
+  address =      "Charlotte, NC, USA",
+  pages =        "1145--1154",
+  month =        sep,
+  year =         "2003",
+}
+
+@InProceedings{Waayers-ats05,
+  author =       "Tom Waayers and Erik Jan Marinissen and Maurice Lousberg",
+  booktitle =    ats,
+  title =        "{IEEE Std 1500 Compliant Infrastructure for Modular SOC Testing}",
+  address =      "Kolkata, India",
+  pages =        "450",
+  month =        dec,
+  year =         "2005",
+}
+
+@InProceedings{Waayers-itc05,
+  author =       "Tom Waayers and Richard Morren and Roberto Grandi",
+  booktitle =    itc,
+  title =        "{Definition of a Robust Modular SOC Test Architecture;
+                 Resurrection of the Single TAM Daisy-Chain}",
+  address =      "Austin, TX, USA",
+  month =        nov,
+  year =         "2005",
+}
+
+@InProceedings{Wahl-itc03,
+  author =       "Michael G. Wahl and others",
+  booktitle =    itc,
+  title =        "{The P1500 DFT Disclosure Document: A Standard to
+                 Communicate Mergeable Core DFT Data}",
+  address =      "Charlotte, NC, USA",
+  pages =        "998-1007",
+  month =        sep,
+  year =         "2003",
+}
+
+@InProceedings{Wang-ats02,
+  author =       "Chih-Wea Wang and others",
+  booktitle =    ats,
+  title =        "{Test Scheduling of BISTed Memory Cores for SOC}",
+  address =      "Tamuning, Guam, USA",
+  pages =        "356--361",
+  month =        nov,
+  year =         "2002",
+}
+
+@MastersThesis{Wijngaarden93,
+  author =       "Michael van Wijngaarden",
+  title =        "{Test Protocol Expansion: Models and Solution
+                 Approaches}",
+  school =       "Eindhoven University of Technology",
+  address =      "Eindhoven, The Netherlands",
+  month =        aug,
+  year =         "1993",
+}
+
+@InProceedings{Whetsel-itc97,
+  author =       "Lee Whetsel",
+  booktitle =    itc,
+  title =        "{An IEEE 1149.1 Based Test Access Architecture for ICs
+                 with Embedded Cores}",
+  address =      "Washington, DC, USA",
+  pages =        "69--78",
+  month =        nov,
+  year =         "1997",
+}
+
+@InProceedings{Whetsel-itc98,
+  author =       "Lee Whetsel",
+  booktitle =    itc,
+  title =        "{Core Test Connectivity, Communication, \& Control}",
+  address =      "Washington, DC, USA",
+  pages =        "303--312",
+  month =        oct,
+  year =         "1998",
+}
+
+@InProceedings{Whetsel-tecs98,
+  author =       "Lee Whetsel",
+  booktitle =    tecs,
+  title =        "{Addressable Test Ports - An Approach to Testing
+                 Embedded Cores}",
+  address =      "Washington, DC, USA",
+  pages =        "1.1--1--8",
+  month =        oct,
+  year =         "1998",
+}
+
+@InProceedings{Whetsel-itc99,
+  author =       "Lee Whetsel",
+  booktitle =    itc,
+  title =        "{Addressable Test Ports: An Approach to Testing Embedded
+                 Cores}",
+  pages =        "1055--1064",
+  address =      "Atlantic City, NJ, USA",
+  month =        sep,
+  year =         "1999",
+}
+
+@InProceedings{Whetsel-tecs01,
+  author =       "Lee Whetsel and Mike Ricchetti",
+  booktitle =    tecs,
+  title =        "{Tapping into IEEE P1500 Domains}",
+  address =      "Marina del Rey, CA, USA",
+  pages =        "3.2--1-7",
+  month =        may,
+  year =         "2001",
+}
+
+@InProceedings{Xu-date03,
+  author =       "Qiang Xu and Nicola Nicolici",
+  booktitle =    date,
+  title =        "{Delay Fault Testing of Core-Based Systems-on-a-Chip}",
+  address =      "Munich, Germany",
+  pages =        "744--749",
+  month =        mar,
+  year =         "2003",
+}
+
+@InProceedings{Xu-itc03,
+  author =       "Qiang Xu and Nicola Nicolici",
+  booktitle =    itc,
+  title =        "{On Reducing Wrapper Boundary Register Cells in Modular
+                 SOC Testing}",
+  address =      "Charlotte, NC, USA",
+  pages =        "622--631",
+  month =        sep,
+  year =         "2003",
+}
+
+@InProceedings{Xu-date04,
+  author =       "Qiang Xu and Nicola Nicolici",
+  booktitle =    date,
+  title =        "{Wrapper Design for Testing IP Cores with Multiple
+                 Clock Domains}",
+  address =      "Paris, France",
+  pages =        "416--421",
+  month =        feb,
+  year =         "2004",
+}
+
+@InProceedings{Xu-itc04,
+  author =       "Qiang Xu and Nicola Nicolici",
+  booktitle =    itc,
+  title =        "{Time/Area Tradeoffs in Testing Hierarchical SOCs with
+                 Hard Mega-Cores}",
+  address =      "Charlotte, NC, USA",
+  pages =        "1196--1202",
+  month =        oct,
+  year =         "2004",
+}
+
+@Article{Xu-iee05,
+  author =       "Qiang Xu and Nicola Nicolici",
+  title =        "{Resource-Constrained System-on-a-Chip Test: A Survey}",
+  journal =      ieepcdt,
+  volume =       152,
+  number =       "4/5",
+  publisher =    iee,
+  pages =        "67--81",
+  month =        jan,
+  year =         "2005",
+}
+
+@InProceedings{Yoneda-ats01,
+  author =       "Tomokazu Yoneda and Hideo Fujiwara",
+  booktitle =    ats,
+  title =        "{A DfT Method for Core-Based Systems-on-a-Chip based on
+                 Consective Testability}",
+  address =      "Kyoto, Japan",
+  pages =        "193--198",
+  month =        nov,
+  year =         "2001",
+}
+
+@Article{Yoneda-jetta02,
+  author =       "Tomokazu Yoneda and Hideo Fujiwara",
+  title =        "{Design for Consecutive Testability of System-on-a-Chip
+                 with Built-In Self Testable Cores}",
+  journal =      jetta,
+  volume =       18,
+  number =       "4/5",
+  publisher =    kap,
+  pages =        "487--501",
+  month =        aug,
+  year =         "2002",
+}
+
+@InProceedings{Yoneda-jettabook02,
+  author =       "Tomokazu Yoneda and Hideo Fujiwara",
+  title =        "{Design for Consecutive Testability of System-on-a-Chip
+                 with Built-In Self Testable Cores}",
+  editor =       "Krishnendu Chakrabarty",
+  booktitle =    "SOC (System-on-a-Chip) Testing for Plug and Play Test Automation",
+  series =       fet,
+  volume =       21,
+  publisher =    kap,
+  pages =        "123--137",
+  month =        sep,
+  year =         "2002",
+}
+
+@InProceedings{Yoneda-vts03,
+  author =       "Tomokazu Yoneda and Hideo Fujiwara",
+  booktitle =    vts,
+  title =        "{Design for Consecutive Transparency of Cores in System-on-a-Chip}",
+  address =      "Napa, CA, USA",
+  pages =        "287--292",
+  month =        apr,
+  year =         "2003",
+}
+
+@InProceedings{Yoneda-itc03,
+  author =       "Tomokazu Yoneda and Tetsuo Uchiyama and Hideo Fujiwara",
+  booktitle =    itc,
+  title =        "{Area and Time Co-Optimization for System-on-a-Chip based on
+                 Consecutive Testability}",
+  address =      "Charlotte, NC",
+  pages =        "415--422",
+  month =        sep,
+  year =         "2003",
+}
+
+@InProceedings{Yoneda-date07,
+  author =       "Tomokazu Yoneda and Masahiro Imanishi and Hideo Fujiwara",
+  booktitle =    date,
+  title =        "{An SOC Test Scheduling Algorithm using Reconfigurable Union Wrappers}",
+  address =      "Nice, France",
+  pages =        "231--236",
+  month =        apr,
+  year =         "2007",
+}
+
+@InProceedings{Zivkovic-etw99,
+  author =       "Vladimir Zivkovic and Ronald Tangelder and Hans Kerkhoff",
+  booktitle =    etw,
+  title =        "{Test-Pattern Generation and Fault Coverage Determination
+                 of Embedded Cores}",
+  address =      "Konstanz, Germany",
+  month =        may,
+  year =         "1999",
+}
+
+@InProceedings{Zivkovic-mic00,
+  author =       "Vladimir Zivkovic and Ronald Tangelder and Hans Kerkhoff",
+  booktitle =    "International Conference on Microelectronics",
+  title =        "{Computer-Aided Test Flow in Core Based Design}",
+  address =      "Nis, Yugoslavia",
+  pages =        "715--718",
+  month =        may,
+  year =         "2000",
+}
+
+@Article{Zivkovic-elsv00,
+  author =       "Vladimir Zivkovic and Ronald Tangelder and Hans Kerkhoff",
+  title =        "{Computer-Aided Test Flow in Core Based Design}",
+  journal =      "Elsevier Journal of Microelectronics",
+  volume =       31,
+  number =       "11/12",
+  publisher =    "Elsevier",
+  pages =        "999--1008",
+  month =        nov,
+  year =         "2000",
+}
+
+@Article{Zhao-tcad05,
+  author =       "Daniella Zhao and S. Upadhyaya",
+  title =        "{Dynamically Partitioned Test Scheduling with Adaptive TAM Configuration for Power-Constrained SoC Testing}",
+  journal =      ieeetcad,
+  volume =       24,
+  number =       6,
+  publisher =    ieee,
+  pages =        "956--965",
+  month =        jun,
+  year =         "2005",
+}
+
+@InProceedings{Zorian-vts93,
+  author =       "Yervant Zorian",
+  booktitle =    vts,
+  title =        "{A Distributed BIST Control Scheme for Complex VLSI
+                 Devices}",
+  address =      "Princeton, NJ, USA",
+  pages =        "6--11",
+  month =        apr,
+  year =         "1993",
+}
+
+@InProceedings{Zorian-itc97,
+  author =       "Yervant Zorian",
+  booktitle =    itc,
+  title =        "{Test Requirements for Embedded Core-Based Systems and
+                 IEEE P1500}",
+  address =      "Washington, DC, USA",
+  pages =        "191--199",
+  month =        nov,
+  year =         "1997",
+}
+
+@InProceedings{Zorian-tecs97,
+  author =       "Yervant Zorian and Dwayne Burek and R.\ Chandramouli",
+  booktitle =    tecs,
+  title =        "{A 2-Step Strategy tackles System-on-a-Chip Test}",
+  address =      "Washington, DC, USA",
+  pages =        "3.2--1--5",
+  month =        nov,
+  year =         "1997",
+}
+
+@InProceedings{Zorian-itc98,
+  author =       "Yervant Zorian and Erik Jan Marinissen and Sujit Dey",
+  booktitle =    itc,
+  title =        "{Testing Embedded-Core Based System Chips}",
+  address =      "Washington, DC, USA",
+  pages =        "130--143",
+  month =        oct,
+  year =         "1998",
+}
+
+@Article{Zorian-comp99,
+  author =       "Yervant Zorian and Erik Jan Marinissen and Sujit Dey",
+  title =        "{Testing Embedded-Core-Based System Chips}",
+  journal =      ieeecomp,
+  volume =       "32",
+  number =       "6",
+  pages =        "52--60",
+  month =        jun,
+  year =         "1999",
+}
+
+@InProceedings{Zorian-dac00,
+  author =       "Yervant Zorian and Erik Jan Marinissen",
+  booktitle =    dac,
+  title =        "{System Chip Test: How Will It Impact Your Design?}",
+  publisher =    acm,
+  address =      "Los Angeles, CA, USA",
+  pages =        "136--141",
+  month =        jun,
+  year =         "2000",
+}
+
+@InProceedings{Zorian-vts01,
+  author =       "Yervant Zorian and others",
+  booktitle =    vts,
+  title =        "{IP and Automation to Support IEEE P1500}",
+  address =      "Marina del Rey, CA, USA",
+  pages =        "411",
+  month =        may,
+  year =         "2000",
+}
+
+@InProceedings{Zou-vts03,
+  author =       "Wei Zou and Sudhakar M. Reddy and Irith Pomeranz and Yu Huang",
+  booktitle =    vts,
+  title =        "{SOC Test Scheduling Using Simulated Annealing}",
+  address =      "Napa, CA, USA",
+  pages =        "325--330",
+  month =        apr,
+  year =         "2003",
+}
+
+

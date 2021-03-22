@@ -1,0 +1,2449 @@
+%%% -*-BibTeX-*-
+%%% ====================================================================
+%%%  BibTeX-file{
+%%%     author          = "Nelson H. F. Beebe",
+%%%     version         = "3.02",
+%%%     date            = "02 January 2008",
+%%%     time            = "14:33:57 MST",
+%%%     filename        = "cacm1950.bib",
+%%%     address         = "University of Utah
+%%%                        Department of Mathematics, 110 LCB
+%%%                        155 S 1400 E RM 233
+%%%                        Salt Lake City, UT 84112-0090
+%%%                        USA",
+%%%     telephone       = "+1 801 581 5254",
+%%%     FAX             = "+1 801 581 4148",
+%%%     checksum        = "37006 2449 8222 88770",
+%%%     email           = "beebe at math.utah.edu, beebe at acm.org,
+%%%                        beebe at computer.org (Internet)",
+%%%     codetable       = "ISO/ASCII",
+%%%     keywords        = "bibliography, CACM, Communications of the
+%%%                        ACM",
+%%%     license         = "public domain",
+%%%     supported       = "yes",
+%%%     docstring       = "This is a COMPLETE bibliography of
+%%%                        Communications of the ACM (CODEN CACMA2, ISSN
+%%%                        0001-0782), covering 1958--1959.
+%%%
+%%%                        At version 3.02, the year coverage looked
+%%%                        like this:
+%%%
+%%%                             1958 (  39)    1959 (  71)    1960 (   4)
+%%%
+%%%                             Article:        114
+%%%
+%%%                             Total entries:  114
+%%%
+%%%                        The size of the original cacm.bib file
+%%%                        covering 1958--1996 became too large (about
+%%%                        4000 entries) for BibTeX and TeX to handle,
+%%%                        so at version 1.44, it was split into
+%%%                        cacm1950.bib, cacm1960.bib, cacm1970.bib,
+%%%                        cacm1980.bib, and cacm1990.bib, each covering
+%%%                        the decade starting with the year embedded in
+%%%                        the filename.  Version numbers for these
+%%%                        files begin at 2.00.
+%%%
+%%%                        Volumes from the 1990s average more than 200
+%%%                        articles yearly, so a complete bibliography
+%%%                        for this journal could contain more than 6000
+%%%                        entries from 1958 to 2000.
+%%%
+%%%                        These bibliographies also include ACM
+%%%                        Algorithms 1--492.  For Algorithms 493--686,
+%%%                        including Algorithm 568, published in ACM
+%%%                        Transactions on Programming Languages and
+%%%                        Systems (TOPLAS), see the companion
+%%%                        bibliographies, toms.bib and toplas.bib.
+%%%
+%%%                        All published Remarks and Corrigenda are
+%%%                        cross-referenced in both directions, so
+%%%                        that citing a paper will automatically
+%%%                        generate citations for those Remarks and
+%%%                        Corrigenda.  Cross-referenced entries are
+%%%                        duplicated in cacm19*.bib and toms.bib, so
+%%%                        that each is completely self-contained.
+%%%
+%%%                        Source code for ACM Algorithms from 380
+%%%                        onwards, with some omissions, is available
+%%%                        via the Netlib service at
+%%%                        http://netlib.ornl.gov/, and
+%%%                        ftp://netlib.bell-labs.com/netlib/toms.
+%%%
+%%%                        There is a World Wide Web search facility
+%%%                        for articles published in this journal from
+%%%                        1959 to 1979 at
+%%%                        http://ciir.cs.umass.edu/cgi-bin/web_query_form/public/cacm2.1.
+%%%
+%%%                        The initial draft of entries for 1981 -- 1990
+%%%                        was extracted from the ACM Computing Archive
+%%%                        CD ROM for the 1980s, with manual corrections
+%%%                        and additions.  Additions were then made from
+%%%                        all of the bibliographies in the TeX User
+%%%                        Group collection, from bibliographies in the
+%%%                        author's personal files, from tables of
+%%%                        contents information at
+%%%                        http://www.acm.org/pubs/cacm/, from
+%%%                        Zentralblatt fur Mathematik Mathematics
+%%%                        Abstracts at
+%%%                        http://www.emis.de/cgi-bin/MATH/, from
+%%%                        bibliographies at Internet host
+%%%                        netlib.bell-labs.com, and from the computer science
+%%%                        bibliography collection on ftp.ira.uka.de in
+%%%                        /pub/bibliography to which many people of
+%%%                        have contributed.  The snapshot of this
+%%%                        collection was taken on 5-May-1994, and it
+%%%                        consists of 441 BibTeX files, 2,672,675
+%%%                        lines, 205,289 entries, and 6,375
+%%%                        <at>String{} abbreviations, occupying 94.8MB
+%%%                        of disk space.
+%%%
+%%%                        Numerous errors in the sources noted above
+%%%                        have been corrected.   Spelling has been
+%%%                        verified with the UNIX spell and GNU ispell
+%%%                        programs using the exception dictionary
+%%%                        stored in the companion file with extension
+%%%                        .sok.
+%%%
+%%%                        BibTeX citation tags are uniformly chosen
+%%%                        as name:year:abbrev, where name is the
+%%%                        family name of the first author or editor,
+%%%                        year is a 4-digit number, and abbrev is a
+%%%                        3-letter condensation of important title
+%%%                        words. Citation tags were automatically
+%%%                        generated by software developed for the
+%%%                        BibNet Project.
+%%%
+%%%                        In this bibliography, entries are sorted in
+%%%                        publication order within each journal,
+%%%                        using bibsort -byvolume.
+%%%
+%%%                        The checksum field above contains a CRC-16
+%%%                        checksum as the first value, followed by the
+%%%                        equivalent of the standard UNIX wc (word
+%%%                        count) utility output of lines, words, and
+%%%                        characters.  This is produced by Robert
+%%%                        Solovay's checksum utility.",
+%%%  }
+%%% ====================================================================
+
+@Preamble{
+  "\input bibnames.sty " #
+  "\input path.sty " #
+  "\def \TM {${}^{\sc TM}$} " #
+  "\hyphenation{
+                al-pha-mer-ic
+                Balz-er
+                Blom-quist
+                Bo-ta-fo-go
+                Bran-din
+                Brans-comb
+                Bu-tera
+                Chris-tina
+                Christ-o-fi-des
+                Col-lins
+                Cor-dell
+                data-base
+                econ-omies
+                Fletch-er
+                flow-chart
+                flow-charts
+                Fry-styk
+                ge-dank-en
+                Gar-fink-el
+                Ge-ha-ni
+                Glush-ko
+                Goud-reau
+                Gua-dan-go
+                Hari-di
+                Haw-thorn
+                Hem-men-ding-er
+                Hor-o-witz
+                Hour-vitz
+                Hirsch-berg
+                Ike-da
+                Ka-chi-tvi-chyan-u-kul
+                Kat-ze-nel-son
+                Kitz-miller
+                Ko-ba-yashi
+                Le-Me-tay-er
+                Ken-ne-dy
+                Law-rence
+                Mac-kay
+                Mai-net-ti
+                Mar-sa-glia
+                Max-well
+                Mer-ner
+                Mo-ran-di
+                Na-ray-an
+                New-ell
+                Nich-ols
+                para-digm
+                pat-ent-ed
+                Phi-lo-kyp-rou
+                Prep-a-ra-ta
+                pseu-do-chain-ing
+                QUIK-SCRIPT
+                Rad-e-mach-er
+                re-eval-u-a-tion
+                re-wind
+                Ros-witha
+                Schwach-heim
+                Schob-bens
+                Schon-berg
+                Sho-sha-ni
+                Si-tha-ra-ma
+                Skwa-rec-ki
+                Streck-er
+                Strin-gi-ni
+                Tes-ler
+                Te-zu-ka
+                Teu-ho-la
+                Till-quist
+                Town-send
+                Tsi-chri-tzis
+                Tur-ski
+                Vuille-min
+                Za-bo-row-ski
+                Za-mora
+  }"}
+
+%%% ====================================================================
+%%% Acknowledgement abbreviations:
+
+@String{ack-nhfb = "Nelson H. F. Beebe,
+                    University of Utah,
+                    Department of Mathematics, 110 LCB,
+                    155 S 1400 E RM 233,
+                    Salt Lake City, UT 84112-0090, USA,
+                    Tel: +1 801 581 5254,
+                    FAX: +1 801 581 4148,
+                    e-mail: \path|beebe@math.utah.edu|,
+                            \path|beebe@acm.org|,
+                            \path|beebe@computer.org| (Internet),
+                    URL: \path|http://www.math.utah.edu/~beebe/|"}
+
+@String{ack-nj =  "Norbert Juffa,
+                  2445 Mission College Blvd.
+                  Santa Clara, CA 95054
+                  USA
+                  email: \path=norbert@iit.com="}
+
+%%% ====================================================================
+%%% Journal abbreviations:
+
+@String{j-CACM                  = "Communications of the ACM"}
+
+%%% ====================================================================
+%%% Bibliography entries (cross-references in notes necessitate
+%%% inclusion of a few additional entries published elsewhere):
+
+@Article{Perlis:1958:A,
+  author =       "Alan J. Perlis",
+  title =        "Announcement",
+  journal =      j-CACM,
+  volume =       "1",
+  number =       "1",
+  pages =        "1--1",
+  month =        jan,
+  year =         "1958",
+  CODEN =        "CACMA2",
+  ISSN =         "0001-0782",
+  bibdate =      "Wed Jul 14 15:48:20 MDT 2004",
+  bibsource =    "http://portal.acm.org/",
+  acknowledgement = ack-nhfb,
+}
+
+@Article{Bemer:1958:MMS,
+  author =       "Robert W. Bemer",
+  title =        "A Machine Method for Square-Root Computation",
+  journal =      j-CACM,
+  volume =       "1",
+  number =       "1",
+  pages =        "6--7",
+  month =        jan,
+  year =         "1958",
+  CODEN =        "CACMA2",
+  ISSN =         "0001-0782",
+  bibdate =      "Wed Jul 14 15:48:20 MDT 2004",
+  bibsource =    "ftp://garbo.uwasa.fi/pc/doc-soft/fpbibl18.zip;
+                 http://dblp.uni-trier.de/db/journals/cacm/cacm1.html#Bemer58;
+                 http://portal.acm.org/",
+  acknowledgement = ack-nhfb,
+  oldlabel =     "Bemer58",
+  XMLdata =      "ftp://ftp.informatik.uni-trier.de/pub/users/Ley/bib/records.tar.gz#journals/cacm/Bemer58",
+}
+
+@Article{Wilf:1958:TAC,
+  author =       "Herbert S. Wilf",
+  title =        "Tables for Automatic Computation",
+  journal =      j-CACM,
+  volume =       "1",
+  number =       "1",
+  pages =        "8--11",
+  month =        jan,
+  year =         "1958",
+  CODEN =        "CACMA2",
+  ISSN =         "0001-0782",
+  bibdate =      "Wed Jul 14 15:48:20 MDT 2004",
+  bibsource =    "http://portal.acm.org/;
+                 http://dblp.uni-trier.de/db/journals/cacm/cacm1.html#Wilf58",
+  acknowledgement = ack-nhfb,
+  oldlabel =     "Wilf58",
+  XMLdata =      "ftp://ftp.informatik.uni-trier.de/pub/users/Ley/bib/records.tar.gz#journals/cacm/Wilf58",
+}
+
+@Article{Kenny:1958:PBC,
+  author =       "B. C. Kenny and J. A. Hunter",
+  title =        "A Programmed Binary Counter for the {IBM Type 650}
+                 Calculator",
+  journal =      j-CACM,
+  volume =       "1",
+  number =       "1",
+  pages =        "11--12",
+  month =        jan,
+  year =         "1958",
+  CODEN =        "CACMA2",
+  ISSN =         "0001-0782",
+  bibdate =      "Wed Jul 14 15:48:20 MDT 2004",
+  bibsource =    "http://portal.acm.org/;
+                 http://dblp.uni-trier.de/db/journals/cacm/cacm1.html#KennyH58",
+  acknowledgement = ack-nhfb,
+  oldlabel =     "KennyH58",
+  XMLdata =      "ftp://ftp.informatik.uni-trier.de/pub/users/Ley/bib/records.tar.gz#journals/cacm/KennyH58",
+}
+
+@Article{Halpern:1958:VWT,
+  author =       "Mark Halpern",
+  title =        "Variable-Width Tables with Binary-Search Facility",
+  journal =      j-CACM,
+  volume =       "1",
+  number =       "2",
+  pages =        "1--3",
+  month =        feb,
+  year =         "1958",
+  CODEN =        "CACMA2",
+  ISSN =         "0001-0782",
+  bibdate =      "Wed Jul 14 15:48:20 MDT 2004",
+  bibsource =    "http://portal.acm.org/;
+                 http://dblp.uni-trier.de/db/journals/cacm/cacm1.html#Halpern58",
+  acknowledgement = ack-nhfb,
+  oldlabel =     "Halpern58",
+  XMLdata =      "ftp://ftp.informatik.uni-trier.de/pub/users/Ley/bib/records.tar.gz#journals/cacm/Halpern58",
+}
+
+@Article{Grumette:1958:ICN,
+  author =       "Murray Grumette",
+  title =        "{IBM 704} Code-Nundrums",
+  journal =      j-CACM,
+  volume =       "1",
+  number =       "3",
+  pages =        "3--4",
+  month =        mar,
+  year =         "1958",
+  CODEN =        "CACMA2",
+  ISSN =         "0001-0782",
+  bibdate =      "Wed Jul 14 15:48:20 MDT 2004",
+  bibsource =    "http://portal.acm.org/;
+                 http://dblp.uni-trier.de/db/journals/cacm/cacm1.html#Grumette58",
+  acknowledgement = ack-nhfb,
+  oldlabel =     "Grumette58",
+  XMLdata =      "ftp://ftp.informatik.uni-trier.de/pub/users/Ley/bib/records.tar.gz#journals/cacm/Grumette58",
+}
+
+@Article{Wolpe:1958:AAL,
+  author =       "Harold Wolpe",
+  title =        "Algorithm for Analyzing Logical Statements to Produce
+                 a Truth Function Table",
+  journal =      j-CACM,
+  volume =       "1",
+  number =       "3",
+  pages =        "4--13",
+  month =        mar,
+  year =         "1958",
+  CODEN =        "CACMA2",
+  ISSN =         "0001-0782",
+  bibdate =      "Wed Jul 14 15:48:20 MDT 2004",
+  bibsource =    "http://portal.acm.org/;
+                 http://dblp.uni-trier.de/db/journals/cacm/cacm1.html#Wolpe58",
+  acknowledgement = ack-nhfb,
+  oldlabel =     "Wolpe58",
+  XMLdata =      "ftp://ftp.informatik.uni-trier.de/pub/users/Ley/bib/records.tar.gz#journals/cacm/Wolpe58",
+}
+
+@Article{Weiss:1958:LE,
+  author =       "E. A. Weiss and Henry P. T. Corley",
+  title =        "Letters to the editor",
+  journal =      j-CACM,
+  volume =       "1",
+  number =       "4",
+  pages =        "5--5",
+  month =        apr,
+  year =         "1958",
+  CODEN =        "CACMA2",
+  ISSN =         "0001-0782",
+  bibdate =      "Wed Jul 14 15:48:20 MDT 2004",
+  bibsource =    "http://portal.acm.org/",
+  acknowledgement = ack-nhfb,
+}
+
+@Article{Selden:1958:NA,
+  author =       "W. Selden",
+  title =        "Need for an Algorithm",
+  journal =      j-CACM,
+  volume =       "1",
+  number =       "4",
+  pages =        "7--9",
+  month =        apr,
+  year =         "1958",
+  CODEN =        "CACMA2",
+  ISSN =         "0001-0782",
+  bibdate =      "Wed Jul 14 15:48:20 MDT 2004",
+  bibsource =    "http://portal.acm.org/;
+                 http://dblp.uni-trier.de/db/journals/cacm/cacm1.html#Selden58",
+  acknowledgement = ack-nhfb,
+  oldlabel =     "Selden58",
+  XMLdata =      "ftp://ftp.informatik.uni-trier.de/pub/users/Ley/bib/records.tar.gz#journals/cacm/Selden58",
+}
+
+@Article{Corley:1958:RMP,
+  author =       "Henry P. T. Corley",
+  title =        "Request for Methods or Programs",
+  journal =      j-CACM,
+  volume =       "1",
+  number =       "4",
+  pages =        "9--11",
+  month =        apr,
+  year =         "1958",
+  CODEN =        "CACMA2",
+  ISSN =         "0001-0782",
+  bibdate =      "Wed Jul 14 15:48:20 MDT 2004",
+  bibsource =    "http://portal.acm.org/;
+                 http://dblp.uni-trier.de/db/journals/cacm/cacm1.html#Corley58",
+  acknowledgement = ack-nhfb,
+  keywords =     "applications of probability theory and statistics",
+  oldlabel =     "Corley58",
+  XMLdata =      "ftp://ftp.informatik.uni-trier.de/pub/users/Ley/bib/records.tar.gz#journals/cacm/Corley58",
+}
+
+@Article{Randels:1958:NEB,
+  author =       "James B. Randels and Roy F. Reeves",
+  title =        "Note On Empirical Bounds For Generating {Bessel}
+                 Functions",
+  journal =      j-CACM,
+  volume =       "1",
+  number =       "5",
+  pages =        "3--5",
+  month =        may,
+  year =         "1958",
+  CODEN =        "CACMA2",
+  ISSN =         "0001-0782",
+  bibdate =      "Wed Jul 14 15:48:21 MDT 2004",
+  bibsource =    "http://portal.acm.org/;
+                 http://dblp.uni-trier.de/db/journals/cacm/cacm1.html#RandelsR58",
+  acknowledgement = ack-nhfb,
+  oldlabel =     "RandelsR58",
+  XMLdata =      "ftp://ftp.informatik.uni-trier.de/pub/users/Ley/bib/records.tar.gz#journals/cacm/RandelsR58",
+}
+
+@Article{Bemer:1958:SMC,
+  author =       "Robert W. Bemer",
+  title =        "A Subroutine Method for Calculating Logarithms",
+  journal =      j-CACM,
+  volume =       "1",
+  number =       "5",
+  pages =        "5--7",
+  month =        may,
+  year =         "1958",
+  CODEN =        "CACMA2",
+  ISSN =         "0001-0782",
+  bibdate =      "Wed Jul 14 15:48:21 MDT 2004",
+  bibsource =    "http://portal.acm.org/;
+                 ftp://garbo.uwasa.fi/pc/doc-soft/fpbibl18.zip;
+                 http://dblp.uni-trier.de/db/journals/cacm/cacm1.html#Bemer58a",
+  acknowledgement = ack-nhfb,
+  oldlabel =     "Bemer58a",
+  XMLdata =      "ftp://ftp.informatik.uni-trier.de/pub/users/Ley/bib/records.tar.gz#journals/cacm/Bemer58a",
+}
+
+@Article{Holt:1958:GPP,
+  author =       "Anatol W. Holt",
+  title =        "General Purpose Programming Systems",
+  journal =      j-CACM,
+  volume =       "1",
+  number =       "5",
+  pages =        "7--9",
+  month =        may,
+  year =         "1958",
+  CODEN =        "CACMA2",
+  ISSN =         "0001-0782",
+  bibdate =      "Wed Jul 14 15:48:21 MDT 2004",
+  bibsource =    "http://portal.acm.org/;
+                 http://dblp.uni-trier.de/db/journals/cacm/cacm1.html#Holt58",
+  acknowledgement = ack-nhfb,
+  oldlabel =     "Holt58",
+  XMLdata =      "ftp://ftp.informatik.uni-trier.de/pub/users/Ley/bib/records.tar.gz#journals/cacm/Holt58",
+}
+
+@Article{Sisson:1958:IDR,
+  author =       "Roger L. Sisson",
+  title =        "An Improved Decimal Redundancy Check",
+  journal =      j-CACM,
+  volume =       "1",
+  number =       "5",
+  pages =        "10--12",
+  month =        may,
+  year =         "1958",
+  CODEN =        "CACMA2",
+  ISSN =         "0001-0782",
+  bibdate =      "Wed Jul 14 15:48:21 MDT 2004",
+  bibsource =    "http://portal.acm.org/;
+                 http://dblp.uni-trier.de/db/journals/cacm/cacm1.html#Sisson58",
+  abstract =     "As more emphasis is placed on improving the accuracy
+                 of data fed into automatic computing systems, more
+                 emphasis will be placed on redundancy checking of
+                 predictable fields within the input. Two systems (at
+                 least) of checking a field of decimal digits have been
+                 proposed. In both of these it is assumed that the field
+                 to be checked is all numeric and that the redundancy
+                 must be of only one digit.",
+  acknowledgement = ack-nhfb,
+  oldlabel =     "Sisson58",
+  XMLdata =      "ftp://ftp.informatik.uni-trier.de/pub/users/Ley/bib/records.tar.gz#journals/cacm/Sisson58",
+}
+
+@Article{Kautz:1958:BTF,
+  author =       "William H. Kautz",
+  title =        "Binary and Truth-Function Operations on a Decimal
+                 Computer with an Extract Command",
+  journal =      j-CACM,
+  volume =       "1",
+  number =       "5",
+  pages =        "12--13",
+  month =        may,
+  year =         "1958",
+  CODEN =        "CACMA2",
+  ISSN =         "0001-0782",
+  bibdate =      "Wed Jul 14 15:48:21 MDT 2004",
+  bibsource =    "http://portal.acm.org/;
+                 http://dblp.uni-trier.de/db/journals/cacm/cacm1.html#Kautz58",
+  acknowledgement = ack-nhfb,
+  oldlabel =     "Kautz58",
+  XMLdata =      "ftp://ftp.informatik.uni-trier.de/pub/users/Ley/bib/records.tar.gz#journals/cacm/Kautz58",
+}
+
+@Article{Morris:1958:UAD,
+  author =       "E. F. Morris and T. E. Wohr",
+  title =        "Unusual Applications Department --- Automatic
+                 Implementation of Computer Logic",
+  journal =      j-CACM,
+  volume =       "1",
+  number =       "5",
+  pages =        "14--20",
+  month =        may,
+  year =         "1958",
+  CODEN =        "CACMA2",
+  ISSN =         "0001-0782",
+  bibdate =      "Mon Jan 22 07:06:12 MST 2001",
+  bibsource =    "http://dblp.uni-trier.de/db/journals/cacm/cacm1.html#MorrisW58;
+                 http://portal.acm.org/",
+  oldlabel =     "MorrisW58",
+  XMLdata =      "ftp://ftp.informatik.uni-trier.de/pub/users/Ley/bib/records.tar.gz#journals/cacm/MorrisW58",
+}
+
+@Article{Verzuh:1958:LE,
+  author =       "F. M. Verzuh and Charles C. Holt",
+  title =        "Letters to the editor",
+  journal =      j-CACM,
+  volume =       "1",
+  number =       "6",
+  pages =        "3--3",
+  month =        jun,
+  year =         "1958",
+  CODEN =        "CACMA2",
+  ISSN =         "0001-0782",
+  bibdate =      "Wed Jul 14 15:48:21 MDT 2004",
+  bibsource =    "http://portal.acm.org/",
+  acknowledgement = ack-nhfb,
+}
+
+@Article{Voorhees:1958:AFF,
+  author =       "Edward A. Voorhees",
+  title =        "Algebraic Formulation of Flow Diagrams",
+  journal =      j-CACM,
+  volume =       "1",
+  number =       "6",
+  pages =        "4--8",
+  month =        jun,
+  year =         "1958",
+  CODEN =        "CACMA2",
+  ISSN =         "0001-0782",
+  bibdate =      "Wed Jul 14 15:48:21 MDT 2004",
+  bibsource =    "http://portal.acm.org/;
+                 http://dblp.uni-trier.de/db/journals/cacm/cacm1.html#Voorhees58",
+  acknowledgement = ack-nhfb,
+  oldlabel =     "Voorhees58",
+  XMLdata =      "ftp://ftp.informatik.uni-trier.de/pub/users/Ley/bib/records.tar.gz#journals/cacm/Voorhees58",
+}
+
+@Article{Wegstein:1958:ACI,
+  author =       "J. H. Wegstein",
+  title =        "Accelerating Convergence of Iterative Processes",
+  journal =      j-CACM,
+  volume =       "1",
+  number =       "6",
+  pages =        "9--13",
+  month =        jun,
+  year =         "1958",
+  CODEN =        "CACMA2",
+  ISSN =         "0001-0782",
+  bibdate =      "Wed Jul 14 15:48:21 MDT 2004",
+  bibsource =    "http://portal.acm.org/;
+                 http://dblp.uni-trier.de/db/journals/cacm/cacm1.html#Wegstein58",
+  acknowledgement = ack-nhfb,
+  oldlabel =     "Wegstein58",
+  XMLdata =      "ftp://ftp.informatik.uni-trier.de/pub/users/Ley/bib/records.tar.gz#journals/cacm/Wegstein58",
+}
+
+@Article{Correll:1958:LE,
+  author =       "Quentin Correll and Otto Matty Khodr and Alexander
+                 {Vanderburgh, Jr.}",
+  title =        "Letters to the editor",
+  journal =      j-CACM,
+  volume =       "1",
+  number =       "7",
+  pages =        "2--3",
+  month =        jul,
+  year =         "1958",
+  CODEN =        "CACMA2",
+  ISSN =         "0001-0782",
+  bibdate =      "Wed Jul 14 15:48:21 MDT 2004",
+  bibsource =    "http://portal.acm.org/",
+  acknowledgement = ack-nhfb,
+}
+
+@Article{Vanderburgh:1958:LKT,
+  author =       "A. Vanderburgh",
+  title =        "The {Lincoln Keyboard}: a typewriter keyboard designed
+                 for computer input flexibility",
+  journal =      j-CACM,
+  volume =       "1",
+  number =       "7",
+  pages =        "4--4",
+  month =        jul,
+  year =         "1958",
+  CODEN =        "CACMA2",
+  ISSN =         "0001-0782",
+  bibdate =      "Wed Jul 14 15:48:21 MDT 2004",
+  bibsource =    "http://portal.acm.org/",
+  acknowledgement = ack-nhfb,
+}
+
+@Article{Adams:1958:SAC,
+  author =       "Eldridge S. {Adams, Jr.} and Stewart I. Schlesinger",
+  title =        "Simple Automatic Coding Systems",
+  journal =      j-CACM,
+  volume =       "1",
+  number =       "7",
+  pages =        "5--9",
+  month =        jul,
+  year =         "1958",
+  CODEN =        "CACMA2",
+  ISSN =         "0001-0782",
+  bibdate =      "Wed Jul 14 15:48:21 MDT 2004",
+  bibsource =    "http://portal.acm.org/;
+                 http://dblp.uni-trier.de/db/journals/cacm/cacm1.html#AdamsS58",
+  acknowledgement = ack-nhfb,
+  oldlabel =     "AdamsS58",
+  XMLdata =      "ftp://ftp.informatik.uni-trier.de/pub/users/Ley/bib/records.tar.gz#journals/cacm/AdamsS58",
+}
+
+@Article{Carlson:1958:LE,
+  author =       "Walter M. Carlson and Roger L. Boyell and B. Conway",
+  title =        "Letters to the editor",
+  journal =      j-CACM,
+  volume =       "1",
+  number =       "8",
+  pages =        "2--2",
+  month =        aug,
+  year =         "1958",
+  CODEN =        "CACMA2",
+  ISSN =         "0001-0782",
+  bibdate =      "Wed Jul 14 15:48:21 MDT 2004",
+  bibsource =    "http://portal.acm.org/",
+  acknowledgement = ack-nhfb,
+}
+
+@Article{Ershov:1958:PAO,
+  author =       "Andrei P. Ershov",
+  title =        "On Programming of Arithmetic Operations",
+  journal =      j-CACM,
+  volume =       "1",
+  number =       "8",
+  pages =        "3--6",
+  month =        aug,
+  year =         "1958",
+  CODEN =        "CACMA2",
+  ISSN =         "0001-0782",
+  bibdate =      "Wed Jul 14 15:48:21 MDT 2004",
+  bibsource =    "http://dblp.uni-trier.de/db/journals/cacm/cacm1.html#Ershov58;
+                 http://portal.acm.org/",
+  acknowledgement = ack-nhfb,
+  oldlabel =     "Ershov58",
+  XMLdata =      "ftp://ftp.informatik.uni-trier.de/pub/users/Ley/bib/records.tar.gz#journals/cacm/Ershov58",
+}
+
+@Article{Kautz:1958:APS,
+  author =       "William H. Kautz and Edward A. Voorhees and T. A.
+                 Jeeves",
+  title =        "Automatic programming systems",
+  journal =      j-CACM,
+  volume =       "1",
+  number =       "8",
+  pages =        "6--8",
+  month =        aug,
+  year =         "1958",
+  CODEN =        "CACMA2",
+  ISSN =         "0001-0782",
+  bibdate =      "Wed Jul 14 15:48:21 MDT 2004",
+  bibsource =    "http://portal.acm.org/",
+  acknowledgement = ack-nhfb,
+}
+
+@Article{Jeeves:1958:SMN,
+  author =       "T. A. Jeeves",
+  title =        "Secant Modification of {Newton}'s Method",
+  journal =      j-CACM,
+  volume =       "1",
+  number =       "8",
+  pages =        "9--10",
+  month =        aug,
+  year =         "1958",
+  CODEN =        "CACMA2",
+  ISSN =         "0001-0782",
+  bibdate =      "Wed Jul 14 15:48:21 MDT 2004",
+  bibsource =    "http://portal.acm.org/;
+                 http://dblp.uni-trier.de/db/journals/cacm/cacm1.html#Jeeves58",
+  acknowledgement = ack-nhfb,
+  oldlabel =     "Jeeves58",
+  XMLdata =      "ftp://ftp.informatik.uni-trier.de/pub/users/Ley/bib/records.tar.gz#journals/cacm/Jeeves58",
+}
+
+@Article{Giblin:1958:RCF,
+  author =       "John Giblin",
+  title =        "Recursive Curve Fitting Technique",
+  journal =      j-CACM,
+  volume =       "1",
+  number =       "8",
+  pages =        "10--11",
+  month =        aug,
+  year =         "1958",
+  CODEN =        "CACMA2",
+  ISSN =         "0001-0782",
+  bibdate =      "Wed Jul 14 15:48:21 MDT 2004",
+  bibsource =    "http://portal.acm.org/;
+                 http://dblp.uni-trier.de/db/journals/cacm/cacm1.html#Giblin58",
+  acknowledgement = ack-nhfb,
+  oldlabel =     "Giblin58",
+  XMLdata =      "ftp://ftp.informatik.uni-trier.de/pub/users/Ley/bib/records.tar.gz#journals/cacm/Giblin58",
+}
+
+@Article{Strong:1958:PPC,
+  author =       "J. Strong and J. Wegstein and A. Tritter and J.
+                 Olsztyn and O. Mock and T. Steel",
+  title =        "The problem of programming communication with changing
+                 machines: a proposed solution (Part 1)",
+  journal =      j-CACM,
+  volume =       "1",
+  number =       "8",
+  pages =        "12--18",
+  month =        aug,
+  year =         "1958",
+  CODEN =        "CACMA2",
+  ISSN =         "0001-0782",
+  bibdate =      "Wed Jul 14 15:48:21 MDT 2004",
+  bibsource =    "http://dblp.uni-trier.de/db/journals/cacm/cacm1.html#StrongWTOMS58;
+                 http://portal.acm.org/",
+  acknowledgement = ack-nhfb,
+  oldlabel =     "StrongWTOMS58",
+  XMLdata =      "ftp://ftp.informatik.uni-trier.de/pub/users/Ley/bib/records.tar.gz#journals/cacm/StrongWTOMS58",
+}
+
+@Article{Stillson:1958:LE,
+  author =       "J. Gordon Stillson",
+  title =        "Letters to the editor",
+  journal =      j-CACM,
+  volume =       "1",
+  number =       "9",
+  pages =        "2--2",
+  month =        sep,
+  year =         "1958",
+  CODEN =        "CACMA2",
+  ISSN =         "0001-0782",
+  bibdate =      "Wed Jul 14 15:48:21 MDT 2004",
+  bibsource =    "http://portal.acm.org/",
+  acknowledgement = ack-nhfb,
+}
+
+@Article{Call:1958:EER,
+  author =       "Dickson H. Call and Roy F. Reeves",
+  title =        "Error estimation in {Runge--Kutta} procedures",
+  journal =      j-CACM,
+  volume =       "1",
+  number =       "9",
+  pages =        "7--8",
+  month =        sep,
+  year =         "1958",
+  CODEN =        "CACMA2",
+  ISSN =         "0001-0782",
+  bibdate =      "Wed Jul 14 15:48:21 MDT 2004",
+  bibsource =    "http://dblp.uni-trier.de/db/journals/cacm/cacm1.html#CallR58;
+                 http://portal.acm.org/",
+  acknowledgement = ack-nhfb,
+  oldlabel =     "CallR58",
+  XMLdata =      "ftp://ftp.informatik.uni-trier.de/pub/users/Ley/bib/records.tar.gz#journals/cacm/CallR58",
+}
+
+@Article{Strong:1958:PPCb,
+  author =       "J. Strong and J. H. Wegstein and A. Tritter and J.
+                 Olsztyn and Owen R. Mock and T. Steel",
+  title =        "The Problem of Programming Communication with Changing
+                 Machines {A} Proposed Solution ({Part 2})",
+  journal =      j-CACM,
+  volume =       "1",
+  number =       "9",
+  pages =        "9--16",
+  month =        "????",
+  year =         "1958",
+  CODEN =        "CACMA2",
+  ISSN =         "0001-0782",
+  bibdate =      "Mon Jan 22 07:24:49 MST 2001",
+  bibsource =    "http://dblp.uni-trier.de/db/journals/cacm/cacm1.html#StrongWTOMS58a",
+  oldlabel =     "StrongWTOMS58a",
+  XMLdata =      "ftp://ftp.informatik.uni-trier.de/pub/users/Ley/bib/records.tar.gz#journals/cacm/StrongWTOMS58a",
+}
+
+@Article{Conway:1958:PU,
+  author =       "Melvin E. Conway",
+  title =        "Proposal for an {UNCOL}",
+  journal =      j-CACM,
+  volume =       "1",
+  number =       "10",
+  pages =        "5--8",
+  month =        oct,
+  year =         "1958",
+  CODEN =        "CACMA2",
+  ISSN =         "0001-0782",
+  bibdate =      "Wed Jul 14 15:48:21 MDT 2004",
+  bibsource =    "http://portal.acm.org/;
+                 http://dblp.uni-trier.de/db/journals/cacm/cacm1.html#Conway58",
+  acknowledgement = ack-nhfb,
+  oldlabel =     "Conway58",
+  XMLdata =      "ftp://ftp.informatik.uni-trier.de/pub/users/Ley/bib/records.tar.gz#journals/cacm/Conway58",
+}
+
+@Article{Ianov:1958:ETP,
+  author =       "Iu. I. Ianov",
+  title =        "On The Equivalence and Transformation of Program
+                 Schemes",
+  journal =      j-CACM,
+  volume =       "1",
+  number =       "10",
+  pages =        "8--12",
+  month =        oct,
+  year =         "1958",
+  CODEN =        "CACMA2",
+  ISSN =         "0001-0782",
+  bibdate =      "Wed Jul 14 15:48:21 MDT 2004",
+  bibsource =    "http://dblp.uni-trier.de/db/journals/cacm/cacm1.html#IanovF58;
+                 http://portal.acm.org/",
+  note =         "Translated by Morris D. Friedman of the original
+                 Russian article published in Doklady, AN USSR, {\bf
+                 113}(1), 39--42 (1957).",
+  acknowledgement = ack-nhfb,
+  oldlabel =     "IanovF58",
+  XMLdata =      "ftp://ftp.informatik.uni-trier.de/pub/users/Ley/bib/records.tar.gz#journals/cacm/IanovF58",
+}
+
+@Article{Carr:1958:LE,
+  author =       "John W. {Carr III}",
+  title =        "Letters to the editor",
+  journal =      j-CACM,
+  volume =       "1",
+  number =       "11",
+  pages =        "3--3",
+  month =        nov,
+  year =         "1958",
+  CODEN =        "CACMA2",
+  ISSN =         "0001-0782",
+  bibdate =      "Wed Jul 14 15:48:22 MDT 2004",
+  bibsource =    "http://portal.acm.org/",
+  acknowledgement = ack-nhfb,
+}
+
+@Article{Muller:1958:UCI,
+  author =       "Mervin E. Muller",
+  title =        "The Use of Computers in Inspection Procedures",
+  journal =      j-CACM,
+  volume =       "1",
+  number =       "11",
+  pages =        "7--13",
+  month =        nov,
+  year =         "1958",
+  CODEN =        "CACMA2",
+  ISSN =         "0001-0782",
+  bibdate =      "Wed Jul 14 15:48:22 MDT 2004",
+  bibsource =    "http://portal.acm.org/;
+                 http://dblp.uni-trier.de/db/journals/cacm/cacm1.html#Muller58",
+  acknowledgement = ack-nhfb,
+  keywords =     "applications of probability theory and statistics",
+  oldlabel =     "Muller58",
+  XMLdata =      "ftp://ftp.informatik.uni-trier.de/pub/users/Ley/bib/records.tar.gz#journals/cacm/Muller58",
+}
+
+@Article{Wadey:1958:TSR,
+  author =       "W. G. Wadey",
+  title =        "Two Square-Root Approximations",
+  journal =      j-CACM,
+  volume =       "1",
+  number =       "11",
+  pages =        "13--14",
+  month =        nov,
+  year =         "1958",
+  CODEN =        "CACMA2",
+  ISSN =         "0001-0782",
+  bibdate =      "Wed Jul 14 15:48:22 MDT 2004",
+  bibsource =    "http://portal.acm.org/;
+                 http://dblp.uni-trier.de/db/journals/cacm/cacm1.html#Wadey58",
+  acknowledgement = ack-nhfb,
+  oldlabel =     "Wadey58",
+  XMLdata =      "ftp://ftp.informatik.uni-trier.de/pub/users/Ley/bib/records.tar.gz#journals/cacm/Wadey58",
+}
+
+@Article{Ianov:1958:MPS,
+  author =       "Iu. I. Ianov",
+  title =        "On Matrix Program Schemes",
+  journal =      j-CACM,
+  volume =       "1",
+  number =       "12",
+  pages =        "3--6",
+  month =        dec,
+  year =         "1958",
+  CODEN =        "CACMA2",
+  ISSN =         "0001-0782",
+  bibdate =      "Wed Jul 14 15:48:22 MDT 2004",
+  bibsource =    "http://dblp.uni-trier.de/db/journals/cacm/cacm1.html#IanovF58a;
+                 http://portal.acm.org/",
+  note =         "Translated by Morris D. Friedman of the original
+                 Russian article published in Doklady, AN USSR, {\bf
+                 113}(2), 282--286 (1957).",
+  acknowledgement = ack-nhfb,
+  oldlabel =     "IanovF58a",
+  XMLdata =      "ftp://ftp.informatik.uni-trier.de/pub/users/Ley/bib/records.tar.gz#journals/cacm/IanovF58a",
+}
+
+@Article{Sugai:1958:ERR,
+  author =       "Iwao Sugai",
+  title =        "Extraction of Roots by Repeated Subtractions for
+                 Digital Computers",
+  journal =      j-CACM,
+  volume =       "1",
+  number =       "12",
+  pages =        "6--8",
+  month =        dec,
+  year =         "1958",
+  CODEN =        "CACMA2",
+  ISSN =         "0001-0782",
+  bibdate =      "Wed Jul 14 15:48:22 MDT 2004",
+  bibsource =    "http://dblp.uni-trier.de/db/journals/cacm/cacm1.html#Sugai58;
+                 http://portal.acm.org/",
+  acknowledgement = ack-nhfb,
+  oldlabel =     "Sugai58",
+  XMLdata =      "ftp://ftp.informatik.uni-trier.de/pub/users/Ley/bib/records.tar.gz#journals/cacm/Sugai58",
+}
+
+@Article{Perlis:1958:PRI,
+  author =       "Alan J. Perlis and K. Samelson",
+  title =        "Preliminary Report --- {International Algebraic
+                 Language}",
+  journal =      j-CACM,
+  volume =       "1",
+  number =       "12",
+  pages =        "8--22",
+  month =        dec,
+  year =         "1958",
+  CODEN =        "CACMA2",
+  ISSN =         "0001-0782",
+  bibdate =      "Wed Jul 14 15:48:22 MDT 2004",
+  bibsource =    "http://dblp.uni-trier.de/db/journals/cacm/cacm1.html#PerlisS58;
+                 http://portal.acm.org/",
+  acknowledgement = ack-nhfb,
+  oldlabel =     "PerlisS58",
+  XMLdata =      "ftp://ftp.informatik.uni-trier.de/pub/users/Ley/bib/records.tar.gz#journals/cacm/PerlisS58",
+}
+
+@Article{Bemer:1959:LE,
+  author =       "R. W. Bemer and Walter F. Bauer and Philip R. Bagley",
+  title =        "Letters to the editor",
+  journal =      j-CACM,
+  volume =       "2",
+  number =       "1",
+  pages =        "2--3",
+  month =        jan,
+  year =         "1959",
+  CODEN =        "CACMA2",
+  ISSN =         "0001-0782",
+  bibdate =      "Wed Jul 14 15:48:22 MDT 2004",
+  bibsource =    "http://portal.acm.org/",
+  acknowledgement = ack-nhfb,
+}
+
+@Article{Brothers:1959:LEO,
+  author =       "LeRoy A. Brothers and Paul Armer and Millard H.
+                 Perstein and Dan C. Wilkins and P. A. Zaphyr and M. J.
+                 R. Healy and H. M. Lieberstein and Bruce Gilchrist",
+  title =        "Letter to the editor of operations research",
+  journal =      j-CACM,
+  volume =       "2",
+  number =       "1",
+  pages =        "4--5",
+  month =        jan,
+  year =         "1959",
+  CODEN =        "CACMA2",
+  ISSN =         "0001-0782",
+  bibdate =      "Wed Jul 14 15:48:22 MDT 2004",
+  bibsource =    "http://portal.acm.org/",
+  acknowledgement = ack-nhfb,
+}
+
+@Article{Nather:1959:ANR,
+  author =       "Virginia Nather and Ward C. Sangren",
+  title =        "Abstracts --- nuclear reactor codes",
+  journal =      j-CACM,
+  volume =       "2",
+  number =       "1",
+  pages =        "6--32",
+  month =        jan,
+  year =         "1959",
+  CODEN =        "CACMA2",
+  ISSN =         "0001-0782",
+  bibdate =      "Wed Jul 14 15:48:22 MDT 2004",
+  bibsource =    "http://dblp.uni-trier.de/db/journals/cacm/cacm2.html#NatherS59;
+                 http://portal.acm.org/",
+  acknowledgement = ack-nhfb,
+  oldlabel =     "NatherS59",
+  XMLdata =      "ftp://ftp.informatik.uni-trier.de/pub/users/Ley/bib/records.tar.gz#journals/cacm/NatherS59",
+}
+
+@Article{Carr:1959:RSC,
+  author =       "John W. {Carr III}",
+  title =        "Recursive Subscripting Compilers and List-Type
+                 Memories",
+  journal =      j-CACM,
+  volume =       "2",
+  number =       "2",
+  pages =        "4--6",
+  month =        feb,
+  year =         "1959",
+  CODEN =        "CACMA2",
+  ISSN =         "0001-0782",
+  bibdate =      "Wed Jul 14 15:48:22 MDT 2004",
+  bibsource =    "http://dblp.uni-trier.de/db/journals/cacm/cacm2.html#Carr59;
+                 http://portal.acm.org/",
+  acknowledgement = ack-nhfb,
+  oldlabel =     "Carr59",
+  XMLdata =      "ftp://ftp.informatik.uni-trier.de/pub/users/Ley/bib/records.tar.gz#journals/cacm/Carr59",
+}
+
+@Article{Green:1959:PMI,
+  author =       "Julien Green",
+  title =        "Possible Modifications to the {International Algebraic
+                 Language}",
+  journal =      j-CACM,
+  volume =       "2",
+  number =       "2",
+  pages =        "6--8",
+  month =        feb,
+  year =         "1959",
+  CODEN =        "CACMA2",
+  ISSN =         "0001-0782",
+  bibdate =      "Wed Jul 14 15:48:22 MDT 2004",
+  bibsource =    "http://dblp.uni-trier.de/db/journals/cacm/cacm2.html#Green59;
+                 http://portal.acm.org/",
+  acknowledgement = ack-nhfb,
+  keywords =     "International Algebraic Language (IAL)",
+  oldlabel =     "Green59",
+  XMLdata =      "ftp://ftp.informatik.uni-trier.de/pub/users/Ley/bib/records.tar.gz#journals/cacm/Green59",
+}
+
+@Article{Sheridan:1959:ATC,
+  author =       "Peter B. Sheridan",
+  title =        "The Arithmetic Translator Compiler of the {IBM FORTRAN
+                 Automatic Coding System}",
+  journal =      j-CACM,
+  volume =       "2",
+  number =       "2",
+  pages =        "9--21",
+  month =        feb,
+  year =         "1959",
+  CODEN =        "CACMA2",
+  ISSN =         "0001-0782",
+  bibdate =      "Wed Jul 14 15:48:22 MDT 2004",
+  bibsource =    "http://portal.acm.org/;
+                 http://dblp.uni-trier.de/db/journals/cacm/cacm2.html#Sheridan59;
+                 http://ei.cs.vt.edu/~cs4304/bibliography.html",
+  URL =          "http://community.computerhistory.org/scc/projects/FORTRAN/paper/p9-sheridan.pdf",
+  acknowledgement = ack-nhfb,
+  oldlabel =     "Sheridan59",
+  XMLdata =      "ftp://ftp.informatik.uni-trier.de/pub/users/Ley/bib/records.tar.gz#journals/cacm/Sheridan59",
+}
+
+@Article{Luebbert:1959:SCR,
+  author =       "William F. Luebbert and Percy W. {Collom, Jr.}",
+  title =        "{Signal Corps} Research and Development on Automatic
+                 Programming of Digital Computers",
+  journal =      j-CACM,
+  volume =       "2",
+  number =       "2",
+  pages =        "22--27",
+  month =        feb,
+  year =         "1959",
+  CODEN =        "CACMA2",
+  ISSN =         "0001-0782",
+  bibdate =      "Wed Jul 14 15:48:22 MDT 2004",
+  bibsource =    "http://portal.acm.org/;
+                 http://dblp.uni-trier.de/db/journals/cacm/cacm2.html#LuebbertC59",
+  acknowledgement = ack-nhfb,
+  oldlabel =     "LuebbertC59",
+  XMLdata =      "ftp://ftp.informatik.uni-trier.de/pub/users/Ley/bib/records.tar.gz#journals/cacm/LuebbertC59",
+}
+
+@Article{Hansen:1959:SBA,
+  author =       "R. C. Hansen and L. L. Bailin and R. W. Rutishauser",
+  title =        "Scientific and business applications: on computing
+                 radiation integrals",
+  journal =      j-CACM,
+  volume =       "2",
+  number =       "2",
+  pages =        "28--31",
+  month =        feb,
+  year =         "1959",
+  CODEN =        "CACMA2",
+  ISSN =         "0001-0782",
+  bibdate =      "Wed Jul 14 15:48:22 MDT 2004",
+  bibsource =    "http://dblp.uni-trier.de/db/journals/cacm/cacm2.html#HansenBR59;
+                 http://portal.acm.org/",
+  acknowledgement = ack-nhfb,
+  oldlabel =     "HansenBR59",
+  XMLdata =      "ftp://ftp.informatik.uni-trier.de/pub/users/Ley/bib/records.tar.gz#journals/cacm/HansenBR59",
+}
+
+@Article{Powers:1959:ESF,
+  author =       "John E. Powers",
+  title =        "Elimination of Special Functions from Differential
+                 Equations",
+  journal =      j-CACM,
+  volume =       "2",
+  number =       "3",
+  pages =        "3--4",
+  month =        mar,
+  year =         "1959",
+  CODEN =        "CACMA2",
+  ISSN =         "0001-0782",
+  bibdate =      "Wed Jul 14 15:48:22 MDT 2004",
+  bibsource =    "http://portal.acm.org/;
+                 http://dblp.uni-trier.de/db/journals/cacm/cacm2.html#Powers59",
+  acknowledgement = ack-nhfb,
+  oldlabel =     "Powers59",
+  XMLdata =      "ftp://ftp.informatik.uni-trier.de/pub/users/Ley/bib/records.tar.gz#journals/cacm/Powers59",
+}
+
+@Article{Howell:1959:IMF,
+  author =       "John R. Howell",
+  title =        "An Iterative Method for Fitting the Logistic Curve",
+  journal =      j-CACM,
+  volume =       "2",
+  number =       "3",
+  pages =        "5--6",
+  month =        mar,
+  year =         "1959",
+  CODEN =        "CACMA2",
+  ISSN =         "0001-0782",
+  bibdate =      "Wed Jul 14 15:48:22 MDT 2004",
+  bibsource =    "http://portal.acm.org/;
+                 http://dblp.uni-trier.de/db/journals/cacm/cacm2.html#Howell59",
+  acknowledgement = ack-nhfb,
+  oldlabel =     "Howell59",
+  XMLdata =      "ftp://ftp.informatik.uni-trier.de/pub/users/Ley/bib/records.tar.gz#journals/cacm/Howell59",
+}
+
+@Article{Wegstein:1959:FCO,
+  author =       "J. H. Wegstein",
+  title =        "From Formulas to Computer Oriented Language",
+  journal =      j-CACM,
+  volume =       "2",
+  number =       "3",
+  pages =        "6--8",
+  month =        mar,
+  year =         "1959",
+  CODEN =        "CACMA2",
+  ISSN =         "0001-0782",
+  bibdate =      "Wed Jul 14 15:48:22 MDT 2004",
+  bibsource =    "http://portal.acm.org/;
+                 http://dblp.uni-trier.de/db/journals/cacm/cacm2.html#Wegstein59",
+  acknowledgement = ack-nhfb,
+  oldlabel =     "Wegstein59",
+  XMLdata =      "ftp://ftp.informatik.uni-trier.de/pub/users/Ley/bib/records.tar.gz#journals/cacm/Wegstein59",
+}
+
+@Article{Bemer:1959:CIP,
+  author =       "Robert W. Bemer",
+  title =        "A Checklist of Intelligence for Programming Systems",
+  journal =      j-CACM,
+  volume =       "2",
+  number =       "3",
+  pages =        "8--13",
+  month =        mar,
+  year =         "1959",
+  CODEN =        "CACMA2",
+  ISSN =         "0001-0782",
+  bibdate =      "Wed Jul 14 15:48:22 MDT 2004",
+  bibsource =    "http://dblp.uni-trier.de/db/journals/cacm/cacm2.html#Bemer59;
+                 http://portal.acm.org/",
+  acknowledgement = ack-nhfb,
+  oldlabel =     "Bemer59",
+  XMLdata =      "ftp://ftp.informatik.uni-trier.de/pub/users/Ley/bib/records.tar.gz#journals/cacm/Bemer59",
+}
+
+@Article{Galler:1959:LE,
+  author =       "Bernard A. Galler",
+  title =        "Letters to the editor",
+  journal =      j-CACM,
+  volume =       "2",
+  number =       "4",
+  pages =        "6--9",
+  month =        apr,
+  year =         "1959",
+  CODEN =        "CACMA2",
+  ISSN =         "0001-0782",
+  bibdate =      "Wed Jul 14 15:48:22 MDT 2004",
+  bibsource =    "http://portal.acm.org/",
+  acknowledgement = ack-nhfb,
+}
+
+@Article{Gilman:1959:MPM,
+  author =       "R. E. Gilman",
+  title =        "A Mathematical Procedure for Machine Division",
+  journal =      j-CACM,
+  volume =       "2",
+  number =       "4",
+  pages =        "10--12",
+  month =        apr,
+  year =         "1959",
+  CODEN =        "CACMA2",
+  ISSN =         "0001-0782",
+  bibdate =      "Wed Jul 14 15:48:22 MDT 2004",
+  bibsource =    "http://portal.acm.org/;
+                 http://dblp.uni-trier.de/db/journals/cacm/cacm2.html#Gilman59",
+  acknowledgement = ack-nhfb,
+  oldlabel =     "Gilman59",
+  XMLdata =      "ftp://ftp.informatik.uni-trier.de/pub/users/Ley/bib/records.tar.gz#journals/cacm/Gilman59",
+}
+
+@Article{Ercoli:1959:BAD,
+  author =       "Paolo Ercoli and Roberto Vacca",
+  title =        "Binary Arithmetic for Discretely Variable Word Length
+                 in a Serial Computer",
+  journal =      j-CACM,
+  volume =       "2",
+  number =       "4",
+  pages =        "13--15",
+  month =        apr,
+  year =         "1959",
+  CODEN =        "CACMA2",
+  ISSN =         "0001-0782",
+  bibdate =      "Wed Jul 14 15:48:22 MDT 2004",
+  bibsource =    "http://dblp.uni-trier.de/db/journals/cacm/cacm2.html#ErcoliV59;
+                 http://portal.acm.org/",
+  acknowledgement = ack-nhfb,
+  oldlabel =     "ErcoliV59",
+  XMLdata =      "ftp://ftp.informatik.uni-trier.de/pub/users/Ley/bib/records.tar.gz#journals/cacm/ErcoliV59",
+}
+
+@Article{Larson:1959:RFS,
+  author =       "E. H. Larson and D. P. Marshall",
+  title =        "A routine to find the solution of simultaneous linear
+                 equations with polynomial coefficients",
+  journal =      j-CACM,
+  volume =       "2",
+  number =       "4",
+  pages =        "16--17",
+  month =        apr,
+  year =         "1959",
+  CODEN =        "CACMA2",
+  ISSN =         "0001-0782",
+  bibdate =      "Wed Jul 14 15:48:22 MDT 2004",
+  bibsource =    "http://portal.acm.org/;
+                 http://dblp.uni-trier.de/db/journals/cacm/cacm2.html#LarsonM59",
+  acknowledgement = ack-nhfb,
+  oldlabel =     "LarsonM59",
+  XMLdata =      "ftp://ftp.informatik.uni-trier.de/pub/users/Ley/bib/records.tar.gz#journals/cacm/LarsonM59",
+}
+
+@Article{Hicks:1959:EMG,
+  author =       "J. S. Hicks and R. F. Wheeling",
+  title =        "An Efficient Method for Generating Uniformly
+                 Distributed Points on the Surface of an $n$-Dimensional
+                 Sphere",
+  journal =      j-CACM,
+  volume =       "2",
+  number =       "4",
+  pages =        "17--19",
+  month =        apr,
+  year =         "1959",
+  CODEN =        "CACMA2",
+  ISSN =         "0001-0782",
+  bibdate =      "Wed Jul 14 15:48:22 MDT 2004",
+  bibsource =    "http://portal.acm.org/;
+                 http://dblp.uni-trier.de/db/journals/cacm/cacm2.html#HicksW59",
+  acknowledgement = ack-nhfb,
+  oldlabel =     "HicksW59",
+  XMLdata =      "ftp://ftp.informatik.uni-trier.de/pub/users/Ley/bib/records.tar.gz#journals/cacm/HicksW59",
+}
+
+@Article{Muller:1959:NMG,
+  author =       "Mervin E. Muller",
+  title =        "A Note on a Method for Generating Points Uniformly on
+                 {$N$}-Dimensional Spheres",
+  journal =      j-CACM,
+  volume =       "2",
+  number =       "4",
+  pages =        "19--20",
+  month =        apr,
+  year =         "1959",
+  CODEN =        "CACMA2",
+  ISSN =         "0001-0782",
+  bibdate =      "Wed Jul 14 15:48:22 MDT 2004",
+  bibsource =    "http://portal.acm.org/;
+                 http://dblp.uni-trier.de/db/journals/cacm/cacm2.html#Muller59",
+  acknowledgement = ack-nhfb,
+  oldlabel =     "Muller59",
+  XMLdata =      "ftp://ftp.informatik.uni-trier.de/pub/users/Ley/bib/records.tar.gz#journals/cacm/Muller59",
+}
+
+@Article{Carr:1959:EAF,
+  author =       "John W. {Carr III}",
+  title =        "Error Analysis in Floating Point Arithmetic",
+  journal =      j-CACM,
+  volume =       "2",
+  number =       "5",
+  pages =        "10--15",
+  month =        may,
+  year =         "1959",
+  CODEN =        "CACMA2",
+  ISSN =         "0001-0782",
+  bibdate =      "Wed Jul 14 15:48:23 MDT 2004",
+  bibsource =    "http://portal.acm.org/;
+                 http://dblp.uni-trier.de/db/journals/cacm/cacm2.html#Carr59a",
+  acknowledgement = ack-nhfb,
+  oldlabel =     "Carr59a",
+  XMLdata =      "ftp://ftp.informatik.uni-trier.de/pub/users/Ley/bib/records.tar.gz#journals/cacm/Carr59a",
+}
+
+@Article{Anonymous:1959:SBA,
+  author =       "Anonymous",
+  title =        "Scientific and business applications: survey of
+                 progress and trend of development and use of automatic
+                 data processing in business and management control
+                 systems of the {Federal Government}, as of {December
+                 1957} --- {II}",
+  journal =      j-CACM,
+  volume =       "2",
+  number =       "5",
+  pages =        "17--20",
+  month =        may,
+  year =         "1959",
+  CODEN =        "CACMA2",
+  ISSN =         "0001-0782",
+  bibdate =      "Wed Jul 14 15:48:23 MDT 2004",
+  bibsource =    "http://portal.acm.org/",
+  acknowledgement = ack-nhfb,
+}
+
+@Article{Carr:1959:VCC,
+  author =       "John W. {Carr III} and Alan J. Perlis and James E.
+                 Robertson and Norman R Scott",
+  title =        "A Visit to {Computation Centers} in the {Soviet
+                 Union}",
+  journal =      j-CACM,
+  volume =       "2",
+  number =       "6",
+  pages =        "8--20",
+  month =        jun,
+  year =         "1959",
+  CODEN =        "CACMA2",
+  ISSN =         "0001-0782",
+  bibdate =      "Wed Jul 14 15:48:23 MDT 2004",
+  bibsource =    "http://portal.acm.org/;
+                 http://dblp.uni-trier.de/db/journals/cacm/cacm2.html#CarrPRS59",
+  acknowledgement = ack-nhfb,
+  oldlabel =     "CarrPRS59",
+  XMLdata =      "ftp://ftp.informatik.uni-trier.de/pub/users/Ley/bib/records.tar.gz#journals/cacm/CarrPRS59",
+}
+
+@Article{Williams:1959:HII,
+  author =       "Francis A. Williams",
+  title =        "Handling Identifiers as Internal Symbols in Language
+                 Processors",
+  journal =      j-CACM,
+  volume =       "2",
+  number =       "6",
+  pages =        "21--24",
+  month =        jun,
+  year =         "1959",
+  CODEN =        "CACMA2",
+  ISSN =         "0001-0782",
+  bibdate =      "Wed Jul 14 15:48:23 MDT 2004",
+  bibsource =    "http://portal.acm.org/;
+                 ftp://ftp.ira.uka.de/pub/bibliography/Misc/hash.bib;
+                 http://dblp.uni-trier.de/db/journals/cacm/cacm2.html#Williams59",
+  acknowledgement = ack-nhfb,
+  oldlabel =     "Williams59",
+  XMLdata =      "ftp://ftp.informatik.uni-trier.de/pub/users/Ley/bib/records.tar.gz#journals/cacm/Williams59",
+}
+
+@Article{Anderson:1959:NHS,
+  author =       "William H. Anderson",
+  title =        "Scientific and business applications: {NORC}
+                 High-Speed Printer",
+  journal =      j-CACM,
+  volume =       "2",
+  number =       "6",
+  pages =        "25--26",
+  month =        "????",
+  year =         "1959",
+  CODEN =        "CACMA2",
+  ISSN =         "0001-0782",
+  bibdate =      "Mon Jan 22 06:21:17 MST 2001",
+  bibsource =    "http://dblp.uni-trier.de/db/journals/cacm/cacm2.html#Anderson59;
+                 http://portal.acm.org/",
+  oldlabel =     "Anderson59",
+  XMLdata =      "ftp://ftp.informatik.uni-trier.de/pub/users/Ley/bib/records.tar.gz#journals/cacm/Anderson59",
+}
+
+@Article{Schwartz:1959:TCC,
+  author =       "B. L. Schwartz and H. A. Cress",
+  title =        "A Technique for Computing Critical Rotational Speeds
+                 of Flexible Shafts on an Automatic Computer",
+  journal =      j-CACM,
+  volume =       "2",
+  number =       "6",
+  pages =        "27--31",
+  month =        jun,
+  year =         "1959",
+  CODEN =        "CACMA2",
+  ISSN =         "0001-0782",
+  bibdate =      "Wed Jul 14 15:48:23 MDT 2004",
+  bibsource =    "http://portal.acm.org/;
+                 http://dblp.uni-trier.de/db/journals/cacm/cacm2.html#SchwartzC59",
+  acknowledgement = ack-nhfb,
+  oldlabel =     "SchwartzC59",
+  XMLdata =      "ftp://ftp.informatik.uni-trier.de/pub/users/Ley/bib/records.tar.gz#journals/cacm/SchwartzC59",
+}
+
+@Article{Schecher:1959:PME,
+  author =       "Heinz Schecher",
+  title =        "Programming for a Machine With an Extended Address
+                 Calculational Mechanism",
+  journal =      j-CACM,
+  volume =       "2",
+  number =       "6",
+  pages =        "32--38",
+  month =        jun,
+  year =         "1959",
+  CODEN =        "CACMA2",
+  ISSN =         "0001-0782",
+  bibdate =      "Wed Jul 14 15:48:23 MDT 2004",
+  bibsource =    "http://portal.acm.org/;
+                 http://dblp.uni-trier.de/db/journals/cacm/cacm2.html#Schecher59",
+  acknowledgement = ack-nhfb,
+  oldlabel =     "Schecher59",
+  XMLdata =      "ftp://ftp.informatik.uni-trier.de/pub/users/Ley/bib/records.tar.gz#journals/cacm/Schecher59",
+}
+
+@Article{Wouk:1959:RPS,
+  author =       "A. Wouk",
+  title =        "Remarks on the Practical Solution of Characteristic
+                 Value Problems",
+  journal =      j-CACM,
+  volume =       "2",
+  number =       "6",
+  pages =        "38--39",
+  month =        jun,
+  year =         "1959",
+  CODEN =        "CACMA2",
+  ISSN =         "0001-0782",
+  bibdate =      "Wed Jul 14 15:48:23 MDT 2004",
+  bibsource =    "http://portal.acm.org/;
+                 http://dblp.uni-trier.de/db/journals/cacm/cacm2.html#Wouk59",
+  acknowledgement = ack-nhfb,
+  oldlabel =     "Wouk59",
+  XMLdata =      "ftp://ftp.informatik.uni-trier.de/pub/users/Ley/bib/records.tar.gz#journals/cacm/Wouk59",
+}
+
+@Article{Arden:1959:GCT,
+  author =       "Bruce W. Arden and R. Graham",
+  title =        "On {GAT} and the Construction of Translators",
+  journal =      j-CACM,
+  volume =       "2",
+  number =       "7",
+  pages =        "24--26",
+  month =        jul,
+  year =         "1959",
+  CODEN =        "CACMA2",
+  ISSN =         "0001-0782",
+  bibdate =      "Wed Jul 14 15:48:23 MDT 2004",
+  bibsource =    "http://dblp.uni-trier.de/db/journals/cacm/cacm2.html#ArdenG59;
+                 http://portal.acm.org/",
+  acknowledgement = ack-nhfb,
+  oldlabel =     "ArdenG59",
+  XMLdata =      "ftp://ftp.informatik.uni-trier.de/pub/users/Ley/bib/records.tar.gz#journals/cacm/ArdenG59",
+}
+
+@Article{Taranto:1959:BCF,
+  author =       "Donald Taranto",
+  title =        "Binary Conversion, with Fixed Decimal Precision, of a
+                 Decimal Fraction",
+  journal =      j-CACM,
+  volume =       "2",
+  number =       "7",
+  pages =        "27--27",
+  month =        jul,
+  year =         "1959",
+  CODEN =        "CACMA2",
+  ISSN =         "0001-0782",
+  bibdate =      "Wed Jul 14 15:48:23 MDT 2004",
+  bibsource =    "http://portal.acm.org/;
+                 ftp://garbo.uwasa.fi/pc/doc-soft/fpbibl18.zip;
+                 http://dblp.uni-trier.de/db/journals/cacm/cacm2.html#Taranto59",
+  acknowledgement = ack-nhfb # " and " # ack-nj,
+  oldlabel =     "Taranto59",
+  XMLdata =      "ftp://ftp.informatik.uni-trier.de/pub/users/Ley/bib/records.tar.gz#journals/cacm/Taranto59",
+}
+
+@Article{Chow:1959:PES,
+  author =       "Wen M. Chow",
+  title =        "Parameter Estimation for Simple Nonlinear Models",
+  journal =      j-CACM,
+  volume =       "2",
+  number =       "7",
+  pages =        "28--29",
+  month =        jul,
+  year =         "1959",
+  CODEN =        "CACMA2",
+  ISSN =         "0001-0782",
+  bibdate =      "Wed Jul 14 15:48:23 MDT 2004",
+  bibsource =    "http://portal.acm.org/;
+                 http://dblp.uni-trier.de/db/journals/cacm/cacm2.html#Chow59",
+  acknowledgement = ack-nhfb,
+  oldlabel =     "Chow59",
+  XMLdata =      "ftp://ftp.informatik.uni-trier.de/pub/users/Ley/bib/records.tar.gz#journals/cacm/Chow59",
+}
+
+@Article{Shell:1959:HSS,
+  author =       "Donald L. Shell",
+  title =        "A High-Speed Sorting Procedure",
+  journal =      j-CACM,
+  volume =       "2",
+  number =       "7",
+  pages =        "30--32",
+  month =        jul,
+  year =         "1959",
+  CODEN =        "CACMA2",
+  ISSN =         "0001-0782",
+  bibdate =      "Wed Jul 14 15:48:23 MDT 2004",
+  bibsource =    "http://dblp.uni-trier.de/db/journals/cacm/cacm2.html#Shell59;
+                 http://portal.acm.org/",
+  acknowledgement = ack-nhfb,
+  oldlabel =     "Shell59",
+  XMLdata =      "ftp://ftp.informatik.uni-trier.de/pub/users/Ley/bib/records.tar.gz#journals/cacm/Shell59",
+}
+
+@Article{Gschwind:1959:RTD,
+  author =       "Hans W. Gschwind",
+  title =        "A Real Time Data Assimilator",
+  journal =      j-CACM,
+  volume =       "2",
+  number =       "7",
+  pages =        "33--36",
+  month =        jul,
+  year =         "1959",
+  CODEN =        "CACMA2",
+  ISSN =         "0001-0782",
+  bibdate =      "Wed Jul 14 15:48:23 MDT 2004",
+  bibsource =    "http://portal.acm.org/;
+                 http://dblp.uni-trier.de/db/journals/cacm/cacm2.html#Gschwind59",
+  acknowledgement = ack-nhfb,
+  oldlabel =     "Gschwind59",
+  XMLdata =      "ftp://ftp.informatik.uni-trier.de/pub/users/Ley/bib/records.tar.gz#journals/cacm/Gschwind59",
+}
+
+@Article{McCarthy:1959:LE,
+  author =       "John McCarthy",
+  title =        "Letter to the Editor",
+  journal =      j-CACM,
+  volume =       "2",
+  number =       "8",
+  pages =        "2--3",
+  month =        aug,
+  year =         "1959",
+  CODEN =        "CACMA2",
+  ISSN =         "0001-0782",
+  bibsource =    "ftp://ftp.ira.uka.de/pub/bibliography/Ai/lisp.bib",
+}
+
+@Article{Hollingsworth:1959:EPC,
+  author =       "Jack Hollingsworth",
+  title =        "An Educational Program in Computing",
+  journal =      j-CACM,
+  volume =       "2",
+  number =       "8",
+  pages =        "6--6",
+  month =        aug,
+  year =         "1959",
+  CODEN =        "CACMA2",
+  ISSN =         "0001-0782",
+  bibdate =      "Wed Jul 14 15:48:23 MDT 2004",
+  bibsource =    "http://dblp.uni-trier.de/db/journals/cacm/cacm2.html#Hollingsworth59;
+                 http://portal.acm.org/",
+  acknowledgement = ack-nhfb,
+  oldlabel =     "Hollingsworth59",
+  XMLdata =      "ftp://ftp.informatik.uni-trier.de/pub/users/Ley/bib/records.tar.gz#journals/cacm/Hollingsworth59",
+}
+
+@Article{Bagley:1959:PFP,
+  author =       "Philip R. Bagley",
+  title =        "Proposal for a Feasible Programming System",
+  journal =      j-CACM,
+  volume =       "2",
+  number =       "8",
+  pages =        "7--10",
+  month =        aug,
+  year =         "1959",
+  CODEN =        "CACMA2",
+  ISSN =         "0001-0782",
+  bibdate =      "Wed Jul 14 15:48:23 MDT 2004",
+  bibsource =    "http://portal.acm.org/;
+                 http://dblp.uni-trier.de/db/journals/cacm/cacm2.html#Bagley59",
+  acknowledgement = ack-nhfb,
+  oldlabel =     "Bagley59",
+  XMLdata =      "ftp://ftp.informatik.uni-trier.de/pub/users/Ley/bib/records.tar.gz#journals/cacm/Bagley59",
+}
+
+@Article{Aegerter:1959:CST,
+  author =       "M. J. Aegerter",
+  title =        "Construction of a Set of Test Matrices",
+  journal =      j-CACM,
+  volume =       "2",
+  number =       "8",
+  pages =        "10--12",
+  month =        aug,
+  year =         "1959",
+  CODEN =        "CACMA2",
+  ISSN =         "0001-0782",
+  bibdate =      "Wed Jul 14 15:48:23 MDT 2004",
+  bibsource =    "http://portal.acm.org/;
+                 http://dblp.uni-trier.de/db/journals/cacm/cacm2.html#Aegerter59",
+  acknowledgement = ack-nhfb,
+  oldlabel =     "Aegerter59",
+  XMLdata =      "ftp://ftp.informatik.uni-trier.de/pub/users/Ley/bib/records.tar.gz#journals/cacm/Aegerter59",
+}
+
+@Article{Hamblen:1959:SPIa,
+  author =       "John W. Hamblen",
+  title =        "Statistical programs for the {IBM 650} --- {Part I}",
+  journal =      j-CACM,
+  volume =       "2",
+  number =       "8",
+  pages =        "13--18",
+  month =        aug,
+  year =         "1959",
+  CODEN =        "CACMA2",
+  ISSN =         "0001-0782",
+  bibdate =      "Wed Jul 14 15:48:23 MDT 2004",
+  bibsource =    "http://portal.acm.org/;
+                 http://dblp.uni-trier.de/db/journals/cacm/cacm2.html#Hamblen59",
+  acknowledgement = ack-nhfb,
+  oldlabel =     "Hamblen59",
+  XMLdata =      "ftp://ftp.informatik.uni-trier.de/pub/users/Ley/bib/records.tar.gz#journals/cacm/Hamblen59",
+}
+
+@Article{Fein:1959:RUC,
+  author =       "Louis Fein",
+  title =        "The Role of the {University} in Computers, Data
+                 Processing and Related Fields",
+  journal =      j-CACM,
+  volume =       "2",
+  number =       "9",
+  pages =        "7--14",
+  month =        sep,
+  year =         "1959",
+  CODEN =        "CACMA2",
+  ISSN =         "0001-0782",
+  bibdate =      "Wed Jul 14 15:48:23 MDT 2004",
+  bibsource =    "http://portal.acm.org/;
+                 http://dblp.uni-trier.de/db/journals/cacm/cacm2.html#Fein59",
+  acknowledgement = ack-nhfb,
+  oldlabel =     "Fein59",
+  XMLdata =      "ftp://ftp.informatik.uni-trier.de/pub/users/Ley/bib/records.tar.gz#journals/cacm/Fein59",
+}
+
+@Article{Blachman:1959:CEC,
+  author =       "Nelson M. Blachman",
+  title =        "{Central-European} Computers",
+  journal =      j-CACM,
+  volume =       "2",
+  number =       "9",
+  pages =        "14--18",
+  month =        sep,
+  year =         "1959",
+  CODEN =        "CACMA2",
+  ISSN =         "0001-0782",
+  bibdate =      "Wed Jul 14 15:48:23 MDT 2004",
+  bibsource =    "http://portal.acm.org/;
+                 http://dblp.uni-trier.de/db/journals/cacm/cacm2.html#Blachman59",
+  acknowledgement = ack-nhfb,
+  oldlabel =     "Blachman59",
+  XMLdata =      "ftp://ftp.informatik.uni-trier.de/pub/users/Ley/bib/records.tar.gz#journals/cacm/Blachman59",
+}
+
+@Article{Bemer:1959:PGC,
+  author =       "Robert W. Bemer",
+  title =        "A Proposal for a Generalized Card Code for 256
+                 Characters",
+  journal =      j-CACM,
+  volume =       "2",
+  number =       "9",
+  pages =        "19--23",
+  month =        sep,
+  year =         "1959",
+  CODEN =        "CACMA2",
+  ISSN =         "0001-0782",
+  bibdate =      "Wed Jul 14 15:48:23 MDT 2004",
+  bibsource =    "http://dblp.uni-trier.de/db/journals/cacm/cacm2.html#Bemer59a;
+                 http://portal.acm.org/",
+  acknowledgement = ack-nhfb,
+  oldlabel =     "Bemer59a",
+  XMLdata =      "ftp://ftp.informatik.uni-trier.de/pub/users/Ley/bib/records.tar.gz#journals/cacm/Bemer59a",
+}
+
+@Article{Dijkstra:1959:ASC,
+  author =       "Edsger W. Dijkstra and W. Heise and Alan J. Perlis and
+                 K. Samelson",
+  title =        "{ALGOL} Sub-Committee Report --- Extensions",
+  journal =      j-CACM,
+  volume =       "2",
+  number =       "9",
+  pages =        "24--??",
+  month =        "????",
+  year =         "1959",
+  CODEN =        "CACMA2",
+  ISSN =         "0001-0782",
+  bibdate =      "Mon Jan 22 06:36:12 MST 2001",
+  bibsource =    "http://dblp.uni-trier.de/db/journals/cacm/cacm2.html#DijkstraHPS59",
+  oldlabel =     "DijkstraHPS59",
+  XMLdata =      "ftp://ftp.informatik.uni-trier.de/pub/users/Ley/bib/records.tar.gz#journals/cacm/DijkstraHPS59",
+}
+
+@Article{Green:1959:RAS,
+  author =       "Julien Green",
+  title =        "Remarks on {ALGOL} and Symbol Manipulation",
+  journal =      j-CACM,
+  volume =       "2",
+  number =       "9",
+  pages =        "25--27",
+  month =        sep,
+  year =         "1959",
+  CODEN =        "CACMA2",
+  ISSN =         "0001-0782",
+  bibdate =      "Wed Jul 14 15:48:23 MDT 2004",
+  bibsource =    "http://portal.acm.org/;
+                 http://dblp.uni-trier.de/db/journals/cacm/cacm2.html#Green59a",
+  acknowledgement = ack-nhfb,
+  oldlabel =     "Green59a",
+  XMLdata =      "ftp://ftp.informatik.uni-trier.de/pub/users/Ley/bib/records.tar.gz#journals/cacm/Green59a",
+}
+
+@Article{Li:1959:ODB,
+  author =       "Shu-T'ien Li",
+  title =        "Octal Diagrams of Binary Conception and Their
+                 Applicability to Computer Design Logic",
+  journal =      j-CACM,
+  volume =       "2",
+  number =       "9",
+  pages =        "28--29",
+  month =        sep,
+  year =         "1959",
+  CODEN =        "CACMA2",
+  ISSN =         "0001-0782",
+  bibdate =      "Wed Jul 14 15:48:23 MDT 2004",
+  bibsource =    "http://dblp.uni-trier.de/db/journals/cacm/cacm2.html#Li59;
+                 http://portal.acm.org/",
+  acknowledgement = ack-nhfb,
+  oldlabel =     "Li59",
+  XMLdata =      "ftp://ftp.informatik.uni-trier.de/pub/users/Ley/bib/records.tar.gz#journals/cacm/Li59",
+}
+
+@Article{Lesh:1959:MDL,
+  author =       "Fred H. Lesh",
+  title =        "Multi-Dimensional Least-Squares Polynomial Curve
+                 Fitting",
+  journal =      j-CACM,
+  volume =       "2",
+  number =       "9",
+  pages =        "29--30",
+  month =        sep,
+  year =         "1959",
+  CODEN =        "CACMA2",
+  ISSN =         "0001-0782",
+  bibdate =      "Wed Jul 14 15:48:23 MDT 2004",
+  bibsource =    "http://portal.acm.org/;
+                 http://dblp.uni-trier.de/db/journals/cacm/cacm2.html#Lesh59",
+  acknowledgement = ack-nhfb,
+  oldlabel =     "Lesh59",
+  XMLdata =      "ftp://ftp.informatik.uni-trier.de/pub/users/Ley/bib/records.tar.gz#journals/cacm/Lesh59",
+}
+
+@Article{Hornick:1959:ITM,
+  author =       "Scot D. Hornick",
+  title =        "{IBM 709} Tape Matrix Compiler",
+  journal =      j-CACM,
+  volume =       "2",
+  number =       "9",
+  pages =        "31--32",
+  month =        sep,
+  year =         "1959",
+  CODEN =        "CACMA2",
+  ISSN =         "0001-0782",
+  bibdate =      "Wed Jul 14 15:48:23 MDT 2004",
+  bibsource =    "http://dblp.uni-trier.de/db/journals/cacm/cacm2.html#Hornick59;
+                 http://portal.acm.org/",
+  acknowledgement = ack-nhfb,
+  oldlabel =     "Hornick59",
+  XMLdata =      "ftp://ftp.informatik.uni-trier.de/pub/users/Ley/bib/records.tar.gz#journals/cacm/Hornick59",
+}
+
+@Article{Wersan:1959:AVT,
+  author =       "Stephen J. Wersan",
+  title =        "The Alpha Vector Transformation of a System of Linear
+                 Constraints",
+  journal =      j-CACM,
+  volume =       "2",
+  number =       "9",
+  pages =        "33--34",
+  month =        sep,
+  year =         "1959",
+  CODEN =        "CACMA2",
+  ISSN =         "0001-0782",
+  bibdate =      "Wed Jul 14 15:48:23 MDT 2004",
+  bibsource =    "http://portal.acm.org/;
+                 http://dblp.uni-trier.de/db/journals/cacm/cacm2.html#Wersan59",
+  note =         "See corrigendum \cite{Wersan:1959:CAV}.",
+  acknowledgement = ack-nhfb,
+  oldlabel =     "Wersan59",
+  XMLdata =      "ftp://ftp.informatik.uni-trier.de/pub/users/Ley/bib/records.tar.gz#journals/cacm/Wersan59",
+}
+
+@Article{Wersan:1959:CAV,
+  author =       "Stephen J. Wersan",
+  title =        "Corrigendum: {``The Alpha Vector Transformation of a
+                 System of Linear Constraints''}",
+  journal =      j-CACM,
+  volume =       "2",
+  number =       "10",
+  pages =        "39--39",
+  month =        oct,
+  year =         "1959",
+  bibdate =      "Wed Jul 14 16:38:55 2004",
+  note =         "See \cite{Wersan:1959:AVT}.",
+  acknowledgement = ack-nhfb,
+}
+
+@Article{Anonymous:1959:SPT,
+  author =       "Anonymous",
+  title =        "Survey of progress and trend of development and use of
+                 automatic data processing in business and management
+                 control systems of the {Federal Government}, as of
+                 {December 1957} --- {III}",
+  journal =      j-CACM,
+  volume =       "2",
+  number =       "9",
+  pages =        "34--43",
+  month =        sep,
+  year =         "1959",
+  CODEN =        "CACMA2",
+  ISSN =         "0001-0782",
+  bibdate =      "Wed Jul 14 15:48:23 MDT 2004",
+  bibsource =    "http://portal.acm.org/",
+  acknowledgement = ack-nhfb,
+}
+
+@Article{Machmudov:1959:LSS,
+  author =       "U. A. Machmudov and A. S. Popov",
+  title =        "{LEM-1}, Small Size General Purpose Digital Computer
+                 Using Magnetic (Ferrite) Elements",
+  journal =      j-CACM,
+  volume =       "2",
+  number =       "10",
+  pages =        "3--9",
+  month =        oct,
+  year =         "1959",
+  CODEN =        "CACMA2",
+  ISSN =         "0001-0782",
+  bibdate =      "Wed Jul 14 15:48:24 MDT 2004",
+  bibsource =    "http://portal.acm.org/;
+                 http://dblp.uni-trier.de/db/journals/cacm/cacm2.html#MachmudovP59",
+  acknowledgement = ack-nhfb,
+  oldlabel =     "MachmudovP59",
+  XMLdata =      "ftp://ftp.informatik.uni-trier.de/pub/users/Ley/bib/records.tar.gz#journals/cacm/MachmudovP59",
+}
+
+@Article{Takasaki:1959:JDC,
+  author =       "Isao Takasaki",
+  title =        "{J.E.I.D.A.} and Its {Computer Center}",
+  journal =      j-CACM,
+  volume =       "2",
+  number =       "10",
+  pages =        "10--16",
+  month =        oct,
+  year =         "1959",
+  CODEN =        "CACMA2",
+  ISSN =         "0001-0782",
+  bibdate =      "Wed Jul 14 15:48:24 MDT 2004",
+  bibsource =    "http://dblp.uni-trier.de/db/journals/cacm/cacm2.html#Anonymous59;
+                 http://portal.acm.org/",
+  acknowledgement = ack-nhfb,
+  oldlabel =     "Anonymous59",
+  XMLdata =      "ftp://ftp.informatik.uni-trier.de/pub/users/Ley/bib/records.tar.gz#journals/cacm/Anonymous59",
+}
+
+@Article{Bright:1959:SPS,
+  author =       "H. S. Bright",
+  title =        "Standards: Proposed standard flow chart symbols",
+  journal =      j-CACM,
+  volume =       "2",
+  number =       "10",
+  pages =        "17--17",
+  month =        oct,
+  year =         "1959",
+  CODEN =        "CACMA2",
+  ISSN =         "0001-0782",
+  bibdate =      "Wed Jul 14 15:48:24 MDT 2004",
+  bibsource =    "http://portal.acm.org/",
+  acknowledgement = ack-nhfb,
+}
+
+@Article{Fritz:1959:PSF,
+  author =       "W. Barkley Fritz and Marion Campbell and Webb T.
+                 Comfort and Frank Engel and Millard H. Perstein and
+                 Joseph H. Wegstein",
+  title =        "Proposed Standard Flow Chart Symbols",
+  journal =      j-CACM,
+  volume =       "2",
+  number =       "10",
+  pages =        "17--18",
+  month =        "????",
+  year =         "1959",
+  CODEN =        "CACMA2",
+  ISSN =         "0001-0782",
+  bibdate =      "Mon Jan 22 06:42:28 MST 2001",
+  bibsource =    "http://dblp.uni-trier.de/db/journals/cacm/cacm2.html#Fritz59",
+  oldlabel =     "Fritz59",
+  XMLdata =      "ftp://ftp.informatik.uni-trier.de/pub/users/Ley/bib/records.tar.gz#journals/cacm/Fritz59",
+}
+
+@Article{Kanner:1959:AT,
+  author =       "H. Kanner",
+  title =        "An Algebraic Translator",
+  journal =      j-CACM,
+  volume =       "2",
+  number =       "10",
+  pages =        "19--22",
+  month =        oct,
+  year =         "1959",
+  CODEN =        "CACMA2",
+  ISSN =         "0001-0782",
+  bibdate =      "Wed Jul 14 15:48:24 MDT 2004",
+  bibsource =    "http://dblp.uni-trier.de/db/journals/cacm/cacm2.html#Kaner59;
+                 http://portal.acm.org/",
+  acknowledgement = ack-nhfb,
+  oldlabel =     "Kaner59",
+  XMLdata =      "ftp://ftp.informatik.uni-trier.de/pub/users/Ley/bib/records.tar.gz#journals/cacm/Kaner59",
+}
+
+@Article{Brittenham:1959:SSA,
+  author =       "W. R. Brittenham and K. Clark and G. Kuss and H.
+                 Thompson",
+  title =        "{SALE}, a {Simple Algebraic Language for Engineers}",
+  journal =      j-CACM,
+  volume =       "2",
+  number =       "10",
+  pages =        "22--24",
+  month =        oct,
+  year =         "1959",
+  CODEN =        "CACMA2",
+  ISSN =         "0001-0782",
+  bibdate =      "Wed Jul 14 15:48:24 MDT 2004",
+  bibsource =    "http://portal.acm.org/;
+                 http://dblp.uni-trier.de/db/journals/cacm/cacm2.html#BrittenhamCKT59",
+  acknowledgement = ack-nhfb,
+  oldlabel =     "BrittenhamCKT59",
+  XMLdata =      "ftp://ftp.informatik.uni-trier.de/pub/users/Ley/bib/records.tar.gz#journals/cacm/BrittenhamCKT59",
+}
+
+@Article{Anonymous:1959:RSA,
+  author =       "Anonymous",
+  title =        "Recommendations of the {SHARE ALGOL} Committee",
+  journal =      j-CACM,
+  volume =       "2",
+  number =       "10",
+  pages =        "25--26",
+  month =        "????",
+  year =         "1959",
+  CODEN =        "CACMA2",
+  ISSN =         "0001-0782",
+  bibdate =      "Mon Jan 22 06:21:36 MST 2001",
+  bibsource =    "http://dblp.uni-trier.de/db/journals/cacm/cacm2.html#Anonymous59a",
+  oldlabel =     "Anonymous59a",
+  XMLdata =      "ftp://ftp.informatik.uni-trier.de/pub/users/Ley/bib/records.tar.gz#journals/cacm/Anonymous59a",
+}
+
+@Article{Cook:1959:EMG,
+  author =       "J. M. Cook",
+  title =        "An Efficient Method for Generating Uniformly
+                 Distributed Points on the Surface on an $n$-Dimensional
+                 Sphere (Remarks)",
+  journal =      j-CACM,
+  volume =       "2",
+  number =       "10",
+  pages =        "26--??",
+  month =        "????",
+  year =         "1959",
+  CODEN =        "CACMA2",
+  ISSN =         "0001-0782",
+  bibdate =      "Mon Jan 22 06:32:35 MST 2001",
+  bibsource =    "http://dblp.uni-trier.de/db/journals/cacm/cacm2.html#Cook59",
+  oldlabel =     "Cook59",
+  XMLdata =      "ftp://ftp.informatik.uni-trier.de/pub/users/Ley/bib/records.tar.gz#journals/cacm/Cook59",
+}
+
+@Article{Gorn:1959:CMF,
+  author =       "Saul Gorn and P. Z. Ingerman and J. B. Crozier",
+  title =        "On the Construction of Micro-Flowcharts",
+  journal =      j-CACM,
+  volume =       "2",
+  number =       "10",
+  pages =        "27--31",
+  month =        oct,
+  year =         "1959",
+  CODEN =        "CACMA2",
+  ISSN =         "0001-0782",
+  bibdate =      "Wed Jul 14 15:48:24 MDT 2004",
+  bibsource =    "ftp://ftp.ira.uka.de/pub/bibliography/Misc/arch.bib;
+                 http://dblp.uni-trier.de/db/journals/cacm/cacm2.html#GornIC59;
+                 http://portal.acm.org/",
+  acknowledgement = ack-nhfb,
+  oldlabel =     "GornIC59",
+  XMLdata =      "ftp://ftp.informatik.uni-trier.de/pub/users/Ley/bib/records.tar.gz#journals/cacm/GornIC59",
+}
+
+@Article{Hamblen:1959:SPIb,
+  author =       "John W. Hamblen",
+  title =        "Statistical programs for the {IBM 650} --- {Part II}",
+  journal =      j-CACM,
+  volume =       "2",
+  number =       "10",
+  pages =        "32--37",
+  month =        oct,
+  year =         "1959",
+  CODEN =        "CACMA2",
+  ISSN =         "0001-0782",
+  bibdate =      "Wed Jul 14 15:48:24 MDT 2004",
+  bibsource =    "http://portal.acm.org/;
+                 http://dblp.uni-trier.de/db/journals/cacm/cacm2.html#Hamblen59a",
+  acknowledgement = ack-nhfb,
+  oldlabel =     "Hamblen59a",
+  XMLdata =      "ftp://ftp.informatik.uni-trier.de/pub/users/Ley/bib/records.tar.gz#journals/cacm/Hamblen59a",
+}
+
+@Article{Fike:1959:SBA,
+  author =       "C. T. Fike",
+  title =        "Scientific and Business Applications: {{\sc Oracle}}
+                 Curve Plotter",
+  journal =      j-CACM,
+  volume =       "2",
+  number =       "10",
+  pages =        "38--39",
+  month =        "????",
+  year =         "1959",
+  CODEN =        "CACMA2",
+  ISSN =         "0001-0782",
+  bibdate =      "Mon Jan 22 06:39:31 MST 2001",
+  bibsource =    "http://portal.acm.org/;
+                 http://dblp.uni-trier.de/db/journals/cacm/cacm2.html#Fike59",
+  keywords =     "Oak Ridge Automatic Computer and Logical Engine
+                 (ORACLE), operated at Oak Ridge National Laboratory,
+                 Oak Ridge, Tennessee.",
+  oldlabel =     "Fike59",
+  XMLdata =      "ftp://ftp.informatik.uni-trier.de/pub/users/Ley/bib/records.tar.gz#journals/cacm/Fike59",
+}
+
+@Article{Nadler:1959:SRC,
+  author =       "Mortin Nadler and A. Sengupta",
+  title =        "Shift-Register Code for Indexing Applications",
+  journal =      j-CACM,
+  volume =       "2",
+  number =       "10",
+  pages =        "40--43",
+  month =        oct,
+  year =         "1959",
+  CODEN =        "CACMA2",
+  ISSN =         "0001-0782",
+  bibdate =      "Wed Jul 14 15:48:24 MDT 2004",
+  bibsource =    "http://dblp.uni-trier.de/db/journals/cacm/cacm2.html#NadlerS59;
+                 http://portal.acm.org/",
+  acknowledgement = ack-nhfb,
+  oldlabel =     "NadlerS59",
+  XMLdata =      "ftp://ftp.informatik.uni-trier.de/pub/users/Ley/bib/records.tar.gz#journals/cacm/NadlerS59",
+}
+
+@Article{Zaitzeff:1959:RVU,
+  author =       "E. M. Zaitzeff and Morton M. Astrahan",
+  title =        "{Russian} Visit to {U.S.} Computers",
+  journal =      j-CACM,
+  volume =       "2",
+  number =       "11",
+  pages =        "4--11",
+  month =        nov,
+  year =         "1959",
+  CODEN =        "CACMA2",
+  ISSN =         "0001-0782",
+  bibdate =      "Wed Jul 14 15:48:24 MDT 2004",
+  bibsource =    "http://dblp.uni-trier.de/db/journals/cacm/cacm2.html#ZaitzeffA59;
+                 http://portal.acm.org/",
+  acknowledgement = ack-nhfb,
+  oldlabel =     "ZaitzeffA59",
+  XMLdata =      "ftp://ftp.informatik.uni-trier.de/pub/users/Ley/bib/records.tar.gz#journals/cacm/ZaitzeffA59",
+}
+
+@Article{Codd:1959:MSF,
+  author =       "E. F. Codd and E. S. Lowry and E. McDonough and Casper
+                 A. Scalzi",
+  title =        "Multiprogramming {STRETCH}: Feasibility
+                 Considerations",
+  journal =      j-CACM,
+  volume =       "2",
+  number =       "11",
+  pages =        "13--17",
+  month =        nov,
+  year =         "1959",
+  CODEN =        "CACMA2",
+  ISSN =         "0001-0782",
+  bibdate =      "Wed Jul 14 15:48:24 MDT 2004",
+  bibsource =    "http://dblp.uni-trier.de/db/journals/cacm/cacm2.html#CoddLMS59;
+                 http://portal.acm.org/",
+  acknowledgement = ack-nhfb,
+  oldlabel =     "CoddLMS59",
+  XMLdata =      "ftp://ftp.informatik.uni-trier.de/pub/users/Ley/bib/records.tar.gz#journals/cacm/CoddLMS59",
+}
+
+@Article{Gant:1959:FOS,
+  author =       "W. T. Gant",
+  title =        "Flow Outlining --- {A} Substitute for Flow Charting",
+  journal =      j-CACM,
+  volume =       "2",
+  number =       "11",
+  pages =        "17--17",
+  month =        nov,
+  year =         "1959",
+  CODEN =        "CACMA2",
+  ISSN =         "0001-0782",
+  bibdate =      "Wed Jul 14 15:48:24 MDT 2004",
+  bibsource =    "http://dblp.uni-trier.de/db/journals/cacm/cacm2.html#Gant59;
+                 http://portal.acm.org/",
+  acknowledgement = ack-nhfb,
+  oldlabel =     "Gant59",
+  XMLdata =      "ftp://ftp.informatik.uni-trier.de/pub/users/Ley/bib/records.tar.gz#journals/cacm/Gant59",
+}
+
+@Article{Knuth:1959:RAT,
+  author =       "Donald E. Knuth",
+  title =        "{Runcible} --- Algebraic translation on a limited
+                 computer",
+  journal =      j-CACM,
+  volume =       "2",
+  number =       "11",
+  pages =        "18--21",
+  month =        nov,
+  year =         "1959",
+  CODEN =        "CACMA2",
+  ISSN =         "0001-0782",
+  bibdate =      "Wed Jul 14 15:48:24 MDT 2004",
+  bibsource =    "http://portal.acm.org/;
+                 http://dblp.uni-trier.de/db/journals/cacm/cacm2.html#Knuth59",
+  acknowledgement = ack-nhfb,
+  oldlabel =     "Knuth59",
+  XMLdata =      "ftp://ftp.informatik.uni-trier.de/pub/users/Ley/bib/records.tar.gz#journals/cacm/Knuth59",
+}
+
+@Article{Greenwald:1959:THM,
+  author =       "Irwin D. Greenwald",
+  title =        "A Technique for Handling Macro Instructions",
+  journal =      j-CACM,
+  volume =       "2",
+  number =       "11",
+  pages =        "21--22",
+  month =        nov,
+  year =         "1959",
+  CODEN =        "CACMA2",
+  ISSN =         "0001-0782",
+  bibdate =      "Wed Jul 14 15:48:24 MDT 2004",
+  bibsource =    "http://portal.acm.org/;
+                 http://dblp.uni-trier.de/db/journals/cacm/cacm2.html#Greenwald59",
+  note =         "See corrigendum \cite{Anonymous:1960:CTH}.",
+  acknowledgement = ack-nhfb,
+  oldlabel =     "Greenwald59",
+  XMLdata =      "ftp://ftp.informatik.uni-trier.de/pub/users/Ley/bib/records.tar.gz#journals/cacm/Greenwald59",
+}
+
+@Article{Sarafyan:1959:NMC,
+  author =       "Diran Sarafyan",
+  title =        "A New Method of Computation of Square Roots Without
+                 Using Division",
+  journal =      j-CACM,
+  volume =       "2",
+  number =       "11",
+  pages =        "23--24",
+  month =        nov,
+  year =         "1959",
+  CODEN =        "CACMA2",
+  ISSN =         "0001-0782",
+  bibdate =      "Wed Jul 14 15:48:24 MDT 2004",
+  bibsource =    "http://dblp.uni-trier.de/db/journals/cacm/cacm2.html#Sarafyan59;
+                 http://portal.acm.org/",
+  note =         "See comments \cite{Traub:1960:CNM}.",
+  acknowledgement = ack-nhfb,
+  oldlabel =     "Sarafyan59",
+  XMLdata =      "ftp://ftp.informatik.uni-trier.de/pub/users/Ley/bib/records.tar.gz#journals/cacm/Sarafyan59",
+}
+
+@Article{Nadler:1959:SNC,
+  author =       "Morton Nadler",
+  title =        "Some Notes on Computer Research in {Eastern Europe}",
+  journal =      j-CACM,
+  volume =       "2",
+  number =       "12",
+  pages =        "1--2",
+  month =        dec,
+  year =         "1959",
+  CODEN =        "CACMA2",
+  ISSN =         "0001-0782",
+  bibdate =      "Wed Jul 14 15:48:24 MDT 2004",
+  bibsource =    "http://portal.acm.org/;
+                 http://dblp.uni-trier.de/db/journals/cacm/cacm2.html#Nadler59",
+  acknowledgement = ack-nhfb,
+  oldlabel =     "Nadler59",
+  XMLdata =      "ftp://ftp.informatik.uni-trier.de/pub/users/Ley/bib/records.tar.gz#journals/cacm/Nadler59",
+}
+
+@Article{Buchholz:1959:FFC,
+  author =       "Wilfried Buchholz",
+  title =        "Fingers or Fists? (The Choice of Decimal or Binary
+                 Representation)",
+  journal =      j-CACM,
+  volume =       "2",
+  number =       "12",
+  pages =        "3--11",
+  month =        dec,
+  year =         "1959",
+  CODEN =        "CACMA2",
+  ISSN =         "0001-0782",
+  bibdate =      "Wed Jul 14 15:48:24 MDT 2004",
+  bibsource =    "http://dblp.uni-trier.de/db/journals/cacm/cacm2.html#Buchholz59;
+                 http://portal.acm.org/",
+  note =         "See letters \cite{Maehly:1960:LEF}.",
+  acknowledgement = ack-nhfb,
+  oldlabel =     "Buchholz59",
+  XMLdata =      "ftp://ftp.informatik.uni-trier.de/pub/users/Ley/bib/records.tar.gz#journals/cacm/Buchholz59",
+}
+
+@Article{Wolfe:1959:SMS,
+  author =       "Philip Wolfe",
+  title =        "The Secant Method for Simultaneous Nonlinear
+                 Equations",
+  journal =      j-CACM,
+  volume =       "2",
+  number =       "12",
+  pages =        "12--13",
+  month =        dec,
+  year =         "1959",
+  CODEN =        "CACMA2",
+  ISSN =         "0001-0782",
+  bibdate =      "Wed Jul 14 15:48:24 MDT 2004",
+  bibsource =    "http://portal.acm.org/;
+                 ftp://ftp.ira.uka.de/pub/bibliography/Theory/Matrix.bib;
+                 http://dblp.uni-trier.de/db/journals/cacm/cacm2.html#Wolfe59",
+  acknowledgement = ack-nhfb,
+  kwds =         "nlop, secant method",
+  oldlabel =     "Wolfe59",
+  XMLdata =      "ftp://ftp.informatik.uni-trier.de/pub/users/Ley/bib/records.tar.gz#journals/cacm/Wolfe59",
+}
+
+@Article{Irons:1959:PIA,
+  author =       "Edgar T. Irons and F. S. Acton",
+  title =        "A Proposed Interpretation in {ALGOL}",
+  journal =      j-CACM,
+  volume =       "2",
+  number =       "12",
+  pages =        "14--15",
+  month =        dec,
+  year =         "1959",
+  CODEN =        "CACMA2",
+  ISSN =         "0001-0782",
+  bibdate =      "Wed Jul 14 15:48:24 MDT 2004",
+  bibsource =    "http://dblp.uni-trier.de/db/journals/cacm/cacm2.html#IronsA59;
+                 http://portal.acm.org/",
+  acknowledgement = ack-nhfb,
+  oldlabel =     "IronsA59",
+  XMLdata =      "ftp://ftp.informatik.uni-trier.de/pub/users/Ley/bib/records.tar.gz#journals/cacm/IronsA59",
+}
+
+@Article{Humphrey:1959:ICD,
+  author =       "Stanley M. Humphrey",
+  title =        "Impact of computer developments: an address before the
+                 {Bendix G-15} users exchange conference, {September 17,
+                 1959}",
+  journal =      j-CACM,
+  volume =       "2",
+  number =       "12",
+  pages =        "16--19",
+  month =        dec,
+  year =         "1959",
+  CODEN =        "CACMA2",
+  ISSN =         "0001-0782",
+  bibdate =      "Wed Jul 14 15:48:24 MDT 2004",
+  bibsource =    "http://portal.acm.org/;
+                 http://dblp.uni-trier.de/db/journals/cacm/cacm2.html#Humphrey59",
+  acknowledgement = ack-nhfb,
+  oldlabel =     "Humphrey59",
+  XMLdata =      "ftp://ftp.informatik.uni-trier.de/pub/users/Ley/bib/records.tar.gz#journals/cacm/Humphrey59",
+}
+
+@Article{Conway:1959:QNS,
+  author =       "Richard W. Conway and B. M. Johnson and William L.
+                 Maxwell",
+  title =        "A Queue Network Simulator for the {IBM 650} and
+                 {Burroughs 220}",
+  journal =      j-CACM,
+  volume =       "2",
+  number =       "12",
+  pages =        "20--23",
+  month =        dec,
+  year =         "1959",
+  CODEN =        "CACMA2",
+  ISSN =         "0001-0782",
+  bibdate =      "Wed Jul 14 15:48:24 MDT 2004",
+  bibsource =    "http://dblp.uni-trier.de/db/journals/cacm/cacm2.html#ConwayJM59;
+                 http://portal.acm.org/",
+  acknowledgement = ack-nhfb,
+  oldlabel =     "ConwayJM59",
+  XMLdata =      "ftp://ftp.informatik.uni-trier.de/pub/users/Ley/bib/records.tar.gz#journals/cacm/ConwayJM59",
+}
+
+@Article{Anonymous:1960:CTH,
+  author =       "Anonymous",
+  title =        "Corrigendum: {``A Technique for Handling Macro
+                 Instructions'', by Irwin D. Greenwald, {\em
+                 Communications ACM} {\bf 2}, No. 11 (Nov. 1959)}",
+  journal =      j-CACM,
+  volume =       "3",
+  number =       "2",
+  pages =        "75--75",
+  month =        feb,
+  year =         "1960",
+  CODEN =        "CACMA2",
+  DOI =          "http://doi.acm.org/10.1145/366959.366964",
+  ISSN =         "0001-0782",
+  bibdate =      "Fri Nov 25 18:19:25 MST 2005",
+  bibsource =    "ftp://ftp.math.utah.edu/pub/tex/bib/cacm1960.bib;
+                 http://www.acm.org/pubs/contents/journals/cacm/",
+  note =         "See \cite{Greenwald:1959:THM}.",
+  acknowledgement = ack-nhfb,
+}
+
+@Article{Traub:1960:CNM,
+  author =       "J. F. Traub",
+  title =        "Comments on a recent paper [{``A New Method of
+                 Computation of Square Roots Without Using
+                 Division''}]",
+  journal =      j-CACM,
+  volume =       "3",
+  number =       "2",
+  pages =        "86--86",
+  month =        feb,
+  year =         "1960",
+  CODEN =        "CACMA2",
+  ISSN =         "0001-0782",
+  bibdate =      "Fri Nov 25 18:19:25 MST 2005",
+  bibsource =    "ftp://ftp.math.utah.edu/pub/tex/bib/cacm1960.bib;
+                 http://dblp.uni-trier.de/db/journals/cacm/cacm3.html#Traub60;
+                 http://www.acm.org/pubs/contents/journals/cacm/",
+  note =         "See \cite{Sarafyan:1959:NMC}.",
+  acknowledgement = ack-nhfb,
+  oldlabel =     "Traub60",
+  XMLdata =      "ftp://ftp.informatik.uni-trier.de/pub/users/Ley/bib/records.tar.gz#journals/cacm/Traub60",
+}
+
+@Article{Maehly:1960:LEF,
+  author =       "Hans J. Maehly and J. Svigals and J. B. Reid",
+  title =        "Letters to the {Editor}: Fingers or Fists? (The Choice
+                 of Decimal or Binary Representation)",
+  journal =      j-CACM,
+  volume =       "3",
+  number =       "3",
+  pages =        "A11--A13",
+  month =        mar,
+  year =         "1960",
+  CODEN =        "CACMA2",
+  ISSN =         "0001-0782",
+  bibdate =      "Sat Nov 26 18:58:20 2005",
+  bibsource =    "ftp://ftp.math.utah.edu/pub/tex/bib/cacm1960.bib;
+                 http://www.acm.org/pubs/contents/journals/cacm/",
+  note =         "See \cite{Buchholz:1959:FFC}.",
+  acknowledgement = ack-nhfb,
+  articleno =    "1",
+  keywords =     "balanced ternary arithmetic; binary arithmetic;
+                 decimal arithmetic",
+}
+
+@Article{Traub:1960:CPP,
+  author =       "J. F. Traub",
+  title =        "Comment on a Previous Paper [{M. J. Aegerter, {\em
+                 Construction of a Set of Test Matrices}, Comm. ACM {\bf
+                 2}(8), 10--12 August (1990)}]",
+  journal =      j-CACM,
+  volume =       "3",
+  number =       "6",
+  pages =        "352--352",
+  month =        jun,
+  year =         "1960",
+  CODEN =        "CACMA2",
+  ISSN =         "0001-0782",
+  MRclass =      "68.00",
+  MRnumber =     "22\#8714",
+  bibdate =      "Fri Nov 25 18:19:27 MST 2005",
+  bibsource =    "ftp://ftp.math.utah.edu/pub/tex/bib/cacm1960.bib;
+                 http://www.acm.org/pubs/contents/journals/cacm/",
+  note =         "See \cite{Aegerter:1959:CST}.",
+  acknowledgement = ack-nhfb,
+}

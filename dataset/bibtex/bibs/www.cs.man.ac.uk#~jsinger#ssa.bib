@@ -1,0 +1,1413 @@
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%
+% >>> Compiler textbooks
+%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+@book{appel98,
+  author =	 {Andrew W. Appel},
+  title =	 {Modern Compiler Implementation in \{C,Java,ML\}},
+  publisher =	 {Cambridge University Press},
+  year =	 {1998},
+}
+
+@book{muchnick97,
+  author =	 {Steven S. Muchnick},
+  title =	 {Advanced Compiler Design and Implementation},
+  publisher =	 {Morgan Kaufmann},
+  year =	 {1997},
+}
+
+@book{allen02optimizing,
+  author =	 "Randy Allen and Ken Kennedy",
+  title =	 "Optimizing Compilers for Modern Architectures: A
+                  Dependence-Based Approach",
+  publisher =	 {Morgan Kaufmann},
+  year =	 "2002",
+}
+
+@book{nnh99,
+  author =	 {Flemming Nielson and Hanne Riis Nielson and Chris Hankin},
+  title =	 {Principles of Program Analysis},
+  publisher =	 {Springer},
+  year =	 {1999},
+}
+
+@book{ct04,
+  author =	 "Keith D. Cooper and Linda Torczon",
+  title =	 "Engineering a Compiler",
+  publisher =	 "Morgan Kaufmann",
+  year =	 "2004",
+  abstract =	 "plenty of information about SSA",
+}
+
+@book{morgan98,
+ author = "Robert Morgan",
+ title = "Building an Optimizing Compiler",
+ publisher = "Digital Press",
+ year = "1998",
+ abstract = "out of print",
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% >>> SSA classic papers
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+@article{cytron91efficiently,
+  author =	 "Ron Cytron and Jeanne Ferrante and Barry K. Rosen and Mark
+                  N. Wegman and F. Kenneth Zadeck",
+  title =	 "Efficiently Computing Static Single Assignment Form and the
+                  Control Dependence Graph",
+  journal =	 "ACM Transactions on Programming Languages and Systems",
+  volume =	 "13",
+  number =	 "4",
+  month =	 "Oct",
+  publisher =	 "ACM Press",
+  pages =	 "451--490",
+  year =	 "1991",
+  abstract =	 "The most important paper in the field. Comprehensive yet
+                  readable. Note there was an earlier version at POPL 89.",
+  url =		 "http://doi.acm.org/10.1145/115372.115320",
+}
+
+@article{wegman91constant,
+  author =	 "Mark N. Wegman and F. Kenneth Zadeck",
+  title =	 "Constant propagation with conditional branches",
+  journal =	 "ACM Transactions on Programming Languages and Systems",
+  volume =	 "13",
+  number =	 "2",
+  pages =	 "181--210",
+  month =	 "Apr",
+  year =	 "1991",
+  publisher =	 "ACM Press",
+  abstract =	 "A fascinating account of constant propagation - different
+                  approaches. Clear application of SSA to good advantage.",
+  url =		 "http://doi.acm.org/10.1145/103135.103136",
+}
+
+@inproceedings{rosen88global,
+  author =	 {B. K. Rosen and M. N. Wegman and F. K. Zadeck},
+  title =	 {Global value numbers and redundant computations},
+  booktitle =	 {Proceedings of the 15th ACM SIGPLAN-SIGACT Symposium on
+                  Principles of Programming Languages},
+  year =	 {1988},
+  pages =	 {12--27},
+  abstract =	 "early paper from SSA authors",
+  url =		 "http://doi.acm.org/10.1145/73560.73562",
+}
+
+@inproceedings{alpern88detecting,
+  author =	 "B. Alpern and M. N. Wegman and F. K. Zadeck",
+  title =	 "Detecting equality of variables in programs",
+  booktitle =	 {Proceedings of the 15th ACM SIGPLAN-SIGACT Symposium on
+                  Principles of Programming Languages},
+  pages =	 "1--11",
+  year =	 "1988",
+  abstract =	 "early paper from SSA authors",
+  url =		 "http://doi.acm.org/10.1145/73560.73561",
+}
+
+
+@article{briggs98practical,
+  author =	 "Preston Briggs and Keith D. Cooper and Timothy J. Harvey and
+                  L. Taylor Simpson",
+  title =	 "Practical Improvements to the Construction and Destruction
+                  of Static Single Assignment Form",
+  journal =	 "Software---Practice and Experience",
+  volume =	 "28",
+  number =	 "8",
+  pages =	 "859--881",
+  month =	 "Jul",
+  year =	 "1998",
+  abstract =	 "describes semi-pruned SSA form, as used in Machine
+                  SUIF. Cheaper to compute than fully pruned form yet nearly
+                  as small.",
+  url =		 "http://citeseer.ist.psu.edu/briggs98practical.html",
+}
+
+@inproceedings{aycock00simple,
+  author =	 "John Aycock and Nigel Horspool",
+  title =	 "Simple Generation of static single assignment form",
+  booktitle =	 "Proceedings of the 9th International Conference in Compiler
+                  Construction",
+  year =	 "2000",
+  pages =	 "110--125",
+  publisher =	 "Springer",
+  series =	 "Lecture Notes in Computer Science",
+  volume =	 "1781",
+  abstract =	 "pessimistic construction of SSA - not v efficient idea but a
+                  really neat way of presenting it",
+  url =		 "http://citeseer.ist.psu.edu/aycock00simple.html",
+}
+
+@article{brandis94single,
+  author =	 {Marc M. Brandis and Hanspeter M\"{o}ssenb\"{o}ck},
+  title =	 {Single-pass generation of static single-assignment form for
+                  structured languages},
+  journal =	 {ACM Transactions on Programming Languages and Systems},
+  volume =	 {16},
+  number =	 {6},
+  month =	 "Nov",
+  year =	 {1994},
+  pages =	 {1684--1698},
+  abstract =	 "syntax directed SSA construction for Oberon, a high-level
+                  very well-structured language",
+  url =		 "http://doi.acm.org/10.1145/197320.197331",
+}
+
+@inproceedings{choi96incremental,
+ author = "J.-D. Choi and V. Sarkar and E. Schonberg",
+ title = "Incremental computation of static single assignment form",
+ booktitle = "Sixth International Conference on Compiler Construction",
+ series = "Lecture Notes in Computer Science",
+ volume = "1060",
+ month = "Apr",
+ year = "1996",
+ pages = "223--237",
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% >>> Pre-SSA Historical Papers
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+@techreport{shapiro70representation,
+  author =	 "Shapiro, R. M. and Saint, H.",
+  title =	 "The representation of algorithms",
+  number =	 "CA-7002-1432",
+  institution =	 "Massachusetts Computer Associates",
+  month =	 "Feb",
+  year =	 "1970",
+  abstract =	 "inspiration for SSA. this paper not actually available, but
+                  everyone cites it!",
+}
+
+@article{lengauer79fast,
+  title =	 "A fast algorithm for finding dominators in a flowgraph",
+  author =	 "Thomas Lengauer and Robert E. Tarjan",
+  journal =	 "ACM Transactions on Programming Languages and Systems",
+  volume =	 "1",
+  number =	 "1",
+  pages =	 "121--141",
+  month =	 "Jul",
+  year =	 "1979",
+  abstract =	 "the classic paper on how to compute dominators quickly.",
+  url =		 "http://doi.acm.org/10.1145/357062.357071",
+}
+
+@article{reif82symbolic,
+ title = "Symbolic Program Analysis in Almost Linear Time",
+ author = "Reif, J. H. and Tarjan, R. E.",
+ journal = "SIAM Journal on Computing",
+ month = "Feb",
+ year = "1982",
+ volume = "11",
+ number = "1",
+ pages = "81--93",
+ url = {http://link.aip.org/link/?SMJ/11/81/1},
+ abstract = { ***The date is wrong on the top of the paper.*** In
+this paper an "optimal" algorithm is given to compute simple join
+birthpoints. An earlier version appeared in POPL}
+}
+ 
+@inproceedings{reif77symbolic,
+ title = "Symbolic Evaluation and the Global Value Graph",
+ author = "Reif, J. H. and Lewis, H. R.",
+ booktitle = "Proceedings of the 4th ACM SIGACT-SIGPLAN Symposium on Principles of Programming Languages",
+ year = "1977",
+ pages = "104--118",
+ url = {http://doi.acm.org/10.1145/512950.512961},
+ abstract = { global value graph (pre-SSA IR) for linear time constant propagation}
+}
+ 
+@article{reif86efficient,
+ title = "Efficent Symbolic Analysis of Programs",
+ author = "Reif, J. H. and Lewis, H. R.",
+ journal = "Journal of Computer and System Sciences",
+ volume = "32",
+ number = "3",
+ month = "Jun",
+ year = "1986",
+ pages = "280--313",
+ url = {http://dx.doi.org/10.1016/0022-0000(86)90031-0},
+ abstract = { linear algorithm is given to perform constant
+propagation in time linear in the size of the use-definition chains.
+Updated version of Reif77 and Reif82 }
+}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% >>> phi-function placement algorithms
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+@techreport{bilardi99static,
+  author =	 "Gianfranco Bilardi and Keshav Pingali",
+  title =	 "The Static Single Assignment Form and its Computation",
+  month =	 "Jul",
+  year =	 "1999",
+  institution =	 "Department of Computer Science, Cornell University",
+  abstract =	 "a linear $\phi$-function placement algm",
+  url =		 "http://citeseer.ist.psu.edu/bilardi99static.html",
+}
+
+@article{bilardi03algorithms,
+  author =	 {Gianfranco Bilardi and Keshav Pingali},
+  title =	 {Algorithms for computing the static single assignment form},
+  journal =	 {Journal of the ACM},
+  volume =	 {50},
+  number =	 {3},
+  month =	 "May",
+  year =	 {2003},
+  pages =	 {375--425},
+  abstract =	 "rather complicated expansion of above tech
+                  report. Theoretical framework for $\phi$-fn placement
+                  algorithms, general enough to cope with most other placement
+                  algms!",
+  url =		 "http://doi.acm.org/10.1145/765568.765573",
+}
+
+@inproceedings{sreedhar95linear,
+  author =	 "Vugranam C. Sreedhar and Guang R. Gao",
+  title =	 "A Linear Time Algorithm for Placing $\phi$-nodes",
+  booktitle =	 {Proceedings of the 22nd ACM SIGPLAN-SIGACT Symposium on
+                  Principles of Programming Languages},
+  pages =	 "62--73",
+  year =	 "1995",
+  abstract =	 "title says it all - although this one doesn't go as fast as
+                  Bilardi and Pingali, according to BP's paper (a personal
+                  communication). However, this is the one that Microsoft use
+                  for their Marmot compiler - so it must be ok... uses data
+                  structures known as DJ-graphs.",
+  url =		 "http://doi.acm.org/10.1145/199448.199464",
+}
+
+@article{das05practical,
+ author = {Dibyendu Das and U. Ramakrishna},
+ title = {A practical and fast iterative algorithm for $\phi$-function computation using {DJ} graphs},
+ journal = {ACM Transactions on Programming Languages and Systems},
+ volume = {27},
+ number = {3},
+ year = {2005},
+ pages = {426--440},
+ abstract = "precomputes merge sets for each CFG node. The merge set is the set of locations where phi-fns will be needed for vars defined in n. Do not need to recompute if phi-fns are later placed in n. Apparently good for dense variable definitions, demonstrated on SPEC CPU 2000.",
+}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% >>> SSA extensions
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% array and object extensions
+@inproceedings{knobe98array,
+  author =	 {Kathleen Knobe and Vivek Sarkar},
+  title =	 {Array {SSA} form and its use in parallelization},
+  booktitle =	 {Proceedings of the 25th ACM SIGPLAN-SIGACT Symposium on
+                  Principles of Programming Languages},
+  year =	 {1998},
+  pages =	 {107--120},
+  abstract =	 "extends SSA form to handle arrays more elegantly",
+  url =		 "http://doi.acm.org/10.1145/268946.268956",
+}
+
+@inproceedings{fink00unified,
+  author =	 "Stephen Fink and Kathleen Knobe and Vivek Sarkar",
+  title =	 "Unified Analysis of Array and Object References in Strongly
+                  Typed Languages",
+  booktitle =	 "Proceedings of the 7th International Static Analysis
+                  Symposium",
+  year =	 "2000",
+  pages =	 "155-174",
+  publisher =	 "Springer",
+  series =	 "Lecture Notes in Computer Science",
+  volume =	 "1824",
+  abstract =	 "extends SSA to handle arrays and objects, in Java-like
+                  langs. Builds upon the original Array SSA - by splitting
+                  classes up into heap-arrays of appropriate fields, and
+                  indexing into these heap arrays by object references (quite
+                  clever!) Then just uses standard Array SSA
+                  transformation. three kinds of phi nodes - standard, then
+                  array defn phi, then array use phi. Rename arrays each time
+                  we do a lookup (cf SSU). Uses global value numbering instead
+                  of points-to analysis to determine when object references
+                  are same/different. Analysis enables scalar replacement -
+                  remove redundant loads, then redundant stores. Comments that
+                  transformation to SSA leads to flow-sensitivity
+                  property. Actually implemented in IBM Jalapeno JIT
+                  compiler.",
+  url =		 "http://citeseer.ist.psu.edu/fink00unified.html",
+}
+
+@article{feautrier91dataflow,
+  author =	 "Paul Feautrier",
+  title =	 "Dataflow analysis of array and scalar references",
+  journal =	 "International Journal of Parallel Programming",
+  volume =	 "20",
+  number =	 "1",
+  pages =	 "23--51",
+  month =	 "Feb",
+  year =	 "1991",
+  abstract =	 "Introduces the concept of dynamic single assignment form
+                  (DSA).",
+  url =		 "http://citeseer.ist.psu.edu/feautrier91dataflow.html",
+}
+
+@techreport{offner03weak,
+  author =	 "Carl Offner and Kathleen Knobe",
+  title =	 "Weak Dynamic Single Assignment Form",
+  month =	 "Nov",
+  year =	 "2003",
+  number =	 "TR-HPL-2003-169",
+  institution =	 "HP Labs",
+  abstract =	 "reviews array SSA, goes onto develop dynamic single
+                  assignment, which is similar to linear naming, only seems to
+                  be for arrays. Make it work by adding extra dimensions to
+                  arrays to cope with repeated assignments to same elements
+                  (probably due to loops)",
+  url =		 "http://www.hpl.hp.com/techreports/2003/HPL-2003-169R1.html",
+}
+
+@article{rau96iterative,
+  author =	 "B. Ramakrishna Rau",
+  title =	 "Iterative modulo scheduling",
+  journal =	 "International Journal of Parallel Processing",
+  volume =	 "24",
+  number =	 "1",
+  pages =	 "3--64",
+  month =	 "Feb",
+  year =	 "1996",
+  abstract =	 "also available as a HP Labs technical report. Describes DSA
+                  and expanded virtual registers, the cloning support nec for
+                  DSA. Basically converts each scalar into an array",
+  url =		 "http://www.hpl.hp.com/techreports/94/HPL-94-115.html",
+}
+
+@techreport{vanbroekhoven03step,
+  author =	 "Peter Vanbroekhoven and Gerda Janssens and Maurice
+                  Bruynooghe and Henk Corporaal and Francky Catthoor",
+  title =	 "A Step towards a Scalable Dynamic Single Assignment
+                  Conversion",
+  institution =	 "Department of Computer Science, Katholieke Universiteit
+                  Leuven",
+  number =	 "CW 360",
+  month =	 "Apr",
+  year =	 "2003",
+  abstract =	 "gives some motivation for DSA in terms of memory hierarchy
+                  design for embedded systems. Then gives two diff methods for
+                  constructing DSA, one from SSA, one from CFG. Plenty of
+                  discussion, no results and not much analysis.",
+  url =
+                  "http://www.cs.kuleuven.be/publicaties/rapporten/cw/CW360.abs.html",
+}
+
+% pointer extensions
+@inproceedings{cytron93efficient,
+  author =	 {Ron Cytron and Reid Gershbein},
+  title =	 {Efficient accommodation of may-alias information in {SSA}
+                  form},
+  booktitle =	 {Proceedings of the ACM SIGPLAN 1993 Conference on
+                  Programming Language Design and Implementation},
+  year =	 {1993},
+  pages =	 {36--45},
+  abstract =	 "really simple",
+  url =		 "http://doi.acm.org/10.1145/155090.155094",
+}
+
+@inproceedings{chow96effective,
+  author =	 "Fred C. Chow and Sun Chan and Shin-Ming Liu and Raymond Lo
+                  and Mark Streich",
+  title =	 "Effective Representation of Aliases and Indirect Memory
+                  Operations in {SSA} Form",
+  booktitle =	 "Proceedings of the International Conference on Compiler
+                  Construction",
+  pages =	 "253-267",
+  year =	 "1996",
+  publisher =	 {Springer},
+  series =	 {Lecture Notes in Computer Science},
+  volume =	 {1060},
+  abstract =	 "rather complicated!",
+  url =		 "http://citeseer.ist.psu.edu/chow96effective.html",
+}
+
+@inproceedings{lapkowski98extended,
+  author =	 "Christopher Lapkowski and Laurie J. Hendren",
+  title =	 "Extended {SSA} Numbering: Introducing {SSA} Properties to
+                  Language with Multi-level Pointers",
+  booktitle =	 "Proceedings of the 7th International Conference on Compiler
+                  Construction",
+  pages =	 "128-143",
+  year =	 "1998",
+  publisher =	 "Springer",
+  series =	 "Lecture Notes in Computer Science",
+  volume =	 "1383",
+  abstract =	 "SSA for pointers. No phi nodes, instead it just does global
+                  value numbering for scalar variables, and for
+                  single-indirect pointers. A ptr has two global value
+                  numbers, one for the var itself, and one for the location it
+                  points to. This allows us to detect symbolic equality, and
+                  to make assumptions about definition sets. No explicit phi
+                  nodes, they aren't deemed necessary.",
+  url =		 "http://citeseer.ist.psu.edu/lapkowski96extended.html",
+}
+
+@inproceedings{hasti98using,
+  author =	 {Rebecca Hasti and Susan Horwitz},
+  title =	 {Using static single assignment form to improve
+                  flow-insensitive pointer analysis},
+  booktitle =	 {Proceedings of the ACM SIGPLAN 1998 Conference on
+                  Programming Language Design and Implementation},
+  year =	 {1998},
+  pages =	 {97--105},
+  abstract =	 "Claims that SSA turns flow-insensitive analysis into
+                  flow-sensitive analysis. Slightly suspect paper. But
+                  interesting claim, even if not backed up formally.",
+  url =		 "http://doi.acm.org/10.1145/277650.277668",
+}
+
+% predicated extension
+@inproceedings{carter99predicated,
+  author =	 "Lori Carter and Beth Simon and Brad Calder and Larry Carter
+                  and Jeanne Ferrante",
+  title =	 "Predicated Static Single Assignment",
+  booktitle =	 "Proceedings of the International Conference on Parallel
+                  Architectures and Compilation Techniques",
+  year =	 "1999",
+  pages =	 "245--255",
+  abstract =	 "a little like SSI, if you factor full-path-predicates into
+                  the variable names. Does SSA-like scheme for predicated
+                  ISAs, such as IA64.",
+  url =		 "http://doi.ieeecomputersociety.org/10.1109/PACT.1999.807561",
+}
+
+@Article{knoop03constant,
+  author =     "J. Knoop and O. Rüthing",
+  title =      "Constant Propagation on Predicated Code",
+  journal =    "Journal of Universal Computer Science",
+  year =       "2003",
+  volume =     "9",
+  number =     "8",
+  pages =      "829--850",
+  url =       "http://www.jucs.org/jucs_9_8/constant_propagation_on_predicated",
+  abstract = "constant propagation analysis on a value graph, relies on a predicated form of SSA",
+}
+
+% speculative extension
+@inproceedings{lin03compiler,
+  author =	 {Jin Lin and Tong Chen and Wei-Chung Hsu and Pen-Chung Yew
+                  and Roy Dz-Ching Ju and Tin-Fook Ngai and Sun Chan},
+  title =	 {A compiler framework for speculative analysis and
+                  optimizations},
+  booktitle =	 {Proceedings of the ACM SIGPLAN 2003 Conference on
+                  Programming Language Design and Implementation},
+  year =	 {2003},
+  pages =	 {289--299},
+  abstract =	 "quite involved, but enables data speculation in SSA form,
+                  with notion of likeliness of operations",
+  url =		 "http://doi.acm.org/10.1145/781131.781164",
+}
+
+% parallel and concurrent extensions
+@inproceedings{srinivasan93static,
+  author =	 {Harini Srinivasan and James Hook and Michael Wolfe},
+  title =	 {Static single assignment for explicitly parallel programs},
+  booktitle =	 {Proceedings of the 20th ACM SIGPLAN-SIGACT Symposium on
+                  Principles of Programming Languages},
+  year =	 {1993},
+  pages =	 {260--272},
+  abstract =	 "early attempt at dealing with simple kind of parallelism,
+                  introduces extra pseudo-assignment for parallel merge
+                  points",
+  url =		 "http://doi.acm.org/10.1145/158511.158644",
+}
+
+@inproceedings{lee97concurrent,
+  author =	 "Jaejin Lee and Samuel P. Midkiff and David A. Padua",
+  title =	 "Concurrent Static Single Assignment Form and Constant
+                  Propagation for Explicitly Parallel Programs",
+  booktitle =	 "Proceedings of the 10th International Workshop on Languages
+                  and Compilers for Parallel Computing",
+  year =	 "1997",
+  pages =	 "114--130",
+  publisher =	 {Springer},
+  series =	 {Lecture Notes in Computer Science},
+  volume =	 {1366},
+  abstract =	 "caters for more complicated parallel programs, introduces an
+                  extra pseudo-assignment",
+  url =		 "http://citeseer.ist.psu.edu/lee97concurrent.html",
+}
+
+@inproceedings{novillo98concurrent,
+  author =	 {Diego Novillo and Ronald C. Unrau and Jonathan Schaeffer},
+  title =	 {Concurrent {SSA} Form in the Presence of Mutual Exclusion},
+  booktitle =	 {Proceedings of the International Conference on Parallel
+                  Processing},
+  year =	 {1998},
+  pages =	 {356--364},
+  abstract =	 "more complicated still. Extends CSSA with support for
+                  mutexes",
+  url =		 "http://citeseer.ist.psu.edu/novillo98concurrent.html",
+}
+
+@inproceedings{lee99basic,
+  author =	 {Jaejin Lee and David A. Padua and Samuel P. Midkiff},
+  title =	 {Basic compiler algorithms for parallel programs},
+  booktitle =	 {Proceedings of the 7th ACM SIGPLAN Symposium on Principles
+                  and Practice of Parallel Programming},
+  year =	 {1999},
+  pages =	 {1--12},
+  abstract =	 "clearest description of concurrent CFGs and CSSA. With three
+                  diff kinds of pseudo-assignment now.",
+  url =		 "http://doi.acm.org/10.1145/301104.301105",
+}
+
+% extended SSA form (like SSI)
+@inproceedings{bodik00abcd,
+  author =	 {Rastislav Bodik and Rajiv Gupta and Vivek Sarkar},
+  title =	 {{ABCD}: eliminating array bounds checks on demand},
+  booktitle =	 {Proceedings of the ACM SIGPLAN 2000 Conference on
+                  Programming Language Design and Implementation},
+  year =	 {2000},
+  pages =	 {321--333},
+  abstract =	 "similar to SSI, has phi functions, and also pi functions to
+                  rename at conditional branches and after array bounds
+                  checks",
+  url =		 "http://doi.acm.org/10.1145/349299.349342",
+}
+
+% generalized reference chaining
+@phdthesis{stoltz95intermediate,
+  author =	 "Eric James Stoltz",
+  title =	 "Intermediate Compiler Analysis via Reference Chaining",
+  month =	 "Jan",
+  year =	 "1995",
+  school =	 "Oregon Graduate Institute of Science and Technology",
+  abstract =	 "reference chaining - a generalization of SSA. For forwards
+                  or backwards data flow problems, but not both. Talks a lot
+                  about factored use and def chains. A student of Michael
+                  Wolfe's",
+  url =		 "http://www.cse.ogi.edu/tech-reports/1995/95-TH-001.ps.gz",
+}
+
+% factored use-def chains
+@inproceedings{stoltz94extended,
+  author =	 "Stoltz, Eric and Gerlek, Michael P. and Wolfe, Michael",
+  title =	 "{E}xtended {SSA} with Factored Use-Def Chains to Support
+                  Optimization and Parallelism",
+  booktitle =	 "Proceedings of the Hawaii International Conference on
+                  Systems Sciences",
+  pages =	 "43--52",
+  year =	 "1994",
+  abstract =	 "introduces concept of factored use-def chains, as a form of
+                  SSA",
+  url =		 "http://citeseer.ist.psu.edu/stoltz94extended.html",
+}
+
+@article{gerlek95beyond,
+  author =	 {Michael P. Gerlek and Eric Stoltz and Michael Wolfe},
+  title =	 {Beyond induction variables: detecting and classifying
+                  sequences using a demand-driven SSA form},
+  journal =	 {ACM Transactions on Programming Languages and Systems},
+  volume =	 {17},
+  number =	 {1},
+  year =	 {1995},
+  pages =	 {85--122},
+  abstract =	 "haven't actually read this. It uses a variant of SSA to
+                  discover properties of variables. Mentions FUD chains.",
+  url =		 "http://doi.acm.org/10.1145/200994.201003",
+}
+
+% low-level extensions
+@inproceedings{leung99static,
+  author =	 {Allen Leung and Lal George},
+  title =	 {Static single assignment form for machine code},
+  booktitle =	 {Proceedings of the ACM SIGPLAN 1999 Conference on
+                  Programming Language Design and Implementation},
+  year =	 {1999},
+  pages =	 {204--214},
+  abstract =	 "simple techniques so machine code can be properly
+                  represented as SSA, and optimised using SSA algms",
+  url =		 "http://doi.acm.org/10.1145/301618.301667",
+}
+
+@inproceedings{ronne04interpreting,
+  author =	 "Jeffery {von Ronne} and Ning Wang and Michael Franz",
+  title =	 "Interpreting Programs in Static Single Assignment Form",
+  booktitle =	 "Proceedings of the ACM SIGPLAN 2004 Workshop on
+                  Interpreters, Virtual Machines and Emulators",
+  year =	 "2004",
+  pages =	 "23--30",
+  abstract =	 "interpretable SSA. Simple techniques to interpret phi fns,
+                  single-assignment arrays, etc. V similar to SafeTSA",
+  url =		 "http://doi.acm.org/10.1145/1059579.1059585",
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% >>> Interprocedural SSA
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+% interprocedural SSA - like supergraph
+@inproceedings{liao99suif,
+  author =	 {Shih-Wei Liao and Amer Diwan and Robert P. {Bosch, Jr.} and
+                  Anwar Ghuloum and Monica S. Lam},
+  title =	 {SUIF Explorer: an interactive and interprocedural
+                  parallelizer},
+  booktitle =	 {Proceedings of the 7th ACM SIGPLAN Symposium on Principles
+                  and Practice of Parallel Programming},
+  year =	 {1999},
+  pages =	 {37--48},
+  abstract =	 "describes interprocedural SSA - similar to supergraph. For
+                  program visualization and slicing, in order to do
+                  user-assisted parallelization in an interactive manner",
+  url =		 "http://citeseer.ist.psu.edu/liao00suif.html",
+}
+
+@inproceedings{staiger07interprocedural,
+  author =	 {Staiger, Stefan and Vogel, Gunther and Keul, Steffen and Wiebe, Eduard},
+  title =	 {Interprocedural {S}tatic {S}ingle {A}ssignment {F}orm},
+  booktitle =	 {Proceedings of the 14th Working Conference on Reverse Engineering},
+  year =	 {2007},
+  pages = {1--10},
+  abstract = {describes the concepts and implementation of the interprocedural SSA framework as implemented in Bauhaus. Can be used together with many different pointer analyses.},
+ url = "http://dx.doi.org/10.1109/WCRE.2007.31",
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% >>> Static Single Information
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+@techreport{ananian99ssi,
+  author =	 "C. Scott Ananian",
+  title =	 "The Static Single Information Form",
+  month =	 "Sep",
+  year =	 "1999",
+  institution =	 "Laboratory for Computer Science, Massachusetts Institute of
+                  Technology",
+  number =	 "MIT-LCS-TR-801",
+  abstract =	 "First half is nice and hacky - all about why SSI is needed,
+                  contrasting it with SSA, etc., also a (slightly strange) way
+                  to construct it using SESE regions. Second half is wierd and
+                  wonderful theory, whcich hopefully we can largely ignore -
+                  gives an executable semantics to some variant of the
+                  standard SSI form.",
+  url =		 "http://www.lcs.mit.edu/specpub.php?id=1340",
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% >>> SSI applications
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+@inproceedings{rugina00symbolic,
+  author =	 "Radu Rugina and Martin Rinard",
+  title =	 "Symbolic Bounds Analysis of Pointers, Array Indices and
+                  Accessed Memory Regions",
+  year =	 "2000",
+  pages =	 "182--195",
+  booktitle =	 "Proceedings of the ACM SIGPLAN 2000 Conference on
+                  Programming Language Design and Implementation",
+  abstract =	 "hard-going, but just a brief mention of the merits of SSI in
+                  the conclusions",
+  url =		 "http://doi.acm.org/10.1145/349299.349325",
+}
+
+@inproceedings{stephenson00bitwidth,
+  author =	 "Mark Stephenson and Jonathan Babb and Saman Amarasinghe",
+  title =	 "Bitwidth Analysis with Application to Silicon Compilation",
+  year =	 "2000",
+  pages =	 "108--120",
+  booktitle =	 "Proceedings of the ACM SIGPLAN 2000 Conference on
+                  Programming Language Design and Implementation",
+  abstract =	 "fascinating stuff, quite simple to read. Quite early on they
+                  mention that SSI might be a possible alternative
+                  intermediate form, just a footnote",
+  url =		 "http://doi.acm.org/10.1145/349299.349317",
+}
+
+@inproceedings{gheorghioiu03interprocedural,
+  author =	 "Ovidiu Gheorghioiu and Alexandru Salcianu and Martin Rinard",
+  title =	 "Interprocedural compatibility analysis for static object
+                  preallocation",
+  booktitle =	 "Proceedings of the 30th ACM SIGPLAN-SIGACT Symposium of
+                  Principles of Programming Languages",
+  pages =	 "273--284",
+  year =	 "2003",
+  url =		 "http://doi.acm.org/10.1145/604131.604154",
+}
+
+@inproceedings{ananian03data,
+  author =	 {C. Scott Ananian and Martin Rinard},
+  title =	 {Data size optimizations for {Java} programs},
+  booktitle =	 {Proceedings of the 2003 ACM SIGPLAN Conference on Languages,
+                  Compilers and Tools for Embedded Systems},
+  year =	 {2003},
+  pages =	 {59--68},
+  abstract =	 "",
+  url =		 "http://doi.acm.org/10.1145/780732.780741",
+}
+
+@inproceedings{mayer03debugging,
+  author =	 {Wolfgang Mayer and Markus Stumptner},
+  title =	 {Debugging Program Exceptions},
+  booktitle =	 {Proceedings of the 14th International Workshop on Principles
+                  of Diagnosis},
+  year =	 {2003},
+  pages =	 {119--124},
+  abstract =	 "does debugging using model checking, for Java programs. Uses
+                  SSI in order to construct the model. Cites me as well as
+                  Ananian for SSI construction!",
+  url =		 "http://www.cs.unisa.edu.au/~ciswma/publications/ms03a.pdf",
+}
+
+@inproceedings{teifel04static,
+  author =	 "John Teifel and Rajit Manohar",
+  title =	 "Static Tokens: Using Dataflow to Automate Concurrent
+                  Pipeline Synthesis",
+  booktitle =	 "Proceedings of the 10th International Symposium on
+                  Asynchronous Circuits and Systems",
+  pages =	 "17--27",
+  year =	 "2004",
+  abstract =	 "uses SSI for some kind of ECAD-like hardware synthesis",
+  url =
+                  "http://doi.ieeecomputersociety.org/10.1109/ASYNC.2004.1299284",
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% >>> Static Single Use
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+@inproceedings{lo98register,
+  author =	 {Raymond Lo and Fred Chow and Robert Kennedy and Shin-Ming
+                  Liu and Peng Tu},
+  title =	 {Register promotion by sparse partial redundancy elimination
+                  of loads and stores},
+  booktitle =	 {Proceedings of the ACM SIGPLAN 1998 Conference on
+                  Programming Language Design and Implementation},
+  year =	 {1998},
+  pages =	 {26--37},
+  abstract =	 "presents static single use form, complete with lambda
+                  (inverse phi) nodes - uses it to do PRE for STORE instrs",
+  url =		 "http://doi.acm.org/10.1145/277650.277659",
+}
+
+@inproceedings{george03taming,
+  author =	 {Lal George and Matthias Blume},
+  title =	 {Taming the {IXP} network processor},
+  booktitle =	 {Proceedings of the ACM SIGPLAN 2003 Conference on
+                  Programming Language Design and Implementation},
+  year =	 {2003},
+  pages =	 {26--37},
+  abstract =	 "A rather more informal SSU presentation - for register
+                  allocation in IXP processors - with no reference to other
+                  SSU work",
+  url =		 "http://doi.acm.org/10.1145/781131.781135",
+}
+
+@phdthesis{plevyak96optimization,
+  author =	 "John Bradley Plevyak",
+  title =	 "Optimization of Object-Oriented and Concurrent Programs",
+  school =	 "University of Illinois at Urbana-Champaign",
+  month =	 "Aug",
+  year =	 "1996",
+  abstract =	 "defines static single use - BUT - really SSI - only rename
+                  at control flow split points, uses $\psi$-nodes instead of
+                  $\sigma$-nodes.",
+  url =		 "http://www-csag.ucsd.edu/papers/jplevyak-thesis.ps",
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% >>> Linear Naming
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+@techreport{bawden93implementing,
+  author =	 "Alan Bawden",
+  title =	 "Implementing Distributed Systems Using Linear Naming",
+  institution =	 "Massachusetts Institute of Technology Artificial
+                  Intelligence Laboratory",
+  month =	 "Mar",
+  year =	 "1993",
+  number =	 "1627",
+  abstract =	 "transforming programs so that they have linear names - a
+                  linear name is only used once (PhD thesis).",
+  url =		 "http://citeseer.ist.psu.edu/bawden93implementing.html",
+}
+
+@article{baker95use,
+  author =	 "Henry G. Baker",
+  title =	 "`{U}se-Once' Variables and Linear Objects---Storage
+                  Management, Reflection and Multi-Threading",
+  journal =	 "ACM SIGPLAN Notices",
+  volume =	 "30",
+  number =	 "1",
+  pages =	 "45--52",
+  month =	 "Jan",
+  year =	 "1995",
+  abstract =	 "introduction to use-once variables. Argues that they are
+                  needed in mainstream programming languages. Gives some
+                  examples from LISP world.",
+  url =		 "http://doi.acm.org/10.1145/199818.199860",
+}
+
+% see also PacLang paper in IXP section
+
+
+%%%%%%%%%%%%%%%%%%%%%%
+% >>> SSA applications
+%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Partial Redundancy Elimination
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+@article{kennedy99partial,
+  author =	 {Robert Kennedy and Sun Chan and Shin-Ming Liu and Raymond Lo
+                  and Peng Tu and Fred Chow},
+  title =	 {Partial redundancy elimination in {SSA} form},
+  journal =	 {ACM Transactions on Programming Languages and Systems},
+  volume =	 {21},
+  number =	 {3},
+  month =	 {May},
+  year =	 {1999},
+  pages =	 {627--676},
+  abstract =	 "shows how to do PRE using SSA - derives factored redundancy
+                  graph from SSA and does forwards and backwards data flow
+                  analysis on this. Shows how to use SSA to do
+                  analysis/optimization for expressions, not just for
+                  vars. Also defines an interesting density function to
+                  measure sparseness.",
+  url =		 "http://doi.acm.org/10.1145/319301.319348",
+}
+
+@inproceedings{vandrunen04value,
+ author = "Thomas VanDrunen and Antony L. Hosking",
+ title = "Value-Based Partial Redundancy Elimination",
+ booktitle = "13th International Conference on Compiler Construction",
+ publisher = "Springer",
+ series = "Lecture Notes in Computer Science",
+ volume = "2985",
+ year = "2004",
+ pages = "167--184",
+ abstract = "a different approach to SSA-based PRE. Uses value
+             numbering to identify redundant computation, rather
+             than a more syntactic measure. This approach has
+             been implemented in Jikes RVM and GCC.",
+ url = "http://www.springerlink.com/openurl.asp?genre=article&issn=0302-9743&volume=2985&spage=167",
+}
+
+% type inference
+@inproceedings{lenart00ssa,
+  author =	 {Alexandre Lenart and Christopher Sadler and Sandeep
+                  K. S. Gupta},
+  title =	 {{SSA}-based flow-sensitive type analysis: combining constant
+                  and type propagation},
+  booktitle =	 {Proceedings of the ACM Symposium on Applied Computing},
+  year =	 {2000},
+  pages =	 {813--817},
+  abstract =	 "combines WZ91 sparse conditional constant propagation with
+                  type propagation for concrete types in Java programs. A
+                  poorly written, short, rather dodgy paper, but still quite
+                  an interesting find",
+  url =		 "http://doi.acm.org/10.1145/338407.338570",
+}
+
+% decompilation
+@inproceedings{mycroft99type,
+  author =	 "Alan Mycroft",
+  title =	 "Type-Based Decompilation",
+  booktitle =	 "Proceedings of the 8th European Symposium on Programming",
+  pages =	 "208--223",
+  year =	 "1999",
+  publisher =	 "Springer",
+  series =	 "Lecture Notes in Computer Science",
+  volume =	 "1576",
+  abstract =	 "uses SSA to undo register colouring, then infers types and
+                  transforms RTL back into C. All thoughts, and no real
+                  implementations here...",
+  url =		 "http://citeseer.ist.psu.edu/mycroft99type.html",
+}
+
+% symbolic analysis
+@inproceedings{saito96sigma,
+ author = {Saito, Hideki and Polychronopoulos, Constantine D.},
+ title = {sigma-{SSA} and Its Construction Through Symbolic Interpretation},
+ booktitle = {Proceedings of the 9th International Workshop on Languages and Compilers for Parallel Computing},
+ year = {1997},
+ pages = {585--587},
+ publisher = {Springer-Verlag},
+ url = "http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.30.8695",
+ abstract = "a variant of SSA that purports to be useful for symbolic analysis and interpretation. Uses a data flow like Value Flow Graph for optimization. Lack of detail for construction algorithm",
+}
+
+% model checking
+@inproceedings{jhala06structural,
+ author = "Ranjit Jhala and Rupak Majumdar and Ru-Gang Xu",
+ title = "Structural invariants", 
+ booktitle = "Proceedings of the Static Analysis Symposium",
+ journal={Lecture Notes In Computer Science},
+  volume={4134},
+  pages={71--87},
+  year={2006},
+  url = "http://dx.doi.org/10.1007/11823230_6",
+ abstract = "SSA for model checking. Using the dominance properties of SSA enables efficient generation of verification conditions",
+}
+
+% liveness
+@inproceedings{boissinot08fast,
+ author = {Boissinot, Benoit and Hack, Sebastian and Grund, Daniel and Dupont de Dinechin, Beno{\^{\i}}t and Rastello, Fabrice},
+ title = {Fast liveness checking for {SSA}-form programs},
+ booktitle = {Proceedings of the Sixth Annual IEEE/ACM International Symposium on Code Generation and Optimization},
+ year = {2008},
+ pages = {35--44},
+ url = {http://doi.acm.org/10.1145/1356058.1356064},
+ abstract = "liveness analysis based directly on SSA, rather than specialized data flow analysis",
+}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+% >>> SSA-based compilers
+%%%%%%%%%%%%%%%%%%%%%%%%
+@article{fitzgerald00marmot,
+  author =	 "Robert Fitzgerald and Todd B. Knoblock and Erik Ruf and
+                  Bjarne Steensgaard and David Tarditi",
+  title =	 "Marmot: an optimizing compiler for {Java}",
+  journal =	 "Software---Practice and Experience",
+  volume =	 "30",
+  number =	 "3",
+  pages =	 "199--232",
+  year =	 "2000",
+  abstract =	 "describes design and implementation of Marmot - uses SSA,
+                  buth as some criticism for how hard it is to do
+                  transformations efficiently in SSA.",
+  url =
+                  "http://research.microsoft.com/research/pubs/view.aspx?type=Technical%20Report&id=267",
+}
+
+@misc{sun99hotspot,
+  title =	 "{J}ava {H}ot{S}pot",
+  key =		 "Sun99",
+  year =	 "1999",
+  abstract =	 "Just a website with a link to a white paper, no real detail
+                  here. However it does mention that the HotSpot server VM
+                  uses an SSA-based IR.",
+  url =
+                  "http://java.sun.com/products/hotspot/docs/whitepaper/Java_HotSpot_WP_Final_4_30_01.html",
+}
+
+@article{kotzmann08design,
+ author = {Kotzmann, Thomas and Wimmer, Christian and M\"{o}ssenb\"{o}ck, Hanspeter and Rodriguez, Thomas and Russell, Kenneth and Cox, David},
+ title = {Design of the {J}ava {H}ot{S}pot client compiler for Java 6},
+ journal = {ACM Transactions on Architure and Code Optimization},
+ volume = {5},
+ number = {1},
+ year = {2008},
+ pages = {1--32},
+ doi = {http://doi.acm.org/10.1145/1369396.1370017},
+ remarks = "outlines how SSA can give good optimizations and low compile time, for JIT compiler",
+}
+
+@inproceedings{novillo03treessa,
+  author =	 "Diego Novillo",
+  title =	 "Tree{SSA} A new optimization infrastructure for {GCC}",
+  booktitle =	 "Proceedings of the 2003 GCC Developers' Summit",
+  year =	 "2003",
+  pages =	 "181--193",
+  abstract =	 "",
+  url =
+                  "http://people.redhat.com/dnovillo/Papers/tree-ssa-gccs03.pdf",
+}
+
+@article{alpern00jalapeno,
+  title =	 "The {J}alape\~{n}o Virtual Machine",
+  author =	 "B. Alpern and C. R. Attanasio and J. J. Barton and
+                  M. G. Burke and P .Cheng and J.-D. Choi and A. Cocchi and
+                  S. J. Fink and D. Grove and M. Hind and S. F. Hummel and
+                  D. Lieber and V. Litvinov and M. F. Mergen and T. Ngo and
+                  J. R. Russell and V. Sarkar and M. J. Serrano and
+                  J. C. Shepherd and S. E. Smith and V. C. Sreedhar and
+                  H. Srinivasan and J. Whaley",
+  journal =	 "IBM Systems Journal",
+  volume =	 "39",
+  number =	 "1",
+  month =	 "Feb",
+  year =	 "2000",
+  abstract =	 "",
+  url =		 "http://www.research.ibm.com/journal/sj/391/alpern.html",
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% >>> SSI-based compilers
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+@misc{mit98flex,
+  title =	 "The {F}lex Compiler Infrastructure",
+  key =		 "Flex98",
+  publisher =	 "Massachusetts Institute of Technology",
+  year =	 "1998",
+  url =		 "http://www.flex-compiler.lcs.mit.edu/",
+}
+
+%%%%%%%%%%%
+% >>> SUIF
+%%%%%%%%%%%
+@misc{wilson94suif,
+  author =	 "Robert P. Wilson and Robert S. French and Christopher
+                  S. Wilson and Saman P. Amarasinghe and Jennifer M. Anderson
+                  and Steve W. K. Tjiang and Shih-Wei Liao and Chau-Wen Tseng
+                  and Mary W. Hall and Monica S. Lam and John L. Hennessy",
+  title =	 "{SUIF}: An Infrastructure for Research on Parallelizing and
+                  Optimizing Compilers",
+  year =	 "1994",
+  abstract =	 "overview document (rather outdated!) for SUIF v1",
+  url =		 "http://citeseer.ist.psu.edu/wilson94suif.html",
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Machine SUIF compiler infrastructure
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+@inproceedings{smith96extending,
+  author =	 "Michael D. Smith",
+  title =	 "Extending {SUIF} for Machine-dependent Optimizations",
+  month =	 "Jan",
+  year =	 "1996",
+  pages =	 "14--25",
+  booktitle =	 "Proceedings of the First SUIF Compiler Workshop",
+  abstract =	 "general introduction to machine suif",
+  url =		 "http://citeseer.ist.psu.edu/smith96extending.html",
+}
+
+@misc{machsuif01ssa,
+  title =	 "The {M}achine-{SUIF} Static Single Assignment Library",
+  author =	 "Glenn Holloway",
+  year =	 "2001",
+  abstract =	 "SSA docs for Machine SUIF",
+  url =		 "http://www.eecs.harvard.edu/hube/software/nci/ssa.html",
+}
+
+@misc{rolaz03implementation,
+  author =	 "Laurent Rolaz",
+  title =	 "An Implementation of Sparse Conditional Constant Propagation
+                  for {M}achine {SUIF}",
+  year =	 "2003",
+  url =		 "http://lapwww.epfl.ch/dev/machsuif/opt_passes/sccp.pdf",
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% >>> Translating SSA into functional programs
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+@article{appel98ssa,
+  author =	 {Andrew W. Appel},
+  title =	 {{SSA} is functional programming},
+  journal =	 {ACM SIGPLAN Notices},
+  volume =	 {33},
+  number =	 {4},
+  month =	 {Apr},
+  year =	 {1998},
+  pages =	 {17--20},
+  url =		 "http://doi.acm.org/10.1145/278283.278285",
+}
+
+@article{kelsey95correspondence,
+  author =	 {Richard A. Kelsey},
+  title =	 {A correspondence between continuation passing style and
+                  static single assignment form},
+  journal =	 {ACM SIGPLAN Notices},
+  volume =	 {30},
+  number =	 {3},
+  month =	 {Mar},
+  year =	 {1995},
+  pages =	 {13--22},
+  url =		 "http://doi.acm.org/10.1145/202530.202532",
+}
+
+@inproceedings{zadarnowski03functional,
+  author =	 {Manuel M.T. Chatravarty and Gabriele Keller and Patryk
+                  Zadarnowski},
+  title =	 {A Functional Perspective on {SSA} Optimisation Algorithms},
+  booktitle =	 {Proceedings of the 2nd International Workshop on Compiler
+                  Optimization Meets Compiler Verification},
+  year =	 {2003},
+  url =		 "http://citeseer.ist.psu.edu/chakravarty03functional.html",
+}
+
+% see also my paper - singer03static
+
+%%%%%%%%%%%%%%%%%
+% >>> Gated single assignment form
+%%%%%%%%%%%%%%%%%%%
+@inproceedings{ballance90program,
+  author =	 {Robert A. Ballance and Arthur B. Maccabe and Karl
+                  J. Ottenstein},
+  title =	 {The program dependence web: a representation supporting
+                  control-, data-, and demand-driven interpretation of
+                  imperative languages},
+  booktitle =	 {Proceedings of the ACM SIGPLAN 1990 Conference on
+                  Programming Language Design and Implementation},
+  year =	 {1990},
+  pages =	 {257--271},
+  abstract =	 "PDW - fascinating data flow stuff - but switch nodes are
+                  just like SSI sigma nodes.",
+  url =		 "http://doi.acm.org/10.1145/93542.93578",
+}
+
+@inproceedings{tu95efficient,
+  author =	 {Peng Tu and David Padua},
+  title =	 {Efficient building and placing of gating functions},
+  booktitle =	 {Proceedings of the ACM SIGPLAN 1995 Conference on
+                  Programming Language Design and Implementation},
+  year =	 {1995},
+  pages =	 {47--55},
+  abstract =	 "reintroduces gated single assignment, shows how to compute
+                  gating fns quicker than previously",
+  url =		 "http://doi.acm.org/10.1145/207110.207115",
+}
+
+@inproceedings{havlak93construction,
+  author =	 {Paul Havlak},
+  title =	 {Construction of Thinned Gated Single-Assignment Form},
+  booktitle =	 {Proceedings of the 6th International Workshop on Languages
+                  and Compilers for Parallel Computing},
+  year =	 {1993},
+  pages =	 {477--499},
+  publisher =	 {Springer},
+  series =	 {Lecture Notes in Computer Science},
+  volume =	 {768},
+  abstract =	 "TGSA is a simplified version of GSA",
+  url =		 "http://citeseer.ist.psu.edu/havlak93construction.html",
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% >>> SSA and Type Checking
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+@inproceedings{amme01safe,
+ author = {Wolfram Amme and Niall Dalton and Jeffery von Ronne and Michael Franz},
+ title = {Safe{TSA}: a type safe and referentially secure mobile-code representation based on static single assignment form},
+ booktitle = {Proceedings of the ACM SIGPLAN 2001 Conference on Programming Language Design and Implementation},
+ year = {2001},
+ pages = {137--147},
+ url = {http://doi.acm.org/10.1145/378795.378825},
+ abstract = "SafeTSA is a replacement for Java bytecode - a VM-based intermediate form that encodes implicit type-safety. (effectively diff stacks for diff types)",
+}
+
+@article{amme05quantifying,
+title = "Quantifying the Benefits of SSA-Based Mobile Code",
+journal = "Electronic Notes in Theoretical Computer Science",
+volume = "141",
+number = "2",
+pages = "103--119",
+year = "2005",
+url = "http://www.sciencedirect.com/science/article/B75H1-4HN44BM-7/2/84c26bda8fb8ad7c1388cca249ec7332",
+author = "Wolfram Amme and Jeffery von Ronne and Michael Franz",
+ abstract = "another SafeTSA paper, integrating SafeTSA into Jikes RVM via a custom classloader and comparing performance with Java bytecode on simple benchmarks",
+}
+
+@article{amme07ssa,
+ author = {Amme, Wolfram and Ronne, Jeffery von and Franz, Michael},
+ title = {SSA-based mobile code: Implementation and empirical evaluation},
+ journal = {ACM Transactions on Architure and Code Optimization},
+ volume = {4},
+ number = {2},
+ year = {2007},
+ pages = {13},
+ doi = {http://doi.acm.org/10.1145/1250727.1250733},
+ remarks = "yet another SafeTSA paper",
+}
+
+@inproceedings{menon06verifiable,
+ author = {Vijay S. Menon and Neal Glew and Brian R. Murphy and Andrew McCreight and Tatiana Shpeisman and Ali-Reza Adl-Tabatabai and Leaf Petersen},
+ title = {A verifiable SSA program representation for aggressive compiler optimization},
+ booktitle = {Proceedings of the 33rd ACM SIGPLAN-SIGACT Symposium on Principles of Programming Languages},
+ year = {2006},
+ pages = {397--408},
+ url = {http://doi.acm.org/10.1145/1111037.1111072},
+ abstract = "introduces a low-level IR based on SSA that encodes type info for type-safe compiler optimizations",
+}
+
+@inproceedings{matsuno06type,
+ author = {Yutaka Matsuno and Atsushi Ohori},
+ title = {A type system equivalent to static single assignment},
+ booktitle = {Proceedings of the 8th ACM SIGPLAN Symposium on Principles and Practice of Declarative Programming},
+ year = {2006},
+ pages = {249--260},
+ url = {http://doi.acm.org/10.1145/1140335.1140365},
+ abstract = "introduces a type system that works like SSA. Effectively type inference is SSA transformation. So we can encode SSA as type-based info, rather than in variable renaming.",
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% >>> SSA and code generation
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+@inproceedings{sastry98new,
+ author = {Sastry, A. V. S. and Ju, Roy D. C.},
+ title = {A new algorithm for scalar register promotion based on {SSA} form},
+ booktitle = {Proceedings of the ACM SIGPLAN 1998 Conference on Programming Language Design and Implementation},
+ year = {1998},
+ pages = {15--25},
+ url = "http://doi.acm.org/10.1145/277650.277656",
+ abstract = "handles register spilling and rematerialization. Deals with a new algorithm for repairing SSA.",
+}
+
+
+@inproceedings{eckstein03code,
+ author = {E. Eckstein and O. K\"{o}nig and B. Scholz},
+ title = "Code Instruction Selection based on {SSA}-Graphs",
+ booktitle = "Proceedings of the International Workshop on Software and Compilers for Embedded Systems",
+ pages = "49--65",
+ year = "2003",
+ series = "Lecture Notes in Computer Science",
+ volume = "2826",
+ publisher = "Springer",
+ abstract = "uses some kind of boolean optimization techniques (maths!) to generate near-optimal instruction sequences for DSP programs in SSA form.",
+ url = "http://www.springerlink.com/content/83cj0ebgtm998hj8/",
+}
+
+@inproceedings{hack06register,
+  author =	 "Sebastian Hack and Daniel Grund and Gerhard Goos",
+  title =	 "Register Allocation for Programs in {SSA}-Form",
+  booktitle =	 "15th International Conference on Compiler Construction",
+  pages =	 "247--262",
+  publisher =	 {Springer},
+  series =	 {Lecture Notes in Computer Science},
+  volume =	 {3923},
+  year =	 "2006",
+  abstract =	 "an interesting read. Do register allocation directly in SSA,
+                  rather than translate out of SSA. Some graph theory here.",
+  url =		 "http://dx.doi.org/10.1007/11688839_20",
+}
+
+@inproceedings{brisk07interference,
+ author = {Philip Brisk and Majid Sarrafzadeh},
+ title = {Interference graphs for procedures in static single information form are interval graphs},
+ booktitle = {Proceedings of the 10th international workshop on Software \& compilers for embedded systems},
+ year = {2007},
+ pages = {101--110},
+ abstract = "shows how liveness analysis is O(1) for SSI programs, interesting graph-theoretic properties of SSI-based register interference graphs",
+ url = "http://doi.acm.org/10.1145/1269843.1269858",
+}
+
+
+@inproceedings{kaplan03data,
+ author = {Adam Kaplan and Philip Brisk and Ryan Kastner},
+ title = {Data communication estimation and reduction for reconfigurable systems},
+ booktitle = {Proceedings of the 40th conference on Design automation},
+ year = {2003},
+ pages = {616--621},
+ url = {http://doi.acm.org/10.1145/775832.775987},
+ abstract = "uses SSA for hardware synthesis, shows how tweaks in $\phi$-function placement affects hardware efficiency",
+}
+
+@inproceedings{rastello04optimizing,
+ author = {F. Rastello and F. de Ferri\`{e}re and C. Guillon},
+ title = {Optimizing Translation Out of {SSA} Using Renaming Constraints},
+ booktitle = {Proceedings of the International Symposium on Code Generation and Optimization},
+ year = {2004},
+ pages = {265--278},
+ url = "http://portal.acm.org/citation.cfm?id=977395.977678",
+ abstract = "Extends work of leung99, for reducing number of moves after eliminating phi-functions when converting out of SSA. Variable pinning coalescing technique.",
+ }
+
+@inproceedings{pereira06register,
+ title={Register Allocation after Classical {SSA} Elimination is {NP}-complete},
+ author={Pereira, F.M.Q. and Palsberg, J.},
+ booktitle = "Proceedings of Foundations of Software Science and Computation Structures", 
+ series = "Lecture Notes in Computer Science", 
+ volume = "3921",
+ pages = "79--93",
+ month = "Mar",
+ year = "2006",
+ url = "http://www.cs.ucla.edu/~palsberg/paper/fossacs06.pdf",
+ abstract = "Despite work of Hack, showing that SSA programs are colourable in linear time, register allocation is still NP-complete",
+}
+
+@inproceedings{pereira09ssa,
+ title={{SSA} elimination after register allocation},
+ author={Pereira, F.M. and Palsberg, J.},
+ booktitle={Proceedings of the International Conference on Compiler Construction},
+ pages={158--173},
+ series = "Lecture Notes in Computer Science",
+ volume = "5501", 
+ url = "http://dx.doi.org/10.1007/978-3-642-00722-4",
+ publisher={Springer},
+ year = "2009",
+ abstract = "destroy SSA after register allocation, without increasing the number of spill variables",
+}
+
+@inproceedings{hack08copy,
+ author = {Hack, Sebastian and Goos, Gerhard},
+ title = {Copy coalescing by graph recoloring},
+ booktitle = {Proceedings of the ACM SIGPLAN Conference on Programming Language Design and Implementation},
+ year = {2008},
+ pages = {227--237},
+ url = "http://doi.acm.org/10.1145/1375581.1375610",
+ abstract = "A new coalescing algorithm for reg coloring after SSA-based register allocation",
+}
+
+@inproceedings{pereira08register,
+ author = {Quint\~{a}o Pereira, Fernando Magno and Palsberg, Jens},
+ title = {Register allocation by puzzle solving},
+ booktitle = {Proceedings of the 2008 ACM SIGPLAN Conference on Programming Language Design and Implementation},
+ year = {2008},
+ pages = {216--226},
+ url = "http://doi.acm.org/10.1145/1375581.1375609",
+ abstract = "fun paper on register allocation for architectures like x86 with overlapping registers of different sizes. Does ultimate live range splitting, adds pseudo-assignments for live variables between every individual instruction. This is known as the elementary form.",
+ }
+
+
+@inproceedings{braun09register,
+ title = {Register Spilling and Live-Range Splitting for SSA-Form Programs},
+ booktitle = {Proceedings of the International Conference on Compiler Construction},
+ year = {2009},
+ pages = "174--189",
+ author = {Matthias Braun and Sebastian Hack},
+ url = {http://pp.info.uni-karlsruhe.de/uploads/publikationen/braun09cc.pdf},
+ abstract = "SSA-based register allocator reduces dynamic number of spill instructions in benchmark code, in relation to linear scan and graph coloring allocators",
+}
+
+@inproceedings{boissinot09revisiting,
+ author = {Boissinot, Benoit and Darte, Alain and Rastello, Fabrice and de Dinechin, Benoit Dupont and Guillon, Christophe},
+ title = {Revisiting Out-of-{SSA} Translation for Correctness, Code Quality and Efficiency},
+ booktitle = {Proceedings of the 2009 International Symposium on Code Generation and Optimization},
+ year = {2009},
+ pages = {114--125},
+ url = {http://dx.doi.org/10.1109/CGO.2009.19},
+ abstract = "new algorithm for translating out of SSA, efficient enough to be implemented in JIT compilers",
+}
+
+@inproceedings{sreedhar99translating,
+ title = "Translating Out of Static Single Assignment Form",
+ author = "Vugranam C. Sreedhar and Roy Dz-Ching Ju and David M. Gillies and Vatsa Santhanam",
+ booktitle = "Proceedings of the Static Analysis Symposium",
+ year = "1999",
+ pages = "194--210",
+ series = "Lecture Notes in Computer Science",
+ volume = "1694",
+ url = "http://dx.doi.org/10.1007/3-540-48294-6_13",
+ abstract = "another out-of-SSA algorithm, replacing phi-functions with copies where appropriate. Copies are eliminated with coalescing.",
+}
+    
+
+@article{sassa09comparison,
+ title = "Comparison and evaluation of back-translation algorithms for static single assignment forms",
+ author = "Masataka Sassa and Yo Ito and Masaki Kohama",
+ journal = "Computer Languages, Systems & Structures",
+ volume = "35",
+ number = "2",
+ pages = "173--195",
+ year = "2009",
+ url = "http://dx.doi.org/10.1016/j.cl.2007.03.001",
+ abstract = "Comparison of several classical out-of-SSA algorithms, Briggs, etc.",
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% >>> SSA for Java programs
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+@article{gal05structural,
+  author =	 "Andreas Gal and Christian W. Probst and Michael Franz",
+  title =	 "Structural Encoding of Static Single Assignment Form",
+  journal =	 "Electronic Notes in Theoretical Computer Science",
+  volume =	 "141",
+  number =	 "2",
+  pages =	 "85--102",
+  year =	 "2005",
+  abstract =	 "interesting approach to embedding SSA info directly in
+                  standard Java bytecode, using local variables as SSA
+                  registers, neat encoding of phi functions and dominator
+                  tree.",
+  url =		 "http://dx.doi.org/10.1016/j.entcs.2005.02.045",
+}
+

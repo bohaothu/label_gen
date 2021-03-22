@@ -1,0 +1,1068 @@
+
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>
+  zombiezen / CSC300 Term Paper / source &mdash; Bitbucket
+</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="description" content="" />
+  <meta name="keywords" content="" />
+  <!--[if lt IE 9]>
+  <script src="https://dwz7u9t8u8usb.cloudfront.net/m/46c15ee9bc85/js/lib/html5.js"></script>
+  <![endif]-->
+
+  <script>
+    (function (window) {
+      // prevent stray occurrences of `console.log` from causing errors in IE
+      var console = window.console || (window.console = {});
+      console.log || (console.log = function () {});
+
+      var BB = window.BB || (window.BB = {});
+      BB.debug = false;
+      BB.cname = true;
+      BB.CANON_URL = 'https://bitbucket.org';
+      BB.MEDIA_URL = 'https://dwz7u9t8u8usb.cloudfront.net/m/46c15ee9bc85/';
+      BB.user || (BB.user = {});
+      BB.user.has = (function () {
+        var betaFeatures = [];
+        
+        return function (feature) {
+          return _.contains(betaFeatures, feature);
+        };
+      }());
+      BB.repo || (BB.repo = {});
+  
+  
+      BB.user.isAdmin = false
+      BB.repo.id = 273067;
+    
+    
+      BB.repo.slug = 'csc300\u002Dterm\u002Dpaper';
+    
+    
+      BB.repo.owner = {
+        username: 'zombiezen'
+      };
+    
+      // Coerce `BB.repo` to a string to get
+      // "davidchambers/mango" or whatever.
+      BB.repo.toString = function () {
+        return this.owner.username + '/' + this.slug;
+      }
+    
+      BB.changeset = '648586738ea1'
+    
+    
+  
+    }(this));
+  </script>
+
+  
+    <link rel="stylesheet" href="https://dwz7u9t8u8usb.cloudfront.net/m/46c15ee9bc85/bun/css/bundle.css"/>
+  
+
+  <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="Bitbucket" />
+  <link rel="icon" href="https://dwz7u9t8u8usb.cloudfront.net/m/46c15ee9bc85/img/logo_new.png" type="image/png" />
+  <link type="text/plain" rel="author" href="/humans.txt" />
+
+
+  
+    <script src="https://dwz7u9t8u8usb.cloudfront.net/m/46c15ee9bc85/bun/js/bundle.js"></script>
+  
+
+
+
+</head>
+
+<body class="">
+  <script type="text/javascript">
+    if (!RegExp(" AppleWebKit/").test(navigator.userAgent)) {
+    $('body').addClass('non-webkit');
+    }
+  </script>
+  <!--[if IE 8]>
+  <script>jQuery(document.body).addClass('ie8')</script>
+  <![endif]-->
+  <!--[if IE 9]>
+  <script>jQuery(document.body).addClass('ie9')</script>
+  <![endif]-->
+
+  <div id="wrapper">
+
+
+
+  <div id="header-wrap">
+    <div id="header">
+    <ul id="global-nav">
+      <li><a class="home" href="http://www.atlassian.com">Atlassian Home</a></li>
+      <li><a class="docs" href="http://confluence.atlassian.com/display/BITBUCKET">Documentation</a></li>
+      <li><a class="support" href="https://bitbucket.org/support">Support</a></li>
+      <li><a class="blog" href="http://blog.bitbucket.org">Blog</a></li>
+      <li><a class="forums" href="http://groups.google.com/group/bitbucket-users">Forums</a></li>
+    </ul>
+    <a href="/" id="logo">Bitbucket by Atlassian</a>
+
+    <div id="main-nav" class="clearfix">
+    
+      <ul class="clearfix">
+        <li><a href="https://bitbucket.org/features">Features</a></li>
+        <li><a href="https://bitbucket.org/plans">Pricing &amp; signup</a></li>
+        <li><a href="https://bitbucket.org/explore">Explore Bitbucket</a></li>
+        <li><a href="/account/signin/?next=/csc300-term-paper/src/648586738ea1/termpaper.bib">Log in</a></li>
+        
+
+<li class="search-box">
+  
+    <form action="https://bitbucket.org/repo/all">
+      <input type="search" results="5" autosave="bitbucket-explore-search"
+             name="name" id="searchbox"
+             placeholder="Find a project" />
+  
+  </form>
+</li>
+
+      </ul>
+    
+    </div>
+    </div>
+  </div>
+
+    <div id="header-messages">
+  
+  
+    
+    
+    
+    
+  
+
+    
+   </div>
+
+
+
+    <div id="content">
+      <div id="unnamed">
+      
+  
+  
+
+
+
+
+
+  <script>
+    jQuery(function ($) {
+        var cookie = $.cookie,
+            cookieOptions, date,
+            $content = $('#content'),
+            $pane = $('#what-is-bitbucket'),
+            $hide = $pane.find('[href="#hide"]').css('display', 'block').hide();
+
+        date = new Date();
+        date.setTime(date.getTime() + 365 * 24 * 60 * 60 * 1000);
+        cookieOptions = { path: '/', expires: date };
+
+        if (cookie('toggle_status') == 'hide') $content.addClass('repo-desc-hidden');
+
+        $('#toggle-repo-content').click(function (event) {
+            event.preventDefault();
+            $content.toggleClass('repo-desc-hidden');
+            cookie('toggle_status', cookie('toggle_status') == 'show' ? 'hide' : 'show', cookieOptions);
+        });
+
+        if (!cookie('hide_intro_message')) $pane.show();
+
+        $hide.click(function (event) {
+            event.preventDefault();
+            cookie('hide_intro_message', true, cookieOptions);
+            $pane.slideUp('slow');
+        });
+
+        $pane.hover(
+            function () { $hide.fadeIn('fast'); },
+            function () { $hide.fadeOut('fast'); });
+
+      (function () {
+        // Update "recently-viewed-repos" cookie for
+        // the "repositories" drop-down.
+        var
+          id = BB.repo.id,
+          cookieName = 'recently-viewed-repos_' + BB.user.id,
+          rvr = cookie(cookieName),
+          ids = rvr? rvr.split(','): [],
+          idx = _.indexOf(ids, '' + id);
+
+        // Remove `id` from `ids` if present.
+        if (~idx) ids.splice(idx, 1);
+
+        cookie(
+          cookieName,
+          // Insert `id` as the first item, then call
+          // `join` on the resulting array to produce
+          // something like "114694,27542,89002,84570".
+          [id].concat(ids.slice(0, 4)).join(),
+          {path: '/', expires: 1e6} // "never" expires
+        );
+      }());
+    });
+  </script>
+
+
+
+  
+  
+  
+  
+  
+    <div id="what-is-bitbucket" class="new-to-bitbucket">
+      <h2>Ross Light <span id="slogan">is sharing code with you</span></h2>
+      <img src="https://secure.gravatar.com/avatar/172b34158b0c5a7300ee08a2f190c4c7?d=identicon&s=32" alt="" class="avatar" />
+      <p>Bitbucket is a code hosting site. Unlimited public and private repositories. Free for small teams.</p>
+      <div class="primary-action-link signup"><a href="https://bitbucket.org/account/signup/?utm_source=internal&utm_medium=banner&utm_campaign=what_is_bitbucket">Try Bitbucket free</a></div>
+      <a href="#hide" title="Don't show this again">Don't show this again</a>
+    </div>
+  
+
+
+<div id="tabs">
+  <ul class="tabs">
+    <li>
+      <a href="/csc300-term-paper/overview">Overview</a>
+    </li>
+
+    <li>
+      <a href="/csc300-term-paper/downloads">Downloads (<span id="downloads-count">1</span>)</a>
+    </li>
+
+    
+
+    <li>
+      <a href="/csc300-term-paper/pull-requests">Pull requests (0)</a>
+    </li>
+
+    <li class="selected">
+      
+        <a href="/csc300-term-paper/src">Source</a>
+      
+    </li>
+
+    <li>
+      <a href="/csc300-term-paper/changesets">Commits</a>
+    </li>
+
+    
+
+    
+
+    
+
+    <li class="secondary">
+      <a href="/csc300-term-paper/descendants">Forks/queues (0)</a>
+    </li>
+
+    <li class="secondary">
+      <a href="/csc300-term-paper/zealots">Followers (<span id="followers-count">1</span>)</a>
+    </li>
+  </ul>
+</div>
+
+
+  <div class="repo-menu" id="repo-menu">
+    <ul id="repo-menu-links">
+    
+      <li>
+        <a href="/csc300-term-paper/rss" class="rss" title="RSS feed for CSC300 Term Paper">RSS</a>
+      </li>
+
+      <li><a href="/csc300-term-paper/fork" class="fork">fork</a></li>
+      
+        
+          <li><a href="/csc300-term-paper/hack" class="patch-queue">patch queue</a></li>
+        
+      
+      <li>
+        <a rel="nofollow" href="/csc300-term-paper/follow" class="follow">follow</a>
+      </li>
+      
+          
+      
+      
+        <li class="get-source inertial-hover">
+          <a class="source">get source</a>
+          <ul class="downloads">
+            
+              
+              <li><a rel="nofollow" href="/csc300-term-paper/get/648586738ea1.zip">zip</a></li>
+              <li><a rel="nofollow" href="/csc300-term-paper/get/648586738ea1.tar.gz">gz</a></li>
+              <li><a rel="nofollow" href="/csc300-term-paper/get/648586738ea1.tar.bz2">bz2</a></li>
+            
+          </ul>
+        </li>
+      
+    </ul>
+
+  
+    <ul class="metadata">
+      
+      
+        <li class="branches inertial-hover">branches
+          <ul>
+            <li><a href="/csc300-term-paper/src/1813baa0f7bb">default</a>
+              
+              
+            </li>
+          </ul>
+        </li>
+      
+      
+      <li class="tags inertial-hover">tags
+        <ul>
+          <li><a href="/csc300-term-paper/src/1813baa0f7bb">tip</a>
+            
+            </li>
+          <li><a href="/csc300-term-paper/src/1b8d60f73908">finaldraft</a>
+            
+            
+              <a rel="nofollow" class='menu-compare'
+                 href="/csc300-term-paper/compare/..finaldraft"
+                 title="Show changes between finaldraft and the main branch.">compare</a>
+            </li>
+          <li><a href="/csc300-term-paper/src/648586738ea1">peer2</a>
+            
+            
+              <a rel="nofollow" class='menu-compare'
+                 href="/csc300-term-paper/compare/..peer2"
+                 title="Show changes between peer2 and the main branch.">compare</a>
+            </li>
+          <li><a href="/csc300-term-paper/src/1a50bf99a6cd">halfdraft</a>
+            
+            
+              <a rel="nofollow" class='menu-compare'
+                 href="/csc300-term-paper/compare/..halfdraft"
+                 title="Show changes between halfdraft and the main branch.">compare</a>
+            </li>
+          <li><a href="/csc300-term-paper/src/91708aa45c16">peer1</a>
+            
+            
+              <a rel="nofollow" class='menu-compare'
+                 href="/csc300-term-paper/compare/..peer1"
+                 title="Show changes between peer1 and the main branch.">compare</a>
+            </li>
+          <li><a href="/csc300-term-paper/src/1af8a6e089bb">proposal</a>
+            
+            
+              <a rel="nofollow" class='menu-compare'
+                 href="/csc300-term-paper/compare/..proposal"
+                 title="Show changes between proposal and the main branch.">compare</a>
+            </li>
+        </ul>
+      </li>
+     
+     
+    </ul>
+  
+</div>
+<div class="repo-menu" id="repo-desc">
+  
+    <ul id="repo-menu-links-mini">
+      <li><a rel="nofollow" class="compare-link"
+             href="/csc300-term-paper/compare/../"
+             title="Show changes between CSC300 Term Paper and "
+             ></a></li>
+      
+  
+
+      
+      <li>
+        <a href="/csc300-term-paper/rss" class="rss" title="RSS feed for CSC300 Term Paper"></a>
+      </li>
+
+      <li><a href="/csc300-term-paper/fork" class="fork" title="Fork"></a></li>
+      
+        
+          <li><a href="/csc300-term-paper/hack" class="patch-queue" title="Patch queue"></a></li>
+        
+      
+      <li>
+        <a rel="nofollow" href="/csc300-term-paper/follow" class="follow">follow</a>
+      </li>
+      
+          
+      
+    
+      
+        <li>
+          <a class="source" title="Get source"></a>
+          <ul class="downloads">
+            
+              
+                <li><a rel="nofollow" href="/csc300-term-paper/get/1813baa0f7bb.zip">zip</a></li>
+                <li><a rel="nofollow" href="/csc300-term-paper/get/1813baa0f7bb.tar.gz">gz</a></li>
+                <li><a rel="nofollow" href="/csc300-term-paper/get/1813baa0f7bb.tar.bz2">bz2</a></li>
+              
+            
+          </ul>
+        </li>
+      
+    
+    </ul>
+
+    <h3 id="repo-heading">
+      <a class="owner-username" href="">zombiezen</a> /
+      <a class="repo-name" href="/csc300-term-paper">CSC300 Term Paper</a>
+    
+
+    
+    </h3>
+
+
+  <p class="repo-desc-description">&quot;Coffee in Iceland: The Ethics of Java on Android&quot; is a paper I wrote for my Professional Responsibilities class about the Oracle vs. Google lawsuit.  It discusses the ethics of Google&#39;s use of the Dalvik virtual machine.</p>
+
+
+  <div id="repo-desc-cloneinfo">Clone this repository (size: 121.3 KB):
+    <a href="https://bitbucket.org/zombiezen/csc300-term-paper" class="https">HTTPS</a> /
+    <a href="ssh://hg@bitbucket.org/zombiezen/csc300-term-paper" class="ssh">SSH</a>
+    <pre id="clone-url-https">hg clone https://bitbucket.org/zombiezen/csc300-term-paper</pre>
+    <pre id="clone-url-ssh">hg clone ssh://hg@bitbucket.org/zombiezen/csc300-term-paper</pre>
+    
+  </div>
+
+  <a href="#" id="toggle-repo-content"></a>
+
+  
+
+</div>
+
+
+
+
+      
+
+  <div id="source-path">
+    <h1>
+      <a href="/csc300-term-paper/src">CSC300 Term Paper</a> /
+
+  
+    
+      termpaper.bib
+    
+  
+
+    </h1>
+  </div>
+
+
+  
+  <div id="source-view">
+    <div class="header">
+      <ul class="metadata">
+        <li><code>648586738ea1</code></li>
+        <li>224 loc</li>
+        <li>8.3 KB</li>
+      </ul>
+      <ul class="source-view-links">
+        
+        <li><a id="embed-link" href="https://bitbucket.org/csc300-term-paper/src/648586738ea1/termpaper.bib?embed=t">embed</a></li>
+        
+        <li><a href="/csc300-term-paper/history/termpaper.bib">history</a></li>
+        
+        <li><a href="/csc300-term-paper/annotate/648586738ea1/termpaper.bib">annotate</a></li>
+        
+        <li><a href="/csc300-term-paper/raw/648586738ea1/termpaper.bib">raw</a></li>
+        <li>
+          <form action="/csc300-term-paper/diff/termpaper.bib" class="source-view-form">
+          
+            <input type="hidden" name="diff2" value="0d96513c277a" />
+            <select name="diff1">
+            
+              
+                <option value="5b51396d290e">5b51396d290e</option>
+              
+            
+              
+                <option value="308a7a49fb97">308a7a49fb97</option>
+              
+            
+              
+                <option value="126df2c10dc6">126df2c10dc6</option>
+              
+            
+              
+                <option value="c7fbb205af2f">c7fbb205af2f</option>
+              
+            
+              
+                <option value="64a3f4fddcce">64a3f4fddcce</option>
+              
+            
+              
+                <option value="69e1cbb0af2f">69e1cbb0af2f</option>
+              
+            
+              
+                <option value="a506631a5be3">a506631a5be3</option>
+              
+            
+              
+                <option value="ed2a031d57f9">ed2a031d57f9</option>
+              
+            
+              
+                <option value="0d96513c277a">0d96513c277a</option>
+              
+            
+              
+                <option value="6eb432994731">6eb432994731</option>
+              
+            
+              
+                <option value="93742f2b099c">93742f2b099c</option>
+              
+            
+              
+                <option value="76a7977b551d">76a7977b551d</option>
+              
+            
+              
+                <option value="1f3db13ded40">1f3db13ded40</option>
+              
+            
+              
+                <option value="ee5c0ce76ca4">ee5c0ce76ca4</option>
+              
+            
+              
+                <option value="91708aa45c16">91708aa45c16</option>
+              
+            
+              
+                <option value="27508a3b58aa">27508a3b58aa</option>
+              
+            
+              
+                <option value="33a5f0109eb8">33a5f0109eb8</option>
+              
+            
+            </select>
+            <input type="submit" value="diff" />
+          
+          </form>
+        </li>
+      </ul>
+    </div>
+  
+    <div>
+    <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><a href="#cl-1">  1</a>
+<a href="#cl-2">  2</a>
+<a href="#cl-3">  3</a>
+<a href="#cl-4">  4</a>
+<a href="#cl-5">  5</a>
+<a href="#cl-6">  6</a>
+<a href="#cl-7">  7</a>
+<a href="#cl-8">  8</a>
+<a href="#cl-9">  9</a>
+<a href="#cl-10"> 10</a>
+<a href="#cl-11"> 11</a>
+<a href="#cl-12"> 12</a>
+<a href="#cl-13"> 13</a>
+<a href="#cl-14"> 14</a>
+<a href="#cl-15"> 15</a>
+<a href="#cl-16"> 16</a>
+<a href="#cl-17"> 17</a>
+<a href="#cl-18"> 18</a>
+<a href="#cl-19"> 19</a>
+<a href="#cl-20"> 20</a>
+<a href="#cl-21"> 21</a>
+<a href="#cl-22"> 22</a>
+<a href="#cl-23"> 23</a>
+<a href="#cl-24"> 24</a>
+<a href="#cl-25"> 25</a>
+<a href="#cl-26"> 26</a>
+<a href="#cl-27"> 27</a>
+<a href="#cl-28"> 28</a>
+<a href="#cl-29"> 29</a>
+<a href="#cl-30"> 30</a>
+<a href="#cl-31"> 31</a>
+<a href="#cl-32"> 32</a>
+<a href="#cl-33"> 33</a>
+<a href="#cl-34"> 34</a>
+<a href="#cl-35"> 35</a>
+<a href="#cl-36"> 36</a>
+<a href="#cl-37"> 37</a>
+<a href="#cl-38"> 38</a>
+<a href="#cl-39"> 39</a>
+<a href="#cl-40"> 40</a>
+<a href="#cl-41"> 41</a>
+<a href="#cl-42"> 42</a>
+<a href="#cl-43"> 43</a>
+<a href="#cl-44"> 44</a>
+<a href="#cl-45"> 45</a>
+<a href="#cl-46"> 46</a>
+<a href="#cl-47"> 47</a>
+<a href="#cl-48"> 48</a>
+<a href="#cl-49"> 49</a>
+<a href="#cl-50"> 50</a>
+<a href="#cl-51"> 51</a>
+<a href="#cl-52"> 52</a>
+<a href="#cl-53"> 53</a>
+<a href="#cl-54"> 54</a>
+<a href="#cl-55"> 55</a>
+<a href="#cl-56"> 56</a>
+<a href="#cl-57"> 57</a>
+<a href="#cl-58"> 58</a>
+<a href="#cl-59"> 59</a>
+<a href="#cl-60"> 60</a>
+<a href="#cl-61"> 61</a>
+<a href="#cl-62"> 62</a>
+<a href="#cl-63"> 63</a>
+<a href="#cl-64"> 64</a>
+<a href="#cl-65"> 65</a>
+<a href="#cl-66"> 66</a>
+<a href="#cl-67"> 67</a>
+<a href="#cl-68"> 68</a>
+<a href="#cl-69"> 69</a>
+<a href="#cl-70"> 70</a>
+<a href="#cl-71"> 71</a>
+<a href="#cl-72"> 72</a>
+<a href="#cl-73"> 73</a>
+<a href="#cl-74"> 74</a>
+<a href="#cl-75"> 75</a>
+<a href="#cl-76"> 76</a>
+<a href="#cl-77"> 77</a>
+<a href="#cl-78"> 78</a>
+<a href="#cl-79"> 79</a>
+<a href="#cl-80"> 80</a>
+<a href="#cl-81"> 81</a>
+<a href="#cl-82"> 82</a>
+<a href="#cl-83"> 83</a>
+<a href="#cl-84"> 84</a>
+<a href="#cl-85"> 85</a>
+<a href="#cl-86"> 86</a>
+<a href="#cl-87"> 87</a>
+<a href="#cl-88"> 88</a>
+<a href="#cl-89"> 89</a>
+<a href="#cl-90"> 90</a>
+<a href="#cl-91"> 91</a>
+<a href="#cl-92"> 92</a>
+<a href="#cl-93"> 93</a>
+<a href="#cl-94"> 94</a>
+<a href="#cl-95"> 95</a>
+<a href="#cl-96"> 96</a>
+<a href="#cl-97"> 97</a>
+<a href="#cl-98"> 98</a>
+<a href="#cl-99"> 99</a>
+<a href="#cl-100">100</a>
+<a href="#cl-101">101</a>
+<a href="#cl-102">102</a>
+<a href="#cl-103">103</a>
+<a href="#cl-104">104</a>
+<a href="#cl-105">105</a>
+<a href="#cl-106">106</a>
+<a href="#cl-107">107</a>
+<a href="#cl-108">108</a>
+<a href="#cl-109">109</a>
+<a href="#cl-110">110</a>
+<a href="#cl-111">111</a>
+<a href="#cl-112">112</a>
+<a href="#cl-113">113</a>
+<a href="#cl-114">114</a>
+<a href="#cl-115">115</a>
+<a href="#cl-116">116</a>
+<a href="#cl-117">117</a>
+<a href="#cl-118">118</a>
+<a href="#cl-119">119</a>
+<a href="#cl-120">120</a>
+<a href="#cl-121">121</a>
+<a href="#cl-122">122</a>
+<a href="#cl-123">123</a>
+<a href="#cl-124">124</a>
+<a href="#cl-125">125</a>
+<a href="#cl-126">126</a>
+<a href="#cl-127">127</a>
+<a href="#cl-128">128</a>
+<a href="#cl-129">129</a>
+<a href="#cl-130">130</a>
+<a href="#cl-131">131</a>
+<a href="#cl-132">132</a>
+<a href="#cl-133">133</a>
+<a href="#cl-134">134</a>
+<a href="#cl-135">135</a>
+<a href="#cl-136">136</a>
+<a href="#cl-137">137</a>
+<a href="#cl-138">138</a>
+<a href="#cl-139">139</a>
+<a href="#cl-140">140</a>
+<a href="#cl-141">141</a>
+<a href="#cl-142">142</a>
+<a href="#cl-143">143</a>
+<a href="#cl-144">144</a>
+<a href="#cl-145">145</a>
+<a href="#cl-146">146</a>
+<a href="#cl-147">147</a>
+<a href="#cl-148">148</a>
+<a href="#cl-149">149</a>
+<a href="#cl-150">150</a>
+<a href="#cl-151">151</a>
+<a href="#cl-152">152</a>
+<a href="#cl-153">153</a>
+<a href="#cl-154">154</a>
+<a href="#cl-155">155</a>
+<a href="#cl-156">156</a>
+<a href="#cl-157">157</a>
+<a href="#cl-158">158</a>
+<a href="#cl-159">159</a>
+<a href="#cl-160">160</a>
+<a href="#cl-161">161</a>
+<a href="#cl-162">162</a>
+<a href="#cl-163">163</a>
+<a href="#cl-164">164</a>
+<a href="#cl-165">165</a>
+<a href="#cl-166">166</a>
+<a href="#cl-167">167</a>
+<a href="#cl-168">168</a>
+<a href="#cl-169">169</a>
+<a href="#cl-170">170</a>
+<a href="#cl-171">171</a>
+<a href="#cl-172">172</a>
+<a href="#cl-173">173</a>
+<a href="#cl-174">174</a>
+<a href="#cl-175">175</a>
+<a href="#cl-176">176</a>
+<a href="#cl-177">177</a>
+<a href="#cl-178">178</a>
+<a href="#cl-179">179</a>
+<a href="#cl-180">180</a>
+<a href="#cl-181">181</a>
+<a href="#cl-182">182</a>
+<a href="#cl-183">183</a>
+<a href="#cl-184">184</a>
+<a href="#cl-185">185</a>
+<a href="#cl-186">186</a>
+<a href="#cl-187">187</a>
+<a href="#cl-188">188</a>
+<a href="#cl-189">189</a>
+<a href="#cl-190">190</a>
+<a href="#cl-191">191</a>
+<a href="#cl-192">192</a>
+<a href="#cl-193">193</a>
+<a href="#cl-194">194</a>
+<a href="#cl-195">195</a>
+<a href="#cl-196">196</a>
+<a href="#cl-197">197</a>
+<a href="#cl-198">198</a>
+<a href="#cl-199">199</a>
+<a href="#cl-200">200</a>
+<a href="#cl-201">201</a>
+<a href="#cl-202">202</a>
+<a href="#cl-203">203</a>
+<a href="#cl-204">204</a>
+<a href="#cl-205">205</a>
+<a href="#cl-206">206</a>
+<a href="#cl-207">207</a>
+<a href="#cl-208">208</a>
+<a href="#cl-209">209</a>
+<a href="#cl-210">210</a>
+<a href="#cl-211">211</a>
+<a href="#cl-212">212</a>
+<a href="#cl-213">213</a>
+<a href="#cl-214">214</a>
+<a href="#cl-215">215</a>
+<a href="#cl-216">216</a>
+<a href="#cl-217">217</a>
+<a href="#cl-218">218</a>
+<a href="#cl-219">219</a>
+<a href="#cl-220">220</a>
+<a href="#cl-221">221</a>
+<a href="#cl-222">222</a>
+<a href="#cl-223">223</a>
+<a href="#cl-224">224</a>
+</pre></div></td><td class="code"><div class="highlight"><pre><a name="cl-1"></a>misc{android-market-share,
+<a name="cl-2"></a>  title = &quot;{Android market share topples Blackberry}&quot;,
+<a name="cl-3"></a>  author = {Raven Lovecraft},
+<a name="cl-4"></a>  year = {2011},
+<a name="cl-5"></a>  month = {March},
+<a name="cl-6"></a>  url = {http://www.tgdaily.com/mobility-brief/54462-android-market-share-topples-blackberry},
+<a name="cl-7"></a>}
+<a name="cl-8"></a>
+<a name="cl-9"></a>@misc{open-handset-alliance-ann,
+<a name="cl-10"></a>  title = &quot;{Industry Leaders Announce Open Platform for Mobile Devices}&quot;,
+<a name="cl-11"></a>  organization = {Open Handset Alliance},
+<a name="cl-12"></a>  year = {2007},
+<a name="cl-13"></a>  month = {November},
+<a name="cl-14"></a>  url = {http://www.openhandsetalliance.com/press_110507.html},
+<a name="cl-15"></a>  annote = &quot;This is the initial press release for Android, stating the goals and requirements of the platform.  I used this as the basis for inferring the project&#39;s requirements.&quot;,
+<a name="cl-16"></a>}
+<a name="cl-17"></a>
+<a name="cl-18"></a>@article{groklaw,
+<a name="cl-19"></a>  title = &quot;{Oracle America&#39;s complaint against Google, as text}&quot;,
+<a name="cl-20"></a>  author = {Pamela Jones},
+<a name="cl-21"></a>  year = {2010},
+<a name="cl-22"></a>  month = {August},
+<a name="cl-23"></a>  url = {http://www.groklaw.net/article.php?story=20100815110101756},
+<a name="cl-24"></a>  annote = &quot;This is Groklaw&#39;s response to the Oracle Lawsuit, as cited as one of the extant arguments.&quot;,
+<a name="cl-25"></a>}
+<a name="cl-26"></a>
+<a name="cl-27"></a>@article{groklaw-pj,
+<a name="cl-28"></a>  title = &quot;{Why Groklaw?}&quot;,
+<a name="cl-29"></a>  author = {Michael J. Jordan},
+<a name="cl-30"></a>  year = {2003},
+<a name="cl-31"></a>  month = {July},
+<a name="cl-32"></a>  url = {http://www.groklaw.net/staticpages/index.php?page=20031004190519196},
+<a name="cl-33"></a>  annote = &quot;Linux Online interviewed Pamela Jones when Groklaw started, giving some background on Pamela Jones&#39;s authority.&quot;,
+<a name="cl-34"></a>}
+<a name="cl-35"></a>
+<a name="cl-36"></a>@misc{oracle-lawsuit,
+<a name="cl-37"></a>  title = &quot;{Oracle America Inc. v. Google Inc.}&quot;,
+<a name="cl-38"></a>  organization = {Oracle America Inc.},
+<a name="cl-39"></a>  year = {2010},
+<a name="cl-40"></a>  month = {August},
+<a name="cl-41"></a>  url = {http://www.groklaw.net/pdf2/OrvGoogComplaint.pdf},
+<a name="cl-42"></a>  annote = &quot;Groklaw posted a mirrored copy of the original Oracle lawsuit.  It&#39;s surprisingly readable, and cites a fair number of patents in the case.&quot;,
+<a name="cl-43"></a>}
+<a name="cl-44"></a>
+<a name="cl-45"></a>@misc{dalvik,
+<a name="cl-46"></a>  title = &quot;{Dalvik Virtual Machine}&quot;,
+<a name="cl-47"></a>  organization = {DalvikVM.com},
+<a name="cl-48"></a>  url = {http://www.dalvikvm.com/},
+<a name="cl-49"></a>  annote = &quot;This site, although not directly affiliated with Dalvik, provides information about how Dalvik works.&quot;,
+<a name="cl-50"></a>}
+<a name="cl-51"></a>
+<a name="cl-52"></a>@misc{dalvik-bytecode,
+<a name="cl-53"></a>  title = &quot;{Bytecode for the Dalvik VM}&quot;,
+<a name="cl-54"></a>  organization = {Android Open Source Project},
+<a name="cl-55"></a>  year = {2007},
+<a name="cl-56"></a>  url = {http://www.netmite.com/android/mydroid/dalvik/docs/dalvik-bytecode.html},
+<a name="cl-57"></a>  annote = &quot;This site, although not directly affiliated with Dalvik, provides information about how Dalvik works.&quot;,
+<a name="cl-58"></a>}
+<a name="cl-59"></a>
+<a name="cl-60"></a>@book{javavm-bytecode,
+<a name="cl-61"></a>  title = &quot;{The Java\texttrademark Virtual Machine Specification}&quot;,
+<a name="cl-62"></a>  author = {Tim Lindholm and Frank Yellin},
+<a name="cl-63"></a>  publisher = {Prentice Hall},
+<a name="cl-64"></a>  year = {1999},
+<a name="cl-65"></a>  month = {April},
+<a name="cl-66"></a>  url = {http://java.sun.com/docs/books/jvms/second_edition/html/VMSpecTOC.doc.html},
+<a name="cl-67"></a>  edition = {2},
+<a name="cl-68"></a>  annote = &quot;This is the JavaVM specification, detailing the bytecode instructions.&quot;,
+<a name="cl-69"></a>}
+<a name="cl-70"></a>
+<a name="cl-71"></a>@misc{android-sdk-building,
+<a name="cl-72"></a>  title = &quot;{Building and Running}&quot;,
+<a name="cl-73"></a>  organization = {Android Open Source Project},
+<a name="cl-74"></a>  year = {2011},
+<a name="cl-75"></a>  month = {April},
+<a name="cl-76"></a>  url = {http://developer.android.com/guide/developing/building/index.html},
+<a name="cl-77"></a>  annote = &quot;This page from the SDK documentation describes in-depth the Android build process.  It&#39;s from here that I learned about the dx program.&quot;,
+<a name="cl-78"></a>}
+<a name="cl-79"></a>
+<a name="cl-80"></a>@misc{oracle-buys-sun,
+<a name="cl-81"></a>  title = &quot;{Oracle wins U.S.\ approval to buy Sun Microsystems}&quot;,
+<a name="cl-82"></a>  author = {Paul Thomasch and Jim Finkle},
+<a name="cl-83"></a>  year = {2009},
+<a name="cl-84"></a>  month = {August},
+<a name="cl-85"></a>  url = {http://www.reuters.com/article/2009/08/20/sun-oracle-idUSN2053486920090820},
+<a name="cl-86"></a>  annote = &quot;A news article announcing Oracle acquisition of Sun.&quot;,
+<a name="cl-87"></a>}
+<a name="cl-88"></a>
+<a name="cl-89"></a>@misc{sun-open-sources-java,
+<a name="cl-90"></a>  title = &quot;{Sun Opens Java Source Code Under GPL}&quot;,
+<a name="cl-91"></a>  author = {Ed Oswald},
+<a name="cl-92"></a>  year = {2006},
+<a name="cl-93"></a>  month = {November},
+<a name="cl-94"></a>  url = {http://www.betanews.com/article/Sun-Opens-Java-Source-Code-Under-GPL/1163439422},
+<a name="cl-95"></a>  annote = &quot;A news article announcing Sun&#39;s open-sourcing of Java, before they were acquired by Oracle.&quot;,
+<a name="cl-96"></a>}
+<a name="cl-97"></a>
+<a name="cl-98"></a>@misc{android-copies-java-code,
+<a name="cl-99"></a>  title = &quot;{Oops: Android contains directly copied Java code, strengthening Oracle&#39;s case}&quot;,
+<a name="cl-100"></a>  author = {Nilay Patel},
+<a name="cl-101"></a>  year = {2011},
+<a name="cl-102"></a>  month = {January},
+<a name="cl-103"></a>  url = {http://www.engadget.com/2011/01/21/oops-android-contains-directly-copied-java-code-strengthening/},
+<a name="cl-104"></a>  annote = &quot;Engadget&#39;s report on copied code in Android.  However, it seems as though the code was already removed before shipping, and only was used as a test case.&quot;,
+<a name="cl-105"></a>}
+<a name="cl-106"></a>
+<a name="cl-107"></a>@misc{hotspot,
+<a name="cl-108"></a>  title = &quot;{The HotSpot Group}&quot;,
+<a name="cl-109"></a>  organization = {Oracle Corporation},
+<a name="cl-110"></a>  year = {2011},
+<a name="cl-111"></a>  url = {http://openjdk.java.net/groups/hotspot/},
+<a name="cl-112"></a>  annote = &quot;Oracle&#39;s de facto JavaVM implementation.&quot;,
+<a name="cl-113"></a>}
+<a name="cl-114"></a>
+<a name="cl-115"></a>@misc{apache-harmony,
+<a name="cl-116"></a>  title = &quot;{Apache Harmony}&quot;,
+<a name="cl-117"></a>  organization = {Apache Software Foundation},
+<a name="cl-118"></a>  url = {http://harmony.apache.org/},
+<a name="cl-119"></a>  annote = &quot;The Apache Foundation&#39;s implementation of the Java VM specification.&quot;,
+<a name="cl-120"></a>}
+<a name="cl-121"></a>
+<a name="cl-122"></a>@misc{icedtea,
+<a name="cl-123"></a>  title = &quot;{IcedTea - Main Page}&quot;,
+<a name="cl-124"></a>  organization = {IcedTea project},
+<a name="cl-125"></a>  url = {http://icedtea.classpath.org/wiki/Main_Page},
+<a name="cl-126"></a>  annote = &quot;Red Hat&#39;s free implementation of the Java VM specification.&quot;,
+<a name="cl-127"></a>}
+<a name="cl-128"></a>
+<a name="cl-129"></a>@misc{lawsuit-no-surprise,
+<a name="cl-130"></a>  title = &quot;{Java Creator Gosling: Oracle&#39;s Android Lawsuit Is No Surprise}&quot;,
+<a name="cl-131"></a>  author = {Darryl K. Taft},
+<a name="cl-132"></a>  url = {http://www.eweek.com/c/a/Application-Development/Java-Creator-Gosling-Oracles-Android-Lawsuit-is-No-Surprise-272156/},
+<a name="cl-133"></a>  annote = &quot;Gosling&#39;s vindicated take on the issue was a fascinating read.&quot;,
+<a name="cl-134"></a>}
+<a name="cl-135"></a>
+<a name="cl-136"></a>@misc{secode,
+<a name="cl-137"></a>    organization = &quot;ACM&quot;,
+<a name="cl-138"></a>    title = &quot;{Software Engineering Code of Ethics and Professional Practice}&quot;,
+<a name="cl-139"></a>    month = &quot;April&quot;,
+<a name="cl-140"></a>    year = &quot;2011&quot;,
+<a name="cl-141"></a>    howpublished = &quot;\url{http://www.acm.org/about/se-code}&quot;,
+<a name="cl-142"></a>    annote = &quot;The SE Code is a pivotal document in this paper for establishing a baseline of ethics.&quot;,
+<a name="cl-143"></a>}
+<a name="cl-144"></a>
+<a name="cl-145"></a>@misc{routed-around-ip,
+<a name="cl-146"></a>  title = &quot;{Dalvik: how Google routed around Sun’s IP-based licensing restrictions on Java ME}&quot;,
+<a name="cl-147"></a>  author = {Stefano Mazzocchi},
+<a name="cl-148"></a>  year = {2007},
+<a name="cl-149"></a>  month = {November},
+<a name="cl-150"></a>  url = {http://www.betaversion.org/~stefano/linotype/news/110/},
+<a name="cl-151"></a>  annote = &quot;Although not cited directly, this article covered the licensing issues associated with Dalvik and is certainly an interesting read.&quot;,
+<a name="cl-152"></a>}
+<a name="cl-153"></a>
+<a name="cl-154"></a>@misc{dalvik-readme,
+<a name="cl-155"></a>  title = &quot;{Dalvik README}&quot;,
+<a name="cl-156"></a>  organization = {Android Open Source Project},
+<a name="cl-157"></a>  url = {http://android.git.kernel.org/?p=platform/dalvik.git;a=blob;f=README.txt;h=2969180f3dd02b4ae69279d6f1f741812710183f;hb=HEAD},
+<a name="cl-158"></a>  annote = &quot;The README contains all of the credits and licensing information for the Dalvik project&quot;,
+<a name="cl-159"></a>}
+<a name="cl-160"></a>
+<a name="cl-161"></a>@misc{google-conduct,
+<a name="cl-162"></a>  title = &quot;{Google Code of Conduct}&quot;,
+<a name="cl-163"></a>  organization = {Google Inc.},
+<a name="cl-164"></a>  url = {http://investor.google.com/corporate/code-of-conduct.html},
+<a name="cl-165"></a>  annote = &quot;Google&#39;s Code of Conduct was useful in showing that Google&#39;s ethics align with the SE Code&quot;,
+<a name="cl-166"></a>}
+<a name="cl-167"></a>
+<a name="cl-168"></a>@misc{apache-harmony-faq,
+<a name="cl-169"></a>  title = &quot;{Apache Harmony --- Frequently Asked Questions}&quot;,
+<a name="cl-170"></a>  organization = {Apache Software Foundation},
+<a name="cl-171"></a>  url = {http://harmony.apache.org/faq.html},
+<a name="cl-172"></a>  annote = &quot;Has information about Apache Harmony&quot;,
+<a name="cl-173"></a>}
+<a name="cl-174"></a>
+<a name="cl-175"></a>@misc{apache-license,
+<a name="cl-176"></a>  title = &quot;{Apache License, Version 2.0}&quot;,
+<a name="cl-177"></a>  organization = {Apache Software Foundation},
+<a name="cl-178"></a>  url = {http://www.apache.org/licenses/LICENSE-2.0.html},
+<a name="cl-179"></a>  annote = &quot;The Apache License 2.0 that Dalvik and Apache Harmony are released under.&quot;,
+<a name="cl-180"></a>}
+<a name="cl-181"></a>
+<a name="cl-182"></a>@misc{gpl-license,
+<a name="cl-183"></a>  title = &quot;{GNU General Public License}&quot;,
+<a name="cl-184"></a>  organization = {Free Software Foundation, Inc.},
+<a name="cl-185"></a>  url = {http://www.gnu.org/licenses/gpl.html},
+<a name="cl-186"></a>  annote = &quot;The GNU GPL is used for the Java HotSpot VM.&quot;,
+<a name="cl-187"></a>}
+<a name="cl-188"></a>
+<a name="cl-189"></a>@article{why-apache2-license,
+<a name="cl-190"></a>  title = &quot;{Why Google chose the Apache Software License over GPLv2 for Android}&quot;,
+<a name="cl-191"></a>  author = &quot;Ryan Paul&quot;,
+<a name="cl-192"></a>  year = {2007},
+<a name="cl-193"></a>  month = {November},
+<a name="cl-194"></a>  url = {http://arstechnica.com/old/content/2007/11/why-google-chose-the-apache-software-license-over-gplv2.ars},
+<a name="cl-195"></a>  annote = &quot;This article was recommended by the Android developers to explain why the Apache License 2.0 was used in the Android project.&quot;,
+<a name="cl-196"></a>}
+<a name="cl-197"></a>
+<a name="cl-198"></a>@article{dalvik-vm-arch,
+<a name="cl-199"></a>  title = &quot;{The Dalvik Virtual Machine Architecture}&quot;,
+<a name="cl-200"></a>  author = &quot;David Ehringer&quot;,
+<a name="cl-201"></a>  year = {2010},
+<a name="cl-202"></a>  month = {March},
+<a name="cl-203"></a>  url = {http://davidehringer.com/software/android/The_Dalvik_Virtual_Machine.pdf},
+<a name="cl-204"></a>  annote = &quot;Ehringer summarizes the performance characteristics of Dalvik vs. HotSpot from an external viewpoint.&quot;,
+<a name="cl-205"></a>}
+<a name="cl-206"></a>
+<a name="cl-207"></a>@article{tiobe,
+<a name="cl-208"></a>  title = &quot;{TPCI History for language Java}&quot;,
+<a name="cl-209"></a>  organization = &quot;TIOBE Software&quot;,
+<a name="cl-210"></a>  year = {2011},
+<a name="cl-211"></a>  month = {May},
+<a name="cl-212"></a>  url = {http://www.tiobe.com/index.php/paperinfo/tpci/Java.html},
+<a name="cl-213"></a>  annote = &quot;The graph shows the usage of Java by year.&quot;,
+<a name="cl-214"></a>}
+<a name="cl-215"></a>
+<a name="cl-216"></a>@misc{artman,
+<a name="cl-217"></a>  title = &quot;Discussion with Nicholas Artman&quot;,
+<a name="cl-218"></a>  author = &quot;Nicholas Artman&quot;,
+<a name="cl-219"></a>  year = {2011},
+<a name="cl-220"></a>  month = {May},
+<a name="cl-221"></a>  annote = &quot;I discussed the Oracle lawsuit with Nicholas Artman after a presentation on the subject.&quot;,
+<a name="cl-222"></a>}
+<a name="cl-223"></a>
+<a name="cl-224"></a>% vim: ft=bib sts=2 ts=2 sw=2 et
+</pre></div>
+</td></tr></table>
+    </div>
+  
+  </div>
+  
+
+
+
+      </div>
+    </div>
+
+  </div>
+
+  <div id="footer">
+    <ul id="footer-nav">
+      <li>Copyright © 2011 <a href="http://atlassian.com">Atlassian</a></li>
+      <li><a href="http://www.atlassian.com/hosted/terms.jsp">Terms of Service</a></li>
+      <li><a href="http://www.atlassian.com/about/privacy.jsp">Privacy</a></li>
+      <li><a href="//bitbucket.org/site/master/issues/new">Report a Bug to Bitbucket</a></li>
+      <li><a href="http://confluence.atlassian.com/x/IYBGDQ">API</a></li>
+      <li><a href="http://status.bitbucket.org/">Server Status</a></li>
+    </ul>
+    <ul id="social-nav">
+      <li class="blog"><a href="http://blog.bitbucket.org">Bitbucket Blog</a></li>
+      <li class="twitter"><a href="http://www.twitter.com/bitbucket">Twitter</a></li>
+    </ul>
+    <h5>We run</h5>
+    <ul id="technologies">
+      <li><a href="http://www.djangoproject.com/">Django 1.3.0</a></li>
+      <li><a href="//bitbucket.org/jespern/django-piston/">Piston 0.3dev</a></li>
+      <li><a href="http://www.selenic.com/mercurial/">Hg 1.8.2</a></li>
+      <li><a href="http://www.python.org">Python 2.7.2</a></li>
+      <li>r12427:b7404d13ceac | bitbucket03</li>
+    </ul>
+  </div>
+
+  <script src="https://dwz7u9t8u8usb.cloudfront.net/m/46c15ee9bc85/js/lib/global.js"></script>
+
+
+
+
+
+
+  <script>
+    BB.gaqPush(['_trackPageview']);
+  
+    BB.gaqPush(['atl._trackPageview']);
+
+    
+
+    
+
+    (function () {
+        var ga = document.createElement('script');
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        ga.setAttribute('async', 'true');
+        document.documentElement.firstChild.appendChild(ga);
+    }());
+  </script>
+
+</body>
+</html>

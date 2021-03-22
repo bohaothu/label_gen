@@ -1,0 +1,284 @@
+This file was created with JabRef 2.0.1.
+Encoding: ANSI_X3.4-1968
+
+@INPROCEEDINGS{boser92,
+  author = {B. E. Boser and I. M. Guyon and V. N. Vapnik},
+  title = {A training algorithm for optimal margin classifiers},
+  booktitle = {Annual ACM Workshop on COLT},
+  year = {1992},
+  editor = {D. Haussler},
+  pages = {144-52},
+  address = {Pittsburgh, PA},
+  publisher = {ACM Press},
+  pdf = {/home/ssteve/school/mumt611/pres5/research/BOGV92.pdf},
+  review = {This important paper presents the basic technique used to solve for
+	a good classification function by identifying support vectors and
+	maximizing the margin between them. This work became the basis for
+	much future research in SVM classifiers, presenting the margin maximization
+	as being equivalent to minimizing the maximum loss. A method for
+	maximizing the margin in dual space is presented by means of solving
+	for a set of Lagrange multipliers. Dealing with outlying data points
+	as well as some computational considerations are also included.},
+  url = {http://www.svms.org/training/BOGV92.pdf},
+}
+
+@ARTICLE{burges97,
+  author = {C.J.C. Burges and B. Sch\"olkopf},
+  title = {Improving the Accuracy and Speed of Support Vector Machines},
+  journal = {Advances in Neural Information Processing Systems},
+  year = {1997},
+  volume = {9},
+  pages = {375},
+  editor = {Michael C. Mozer and Michael I. Jordan and Thomas Petsche},
+  owner = {ssteve},
+  pdf = {/home/ssteve/school/mumt611/pres5/research/nips96.ps.gz},
+  publisher = {The {MIT} Press},
+  review = {Previously, methods were presented which increased the speed and accuracy
+	of SVM classification. The former, by extending training set data
+	by means of invariance transformations; the latter, by reducing the
+	training set by means of approximation of the support surface. This
+	paper presents an implementation which combines the two approaches,
+	to achieve greater accuracy with a 22-fold increase in speed.},
+  timestamp = {2006.03.24},
+  url = {http://research.microsoft.com/~cburges/papers/nips96_cb_bs.ps.gz},
+}
+
+@ARTICLE{burges98tutorial,
+  author = {Christopher J. C. Burges},
+  title = {A Tutorial on Support Vector Machines for Pattern Recognition},
+  journal = {Data Mining and Knowledge Discovery},
+  year = {1998},
+  volume = {2},
+  pages = {121-67},
+  number = {2},
+  pdf = {/home/ssteve/school/mumt611/pres5/research/burges98tutorial.pdf},
+  review = {This complete tutorial presents an overview of support vector machines,
+	their motivation in structural risk minimization, and some novel
+	mathematical derivations and proofs related to their efficiency and
+	accuracy. Although SVM classifiers are usually trained by iterative
+	numerical methods, some examples of analytical methods are given.
+	This tutorial nicely summarizes most previous work on SVM training,
+	including extensions into non-linear classifiers, and mathematical
+	reasoning behind the then-recent improvements in speed and accuracy.
+	Recommended reading for those looking for an exhaustive summary of
+	SVM concepts.},
+  url = {http://aya.technion.ac.il/karniel/CMCC/SVM-tutorial.pdf},
+}
+
+@INPROCEEDINGS{busuttil03,
+  author = {Steven Busuttil},
+  title = {Support Vector Machines},
+  booktitle = {Proceedings of the Computer Science Annual Research Workshop},
+  year = {2003},
+  address = {Villa Bighi, Kalkara},
+  organization = {University of Malta},
+  institution = {University of Malta},
+  pdf = {/home/ssteve/school/mumt611/pres5/research/SupportVectorMachines.pdf},
+  review = {This paper is a short and straight-forward introduction to support
+	vector machines. It introduces the concepts of the optimal hyperplane
+	as well as kernel mapping for non-linear classification. It is far
+	easier for the casual reader than Burges' (1998) tutorial, and recommended
+	for those who need a quick overview of the theory without needing
+	to decipher encumbering mathematics.},
+  url = {http://www.cs.um.edu.mt/~csaw/CSAW03/Proceedings/SupportVectorMachines.pdf},
+}
+
+@INCOLLECTION{chapelle2002invariances,
+  author = {O Chapelle and B Sch\"olkopf},
+  title = {Incorporating Invariances in Non-Linear Support Vector Machines},
+  booktitle = {Advances in Neural Information Processing Systems},
+  publisher = {MIT Press},
+  year = {2002},
+  editor = {Dietterich, T. G. and Becker, S. and Ghahramani, Z.},
+  volume = {14},
+  pages = {609-16},
+  address = {Cambridge, MA},
+  organization = {Lecture Notes in Computer Science},
+  pdf = {/home/ssteve/school/mumt611/pres5/research/chapelle01_incor.ps.gz},
+  review = {Extending previous work on the application of invariance transformations
+	(domain knowledge) for improving the accuracy of support vector machines,
+	this paper proposes that in fact previous methods work best only
+	for linear classifiers. It then provides a more analytical method
+	for incorporating invariance transformations into non-linear support
+	vector machines by means of a kernel PCA map. An application to handwritten
+	digit classification is discussed.},
+  url = {http://www.kyb.tuebingen.mpg.de/publications/pss/ps2166.ps},
+}
+
+@ARTICLE{Kwok1999,
+  author = {J. T.-Y. Kwok},
+  title = {Moderating the outputs of support vector machine classifiers},
+  journal = {IEEE-NN},
+  year = {1999},
+  volume = {10},
+  pages = {1018},
+  number = {5},
+  month = {September},
+  owner = {ssteve},
+  pdf = {/home/ssteve/school/mumt611/pres5/research/tinyau99_moderating.pdf},
+  review = {Typically, the result of training an SVM is a simple binary classifier,
+	without regard to confidence levels or any weighting on the decision
+	function. This paper applies Bayesian principles of confidence to
+	SVM classifiers by moderating the classifier output through the use
+	of an evidence framework. This technique had previously been applied
+	to feed-forward neural networks, and here is extended to SVM classifiers.
+	The intent is to create a classifier which does not suffer from overly
+	confident class prediction.},
+  timestamp = {2006.03.25},
+  url = {http://ieeexplore.ieee.org/iel5/72/17091/00788642.pdf},
+}
+
+@INPROCEEDINGS{osuna97,
+  author = {E. Osuna and R. Freund and F. Girosi},
+  title = {An improved training algorithm for support vector machines},
+  booktitle = {Neural Networks for Signal Processing VII: Proceedings of the 1997
+	IEEE Workshop},
+  year = {1997},
+  editor = {J. Principe and L. Gile and N. Morgan and E. Wilson},
+  pages = {276-85},
+  address = {New York, NY},
+  publisher = {IEEE},
+  pdf = {/home/ssteve/school/mumt611/pres5/research/nnsp97-svm.ps},
+  review = {An advantage of support vector machines is that they are often able
+	to characterize large databases of training data by using a small
+	subset of the training points, known as "support vectors", which
+	are closest to the boundary between two classes of data. However,
+	there are situations where the number of support vectors can grow
+	quite large. This paper presents a method for dealing with such situations
+	using SVM techniques. It presents a decomposition algorithm which
+	does not make assumptions about the expected number of support vectors.
+	It decomposes the training set into a subset for which the support
+	vector problem is solved, iteratively stepping through new training
+	points in a manner which either leaves the cost function unchanged
+	or improves it. Effectively, this achieves an efficient approximation
+	of the support surface.},
+  url = {http://web.mit.edu/rfreund/www/nnsp97-svm.ps},
+}
+
+@TECHREPORT{osuna96,
+  author = {E. Osuna and R. Freund and F. Girosi},
+  title = {Support vector machines: Training and applications},
+  institution = {Massachisetts Institute of Technology Artificial Intelligence Laboratory},
+  year = {1996},
+  type = {Technical Report},
+  number = {AIM-1602},
+  pdf = {/home/ssteve/school/mumt611/pres5/research/sv-memo.ps.gz},
+  review = {This technical report covers aspects of support vector machine theory,
+	beginning from a structural risk minimization perspective. Based
+	on these principles, it provides some mathematical derivations of
+	linear decision functions, leading into a discussion of non-linear
+	classifiers. It presents a unique extension to SVM theory which takes
+	into account weighted training data. Methods for training support
+	vector machines are discussed, and a novel approach for very large
+	datasets is presented in which training data is decomposed into a
+	computationally more efficient subset. Finally, an experimental application
+	of SVM to face recognition is presented.},
+  url = {http://www.informatik.uni-bonn.de/III/lehre/seminare/Mustererkennung/WS99/sv-memo.ps.gz},
+}
+
+@INPROCEEDINGS{roobaert99,
+  author = {D Roobaert},
+  title = {Improving the Generalization of Linear Support Vector Machines: an
+	Application to 3D Object Recognition with Cluttered Background},
+  booktitle = {Proceedings of the Support Vector Machine Workshop at the 16th International
+	Joint Conference on Artificial Intelligence},
+  year = {1999},
+  pages = {857-62},
+  month = {August},
+  pdf = {/home/ssteve/school/mumt611/pres5/research/ijcai99.ps.gz},
+  url = {http://www.nada.kth.se/~roobaert/art/ijcai99.ps.gz},
+}
+
+@INPROCEEDINGS{Scholkopf1995,
+  author = {B. Sch\"olkopf and C. Burges and V. Vapnik},
+  title = {Extracting support data for a given task},
+  booktitle = {Proceedings of the International Conference on Knowledge Discovery
+	\& Data Mining},
+  year = {1995},
+  editor = {U. M. Fayyad and R. Uthurusamy},
+  pages = {252-7},
+  address = {Menlo Park, CA},
+  publisher = {AAAI Press},
+  owner = {ssteve},
+  pdf = {/home/ssteve/school/mumt611/pres5/research/scholkopf95_extracting.ps.gz},
+  review = {This paper describes a general method for determining that subset
+	of data points in a training set which are most significant for a
+	given classification task. The method utilizes principles of structural
+	risk minimization and the Kuhn-Tucker theorem of optimization to
+	identify a set of Lagrange multipliers which are greater than zero
+	for support vectors and equal to zero otherwise. Using kernel functions,
+	it is shown that this method can be made equivalent to several other
+	types classifiers, including polynomial, RBF, and neural network
+	perceptrons.},
+  timestamp = {2006.03.26},
+  url = {http://www.kernel-machines.org/papers/kdd.ps.gz},
+}
+
+@INPROCEEDINGS{scholkopf96invariances,
+  author = {B Sch\"olkopf and C Burges and V Vapnik},
+  title = {Incorporating Invariances in Support Vector Learning Machines},
+  booktitle = {Proceedings of the International Conference on Artificial Neural
+	Networks},
+  year = {1996},
+  volume = {1112},
+  pages = {47-52},
+  owner = {ssteve},
+  pdf = {/home/ssteve/school/mumt611/pres5/research/scholkopf96_incor.ps.gz},
+  review = {Previously, support vector machines operated only on the provided
+	training sets, unable to consider extra information that may be known
+	about the data. However, cases exist where domain knowledge about
+	the data may improve accuracy. This knowledge can be seen as "invariance
+	transformations", transformations on the training data for which
+	it is known that the data's labelling will not change. In order to
+	consider this information, extra transformations of the training
+	data may be provided to the classifier. However this can drastically
+	increase the size of the training set, for a comparatively small
+	gain in accuracy. Due to the nature of support vectors and the way
+	they are able to characterize the classification task independant
+	of the remainder of the data, this paper presents a method for performing
+	invariance transformations only on support vectors, allowing the
+	advantages of invariance considerations with a relatively small amount
+	of overhead.},
+  timestamp = {2006.03.25},
+  url = {http://scholar.google.com/url?sa=U&q=http://research.microsoft.com/~cburges/papers/icann96_2.ps.gz},
+}
+
+@ARTICLE{tsang05,
+  author = {Ivor W. Tsang and James T. Kwok and Pak-Ming Cheung},
+  title = {Core Vector Machines: Fast SVM Training on Very Large Data Sets},
+  journal = {Journal of Machine Learning Research},
+  year = {2005},
+  volume = {6},
+  pages = {363-92},
+  month = {April},
+  pdf = {/home/ssteve/school/mumt611/pres5/research/tsang05a.pdf},
+  review = {This paper presents a method for speeding up SVM training on large
+	data sets by utilizing the marked similarity between kernel training
+	and the Minimum Enclosing Ball approximation algorithm, often used
+	in other areas of computer science. Claiming an improvement over
+	other methods, which usually reduce the training set in some way,
+	the MEB approximation, called a Core Vector Machine, allows convergence
+	to occur in linear time or better, with space requirements being
+	independant of the number of data points.},
+  url = {http://jmlr.csail.mit.edu/papers/volume6/tsang05a/tsang05a.pdf},
+}
+
+@INBOOK{williamson99,
+  pages = {127-44},
+  title = {Entropy numbers, operators and support vector kernels},
+  publisher = {MIT Press},
+  year = {1999},
+  editor = {B. Sch\"olkopf and C. J. C. Burges and A. J. Smola},
+  author = {R. Williamson and A. Smola and B. Sch\"olkopf},
+  address = {Cambridge, MA},
+  booktitle = {Advances in Kernel Methods -- Support Vector Learning},
+  pdf = {/home/ssteve/school/mumt611/pres5/research/smola98.ps.gz},
+  review = {Typically, the choice of kernel function has an important on the generalization
+	performance of a support vector machine. One way of determining which
+	kernel is most appropriate is by trying several and making a comparison.
+	However, this paper attempts to explain kernel choice from an analytical
+	point of view, using the entropy numbers of mapping operators. Specifically,
+	it shows how to limit the entropy numbers of Mercer kernels.},
+  url = {http://www.neurocolt.org/tech_reps/1998/98023.ps.gz},
+}
+

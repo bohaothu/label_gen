@@ -1,0 +1,1614 @@
+%%------------------------------------------------------------
+%%
+%%  Bibliography on Fuzzy Logic for Autonomous Robotics
+%%  Version 2.4 of Sep 14, 1998
+%%  Compiled by Alessandro Saffiotti
+%%  Email = "alessandro.saffiotti AT ton.oru.se" (internet)
+%%  URL   = http://aass.oru.se/~asaffio
+%%
+%%  Most references here are discussed in the survey paper
+%%  "The Uses of Fuzzy Logic in Autonomous Robot Navigation"
+%%  available at http://iridia.ulb.ac.be/FLAR/survey.html
+%%
+%%------------------------------------------------------------
+
+% Note: all keys have the form nnn.ppyy, where
+%   nnn = name of first author
+%    pp = mnemonic for journal or conference name (empty for books)
+%    yy = year
+
+@string{AIJ = "Artificial Intelligence"}
+@string{AIM = "AI Magazine"}
+@string{IJAR = "Int. J. of Approximate Reasoning"}
+@string{IJUFK = "Int. J. of Uncertainty, Fuzziness and Knowledge-Based Systems"}
+@string{JAIR = "Journal of Artificial Intelligence Research"}
+@string{FSS = "Fuzzy Sets and Systems"}
+@string{IEEE-SMC = "IEEE Trans. on Systems, Man, and Cybernetics"}
+@string{IEEE-RA = "IEEE Trans. on Robotics and Automation"}
+@string{IEEE-FS = "IEEE Trans. on Fuzzy Systems"}
+
+@string{IJCAI = "Proc.\ of the Int. Joint Conf. on Artif. Intell."}  
+@string{AAAI = "Proc.\ of the AAAI Conf."} 
+@string{UAI = "Proc.\ of the Conf. on Uncertainty in Artif. Intell."} 
+@string{IPMU   = "Proc.\ of the Conf. on Information Processing and
+		  Management of Uncertainty (IPMU)"} 
+@string{KRR = "Proc.\ of the Int. Conf. on Knowledge Representation and Reasoning"}
+@string{EUFIT = {Proc.\ of the European Congress on Fuzzy and Intelligent 
+                Technologies ({EUFIT})}}
+@string{FUZZIEEE = "Proc.\ of the IEEE Int. Conf. on Fuzzy Systems"}
+@string{ICRA = "Proc.\ of the IEEE Int. Conf. on Robotics and Automation"}
+@string{IFSA = "Proc.\ of Int. Fuzzy System Association Conference {(IFSA)}"}
+@string{IROS = "Proc.\ of the Int. Conf. on Intelligent Robots and Systems (IROS)"}
+@string{SAB = "Proc.\ of the Int. Conf. on Simulation and Adaptive Behavior (SAB)"}
+@string{IIZUKA = "Proc.\ of the Int. Conf. on Fuzzy Logic and Neural Networks"}
+@string{WCNN = "Proc.\ of the World Congress on Neural Networks"}
+@string{ISMIS = "Proc.\ of the Int. Symp. on Methodologies for Intell. Systems"} 
+
+@string{MITAI = "MIT Artificial Intelligence Laboratory"}
+
+%------------------------------------------------------------
+
+@Article{altrock.fss92,
+   author =  {C. von Altrok and B. Krause and H. J. Zimmermann},
+   title =   {Advanced fuzzy logic control of a model car in extreme situations},
+   journal = FSS,
+   volume =  48,
+   pages =   {41--52},
+   year =    1992,
+}
+@InProceedings{amat.iser95,
+   author =    {J. Amat and R. L\'{o}pez de M\'{a}ntaras and C. Sierra},
+   title =     {Cooperative autonomous low-cost robots for exploring unknown 
+                environments},
+   booktitle = {Proc.\ of the 4th Int. Symp. on Experimental Robotics ({ISER'95})},
+   address =   {Stanford, {CA}},
+   pages =     {28--33},
+   year =      1995,
+}
+@InProceedings{arkin.icra87,
+  author      = "Arkin, R. C.",
+  title       = "Motor schema based navigation for a mobile robot",
+  pages       = "264--271",
+  booktitle   = "Proc.\ of the {IEEE} Int. Conf. on Robotics and Automation",
+  year        = 1987
+}
+@Article{arkin.ras90,
+  author = 	 "R. C. Arkin",
+  title = 	 "Integrating Behavioral, Perceptual and World
+		  Knowledge in Reactive Navigation",
+  journal =      "Robotics and Autonomous Systems",
+  volume =	 "6",
+  pages =        "105--122",
+  year =	 1990
+}
+@InProceedings{arrue.fuzzieee97,
+  author = 	 "B. C. Arr\'{u}e and F. Cuesta and R. Braunstingl and
+		  A. Ollero",
+  title = 	 "Fuzzy behaviors combination to control a
+		  non-holonomic mobile robot using virtual perception memory",
+  pages =	 "1239--1244",
+  booktitle =	 FUZZIEEE,
+  year =	 1997,
+  publisher =	 "{IEEE} Press",
+  address =	 "Barcelona, {SP}"
+}
+@InProceedings{balzarotti.wac96,
+  author = 	 "M. Balzarotti and G. Ulivi",
+  title = 	 "The fuzzy horizon obstacle avoidance method for
+		  mobile robots",
+  booktitle    = "Proc.\ of the World Automation Congress ({WAC})",
+  pages        = "51--57",
+  volume       = "3",
+  year         = "1996",
+  address      = "Montpellier, {FR}",
+  publisher    = "{TSI} Press"
+}
+@InProceedings{barfoot.flar96,
+   author =    {C. W. Barfoot},
+   title =     {A new approach to behavioral control: fuzzy behaviors},
+   booktitle = {Proc.\ of the 1st On-Line Workshop on Soft Computing ({WSC1}), 
+                special session on fuzzy logic in autonomous robotics},
+   year =      1996,
+   URL =       {http://iridia.ulb.ac.be/FLAR/wsc1/papers/p022.html},
+   note =      {On-line at http://iridia.ulb.ac.be/FLAR/wsc1/}
+}
+@InProceedings{baxter.ifac93,
+   author =    {J. W. Baxter and J. R. Bumby},
+   title =     {Fuzzy logic guidance and obstacle avoidance algorithms for 
+                autonomous vehicle control},
+   booktitle = {Proc.\ of the Int. Workshop on Intelligent Autonomous Vehicles},
+   pages =     {41--52},
+   address =   {Southampton, {UK}},
+   year =      1993
+}
+@Article{bellman.ms70,
+ author      = "R. E. Bellman and L. A. Zadeh",
+ title       = "Decision making in a fuzzy environment",
+ journal     = "Management Science",
+ pages       = "141--164",
+ volume      = "17",
+ year        = 1970
+}
+@InProceedings{benreguieg.eufit95,
+   author =    {M. Benreguieg and H. Maaref and C. Barret},
+   title =     {Fuzzy helps to control a motion of a mobile robot in a
+   partially-known environment},
+   booktitle = EUFIT,
+   pages =     {905--909},
+   address =   {Aachen, DE},
+   year =      1995,
+}
+@Article{beom.smc95,
+   author =  {H. R. Beom and H. S. Cho},
+   title =   {A sensor-based navigation for a mobile robot using fuzzy logic 
+              and reinforcement learning},
+   journal = IEEE-SMC,
+   volume =  25,
+   number =  3,
+   pages =   {464--477},
+   year =    1995
+}
+@Article{berenji.exp94,
+  author = 	 "H. R. Berenji",
+  title = 	 "The unique strength of fuzzy logic control",
+  journal =	 "IEEE Expert",
+  year =	 1994,
+  pages =	 9,
+  month =	 "August",
+  note =	 "Response to Elkan's ``The paradoxical success of
+		  fuzzy logic'', same issue"
+}
+@InProceedings{berenji.uai90,
+  author = 	 "Berenji, H. and Chen, Y-Y. and Lee, C-C. and Jang,
+		  J-S. and Murugesan, S.",
+  title = 	 "A Hierarchical Approach to Designing Approximate
+		  Reasoning-Based Controllers for Dynamic Physical Systems",
+  booktitle =	 UAI,
+  pages       = "362--369",
+  year =	 1990,
+  address =	 "Cambridge, MA"
+}
+@InProceedings{berler.uai97,
+   author =    {A. Berler and S. E. Shimony},
+   title =     {Bayes networks for sensor fusion in occupancy grids},
+   booktitle = UAI,
+   pages =     {},
+   address =   {},
+   year =      1997,
+}
+@InCollection{bilgic.hfs97,
+ author       = "T. Bilgi\c{c} and I. B. T{\"{u}}rk\c{s}en",
+ title        = "Measurement of membership functions: theoretical and
+		  empirical work",
+ booktitle    = "International Handbook of Fuzzy Sets and Possibility Theory",
+ editor       = "D. Dubois, H. Prade and H.J. Zimmermann",
+ publisher    = "Kluwer Academic",
+ address      = "Norwell, MA",
+ year         = "1998",
+ note         = "Forthcoming"
+}
+@InProceedings{bison.ecs97,
+  author = 	 "P. Bison and G. Chemello and C. Sossai and G. Trainito",
+  title = 	 "A Syntactical Approach to Data Fusion",
+  booktitle =	 "Proc.\ of the European Conf. on Symbolic and
+		  Quantitative Approaches to Reasoning and Uncertainty
+		  (ECSQARU)",
+  year =	 1997,
+  address =	 "Bad Honnef, DE",
+  series =	 "LNAI",
+  number =	 "1244",
+  pages =	 "58--70",
+  publisher =	 "Springer-Verlag"
+}
+@InCollection{bloch.bbm97,
+   author = {I. Bloch and H. Ma\^{\i}tre},
+   title = {Fusion of Image Information under Imprecision},
+   booktitle = {Aggregation and Fusion of Imperfect Information},
+   editor = {B. Bouchon-Meunier},
+   publisher = {Physica Verlag, Springer},
+   series = {Studies in Fuzziness},
+   volume = {12},
+   year = {1998},
+   isbn = {3-7908-1048-7},
+   note = {Forthcoming}
+}
+@Article{bloch.smc96,
+   author = {I. Bloch},
+   title = {Information Combination Operators for Data Fusion: A
+		  Comparative Review with Classification},
+   journal = IEEE-SMC,
+   volume = {A-26},
+   number = {1},
+   pages = {52--67},
+   year = {1996}
+}
+@InCollection{blochl.flai93,
+   author =    {B. Bl\"{o}chl},
+   title =     {Fuzzy control in real-time for vision guided autonomous mobile 
+                robots},
+   booktitle = {Proc.\ of the 8th Austrian Conf. on Fuzzy Logic in AI 
+                ({FLAI'93}), LNAI 695},
+   publisher = {Springer-Verlag},
+   pages =     {114--125},
+   year =      1993
+}
+@Article{bonarini.ijar97,
+  author = 	 "A. Bonarini and F. Basso",
+  title = 	 "Learning to compose fuzzy behaviors for autonomous agents",
+  journal =	 IJAR,
+  volume = 	 "17",
+  number = 	 "4",
+  pages = 	 "409--432",
+  year =	 1997
+}
+@InProceedings{bonarini.wac96,
+   author =    {A. Bonarini},
+   title =     {Symbol grounding and a neuro-fuzzy architecture for multisensor fusion},
+   booktitle = {Proc.\ of the World Automation Conference ({WAC})},
+   pages =     {75--80},
+   address =   {Montpellier, {FR}},
+   publisher =   {{TSI} {P}ress},
+   year =      1996,
+}
+@InProceedings{braggiotti.aiia93,
+   author =    {A. Braggiotti and G. Chemello and C. Sossai and G. Trainito},
+   title =     {Integrating the symbolic and the sub-symbolic level in 
+                sonar-based navigation},
+   booktitle = {Proc.\ of the Italian Conf. on AI ({AI*IA'93})},
+   pages =     {},
+   year =      1993,
+}
+@InProceedings{braunstingl.icar95,
+   author =    {R. Braunstingl and P. Sanz and J. M. Ezkerra},
+   title =     {Fuzzy logic wall following of a mobile robot based on the concept 
+                of general perception},
+   booktitle = {Proc.\ of the 7th Int. Conf. on Advanced Robotics ({ICAR'95})},
+   address =   {Sant Feliu de Guixols, {SP}},
+   pages =     {367--376},
+   year =      1995
+}
+@InProceedings{brooks.ijcai91,
+  author = 	 "R. A. Brooks",
+  title = 	 "Intelligence without reason",
+  pages =	 "569--595",
+  booktitle =	 IJCAI,
+  year =	 1991,
+  publisher =	 "Morgan Kaufmann",
+  address =	 "San Mateo, {CA}"
+}
+@Article{brooks.ra86,
+  author = 	 "R. A. Brooks",
+  title = 	 "A Robust Layered Control System for a Mobile Robot",
+  journal =      "{IEEE} Journal of Robotics and Automation",
+  volume =	 "{RA-2}",
+  number =       1,
+  pages =	 "14--23",
+  year =	 1986
+}
+@InProceedings{castellano.iros96,
+   author =    {G. Castellano and G. Attolico and E. Stella and A. Distante},
+   title =     {Automatic generation of rules for a fuzzy robotic controller},
+   booktitle = IROS,
+   pages =     {},
+   address =   {Osaka, {JP}},
+   year =      1996,
+}
+@Article{congdon.aim93,
+ author       = "Congdon, C. and Huber,  M. and Kortenkamp,  D.
+		 and Konolige, K. and  Myers,  K. and Ruspini, E. H.
+		 and Saffiotti,  A.",
+ title        = "{\sc Carmel} vs.\ {Flakey}: A Comparison of Two Winners",
+ journal      = "AI Magazine",
+ month        = "Spring",
+ year         = 1993,
+ volume       = 14,
+ number       = 1,
+ pages        = "49--57",
+ keywords     = "Robotics, autonomous navigation, fuzzy logic, robotic
+		  competition, sonar, intelligent control, fuzzy control",
+ abstract-url = "http://iridia.ulb.ac.be/saffiotti/abstracts.html#aim93",
+ URL          = "http://iridia.ulb.ac.be/saffiotti/abstracts.html#aim93"
+}
+@Article{dacosta.ijis97,
+  author = 	 "C. {Da Costa Pereira} and F. Garcia and J. Lang and
+		  R. Martin-Clouaire",
+  title = 	 "Planning with graded nondeterministic actions: a
+		  possibilistic approach",
+  journal =	 "Int. J. of Intelligent Systems",
+  volume =	 12,
+  year =	 1997,
+  pages =	 "935--962"
+}
+@InCollection{deluca.tr97,
+   author =    {A. De Luca and G. Oriolo and C. Samson},
+   title =     {Feedback control of a nonholonomic car-like robot},
+   booktitle = {Planning robot motion},
+   editor =    {J.-P. Laumond},
+   chapter =     {4},
+   publisher = {Springer-Verlag},
+   address =   {Berlin, DE},
+   year =      1998,
+   note =      {To Appear},
+}
+@Article{demirli.ra97,
+   author =  {K. Demirli and I. B. T\"{u}rk\c{s}en},
+   title =   {Sonar based mobile robot localization by using fuzzy triangulation},
+   journal = IEEE-RA,
+   note =   {Submitted},
+   year =    1997,
+}
+@InProceedings{demirli.smc95,
+   author =    {K. Demirli and I. B. T\"{u}rk\c{s}en},
+   title =     {Mobile robot navigation with generalized modus ponens
+   type fuzzy reasoning},
+   booktitle = {Proc.\ of the {IEEE} Conf. on System, Man and Cybernetics},
+   pages =     {3724--3729},
+   year =      1995,
+}
+@Book{dorigo.97,
+  author = 	 "M. Dorigo and M. Colombetti",
+  title = 	 "Robot shaping: an experiment in behavior engineering",
+  publisher = 	 "MIT Press / Bradford Books",
+  year = 	 1997
+}
+@Article{dorigo.si96,
+   author = {M. {Dorigo (Editor)}},
+   title =  {Special issue on: Learning Autonomous Robots},
+   journal = IEEE-SMC,
+   volume =  {B-26},
+   number =  3,
+   year =    1996
+}
+@Book{driankov.93,
+  author = 	 "D. Driankov and H. Hellendoorn and M. Reinfrank",
+  title = 	 "An introduction to fuzzy control",
+  publisher = 	 "Springer-Verlag",
+  year = 	 1993,
+  address =	 "Berlin, {DE}"
+}
+@Book{saffiotti.99,
+  editor =	 {D. Driankov and A. Saffiotti},
+  title = 	 {Fuzzy logic techniques for autonomous vehicle navigation},
+  publisher = 	 {Springer},
+  year = 	 1999,
+  series =	 {LNCS},
+  address =	 {Berlin, {DE}},
+  note =	 {Forthcoming}
+}
+@InProceedings{drummond.kr89, 
+ author      = "M. Drummond",
+ title 	     = "Situated control rules",
+ booktitle   = KRR,
+ pages	     = "103--113",
+ year 	     = "1989"
+}
+@Article{dubois.fs97,
+  author = 	 "D. Dubois and H. Prade and L. Ughetto",
+  title = 	 "Checking the coherence and redundancy of fuzzy
+		  knowledge bases",
+  journal =	 IEEE-FS,
+  year =	 1997,
+  volume =	 5,
+  number =	 5,
+  pages =	 "398--417"
+}
+@Article{dubois.fss91,
+  author = 	 "D. Dubois and J. Lang and H. Prade",
+  title = 	 "Fuzzy sets in approximate reasoning, Part 2: logical
+		  approaches",
+  journal =	 FSS,
+  year =	 1991,
+  volume =	 40,
+  pages =	 "203--244"
+}
+@Article{dubois.sms84,
+  author = 	 "D. Dubois and H. Prade",
+  title = 	 "Criteria aggregation and ranking of alternatives in
+		  the framework of fuzzy set theory",
+  journal =	 "{TIMS} Studies in the Management Sciences",
+  year =	 1984,
+  volume =	 20,
+  pages =	 "209--240"
+}
+@Article{dutta.ijar91,
+ author  = "S. Dutta",
+ title   = "Approximate spatial reasoning: integrating qualitative and
+		  quantitative constraints",
+ journal = IJAR,
+ volume  = 5,
+ number  = 3,
+ pages	 = "307--330",
+ year    = 1991
+}
+@InProceedings{firby.aaai87,
+ author      = "Firby, J. R.",
+ title       = "An Investigation into Reactive Planning in Complex Domains",
+ booktitle   = AAAI,
+ pages       = "202--206",
+ publisher   = "{AAAI} Press, Menlo Park, {CA}",
+ year  	     = 1987
+}
+@Article{foulloy.ijufk94,
+   author =  {L. Foulloy and S. Galichet},
+   title =   {Fuzzy sensors for fuzzy control},
+   journal = IJUFK,
+   volume =  2,
+   number =  1,
+   pages =   {55--66},
+   year =    1994
+}
+@Article{franklin.si96,
+   author = {J. A. Franklin and T. M. Mitchell and S. {Thrun (Editors)}},
+   title =  {Special issue on: Robot Learning},
+   journal = {Machine Learning},
+   volume =  {23},
+   number =  {2-3},
+   year =    1996
+}
+@InProceedings{gambino.fuzzieee97,
+   author =    {F. Gambino and G. Ulivi and M. Vendittelli},
+   title =     {The transferable belief model in ultrasonic map building},
+   booktitle = FUZZIEEE,
+   pages =     {},
+   address =   {Barcelona, SP},
+   year =      1997,
+}
+@PhdThesis{garnier.phd,
+  author = 	 "Ph. Garnier",
+  title = 	 "Contr\^{o}le d'ex\'{e}cution r\'{e}actif de
+		  mouvements de v\'{e}hicules en environnement
+		  dynamique structur\'{e}",
+  school = 	 "Institut National Polytechnique de Grenoble",
+  year = 	 1995,
+  address =	 "Grenoble, {FR}",
+  month =	 "Dec"
+}
+@InProceedings{garnier.iros96,
+   author =    {Ph. Garnier and Th. Fraichard},
+   title =     {A fuzzy motion controller for a car-like vehicle},
+   booktitle = IROS,
+   address =   {Osaka, {JP}},
+   volume =    {V},
+   pages =     {f--l},
+   year =      1996,
+  keywords =   {Fuzzy-logic, mobile-robot, motion-execution, robot-autonomy},
+  URL =        {http://www.inrialpes.fr/sharp/people/pgarnier}
+}
+@InCollection{gasos.lnai97,
+   author =    {J. Gas\'{o}s and A. Mart\'{\i}n},
+   title =     {Mobile robot localization using fuzzy maps},
+   editor =    {T. Martin and A. Ralescu},
+   booktitle = {Fuzzy Logic in AI --- Selected papers from the
+		  IJCAI\,'95 Workshop},
+   series =    {Lecture Notes in AI},
+   number =    {1188},
+   publisher = {Springer-Verlag},
+   pages =     {207--224},
+   year =      1997,
+}
+@Article{gasos.fss97,
+  author = 	 {J. Gas\'{o}s and A. Ralescu},
+  title = 	 {Using Imprecise Environment Information for Guiding
+                  Scene Interpretation},
+  journal = 	 FSS,
+  year = 	 1997,
+  volume =       88,
+  number =       3,
+  pages =        {265--288}
+}
+@Article{gasos.fss98,
+  author = 	 {J. Gas\'{o}s and A. Rosetti},
+  title = 	 {Uncertainty representation for mobile robots:
+                  perception, modeling and navigation in unknown environments},
+  journal = 	 FSS,
+  year = 	 {1998},
+  note =	 {Forthcoming.  Available on-line at
+                  ftp://iridia.ulb.ac.be/pub/jgasos/fss98.ps.gz}
+}
+@InProceedings{gasos.mind98,
+  author = 	 {J. Gas\'{o}s and A. Saffiotti},
+  title = 	 {Fuzzy sets for the representation of uncertain
+                  spatial knowledge in autonomous robots},
+  booktitle = 	 {Proc of the Mind {III} Conference},
+  year =	 1998,
+  address =	 {Dublin, Ireland}
+}
+@InCollection{gasos.flan99,
+  author = 	 {J. Gas\'{o}s},
+  title = 	 {Integrating linguistic descriptions and sensor observations
+                  for the navigation of autonomous robots},
+  booktitle = 	 {Fuzzy logic techniques for autonomous vehicle navigation},
+  publisher =	 {Springer-Verlag},
+  year =	 1999,
+  editor =	 {D. Driankov and A. Saffiotti},
+  series =	 {LNCS},
+  address =	 {Berlin, Germany},
+  note =	 {Forthcoming  Available on-line at
+                  ftp://iridia.ulb.ac.be/pub/jgasos/lncs99.ps.gz}
+}
+@InProceedings{gat.aaai92,
+  author = 	 "E. Gat",
+  title = 	 "Integrating Planning and Reacting in a Heterogeneous
+		  Asynchronous Architecture for Controlling Real-World
+		  Mobile Robots",
+  booktitle =	 AAAI,
+  pages       = "809--815",
+  address     = "San Jose, {CA}",
+  year =	 1992
+}
+@InProceedings{ghanea.sab96,
+   author =    {R. Ghanea-Hercock and D. P. Barnes},
+   title =     {An evolved fuzzy reactive control system for co-operating 
+                autonomous robots},
+   booktitle = SAB,
+   pages =     {},
+   address =   {Cap Cod},
+   year =      1996,
+}
+@InProceedings{goodridge.fuzzieee97,
+  author      = "S. G. Goodridge and M. G. Kay and R. C. Luo",
+  title       = "Multi-layered fuzzy behavior fusion for reactive
+		  control of an autonomous mobile robot",
+  booktitle   = FUZZIEEE,
+  address     = "Barcelona, {SP}",
+  pages       = {579--584},
+  year        = 1997
+}
+@InProceedings{goodridge.icra94,
+   author =    {S. G. Goodridge and R. C. Luo},
+   title =     {Fuzzy behavior fusion for reactive control of an autonomous 
+                mobile robot: {MARGE}},
+   booktitle = ICRA,
+   pages =     {1622--1627},
+   address =   {San Diego, {CA}},
+   year =      1994,
+}
+@InProceedings{goodridge.mfi94,
+   author =    {S. G. Goodridge and R. C. Luo and M. G. Kay},
+   title =     {Multi-layered fuzzy behavior fusion for real-time control of 
+                systems with many sensors},
+   booktitle = {Proc.\ of the {IEEE} Int. Conf. on Multisensor Fusion and 
+                Integration for Intelligent Systems {(MFI)}},
+   pages =     {272--279},
+   address =   {Las Vegas, {NV}},
+   year =      1994,
+}
+@Article{guzzoni.aim97,
+  author = 	 "D. Guzzoni and A. Cheyer and L. Julia and K. Konolige",
+  title = 	 "Many Robots Make Short Work",
+  journal =	 AIM,
+  volume =	 18,
+  number =	 1,
+  pages =	 "55--64",
+  month =	 "Spring",
+  year =	 "1997"
+}
+@Book{hacking.75,
+  author = 	 "I. Hacking",
+  title = 	 "The emergence of probability",
+  publisher = 	 "Cambridge University Press",
+  year = 	 1975,
+  address =	 "Cambridge, {UK}"
+}
+@InProceedings{hanks.darpa90,
+  author = 	 "S. Hanks and R. J. Firby",
+  title = 	 "Issues and architectures for planning and execution",
+  nopages =	 "59--70",
+  booktitle =	 "Proc.\ of the {DARPA} Workshop on Innovative
+		  Approaches to Planning, Sheduling and Control",
+  year =	 1990,
+  address =	 "San Diego, CA"
+}
+@Misc{hasemann.web96,
+   author =      {J. M. Hasemann},
+   title =       {Fuzzy logic for path and grasp planning},
+   howpublished = {{VTT} Machine Automation, on-line report at
+		  http://www.ele.vtt.fi/aut/jmhfuzgr.htm, Oulu, FI},
+   URL =         {http://www.ele.vtt.fi/aut/jmhfuzgr.htm},
+   year =        1996,
+}
+@Article{hiraga.fs95,
+   author =  {I. Hiraga and T. Furuhaschi and Y. Uchikawa and S. Nakayama},
+   title =   {An acquisition of operator's rules for collision avoidance using 
+              fuzzy neural networks},
+   journal = IEEE-FS,
+   volume =  3,
+   number =  3,
+   pages =   {280--287},
+   year =    1995,
+}
+@Article{hirota.fss89,
+   author =  {K. Hirota and Y. Arai and S. Hachisu},
+   title =   {Fuzzy controlled robot arm playing two-dimensional ping-pong game},
+   journal = FSS,
+   volume =  32,
+   pages =   {149--159},
+   year =    1989,
+}
+@Article{hoffmann.ijar97,
+  author = 	 "F. Hoffmann and G. Pfister",
+  title = 	 "Evolutionary design of a fuzzy knowledge base for a
+		  mobile robot",
+  journal =	 IJAR,
+  volume =       17,
+  number =       4,
+  year =	 1997,
+  pages =	 "447--469"
+}
+@InProceedings{hoffmann.ipmu96,
+   author =    {F. Hoffmann and G. Pfister},
+   title =     {Evolutionary learning of a fuzzy control rule base for an 
+                autonomous vehicle},
+   booktitle = IPMU,
+   pages =     {1235--1238},
+   address =   {Granada, {SP}},
+   year =      1996,
+}
+@Article{hoffmann.is98,
+  author = 	 "F. Hoffmann",
+  title = 	 "Soft computing techniques for the design of mobile
+		  robot behaviours",
+  journal =	 "Information Sciences",
+  year =	 1998,
+  note =	 "To appear"
+}
+@InCollection{hohle.hme97,
+   author =    {U. H\"{o}hle},
+   title =     {A survey on the fundamentals of fuzzy set theory},
+   booktitle = {Handbook of Mechanical Engineering},
+   editor =    {Kreith},
+   publisher = {{CRC} Press},
+   year =      1997,
+   note =      {To appear},
+}
+@InProceedings{huser.eufit96,
+   author =    {J. Huser and H. Surmann and L. Peters},
+   title =     {Automatic behaviour adaption for mobile robots with 
+   different kinematics},
+   booktitle = EUFIT,
+   pages =     {1095--1099},
+   address =   {Aachen, DE},
+   year =      1996,
+}
+@InProceedings{isik.sic87,
+   author =    {C. Isik},
+   title =     {Identification and fuzzy rule-based control of a mobile robot 
+                motion},
+   booktitle = {Proc.\ of {IEEE} Int. Symp. on Intelligent Control},
+   pages =     {94--99},
+   year =      1987,
+}
+@Book{jain.98,
+  editor =	 {L. C. Jain and T. Fukuda},
+  title = 	 {Soft Computing for Intelligent Robotic Systems},
+  series =	 {{LNCS}},
+  publisher =	 {Springer},
+  year = 	 1998,
+  note =	 {In press}
+}
+@Book{jazwinski.70,
+ title     = "Stochastic processes and filtering theory",
+ author    = "A. H. Jazwinski",
+ publisher = "Academic Press",
+ address   = "",
+ year      = "1970"
+}
+@Article{khatib.ijrr86,
+  author = 	 "O. Khatib",
+  title = 	 "Real-Time Obstacle Avoidance for Manipulators and
+		  Mobile Robots",
+  journal =	 "The International Journal of Robotics Research",
+  year =	 1986,
+  volume =	 5,
+  number =	 1,
+  pages =	 "90--98"
+}
+@Article{kiendl.fss95,
+  author = 	 "H. Kiendl and J. J. R{\"{u}}ger",
+  title = 	 "Stability analysis of fuzzy control systems using
+		  facets functions",
+  journal =	 FSS,
+  year =	 1995,
+  volume =	 70,
+  pages =	 "275--285"
+}
+@Article{kim.fss94,
+   author =  {W. J. Kim and J. H. Ko and M. J. Chung},
+   title =   {Uncertain robot environment modelling using fuzzy numbers},
+   journal = FSS,
+   volume =  61,
+   pages =   {53--62},
+   year =    1994,
+}
+@InProceedings{kim.iizuka92,
+   author =    {H. Kim and H. Noh and S. Kim and M. Park},
+   title =     {Cooperative mobile robots using fuzzy algorithm},
+   booktitle = IIZUKA,
+   pages =     {453--456},
+   address =   {Iizuka, {JP}},
+   year =      1992,
+}
+@Article{kim.smc95,
+  author = 	 {H. Kim and P. Swain},
+  title = 	 {Evidential Reasoning Approach to Multisource-Data
+                  Classification in Remote Sensing},
+  journal = 	 IEEE-SMC,
+  year = 	 1995,
+  volume =	 25,
+  number =	 8,
+  pages =	 {1257--1265}
+}
+@Book{klir.88,
+ author    = "G. J. Klir and T. A. Folger",
+ title     = "Fuzzy sets, uncertainty, and information",
+ publisher = "Prentice-Hall",
+ year      = 1988
+}
+@Article{konolige.jetai97,
+ author       = "Konolige, K. and Myers, K.L. and Ruspini, E.H. and
+		  Saffiotti, A.", 
+ title        = "The {Saphira} Architecture: A Design for Autonomy",
+ journal      = "Journal of Experimental and Theoretical Artificial
+		  Intelligence",
+ volume	      = "9",
+ number       = "1",
+ year         = "1997",
+ pages        = "215--235",
+ keywords     = "Robotics, autonomy, navigation, intelligent control,
+		  reactive planning, robot architectures, speech
+		  recognition, human-computer communication, fuzzy
+		  logic, fuzzy control",
+ abstract-url = "http://iridia.ulb.ac.be/saffiotti/abstracts.html#jetai96",
+ ftp-url      = "ftp://iridia.ulb.ac.be/pub/saffiotti/robot/jetai96.ps",
+ URL          = "http://iridia.ulb.ac.be/saffiotti/abstracts.html#jetai96",
+}
+@Book{krause.93,
+ author    = "P. Krause and D. Clark",
+ title     = "Representing uncertain knowledge",
+ publisher = "Kluwer Academic Press",
+ address   = "Dordrecht, {NL}",
+ year      = 1993
+}
+@Book{kruse.94,
+ author    = "R. Kruse and J. Gebhardt and F. Klawonn",
+ title     = "Foundations of Fuzzy Systems",
+ publisher = "Wiley and Sons",
+ year      = 1994
+}
+@Book{latombe.91,
+ author      = "J. C. Latombe",
+ title       = "Robot Motion Planning",
+ publisher   = "Kluver Academic Publishers",
+ address     = "Boston, MA",
+ year        = 1991
+}
+@Article{lee.smc90,
+ author = "C. C. Lee",
+ title  = "Fuzzy logic in control systems: fuzzy logic controller
+		  ({P}arts {I} and {II})",
+ journal = IEEE-SMC,
+ volume = 20,
+ number = "2",
+ pages  = "404--435",
+ year   = 1990
+}
+@Article{leonard.ijrr92,
+ author = "J. J. Leonard and H. F. Durrant-Whyte and I. J. Cox",
+ title  = "Dynamic map building for an autonomous mobile robot",
+ journal = "Int. J. of Robotics Research",
+ volume = 11,
+ number = 4,
+ pages  = "286--298",
+ year   = 1992
+}
+@InCollection{levesque.rkr85,
+  author = 	 "H. J. Levesque and R. J. Brachman",
+  title = 	 "A fundamental tradeoff in knowledge representation
+		  and reasoning",
+  booktitle =	 "Readings in Knowledge Representation",
+  publisher =	 "Morgan Kaufmann",
+  year =	 1985,
+  editor =	 "R. J. Brachman and H. J. Levesque",
+  pages =	 "41--70",
+  address =	 "Los Altos, {CA}"
+}
+@InProceedings{li.fuzzieee94,
+   author =    {W. Li},
+   title =     {Fuzzy logic-based `perception-action' behavior control of a 
+                mobile robot in uncertain environments},
+   booktitle = FUZZIEEE,
+   pages =     {1626--1631},
+   address =   {Orlando, {FL}},
+   year =      1994,
+}
+@InProceedings{lopez.uai97,
+   author =    {M. L\'{o}pez-S\'{a}nchez and R. L\'{o}pez de M\'{a}ntaras and
+   C. Sierra},
+   title =     {Incremental map generation by low const robots based on 
+   possibility/necessity grids},
+   booktitle = UAI,
+   pages =     {351--357},
+   address =   {Providence, RI},
+   year =      1997,
+}
+@Article{maeda.fss91,
+   author =  {M. Maeda and Y. Maeda and S. Murakami},
+   title =   {Fuzzy drive control of an autonomous mobile robot},
+   journal = FSS,
+   volume =  39,
+   pages =   {195--204},
+   year =    1991,
+}
+@Article{maeda.fss95,
+   author =  {M. Maeda and M. Shimakawa and S. Murakami},
+   title =   {Predictive fuzzy control of an autonomous mobile robot with 
+              forecast learning function},
+   journal = FSS,
+   volume =  72,
+   pages =   {51--60},
+   year =    1995,
+}
+@InProceedings{makita.fuzzieee94,
+   author =    {Y. Makita and M. Hagiwara and M. Nakagawa},
+   title =     {A simple path planning system using fuzzy rules and a potential 
+                field},
+   booktitle = FUZZIEEE,
+   pages =     {994--999},
+   address =   {Orlando, {FL}},
+   year =      1994,
+}
+@InProceedings{martinez.eufit93,
+   author =    {J. L. Mart\'{\i}nez and A. Ollero and A. Garc\'{\i}a-Cerezo},
+   title =     {Fuzzy strategies for path tracking of autonomous vehicles},
+   booktitle = EUFIT,
+   pages =     {24--30},
+   address =   {Aachen, DE},
+   year =      1993,
+}
+@Article{martinez.robo94,
+   author =  {A. Martinez and E. Tunstel and M. Jamshidi},
+   title =   {Fuzzy logic based collision avoidance for a mobile robot},
+   journal = {Robotica},
+   volume =  {},
+   number =  {},
+   pages =   {},
+   year =    1994,
+}
+@InProceedings{mcdermott.darpa90,
+ author    = "D. McDermott",
+ title     = "Planning reactive behavior: a progress report",
+ booktitle = "Proc.\ of the {DARPA} Workshop on Innovative Approaches
+		  to Planning, Scheduling and Control",
+ year      = 1990,
+ pages     = "450--458",
+ address   = "San Diego, {CA}"
+}
+@InProceedings{michaud.fuzzieee96,
+   author =    {F. Michaud and G. Lachiver and C. T. Le Dinh},
+   title =     {Fuzzy selection and blending of behaviors for situated autonomous 
+                agent},
+   booktitle = FUZZIEEE,
+   pages =     {258--264},
+   address =   {New Orleans, {LA}},
+   year =      1996,
+}
+@InProceedings{michaud.fuzzieee97,
+  author      = "F. Michaud",
+  title       = "Selecting behaviors using fuzzy logic",
+  pages       = "585--592",
+  booktitle   = FUZZIEEE,
+  address     = "Barcelona, {SP}",
+  year        = 1997
+}
+@InProceedings{michaud.sab96,
+   author =    {F. Michaud and G. Lachiver and C. T. Le Dinh},
+   title =     {A new control architecture combining reactivity,
+		  deliberation and motivation for situated autonomous
+		  agent},
+   booktitle = SAB,
+   noeditor =    {P. Maes and M. J. Mataric and J.-A. Meyer and
+		  J. Pollac and S. W. Wilson},
+   pages =     {245--254},
+   address =   {Cap Cod},
+   year =      1996,
+}
+@InProceedings{moravec.icra85,
+   author =    {H. P. Moravec and A. Elfes},
+   title =     {High resulution maps from wide angle sonar},
+   booktitle = ICRA,
+   pages =     {116--121},
+   address =   {},
+   year =      1985,
+}
+@InProceedings{moutalier.srr89,
+ author      = "P. Moutarlier and R. Chatila",
+ title       = "Stochastic multisensory data fusion for mobile robot
+		  location and environment modeling",
+ booktitle   = "5th Int. Symp. on Robotics Research",
+ address     = "Tokyo, {JP}",
+ year        = 1989,
+ pages       = "207--216"
+}
+@InProceedings{murphy.iros96,
+   author =    {R. R. Murphy and D. K. Hawkins},
+   title =     {Behavioral speed control based on tactical information},
+   booktitle = IROS,
+   pages =     {1715--1721},
+   address =   {Osaka, {JP}},
+   year =      1996,
+}
+@Article{nilsson.jair94,
+  author = 	 "N. J. Nilsson",
+  title = 	 "Teleo-Reactive Programs for Agent Control",
+  journal = 	 JAIR,
+  year = 	 "1994",
+  volume = 	 "1",
+  pages = 	 "139--158"
+}
+@TechReport{nilsson.sri84,
+ author = "N. J. Nilsson",
+ title  = "{SHAKEY} the Robot",
+ institution = "SRI Artificial Intelligence Center",
+ type   = "Technical Note",
+ number = 323,
+ year   = 1984,
+ address= "Menlo Park, CA"
+}
+@InProceedings{nishimori.iizuka92,
+   author =    {K. Nishimori and H. Tokutaka and S. Hirakawa and S. Kishida and 
+                N. Ishihara},
+   title =     {Comparison of several fuzzy reasoning methods on driving control 
+                of a model car},
+   booktitle = IIZUKA,
+   pages =     {421--424},
+   address =   {Iizuka, {JP}},
+   year =      1992,
+}
+@Article{nourbakhsh.aim93,
+  author   = "I. Nourbakhsh and S. Morse and C. Becker and M.
+		  Balabanovic and E. Gat and R. Simmons and S. Goodridge
+		  and H. Potlapalli and D. Hinkle and K. Jung and D.
+		  Van Vactor",
+  title    = "The Winning Robots from the 1993 Robot Competition", 
+  journal  = AIM,
+  volume   = 14,
+  number   = 4,
+  pages    = "51--62",
+  month    = "Winter",
+  year     = "1993"
+}
+@InCollection{ollero.97,
+   author =    {A. Ollero and A. Garc\'{\i}a-Cerezo and J. L. Mart\'{\i}nez and 
+                A. Mandow},
+   title =     {Fuzzy tracking methods for mobile robots},
+   booktitle = {Applications of fuzzy logic: Towards high machine
+		  intelligence quotient systems},
+   editor =    {M. Jamshidi and A. Titli and L. Zadeh and S. Boverie},
+   chapter =   {17},
+   publisher = {Prentice-Hall},
+   address =   {New Jersey},
+   year =      1997,
+   note =      {To appear}
+}
+@Article{ollero.cep94,
+   author =  {A. Ollero and A. Garc\'{i}a-Cerezo and J. L. Mart\'{\i}nez},
+   title =   {Fuzzy supervisory path tracking of mobile robots},
+   journal = {Control Eng. Practice},
+   volume =  2,
+   number =  2,
+   pages =   {313--319},
+   year =    1994,
+}
+@Article{oriolo.iasc96,
+   author =  {G. Oriolo and M. Vendittelli and G. Ulivi},
+   title =   {Path planning for mobile robots via skeletons on fuzzy maps},
+   journal = {Intelligent Automation and Soft Computing},
+   volume =  2,
+   number =  4,
+   pages =   {355--374},
+   year =    1996,
+}
+@InProceedings{oriolo.icra95,
+   author =    {G. Oriolo and M. Vendittelli and G. Ulivi},
+   title =     {On-line map building and navigation for autonomous mobile robots},
+   booktitle = ICRA,
+   pages =     {2900--2906},
+   year =      1995,
+}
+@Article{oriolo.jrs97,
+   author =  {G. Oriolo and G. Ulivi and M. Vendittelli},
+   title =   {Fuzzy maps: a new tool for mobile robot perception and planning},
+   journal = {J. of Robotic Systems},
+   volume =  14,
+   number =  3,
+   pages =   {179--197},
+   year =    1997,
+}
+@Article{oriolo.smc98,
+   author =  {G. Oriolo and G. Ulivi and M. Vendittelli},
+   title =   {Real-time map building and navigation for autonomous
+   robots in unknown environments},
+   journal = IEEE-SMC,
+   volume =  {28},
+   number =  {3},
+   pages =   {316--333},
+   year =    1998
+}
+@InProceedings{pan.wcnn95,
+   author =    {J. Pan and D. J. Pack and A. Kosaka and A. C. Kak},
+   title =     {{FUZZY-NAV}: a vision-based robot navigation architecture using 
+                fuzzy inference for uncertainty reasoning},
+   booktitle = WCNN,
+   pages =     {602--607},
+   address =   {Washington, {DC}},
+   year =      1995,
+}
+@InCollection{panti.drums98,
+   author =    {G. Panti},
+   title =     {Multi-valued logics},
+   booktitle = {Handbook of Defeasible Reasoning and Uncertainty
+		  Management Systems},
+   editor =    {D. Gabbay and Ph. Smets},
+   publisher = {Kluwer Academic Press},
+   year =      1998,
+   note =      {To appear},
+}
+@Book{passino.97,
+  author =	 {K. M. Passino and S. Yurkovich},
+  title = 	 {Fuzzy Control},
+  publisher = 	 {Addison Wesley},
+  year = 	 1997,
+  address =	 {Menlo Park, CA},
+  ISBN =	 {0--201--18074--X}
+}
+@InProceedings{payton.icra86,
+ author    = "D. W. Payton",
+ title     = "An architecture for reflexive autonomous vehicle control", 
+ booktitle = "Proc.\ of the {IEEE} Int. Conf. on Robotics and Automation",
+ address   = "San Francisco, {CA}",
+ pages     = "1838--1845",
+ year      = 1986
+}
+@Book{pedrycz.93,
+  author =	 {W. Pedrycz},
+  title = 	 {Fuzzy Control and Fuzzy Systems},
+  publisher = 	 {Wiley},
+  year = 	 1993,
+  address =	 {New York, USA},
+  edition =	 {Second}
+}
+@InProceedings{pereira.fuzzieee94,
+   author =    {J. Pereira and J. B. Bowles},
+   title =     {A comparison of {PID} and fuzzy control of a model car},
+   booktitle = FUZZIEEE,
+   pages =     {849--854},
+   address =   {Orlando, {FL}},
+   year =      1994,
+}
+@InProceedings{pfluger.fuzzieee92,
+  author = 	 "N. Pfluger and J. Yen and R. Langari",
+  title = 	 "A defuzzification strategy for a fuzzy logic
+		  controller employing prohibitive information in
+		  command formulation",
+  pages =	 "717--723",
+  booktitle =	 FUZZIEEE,
+  year =	 1992,
+  publisher =	 "{IEEE} Press",
+  address =	 "San Diego, {CA}"
+}
+@Article{pin.iasc95,
+   author =  {F. G. Pin and Y. Watanabe},
+   title =   {Automatic generation of fuzzy rules using the fuzzy behaviorist 
+              approach: the case of sensor-based robot navigation},
+   journal = {Intelligent Automation and Soft Computing},
+   volume =  1,
+   number =  2,
+   pages =   {161--178},
+   year =    1995,
+}
+@Article{pin.iasc97,
+   author =  {F. G. Pin and S. R. Bender},
+   title =   {Adding memory processing behavior to the fuzzy behaviorist 
+              approach ({FBA}): resolving limit cycle problems in autonomous 
+              mobile robot navigation},
+   journal = {Intelligent Automation and Soft Computing},
+   volume =  3,
+   year =    1997,
+   note =    {to appear},
+}
+@InProceedings{pin.icra92,
+   author =    {F. G. Pin and Y. Watanabe and J. R. Symon and R. S. Pattay},
+   title =     {Autonomous navigation of a mobile robot using custom-designed 
+                qualitative reasoning {VLSI} chips and boards},
+   booktitle = ICRA,
+   pages =     {123--128},
+   address =   {Nice, {FR}},
+   year =      1992,
+}
+@Article{pin.robo94,
+   author =  {F. G. Pin and Y. Watanabe},
+   title =   {Navigation of mobile robots using a fuzzy behaviorist approach 
+              and custom-designed fuzzy inference boards},
+   journal = {Robotica},
+   volume =  12,
+   pages =   {491--503},
+   year =    1994,
+}
+@Article{poloni.fss95,
+   author =  {M. Poloni and G. Ulivi and M. Vendittelli},
+   title =   {Fuzzy logic and autonomous vehicles: experiments in ultrasonic 
+              vision},
+   journal = FSS,
+   volume =  69,
+   pages =   {15--27},
+   year =    1995,
+}
+@Article{raju.ijc91,
+   author =  {G. V. S. Raju and J. Zhou and R. A. Kisner},
+   title =   {Hierarchical fuzzy control},
+   journal = {Int. J. Control},
+   volume =  54,
+   number =  5,
+   pages =   {1201--1216},
+   year =    1991,
+}
+@InProceedings{rausis.ifac97,
+   author =    {K. Rausis and P. Myszkorowski and R. Longchamp},
+   title =     {Obstacle avoidance control of a mobile robot},
+   booktitle = {Proc.\ of the 3rd {IFAC} Symp. on Intelligent Components
+   and Instruments for Control Applications}, 
+   pages =     {263--268},
+   address =   {Annency, FR},
+   year =      1997,
+}
+@InCollection{rescher.lda67,
+ author = "N. Rescher",
+ title  = "Semantic Foundations for the Logic of Preference",
+ booktitle = "The Logic of Decision and Action",
+ editor = "N. Rescher",
+ publisher = "Univ. of Pittsburgh Press",
+ address= "Pittsburgh, {PA}",
+ year   = 1966
+}
+@InProceedings{rosenblatt.icnn89,
+  author      = "J. K. Rosenblatt and D. W. Payton",
+  title       = "A fine-grained alternative to the subsumption
+		  architecture for mobile robot control",
+  volume      = "2",
+  pages       = "317--324",
+  booktitle   = "Proc of the {IEEE} Int. Conf. on Neural Networks",
+  address     = "Washington, {DC}",
+  publisher   = "IEEE Press",
+  year        = 1989
+}
+@InProceedings{rueda.fuzzieee93,
+   author =    {A. Rueda and W. Pedrycz},
+   title =     {A design method for a class of fuzzy hierarchical controllers},
+   booktitle = FUZZIEEE,
+   pages =     {196--199},
+   address =   {San Francisco, {CA}},
+   year =      1993,
+}
+@InProceedings{ruspini.iizuka90,
+  author = 	 "Ruspini, E. H.",
+  title = 	 "Fuzzy Logic in the {Flakey} Robot",
+  booktitle =	 "Proc.\ of the Int. Conf. on Fuzzy Logic and Neural
+		  Networks ({IIZUKA})",
+  year =	 1990,
+  address =	 "Iizuka, {JP}",
+  pages   =      "767--770"
+}
+@Article{ruspini.ijar91,
+ author      = "Ruspini, E. H.", 
+ title       = "On the Semantics of Fuzzy Logic",
+ journal     = IJAR,
+ volume	     = 5,
+ pages       = "45--88",
+ year        = 1991
+}
+@InProceedings{ruspini.uai91,
+  author = 	 "Ruspini, E. H.",
+  title = 	 "Truth as Utility: A Conceptual Synthesis",
+  booktitle =	 UAI,
+  pages = 	 "316--322",
+  year =	 1991,
+  address =	 "Los Angeles, CA"
+}
+@Article{saffiotti.aij95,
+ author       = "A. Saffiotti and K. Konolige and E. H. Ruspini", 
+ title        = "A multivalued-logic approach to integrating planning
+                and control",
+ journal      = "Artificial Intelligence",
+ volume	      = 76,
+ number       = "1-2",
+ year         = "1995",
+ pages        = "481--526",
+ abstract-url = "http://iridia.ulb.ac.be/saffiotti/abstracts.html#aij95",
+ ftp-url      = "ftp://iridia.ulb.ac.be/pub/saffiotti/robot/aij95.ps",
+ URL          = "http://iridia.ulb.ac.be/saffiotti/abstracts.html#aij95"
+}
+@Misc{saffiotti.flakeybib,
+ author       = "A. {Saffiotti (Maintainer)}", 
+ title        = "Fuzzy logic in the autonomous mobile robot {Flakey}:
+		  on-line bibliography",
+ howpublished = "http://iridia.ulb.ac.be/saffiotti/flakeybib.html",
+ note         = "Also ftp://iridia.ulb.ac.be/pub/saffiotti/robot/",
+ ftp-url      = "ftp://iridia.ulb.ac.be/pub/saffiotti/robot/",
+ URL          = "http://iridia.ulb.ac.be/saffiotti/flakeybib.html"
+}
+@InProceedings{saffiotti.fuzzieee93,
+ author       = "Saffiotti, A. and Ruspini, E. H. and Konolige, K.",
+ title        = "Blending Reactivity and Goal-Directedness in a Fuzzy
+		  Controller",
+ booktitle    = FUZZIEEE,
+ year         = 1993,
+ publisher    = "{IEEE} Press",
+ address      = "San Francisco, California",
+ pages        = "134--139",
+ abstract-url = "http://iridia.ulb.ac.be/saffiotti/abstracts.html#ieee93",
+ ftp-url      = "ftp://iridia.ulb.ac.be/pub/saffiotti/robot/ieee_fuzzy93.ps",
+ URL          = "http://iridia.ulb.ac.be/saffiotti/abstracts.html#ieee93"
+}
+@InCollection{saffiotti.ios94,
+ author       = "Saffiotti, A.",
+ title        = "Pick-up what?",
+ booktitle    = "Current Trends in {AI} Planning --- Procs. of EWSP '93",
+ editor       = "C. {B\"{a}ckstr\"{o}m} and E. Sandewall",
+ publisher    = "{IOS} Press",
+ year         = "1994",
+ address      = "Amsterdam, Nederlands",
+ pages        = "166--177",
+ keywords     = "",
+ abstract-url = "http://iridia.ulb.ac.be/saffiotti/abstracts.html#ewsp93",
+ ftp-url      = "ftp://iridia.ulb.ac.be/pub/saffiotti/robot/ewsp93.ps",
+ URL          = "http://iridia.ulb.ac.be/saffiotti/abstracts.html#ewsp93"
+}
+@Article{saffiotti.ker87,
+ author       = "A. Saffiotti", 
+ title        = "An {AI} View of the Treatment of Uncertainty",
+ journal      = "The Knowledge Engineering Review",
+ volume	      = 2,
+ number       = 2,
+ publisher    = "Cambridge University Press",
+ pages        = "75--97",
+ year         = 1987,
+ note         = "See the panel discussion about this paper on KER
+		  3(1) 59--86",
+ keywords     = "Knowledge representation, uncertainty management,
+		  probability, belief function, Dempster-Shafer
+		  theory, fuzzy logic, non-standard logic, endorsements",
+ abstract-url = "http://iridia.ulb.ac.be/saffiotti/abstracts.html#ker87",
+ URL          = "http://iridia.ulb.ac.be/saffiotti/abstracts.html#ker87"
+}
+@InCollection{saffiotti.rur96,
+ author       = "Saffiotti, A. and Wesley, L. P.",
+ title        = "Perception-based self-localization using fuzzy locations", 
+ booktitle    = "Reasoning with Uncertainty in Robotics",
+ editor       = "L. Dorst, M. van Lambalgen and F. Voorbraak",
+ series      = "{LNAI}",
+ number      = "1093",
+ publisher    = "Springer-Verlag",
+ year         = "1996",
+ address      = "Berlin, {DE}",
+ pages        = "368--385",
+ abstract-url = "http://iridia.ulb.ac.be/saffiotti/abstracts.html#rur96",
+ ftp-url      = "ftp://iridia.ulb.ac.be/pub/saffiotti/robot/rur96.ps",
+ URL          = "http://iridia.ulb.ac.be/saffiotti/abstracts.html#rur96"
+}
+@Article{saffiotti.scj97,
+  author       = "A. Saffiotti",
+  title	       = "The uses of fuzzy logic for autonomous robot navigation",
+  journal      = "Soft Computing",
+  year         = 1997,
+  volume       = 1,
+  number       = 4,
+  pages        = "180-197",
+  note         = "Available on-line at http://iridia.ulb.ac.be/FLAR",
+  abstract-url = "http://iridia.ulb.ac.be/FLAR/survey.html",
+  ftp-url      = "ftp://iridia.ulb.ac.be/pub/saffiotti/robot/tr9706.ps",
+  URL          = "http://iridia.ulb.ac.be/FLAR/survey.html"
+}
+@InCollection{saffiotti.wac96,
+ author       = "Saffiotti, A.",
+ title        = "Robot navigation under approximate self-localization", 
+ editor       = "M. Jamshidi, F. Pin and P. Dauchez",
+ booktitle    = "Robotics and Manufacturing vol.\ 6 --- Proc.\ of the
+		  6th Int. Symp. ({ISRAM})",
+ pages        = "589--594",
+ year         = "1996",
+ publisher    = "{ASME} Press",
+ address      = "New York, NY",
+ keywords     = "",
+ abstract-url = "http://iridia.ulb.ac.be/saffiotti/abstracts.html#wac96",
+ ftp-url      = "ftp://iridia.ulb.ac.be/pub/saffiotti/robot/wac96.ps",
+ URL          = "http://iridia.ulb.ac.be/saffiotti/abstracts.html#wac96"
+}
+@Article{shin.smc91,
+   author =  {K. G. Shin and X. Cui},
+   title =   {Design of a knowledge-based controller for intelligent
+		  control systems},
+   journal = IEEE-SMC,
+   volume =  21,
+   number =  2,
+   pages =   {368--375},
+   year =    1991,
+}
+@InProceedings{skubic.ifc93,
+   author =    {M. Skubic and S. Graves and J. Mollenhauer},
+   title =     {Design of a two-level fuzzy controller for a reactive miniature 
+                mobile robot},
+   booktitle = {Proc.\ of the 3rd Int. Conf. on Industrial Fuzzy Control and Int. 
+                Systems},
+   pages =     {},
+   address =   {Houston, {TX}},
+   year =      1993,
+}
+@InProceedings{smets.fapt95,
+  author = 	 "Ph. Smets",
+  title = 	 "Probability, possibility, belief: which for what?",
+  pages =	 "20--40",
+  booktitle =	 "Proc.\ of the Wp. on Foundations and Applications of
+		  Possibility Theory",
+  year =	 1995,
+  publisher =	 "World Scientific",
+  address =	 "Ghent, {BE}"
+}
+@InCollection{smith.arv90,
+  author    = "Smith, R. and Self, M. and Cheeseman, P.",
+  title     = "Estimating uncertain spatial relationships in robotics",
+  booktitle = "Autonomous Robot Vehicles",
+  year      = 1990,
+  editor    = "I. Cox and G. Wilfong.",
+  publisher = "Springer-Verlag",
+  pages     = ""
+}
+@Article{smith.ijrr86,
+  author = 	 "R. C. Smith and P. Cheeseman",
+  title = 	 "On the representation and estimation of spatial uncertainty",
+  journal =	 "Int. J. of Robotics Research",
+  year =	 1986,
+  volume =	 5,
+  number =	 4,
+  pages =	 "56--68"
+}
+@Article{sugeno.fss85,
+   author =  {M. Sugeno and M. Nishida},
+   title =   {Fuzzy control of model car},
+   journal = FSS,
+   volume =  16,
+   pages =   {103--113},
+   year =    1985,
+}
+@Article{sugeno.fss89,
+   author =  {M. Sugeno and T. Morofushi and T. Mori and T. Tatematsu},
+   title =   {Fuzzy algorithmic control of a model car by oral instructions},
+   journal = FSS,
+   volume =  32,
+   pages =   {207--219},
+   year =    1989,
+}
+@InProceedings{sugeno.ifsa93,
+   author =    {M Sugeno and M. F. Griffin and A. Bastian},
+   title =     {Fuzzy hierarchical control of an unmanned helicopter},
+   booktitle = IFSA,
+   pages =     {179--182},
+   address =   {Seoul, {KR}},
+   year =      1993,
+}
+@InProceedings{surmann.fuzzieee95,
+   author =    {H. Surmann and J. Huser and L. Peters},
+   title =     {A fuzzy system for indoor mobile robot navigation},
+   booktitle = FUZZIEEE,
+   pages =     {83--86},
+   address =   {Yokohama, {JP}},
+   publisher = "{IEEE} Press",
+   year =      1995,
+}
+@InProceedings{surmann.fuzzieee96,
+   author =    {H. Surmann and J. Huser and J. Wehking},
+   title =     {Path planning for a fuzzy controlled autonomoous mobile robot},
+   booktitle = FUZZIEEE,
+   pages =     {},
+   address =   {New Orleans, {LA}},
+   year =      1996,
+}
+@PhdThesis{surmann.phd,
+  author = 	 "H. Surmann",
+  title = 	 "Automatischer {E}ntwurf von {F}uzzy {S}ystemen",
+  school = 	 "Univ. Dortmund",
+  year = 	 1995,
+  address = 	 "D{\"{u}}sseldorf, DE",
+  note =	 "{VDI} Reihe 8 Nr. 452, {VDI} Verlag"
+}
+@Article{takeuchi.is88,
+   author =  {T. Takeuchi and Y. Nagai and N. Enomoto},
+   title =   {Fuzzy control of a mobile robot for obstacle avoidance},
+   journal = {Information Sciences},
+   volume =  43,
+   pages =   {231--248},
+   year =    1988,
+}
+@Article{tanaka.fss92,
+ author      = "K. Tanaka and M. Sugeno",
+ title       = "Stability analysis and design of fuzzy control systems",
+ journal     = FSS,
+ pages       = "135--156",
+ volume      = 45,
+ year        = 1992
+}
+@Article{tanaka.fss95,
+   author =  {K. Tanaka and M. Sano},
+   title =   {Trajectory stabilization of a model car via fuzzy control},
+   journal = FSS,
+   volume =  70,
+   pages =   {155--170},
+   year =    1995,
+}
+@Article{tirumalai.smc95,
+  author = 	 {A. Tirumalai and B. Schunck and R. Jain},
+  title = 	 {Evidential Reasoning for Building Environment Maps},
+  journal = 	 IEEE-SMC,
+  year = 	 1995,
+  volume =	 25,
+  number =	 1,
+  pages =	 {10--20}
+}
+@InProceedings{tunstel.acm95,
+   author =    {E. Tunstel},
+   title =     {Fuzzy spatial map representation for mobile robot navigation},
+   booktitle = {Proc.\ of the {ACM} 10th Annual Symp. on Applied Computing},
+   pages =     {586--589},
+   address =   {Nashville, {TN}},
+   year =      1995,
+}
+@InProceedings{tunstel.cira97,
+   author =    {E. Tunstel and H. Danny and T. Lippincott and M. Jamshidi},
+   title =     {Autonomous navigation using an adaptive hierarchy 
+   of multiple fuzzy behaviors},
+   booktitle = {Proc.\ of the {IEEE} Int. Sym. on Computational
+		  Intelligence in Robotics and Automation},
+   pages =     {},
+   address =   {Monterey, {CA}},
+   year =      1997,
+}
+@PhdThesis{tunstel.phd,
+   author = {E. Tunstel},
+   title =  {Adaptive Hierarchy of Distributed Fuzzy Control:
+		  Application to Behavior Control of Rovers},
+   school = {University of New Mexico},
+   year =   1996,
+   type = {{PhD} Dissertation},
+   address = {Department of Electrical \& Computer Engineering},
+   note = {}
+}
+@InProceedings{tunstel.wac96,
+   author =    {E. Tunstel},
+   title =     {Mobile robot autonomy via hierarchical fuzzy behavior control},
+ booktitle    = "Proc.\ of the World Automation Congress ({WAC}), {ISRAM} Track",
+ pages        = "837--842",
+ year         = "1996",
+ address      = "Montpellier, {FR}",
+ publisher    = "{ASME} Press",
+}
+@InProceedings{tunstel.wac96b,
+   author =    {E. Tunstel and T. Lippincott},
+   title =     {Genetic programming of fuzzy coordination behaviors for
+   mobile robots},
+   booktitle = "Proc.\ of the World Automation Congress
+		  ({WAC}), {ISSCI} Track",
+   pages =     {647--652},
+   address =   {Montpellier, FR},
+   year =      1996,
+   publisher    = "{ASME} Press"
+}
+@InProceedings{voudouris.iav95,
+  author = 	 "C. Voudouris and P. Chernett and C. J. Wang and V. L. Callaghan",
+  title = 	 "Hierarchical behavioural control for autonomous vehicles",
+  editor =	 "A. Halme and K. Koskinen",
+  pages =	 "267--272",
+  booktitle =	 "Proc.\ of the 2nd {IFAC} Conf. on Intelligent
+		  Autonomous Vehicles",
+  address =   {Helsinki, FI},
+  year =	 1995
+}
+@InProceedings{voudouris.irs94,
+   author =    {C. Voudouris and P. Chernett and C. J. Wang and V. L. Callaghan},
+   title =     {Fuzzy hierarchical control for autonomous vehicles},
+   booktitle = {Proc.\ of the Int. Workshop on Intelligent Robotic Systems},
+   pages =     {},
+   year =      1994,
+}
+
+@PhdThesis{voudouris.phd,
+  author = 	 "C. Voudouris",
+  title = 	 "Fuzzy hierarchical control for autonomous mobile robots",
+  school = 	 "Dept. of Computer Science, Univ. of Essex",
+  year = 	 1993,
+  address =	 "Esssex, {UK}",
+  month =	 "Sept",
+  type =	 "{MSc Thesis}"
+}
+@InProceedings{wang.fuzzieee94,
+   author =    {L.-X. Wang},
+   title =     {A mathematical formulation of hierarchical systems
+		  using fuzzy logic systems},
+   booktitle = FUZZIEEE,
+   pages =     {183--188},
+   address =   {Orlando, {FL}},
+   year =      1994,
+}
+@Article{yager.fss96,
+  author = 	 "R. R. Yager",
+  title = 	 "Knowledge-based defuzzification",
+  journal =	 FSS,
+  year =	 1996,
+  volume =	 80,
+  pages =	 "177--185"
+}
+@Article{yager.smc93,
+  author = 	 "R. R. Yager",
+  title = 	 "On a hierarchical structure for fuzzy modeling and control",
+  journal =	 IEEE-SMC,
+  year =	 1993,
+  volume =	 23,
+  number =	 4,
+  pages =	 "1189--1197"
+}
+@Article{yang.aim96,
+   author =  {H. S. Yang and J. Chung and B. S. Ryu and J. Lee},
+   title =   {Cair-2: intelligent mobile robot for guidance and delivery},
+   journal = AIM,
+   volume =  17,
+   number =  1,
+   month =   {Spring},
+   pages =   {47--53},
+   year =    1996,
+}
+@Article{yen.smc95,
+   author =  {J. Yen and N. Pfluger},
+   title =   {A fuzzy logic based extension to {Payton} and
+		  {Rosenblatt's} command fusion method for mobile
+		  robot navigation},
+   journal = IEEE-SMC,
+   volume =  25,
+   number =  6,
+   pages =   {971--978},
+   year =    1995,
+}
+@InProceedings{yen.symp92,
+   author =    {J. Yen and N. Pfluger},
+   title =     {A fuzzy logic based robot navigation system},
+   booktitle = {{AAAI} Fall Symp. on Applications of {AI} to real-world 
+                autonomous mobile robots},
+   pages =     {195--199},
+   address =   {Cambridge, {MA}},
+   year =      1992
+}
+@Article{zadeh.exp94,
+  author = 	 "L. A. Zadeh",
+  title = 	 "Why the success of fuzzy logic is not paradoxical",
+  journal =	 "IEEE Expert",
+  year =	 1994,
+  pages =	 "43--46",
+  month =	 "August",
+  note =	 "Response to Elkan's ``The paradoxical success of
+		  fuzzy logic,'' same issue"
+}
+@InProceedings{zalila.ipmu96,
+   author =    {Z. Zalila and F. Coffin},
+   title =     {A trajectory managing aiding system through a fuzzy supervision},
+   booktitle = IPMU,
+   pages =     {6--73},
+   address =   {Granada, {SP}},
+   year =      1996,
+}
+@InProceedings{zhang.fuzzieee94,
+   author =    {J. Zhang and J. Raczkowsky an A. Herp},
+   title =     {Emulation of spline curves and its applications in
+		  robot motion control}, 
+   booktitle = FUZZIEEE,
+   pages =     {831--836},
+   address =   {Orlando, {FL}},
+   year =      1994,
+}
+

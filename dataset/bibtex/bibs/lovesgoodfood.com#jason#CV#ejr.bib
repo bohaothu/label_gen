@@ -1,0 +1,1116 @@
+
+@InProceedings{	  arith-lang,
+  author	= {David Hough and Bill Hay and Jeff Kidder and E. Jason
+		  Riedy and Guy L. Steele Jr. and Jim Thomas},
+  ejr-withauthor= {David Hough and Bill Hay and Jeff Kidder and Guy L. Steele
+		  Jr. and Jim Thomas},
+  title		= {Arithmetic Interactions: From Hardware to Applications},
+  booktitle	= {17th {IEEE} Symposium on Computer Arithmetic
+		  ({ARITH}'05)},
+  year		= {2005},
+  dom		= 28,
+  month		= jun,
+  note		= {See
+		  \href{http://purl.oclc.org/NET/jason-riedy/resume/material/arith17-slides.pdf}{related
+		  presentation}},
+  isbn		= "0-7695-2366-8",
+  role		= {proceedings; panel},
+  tags		= {ieee754; floating point},
+  doi		= {10.1109/ARITH.2005.10},
+  abstract	= {The entire process of creating and executing applications
+		  that solve interesting problems with acceptable cost and
+		  accuracy involves a complex interaction among hardware,
+		  system software, programming environments, mathematical
+		  software libraries, and applications software, all mediated
+		  by standards for arithmetic, operating systems, and
+		  programming environments. This panel will discuss various
+		  issues arising among these various contending points of
+		  view, sometimes from the point of view of issues raised
+		  during the current IEEE 754R standards revision effort.}
+}
+
+@TechReport{	  axb-itref-lawn,
+  author	= {James W. Demmel and Yozo Hida and W. Kahan and Xiaoye S.
+		  Li and Sonil Mukherjee and E. Jason Riedy},
+  ejr-withauthor= {James W. Demmel and Yozo Hida and W. Kahan and Xiaoye S.
+		  Li and Sonil Mukherjee},
+  title		= {Error bounds from extra-precise iterative refinement},
+  type		= {LAPACK Working Note},
+  institution	= {Netlib},
+  year		= {2005},
+  number	= {165},
+  lawn		= {165},
+  month		= feb,
+  dom		= 3,
+  role		= {techreport},
+  tags		= {lawn; lapack; linear algebra; floating point},
+  other-url	= {http://www.eecs.berkeley.edu/Pubs/TechRpts/2007/EECS-2007-77.html}
+		  ,
+  note		= {Also issued as UCB//CSD-05-1414, UT-CS-05-547, and
+		  LBNL-56965; expanded from TOMS version},
+  url		= {http://www.netlib.org/lapack/lawnspdf/lawn165.pdf}
+}
+
+@Article{	  axb-itref-toms,
+  author	= {James W. Demmel and Yozo Hida and W. Kahan and Xiaoye S.
+		  Li and Sonil Mukherjee and E. Jason Riedy},
+  ejr-withauthor= {James W. Demmel and Yozo Hida and W. Kahan and Xiaoye S.
+		  Li and Sonil Mukherjee},
+  title		= {Error bounds from extra-precise iterative refinement},
+  journal	= {{ACM} Transactions on Mathematical Software},
+  year		= {2006},
+  volume	= {32},
+  number	= {2},
+  pages		= {325--351},
+  month		= jun,
+  role		= {refereed},
+  tags		= {acm; toms; lapack; floating point; linear algebra},
+  doi		= {10.1145/1141885.1141894},
+  issn		= {0098-3500},
+  mrclass	= {65F10},
+  mrnumber	= {2272365},
+  abstract	= {We present the design and testing of an algorithm for
+		  iterative refinement of the solution of linear equations
+		  where the residual is computed with extra precision. This
+		  algorithm was originally proposed in 1948 and analyzed in
+		  the 1960s as a means to compute very accurate solutions to
+		  all but the most ill-conditioned linear systems. However,
+		  two obstacles have until now prevented its adoption in
+		  standard subroutine libraries like LAPACK: (1) There was no
+		  standard way to access the higher precision arithmetic
+		  needed to compute residuals, and (2) it was unclear how to
+		  compute a reliable error bound for the computed solution.
+		  The completion of the new BLAS Technical Forum Standard has
+		  essentially removed the first obstacle. To overcome the
+		  second obstacle, we show how the application of iterative
+		  refinement can be used to compute an error bound in any
+		  norm at small cost and use this to compute both an error
+		  bound in the usual infinity norm, and a componentwise
+		  relative error bound.}
+}
+
+@Misc{		  bascd2002-poster,
+  author	= {E. Jason Riedy},
+  title		= {Parallel Bipartite Matching for Sparse Matrix
+		  Computation},
+  howpublished	= {Third Bay Area Scientific Computing Day},
+  month		= mar,
+  year		= {2002},
+  role		= {poster},
+  address	= {Livermore, CA},
+  tags		= {bascd; sparse matrix; combinatorial optimization; parallel
+		  algorithms}
+}
+
+@Misc{		  bascd2006-poster,
+  author	= {E. Jason Riedy},
+  title		= {Making Static Pivoting Dependable},
+  howpublished	= {Seventh Bay Area Scientific Computing Day},
+  month		= mar,
+  year		= {2006},
+  role		= {poster},
+  address	= {Livermore, CA},
+  url		= {http://purl.oclc.org/NET/jason-riedy/resume/material/bascd2006-poster.pdf}
+		  ,
+  tags		= {bascd; sparse matrix; linear algebra},
+  abstract	= {For sparse LU factorization, dynamic pivoting tightly
+		  couples symbolic and numerical computation. Dynamic
+		  structural changes limit parallel scalability. Demmel and
+		  Li use static pivoting in distributed SuperLU for
+		  performance, but intentionally perturbing the input may
+		  lead silently to erroneous results. Are there
+		  experimentally stable static pivoting heuristics that lead
+		  to a dependable direct solver? The answer is currently a
+		  qualified yes. Current heuristics fail on a few systems,
+		  but all failures are detectable. }
+}
+
+@Misc{		  bascd2007-poster,
+  author	= {James W. Demmel and Yozo Hida and Xiaoye S. Li and E.
+		  Jason Riedy and Meghana Vishvanath and David Vu},
+  ejr-withauthor= {James W. Demmel and Yozo Hida and Xiaoye S. Li and Meghana
+		  Vishvanath and David Vu},
+  title		= {Precise Solutions for Overdetermined Least Squares
+		  Problems},
+  howpublished	= {Stanford 50 -- Eighth Bay Area Scientific Computing Day},
+  month		= mar,
+  year		= {2007},
+  role		= {poster},
+  address	= {Stanford, CA},
+  tags		= {bascd; least squares},
+  url		= {http://purl.oclc.org/NET/jason-riedy/resume/material/bascd2007-poster.pdf}
+		  ,
+  abstract	= {Linear least squares (LLS) fitting is the most widely used
+		  data modeling technique and is included in almost every
+		  data analysis system (e.g. spreadsheets). These software
+		  systems often give no feedback on the conditioning of the
+		  LLS problem or the floating-point calculation errors
+		  present in the solution. With limited use of extra
+		  precision, we can eliminate these concerns for all but the
+		  most ill-conditioned LLS problems. Our algorithm provides
+		  either a solution and residual with relatively tiny error
+		  or a notice that the LLS problem is too ill-conditioned.}
+}
+
+@Misc{		  cerfacs08,
+  author	= {E. Jason Riedy},
+  title		= {Auctions for Distributed (and Possibly Parallel)
+		  Matchings},
+  howpublished	= {Visit to \href{http://www.cerfacs.fr/}{CERFACS} courtesy
+		  of the Franco-Berkeley Fund},
+  dom		= {17},
+  month		= dec,
+  year		= {2008},
+  url		= {http://purl.oclc.org/NET/jason-riedy/resume/material/cerfacs08.pdf}
+		  ,
+  tags		= {cerfacs; combinatorial optimization; sparse matrix},
+  role		= {presentation}
+}
+
+@Misc{		  comb-sparse-cse05,
+  author	= {E. Jason Riedy},
+  title		= {Parallel Combinatorial Computing and Sparse Matrices},
+  howpublished	= {SIAM Conference on Computational Science and Engineering},
+  dom		= {14},
+  month		= feb,
+  year		= {2005},
+  role		= {presentation},
+  url		= {http://purl.oclc.org/NET/jason-riedy/resume/material/cse05.pdf}
+		  ,
+  tags		= {combinatorial optimization; sparse matrix; parallel
+		  algorithms; siam}
+}
+
+@Unpublished{	  fp-type-project,
+  author	= {E. Jason Riedy},
+  title		= {Type System Support for Floating-Point Computation},
+  month		= may,
+  dom		= 25,
+  url		= {http://purl.oclc.org/NET/jason-riedy/resume/material/type-support-for-fp.pdf}
+		  ,
+  abstract	= {Floating-point arithmetic is often seen as untrustworthy.
+		  We show how manipulating precisions according to the
+		  following rules of thumb enhances the reliability of and
+		  removes surprises from calculations: Store data narrowly,
+		  compute intermediates widely, and derive properties widely.
+		  Further, we describe a typing system for floating point
+		  that both supports and is supported by these rules. A
+		  single type is established for all in- termediate
+		  computations. The type describes a precision at least as
+		  wide as all inputs to and results from the computation.
+		  Picking a single type provides benefits to users,
+		  compilers, and interpreters. The type system also extends
+		  cleanly to encompass intervals and higher precisions.},
+  year		= {2001},
+  role		= {unpublished},
+  tags		= {programming language; floating point; ieee754}
+}
+
+@Unpublished{	  graph500-1.1,
+  author	= {David A. Bader and Jonathan Berry and Simon Kahan and
+		  Richard Murphy and E. Jason Riedy and Jeremiah Willcock},
+  ejr-withauthor= {David A. Bader and Jonathan Berry and Simon Kahan and
+		  Richard Murphy and Jeremiah Willcock},
+  title		= {Graph 500 Benchmark 1 ("Search")},
+  note		= {Version 1.1},
+  url		= {http://www.graph500.org/Specifications.html},
+  month		= oct,
+  year		= 2010
+}
+
+@Misc{		  graphex11,
+  author	= {Jason Riedy and David Ediger and David A. Bader and
+		  Henning Meyerhenke},
+  ejr-withauthor= {David Ediger and David A. Bader and Henning Meyerhenke},
+  title		= {Tracking Structure of Streaming Social Networks},
+  dom		= 9,
+  month		= aug,
+  year		= 2011,
+  role		= {presentation},
+  url		= {http://purl.oclc.org/NET/jason-riedy/resume/material/GraphEx-2011.pdf}
+		  ,
+  tags		= {graph; streaming},
+  howpublished	= {2011 Graph Exploitation Symposium hosted by MIT Lincoln
+		  Labs}
+}
+
+@Misc{		  gt09,
+  author	= {E. Jason Riedy},
+  title		= {Dependable direct solutions for linear systems using a
+		  little extra precision},
+  howpublished	= {\href{http://cse.gatech.edu/}{CSE} Seminar at Georgia
+		  Institute of Technology},
+  dom		= {21},
+  month		= aug,
+  year		= 2009,
+  url		= {http://hdl.handle.net/1853/29795},
+  tags		= {linear algebra; floating point; lapack},
+  role		= {presentation},
+  abstract	= {Solving a square linear system $Ax=b$ often is considered
+		  a black box. It's supposed to "just work," and failures
+		  often are blamed on the original data or subtleties of
+		  floating-point. Now that we have an abundance of cheap
+		  computations, however, we can do much better. A little
+		  extra precision in just the right places produces accurate
+		  solutions cheaply or demonstrates when problems are too
+		  hard to solve without significant cost. This talk will
+		  outline the method, iterative refinement with a new twist;
+		  the benefits, small backward and forward errors; and the
+		  trade-offs and unexpected benefits.}
+}
+
+@InProceedings{	  ia-cost,
+  author	= {Joseph N. Wilson and E. Jason Riedy},
+  ejr-withauthor= {Joseph N. Wilson},
+  title		= {Efficient {SIMD} evaluation of image processing programs},
+  booktitle	= {Parallel and Distributed Methods for Image Processing},
+  pages		= {199--210},
+  year		= {1997},
+  month		= jul,
+  dom		= 28,
+  editor	= {Hongchi Shi and Patrick C. Coffield},
+  volume	= {3166},
+  address	= {San Diego, CA},
+  organization	= {SPIE},
+  role		= {proceedings},
+  tags		= {spie; image algebra; parallel algorithms},
+  url		= {http://purl.oclc.org/NET/jason-riedy/resume/material/ia-cost.pdf}
+		  ,
+  doi		= {10.1117/12.279618},
+  abstract	= {SIMD parallel systems have been employed for image
+		  processing and computer vision applications since their
+		  inception. This paper describes a system in which parallel
+		  programs are implemented using a machine-independent,
+		  retargetable object library that provides SIMD execution on
+		  the Lockheed Martin PAL-I SIMD parallel processor.
+		  Programs' performance on this machine is improved through
+		  on-the-fly execution analysis and scheduling. We describe
+		  the relevant elements of the system structure, the general
+		  scheme for execution analysis, and the current cost model
+		  for scheduling.}
+}
+
+@InCollection{	  ia-simd-chapter,
+  author	= {Joseph N. Wilson and E. Jason Riedy and Gerhard X. Ritter
+		  and Hongchi Shi},
+  ejr-withauthor= {Joseph N. Wilson and Gerhard X. Ritter and Hongchi Shi},
+  editor	= {C. W. Chen and Y. Q. Zhang},
+  booktitle	= {Visual Information Representation, Communication, and
+		  Image Processing},
+  title		= {An {Image} {Algebra} Based {SIMD} Image Processing
+		  Environment},
+  publisher	= {Marcel Dekker},
+  year		= 1999,
+  address	= {New York},
+  pages		= {523--542},
+  citeseer	= {wilson97image.html},
+  url		= {http://purl.oclc.org/NET/jason-riedy/resume/material/ia-simd-chap.pdf}
+		  ,
+  isbn		= "082471928X",
+  role		= {chapter},
+  tags		= {image algebra; parallel algorithms},
+  abstract	= {SIMD parallel computers have been employed for image
+		  related applications since their inception. They have been
+		  leading the way in improving processing speed for those
+		  applications. However, current parallel programming
+		  technologies have not kept pace with the performance growth
+		  and cost decline of parallel hardware. A highly usable
+		  parallel software development environment is needed. This
+		  chapter presents a computing environment that integrates a
+		  SIMD mesh architecture with image algebra for
+		  high-performance image processing applications. The
+		  environment describes parallel programs through a
+		  machine-independent, retargetable image algebra object
+		  library that supports SIMD execution on the Lockheed Martin
+		  PAL-I parallel computer. Program performance on this
+		  machine is improved through on-the-fly execution analysis
+		  and scheduling. We describe the relevant elements of the
+		  system structure, outline the scheme for execution
+		  analysis, and provide examples of the current cost model
+		  and scheduling system.},
+  icon		= {ia-simd-chap.wordle.png}
+}
+
+@InProceedings{	  icpp10,
+  author	= {David Ediger and Karl Jiang and E. Jason Riedy and David
+		  A. Bader and Courtney Corley and Rob Farber and William N.
+		  Reynolds},
+  ejr-withauthor= {David Ediger and Karl Jiang and David A. Bader and
+		  Courtney Corley and Rob Farber and William N. Reynolds},
+  title		= {Massive Social Network Analysis: Mining Twitter for Social
+		  Good},
+  booktitle	= {39th International Conference on Parallel Processing
+		  ({ICPP})},
+  role		= {proceedings},
+  tags		= {parallel; graph},
+  year		= {2010},
+  address	= {San Diego, CA},
+  month		= sep,
+  dom		= 16,
+  url		= {http://www.cc.gatech.edu/~bader/papers/MassiveTwitter.html}
+		  
+}
+
+@Misc{		  ieee754-exceptions,
+  author	= {David Bindel and E. Jason Riedy},
+  ejr-withauthor= {David Bindel},
+  title		= {Exception Handling Interfaces, Implementations, and
+		  Evaluation},
+  howpublished	= {IEEE-754r revision meeting},
+  month		= aug,
+  year		= {2002},
+  url		= {http://grouper.ieee.org/groups/754/meeting-materials/2002-08-22-pres.pdf}
+		  ,
+  role		= {presentation},
+  tags		= {ieee754; floating point}
+}
+
+@Misc{		  lang-tools-ieee754,
+  author	= {E. Jason Riedy},
+  title		= {Modern Language Tools and {754R}},
+  howpublished	= {{ARITH}'05},
+  month		= jun,
+  dom		= 28,
+  year		= {2005},
+  role		= {presentation},
+  url		= {http://purl.oclc.org/NET/jason-riedy/resume/material/arith17-slides.pdf}
+		  ,
+  tags		= {ieee754; floating point}
+}
+
+@Misc{		  lapack-future,
+  author	= {E. Jason Riedy and Yozo Hida and James W. Demmel},
+  ejr-withauthor= {Yozo Hida and James W. Demmel},
+  title		= {The Future of {LAPACK} and {ScaLAPACK}},
+  howpublished	= {Robert C. Thompson Matrix Meeting},
+  dom		= {18},
+  month		= nov,
+  year		= {2005},
+  url		= {http://purl.oclc.org/NET/jason-riedy/resume/material/future-of-scalapack.pdf}
+		  ,
+  role		= {presentation},
+  tags		= {lapack; software engineering},
+  abstract	= {We are planning new releases of the widely used LAPACK and
+		  ScaLAPACK numerical linear algebra libraries. Based on an
+		  on-going user survey (http://www.netlib.org/lapack-dev) and
+		  research by many people, we are proposing the following
+		  improvements: Faster algorithms (including better numerical
+		  methods, memory hierarchy optimizations, parallelism, and
+		  automatic performance tuning to accomodate new
+		  architectures), more accurate algorithms (including better
+		  numerical methods, and use of extra precision), expanded
+		  functionality (including updating and downdating, new
+		  eigenproblems, etc. and putting more of LAPACK into
+		  ScaLAPACK), and improved ease of use (friendlier interfaces
+		  in multiple languages). To accomplish these goals we are
+		  also relying on better software engineering techniques and
+		  contributions from collaborators at many institutions. This
+		  is joint work with Jack Dongarra.}
+}
+
+@InProceedings{	  lapack-prospectus,
+  author	= {James W. Demmel and Jack Dongarra and Beresford Parlett
+		  and W. Kahan and Ming Gu and David Bindel and Yozo Hida and
+		  Xiaoye S. Li and Osni A. Marques and E. Jason Riedy and
+		  Christof V{\"o}mel and Julien Langou and Piotr Luszczek and
+		  Jakub Kurzak and Alfredo Buttari and Julie Langou and
+		  Stanimire Tomov},
+  ejr-withauthor= {James W. Demmel and Jack Dongarra and Beresford Parlett
+		  and W. Kahan and Ming Gu and David Bindel and Yozo Hida and
+		  Xiaoye S. Li and Osni A. Marques and Christof V{\"o}mel and
+		  Julien Langou and Piotr Luszczek and Jakub Kurzak and
+		  Alfredo Buttari and Julie Langou and Stanimire Tomov},
+  title		= {Prospectus for the Next {LAPACK} and {ScaLAPACK}
+		  Libraries},
+  booktitle	= {{PARA'06}: State-of-the-Art in Scientific and Parallel
+		  Computing},
+  year		= {2006},
+  address	= {Ume{\aa}, Sweden},
+  month		= jun,
+  organization	= {High Performance Computing Center North ({HPC2N}) and the
+		  Department of Computing Science, Ume{\aa} University},
+  publisher	= {Springer},
+  role		= {proceedings},
+  tags		= {lapack},
+  url		= {http://www.netlib.org/utk/people/JackDongarra/PAPERS/para06-lapack.pdf}
+		  ,
+  abstract	= {LAPACK and ScaLAPACK are widely used software libraries
+		  for numerical linear algebra. There have been over 68M web
+		  hits at www.netlib.org for the associated libraries LAPACK,
+		  ScaLAPACK, CLAPACK and LAPACK95. LAPACK and ScaLAPACK are
+		  used to solve leading edge science problems and they have
+		  been adopted by many vendors and software providers as the
+		  basis for their own libraries, including AMD, Apple (under
+		  Mac OS X), Cray, Fujitsu, HP, IBM, Intel, NEC, SGI, several
+		  Linux distributions (such as Debian), NAG, IMSL, the
+		  MathWorks (producers of MATLAB), Interactive
+		  Supercomputing, and PGI. Future improvements in these
+		  libraries will therefore have a large impact on users.}
+}
+
+@TechReport{	  lapack-prospectus-lawn,
+  author	= {James W. Demmel and Jack Dongarra and Beresford Parlett
+		  and W. Kahan and Ming Gu and David Bindel and Yozo Hida and
+		  Xiaoye S. Li and Osni A. Marques and E. Jason Riedy and
+		  Christof Vömel and Julien Langou and Piotr Luszczek and
+		  Jakub Kurzak and Alfredo Buttari and Julie Langou and
+		  Stanimire Tomov},
+  ejr-withauthor= {James W. Demmel and Jack Dongarra and Beresford Parlett
+		  and W. Kahan and Ming Gu and David Bindel and Yozo Hida and
+		  Xiaoye S. Li and Osni A. Marques and Christof V{\"o}mel and
+		  Julien Langou and Piotr Luszczek and Jakub Kurzak and
+		  Alfredo Buttari and Julie Langou and Stanimire Tomov},
+  title		= {Prospectus for the Next {LAPACK} and {ScaLAPACK}
+		  Libraries},
+  institution	= {Netlib},
+  year		= {2007},
+  type		= {LAPACK Working Note},
+  number	= {181},
+  lawn		= {181},
+  month		= feb,
+  note		= {Also issued as UT-CS-07-592},
+  role		= {techreport},
+  tags		= {lawn; lapack},
+  url		= {http://www.netlib.org/lapack/lawnspdf/lawn181.pdf}
+}
+
+@Unpublished{	  lapack-style,
+  author	= {Jack Dongarra and Julien Langou and E. Jason Riedy},
+  ejr-withauthor= {Jack Dongarra and Julien Langou},
+  title		= {Sca/{LAPACK} Program Style},
+  month		= aug,
+  year		= {2006},
+  role		= {unpublished},
+  tags		= {lapack},
+  url		= {http://www.netlib.org/lapack-dev/lapack-coding/program-style.html}
+		  ,
+  abstract	= {The purpose of this document is to facilitate
+		  contributions to LAPACK and ScaLAPACK by documenting their
+		  design and implementation guidelines. The long-term goal is
+		  to provide guidelines for both LAPACK and ScaLAPACK.
+		  However, the parallel ScaLAPACK code has more open issues,
+		  so this document primarily concerns LAPACK.}
+}
+
+@TechReport{	  lawn188,
+  author	= {James W. Demmel and Yozo Hida and Xiaoye S. Li and E.
+		  Jason Riedy},
+  ejr-withauthor= {James W. Demmel and Yozo Hida and Xiaoye S. Li},
+  title		= {Extra-precise iterative refinement for overdetermined
+		  least squares problems},
+  type		= {LAPACK Working Note},
+  institution	= {Netlib},
+  year		= 2007,
+  number	= 188,
+  month		= may,
+  dom		= 31,
+  url		= {http://www.netlib.org/lapack/lawnspdf/lawn188.pdf},
+  other-url	= {http://www.eecs.berkeley.edu/Pubs/TechRpts/2007/EECS-2007-77.html}
+		  ,
+  note		= {Also issued as UCB/EECS-2007-77; version accepted for
+		  TOMS.},
+  abstract	= {We present the algorithm, error bounds, and numerical
+		  results for extra-precise iterative refinement applied to
+		  overdetermined linear least squares (LLS) problems. We
+		  apply our linear system refinement algorithm to
+		  Bj{\"o}rck’s augmented linear system formulation of an
+		  LLS problem. Our algorithm reduces the forward normwise and
+		  componentwise errors to $O(\varepsilon)$ unless the system
+		  is too ill conditioned. In contrast to linear systems, we
+		  provide two separate error bounds for the solution $x$ and
+		  the residual $r$. The refinement algorithm requires only
+		  limited use of extra precision and adds only $O(mn)$ work
+		  to the $O(mn^2)$ cost of QR factorization for problems of
+		  size m-by-n. The extra precision calculation is facilitated
+		  by the new extended-precision BLAS standard in a portable
+		  way, and the refinement algorithm will be included in a
+		  future release of LAPACK and can be extended to the other
+		  types of least squares problems.},
+  role		= {techreport},
+  tags		= {lawn; lapack; least squares; floating point}
+}
+
+@Article{	  lsq-itref-toms,
+  author	= {James W. Demmel and Yozo Hida and Xiaoye S. Li and E.
+		  Jason Riedy},
+  ejr-withauthor= {James W. Demmel and Yozo Hida and Xiaoye S. Li},
+  title		= {Extra-precise iterative refinement for overdetermined
+		  least squares problems},
+  journal	= "{ACM} Transactions on Mathematical Software",
+  volume	= "35",
+  number	= "4",
+  year		= 2009,
+  month		= feb,
+  issn		= {0098-3500},
+  pages		= {1--32},
+  doi		= {10.1145/1462173.1462177},
+  accepted	= "25 June 2008",
+  role		= {refereed},
+  tags		= {acm; toms; lapack; floating point; linear algebra},
+  abstract	= {We present the algorithm, error bounds, and numerical
+		  results for extra-precise iterative refinement applied to
+		  overdetermined linear least squares (LLS) problems. We
+		  apply our linear system refinement algorithm to
+		  Bj{\"o}rck’s augmented linear system formulation of an
+		  LLS problem. Our algorithm reduces the forward normwise and
+		  componentwise errors to $O(\varepsilon)$ unless the system
+		  is too ill conditioned. In contrast to linear systems, we
+		  provide two separate error bounds for the solution $x$ and
+		  the residual $r$. The refinement algorithm requires only
+		  limited use of extra precision and adds only $O(mn)$ work
+		  to the $O(mn^2)$ cost of QR factorization for problems of
+		  size m-by-n. The extra precision calculation is facilitated
+		  by the new extended-precision BLAS standard in a portable
+		  way, and the refinement algorithm will be included in a
+		  future release of LAPACK and can be extended to the other
+		  types of least squares problems.}
+}
+
+@InProceedings{	  mtaap10,
+  author	= {David Ediger and Karl Jiang and E. Jason Riedy and David
+		  A. Bader},
+  ejr-withauthor= {David Ediger and Karl Jiang and David A. Bader},
+  title		= {Massive Streaming Data Analytics: A Case Study with
+		  Clustering Coefficients},
+  booktitle	= {4th Workshop on Multithreaded Architectures and
+		  Applications (MTAAP)},
+  role		= {proceedings},
+  tags		= {parallel; graph; streaming},
+  year		= 2010,
+  address	= {Atlanta, GA},
+  month		= apr,
+  dom		= 23,
+  url		= {http://www.cc.gatech.edu/~bader/papers/StreamingCC.html}
+}
+
+@InProceedings{	  mtaap11,
+  author	= {David Ediger and E. Jason Riedy and David A. Bader and
+		  Henning Meyerhenke},
+  ejr-withauthor= {David Ediger and David A. Bader and Henning Meyerhenke},
+  title		= {Tracking Structure of Streaming Social Networks},
+  booktitle	= {5th Workshop on Multithreaded Architectures and
+		  Applications (MTAAP)},
+  role		= {proceedings},
+  tags		= {parallel; graph; streaming},
+  year		= 2011,
+  month		= may,
+  abstract	= {Current online social networks are massive and still
+		  growing. For example, Facebook has over 500 million active
+		  users sharing over 30 billion items per month. The scale
+		  within these data streams has outstripped traditional graph
+		  analysis methods. Monitoring requires dynamic analysis
+		  rather than repeated static analysis. The massive state
+		  behind multiple persistent queries requires shared data
+		  structures and not problem-specific representations. We
+		  present a framework based on the STINGER data structure
+		  that can monitor a global property, connected components,
+		  on a graph of 16 million vertices at rates of up to
+		  240\,000 updates per second on a 32 processor Cray XMT. For
+		  very large scale-free graphs, our implementation uses novel
+		  batching techniques that exploit the scale-free nature of
+		  the data and run over three times faster than prior
+		  methods. Our framework handles, for the first time,
+		  real-world data rates, opening the door to higher-level
+		  analytics such as community and anomaly detection.}
+}
+
+@TechReport{	  nonneg-house-lawn,
+  author	= {James W. Demmel and Mark Frederick Hoemmen and Yozo Hida
+		  and E. Jason Riedy},
+  ejr-withauthor= {James W. Demmel and Mark Frederick Hoemmen and Yozo Hida},
+  title		= {Non-Negative Diagonals and High Performance on Low-Profile
+		  Matrices from Householder $QR$},
+  institution	= {Netlib},
+  year		= {2008},
+  type		= {LAPACK Working Note},
+  number	= {203},
+  lawn		= {203},
+  month		= may,
+  dom		= 30,
+  note		= {Also issued as UCB/EECS-2008-76; modified from SISC
+		  version.},
+  role		= {techreport},
+  tags		= {lawn; lapack; householder; qr},
+  url		= {http://www.netlib.org/lapack/lawnspdf/lawn203.pdf},
+  other-url	= {http://www.eecs.berkeley.edu/Pubs/TechRpts/2008/EECS-2008-76.html}
+		  
+}
+
+@Article{	  nonneg-house-lawn-sisc,
+  author	= {James W. Demmel and Mark Frederick Hoemmen and Yozo Hida
+		  and E. Jason Riedy},
+  ejr-withauthor= {James W. Demmel and Mark Frederick Hoemmen and Yozo Hida},
+  title		= {Non-Negative Diagonals and High Performance on Low-Profile
+		  Matrices from {H}ouseholder {$QR$}},
+  publisher	= {SIAM},
+  year		= 2009,
+  month		= jul,
+  dom		= 3,
+  journal	= {SIAM Journal on Scientific Computing},
+  volume	= 31,
+  number	= 4,
+  pages		= {2832--2841},
+  keywords	= {LAPACK; QR factorization; Householder reflection;
+		  floating-point},
+  doi		= {10.1137/080725763},
+  role		= {refereed},
+  tags		= {siam; sisc; lapack; householder; qr},
+  issn		= {1064-8275},
+  mrclass	= {65F30},
+  mrnumber	= {2520301}
+}
+
+@Unpublished{	  nsf-accel-workshop,
+  ejr-withauthor= {workshop participants},
+  editor	= {Viktor K. Prasanna and David A. Bader},
+  key		= {Report on NSF Workshop on Center Scale Activities Related
+		  to Accelerators for Data Intensive Applications},
+  title		= {{Report on NSF Workshop on Center Scale Activities Related
+		  to Accelerators for Data Intensive Applications}},
+  note		= {This workshop is supported by NSF Grant Number 1051537, in
+		  response to the Call for Exploratory Workshop Proposals for
+		  Scientific Software Innovation Institutes (S2I2).},
+  dom		= {31},
+  month		= oct,
+  year		= 2010
+}
+
+@InProceedings{	  nsfaccelws10,
+  author	= {Jason Riedy and David Bader and David Ediger},
+  ejr-withauthor= {David Bader and David Ediger},
+  title		= {Applications in Social Networks},
+  booktitle	= {NSF Workshop on Accelerators for Data-Intensive
+		  Applications},
+  dom		= {13},
+  year		= {2010},
+  month		= oct,
+  role		= {presentation},
+  url		= {http://purl.oclc.org/NET/jason-riedy/resume/material/nsf-workshop-socnet.pdf}
+		  ,
+  tags		= {graph; NSF; streaming}
+}
+
+@Misc{		  par-bipart-pp04,
+  author	= {E. Jason Riedy},
+  title		= {Parallel Weighted Bipartite Matching and Applications},
+  howpublished	= {SIAM Parallel Processing for Scientific Computing},
+  dom		= {27},
+  month		= feb,
+  year		= {2004},
+  role		= {presentation},
+  url		= {http://purl.oclc.org/NET/jason-riedy/resume/material/pp04.pdf}
+		  ,
+  tags		= {siam; combinatorial optimization; parallel algorithms;
+		  sparse matrix}
+}
+
+@Unpublished{	  power-control,
+  author	= {E. Jason Riedy and Robert Szewczyk},
+  ejr-withauthor= {Robert Szewczyk},
+  title		= {Power and Control in Networked Sensors},
+  note		= {Cited},
+  month		= may,
+  dom		= 11,
+  year		= {2000},
+  url		= {http://purl.oclc.org/NET/jason-riedy/resume/material/power-and-control.pdf}
+		  ,
+  role		= {unpublished},
+  tags		= {sensor network},
+  abstract	= {The fundamental constraint on a networked sensor is its
+		  energy consumption, since it may be either impossible or
+		  not feasible to replace its energy source. We analyze the
+		  power dissipation implications of implementing the network
+		  sensor with either a central processor switching between
+		  I/O devices or a family of processors, each dedicated to a
+		  single device. We present the energy measurements of the
+		  current generations of networked sensors, and develop an
+		  abstract description of tradeoffs between both designs.},
+  citeseer	= {riedy00power.html}
+}
+
+@InProceedings{	  ppam11,
+  author	= {E. Jason Riedy and Henning Meyerhenke and David Ediger and
+		  David A. Bader},
+  ejr-withauthor= {Henning Meyerhenke and David Ediger and David A. Bader},
+  title		= {Parallel Community Detection for Massive Graphs},
+  booktitle	= {9th International Conference on Parallel Processing and
+		  Applied Mathematics (PPAM11)},
+  year		= 2011,
+  month		= sep,
+  publisher	= {Springer},
+  role		= {proceedings},
+  tags		= {parallel; graph},
+  abstract	= {Tackling the current volume of graph-structured data
+		  requires parallel tools. We extend our work on analyzing
+		  such massive graph data with the first massively parallel
+		  algorithm for community detection that scales to current
+		  data sizes, scaling to graphs of over 122 million vertices
+		  and nearly 2 billion edges in under 7300 seconds on a
+		  massively multithreaded Cray XMT. Our algorithm achieves
+		  moderate parallel scalability without sacrificing
+		  sequential operational complexity. Community detection
+		  partitions a graph into subgraphs more densely connected
+		  within the subgraph than to the rest of the graph. We take
+		  an agglomerative approach similar to Clauset, Newman, and
+		  Moore's sequential algorithm, merging pairs of connected
+		  intermediate subgraphs to optimize different graph
+		  properties. Working in parallel opens new approaches to
+		  high performance. On smaller data sets, we find the
+		  output's modularity compares well with the standard
+		  sequential algorithms.}
+}
+
+@InProceedings{	  ppopp11-graph,
+  author	= {David A. Bader and David Ediger and E. Jason Riedy},
+  ejr-withauthor= {David A. Bader and David Ediger},
+  title		= {Parallel Programming for Graph Analysis},
+  booktitle	= {16th ACM SIGPLAN Annual Symposium on Principles and
+		  Practice of Parallel Programming (PPoPP)},
+  role		= {tutorial},
+  tags		= {parallel; graph},
+  year		= 2011,
+  month		= feb,
+  dom		= 12,
+  address	= {San Antonio, TX},
+  url		= {http://www.cc.gatech.edu/~bader/papers/GraphAnalysisTutorial-PPoPP2011.html}
+		  ,
+  abstract	= {An increasingly fast-paced, digital world has produced an
+		  ever-growing volume of petabyte-sized datasets. At the same
+		  time, terabytes of new, unstructured data arrive daily. As
+		  the desire to ask more detailed questions about these
+		  massive streams has grown, parallel software and hardware
+		  have only recently begun to enable complex analytics in
+		  this non-scientific space.
+		  
+		  In this tutorial, we will discuss the open problems facing
+		  us with analyzing this "data deluge". We will present
+		  algorithms and data structures capable of analyzing
+		  spatio-temporal data at massive scale on parallel systems.
+		  We will try to understand the difficulties and bottlenecks
+		  in parallel graph algorithm design on current systems and
+		  will show how multithreaded and hybrid systems can overcome
+		  these challenges. We will demonstrate how parallel graph
+		  algorithms can be implemented on a variety of architectures
+		  using different programming models.
+		  
+		  The goal of this tutorial is to provide a comprehensive
+		  introduction to the field of parallel graph analysis to an
+		  audience with computing background, interested in
+		  participating in research and/or commercial applications of
+		  this field. Moreover, we will cover leading-edge technical
+		  and algorithmic developments in the field and discuss open
+		  problems and potential solutions.}
+}
+
+@PhDThesis{	  riedy:eecs-2010-172,
+  author	= {Riedy, E. Jason},
+  title		= {Making Static Pivoting Scalable and Dependable},
+  school	= {EECS Department, University of California, Berkeley},
+  year		= {2010},
+  month		= dec,
+  dom		= 17,
+  url		= {http://www.eecs.berkeley.edu/Pubs/TechRpts/2010/EECS-2010-172.html}
+		  ,
+  role		= {techreport},
+  tags		= {lapack; linear algebra; floating point; thesis},
+  number	= {UCB/EECS-2010-172},
+  abstract	= {Solving square linear systems of equations $Ax=b$ is one
+		  of the primary workhorses in scientific computing. With
+		  asymptotically and practically small amounts of extra
+		  calculation and higher precision, we can render solution
+		  techniques \emph{dependable}. We produce a solution with
+		  tiny error for almost all systems where we should expect a
+		  tiny error, and we correctly flag potential failures.
+		  
+		  Our method uses a proven technique: iterative refinement.
+		  We extend prior work by applying extra precision not only
+		  in calculating the residual $b-A y_i$ of an intermediate
+		  solution $y_i$ but also in carrying that intermediate
+		  solution $y_i$. Analysis shows that extra precision in the
+		  intermediate solutions lowers the limiting backward error
+		  (measuring perturbations in the initial problem) to levels
+		  that produce a forward error (measuring perturbations in
+		  the solution) not much larger than the precision used to
+		  store the result. We also demonstrate that condition
+		  estimation is not necessary for determining success,
+		  reducing the computation in refinement substantially.
+		  
+		  This basic, dependable solver applies to typical dense $LU$
+		  factorization methods using partial pivoting as well as
+		  methods that risk greater failure by choosing pivots for
+		  non-numerical reasons. Sparse factorization methods may
+		  choose pivots to promote structural sparsity or even choose
+		  pivots \emph{before} factorization to decouple the phases.
+		  We show through experiments that solutions using these
+		  restrictive pivoting methods still have small error so long
+		  as an estimate of factorization quality, the growth factor,
+		  does not grow too large. Our refinement algorithm
+		  dependably flags such failures. Additionally, we find a
+		  better choice of heuristic for sparse static pivoting than
+		  the defaults in Li and Demmel's SuperLU package.
+		  
+		  Static pivoting in a distributed-memory setting needs an
+		  algorithm for choosing pivots that does not rely on fitting
+		  the entire matrix into one memory space. We investigate a
+		  set of algorithms, Bertsekas's auction algorithms, for
+		  choosing a static pivoting via maximum weight perfect
+		  bipartite matching. Auction algorithms have a natural
+		  mapping to distributed memory computation through their
+		  bidding mechanism. We provide an analysis of the auction
+		  algorithm fitting it comfortably in linear optimization
+		  theory and characterizing approximately maximum weight
+		  perfect bipartite matches. These approximately maximum
+		  weight perfect matches work well as static pivot choices
+		  and can be computed much more quickly than the exact
+		  maximum weight matching.
+		  
+		  Finally, we consider the performance of auction algorithm
+		  implementations on a suite of real-world sparse problems.
+		  Sequential performance is roughly equivalent to existing
+		  implementations like Duff and Koster's MC64, but varies
+		  widely with different parameter and input settings. The
+		  parallel performance is even more wildly unpredictable.
+		  Computing approximately maximum weight matchings helps
+		  performance somewhat, but we still conclude that the
+		  performance is too variable for a black-box solution
+		  method.}
+}
+
+@InCollection{	  rwp10,
+  author	= {E. Jason Riedy},
+  editor	= {Dana Martin Guthrie},
+  booktitle	= {Read Write Poem NaPoWriMo Anthology},
+  title		= {``Here, on the farthest point of the peninsula''},
+  publisher	= {\url{http://issuu.com}},
+  year		= {2010},
+  month		= sep,
+  dom		= {15},
+  pages		= {86},
+  url		= {http://issuu.com/readwritepoem/docs/read_write_poem_napowrimo_anthology}
+		  ,
+  myurl		= {http://lovesgoodfood.com/jason/posts/post-0099/},
+  role		= {poetry},
+  tags		= {beach; napowrimo; poetry; rwp}
+}
+
+@TechReport{	  seed-set-tr,
+  author	= {Riedy, Jason and Bader, David A. and Jiang, Karl and
+		  Pande, Pushkar and Sharma, Richa},
+  ejr-withauthor= {Bader, David A. and Jiang, Karl and Pande, Pushkar and
+		  Sharma, Richa},
+  title		= {Detecting Communities from Given Seeds in Social
+		  Networks},
+  institution	= {Georgia Institute of Technology},
+  year		= 2011,
+  number	= {GT-CSE-11-01},
+  month		= feb,
+  dom		= 22,
+  url		= {http://hdl.handle.net/1853/36980},
+  note		= {Expanded from submitted version},
+  role		= {techreport},
+  abstract	= {Analyzing massive social networks challenges both
+		  high-performance computers and human understanding. These
+		  massive networks cannot be visualized easily, and their
+		  scale makes applying complex analysis methods
+		  computationally expensive. We present a region-growing
+		  method for finding a smaller, more tractable subgraph, a
+		  community, given a few example seed vertices. Unlike
+		  existing work, we focus on a small number of seed vertices,
+		  from two to a few dozen. We also present the first
+		  comparison between five algorithms for expanding a small
+		  seed set into a community. Our comparison applies these
+		  algorithms to an R-MAT generated graph component with 240
+		  thousand vertices and 32 million edges and evaluates the
+		  community size, modularity, Kullback-Leibler divergence,
+		  conductance, and clustering coefficient. We find that our
+		  new algorithm with a local modularity maximizing heuristic
+		  based on Clauset, Newman, and Moore performs very well when
+		  the output is limited to 100 or 1000 vertices. When run
+		  without a vertex size limit, a heuristic from McCloskey and
+		  Bader generates communities containing around 60\% of the
+		  graph's vertices and having a small conductance and
+		  modularity appropriate to the result size. A personalized
+		  PageRank algorithm based on Andersen, Lang, and Chung also
+		  performs well with respect to our metrics.},
+  tags		= {graph; social network}
+}
+
+@Misc{		  siam-am03,
+  author	= {E. Jason Riedy},
+  title		= {Practical Alternatives for Parallel Pivoting},
+  howpublished	= {SIAM Annual Meeting},
+  month		= jun,
+  year		= {2003},
+  role		= {presentation},
+  tags		= {siam; sparse matrix; linear algebra},
+  url		= {http://purl.oclc.org/NET/jason-riedy/resume/material/siam-am03.pdf}
+		  
+}
+
+@Misc{		  siam-cse03,
+  author	= {E. Jason Riedy},
+  title		= {Parallel Bipartite Matching for Sparse Matrix
+		  Computations},
+  howpublished	= {SIAM Conference on Computational Science and Engineering},
+  month		= feb,
+  year		= {2003},
+  role		= {poster},
+  tags		= {siam; parallel algorithms; combinatorial optimization;
+		  sparse matrix},
+  url		= {http://purl.oclc.org/NET/jason-riedy/resume/material/siam-cse03-poster.pdf}
+		  
+}
+
+@InCollection{	  smallstone10,
+  author	= {Jason Riedy},
+  editor	= {Fiona Robyn and Kaspalita},
+  booktitle	= {pay attention: a river of stones},
+  title		= {``The storm's coming when the chickens spread out''},
+  publisher	= {\url{http://lulu.com}},
+  year		= {2011},
+  month		= mar,
+  dom		= {2},
+  pages		= 77,
+  myurl		= {http://lovesgoodfood.com/jason/posts/river-of-stones-7/},
+  url		= {http://www.lulu.com/product/file-download/pay-attention-a-river-of-stones/15057101}
+		  ,
+  role		= {poetry},
+  tags		= {poetry; aros; riverofstones}
+}
+
+@Misc{		  sparse-ds-csc04,
+  author	= {E. Jason Riedy},
+  title		= {Sparse Data Structures for Weighted Bipartite Matching},
+  howpublished	= {SIAM Workshop on Combinatorial Scientific Computing},
+  dom		= {28},
+  month		= feb,
+  year		= {2004},
+  role		= {presentation},
+  tags		= {siam; combinatorial optimization; sparse matrix},
+  url		= {http://purl.oclc.org/NET/jason-riedy/resume/material/csc04.pdf}
+		  
+}
+
+@Unpublished{	  tera-ubench,
+  author	= {E. Jason Riedy and Rich Vuduc},
+  ejr-withauthor= {Rich Vuduc},
+  url		= {http://purl.oclc.org/NET/jason-riedy/resume/material/Tera.pdf}
+		  ,
+  title		= {Microbenchmarking the {Tera} {MTA}},
+  note		= {Cited,
+		  \href{http://purl.oclc.org/NET/jason-riedy/resume/material/Tera-presentation.pdf}{presentation
+		  version} available},
+  other-url	= {http://purl.oclc.org/NET/jason-riedy/resume/material/Tera-presentation.pdf}
+		  ,
+  dom		= 21,
+  month		= may,
+  year		= {1999},
+  abstract	= {The Tera Multithreaded Architecture, or MTA, addresses
+		  scalable shared memory system design with a difierent
+		  approach; it tolerates latency through providing fast
+		  access to multiple threads of execution. The MTA employs a
+		  number of radical design ideas: creation of hardware
+		  threads (streams) with frequent context switching;
+		  full-empty bits for each memory word; a flat memory
+		  hierarchy; and deep pipelines. Recent evaluations of the
+		  MTA have taken a top-down approach: port applications and
+		  application benchmarks, and compare the absolute
+		  performance with conventional systems. While useful, these
+		  studies do not reveal the effect of the Tera MTA's unique
+		  hardware features on an application. We present a bottom-up
+		  approach to the evaluation of the MTA via a suite of
+		  microbenchmarks to examine in detail the underlying
+		  hardware mechanisms and the cost of runtime system support
+		  for multithreading. In particular, we measure memory,
+		  network, and instruction latencies; memory bandwidth; the
+		  cost of low-level synchronization via full-empty bits;
+		  overhead for stream management; and the effects of software
+		  pipelining. These data should provide a foundation for
+		  performance modeling on the MTA. We also present results
+		  for list ranking on the MTA, an application which has
+		  traditionally been difficult to scale on conventional
+		  parallel systems.},
+  role		= {unpublished},
+  tags		= {parallel programming; parallel algorithms; multithreaded;
+		  computer architecture; cray}
+}
+
+@TechReport{	  tridiag-lawn,
+  author	= {Osni A. Marques and E. Jason Riedy and Christof V{\"o}mel},
+  ejr-withauthor= {Osni A. Marques and Christof V{\"o}mel},
+  title		= {Benefits of {IEEE-754} Features in Modern Symmetric
+		  Tridiagonal Eigensolvers},
+  type		= {LAPACK Working Note},
+  number	= {172},
+  lawn		= {172},
+  institution	= {Netlib},
+  month		= sep,
+  year		= {2005},
+  dom		= 30,
+  note		= {Also issued as UCB//CSD-05-1414; expanded from SISC
+		  version},
+  url		= {http://www.netlib.org/lapack/lawnspdf/lawn172.pdf},
+  other-url	= {http://www.eecs.berkeley.edu/Pubs/TechRpts/2005/6514.html}
+		  ,
+  role		= {techreport},
+  tags		= {lawn; lapack; floating point; ieee754; eigenvalue}
+}
+
+@Article{	  tridiag-sisc,
+  author	= {Osni A. Marques and E. Jason Riedy and Christof V{\"o}mel},
+  ejr-withauthor= {Osni A. Marques and Christof V{\"o}mel},
+  title		= {Benefits of {IEEE-754} Features in Modern Symmetric
+		  Tridiagonal Eigensolvers},
+  journal	= {SIAM Journal on Scientific Computing},
+  year		= {2006},
+  month		= sep,
+  dom		= 28,
+  volume	= {28},
+  number	= {5},
+  pages		= {1613--1633},
+  role		= {refereed},
+  tags		= {siam; sisc; floating point; eigenvalue; ieee754},
+  doi		= {10.1137/050641624},
+  issn		= {1064-8275},
+  mrclass	= {65F15},
+  mrnumber	= {2272181},
+  abstract	= {Bisection is one of the most common methods used to
+		  compute the eigenvalues of symmetric tridiagonal matrices.
+		  Bisection relies on the Sturm count: For a given shift
+		  sigma, the number of negative pivots in the factorization
+		  $T - \sigma I = LDL^T$ equals the number of eigenvalues of
+		  T that are smaller than sigma. In IEEE-754 arithmetic, the
+		  value $\infty$ permits the computation to continue past a
+		  zero pivot, producing a correct Sturm count when $T$ is
+		  unreduced. Demmel and Li showed [IEEE Trans. Comput., 43
+		  (1994), pp. 983–992] that using $\infty$ rather than
+		  testing for zero pivots within the loop could significantly
+		  improve performance on certain architectures. When
+		  eigenvalues are to be computed to high relative accuracy,
+		  it is often preferable to work with $LDL^T$ factorizations
+		  instead of the original tridiagonal $T$. One important
+		  example is the MRRR algorithm. When bisection is applied to
+		  the factored matrix, the Sturm count is computed from
+		  $LDL^T$ which makes differential stationary and progressive
+		  qds algorithms the methods of choice. While it seems
+		  trivial to replace $T$ by $LDL^T$, in reality these
+		  algorithms are more complicated: In IEEE-754 arithmetic, a
+		  zero pivot produces an overflow followed by an invalid
+		  exception (NaN, or ``Not a Number'') that renders the Sturm
+		  count incorrect. We present alternative, safe formulations
+		  that are guaranteed to produce the correct result.
+		  Benchmarking these algorithms on a variety of platforms
+		  shows that the original formulation without tests is always
+		  faster provided that no exception occurs. The transforms
+		  see speed-ups of up to 2.6x over the careful formulations.
+		  Tests on industrial matrices show that encountering
+		  exceptions in practice is rare. This leads to the following
+		  design: First, compute the Sturm count by the fast but
+		  unsafe algorithm. Then, if an exception occurs, recompute
+		  the count by a safe, slower alternative. The new Sturm
+		  count algorithms improve the speed of bisection by up to 2x
+		  on our test matrices. Furthermore, unlike the traditional
+		  tiny-pivot substitution, proper use of IEEE-754 features
+		  provides a careful formulation that imposes no input range
+		  restrictions.}
+}

@@ -1,0 +1,1463 @@
+% --------------------------------------------------------------------------
+%
+%            BIBLIOGRAPHY FOR ADJOINTS AND IMPORTANCE
+%                   Part 2: Computer Graphics
+%
+%                 Compiled by Per H. Christensen
+%                  per.christensen (at) acm.org
+%
+%                         January 6, 2009
+%
+% This annotated bibliography contains references to articles,
+% dissertations, and books about the use of importance (defined
+% as an adjoint of light) in ray tracing and global illumination.
+%
+% The entries are divided into six categories:
+%  - Theoretical results in rendering
+%  - "Classic" ray tracing and distribution ray tracing
+%  - Finite element methods
+%  - Monte Carlo methods
+%  - Volume ray tracing and participating media
+%  - Overviews
+% The entries are sorted chronologically within each category.
+%
+% Note that importance is also known as "visual importance", "potential",
+% "visual potential", "value", or "potential value".
+%
+% Many thanks to Philippe Bekaert and Rick Speer who helped point out and
+% find some of these references.
+%
+% I have been unable to find and read a few of the references; those are
+% marked with "(*)".
+%
+% --------------------------------------------------------------------------
+
+
+
+%
+% THEORETICAL RESULTS REGARDING ADJOINTS AND IMPORTANCE IN RENDERING
+%
+
+@INPROCEEDINGS{Pattanaik93a,
+  author = "Sumanta N. Pattanaik",
+  title = "The Mathematical Framework of Adjoint Equations for
+           Illumination Computations",
+  booktitle = "Graphics, Design and Visualization (Proceedings of the
+               International Conference on Computer Graphics, ICCG93)",
+  pages = "123--137",
+  publisher = "North-Holland Publishers",
+  year = 1993,
+  keywords = {global illumination, adjoints, gathering methods,
+              shooting methods},
+  comments = "Shows that the transport equation for (exitant) radiance
+              is the basis for gathering methods and that the transport
+              equation for (incident) importance is the basis for shooting
+              methods."
+}
+
+@ARTICLE{Pattanaik93b,
+  author = "Sumanta N. Pattanaik and S. P. Mudur",
+  title = "The Potential Equation and Importance in Illumination
+           Computations",
+  journal = "Computer Graphics Forum",
+  volume = 12,
+  number = 2,
+  pages = "131--136",
+  month = Jun,
+  year = 1993,
+  keywords = {global illumination, adjoints, radiosity, radiance,
+              diffuse importance, directional importance},
+  comments = "Shows that the transport equation for discrete diffuse
+              importance [Smits92] (the adjoint of the discrete radiosity
+              equation) is a special case of the general transport 
+              equation for importance (the adjoint of the transport 
+              equation for radiance)."
+}
+
+@INPROCEEDINGS{Dutre94a,
+  author = "Philip Dutr\'e and Eric P. Lafortune and Yves D. Willems",
+  title = "A Mathematical Framework for Global Illumination Algorithms",
+  booktitle = "Proceedings of the Winter School of Computer Graphics '94",
+  pages = "75--84",
+  address = "University of West Bohemia, Plzen, Czech Republic",
+  month = Jan,
+  year = 1994,
+  keywords = {global illumination, radiance, importance, adjoints,
+              global reflection distribution function},
+  comments = "Describes exitant and incident radiance and their
+              transport equations and shows that they are adjoint.  
+              Also describes incident and exitant importance and 
+              notes that their transport equations are as for radiance.
+              This framework can describe most existing rendering
+              algorithms.  Also describes the `global reflection 
+              distribution function' (GRDF), a generalization of 
+              the BRDF that describes how large a fraction of the 
+              radiance from a certain direction to a point makes
+              it to some other point and direction."
+}
+
+@PHDTHESIS{Arvo95,
+  author = "James R. Arvo",
+  title = "Analytic Methods for Simulated Light Transport",
+  school = "Yale University",
+  address = "New Haven, Connecticut",
+  month = Dec,
+  year = 1995,
+  keywords = {light transport, direct illumination, global illumination,
+              analytical methods, irradiance Jacobian, spherical triangles,
+              adjoints, radiance, importance},
+  comments = "Talks about importance-driven global illumination.
+              Shows that the reflection operator is self-adjoint and
+              that the geometry operator is also self-adjoint.
+              Derives the adjoint transport operator.  Shows that
+              two-point transport intensity is radiance times a
+              geometric term, and that the rendering equation is 
+              equivalent to the transport equation for radiance."
+}
+
+@INPROCEEDINGS{Veach96,
+  author = "Eric Veach",
+  title = "Non-Symmetric Scattering in Light Transport Algorithms",
+  booktitle = "Rendering Techniques '96 (Proceedings of the Seventh
+               Eurographics Workshop on Rendering)",
+  pages = "81--90",
+  publisher = "Springer-Verlag",
+  year = 1996,
+  keywords = {global illumination, non-symmetry, adjoints, refraction,
+              shading normal, normal interpolation, bump map},
+  comments = "Shows that if the bidirectional scattering distribution
+              function (BSDF) is non-symmetric, importance is transported
+              differently than light.  Examples are refraction (because
+              the indices of refraction differ) and the use of 
+              interpolated shading normals different from geometric
+              normals."
+}
+
+
+%
+% "PURE" RAY TRACING AND DISTRIBUTION RAY TRACING
+%
+
+@MASTERSTHESIS{Fitzhorn82,
+  author = "Patrick A. Fitzhorn",
+  title = "Realistic Image Synthesis: A Time Complexity Analysis of 
+           Ray Tracing",
+  school = "Colorado State University",
+  address = "Fort Collins, Colorado",
+  year = 1982,
+  keywords = {ray tracing, ray tree pruning},
+  comments = "Uses importance to avoid tracing rays with insignificant 
+              contribution to the image.  Referenced in [Speer85]."
+}
+
+@ARTICLE{Hall83,
+  author = "Roy A. Hall and Donald P. Greenberg",
+  title = "A Testbed for Realistic Image Synthesis",
+  journal = "IEEE Computer Graphics and Applications",
+  volume = 3,
+  number = 8,
+  pages = "10--20",
+  month = Nov,
+  year = 1983,
+  keywords = {ray tracing, efficiency, ray tree pruning},
+  comments = "Describes the use of importance (although it wasn't called
+              that) to avoid tracing rays with insignificant contribution
+              to the image."
+}
+
+@INPROCEEDINGS{Cook84,
+  author = "Robert L. Cook and Thomas Porter and Loren Carpenter",
+  title = "Distributed Ray Tracing",
+  booktitle = "Computer Graphics (SIGGRAPH 84 Conference Proceedings)",
+  pages = "137--145",
+  organization = "ACM",
+  month = Jul,
+  year = 1984,
+  keywords = {distribution ray tracing, Monte Carlo, stochastic sampling,
+              glossy reflection, glossy refraction (translucency),
+              soft shadows (penumbras), depth of field, motion blur},
+  comments = "Introduces distribution ray tracing, a Monte Carlo method
+              to compute glossy reflection and refraction, soft shadows,
+              depth of field, and motion blur by distributing the ray
+              origins, directions, and time.  Points out that the number
+              of new rays to be traced at glossy reflection and refraction
+              should be proportional to the importance (contribution).
+              (Does not mention that the number of rays to be used for
+              soft shadow calculation should also depend on the
+              importance.)"
+}
+
+@INPROCEEDINGS{Heckbert84,
+  author = "Paul S. Heckbert and Pat Hanrahan",
+  title = "Beam tracing polygonal objects",
+  booktitle = "Computer Graphics (SIGGRAPH 84 Conference Proceedings)",
+  pages = "119--127",
+  organization = "ACM",
+  month = Jul,
+  year = 1984,
+  keywords = {beam tracing, polygonal scenes},
+  comments = "Uses importance (called 'threshold of insignificance') to
+              terminate beams of rays." 
+}
+
+@INPROCEEDINGS{Speer85,
+  author = "L. Richard Speer and Tony D. DeRose and Brian A. Barsky",
+  title = "A theoretical and empirical analysis of coherent ray-tracing",
+  booktitle = "Proceedings of Graphics Interface '85",
+  pages = "1--8",
+  year = 1985,
+  keywords = {coherent ray tracing},
+  comments = "Uses importance (called 'attenuated intensity coefficient') to
+              terminate beams of rays." 
+}
+
+@ARTICLE{Cleary86,
+  author = "J. G. Cleary and B. M. Wyvill and G. M. Birtwistle and R. Vatti",
+  title = "Multiprocessor ray tracing",
+  journal = "Computer Graphics Forum",
+  volume = 5,
+  number = 1,
+  pages = "3--12",
+  month = Mar,
+  year = 1986,
+  keywords = {ray tracing, parallel execution},
+  comments = "Stores importance with each ray?  Referenced in [Pharr97].",
+  note = "(*)"
+}
+
+@INPROCEEDINGS{Ward88,
+  author = "Gregory J. Ward and Francis M. Rubinstein and Robert D. Clear",
+  title = "A Ray Tracing Solution for Diffuse Interreflection",
+  booktitle = "Computer Graphics (SIGGRAPH 88 Conference Proceedings)",
+  pages = "85--92",
+  organization = "ACM",
+  month = Aug,
+  year = 1988,
+  keywords = {distribution ray tracing, Monte Carlo, diffuse reflection},
+  comments = "Uses importance to reduce the number of rays in
+              distribution ray tracing.  Sets the number of rays 
+              proportional to 1/importance^2."
+}
+
+@INPROCEEDINGS{Arvo90,
+  author = "James R. Arvo and David B. Kirk",
+  title = "Particle Transport and Image Synthesis",
+  booktitle = "Computer Graphics (SIGGRAPH 90 Conference Proceedings)",
+  pages = "63--66",
+  organization = "ACM",
+  month = Aug,
+  year = 1990,
+  keywords = {distribution ray tracing, Monte Carlo, particle transport,
+             rendering equation, splitting, Russian roulette},
+  comments = "Points out that instead of simply not tracing unimportant
+              rays (truncating the ray tree), Russian roulette should be
+              used in order to avoid bias."
+}
+
+@INPROCEEDINGS{Ward91,
+  author = "Gregory J. Ward",
+  title = "Adaptive Shadow Testing for Ray Tracing",
+  booktitle = "Proceedings of the Second Eurographics Workshop on Rendering",
+  pages = "11--20",
+  organization = "Eurographics",
+  year = 1991,
+  month = May,
+  keywords = {ray tracing, efficiency, direct illumination, visibility,
+              many lights},
+  comments = "Sorts the light sources according to potential illumination
+              at each point.  Only checks visibility for the potentially
+              brightest light sources at each point, and uses statistical
+              estimates for the visibility of other light sources.
+              Mentions that the tolerance can be increased for secondary
+              rays with low contribution (importance)."
+}
+
+@INPROCEEDINGS{Heirich96,
+  author = "Alan Heirich and James Arvo",
+  title = "Scalable Photorealistic Rendering of Complex Scenes",
+  booktitle = "Proceedings of the First Eurographics Workshop on Parallel
+               Graphics and Visualization",
+  year = 1996,
+  keywords = {global illumination, Monte Carlo, general reflection,
+              distribution ray tracing, complex scenes, parallel execution},
+  comments = "Parallel implementation of distribution ray tracing.
+              Uses importance to keep track of the contribution of 
+              each ray.  Defines a ray as (origin, direction, RGB 
+              importance)."
+}
+
+@INPROCEEDINGS{Pharr97,
+  author = "Matt Pharr and Craig Kolb and Reid Gershbein and Pat Hanrahan",
+  title = "Rendering Complex Scenes with Memory-Coherent Ray Tracing",
+  booktitle = "Computer Graphics (SIGGRAPH 97 Conference Proceedings)",
+  pages = "101--108",
+  organization = "ACM",
+  month = Aug,
+  year = 1997,
+  keywords = {path tracing, Monte Carlo, ray reordering, Russian roulette},
+  comments = "Stores the importance and destination pixel for with each
+              unshot ray.  This makes it possible to pool the rays and
+              shoot them out of order (to improve geometry cache coherency).
+              Uses Russian roulette to terminate rays."
+}
+
+@BOOK{Larson98,
+  author = "Greg {Ward Larson} and Rob Shakespeare",
+  title = "Rendering with Radiance: The Art and Science of Lighting
+           Visualization",
+  publisher = "Morgan Kaufmann Publishers",
+  year = 1998,
+  keywords = {global illumination, Monte Carlo, general reflection,
+              distribution ray tracing},
+  comments = "Excellent book on global illumination and Ward's Radiance
+              programs.  Page 551: the number of rays in a distribution
+              ray tracing is set to 1/importance (different than
+              [Ward88]).
+              Also on page 551: a distribution ray tracing result can 
+              only be used for interpolation if it was originally 
+              calculated with an importance (and accuracy) at least 
+              as high as the result we're looking for."
+}
+
+@ARTICLE{Christensen99,
+  author = "Per H. Christensen",
+  title = "Importance for Ray Tracing",
+  journal = "Ray Tracing News",
+  volume = 12,
+  number = 2,
+  organization = "ACM", 
+  month = Dec,
+  year = 1999,
+  note = "(www.acm.org/tog/resources/RTNews/html/rtnv12n2.html)",
+  keywords = {ray tracing, efficiency, direct illumination, visibility,
+              area lights, many lights, glossy reflection, procedural
+              textures, bump maps, shading normals, level-of-detail,
+              participating media, ray marching},
+  comments = "Describes some of the many potential uses of importance to
+              speed up ray tracing.  Asks the question why importance is
+              not more widely used in commercial and non-commercial ray
+              tracers."
+}
+
+@INPROCEEDINGS{Morley06,
+  author = "R. Keith Morley and Solomon Boulos and Jared Johnson and
+    David Edwards and Peter Shirley and Michael Ashikhmin and Simon Premoze",
+  title = "Image Synthesis using Adjoint Photons",
+  booktitle = "Proceedings of Graphics Interface 2006",
+  pages = "179-186",
+  year = 2006,
+  keywords = {ray tracing, backwards ray tracing, adjoints,
+              participating media},
+  comments = "Traces adjoint photons.  Brute-force approach.  Describes the 
+              difference between adjoint photons and importance particles 
+              (importons)."
+}
+
+
+%
+% FINITE ELEMENT METHODS FOR GLOBAL ILLUMINATION
+%
+
+@INPROCEEDINGS{Smits92,
+  author = "Brian E. Smits and James R. Arvo and David H. Salesin",
+  title = "An Importance-Driven Radiosity Algorithm",
+  booktitle = "Computer Graphics (SIGGRAPH 92 Conference Proceedings)",
+  pages = "273--282",
+  organization = "ACM",
+  month = Jul,
+  year = 1992,
+  keywords = {global illumination, finite elements, diffuse reflection,
+              hierarchical radiosity, power importance, adjoints},
+  comments = "Seminal paper introducing importance to computer graphics.
+              Uses importance for efficient simulation of view-dependent
+              hierarchical radiosity."
+}
+
+@PHDTHESIS{Aupperle93a,
+  author = "Larry Aupperle",
+  title = "Hierarchical Algorithms for Illumination",
+  school = "Department of Computer Science, Princeton University",
+  address = "Princeton, New Jersey",
+  month = Nov,
+  year = 1993,
+  keywords = {global illumination, finite elements, diffuse reflection,
+              glossy reflection, hierarchical radiosity, radiance,
+              importance, three-point transport, hierarchical
+              representation, adaptive refinement},
+  comments = "Describes hierarchical algorithms for finite element
+              diffuse global illumination (radiosity) and glossy
+              global illumination.  Uses importance for the finite
+              element glossy global illumination method.  Radiance and
+              and its adjoint, importance, are represented in finite
+              element bases.  Refinement is based on estimated
+              transport error, radiance, and importance."
+}
+
+@INPROCEEDINGS{Aupperle93b,
+  author = "Larry Aupperle and Pat Hanrahan",
+  title = "Importance and Discrete Three Point Transport",
+  booktitle = "Proceedings of the Fourth Eurographics Workshop on
+               Rendering",
+  pages = "85--94",
+  organization = "Eurographics",
+  month = Jun,
+  year = 1993,
+  keywords = {global illumination, finite elements, glossy reflection,
+              radiance, two-point importance, three-point transport,
+              hierarchical representation, adaptive refinement},
+  comments = "Uses importance for a finite element glossy global
+              illumination method where the elements represent radiance
+              and its adjoint, importance.  Since all treatment is 
+              discrete, the adjoint of the form factor matrix is simply
+              the transposed matrix.  Refinement is based on estimated
+              transport error, radiance, and importance."
+}
+
+@INPROCEEDINGS{Christensen93,
+  author = "Per H. Christensen and David H. Salesin and Tony D. DeRose",
+  title = "A Continuous Adjoint Formulation for Radiance Transport",
+  booktitle = "Proceedings of the Fourth Eurographics Workshop on
+               Rendering",
+  pages = "95--104",
+  organization = "Eurographics",
+  month = Jun,
+  year = 1993,
+  keywords = {global illumination, finite elements, glossy reflection,
+              radiance, two-point intensity, directional importance,
+              two-point importance, adjoints, continuity, spherical
+              harmonics},
+  comments = "Showed that adjoints of radiance (under a certain inner
+              product) are transported like two-point intensity and 
+              that two-point importance is such an adjoint.  
+              Introduced exitant importance, a quantity closely
+              related to two-point importance and transported exactly
+              like exitant radiance.  For non-specular reflection, 
+              two-point importance has discontinuities while 
+              directional importance is continuous.
+              (The term ``directional importance'' was used here
+              also for two-point importance to distinguish from diffuse
+              importance as in [Smits92].)"
+}
+
+@INPROCEEDINGS{Bekaert94,
+  author = "Philippe Bekaert and Yves D. Willems",
+  title = "A Progressive Importance-Driven Rendering Algorithm",
+  booktitle = "Proceedings of the 10th Spring School on Computer Graphics",
+  pages = "58--67",
+  publisher = "Comenius University, Bratislava, Slovakia",
+  month = Jun,
+  year = 1994,
+  keywords = {global illumination, finite elements, glossy reflection,
+              radiance, two-point importance, three-point transport,
+              shooting, progressive refinement},
+  comments = "Extends progressive radiosity to patch-to-patch basis
+              functions representing radiance.  This is similar to
+              [Aupperle93]s extension of hierarchical radiosity to
+              patch-to-patch radiance.  This paper uses shooting for
+              both light and importance to get a progressive algorithm,
+              and uses a combination of radiance and importance to
+              decide which basis to function to `shoot' from next.
+              (Does not use importance to control refinement since 
+              there is no refinement in progressive radiosity and 
+              progressive radiance.)"
+}
+
+@INPROCEEDINGS{Christensen94,
+  author = "Per H. Christensen and Eric J. Stollnitz and David H. Salesin
+            and Tony D. DeRose",
+  title = "Wavelet Radiance",
+  booktitle = "Proceedings of the Fifth Eurographics Workshop on
+               Rendering",
+  pages = "287--302",
+  organization = "Eurographics",
+  month = Jun,
+  year = 1994,
+  keywords = {global illumination, finite elements, glossy reflection,
+              radiance, directional importance, wavelets, adaptive
+              refinement},
+  comments = "A finite element glossy global illumination method that
+              uses wavelets to represent the four-dimensional radiance
+              and directional importance functions.  Uses estimated
+              transport error, radiance, and importance for
+              adaptive refinement."
+}
+
+@PHDTHESIS{Lischinski94a,
+  author = "Dani Lischinski",
+  title = "Accurate and Reliable Algorithms for Global Illumination",
+  school = "Department of Computer Science, Cornell University",
+  address = "Ithaca, New York",
+  month = Aug,
+  year = 1994,
+  keywords = {global illumination, finite elements, glossy reflection,
+              radiance, directional importance, three-point transport,
+              wavelet representation, adaptive refinement, discontinuity
+              meshing},
+  comments = "Elaborates on [Lischinski94b] and also talks about
+              discontinuity meshing."
+}
+
+@INPROCEEDINGS{Lischinski94b,
+  author = "Dani Lischinski and Brian Smits and Donald P. Greenberg",
+  title = "Bounds and Error Estimates for Radiosity",
+  booktitle = "Computer Graphics (SIGGRAPH 94 Conference Proceedings)",
+  pages = "67--74",
+  organization = "ACM",
+  month = Jul,
+  year = 1994,
+  keywords = {global illumination, finite elements, diffuse reflection,
+              hierarchical radiosity, power importance, error bounds,
+              error estimates, adaptive refinement},
+  comments = "Presents error bounds for hierarchical radiosity
+              solutions, and uses them for error-driven adaptive 
+              refinement.  Also uses importance for the refinement
+              criterion."
+}
+
+@INPROCEEDINGS{Schroder94,
+  author = "Peter Schr{\"o}der and Pat Hanrahan",
+  title = "Wavelet Methods for Radiance Computations",
+  booktitle = "Proceedings of the Fifth Eurographics Workshop on
+               Rendering",
+  pages = "303--311",
+  organization = "Eurographics",
+  month = Jun,
+  year = 1994,
+  keywords = {global illumination, finite elements, glossy reflection,
+              radiance, directional importance, three-point transport,
+              wavelet representation, adaptive refinement},
+  comments = "A finite element method for glossy global illumination.
+              Uses wavelets to represent radiance and importance, and
+              compares different wavelet bases.  Uses estimated
+              transport error, radiance, and importance for adaptive
+              refinement of wavelet radiance."
+}
+
+@INPROCEEDINGS{Smits94a,
+  author = "Brian Smits and James Arvo and Donald Greenberg",
+  title = "A Clustering Algorithm for Radiosity in Complex
+           Environments",
+  booktitle = "Computer Graphics (SIGGRAPH 94 Conference Proceedings)",
+  pages = "435--442",
+  organization = "ACM",
+  month = Jul,
+  year = 1994,
+  keywords = {global illumination, finite elements, diffuse reflection,
+              hierarchical radiosity, power importance, clustering,
+              error bounds, adaptive refinement},
+  comments = "Extends hierarchical radiosity to clusters.  Uses
+              importance for refinement in one example."
+}
+
+@PHDTHESIS{Smits94b,
+  author = "Brian E. Smits",
+  title = "Efficient Hierarchical Radiosity in Complex Environments",
+  school = "Program of Computer Graphics, Cornell University",
+  address = "Ithaca, New York",
+  month = Aug,
+  year = 1994,
+  keywords = {global illumination, finite elements, diffuse reflection,
+              hierarchical radiosity, incident power importance,
+              adjoints, clustering},
+  comments = "Extended version of [Smits92] and [Smits94a]."
+}
+
+@INPROCEEDINGS{Bekaert95,
+  author = "Philippe Bekaert and Yves D. Willems",
+  title = "Importance-Driven Progressive Refinement Radiosity",
+  booktitle = "Rendering Techniques '95 (Proceedings of the Sixth
+               Eurographics Workshop on Rendering)",
+  pages = "316--325",
+  publisher = "Springer-Verlag",
+  year = 1995,
+  keywords = {global illumination, finite elements, diffuse reflection,
+              progressive radiosity, diffuse importance,
+              shooting, progressive refinement},
+  comments = "Extends progressive refinement radiosity to use
+              importance.  Radiosity and importance are propagated in 
+              alternating steps.
+              In traditional progressive radiosity, the patch with the
+              highest unshot power is selected first, but here the
+              patch with the highest importance times unshot radiosity
+              is selected.  The method also allows incrementally
+              changing view points."
+}
+
+@PHDTHESIS{Christensen95,
+  author = "Per H. Christensen",
+  title = "Hierarchical Techniques for Glossy Global Illumination",
+  school = "Department of Computer Science and Engineering, University
+            of Washington",
+  address = "Seattle, Washington",
+  month = Jul,
+  year = 1995,
+  keywords = {global illumination, finite elements, glossy reflection,
+              radiance, directional importance, light transport, 
+              importance transport, wavelets, clustering},
+  comments = "A finite element glossy global illumination method.
+              Shows that the reflection operator is self-adjoint and
+              that the geometry operator is also self-adjoint.
+              Derives the adjoint transport operator.
+              Elaborates on the relationship between light and
+              importance:
+              Kajiya's two-point (transport) intensity and
+              two-point importance are adjoint functions of radiance.
+              Radiance and directional importance are adjoint functions
+              of two-point intensity."
+}
+
+@ARTICLE{Christensen96,
+  author = "Per H. Christensen and Eric J. Stollnitz and David H. Salesin
+            and Tony D. DeRose",
+  title = "Global Illumination of Glossy Environments Using Wavelets
+           and Importance",
+  journal = "ACM Transactions on Graphics",
+  volume = 15,
+  number = 1,
+  pages = "37--71",
+  month = Jan,
+  year = 1996,
+  keywords = {global illumination, finite elements, glossy reflection,
+              radiance, directional importance, wavelets, adaptive
+              refinement},
+  comments = "Extended version of [Christensen94].  Also contains a more
+              intuitive derivation of the adjoint of radiance."
+}
+
+@INPROCEEDINGS{Neumann96,
+  author = "Attila Neumann and L\'aszl\'o Neumann and Philippe Bekaert
+            and Yves D. Willems and Werner Purgathofer",
+  title = "Importance-Driven Stochastic Ray Radiosity",
+  booktitle = "Rendering Techniques '96 (Proceedings of the Seventh
+               Eurographics Workshop on Rendering)",
+  pages = "111--122",
+  publisher = "Springer-Verlag",
+  year = 1996,
+  keywords = {global illumination, finite elements, diffuse reflection,
+              stochastic (ray) radiosity, diffuse importance,
+              incoming directional importance},
+  comments = "Uses importance to modulate patch sampling probabilities,
+              thereby reducing variance in the important parts of the
+              scene.  Their basic algorithm shoots power and power 
+              importance in alternating steps.  Their improved 
+              algorithm uses the same rays to propagate power and power
+              importance.  As a further improvement, they also use
+              directional importance: the hemisphere above each patch
+              is divided into 8 solid angles and the incident
+              importance is stored for each solid angle.
+              Directional importance is used to send more rays in the
+              important directions.  They also note that importance
+              directly from the image plane should not be used for
+              refinement."
+}
+
+@BOOK{Stollnitz96,
+  author = "Eric J. Stollnitz and Tony D. DeRose and David H. Salesin",
+  title = "Wavelets for Computer Graphics",
+  publisher = "Morgan Kaufmann Publishers",
+  year = 1996,
+  keywords = {wavelets, image synthesis, global illumination, radiosity,
+              radiance, importance},
+  comments = "Textbook on wavelets in computer graphics.  Subsection
+              13.4.1 describes importance-driven refinement in
+              hierarchical radiosity methods."
+}
+
+@ARTICLE{Christensen97,
+  author = "Per H. Christensen and Dani Lischinski and Eric J. Stollnitz
+            and David H. Salesin",
+  title = "Clustering for Glossy Global Illumination",
+  journal = "ACM Transactions on Graphics",
+  volume = 16,
+  number = 1,
+  pages = "3--33",
+  month = Jan,
+  year = 1997,
+  keywords = {global illumination, finite elements, glossy reflection,
+              radiance, radiant intensity, directional importance,
+              importance intensity, wavelets, clustering,
+              error bounds, adaptive refinement},
+  comments = "Extends [Christensen96] to clustering of objects.
+              Introduces ``importance intensity'' from a point similar
+              to radiant intensity."
+}
+
+@INPROCEEDINGS{Dutre97,
+  author = "Philip Dutr\'e and Philippe Bekaert and Frank Suykens and
+            Yves D. Willems",
+  title = "Bidirectional Radiosity",
+  booktitle = "Rendering Techniques '97 (Proceedings of the Eighth
+               Eurographics Workshop on Rendering)",
+  pages = "205--216",
+  publisher = "Springer-Verlag",
+  year = 1997,
+  keywords = {global illumination, finite elements, diffuse reflection,
+              radiosity, diffuse importance, bidirectional transport},
+  comments = "Radiosity method using importance.  All directly visible
+              patches are used one at a time as importance source  The
+              method avoids computing any radiosity for unimportant
+              patches.  The order of the visible patches is selected
+              depending on their projected screen area.  Even though
+              the solutions are computed independently one at a time,
+              much information can be reused since the form factors
+              between patches can be reused and also the approximate
+              radiosity on non-visible patches can be reused.  Only
+              the importance has to be reset for each new importance
+              source."
+}
+
+@ARTICLE{Pueyo97,
+  author = "Xavier Pueyo and Dani Tost and Ignacio Martin and 
+            Blanca Garcia",
+  title = "Radiosity for Dynamic Environments",
+  journal = "The Journal of Visualization and Computer Animation",
+  volume = 8,
+  number = 4,
+  pages = "221--231",
+  month = Oct,
+  year = 1997,
+  keywords = {global illumination, finite elements, radiosity,
+              importance, dynamic scenes, temporal coherence},
+  comments = "Presents a radiosity algorithm for dynamic environments
+              but static viewpoint.  The computation of the images is
+              based on an importance-driven heuristic approach (the
+              importance is not an adjoint).  Radiosity is neither shot
+              to or from unimportant patches; the unimportant patches
+              are only used for occlusion testing.  The important
+              patches or objects can be manually tagged in the scene
+              database.  Patches that contribute significant radiosity
+              to the visible patches are considered important."
+}
+
+
+%
+% MONTE CARLO METHODS FOR GLOBAL ILLUMINATION
+%
+
+@INPROCEEDINGS{Lafortune93,
+  author = "Eric Lafortune and Yves Willems",
+  title = "Bi-directional Path Tracing",
+  booktitle = "Proceedings of CompuGraphics '93",
+  address = {Alvor, Portugal},
+  pages = "145--153",
+  month = Dec,
+  year = 1993,
+  comments = "Importance is the basis for bidirectional Monte Carlo simulation
+              of global illumination."}
+
+@PHDTHESIS{Pattanaik93c,
+  author = "Sumanta N. Pattanaik",
+  title = "Computational Methods for Global Illumination and
+           Visualisation of Complex {3D} Environments",
+  school = "Computer Science Department, Birla Institute of
+            Technology \& Science",
+  address = "Pilani, India",
+  month = Feb,
+  year = 1993,
+  keywords = {global illumination, Monte Carlo, general reflection,
+              participating media, volume scattering, radiance,
+              importance, random walk, particle/photon tracing,
+              adjoints, importance sampling, variance reduction},
+  comments = "Notes that importance is transported just like light.
+              Shows that the transport equations for radiance and
+              importance are adjoint.  Discusses their relationship
+              to shooting and gathering methods.  Uses importance
+              to bias random walks towards regions of high importance
+              and insufficient number of particles."
+}
+
+@ARTICLE{Pattanaik93d,
+  author = "Sumanta N. Pattanaik and S. P. Mudur",
+  title = "Efficient Potential Equation Solutions for Global
+           Illumination Computation",
+  journal = "Computers \& Graphics",
+  volume = 17,
+  number = 4,
+  pages = "387--396",
+  publisher = "Pergamon Press",
+  year = 1993,
+  keywords = {global illumination, Monte Carlo, diffuse reflection,
+              random walk, particle/photon tracing, adjoints, radiosity,
+              power, diffuse importance},
+  comments = "A random walk simulation of diffuse global illumination,
+              also known as `Monte Carlo radiosity'.
+              Uses importance to guide the majority of the random walks
+              to the most important regions: emission and reflection is
+              biased towards important regions (importance sampling).
+              First an initial number of particles/photons are emitted
+              and reflected in an unbiased manner, and statistics are
+              gathered of how large a fraction of the particles/photons
+              emitted/reflected from each patch in the direction of an
+              other patch eventually makes it to the important region.
+              (This fraction is kept in an array of size PxP, where P 
+              is the number of patches in scene).  Then, in the main
+              simulation, emitting patches are selected with probability
+              proportional to their fraction, which is an approximation
+              of (diffuse incident) importance, and directions for
+              emission or reflection are chosen based on the statistics
+              in the PxP array.  Adaptively reduces the region of 
+              importance by excluding patches that have already received
+              enough photon particles."
+}
+
+@INPROCEEDINGS{Dutre94b,
+  author = "Philip Dutr\'e and Yves D. Willems",
+  title = "Importance-Driven {Monte Carlo} Light Tracing",
+  booktitle = "Proceedings of the Fifth Eurographics Workshop on
+               Rendering",
+  pages = "185--194",
+  organization = "Eurographics",
+  month = Jun,
+  year = 1994,
+  keywords = {global illumination, Monte Carlo, general reflection,
+              random walk, particle/photon tracing, adjoints,
+              importance sampling},
+  comments = "A random walk algorithm.  Does not divide the scene into
+              patches, but sends particles to pixels in the image plane.
+              Uses importance for particle/photon tracing:
+              particles/photons are emitted from the light sources in
+              directions with high importance, ie. importance is used
+              for importance sampling at the light sources."
+}
+
+@ARTICLE{Lafortune94,
+  author = "Eric P. Lafortune and Yves D. Willems",
+  title = "A Theoretical Framework for Physically Based Rendering",
+  journal = "Computer Graphics Forum",
+  volume = 13,
+  number = 2,
+  pages = "97--107",
+  month = Jun,
+  year = 1994,
+  keywords = {global illumination, Monte Carlo, general reflection,
+              bidirectional path tracing, radiance, importance,
+              adjoints, global reflectance distribution function},
+  comments = "Explains their previously published bidirectional path
+              tracing algorithm using the framework of the radiance
+              and importance equations.  Also introduces the `global 
+              reflectance distribution function' (GRDF) which is
+              simply the kernel of the solution operator S = (I-T)^-1."
+}
+
+@INPROCEEDINGS{Veach94,
+  author = "Eric Veach and Leonidas Guibas",
+  title = "Bidirectional Estimators for Light Transport",
+  booktitle = "Proceedings of the Fifth Eurographics Workshop on
+               Rendering",
+  pages = "147--162",
+  organization = "Eurographics",
+  month = Jun,
+  year = 1994,
+  keywords = {global illumination, Monte Carlo, general reflection,
+              bidirectional path tracing, variance reduction, adjoints,
+              radiance, importance},
+  comments = "Uses importance for bidirectional Monte Carlo simulation
+              of global illumination."
+}
+
+@INPROCEEDINGS{Dutre95,
+  author = "Philip Dutr\'e and Yves D. Willems",
+  title = "Potential-Driven {Monte Carlo} Particle Tracing for
+           Diffuse Environments with Adaptive Probability Density
+           Functions",
+  booktitle = "Rendering Techniques '95 (Proceedings of the Sixth
+               Eurographics Workshop on Rendering)",
+  pages = "306--315",
+  publisher = "Springer-Verlag",
+  year = 1995,
+  keywords = {global illumination, Monte Carlo, diffuse reflection,
+              random walk, particle/photon tracing, adjoints,
+              importance sampling},
+  comments = "Extends [Dutre94b] to also use importance sampling at
+              surfaces.  The surfaces are divided into a mesh to store
+              discretized importance functions (discretized over the
+              hemisphere -- the discretization is refined during
+              solution). These importance functions are used to guide
+              emission and reflection of particles/photons.  The mesh
+              is not used directly for the light calculation, but only
+              to store the approximate importance functions.  The
+              method assumes diffuse surfaces."
+}
+
+@INPROCEEDINGS{Jensen95,
+  author = "Henrik W. Jensen",
+  title = "Importance Driven Path Tracing using the Photon Map",
+  booktitle = "Rendering Techniques '95 (Proc.\ 6th
+               Eurographics Workshop on Rendering)",
+  pages = "326--335",
+  publisher = "Springer-Verlag",
+  year = 1995,
+  keywords = {global illumination, Monte Carlo, diffuse reflection,
+              random walk, particle/photon tracing, importance sampling},
+  comments = "Uses photon directions to guide path tracing to the brightest
+              parts of the scene.  This is importance sampling and does
+              not use adjoints."
+}
+
+@INPROCEEDINGS{Lafortune95,
+  author = "Eric Lafortune and Yves Willems",
+  title = "A {5D} Tree to Reduce the Variance of Monte Carlo Ray Tracing",
+  booktitle = "Rendering Techniques '95 (Proceedings of the Sixth
+               Eurographics Workshop on Rendering)",
+  pages = "11--20",
+  publisher = "Springer-Verlag",
+  year = 1995,
+  comments = "Uses information about the illumination directions to 
+              guide path tracing from the eye.  Uses a 5D tree structure
+              of ray origins and directions."
+}
+
+@ARTICLE{Pattanaik95a,
+  author = "Sumanta N. Pattanaik and S. P. Mudur",
+  title = "Adjoint Equations and Random Walks for Illumination Computation",
+  journal = "ACM Transactions on Graphics",
+  volume = 14,
+  number = 1,
+  pages = "77--102",
+  month = Jan,
+  year = 1995,
+  keywords = {global illumination, Monte Carlo, diffuse reflection,
+              random walk, particle/photon tracing, adjoints, radiosity,
+              diffuse importance},
+  comments = "Extended version of [Pattanaik93c]:
+              a random walk simulation of diffuse global illumination.
+              Uses importance to guide the majority of the random walks
+              to the most important regions (importance sampling).
+              Adaptively reduces the region of importance by excluding
+              patches that have already received enough particles/photons."
+}
+
+% pages = "??",
+@INPROCEEDINGS{Pattanaik95b,
+  author = "Sumanta N. Pattanaik and Kadi Bouatouch",
+  title = "Interactive Walk-Through using Particle Tracing",
+  booktitle = "Computer Graphics Developments in Virtual Environments
+               (Proceedings of Computer Graphics International '95)",
+  publisher = "Academic Press",
+  year = 1995,
+  keywords = {global illumination, Monte Carlo, random walk,
+              particle/photon tracing, adjoints, importance,
+              illuminating capacity, walk-through},
+  comments = "Keeps a tally of how many particles/photons emitted from
+              each light source that get reflected (through multiple
+              bounces) into different regions of the scene.  During an
+              interactive walk-through of the scene, the emission of
+              particles/photons is biased towards emission from those
+              light sources that contribute most to the illumination
+              of the visible region.  This is a cheap estimate of
+              importance (without explicit adjoints) and has the
+              advantage that importance does not have to be explicitly
+              transported."
+}
+
+@INPROCEEDINGS{Bouatouch96,
+  author = "Kadi Bouatouch and Sumanta N. Pattanaik and Eric Zeghers",
+  title = "Computation of Higher Order Illumination with a
+           Non-Deterministic Approach",
+  booktitle = "Computer Graphics Forum (Proceedings of Eurographics '96)",
+  pages = "327--338",
+  publisher = "Blackwell Publishers",
+  month = Aug,
+  year = 1996,
+  keywords = {global illumination, Monte Carlo, diffuse reflection,
+              random walk, photon particle tracing, adjoints,
+              importance, wavelet representation},
+  comments = "Extends the basic random walk radiosity method by using
+              wavelets for the basis functions to represent radiosity.
+              Talks about adjoints and importance, but does not use
+              importance to speed up the implementation."
+}
+
+@INPROCEEDINGS{Jensen96,
+  author = "Henrik W. Jensen",
+  title = "Global Illumination using Photon Maps",
+  booktitle = "Rendering Techniques '96 (Proceedings of the Seventh
+               Eurographics Workshop on Rendering)",
+  pages = "21--30",
+  publisher = "Springer-Verlag",
+  year = 1996,
+  keywords = {global illumination, Monte Carlo, random walk,
+              particle/photon tracing, ray tracing, photon maps},
+  comments = "Uses the importance of a ray to decide which method to
+              use to compute indirect illumination: lookup in the global
+              photon map (fast, approximate) or distribution ray tracing
+              (slow, accurate).  Also suggests the use of an initial
+              importance tracing pass before particle/photon tracing as
+              later implemented in [Peter98]."
+}
+
+@PHDTHESIS{Lafortune96a,
+  author = "Eric P. Lafortune",
+  title = "Mathematical Models and Monte Carlo Algorithms for
+           Physically Based Rendering",
+  school = "Department of Computer Science, Katholieke Universiteit",
+  address = "Leuven, Belgium",
+  month = Feb,
+  year = 1996,
+  keywords = {global illumination, Monte Carlo, bidirectional path
+              tracing, general reflection, radiance, importance},
+  comments = "Describes transport equations for both light (radiance)
+              and directional importance.  Uses these to describe a
+              bidirectional path tracing algorithm."
+}
+
+@PHDTHESIS{Dutre96,
+  author = "Philip Dutr\'e",
+  title = "Mathematical Frameworks and Monte Carlo Algorithms for
+           Global Illumination in Computer Graphics",
+  school = "Department of Computer Science, Katholieke Universiteit",
+  address = "Leuven, Belgium",
+  month = Sep,
+  year = 1996,
+  keywords = {global illumination, Monte Carlo, photon particle tracing,
+              bidirectional path tracing?,
+              general reflection, incident and exitant radiance,
+              incident and exitant importance, adjoints},
+  comments = "Starts with a thorough and intuitive explanation of
+              incident and exitant radiance and importance.
+              Then describes general Monte Carlo methods for solving
+              integral equations, and describes a photon particle
+              tracing algorithm.  Also describes the use of adaptive
+              importance sampling."
+}
+
+@INPROCEEDINGS{Sbert97,
+  author = "Mateu Sbert",
+  title = "Optimal Source Selection in Shooting Random Walk {Monte
+           Carlo} Radiosity",
+  booktitle = "Computer Graphics Forum (Proceedings of Eurographics '97)",
+  pages = "301--308",
+  publisher = "Blackwell Publishers",
+  month = Aug,
+  year = 1997,
+  keywords = {global illumination, Monte Carlo, random walk, radiosity,
+              importance},
+  comments = "Points out that in order to minimize the variance of the
+              radiosity solution, the number of photon particles to
+              be emitted from each light source should be proportional
+              to the square root of its importance (and not directly
+              proportional to its importance as done by [Pattanaik93a,c,d]
+              and others).  The reason is that the variance in the
+              radiosity solution should be inversely proportional to
+              the importance, and the variance is reduced by one over
+              the square root of the number of particles."
+}
+
+@PHDTHESIS{Veach97,
+  author = "Eric Veach",
+  title = "Robust Monte Carlo Methods for Light Transport Simulation",
+  school = "Stanford University",
+  address = "Stanford, California",
+  month = Dec,
+  year = 1997,
+  keywords = {global illumination, Monte Carlo, general reflection,
+              bidirectional path tracing, Metropolis light transport,
+              multiple importance sampling, general reflection,
+              radiance, importance, adjoints},
+  comments = "Gives detailed descriptions of bidirectional path tracing
+              and the Metropolis light transport algorithm.  Also
+              describes how to combine importance sampling with 
+              multiple importance functions.  Gives a good theoretical
+              overview of radiance and importance transport and 
+              adjoints."
+}
+
+@PHDTHESIS{Keller98,
+  author = "Alexander Keller",
+  title = "Quasi-Monte Carlo Methods for Photorealistic Image Synthesis",
+  school = "University of Kaiserslautern",
+  address = "Kaiserslautern, Germany",
+  year = 1998,
+  keywords = {global illumination, general reflection,
+              Monte Carlo, quasi-Monte Carlo, quasi-random walk,
+              photon particle tracing,
+              radiance, radiosity, form factors, wavelets, photon maps,
+              adjoints, importance},
+  comments = "Describes the theory behind quasi-Monte Carlo sampling
+              and applies it to pixel sampling, radiosity form factor
+              calculation, and solution of the radiance equation
+              (radiosity and particle/photon tracing methods).
+              Describes radiance and importance transport and their
+              adjointness.  Does not actually use importance, but
+              suggests the use of an initial importance tracing pass
+              before particle/photon tracing as later implemented in
+              [Peter98]."
+}
+
+@INPROCEEDINGS{Peter98,
+  author = "Ingmar Peter and Georg Pietrek",
+  title = "Importance Driven Construction of Photon Maps",
+  booktitle = "Rendering Techniques '98 (Proceedings of the Ninth
+               Eurographics Workshop on Rendering)",
+  pages = "269--280",
+  publisher = "Springer-Verlag",
+  year = 1998,
+  keywords = {global illumination, Monte Carlo, random walk,
+              importance particle tracing, photon particle tracing,
+              photon map method, importons},
+  comments = "Traces importance particles (``importons'') from the eye
+              and stores them in an importance map similar to a photon
+              map.  The stored importons are used in the photon tracing
+              phase to decide which directions to emit and reflect 
+              photons in, thereby focusing the photons in the important
+              parts of the scene."
+}
+
+@INPROCEEDINGS{Szirmay-Kalos98a,
+  author = "L\'aszl\'o Szirmay-Kalos and Bal\'azs Cs\'ebfalvi and 
+            Werner Purgathofer",
+  editor = "Vaclav Skala",
+  title = "Importance Driven Quasi-Random Walk Solution of the Rendering
+           Equation",
+  booktitle = "WSCG '98 (Sixth European Conference in Central Europe on
+               Computer Graphics and Visualization)",
+  pages = "379--385",
+  year = 1998,
+  publisher = "University of West Bohemia",
+  address = "Plzen, Czech Republic",
+  comments = "Similar to [Jensen95] (uses photon directions to guide
+              path tracing), but stores the photons on patches instead
+              of in a photon map.",
+  note = "(Also published in Computers and Graphics 23(2):203-212, 1999)"
+}
+
+@INPROCEEDINGS{Szirmay-Kalos98b,
+  author = "L\'aszl\'o Szirmay-Kalos and Werner Purgathofer",
+  editor = "G. Drettakis and N. Max",
+  title = "Global Ray-Bundle Tracing with Hardware Acceleration",
+  booktitle = "Rendering Techniques '98 (Proceedings of the Ninth
+               Eurographics Rendering Workshop '98)",
+  pages = "247--258",
+  publisher = "Springer Verlag",
+  year = 1998,
+}
+
+@PHDTHESIS{Bekaert99,
+  author = "Philippe Bekaert",
+  title = "Hierarchical and Stochastic Algorithms for Radiosity",
+  school = "Katholieke Universiteit",
+  address = "Leuven, Belgium",
+  month = Dec,
+  year = 1999,
+  keywords = {global illumination, diffuse reflections, Monte Carlo,
+              random walk, hierarchical radiosity, power, importance,
+              adjoints},
+  comments = "Talks about propagation of radiosity and power, and their
+              adjoints.  B and J are adjoint functions and P and I are
+              adjoint functions."
+}
+
+@INPROCEEDINGS{Keller00,
+  author = "Alexander Keller and Ingo Wald",
+  title = "Efficient Importance Sampling Techniques for the Photon Map",
+  booktitle = "Proceedings of the Fifth Fall Workshop on Vision,
+               Modeling, and Visualization",
+  pages = "271--279",
+  organization = "IEEE",
+  month = Nov,
+  year = 2000,
+  keywords = {global illumination, Monte Carlo, random walk,
+              importance particle tracing, photon particle tracing,
+              photon map method, importons},
+  comments = "Improves the importance-driven photon map method 
+              [Peter98] by not mixing photons with high and low power.
+              The store probability is determined by importance, and
+              Russian roulette is used for storage: if a photon is stored 
+              in a low-importance area, its power is increased.  Compared 
+              to the non importance-driven photon map method, the same 
+              number of photons is traced, but far fewer photons are stored."
+}
+
+%pages = ??
+@INPROCEEDINGS{Prikryl00,
+  author = "Jan P\v{r}ikryl and Philippe Bekaert and Werner Purgathofer",
+  title = "Importance-Driven Hierarchical Stochastic Ray Radiosity",
+  booktitle = "Proceedings of the Winter School of Computer Graphics 2000",
+  address = "University of West Bohemia, Plzen, Czech Republic",
+  month = Jan,
+  year = 2000,
+  keywords = {global illumination, Monte Carlo, random walk,
+              Stochastic ray radiosity, hierarchical radiosity,
+              importance},
+  comments = "Extension of [Neumann96] to use hierarchical radiosity."
+}
+
+@ARTICLE{Sbert00,
+  author = "Mateu Sbert and Alex Brusi and Robert Tobler and
+            Werner Purgathofer",
+  title = "Random Walk Radiosity with Generalized Transition Probabilities",
+  journal = "Graphical Models",
+  volume = 6,
+  number = 2,
+  pages = "56--70",
+  year = "2000",
+  keywords = {global illumination, Monte Carlo, random walk,
+              diffuse reflection, radiosity, diffuse importance,
+              power importance},
+  comments = "Describes a variation on random walk radiosity with
+              general scattering and absorption probabilities.
+              Elaborates on the relationship between diffuse importance
+              and power importance."
+}
+
+@INPROCEEDINGS{Suykens00,
+  author = "Frank Suykens and Yves D. Willems",
+  title = "Density Control for Photon Maps",
+  booktitle = "Rendering Techniques 2000 (Proceedings of the Eleventh
+               Eurographics Workshop on Rendering)",
+  pages = "11--22",
+  publisher = "Springer-Verlag",
+  year = 2000,
+  keywords = {global illumination, Monte Carlo, random walk,
+              importance particle tracing, photon particle tracing,
+              photon map method, importons},
+  comments = "Improves the importance-driven photon map method [Peter98]
+              by not mixing photons with high and low power.  The store
+              probability is determined by e.g. importance, and if a
+              photon is not stored, its power is distributed among the
+              nearest photons.  Compared to the non importance-driven
+              photon map method, the same number of photons is traced,
+              but far fewer photons are stored."
+}
+
+% month = ??",
+@PHDTHESIS{Szirmay-Kalos00,
+  author = "L\'aszl\'o Szirmay-Kalos",
+  title = "Photorealistic Image Synthesis using Ray-Bundles",
+  type = "Doctoral dissertation",
+  school = "Department of Control Engineering and Information Technology,
+            Technical University of Budapest",
+  address = "Budapest, Hungary",
+  year = 2000,
+  keywords = {global illumination, Monte Carlo, quasi-Monte Carlo, ray bundles,
+              radiosity/radiance?, importance},
+}
+
+@BOOK{Jensen01a,
+  author = "Henrik W. Jensen",
+  title = "Realistic Image Synthesis Using Photon Mapping",
+  publisher = "A. K. Peters",
+  year = 2001,
+  keywords = {global illumination, Monte Carlo, photon maps, importance},
+  notes = "Section 11.3, 'Visual Importance'."
+}
+
+@INPROCEEDINGS{Jensen01b,
+  author = "Henrik W. Jensen and Frank Suykens and Per H. Christensen",
+  title = "A Practical Guide to Global Illumination Using Photon Mapping",
+  booktitle = "{SIGGRAPH} 2001 Course Notes \# 38",
+  publisher = "ACM",
+  month = Aug,
+  year = 2001,
+  keywords = {global illumination, Monte Carlo, photon maps, importance}
+}
+
+@INPROCEEDINGS{Benthin03,
+  author = "Carsten Benthin and Ingo Wald and Philipp Slusallek",
+  title = "A Scalable Approach to Interactive Global Illumination",
+  booktitle = "Computer Graphics Forum (Proceedings of Eurographics 2003)",
+  publisher = "Blackwell Publishers",
+  month = Sep,
+  year = 2003,
+  keywords = {Real-time global illumination, Monte Carlo, instant radiance,
+              importance?}
+}
+
+@ARTICLE{Hasan06,
+  author = "Milo\v{s} Ha\v{s}an and Fabio Pellacini and Kavita Bala",
+  title = "Direct-to-Indirect Transfer for Cinematic Relighting",
+  journal = "ACM Transactions on Graphics (Proceedings of SIGGRAPH 2006)",
+  volume = 25,
+  number = 3,
+  pages = "1089--1097",
+  month = Jul,
+  year = 2006,
+  keywords = {Precomputed global illumination, wavelets, interactive 
+              relighting},
+  comments = "Shoots photons (importons) from view samples to estimate 
+              importance."
+}
+
+@ARTICLE{Lehtinen08,
+  author = "Jaakko Lehtinen and Matthias Zwicker and Emmanuel Turquin and
+            Janne Kontkanen and Fr{\'e}do Durand and Fran\c{c}ois X. Sillion
+            and Timo Aila"
+  title = "A meshless hierarchical representation for light transport"
+  journal = "ACM Transactions on Graphics (Proceedings of SIGGRAPH 2008)",
+  volume = 27,
+  number = 3,
+  month = Aug,
+  year = 2008,
+  pages = "??",
+  keywords = {},
+  comments = "Shoots photons (importons) from view point to establish which
+              objects are entirely inside other objects."
+}
+
+
+%
+% VOLUME RAY TRACING AND PARTICIPATING MEDIA
+%
+
+@ARTICLE{Levoy90,
+  author = "Marc Levoy",
+  title = "Efficient Ray Tracing of Volume Data",
+  journal = "ACM Transactions on Graphics",
+  volume = 9,
+  number = 3,
+  pages = "245--261",
+  month = Jul,
+  year = 1990,
+  keywords = {volume ray tracing, opacity, ray termination},
+  comments = "Introduces termination of front-to-back volume rays when the
+              the accumulated opacity is sufficiently high, and their
+              remaining importance therefore is low.  Similar to
+              [Hall83]'s termination of rays when importance (weight)
+              is low."
+}
+
+@INPROCEEDINGS{Danskin92,
+  author = "John Danskin and Pat Hanrahan",
+  title = "Fast Algorithms for Volume Ray Tracing",
+  booktitle = "Computer Graphics (Proceedings of the 1992 Workshop on Volume 
+               Visualization)",
+  pages = "91--98",
+  organization = "ACM",
+  year = 1992,
+  keywords = {volume ray tracing, opacity, adaptive step length, 
+              Russian roulette ray termination},
+  comments = "Gradually takes fewer samples and reduce calculation precision
+              as a ray accumulates opacity in front-to-back ray tracing.
+              (Credits Larry Aupperle with the idea.)  Uses Russian roulette
+              for termination of rays (as [Arvo90] for regular ray tracing).  
+              importance for refinement in one example."
+}
+
+@INPROCEEDINGS{Lafortune96b,
+  author = "Eric P. Lafortune and Yves D. Willems",
+  title = "Rendering Participating Media with Bidirectional Path
+           Tracing",
+  booktitle = "Rendering Techniques '96 (Proceedings of the Seventh
+               Eurographics Workshop on Rendering)",
+  pages = "91--100",
+  publisher = "Springer-Verlag",
+  year = 1996,
+  keywords = {global illumination, Monte Carlo, bidirectional path
+              tracing, participating media},
+  comments = "Extends the bidirectional path tracing method to handle
+              participating media.  Does not mention importance
+              directly, but the entire framework of bidirectional 
+              path tracing relies heavily on importance (as described
+              in [Lafortune96a])."
+}
+
+@ARTICLE{Jarosz08,
+  author = "Wojciech Jarosz and Matthias Zwicker and Henrik W. Jensen",
+  title = "The Beam Radiance Estimate for Volumetric Photon Mapping",
+  journal = "Computer Graphics Forum (Proceedings of Eurographics 2008)",
+  volume = 27,
+  number = 2,
+  pages = "??",
+  month = April,
+  year = 2008,
+  keywords = {Volume rendering, photon mapping, radiance estimate},
+  comments = "Uses the importance function to derive general radiance
+              estimates and a beam radiance estimate for volume rendering."
+}
+
+
+%
+% OVERVIEWS
+%
+               
+@BOOK{Cohen93,
+  author = "Michael F. Cohen and John R. Wallace",
+  title = "Radiosity and Realistic Image Synthesis",
+  publisher = "Academic Press",
+  year = 1993,
+  keywords = {global illumination, radiosity, power importance},
+  comments = "Textbook about global illumination and radiosity.
+              Sections 7.7 and 7.8 describe the use of power importance
+              to speed up view-dependent radiosity computation."
+}
+
+@BOOK{Sillion94,
+  author = "Fran\c{c}ois X. Sillion and Claude Puech",
+  title = "Radiosity and Global Illumination",
+  publisher = "Morgan Kaufmann Publishers",
+  year = 1994,
+  keywords = {global illumination, radiosity, power importance,
+              adjoints},
+  comments = "Textbook on global illumination and radiosity.
+              Section 4.5 describes the use of diffuse importance for
+              importance-driven refinement of hierarchical radiosity."
+}
+
+@BOOK{Glassner95,
+  author = "Andrew S. Glassner",
+  title = "Principles of Digital Image Synthesis",
+  publisher = "Morgan Kaufmann Publishers",
+  year = 1995,
+  keywords = {image synthesis, global illumination, adjoints, radiosity,
+              radiance, importance},
+  comments = "Textbook on image synthesis including global illumination.
+              Section 16.9 describes Monte Carlo estimation including
+              the use of importance (in subsection 16.9.3).  Section
+              18.6 describes hierarchical radiosity including
+              importance-driven refinement (in subsection 18.6.3)."
+}
+
+@BOOK{Dutre03,
+  author = "Philip Dutr\'e and Philippe Bekaert and Kavita Bala",
+  title = "Advanced Global Illumination",
+  publisher = "A.~K.~Peters",
+  year = 2003,
+  keywords = {overview, global illumination, finite elements, Monte Carlo,
+              bidirectional path tracing, participating media},
+  comments = "Overview of most global illumination methods.
+              Describes incident and exitant importance in section 4.2, 
+              adjoints in section 4.3, and uses them in many places
+              throughout the book."
+}
+
+@ARTICLE{Christensen03,
+  author = "Per H. Christensen",
+  title = "Adjoints and Importance in Rendering: an Overview",
+  journal = "IEEE Transactions on Visualization and Computer Graphics",
+  volume = 9,
+  number = 3,
+  pages = "329--340",
+  publisher = "IEEE",
+  month = jul,
+  year = 2003
+}
+
+@BOOK{Pharr04,
+  author = "Matt Pharr and Greg Humphreys",
+  title = "Physically-Based Rendering: From Theory to Implementation",
+  publisher = "Morgan Kaufmann Publishers",
+  year = 2004,
+  note = "(To appear)",
+  keywords = {global illumination, Monte Carlo, path tracing, distribution
+              ray tracing, photon maps, importance},
+  comments = "Section 16.2.7, 'The measurement equation and importance'."
+}
+
+
+%
+% MISC
+%
+
+% pages = ??
+@INPROCEEDINGS{Xu01,
+  author = "Q. Xu and J. Sun and Z. Wei and Y. Shu and S. Messelodi
+            and J. Cai",
+  title = "Zero Variance Importance Sampling Driven Potential Tracing
+           for Global Illumination",
+  booktitle = "Proceedings of the Winter School of Computer Graphics 2001",
+  month = Feb,
+  year = 2001,
+  note = "(*) Available from wcsg.zcu.cz/wcsg2001 ?",
+  keywords = {??},
+}
+

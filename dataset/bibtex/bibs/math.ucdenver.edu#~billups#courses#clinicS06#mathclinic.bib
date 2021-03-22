@@ -1,0 +1,938 @@
+% Math Clinic Bibliography
+% Satelite Dynamic Task Scheduling
+
+@string{ wsc = "Winter Simulation Conference" }
+
+@inproceedings{ powell:optimizing,
+		author="Warren B. Powell",
+		title="The Optimizing-Simulator: Merging Simulation and Optimization Using Approximate Dynamic Programming",
+		booktitle=wsc,
+		year="2005",
+		annote="In this tutorial, the author describes how optimizing and simulation modeling technologies ca be combined together to solve dynamic problems. The new combined technology is able to handle the randomness and complexities of simulation and intelligence of optimization, so it can optimize over time. Also, Powell describes how to use approximate dynamic programming to produce decision functions that optimize over time rather than at a point in time."
+		} 
+
+@inproceedings{ kleiner:small,
+		author="Steven Kleiner",
+		title="Small, Fast and Reusable: A Satellite Planning and Scheduling System",
+		booktitle="ASP Conference Series",
+		year="1999",
+		volume="172",
+		annote="The author describes a geometrical approach for satellite planning and scheduling. His goal is to build dynamic schedules that can be replanned all the time. To realize this goal, the planner of order forms was introduced. Since the better the schedule, the more fragile it usually is, the planner is able to build new good schedules when the order form was changed. A good idea, based on this article, is to create an algorithm, which can uses less optimized schedules to build a new schedule at the short period of time.",
+		}
+
+@inproceedings{ eskandari.rabero.ea:multiobjective,
+		author="Hamidreza Eskandari and Luis Rabelo and Mansooreh Mollaghasemi",
+		title="Multiobjective Simulation Optimization Using an Enhanced Genetic Algorithm",
+		booktitle=wsc,
+		year="2005",
+		annote="This article focuses on an improved genetic algorithm approach, based on new ranking strategy. This strategy combines genetic algorithm and a simulation model with stochastic multiobjective function. Also, the authors introduce new concepts of stochastic and significant dominance to find a set of Pareto optimal points rather than a single point. To increase the population size of the GA to maximum size, an Expansion Operator was introduced. This algorithm is going to be applied to the real-word simulation problem of modeling the Space Shuttle flight.",
+		} 
+
+@inproceedings{ plaunt.jonsson.ea:runtime,
+		author="Christian Plaunt and Ari K. J\'{o}nsson and Jeremy Frank",
+		title="Run-Time Satellite Tele-Communications Call Handling as Dynamic Constraint Satisfaction",
+		booktitle="The IEEE Aerospace Conference",
+		year="1999",
+		annote="The problem described in this article is scheduling call requests that requires real-time desicions with regard to call routing, load balancing and priority. The author suggest to use incomplite methods as Hill Climbing to solve this problem. The principal components of algorithm are Priority Management, Call Acceptance, Load Balancing, and Call Migration. These components can be implemented to our problem with a few changes, since both problems are related. There is a very usefull idea to use the Hill Climbing approach for such type of problem because it is impossible to find complete solution for real-word conditions.",
+		}
+
+@inproceedings{ buchholz.thummler:enhancing,
+		author="Peter Buchholz and Axel Th\H{u}mmler",
+		title="Enhancing Evolutionary Algorithms with Statistical Selection Procedures for Simulation Optimization",
+		booktitle=wsc,
+		year="2005",
+		annote="This article focuses on using evolutionary algorithms and specifically evolution strategies for optimization. The authors apply these algorithms to stochastic functions and models to optimize models that use stastical selection procedures.This article gives a brief overview of evolutional strategies and introduce ranking and selection procedures for integrating them within the optimization algorithm.",
+		} 
+
+@inproceedings{ joslin.frank.ea:simulation,
+		author="David Joslin and Jeremy Frank and Ari K. J\'{o}nsson and David E. Smith",
+		title="Simulation-Based Planning for Planetary Rover Experiments",
+		booktitle=wsc,
+		year="2005",
+		annote="This article describes simulation-based planning for Mars rovers, which purpose are to perform experients, but high demand and limited resources make it impossible to complete all requested experiments. To solve this oversubscribed planning problem, the authors apply a genetic algorithm in searching for effective strategies. Moreover, the idea of Squeaky Wheel Optimization was extended toward modeling the uncertainty that is inherent to the rover experiment planning problem. The goal of reaserch is to create a succesfull strategy for planning activities that can react on uncertain outcomes, but still make good quality plans that account for uncertainty in execution ",
+		} 
+
+@book{  davis:handbook,
+	author="Lawrence Davis",
+	title="Handbook of Genetic Algorithms",
+	publisher="Van Nostrand Reinhold",
+	year="1991",
+	address="New York",
+	annote="This book is very good tutorial for Genetic Algorithms. Moreover, it has many usefull examples how to apply GA for different kinds of problems.",
+	}
+
+@inbook{man.tang.ea:genetic,
+	author="K.F. Man and K.S. Tang and S. Kwong and W.A. Halang",
+	title="Genetic Algorithms for Control and Signal Processing",
+	publisher="Springer",
+	year="1997",
+	pages="1-49",
+	annote="The first chapters of this book give a good background for using Genetic Algorithms.",
+	}
+
+%__________________________________________________________________________________________
+
+@book{  du:computing,
+	author="Dz Du and P. Eades",
+	title="Computing and Combinatorics",
+	publisher="Springer-Verlag Berlin Heidelberg",
+	year="2000",
+	address="New York",
+	annote="Computing and Combinatorics holds information on various algorithms use to solve a
+multitude of problems. This book provides insight as to how each algorithm works,
+what are strengths, and weakness of each algorithm. More specifically the book has a
+section on Movement Algorithms (269-275), however the information is very general
+and maybe only useful for understanding several techniques, and definitions.",
+	}
+
+@book{  schwartz:planning,
+	author="J. Schwartz and M. Sharir and J. Hopcroft",
+	title="Planning, Geometry, and Complexity of Robot Motion",
+	publisher="Ablex Publishing Corpeoration",
+	year="1987",
+	address="New Jersy",
+	annote="Planning, Geometry, and Complexity of Robot Motion deals with very specific
+algorithms on motion of robotics, topics such as frictional, minimal, and dynamic
+movement are express in great detail. This book has many independent ideas for how
+problems can be solved, but because of its age most of these algorithms have been
+long forgotten and may not be practical for satellite scheduling.",
+	}
+	
+@book{  obaidat:applied,
+	author="M. Obaidat and G. Papadimitriou",
+	title="Applied System Simulation: Methodologies and Applications",
+	publisher="Kluwer Academic Publishers",
+	year="2003",
+	address="New York",
+	annote="Applied System Simulation: Methodologies and Applications is an ideal read to
+understand the newest in frontier scheduling algorithms and simulated environment
+technology. Encompassing vas techniques that have been combined with working
+technology to simulate and test schedules. This book can provide already tested
+theory on many scheduling simulators, and there complex algorithms. In regards to
+its content it primarily deals with computer systems and optimization, given that
+this may be true, the examples are very similar to simulating test data for
+satellite schedules.",
+	}
+
+%__________________________________________________________________________
+
+@INPROCEEDINGS{horn.nafpliotis.ea:niched,
+  title = {A niched {P}areto genetic algorithm for multiobjective optmization},
+  year = {1994},
+  author = {Jeffrey Horn and Nicholas Nafpliotis and David Goldberg},
+  booktitle = {First IEEE Conference on Evolutionary Computation, IEEE World Congress
+	on Computational Intelligence, Volume 1},
+  annote = {Many, if not most, optimization problems have multiple objectives.
+	 Historically, multiple objectives have been combined ad hoc to
+	fomr a scalar objective function, usually through a linear combination
+	(weighted sum) of the multple attributes, or by turning objectives
+	into constraints.  The genetic algorithm (GA), however, is readily
+	modified to deal with multiple objectives by incorporating the concept
+	of Pareto domination in its selection operator, and applying niching
+	pressure to spread it population out along the Pareto optimal tradeoff
+	surface.  This paper introduces the Niched Pareto GA as an algorithm
+	for finding the Pareto optimal set.},
+  owner = {Owner},
+  timestamp = {2006.02.02},
+}
+
+@TECHREPORT{deb.agrawal.ea:fast,
+  author = {Kalyanmoy Deb and Samir Agrawal and Amrit Pratap and T. Meyarivan},
+  title = {A {F}ast {E}litist {N}on-{D}ominated {S}orting {G}enetic {A}lgorithm
+	for {M}ulti-{O}bjective {O}ptimization},
+  institution = {Kanpur Genetic Algorithms Laboratory},
+  year = {2000},
+  annote = {This paper proposes an approach to multi-objective optimization that
+	uses genetic algorithms, non-domination sorting and elitism. The
+	idea of non-domination sorting and elitism is that every offpring
+	in the GA is compared to every parent and all other offspring to
+	determine its fitness. If it is significantly less fit than its
+	parent or other chromosomes, it is discarded and a new offspring
+	is produced. This ensures that the next generation of offpsring
+	will have parents more fit than the previous generation. This paper
+	presents these ideas and applies the algorithm to certain problems,
+	which demonstrates its relatively fast computation time $(O(mn^2))$,
+	and success at finding optimality with fewer generations.},
+  owner = {Owner},
+  timestamp = {2006.02.02},
+}
+
+@INPROCEEDINGS{chauduri.godfrey.ea:paths,
+  title = {Paths, trees, and minimum latency tours},
+  year = {2003},
+  author = {Kamalika Chaudhuri and Brighton Godfrey and Satish Rao and Kunal Talwar},
+  booktitle = {44th Annual IEEE Symposium on Foundations of Computer Science (FOCS'03)},
+  owner = {Owner},
+  timestamp = {2006.02.01},
+}
+
+@ARTICLE{osman.abosinna.ea:combined,
+  author = {M. S. Osman and Mahmoud A. Abo-Sinna and A. A. Mousa},
+  title = {A {C}ombined {G}enetic {A}lgorithm-{F}uzzy {L}ogic {C}ontroller ({GA}-{FLC})
+	in {N}onlinear {P}rogramming},
+  journal = {Applied {M}athematics and {C}omputation},
+  year = {2005},
+  volume = {170},
+  pages = {821-840},
+  annote = {This paper presents a combined genetic algorithm-fuzzy logic controller
+	for constrained nonlinear programming problems.  While not specifically
+	designed to be a solution to scheduling problems in general, it
+	is our belief that this method can be applied successfully to such
+	problems.  The article discusses genetic algorithms in general,
+	then attempts to apply a fuzzy logic controller to the chromosomes
+	so as to acheive optimality in fewer generations than genetic algorithms
+	alone.  Several examples are presented that demonstrate the superiority
+	of the GA-FLC method, requiring less compuation time and therefore
+	faster results.},
+}
+
+%____________________________________________________________________________________
+
+@article{minton.johnson.ea:minimizing,
+   author = "Steven Minton and Mark D. Johnston and Andrew B. Philips and Philip Laird",
+   title = "Minimizing Conflicts: A Heuristic Repair Method for Constraint Satisfaction and Scheduling Problems",
+   journal = "Artificial Intelligence",
+   volume = "58",
+   number = "1-3",
+   pages = "161-205",
+   year = "1992",
+   annote = "{This paper describes a simple heuristic abroach to solving large-scale constraint satisfaction
+                and scheduling problems. In this approach one starts with an inconsistent assignment for a set of variables
+                and searches through the space of possible repairs. The search can be guided by a value-ordering heuristic,
+                the min-conflicts heuristic can be used with a variety of different search strategies. It also talks about
+                the scheduling system for the Hubble Space Telescope, SPIKE, this employs the symbolic method(that was
+                discovered in this paper), rather than the network, and reusing the overhead necessary to arrive at a
+                schedule.}"
+}
+
+
+@misc{Freesoftware:Wikipedia,
+    author  = "Free Software Inc.",
+    title   = "Wikipedia, free encyclopedia",
+    year    = "2006",
+    annote  = "{This site serves as a glossary for technichal terms. I used it for searching
+                 for definitions such as genetic algorithm, tabu algorithm and other definitions.
+                 This site gives some overview, but not in depth.}"
+}
+
+
+@TechReport{rinehart.kianzad.ea:modular,
+    author  = "Michael Rinehart and Vida Kianzad and Shuvra S. Bhattacharyya",
+    title   = "A Modular Genetic Algorithm for Scheduling Task Graphs",
+    institution = "Institute for Advanced Computer Studies",
+    year    = "2003",
+    month   = "June",
+    number  = "UMIACS-TR-2003",
+    address = "University of Maryland at College Park",
+    annote  = "{This report talks about how Genetic Algorithms have been used into scheduling
+                task graphs onto multiprocessors,the genetic algorithm based on bi-chromosomal
+                representation and capable of being incorporated into a cluster/merging
+                optimization framework is proposed, and it is experimentally shown to outperform
+                a leading genetic algorithm for scheduling.}"
+}
+
+
+@Article{potts.kovalyov:scheduling,
+    author = "Chris N.Potts and Mikhail Y. Kovalyov",
+    title = "Scheduling with batching: A review",
+    journal = "European journal of Operational Research",
+    volume = "120",
+    pages = "228--249",
+    year = "2000",
+    annote = "{This article reviews research on two types of scheduling models that require batches
+                to be performed. In the family scheduling model, similar jobs may be batched if they share
+                the same setup. On the other hand, the batching machine model forms batches of jobs
+                that are processed at the same time. Analisys of these models shows that, in some cases,
+                the sequencing and batching of jobs can be decoupled. Once a sequence of jobs is known,
+                dynamic programming is shown to be a useful technique for solving the batching problem.
+                And also used in many models that integrate scheduling with batching decisions. The paper
+                also gives details of the basic algorithms and also explains how dynamic programming
+                algorithms can be designed to give efficient algorithms for several of the problems that we
+                consider.}"
+}
+
+
+@inproceedings{pemberton.greenwald:need,
+    author = "J.C. Pemberton and L.G.Greenwald",
+    title = "On the Need for Dynamic Scheduling of Imaging Satellites",
+    booktitle = "FIEOS PAPERS",
+    year = "2002",
+    annote = "{In this paper the case for dynamic scheduling of imaging satellites. Dynamic schedules will
+                allow satellite systems to take advantage of information gathered during the execution of
+                the schedule and react to changes in the environment, desired tasking, and the availability
+                of resources. The authors developed a remote sensing scheduling problem and they discussed
+                the contigency conditions under which the satellite scheduling problem becomes dynamic.
+                They suggest that dynamic schedules will yeild improved mission schedules and reduced mission costs.}"
+}
+
+
+@misc{kramer.smith:maximizing,
+    author = "Laurence A. Kramer and Stephen F. Smith",
+    title = "Maximizing Flexibility: A Retraction Heuristic for Oversubscribed Scheduling Problems",
+    year = "2003",
+    url = "citeseer.ist.psu.edu/kramer03maximizing.html",
+    annote = "{In this paper the solution that was considered for scheduling problems that are inheretently
+                over-subscribed in such problems there are always more tasks to excute within a given time
+                frame than available resource capacity will allow, and hence decision must be made about
+                which tasks should be included in the schedule and which should be excluded. The authors
+                adopted a controlled and an iterative repair search approach, and focused on improving
+                the results of an initial priority-driven solution generation procedure. In thier experiment
+                they have showed that the method of maximizing felexibility as it was used in generic task
+                swaping algorithm like mission-swap may generally be applicable to resource constrained scheduling
+                problems with fixed time windows. And this method is particularly siutable to dynamic scheduling
+                domains, where an existing schedule must be preserved as tasks change and new ones are added.}"
+}
+
+
+@misc{mannot:differential,
+  author = "Jerome Mannot",
+  title = "Differential Approximation Of {NP}-Hard Problems With Equal Size Feasible Solutions",
+  address = "Place du Marechal de Lattre de Tassigny, 75775 paris Cedex 16 France.",
+  url = "citeseer.ist.psu.edu/730299.html",
+  annote = "{In this paper the focus was on some specific optimazation problems from graph theory, those for
+                 which all feasible solutions have an equal size that depends on the instance size.}"
+}
+
+
+
+@Article{Funke.grunert.ea:local,
+    author = "B. Funke and T. Grunert and S. Irnich",
+    title = "Local Search for Vehicle Routing and Scheduling Problems: Review and Conceptual Integration",
+    journal = "Journal of Heuristics",
+    volume = "11",
+    pages = "267--306",
+    year = "2005",
+    annote = "{This article talks about two methods for obtaining a good solution to large vehicle routing
+                and scheduling problems. In the paper there was a review of both a classical and modern local seach
+                neighborhoods for this class of problems. The intention of the paper was to classify and analyze
+                the structure of different neighborhoods and the goal behind it was to find a local best neighbor
+                and to reach a local optimum as quickly as possible, and this can be acheived by search methods,
+                which do not scan all neighbor solutions explicitly.}"
+}
+
+@phdthesis{beaty:instruction,
+    author    = "Steven J. Beaty",
+    title     = "Instruction Scheduling Using Genetic Algorithms",
+    school    = "Colorado State University",
+    year      = "1991",
+    annote    = "{This dissertation examined whether genetic algorithms were
+                    appropriate for use in scheduling instructions for parallel
+                    execution in Instruction-Level Parallel (ILP) computers.  All modern
+                    processors have some degree of ILP, and scheduling instructions for
+                    optimal execution speed has been shown to be NP-hard -- meaning
+                    that finding an optimal solution takes either non-polynomial time
+                    or space.  The dissertation showed that genetic algorithms were
+                    capable of finding better schedules than other, non-stochastic
+                    methods in a reasonable amount of computational time.  It also
+                    compared various recombination techniques for their effectiveness
+                    in finding good schedules.}"
+ }
+
+%______________________________________________________________________________________
+
+@ARTICLE{gomes.diniz.ea:hybrid,
+  author = {L. M. Gomes and V. B. Diniz and C. A. Martinhon},
+  title = {An {H}ybrid {GRASP}+{VND} {M}etaheuistic of the {P}rize {C}ollecting
+	{T}raveling {S}alesman {P}roblem},
+  journal = {In: {S}impósio {B}rasileiro de pesquisa {O}peracional ({SBPO}), 32,
+	2000, {V}içosa. {A}nais... {R}io de {J}aneiro: {SOBRAPO},
+	
+	2000. p. 16571665.},
+  pages = {1657-1665},
+  annote = {This paper discusses a hybrid approach to solving the Prize Collecting
+	Traveling Salesman Problem (PCTSP).  Greedy Randomized Adaptive
+	Search Procedures (GRASP) and Variable Neighborhood Search (VNS)
+	are described and their combined implementations shown (via pseudo
+	code) for several different algorithms.  Results are tabulated discussing
+	three different algorithms which use GRASP+VNS, and include computer
+	performance versus optimality achieved.  The conclusion discusses
+	further enhancements that might be tried in order to increase performance
+	for finding the best solution to a PCTSP, utilizing GRASP+VNS techniques.},
+  owner = {Owner},
+  timestamp = {2006.02.05},
+}
+
+@ARTICLE{potvin:genetic,
+  author = {Jean-Yves Potvin},
+  title = {Genetic {A}lgorithms {F}or {T}he {T}raveling {S}alesman {P}roblem},
+  journal = {Annals of {O}perations {R}esearch},
+  pages = {339-370},
+  year = {1996},
+  volume = {63},
+  annote = {This article describes algorithmic approaches, and their implementations,
+	for the Traveling Salesman Problem (TSP).  Genetic algorithms are
+	described in detail with specific examples and the steps required
+	to convert the problem into the respective components within a Genetic
+	algorithm.  Mapping of the solution to chromosomes, fitness, and
+	mutation are all discussed.  A brief section on parallel implementations
+	(i.e. more than one processor working on separate parts of the same
+	problem) is provided and a summary section with computational results
+	that provide a list of best practices for solving TSPs with Genetic
+	algorithms.},
+  owner = {Owner},
+  timestamp = {2006.02.05},
+}
+
+@ARTICLE{tang.wang:iterated,
+  author = {Lixin Tang and Xianpeng Wang},
+  title = {Iterated {L}ocal {S}earch {A}lgorithm {B}ased {O}n {V}ery {L}arge-scale
+	{N}eighborhood {F}or {P}rize-{C}ollecting {V}ehicle {R}outing {P}roblem},
+  journal = {The {I}nternational {J}ournal of {A}dvanced {M}anufacturing {T}echnology},
+  year = {2005},
+  volume = {October 12},
+  annote = {This article describes a vehicle routing problem, the prize-collecting
+	vehicle routing problem (PCVRP) that comes from the optimization
+	of the production of iron and steel.  A brief description is given
+	of both problems and their similarities and how to translate the
+	production problem into the TSP as well as several approaches that
+	have been previously published to solve VRPs.  It continues with
+	a mathematical model of the PCVRP and describes an algorithm using
+	Iterated Local Search (ILS) and compares the results of this algorithm
+	to two other types commonly used to solve VRPs. The algorithm evolved
+	takes into account:  1) not all customers need to be visited, but
+	each customer visit results in a reward, and 2) minimization of
+	total distance traveled and maximization of rewards are the objectives.},
+  owner = {Owner},
+  timestamp = {2006.02.05},
+}
+
+%___________________________________________________________________________________
+
+@InProceedings{zachariasen.dam:tabu,
+  author    = {Marin Zachariasen and Martin Dam},
+  title     = {Tabu Search on the Geometric Traveling Salesperson Problem},
+  booktitle = {Meta-heuristics: Theory and Applications},
+  year      = {1996},
+  editor =       {I.H. Osman and J.P. Kelly},
+  publisher =    {Kluwar Academic Publishers},
+  address =      {Boston},
+
+    annote = {Several approximation algorithms and heuristics exist for obtaining near-optimal solutions to the TSP.  Most of these use a local search, transitioning from one solution to a neighboring solution at every step.  These simple transitions greatly limit the obtainable performance due to the small neighborhood of each solution, since there are often many solutions that cannot be improved by a single transition.  Zachariasen and Dam evaluate how a tabu search can benefit from using complex, stronger TSP transitions.  They show that it is advantageous to use strong transitions in tabu search without increasing running  time.
+  }
+}
+
+@InProceedings{bansal.blum.ea:approximation,
+  author    = {Nikhil Bansal and Avrim Blum and Shuchi Chawla and Adam Meyerson},
+  title     = {Approximation Algorithms for Deadline-TSP and Vehicle Routing with Time Windows},
+  booktitle = {Proceedings from the ACM Symposium on Theory of Computing, Chicago, June 2004},
+  year      = {2004},
+  address =      {Chicago},
+
+    annote = {Given a graph G on n vertices, with a start vertex r and a deadline D(v) for each vertex v, the Deadline-TSP problem is to find a path starting at r that visits as many vertices as possible within their deadline.   Bansal et al. give an O(log n) approximation algorithm for the general case of the problem with arbitrary deadlines, which is an improvement over existing algorithms.  The authors also give an improved 3-approximation to the point-to-point orienteering problem and investigate the existence of a constant- factor approximation for the Deadline-TSP (to no avail).
+  }
+}
+
+@techreport{braysy:genetic,
+    author    = {Olli Braysy},
+    title     = {Genetic Algorithms for the Vehicle Routing Problem with Time Windows},
+    institution = {University of Vaasa},
+    year      = {2001},
+    address   = {Vaasa, Finland},
+    number    = {1/2001},
+    annote    = { The vehicle routing problem is described as the problem of designing least cost routes from one depot to a set of geographically
+scattered points.  The VRP with time windows adds the complexity that every customer must be served within a given time window.  Braysy examines a number of well-known genetic algorithms, evolutionary algorithms, and hybrid algorithms for effectiveness in solving the VRP with time windows.  He describes the technique of each algorithm and compares the best results garnered from each.  Braysy gives a good comparison of the algorithms and highlights their effectiveness in terms of this problem.
+}
+}
+
+@techreport{goldberg.kaplan.ea:reach,
+    author    = {A.V. Goldberg and H. Kaplan and R. Werneck},
+    title     = {Reach for A*: Efficient Point-to-Point Shortest Path Algorithms},
+    institution = {Microsoft},
+    year      = {2005},
+    month     = {October},
+    address   = {Redmond, Washington},
+    type      = {Microsoft Research Technical Report },
+    number    = {MSR-TR-2005-132},
+    annote    = {Goldberg and Kaplan study the point to point shortest path problem and develop a hybrid algorithm using a combination of an A* search with a traditional shortest path algorithm.  The two study in the context of a problem where preprocessing is allowed, and their algorithm is shown to improve both preprocessing and query times.  The addition of shortcut arcs actually simplifies the algorithm and lends it to being as fast as the previous published method.
+}
+}
+
+%________________________________________________________________________________________________________________
+
+@inproceedings{burke.varley:genetic,
+ author = {E. K. Burke and D. B. Varley},
+ title = {A genetic algorithms tutorial tool for numerical function optimisation},
+ booktitle = {ITiCSE '97: Proceedings of the 2nd conference on Integrating technology into computer science education},
+ year = {1997},
+ isbn = {0-89791-923-8},
+ pages = {27--30},
+ location = {Uppsala, Sweden},
+ doi = {http://doi.acm.org/10.1145/268819.268830},
+ publisher = {ACM Press},
+ address = {New York, NY, USA},
+ annote="A good british introduction to genetic algorithms. It appears to be relevant to our project but its true worth is as yet unrealised."
+ }
+
+@article{choi.kim.ea:genetic,
+ author = {In-Chan Choi and Seong-In Kim and Hak-Soo Kim},
+ title = {A genetic algorithm with a mixed region search for the asymmetric traveling salesman problem},
+ journal = {Comput. Oper. Res.},
+ volume = {30},
+ number = {5},
+ year = {2003},
+ issn = {0305-0548},
+ pages = {773--786},
+ doi = {http://dx.doi.org/10.1016/S0305-0548(02)00050-3},
+ publisher = {Elsevier Science Ltd.},
+ address = {Oxford, UK, UK},
+ annote="This paper presents a genetic algorithm to solve the asymmetric traveling salesman problem. The genetic algorithm proposed in this study extends search space by purposefully generating and including infeasible solutions in the population. Instead of trying to maintain feasibility with crossover operations, it searches through both feasible and infeasible regions for good quality solutions. It is also shown in the article that the size of the infeasible region defined by solutions with subtours dominates that of a feasible region in the asymmetric traveling salesman problem. A comparative computational study using benchmark problems shows that the proposed genetic algorithm is a viable option for hard asymmetric traveling salesman problems."
+ }
+
+% keywords: traveling
+@article{toth.vigo:overview,
+ author = {P. Toth and D. Vigo},
+ title = {An overview of vehicle routing problems},
+ book = {The vehicle routing problem},
+ year = {2001},
+ isbn = {0-89871-498-2},
+ pages = {1--26},
+ publisher = {Society for Industrial and Applied Mathematics},
+ address = {Philadelphia, PA, USA},
+ annote="As a basis for dicussion, this overview appears to be relevant to our project but its true worth is as yet unrealised."
+ }
+
+@article{bramel.simchilevi:set,
+ author = {J. Bramel and D. Simchi-Levi},
+ title = {Set-covering-based algorithms for the capacitated VRP},
+ book = {The vehicle routing problem},
+ year = {2001},
+ isbn = {0-89871-498-2},
+ pages = {85--108},
+ publisher = {Society for Industrial and Applied Mathematics},
+ address = {Philadelphia, PA, USA},
+ annote="With an eye towards solving sets of graphs this appears to be relevant to our project."
+ }
+
+@article{larra.kuijpers.ea:genetic,
+ author = {P. Larra and C. M. H. Kuijpers and R. H. Murga and I. Inza and S. Dizdarevic},
+ title = {Genetic Algorithms for the Travelling Salesman Problem: A Review of Representations and Operators},
+ journal = {Artif. Intell. Rev.},
+ volume = {13},
+ number = {2},
+ year = {1999},
+ issn = {0269-2821},
+ pages = {129--170},
+ doi = {http://dx.doi.org/10.1023/A:1006529012972},
+ publisher = {Kluwer Academic Publishers},
+ address = {Norwell, MA, USA},
+ annote="This paper is the result of a literature study carried out by the authors. It is a review of the different attempts made to solve the Travelling Salesman Problem with Genetic Algorithms. We present crossover and mutation operators, developed to tackle the Travelling Salesman Problem with Genetic Algorithms with different representations such as: binary representation, path representation, adjacency representation, ordinal representation and matrix representation. Likewise, we show the experimental results obtained with different standard examples using combination of crossover and mutation operators in relation with path representation."
+ }
+
+@article{sun.wang:parallel,
+ author = {Hongyi Sun and Guoqing Wang},
+ title = {Parallel machine earliness and tardiness scheduling with proportional weights},
+ journal = {Comput. Oper. Res.},
+ volume = {30},
+ number = {5},
+ year = {2003},
+ issn = {0305-0548},
+ pages = {801--808},
+ doi = {http://dx.doi.org/10.1016/S0305-0548(02)00055-2},
+ publisher = {Elsevier Science Ltd.},
+ address = {Oxford, UK, UK},
+ annote="The problem of scheduling n jobs with a common due date and proportional early and tardy penalties on m identical parallel machines is explored. It is shown that the problem is NP-hard and a dynamic programming algorithm is proposed to solve it. Two heuristics are proposed to tackle the problem and analyze the worst-case error bounds."
+ }
+
+%_____________________________________________________________________________________________________________
+% Scott
+
+@article{yang.nygard:effects,
+  author    = "C.H. Yang and K.E. Nygard",
+  title     = "The Effects of Initial Population in Genetic Search fo Time Constrained
+Traveling Salesman Problems",
+  journal   = "ACM",
+  year      = "1993",
+  volume    = "",
+  pages     = "378-383",
+  annote    = "This article applies the genetic algorithm to the traveling salesman problem
+		with time windows.  It evaluates the function of the algorithm and offers experimental results."  
+}
+
+@book{jones:ai,
+    author    = {M. Tim Jones},
+    title     = {AI Application Programming},
+    publisher = {Charles River Media, Inc.},
+    address   = {Hingham, Massachusetts},
+    year      = {2005},
+    annote ="This book offers a good introductory chapter on genetic algorithms
+as well as some useful examples and some psuedocode for the algorithm that may 
+prove useful to our problem."
+ }
+
+
+@book{son:advances,
+    author    = {Sang H. Son},
+    title     = {Advances in Real-Time Systems},
+    publisher = {Prentice Hall},
+    address   = {Englewood Cliffs, NJ},
+    year      = {1995},
+    annote ="This book is a composition of articles dealing with real-time systems and contains a 
+		chapter on scheduling and resource management that uses the slack stealing algorithm in order
+		to schedule tasks. " 
+}
+
+%_____________________________________________________________________________________
+% Leslie
+
+@article{bazaraa.langley:dual,
+  author    = "M.S. Bazaraa and R. W. Langley",
+  title     = "A Dual Shortest Path Algorithm",
+  journal   = "SIAM Journal on Applied Mathematics, No. 3",
+  year      = "1974",
+  volume    = "26",
+  pages     = "496-501",
+  annote    = "Bazaraa and Langley discuss ways to find a feasible solution to the shortest path problem, or proving that one does not exist.  Throughout the paper they discuss and compare the numerous solutions to the shortest path problem.  Their research has found the best way to solve this problem is with Dijkstras algorithm.  A discussion on the drawbacks to this algorithm as well as its usefulness is also a large part of the article."  
+}
+@article{pemberton.galiber:constraint,
+  author    = "Joseph C. Pemberton and Flavius Galiber, III",
+  title     = "A Constraint Based Approach to Satellite Scheduling",
+  journal   = "DIMACS Workshop on Constraint Programming and Large Scale Discrete Optimization",
+  year      = "2000",
+  volume    = "",
+  pages     = "101-114",
+  annote    = "Pemberton and Galiber discuss satellite scheduling as a constraint-optimization problem.  Throughout the text they discuss the goals of satellites and ways to schedule tasks with consideration to priority and the multiple constraints related to tasks.  The emphasis in this article is on telecommunication, broadcast, and remote-sensing satellites and constraint-based approaches to the optimization of the satellite scheduling problem.  "  
+}
+
+@article{pettie:approach,
+  author    = "Seth Pettie",
+  title     = "A New Approach to All-Pairs Shortest Paths on Real Weighted Graphs",
+  journal   = "Department of Computer Sciences, University of Texas at Austin
+Theoretical Computer Science",
+  year      = "2004",
+  volume    = "",
+  pages     = "47-74",
+  annote    = "Pettie introduces a new all-pairs shortest-path algorithm for real-weighted graphs.  He discusses the derivation of his algorithm along with the algorithms it was derived with, Dijkstras algorithm with Fibonacci heap.  He also lays out the method of the algorithm to approximate shortest path distances and leveraging approximate distances in the computation of exact ones.  "  
+}
+
+%___________________________________________________________________________________________________________
+
+@book{zweben.fox:intelligent,
+	author={Monte Zweben and Mark S.Fox},
+        title={Intelligent scheduling},
+	publisher={Morgann Kaufmann publishers},
+	address={San Fransisco,California},
+	year={1994},
+	annote={the book provides a sampling of the most important works in scheduling and describes case sudies in real world application.it highlights the 	     new researches and advances made in this field stressing the unique caracteristics of each reaserch.}}
+
+@proceedings{whitley.schaffer:combinations,
+	title={Combinations of genetic algorithms and neural networks},
+	booktitle={Cogann-92 international workshop on genetic algorithms and neural networks},
+	year={1992},
+	publisher={IEEE computer society press},
+	editor={L.Darrell Whitley and J.David Schaffer},
+	address={Los Alamitos, California},
+	annote={the paper presents genetic algorithm and neural networks as technologies that are attracting a lot of interest among scientists and engineers because of the advances they acheived in recent reaserches and because of their dynamic behaviors. it also talks about the idea of combining them and how it may provide a stronger problem solving tool.}}
+
+@proceedings{puricella.stewart:genetic,
+	title={A genetic greedy algorithm, pratially ordered graph and NP-completeness},
+	booktitle={graph theoritic concepts in computer science},
+	year={2001},
+	publisher={Springer},
+	editor={Andreas Brandstadt and Van Bang Le},
+	address={Berlin, Germany}}
+
+@TechReport{globus.crawford.ea:comparison,
+	author={Al Globus and James Crwford and Jason Lohn and Anna Pryor},
+	title={A comparison of Techniques for Scheduling Earth Observing Satelli	tes},
+	type={world wide web},
+	institution={Nasa},
+	address={http://ic.arc.nasa.gov/people/jlohn/papers/iaai2004-globus.pdf},
+	annote={the paper compared thirteen scheduling algorithms for the Earth Observing System problem. these techniques are performed on ten realistically   sized scheduling problems. Simulated Annealing was found to be the best, followed by Hill Climbing. and Genetic Algorithm came third.}}
+
+@TechReport{harrison.price.ea:task,
+	author={S.A.Harrison and M.E.Price and M.S.Philpott},
+	title={Task scheduling for satellite based imagery},
+	type={world wide web},
+	institution={University of East Anglia, Norwich},
+	address={http://cswww.essex.ac.uk/conferences/ukpssig/salford-18/harrison.pdf},
+	annote={the paper addresses two issues:
+	-how many images can the satellite aquire in a single overpass of a typical area.
+	-and the ability of automating the process of defining the schedule of imaging tasks.
+the objective was to maximize the total priority of the set of tasks that are imaged which is a subset of the set of tasks. the answer was that it's not possible to satisfy more than 10 imaging requests in a single overpass which was considered to be 3 minutes.}}
+
+%___________________________________________________________________________________________________________________________
+
+
+
+
+@INPROCEEDINGS{habet.vasquez:solving,
+
+  title = {Solving the selecting and scheduling satellite photographs
+
+	problem with a consistent neighborhood heuristic},
+
+  year = {2004},
+
+  author = {Djamal Habet, Michel Vasquez},
+
+  booktitle = {16th IEEE International Conference on Tools with Artificial Intelligence
+
+	(ICTAI'04)   },
+  pages = {pp. 302-309},
+
+  abstract = {The problem of managing an {A}gile {E}arth {O}bserving {S}atellite
+
+	consists of selecting and scheduling a subset of photographs, among
+
+	a set of candidate ones, satisfying imperative constraints and maximizing
+
+	a gain function. {I}n this paper, we propose a tabu search algorithm
+
+	to solve the management problem of an {A}gile {E}arth {O}bserving
+
+	{S}atellite. {T}his algorithm is an adaptation of {CN}-{T}abu methodology
+
+	working on a consistent neighborhood. {I}ndeed, to obtain a wide-ranging
+
+	and efficient exploration, the search space is sampled by consistent
+
+	and saturated configurations. {T}he consistency is maintained by
+
+	constraint propagation and the saturation is a feature of the optimal
+
+	solution. {F}urthermore, our tabu algorithm is hybridized with a
+
+	systematic search, using partial enumerations, to solve several
+
+	decisional problems. {M}oreover, for better resolution, a second
+
+	objective problem, the minimization of the sum of transition durations
+
+	between two image acquisitions, is introduced and tackled with a
+
+	second tabu search algorithm},
+
+  annote = {tabu algorithm is hybridized with a systematic search, using partial
+
+	enumerations},
+
+  owner = {Owner},
+
+  timestamp = {2006.02.05},
+
+}
+
+
+
+@ARTICLE{macmillan:maximizing,
+
+  author = {Palgrave Macmillan},
+
+  title = {Maximizing the value of an {E}arth observation satellite orbit},
+
+  journal = {Journal of the {O}perational {R}esearch {S}ociety, {V}olume 56, {N}umber
+
+	8, {A}ugust 2005, pp. 962-968(7)},
+
+  annote = {This paper talks about the maximizing dollars collected per photography
+
+	session during course of an orbit of a satellite. The problem is
+
+	solved by means of a combinatorial optimization - tabu search.},
+
+  owner = {Owner},
+
+  timestamp = {2006.02.05},
+
+}
+
+
+
+@INPROCEEDINGS{habet.vasquez:saturated,
+
+  title = {Saturated and consistent neighborhood for selecting and scheduling
+
+	photographs of agile earth observing satellite},
+
+  year = {2003},
+
+  author = {Djamal Habet and Michel Vasquez},
+
+  booktitle = {The Fifth Metaheuristics International Conference},
+
+  annote = {Select and schedule a subset of weighted images among a set of candidate
+
+	ones which must satisfy imperative constraints and at the same time
+
+	maximize a given profit function. Methods used are the following:
+
+	
+
+	a fast greedy algorithm
+
+	
+
+	a dynamic programming algorithm
+
+	
+
+	a constraint programming method
+
+	
+
+	a local search algorithm based on insertion and removal of images
+
+	in a schedule
+
+	
+
+	the scheduling problem was solved by a partial enumeration algorithm,
+
+	and the best results are obtained using tabu search algorithm.},
+
+  owner = {Owner},
+
+  timestamp = {2006.02.05},
+
+}
+
+
+
+@ARTICLE{toth.vigo:granular,
+
+  author = {Paolo Toth and Daniele Vigo},
+
+  title = {The {G}ranular {T}abu {S}earch and its application to the {V}ehicle-{R}outing
+
+	problem},
+
+  journal = {10.1287/ijoc.15.4.333.24890},
+
+  annote = {Describes tabu search method based on the use of drastically restricted
+
+	neighborhoods, not containing the moves that involve only elements
+
+	that are not likely to belong to good feasible solutions},
+
+  owner = {Owner},
+
+  timestamp = {2006.02.05},
+
+}numeration,
+	author={Virginie Gabre and Daniel Vanderpooten},
+	title={Enumeration and interactive selection of efficient paths in a multiple criteria graph for scheduling and earth observing satellite},
+	type={world wide web},
+	institution={European journal of operational research},
+	address={http://l1.lamsade.dauphine.fr/~vdp/bibhtml/pdf/GVO2.pdf},
+	annote={looks at solving a daily planing problem, which involves selection of tasks to be performed and the sequencing of these tasks. it looks at developing an algorithm based on classical algorithms of shortest path using graph without circuit, generating all efficient sequences, then selecting the satisfying sequence based on a number of cretiria and constrains.}}
+	
+%___________________________________________________________________________________________________________________
+
+@article{pesant.gendreau.ea:.exact,
+  author    = "Gilles Pesant and Michel Gendreau and Jean-Yves Potvin and Jean-Marc Rousseau",
+  title     = "An exact constraint logic programming algorithm for the traveling salesman problem with time windows",
+  journal   = "Transportation Science",
+  year      = "1998",
+  volume    = "32",
+  pages     = "12--29",
+  annote    = "The authors of this paper provide and then compare a constraint based approach to the traveling salesman problem to other approaches in the literature.  This constraint logic programming algorithm for TSPTW works with time window reduction rules and incorporates them to create an improved algorithm.  This model assigns penalties for arriving at a destination before the appropriate time window begins.  The constraint program combines several models each dealing with one aspect while sharing variables.  Redundant constraints are included to improve the effectiveness.  The paper concludes with a branch-and-bound algorithm."  
+}
+
+@article{taillard.badeau.ea:tabu,
+  author    = "Eric Taillard and Philippe Badeau and Michel Gendreau and Jean-Yves Potvin",
+  title     = "A tabu search heuristic for the vehicle routing problem with soft time windows",
+  journal   = "Transportation Science",
+  year      = "1997",
+  volume    = "31",
+  pages     = "170--186",
+  annote    = "This paper addresses the traveling salesman problem with soft windows;  vehicles may arrive outside the time window but must incur a penalty.  In the case where hard windows are necessary, we may still use this tabu search but increase the penalty values.   For each current situation, the search uses an exchange procedure that swaps sequences of consecutive customers between two routes.  This method eliminates routes with only a few customers in order to create a better route.  An extensive adaptive memory contains routes of the best previously visited solutions."  
+}
+
+@article{mitchell:guillotine,
+  author    = "Joseph S. B. Mitchell",
+  title     = "Guillotine subdivisions approximate polygonal subdivisions: a simple polynomial time approximation scheme for geometric {TSP}, k-{MST}, and related problems",
+  journal   = "Siam J. Comput.",
+  year      = "1999",
+  volume    = "28/4",
+  pages     = "1298--1309",
+  annote    = "The author uses the concept of an m-guillotine subdivision to obtain a simple polynomial time approximation scheme for the instance of the traveling salesman problem as well as other similar geometric instances.  It also discusses k-TSP wherein we wish to determine a minimum length path that will visit at least k  of the total n vertices.  The PTAS is constructed from a dynamic programming algorithm in conjunction with the m-guillotine subdivision for both the general TSP and k-TSP cases."  
+}
+
+@article{arora:polynomial,
+  author    = "Sanjeev Arora",
+  title     = "Polynomial time approximation schemes for Euclidean traveling salesman and other geometric problems",
+  journal   = "Journal of the ACM",
+  year      = "1998",
+  volume    = "45/5",
+  pages     = "753--782",
+  annote    = "The algorithm described in this paper gives a polynomial time approximation to the general traveling salesman problem, where points are located in $R^2$ and the distance between points is given by the Euclidean norm .  The algorithm uses a recursive geometric partitioning approach involving quadtrees.   Other similar approximation schemes are included for minimum Steiner trees, k-TSP, and minimum spanning trees."  
+}
+
+@article{dumas.desrosiers.ea:.optimal,
+  author    = "Yvan Dumas and Jacques Desrosiers and Eric Gelinas and Marius M. Solomon",
+  title     = "An optimal algorithm for the traveling salesman problem with time windows",
+  journal   = "Operations Research",
+  year      = "1995",
+  volume    = "43/2",
+  pages     = "367--371",
+  annote    = "New elimination tests are developed to improve well established dynamic programming approaches for the traveling salesman problem in this paper.  The new algorithm was shown successful in solving problems with up to 200 vertices and fairly wide time intervals. They increased this solving capacity to 800 vertices when they kept the density of the vertices constant.  Computation time increased linearly with the problem size for this algorithm."  
+}
+
+%___________________________________________________________________________________________________________________
+
+@techreport{pemberton.greenwald:need,
+    author    = {J.C. Pemberton and L.G. Greenwald},
+    title     = {On the need for dynamic scheduling of imaging satellite.},
+    institution  = {Drexel University },
+    year      = {2002},
+
+    annote = {This paper talks about the case for dynamic scheduling of imaging satellites.  "Dynamic schedules will allow satellite systems to take advantage of information gathered during the execution of the schedule and react to change in the environment, desired tasking, and the availability of resources."  According to the authors, "Dynamic schedules will yield improved mission schedules and reduced mission costs."}  }
+
+@techreport{pemberton.galiber:constraint,
+    author    = {Joseph C. Pemberton and Flavius Galiber III},
+    title     = {A constraint-based approach to satellite scheduling},
+    institution  = {Pacific-Sierra Research},
+    year      = {1998},
+
+    annote = {By definition, " Satellite scheduling is the problem of mapping tasks (observations, communication, downlink, control maneuvers, etc,) to resources (sensor satellites, relay satellites, ground stations, etc.).
+Pemberton and Galiber "introduce the satellite mission-operation scheduling problem, describing the problem constraints that are particular to satellite scheduling, and then present the constraint-based techniques that we have used to address these problems."}  }
+		  
+		  
+@InProceedings{ruan.tan.ea:simulation,
+  author    = {Qiming Ruan and Yuejin Tan and Renjie He and Yingwu Chen},
+  title     = {Simulation-based scheduling for photo-reconnaissance satellite},
+  booktitle = {Proceedings of the 2005 Winter Simulation Conference},
+  year      = {2005},
+  editor =      { M.E. Kuhl and  N.M. Steiger and  F.B. Armstrong and J.A. Joines},
+  publisher =    {National University of Defense Technology},
+  address =      {Changsha, Hunan Province, China},
+annote = {Qiming Ruan et al. describe that a simulation-based scheduling for photo-reconnaissance could be expressed by a mixed integer programming model.  And "numerical results demonstrate that this approach is efficient in the scheduling problems."}
+}
+
+%__________________________________________________________________________________________________________________________-
+
+@article{ahuja.orlin.ea:dynamic,
+	author="Ravinda K. Ahuja and James B. Orlin and Stefano Pallottino and Maria G. Scutella",
+	title="Dynamic Shortest Paths Minimizing Travel Times and Costs",
+	journal="Networks",
+	volume="41",
+	pages="197-205",
+	year="2003",
+	annote="
+
+	This paper evaluates dynamic shortest path problems in networks where arc travel times change dynamically.  It considers the minimum-time walk problem which finds a walk with the minimum travel time for a class of networks called FIFO networks.  This is solved by slightly modifying Dijkstra's algorithm.  It also considers the minimum-cost walk problem which finds a walk with the minimum weighted sum of the travel time by designing a pseudopolynomial-time algorithm.  This paper may help generate ideas when finding the shortest path for high priority taks.",
+	}
+
+@article{alcaraz.maroto.ea:two,
+	author="Javier Alcaraz and Concepcion Maroto and Ruben Ruiz",
+	title="Two new robust genetic algorithms for the flowshop scheduling problem",
+	journal="Omega",
+	volume="34",
+	pages="461-476",
+	year="2006",
+	annote="
+		This article introduces new genetic algorithms for solving theflowshop scheduling proglem (FSP) while trying to minumize the total completion time.  The algorithms implement new genetic operators and new generational schemes.  The part of this article that may apply to our problem is two crossover operations called 'Similar Job Order Crossover' and 'Similar Block Order Crossover' which both examine two parent chromosomes position-by-position.  Identical positions are copied over to two offspring to start creating new chromosomes.  Each operaton creates the rest of the chromosome in slightly different ways.  After a new chromosome is created it can be mutated by techniques of swapping and shifting.  The algorithms are easy to execute and are proven to be very effective when compared to 11 other methods.  These techniques of creating offspring may be worth examining when trying to develope a genetic algorithm for our satellite scheduling algorithm.",
+	}
+
+@article{baryehuda.even.ea:approximating,
+	author="Reuven Bar-Yehuda and Guy Even and Shimon (Moni) Shahar",
+	title="On approximating a geometric prize-collecting traveling salesman problem with time windows",
+	journal="Journal of Algorithms",
+	volume="55",
+	pages="76-92",
+	year="2005",
+	annote="
+		This article evaluates two versions of the prize-collecting traveling salesman problem with time windows (TW-TSP).  To goal is to find a schedule that will maximize the number of locations visited, which is very similar to our problem of maximizing the number of tasks scheduled.  The first algorithm places jobs on a line that have start times, end times, but no processing times.  It considers a weighted case where a profit is gained if a location is visited during its time window.  The goal is to maximize the profit.  The second algorithm considers a case of asymmetric distances between locations.  The algorithm finds a path that visits a certain number of locations during their windows.  The basic procedures of the algorithms involves the creation of an arc weighted directed acyclic graph and the calculations of a maximum-weighted path.  This is worth reading further into since it is so similar to our problem.",
+	}
+
+%______________________________________________________________________________________________________________

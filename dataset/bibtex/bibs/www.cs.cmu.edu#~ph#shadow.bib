@@ -1,0 +1,1585 @@
+% shadow.bib: bibliography on shadow algorithms,
+%     direct illumination,
+%     area light sources,
+%     soft shadows,
+%     real time shadows,
+%     texture mapping on graphics workstations,
+% and related topics including hemicubes and form factor calculation.
+%
+% Paul Heckbert, January 1997
+%
+% many entries copied from the CS bibliography at
+% http://liinwww.ira.uka.de/bibliography/index.html
+
+% Arno Formella has a modified version of this bibliography
+
+@INPROCEEDINGS{Herf96sketch,
+AUTHOR={Michael Herf and Paul S. Heckbert},
+TITLE={Fast Soft Shadows},
+BOOKTITLE={Visual Proceedings, SIGGRAPH 96},
+MONTH={Aug.},
+YEAR={1996},
+PAGES={145},
+KEYWORDS={penumbra, graphics workstation, accumulation buffer, texture mapping},
+}
+
+@TECHREPORT{Heckbert97shadow,
+AUTHOR={Paul S. Heckbert and Michael Herf},
+TITLE={Simulating Soft Shadows with Graphics Hardware},
+INSTITUTION={CS Dept., Carnegie Mellon U.},
+MONTH={Jan.},
+YEAR=1997,
+NUMBER={CMU-CS-97-104},
+NOTE={http://www.cs.cmu.edu/~ph},
+KEYWORDS={penumbra, texture mapping, graphics workstation,
+interaction, real-time, SGI Reality Engine},
+}
+
+@MISC{Herf97shadow,
+AUTHOR={Michael Herf and Paul S. Heckbert},
+TITLE={Soft Shadow Textures},
+NOTE={Submitted for publication},
+YEAR=1997,
+}
+
+@TECHREPORT{Herf97thesis,
+AUTHOR={Michael Herf},
+TITLE={Efficient Generation of Soft Shadow Textures},
+INSTITUTION={CS Dept., Carnegie Mellon U.},
+MONTH={May},
+YEAR=1997,
+NUMBER={CMU-CS-97-138},
+KEYWORDS={penumbra, texture mapping, interaction, real-time,
+edge flag fill, PC},
+}
+
+@INPROCEEDINGS{Nishita83,
+AUTHOR={Tomoyuki Nishita and Eihachiro Nakamae},
+TITLE={Half-Tone Representation of 3-{D} Objects Illuminated by Area Sources
+or Polyhedron Sources},
+BOOKTITLE={COMPSAC '83, Proc. IEEE 7th Intl. Comp. Soft.
+and Applications Conf.},
+MONTH={Nov.},
+YEAR={1983},
+PAGES={237-242},
+KEYWORDS={shading, shadow, penumbra},
+}
+
+@INPROCEEDINGS{Nakamae84,
+AUTHOR={Eihachiro Nakamae and Hideo Yamashita and Kohichi Harada and Tomoyuki Nishita},
+TITLE={Computer Graphics for Visualizing Simulation Results},
+BOOKTITLE={Eurographics '84},
+MONTH={Sept.},
+YEAR={1984},
+PAGES={419-432},
+KEYWORDS={shadow, penumbra},
+}
+
+@ARTICLE{Nishita85,
+AUTHOR={Tomoyuki Nishita and Eihachiro Nakamae},
+TITLE={Continuous Tone Representation of 3-{D} Objects Taking Account of
+Shadows and Interreflection},
+JOURNAL={Computer Graphics
+(SIGGRAPH '85 Proceedings)},
+VOLUME={19},
+NUMBER={3},
+MONTH={July},
+YEAR={1985},
+PAGES={23-30},
+KEYWORDS={shading, penumbra, radiosity},
+}
+
+@TECHREPORT{Campbell91tr1,
+AUTHOR={Campbell, III, A. T. and Donald S. Fussell},
+TITLE={Analytic Illumination with Polygonal Light Sources},
+NUMBER={TR-91-15},
+INSTITUTION={CS Dept, U of Texas at Austin},
+MONTH={April},
+YEAR={1991},
+KEYWORDS={shadow},
+ANNOTE={object space shadow algorithm, like Nishita83},
+}
+
+@TECHREPORT{Campbell91tr2,
+AUTHOR={Campbell, III, A. T. and Donald S. Fussell},
+TITLE={An Analytic Approach to Illumination with Area Light Sources},
+NUMBER={TR-91-25},
+INSTITUTION={CS Dept, U of Texas at Austin},
+MONTH={August},
+YEAR={1991},
+KEYWORDS={shadow},
+ANNOTE={An early draft of chapters 5 and 6 of his dissertation},
+}
+
+@MastersThesis{Woo89,
+       author =       "Andrew C. H. Woo",
+       title =        "Accelerators for Shadow Determination in Ray Tracing",
+       pages =        "136",
+       month =        feb,
+       year =         "1989",
+       school =       "Department of Computer Science, University of
+                      Toronto",
+       keywords =     "ray tracing, regular grid subdivision, voxel, shadow,
+	efficiency, cull",
+     }
+
+@InProceedings{Woo90voxel,
+author =       "Andrew Woo and John Amanatides",
+title =        "Voxel Occlusion Testing: {A} Shadow Determination
+Accelerator for Ray Tracing",
+pages =        "213--220",
+booktitle =      "Proceedings of Graphics Interface '90",
+year =         "1990",
+month =        may,
+conference =   "Halifax, Canada",
+keywords =     "grid, intersection culling, occlusion, penumbra, ray
+tracing, shadows, umbra, voxel traversal",
+abstract =       "
+A shadow determination accelerator for ray tracing is
+presented. It is built on top of the uniform voxel
+traversal grid structure. The accelerator proves to be
+rather efficient, requires little additional memory and
+the worst case scenario per shadow determination just
+reduces down to traditional voxel traversal. It can
+also be extended to model linear, area lights, as well
+as atmospheric shadows.
+",
+}
+
+@ARTICLE{Woo90survey,
+AUTHOR={Andrew Woo and Pierre Poulin and Alain Fournier},
+TITLE={A Survey of Shadow Algorithms},
+JOURNAL={IEEE Computer Graphics and Applications},
+VOLUME={10},
+NUMBER={6},
+MONTH={Nov.},
+YEAR={1990},
+PAGES={13-32},
+ABSTRACT={
+Essential to realistic and visually appealing images,
+shadows are difficult to compute in most display
+environments. This survey characterizes the various
+types of shadows. It also describes most existing
+shadow algorithms and discusses their complexities,
+advantages, and shortcomings. We examine hard shadows,
+soft shadows, shadows of transparent objects, and
+shadows for complex modeling primitives. For each type,
+we examine shadow algorithms within various rendering
+techniques. This survey attempts to provide readers
+with enough background and insight on the various
+methods to allow them to choose the algorithm best
+suited to their needs. We also hope that our analysis
+will help identify the areas that need more research
+and point to possible solutions.
+},
+}
+
+@INCOLLECTION{Woo92,
+AUTHOR={Andrew Woo},
+TITLE={The Shadow Depth Map Revisited},
+BOOKTITLE={Graphics Gems III},
+EDITOR={David Kirk},
+PUBLISHER={Academic Press},
+ADDRESS={Boston, MA},
+YEAR={1992},
+PAGES={338-342, 582},
+KEYWORDS={z-buffer shadow, aliasing},
+annote =         "includes code",
+}
+
+@Article{Woo93,
+       author =       "Andrew Woo",
+       title =        "Efficient shadow computations in ray tracing",
+       journal =      "IEEE Computer Graphics and Applications",
+       pages =        "78--83",
+       volume =       "13",
+       number =       "5",
+       month =        sep,
+       year =         "1993",
+       annote =       "Two simple techniques speed up shadows in ray tracing.
+                      Both require little memory and easily extend to other
+                      ray types. One can also benefit radiosity-related
+                      computations.",
+     }
+
+@InProceedings{Poulin90shadow,
+       author =       "Pierre Poulin and John Amanatides",
+       title =        "Shading and Shadowing with Linear Light Sources",
+       pages =        "377--386",
+       booktitle =    "Eurographics '90",
+       year =         "1990",
+       month =        sep,
+       publisher =    "North-Holland",
+       keywords =     "soft shadow",
+     }
+
+
+@ARTICLE{Bao93,
+AUTHOR={Hujun Bao and Qunsheng Peng},
+TITLE={Shading Models for Linear and Area Light Sources},
+JOURNAL={Computers and Graphics},
+VOLUME={17},
+NUMBER={2},
+YEAR={1993},
+PAGES={137-145},
+KEYWORDS={shadow, penumbra},
+}
+
+@INPROCEEDINGS{Vedel93,
+AUTHOR={Christophe Vedel},
+TITLE={Computing Illumination from Area Light Sources by Approximate Contour
+Integration},
+BOOKTITLE={Proc. Graphics Interface '93},
+PUBLISHER={Canadian Inf. Proc. Soc.},
+ADDRESS={Toronto, Ontario},
+MONTH={May},
+YEAR={1993},
+PAGES={237-244},
+KEYWORDS={shadow, penumbra},
+}
+
+@ARTICLE{Chin90,
+AUTHOR={Norman Chin and Steven Feiner},
+TITLE={Near Real-Time Shadow Generation Using {BSP} Trees},
+JOURNAL={Computer Graphics
+(SIGGRAPH '90 Proceedings)},
+VOLUME={24},
+NUMBER={4},
+MONTH={Aug.},
+YEAR={1990},
+PAGES={99-106},
+}
+
+@INPROCEEDINGS{Chin92,
+AUTHOR={Norman Chin and Steven Feiner},
+TITLE={Fast Object-Precision Shadow Generation for Area Light Sources using
+{BSP} Trees},
+BOOKTITLE={1992 Symp. on Interactive 3D Graphics},
+PUBLISHER={ACM SIGGRAPH},
+MONTH={Mar.},
+YEAR={1992},
+PAGES={21-30},
+}
+
+@TechReport{Chin90,
+       author =       "Norman Chin",
+       title =        "Near Real-Time Object-Precision Shadow Generation
+                      Using {BSP} Trees---Master Thesis",
+       institution =  "University of Columbia",
+       number =       "CUCS-068-90",
+       year =         "1990",
+       abstract =     "This master's thesis describes an object-precision
+                      shadow generation algorithm for static polygonal
+                      environments illuminated by movable point light
+                      sources. The algorithm can be easily implemented on any
+                      graphics system that provides fast polygon
+                      scan-conversion and achieves near real-time performance
+                      for environments of modest size. It combines elements
+                      of two kinds of current shadow generation algorithms:
+                      two-pass object-precision approaches and shadow volume
+                      approaches. This algorithm is an example of a new
+                      paradigm for shadow generation. Previously, the
+                      shadowing the problem can be viewed as solving the
+                      visible-surface problem from the point of view of a
+                      point light source. Another way to look at them, is
+                      from a geometric modeling point of view. By creating
+                      shadow volumes and then classifying polygons
+                      analytically against it, shadows can also be computed.
+                      Several optimizations are discussed. A way of reducing
+                      the amount of polygon fragmentation is shown by
+                      coalescing the fragments on the fly. Two methods of
+                      parallelizing the algorithm is presented. One method
+                      determines shadow fragments in parallel for a given
+                      light source. And more importantly, a method to handle
+                      shadowing from multiple point light sources independent
+                      of the number of light sources on workstations with
+                      alpha blending capabilities is described. Finally this
+                      algorithm has been extended to generate soft shadows by
+                      modeling area light sources. By initially meshing the
+                      scene into penumbra/umbra regions, and by adaptively
+                      meshing the penumbra regions with concentric contours
+                      similiar in shape to the outer penumbra region and by
+                      applying the point light source shadow algorithm to
+                      compute what fraction of an area light source is seen
+                      by a point to be rendered in the interior of the
+                      penumbra region and finally, by smooth shading the
+                      results, fuzzy shadows can be rendered. The future work
+                      section talks about combining all of the above to
+                      produce higher quality shadows in radiosity
+                      environments through adaptive meshing of the scene
+                      along penumbra/umbra boundaries via the area light
+                      source shadow algorithm and through analytically
+                      computing form-factors via the point light source
+                      shadow algorithm. Pseudocode is provided along with
+                      pictures and timings from an interactive
+                      implementation.",
+     }
+
+@ARTICLE{Fuchs80,
+AUTHOR={Henry Fuchs and Zvi M. Kedem and Bruce F. Naylor},
+TITLE={On Visible Surface Generation by A Priori Tree Structures},
+JOURNAL={Computer Graphics
+(SIGGRAPH '80 Proceedings)},
+VOLUME={14},
+NUMBER={3},
+MONTH={July},
+YEAR={1980},
+PAGES={124-133},
+KEYWORDS={hidden surface, BSP tree},
+}
+
+@TECHREPORT{Brotman84ms,
+author={Lynne Shapiro Brotman},
+title={A method for generating shadows with an umbra
+and penumbra in computer generated images},
+institution={Dept. of Computer \& Information Science, U. of Pennsylvania},
+year=1984,
+keywords={soft shadow},
+}
+
+@ARTICLE{Brotman84,
+AUTHOR={Lynne Shapiro Brotman and Norman I. Badler},
+TITLE={Generating Soft Shadows with a Depth Buffer Algorithm},
+JOURNAL={IEEE Computer Graphics and Applications},
+VOLUME={4},
+NUMBER={10},
+MONTH={Oct.},
+YEAR={1984},
+PAGES={5-24},
+}
+
+@ARTICLE{Crow77,
+AUTHOR={Franklin C. Crow},
+TITLE={Shadow Algorithms for Computer Graphics},
+JOURNAL={Computer Graphics
+(SIGGRAPH '77 Proceedings)},
+VOLUME={11},
+NUMBER={2},
+MONTH={Summer},
+YEAR={1977},
+}
+
+@INPROCEEDINGS{Meyer90,
+AUTHOR={U. Meyer},
+TITLE={Hemi-Cube Ray Tracing: A Method for Generating Soft Shadows},
+BOOKTITLE={Eurographics '90},
+PAGES={365-376},
+}
+
+@ARTICLE{Williams78,
+AUTHOR={Lance Williams},
+TITLE={Casting Curved Shadows on Curved Surfaces},
+JOURNAL={Computer Graphics
+(SIGGRAPH '78 Proceedings)},
+VOLUME={12},
+NUMBER={3},
+MONTH={Aug.},
+YEAR={1978},
+PAGES={270-274},
+}
+
+@ARTICLE{Reeves87,
+AUTHOR={William T. Reeves and David H. Salesin and Robert L. Cook},
+TITLE={Rendering Antialiased Shadows with Depth Maps},
+JOURNAL={Computer Graphics
+(SIGGRAPH '87 Proceedings)},
+VOLUME={21},
+NUMBER={4},
+MONTH={July},
+YEAR={1987},
+PAGES={283-291},
+}
+
+@ARTICLE{Atherton78,
+AUTHOR={Peter R. Atherton and Kevin Weiler and Donald P. Greenberg},
+TITLE={Polygon Shadow Generation},
+JOURNAL={Computer Graphics
+(SIGGRAPH '78 Proceedings)},
+VOLUME={12},
+NUMBER={3},
+MONTH={Aug.},
+YEAR={1978},
+PAGES={275-281},
+KEYWORDS={hidden surface},
+}
+
+@ARTICLE{Heckbert86,
+AUTHOR={Paul S. Heckbert},
+TITLE={Survey of Texture Mapping},
+JOURNAL={IEEE Computer Graphics and Applications},
+VOLUME={6},
+NUMBER={11},
+MONTH={Nov.},
+YEAR={1986},
+PAGES={56-67},
+}
+
+@ARTICLE{Heckbert90,
+AUTHOR={Paul S. Heckbert},
+TITLE={Adaptive Radiosity Textures for Bidirectional Ray Tracing},
+JOURNAL={Computer Graphics
+(SIGGRAPH '90 Proceedings)},
+VOLUME={24},
+NUMBER={4},
+MONTH={Aug.},
+YEAR={1990},
+PAGES={145-154},
+KEYWORDS={global illumination},
+}
+
+@PHDTHESIS{Heckbert91,
+AUTHOR={Paul S. Heckbert},
+TITLE={Simulating Global Illumination Using Adaptive Meshing},
+SCHOOL={CS Division, UC Berkeley},
+MONTH={June},
+YEAR={1991},
+NOTE={Tech. Report UCB/CSD 91/636},
+KEYWORDS={radiosity, ray tracing, adaptive mesh, integral equation,
+thermal radiation, visibility},
+}
+
+@ARTICLE{Diefenbach94,
+AUTHOR={Paul J. Diefenbach and Norman I. Badler},
+TITLE={Pipeline Rendering: Interactive Refractions, Reflections, and Shadows},
+JOURNAL={Displays},
+ANNOTE={Special issue on Interactive Computer Graphics},
+NOTE={http://www.cis.upenn.edu/~diefenba/home.html},
+VOLUME={15},
+NUMBER={3},
+YEAR={1994},
+PAGES={173-180},
+KEYWORDS={beam tracing, hardware, real time},
+}
+
+@PHDTHESIS{Diefenbach96,
+AUTHOR={Paul J. Diefenbach},
+TITLE={Pipeline Rendering: Interaction and Realism through Hardware-Based
+Multi-Pass Rendering},
+SCHOOL={U. of Pennsylvania},
+YEAR=1996,
+KEYWORDS={beam tracing, hardware, real time, Phong illumination},
+NOTE={http://www.cis.upenn.edu/~diefenba/home.html},
+}
+
+@INPROCEEDINGS{Diefenbach97inter,
+AUTHOR={Paul J. Diefenbach and Norman I. Badler},
+title={Multi-pass Pipeline Rendering: Realism for Dynamic Environments},
+BOOKTITLE={1997 Symposium on Interactive 3D Graphics},
+publisher={ACM SIGGRAPH},
+YEAR=1997,
+KEYWORDS={texture mapping},
+NOTE={To appear},
+}
+
+@ARTICLE{Cohen85,
+AUTHOR={Michael F. Cohen and Donald P. Greenberg},
+TITLE={The Hemi-Cube: A Radiosity Solution for Complex Environments},
+JOURNAL={Computer Graphics
+(SIGGRAPH '85 Proceedings)},
+VOLUME={19},
+NUMBER={3},
+MONTH={July},
+YEAR={1985},
+PAGES={31-40},
+KEYWORDS={shading, diffuse reflection},
+}
+
+@ARTICLE{Cohen88,
+AUTHOR={Michael F. Cohen and Shenchang Eric Chen and John R. Wallace and Donald P. Greenberg},
+TITLE={A Progressive Refinement Approach to Fast Radiosity Image Generation},
+JOURNAL={Computer Graphics
+(SIGGRAPH '88 Proceedings)},
+VOLUME={22},
+NUMBER={4},
+MONTH={Aug.},
+YEAR={1988},
+PAGES={75-84},
+ANNOTE={progressive radiosity},
+}
+
+@BOOK{Cohen93,
+AUTHOR={Michael F. Cohen and John R. Wallace},
+TITLE={Radiosity and Realistic Image Synthesis},
+PUBLISHER={Academic Press},
+ADDRESS={Boston},
+YEAR={1993},
+}
+
+@ARTICLE{Cook86,
+AUTHOR={Robert L. Cook},
+TITLE={Stochastic Sampling in Computer Graphics},
+JOURNAL={ACM Trans. on Graphics},
+VOLUME={5},
+NUMBER={1},
+MONTH={Jan.},
+YEAR={1986},
+PAGES={51-72},
+KEYWORDS={ray tracing, antialiasing, motion blur},
+ANNOTE={came out 1987},
+}
+
+@ARTICLE{Baum90-RTRPP,
+  author = {Daniel R. Baum and James M. Winget},
+  month = {March},
+  year = 1990,
+  title = {Real Time Radiosity Through Parallel Processing and
+          Hardware Acceleration},
+  journal = {Computer Graphics (1990 Symposium on Interactive 3D Graphics)},
+  volume = 24,
+  number = 2,
+  pages = {67--75},
+  keywords = {parallelism, form factor, visibility, graphics workstation}
+}
+
+@ARTICLE{Rushmeier90-AHACR,
+  author = {Holly E. Rushmeier and Daniel R. Baum and David E. Hall},
+  month = {June},
+  year = 1990,
+  title = {Accelerating the Hemi-Cube Algorithm for Calculating
+          Radiation Form Factors},
+  journal = {5th AIAA/ASME Thermophysics and Heat Transfer Conference},
+  address = {Seattle, Washington},
+  keywords = {form factors, hemicubes, visibility, graphics hardware}
+}
+
+@ARTICLE{Baum91,
+AUTHOR={Daniel R. Baum and Stephen Mann and Kevin P. Smith and James M. Winget},
+TITLE={Making Radiosity Usable: Automatic Preprocessing and Meshing Techniques
+for the Generation of Accurate Radiosity Solutions},
+MONTH={July},
+YEAR={1991},
+JOURNAL={Computer Graphics
+(SIGGRAPH '91 Proceedings)},
+VOLUME={25},
+NUMBER={4},
+PAGES={51-60},
+KEYWORDS={mesh generation},
+}
+
+@INCOLLECTION{Max92-LRAVF,
+  author = {Nelson L. Max and Michael J. Allison},
+  editor = {David Kirk},
+  year = 1992,
+  title = {Linear Radiosity Approximation Using Vertex-to-Vertex
+          Form Factors},
+  booktitle = {Graphics Gems III},
+  pages = {318--323},
+  publisher = {Academic Press Professional},
+  address = {Boston, MA},
+  keywords = {hardware, hemicube, visibility, graphics workstation}
+}
+
+@ARTICLE{Hanrahan91,
+AUTHOR={Pat Hanrahan and David Salzman and Larry Aupperle},
+TITLE={A Rapid Hierarchical Radiosity Algorithm},
+MONTH={July},
+YEAR={1991},
+JOURNAL={Computer Graphics
+(SIGGRAPH '91 Proceedings)},
+VOLUME={25},
+NUMBER={4},
+PAGES={197-206},
+ANNOTE={adaptive sampling of kernel in quadtree-like fashion
+motivated by Greengard's fast n-body algorithm},
+}
+
+@INPROCEEDINGS{Heckbert92discon,
+AUTHOR={Paul S. Heckbert},
+TITLE={Discontinuity Meshing for Radiosity},
+BOOKTITLE={Third Eurographics Workshop on Rendering},
+MONTH={May},
+YEAR={1992},
+ADDRESS={Bristol, UK},
+PAGES={203-216},
+KEYWORDS={radiosity, adaptive mesh, visibility},
+}
+
+@ARTICLE{Lischinski92,
+AUTHOR={Dani Lischinski and Filippo Tampieri and Donald P. Greenberg},
+TITLE={Discontinuity Meshing for Accurate Radiosity},
+JOURNAL={IEEE Computer Graphics and Applications},
+VOLUME={12},
+NUMBER={6},
+MONTH={November},
+YEAR={1992},
+PAGES={25-39},
+}
+
+@PHDTHESIS{Campbell91,
+	AUTHOR = {Campbell, III, A. T.},
+	TITLE = "Modeling Global Diffuse Illumination for Image Synthesis",
+	SCHOOL = "CS Dept, University of Texas at Austin",
+	YEAR = 1991,
+	MONTH = {Dec.},
+	NOTE = {Tech. Report TR-91-39},
+	keywords = {mesh generation, radiosity, penumbra, shadow},
+       pages =        "155",
+       keywords =     "Computational geometry data structure diffuse global
+                      illumination mesh generation optimization penumbra
+                      radiosity sampling shadow.",
+       abstract =     "Rapid developments in the design of algorithms for
+                      rendering globally illuminated scenes have taken place
+                      in the past five years. Net energy methods such as
+                      radiosity algorithms have become effective at
+                      computing the energy balance for scenes containing
+                      diffusely reflecting objects. Such methods first break
+                      up a scene description into a large set of elements, or
+                      possibly several levels of elements. Energy transfers
+                      among these elements are then determined using a
+                      variety of means. While much progress has been made in
+                      the design of energy transfer algorithms, little or no
+                      attention has been paid to the proper generation of the
+                      mesh of surface elements. This dissertation presents a
+                      technique for adaptively creating a mesh of surface
+                      elements as the energy transfers are computed. The
+                      method allows large numbers of small elements to be
+                      placed at parts of the scene where the most active
+                      energy transfers occur without requiring that other
+                      parts of the scene be subdivided needlessly to the same
+                      degree. As a result, the computational effort in the
+                      energy transfer computations can be concentrated where
+                      it has the most effect. Since the sources of direct and
+                      indirect illumination in the scene are polygonal
+                      elements, the effects of light sources with finite area
+                      must be computed. Most methods simplify the problem by
+                      approximating the area source with a collection of
+                      point sources. We present an object space algorithm to
+                      model illumination from polygonal light sources
+                      analytically. The result is a collection of
+                      smooth-shaded polygonal facets that may be rendered
+                      from any viewing position. Binary Space Partitioning
+                      trees are used to compute umbra and penumbra boundaries
+                      efficiently. Fast analytic techniques are developed
+                      for illumination calculations. Numerical optimization
+                      methods ensure that the shading function is sampled
+                      finely enough to find all significant illumination
+                      gradations. Illumination calculations are optimized to
+                      concentrate computational effort on parts of the scene
+                      where they are most needed.",
+       note =         "price (\$5.00)",
+     }
+
+
+
+@ARTICLE{Ward88,
+AUTHOR={Gregory J. Ward and Francis M. Rubinstein and Robert D. Clear},
+TITLE={A Ray Tracing Solution for Diffuse Interreflection},
+JOURNAL={Computer Graphics
+(SIGGRAPH '88 Proceedings)},
+VOLUME={22},
+NUMBER={4},
+MONTH={Aug.},
+YEAR={1988},
+PAGES={85-92},
+ANNOTE={cache diffuse samples},
+}
+
+@InProceedings{ward91a,
+       author =       "Gregory Ward",
+       title =        "Adaptive shadow testing for ray tracing",
+       booktitle =    "Eurographics Workshop on Rendering",
+       month = "May",
+       year =         "1991",
+       conference =   "Barcelona",
+       pages =        "11--20",
+       keywords =     "efficiency",
+       abstract =       "Method for reducing the number of shadow rays for
+                      scenes with a large number of light sources. The
+                      sources are sorted on their contribution, and only for
+                      the most important sources rays are cast. The influence
+                      of the other sources is estimated statistically. Tests
+                      are done with different tolerances (threshold to
+                      determine whether sources are important) and
+                      certainties (rate of accuracy). The method gives good
+                      reduction and is able to find the most important
+                      shadows because it selects contrast as criterion.",
+       annote =         "avoid shooting rays at lights determined to not affect
+                      perception of image",
+     }
+
+@TECHREPORT{Garland95tr,
+AUTHOR={Michael Garland and Paul S. Heckbert},
+TITLE={Fast Polygonal Approximation of Terrains and Height Fields},
+INSTITUTION={CS Dept., Carnegie Mellon U.},
+MONTH={Sept.},
+YEAR={1995},
+NUMBER={CMU-CS-95-181},
+NOTE={http://www.cs.cmu.edu/~garland/scape},
+KEYWORDS={surface simplification, Delaunay triangulation,
+data-dependent triangulation, triangulated irregular network, TIN,
+multiresolution modeling, greedy insertion},
+}
+
+@ARTICLE{Blinn88,
+AUTHOR={James F. Blinn},
+TITLE={Me and My (Fake) Shadow},
+JOURNAL={IEEE Computer Graphics and Applications},
+VOLUME={8},
+NUMBER={1},
+MONTH={Jan.},
+YEAR={1988},
+PAGES={82-86},
+KEYWORDS={projection, homogeneous matrix},
+}
+
+@ARTICLE{Heidmann91,
+AUTHOR={Tim Heidmann},
+TITLE={Real Shadows, Real Time},
+JOURNAL={Iris Universe},
+NOTE={Silicon Graphics, Inc.},
+VOLUME={18},
+YEAR={1991},
+PAGES={28-31},
+KEYWORDS={soft shadow, SGI Reality Engine, stencil buffer, shadow volume},
+ANNOTE={includes C, GL code},
+}
+
+@PHDTHESIS{Grant92,
+AUTHOR={Charles W. Grant},
+TITLE={Visibility Algorithms in Image Synthesis},
+SCHOOL={U. of California, Davis},
+YEAR={1992},
+KEYWORDS={z buffer, ray tracing, shadow, taxonomy},
+annote={partial electronic version available from grant1@llnl.gov,
+A successor to Sutherland-Sproull-Schumacker, Comput. Surv. 74},
+}
+
+@ARTICLE{Tessman89,
+AUTHOR={Thant Tessman},
+TITLE={Casting Shadows on Flat Surfaces},
+JOURNAL={Iris Universe},
+NOTE={Silicon Graphics, Inc.},
+MONTH={Winter},
+YEAR={1989},
+PAGES={16-19},
+KEYWORDS={projection, homogeneous matrix},
+ANNOTE={includes C, GL code},
+}
+
+@BOOK{Neider93,
+AUTHOR={Jackie Neider and Tom Davis and Mason Woo},
+TITLE={{OpenGL} Programming Guide},
+PUBLISHER={Addison-Wesley},
+ADDRESS={Reading MA},
+YEAR={1993},
+KEYWORDS={computer graphics, graphics workstation, SGI},
+ANNOTE={shadows on a plane p. 401},
+}
+
+@BOOK{McReynolds96,
+editor={Tom McReynolds},
+title={Programming with {OpenGL}: Advanced Rendering},
+note={SIGGRAPH '96 course notes},
+year=1996,
+keywords={Silicon Graphics, graphics workstation,
+texture mapping, stencil buffer, accumulation buffer, shadow},
+annote={article and code at
+http://www.sgi.com/Technology/openGL/advanced_sig96.html},
+}
+
+@INPROCEEDINGS{Akeley93,
+AUTHOR={Kurt Akeley},
+TITLE={{RealityEngine} Graphics},
+BOOKTITLE={SIGGRAPH '93 Proc.},
+MONTH={Aug.},
+YEAR={1993},
+PAGES={109-116},
+KEYWORDS={hardware, texture mapping, graphics workstation, SGI},
+}
+
+@ARTICLE{Clark76,
+AUTHOR={James H. Clark},
+TITLE={Hierarchical Geometric Models for Visible Surface Algorithms},
+JOURNAL={CACM},
+VOLUME={19},
+NUMBER={10},
+MONTH={Oct.},
+YEAR={1976},
+PAGES={547-554},
+KEYWORDS={bounding volume, spatial data structure},
+}
+
+@ARTICLE{Haeberli90accum,
+AUTHOR={Paul Haeberli and Kurt Akeley},
+TITLE={The Accumulation Buffer: Hardware Support for High-Quality Rendering},
+JOURNAL={Computer Graphics (SIGGRAPH '90 Proceedings)},
+VOLUME={24},
+NUMBER={4},
+MONTH={Aug.},
+YEAR={1990},
+PAGES={309-318},
+KEYWORDS={antialiasing, motion blur, depth of field,
+soft shadows, stochastic sampling},
+}
+
+@ARTICLE{Segal92,
+AUTHOR={Mark Segal and Carl Korobkin and Rolf van Widenfelt and Jim Foran
+and Paul Haeberli},
+TITLE={Fast Shadows and Lighting Effects using Texture Mapping},
+JOURNAL={Computer Graphics (SIGGRAPH '92 Proceedings)},
+VOLUME={26},
+NUMBER={2},
+MONTH={July},
+YEAR={1992},
+PAGES={249-252},
+KEYWORDS={perspective, scan conversion},
+}
+
+@ARTICLE{Chen90,
+   author = "Shenchang Eric Chen",
+   title = "Incremental Radiosity: An Extension of Progressive 
+          Radiosity to an Interactive Image Synthesis System",
+   pages = "135-144",
+   journal = "Computer Graphics (SIGGRAPH '90 Proceedings)",
+   volume = "24",
+   number = "4",
+   year = "1990",
+   month = "August",
+   keywords = "animation",
+}
+
+@InCollection{Chen91prograd,
+       author =       "Shenchang Eric Chen",
+       editor =       "James Arvo",
+       title =        "Implementing Progressive Radiosity with User-Provided
+                      Polygon Display Routines",
+       booktitle =    "Graphics Gems II",
+       pages =        "295-298, 583-597",
+       publisher =    "Academic Press Professional",
+       address =      "Boston, MA",
+       year =         "1991",
+       note =         "includes code",
+     }
+
+@Article{george90a,
+       author =       "David W. George and Francois X. Sillion and Donald P.
+                      Greenberg",
+       title =        "Radiosity Redistribution for Dynamic Environments",
+       journal =      "IEEE Computer Graphics and Applications",
+       pages =        "26--34",
+       volume =       "10",
+       number =       "4",
+       month =        jul,
+       year =         "1990",
+       keywords =     "radiosity, animation, interaction, shadow, negative
+                      radiosity",
+       annote =       "They present a modification to the progressive
+                      radiosity to allow faster radiosity computation for
+                      animation sequences where objects can be added, moved,
+                      removed or their surface changed properties. When an
+                      object is added, radiosity is shot onto these new
+                      patches. A shadow volume is determined and a negative
+                      radiosity is shot to the patches in shadow. When an
+                      object is moved, it is removed from the scene and added
+                      to the new position, the radiosity being recomputed at
+                      each step. The radiosity recomputed is based on two
+                      strategies: redistribute first or interleave
+                      redistribution and propagation. Some heuristics are
+                      presented to choose the most important patches. This
+                      solution is good when just a few objects are involved
+                      but as the complexity of the scenes and mostly moving
+                      objects increases, the algorithm lost of its
+                      interest.",
+     }
+
+@INCOLLECTION{Sillion91shadow,
+AUTHOR={Francois Sillion},
+TITLE={Detection of Shadow Boundaries for Adaptive Meshing in Radiosity},
+EDITOR={James Arvo},
+BOOKTITLE={Graphics Gems II},
+PAGES={311-315},
+PUBLISHER={Academic Press},
+ADDRESS={Boston MA},
+YEAR={1991},
+KEYWORDS={discontinuity meshing},
+}
+
+@Article{haines86a,
+       author =       "Eric A. Haines and Donald P. Greenberg",
+       title =        "The Light Buffer: {A} Ray Tracer Shadow Testing
+                      Accelerator",
+       pages =        "6--16",
+       journal =      "IEEE Computer Graphics and Applications",
+       volume =       "6",
+       number =       "9",
+       year =         "1986",
+       month =        sep,
+       keywords =     "shading, ray tracing, shadows, ray tracing shadow
+                      cull",
+       abstract =       "In one area of computer graphics, realistic image
+                      synthesis, the ultimate goal is to produce a picture
+                      indistinguishable from a photograph of a real
+                      environment. A particularly powerful technique for
+                      simulating light reflection---an important element in
+                      creating this realism---is called ray tracing. This
+                      method produces images of excellent quality, but
+                      suffers from lengthy computation time that limits its
+                      practical use. \\ This article presents a new method to
+                      reduce shadow testing time during ray tracing. The
+                      technique involves generating light buffers, each of
+                      which partition the environment with respect to an
+                      individual light source. These partition descriptions
+                      are then used during shadow testing to quickly
+                      determine a small subset of objects that may have to be
+                      tested for intersection. \\ The results of timing tests
+                      illustrate the beneficial performance of these
+                      techniques. The tests compare the standard ray-tracing
+                      algorithm to light buffers of varying resolution.",
+     }
+
+
+@InProceedings{bouville88a,
+       author =       "C. Bouville and J. L. Dubois and I. Marchal and M. L.
+                      Viaud",
+       title =        "Monte-Carlo integration applied to an illumination
+                      model",
+       pages =        "483--498",
+       booktitle =    "Eurographics '88",
+       year =         "1988",
+       month =        sep,
+       editor =       "D. A. Duce and P. Jancene",
+       publisher =    "North-Holland",
+       conference =   "European Computer Graphics Conference and Exhibition;
+                      held in Nice, France; 12 -- 16 September 1988",
+       keywords =     "illumination model",
+       abstract =       "The use of Monte-Carlo integration together with
+                      stochastic sampling is very useful for dealing with the
+                      scattering phenomena that occur in the propagation and
+                      reflection of light. In this paper, these techniques
+                      have been applied to the implementation of a
+                      physics-based global illumination model. The
+                      theoretical basis of this approach is presented briefly
+                      and various applications to realistic image are then
+                      described. This concerns the rendering of penumbra and
+                      scattered reflection effects, antialiasing and accurate
+                      color modelling through spectral integration. For all
+                      these applications, both theoretical and implementation
+                      aspects are developed and it is shown that stochastic
+                      techiques can provide very simple and efficient
+                      algorithms.",
+     }
+
+@InProceedings{Drettakis94,
+       author =       "George Drettakis and Eugene Fiume",
+       title =        "A Fast Shadow Algorithm for Area Light Sources Using
+                      Backprojection",
+       booktitle =    "SIGGRAPH '94 Proc.",
+       pages =        "223--230",
+       year =         "1994",
+       keywords =     "shadows, umbra, penumbra, discontinuity meshing,
+                      global illumination, backprojection",
+       note =
+"http://safran.imag.fr/Membres/George.Drettakis/pub.html",
+     }
+
+@InProceedings{Stewart94,
+       author =       "A. James Stewart and Sherif Ghali",
+       title =        "Fast Computation of Shadow Boundaries using Spatial
+                      Coherence and Backprojection",
+       booktitle =    "Proceedings of SIGGRAPH '94",
+       pages =        "231--238",
+       month =        jul,
+       year =         "1994",
+       keywords =     "shadows, backprojection, discontinuity mesh, aspect
+                      graphs, radiosity, visual events, efficient surface
+                      enumeration, spatial coherence",
+     }
+
+@InProceedings{Stewart93,
+       author =       "A. James Stewart and Sherif Ghali",
+       title =        "An Output Sensitive Algorithm for the Computation of
+                      Shadow Boundaries",
+       booktitle =    "Canadian Conference on Computational Geometry",
+       pages =        "291--296",
+       month =        aug,
+       year =         "1993",
+     }
+
+@InProceedings{haines91shaft,
+author =       "Eric Haines and John Wallace",
+title =        "Shaft culling for efficient ray-traced radiosity",
+booktitle =    "Eurographics Workshop on Rendering",
+month = "may",
+year =         "1991",
+conference =   "Barcelona",
+keywords =     "radiosity, ray tracing, bounding volumes",
+abstract =       "
+A shaft is a volume between an emitter and receiver. A
+list of enclosing boxes, c.q. patches that are in that
+volume is generated. The ray casting to determine
+visibility between emitter and receiver can be reduced
+by only testing the rays against the patches in the
+shaft. Methods to make the shafts, and to determine
+which object are in the shaft are given.
+",
+}
+
+@InProceedings{shirley91direct,
+       author =       "Peter Shirley and Changyaw Wang",
+       title =        "Direct lighting calculation by Monte Carlo
+                      integration",
+       booktitle =    "Eurographics Workshop on Rendering",
+       year =         "1991",
+       conference =   "held in Barcelona, Spain; 13-15 May 1991",
+       keywords =     "monte carlo, illumination",
+       abstract =       "Application of Monte Carlo techniques for rendering
+                      scenes with multiple light sources. Only one shadow ray
+                      per viewing ray is used. Some issues for the design of
+                      probability densities for light sources are given.",
+     }
+
+@InProceedings{kok91a,
+       author =       "Arjan Kok and Frederik Jansen",
+       title =        "Source selection for the direct lighting component in
+                      global illumination",
+       booktitle =    "Eurographics Workshop on Rendering",
+       year =         "1991",
+       conference =   "held in Barcelona, Spain; 13-15 May 1991",
+       keywords =     "two pass",
+       abstract =       "Describes criteria for deciding which patches should
+                      be considered to be light sources in a two pass method
+                      in which direct lighting component is calculated
+                      separately in the second pass.",
+     }
+
+@InCollection{Zimmerman95,
+       author =       "Kurt Zimmerman",
+       editor =       "Alan W. Paeth",
+       title =        "Direct Lighting Models for Ray Tracing with
+                      Cylindrical Lamps",
+       booktitle =    "Graphics Gems V",
+       pages =        "285--289",
+       publisher =    "Academic Press Professional",
+       address =      "Boston, MA",
+       year =         "1995",
+     }
+
+@INCOLLECTION{Zimmerman95twopass,
+AUTHOR={Kurt Zimmerman and Peter Shirley},
+TITLE={A Two-Pass Realistic Image Synthesis Method for Complex Scenes},
+BOOKTITLE={Rendering Techniques '95 (Proceedings of the Sixth Eurographics
+Workshop on Rendering)},
+PUBLISHER={Springer-Verlag},
+ADDRESS={NY},
+PAGES={284-295},
+YEAR=1995,
+NOTE={Also ftp://ftp.cs.indiana.edu/pub/techreports/TR434.ps.Z},
+KEYWORDS={shadow},
+}
+
+@InCollection{Wang92,
+       author =       "Changyaw Wang",
+       editor =       "David Kirk",
+       title =        "Physically Correct Direct Lighting for Distribution
+                      Ray Tracing",
+       booktitle =    "Graphics Gems III",
+       pages =        "307-313, 562-568",
+       publisher =    "Academic Press",
+       address =      "Boston, MA",
+       year =         "1992",
+       keywords =     "monte carlo, area light source, soft shadows",
+       annote =         "includes code",
+     }
+
+@InProceedings{rossignac89b,
+       author =       "J. Rossignac and J. Wu",
+       title =        "Depth-interval buffer for hardware-assisted shading
+                      from {CSG}: Accurate treatment of coincident faces and
+                      shadows",
+       booktitle =    "Fifth Eurographics Workshop on Graphics Hardware",
+       year =         "1989",
+       editor =       "D. Grimsdale and A. Kaufman",
+       conference =   "held in Lausanne, Switzerland; 2-3 September 1989",
+       keywords =     "hardware",
+       annote =       "Discuss the role of a depth interval buffer using a
+                      new version of the Trickle algorithm for handling
+                      coincident faces and shadows with CSG
+                      representations.",
+     }
+
+
+@article{Fuchs85sig,
+       author =       "Henry Fuchs and Jack Goldfeather and Jeff P. Hultquist
+and Susan Spach and John D. Austin and Brooks, Jr., Frederick P.
+and John G. Eyles and John Poulton",
+       title =        "Fast Spheres, Shadows, Textures, Transparencies, and
+                      Image Enhancements in {Pixel-Planes}",
+       pages =        "111--120",
+       journal =      "Computer Graphics (SIGGRAPH '85 Proceedings)",
+       volume =       "19",
+       number =       "3",
+       year =         "1985",
+       month =        jul,
+       keywords =     "pixel planes, parallel processing",
+       annote =       "Fuchs' Pixel-Planes machine is explained in general.
+                      See [Eyles 87] for a final report. Explanation of how
+                      the machine can process linear equations, and gives
+                      several algorithms for display. Also published in
+                      Advances in Computer Graphics I, EUROGRAPHICS 86.",
+     }
+
+@Article{eyles87a,
+       author =       "John Eyles and John Austin and Henry Fuchs and Trey
+                      Greer and John Poulton",
+       title =        "{Pixel-Planes} 4: {A} Summary",
+       pages =        "183--207",
+       journal =      "Advances in Computer Graphics Hardware II, Record of
+                      Second Eurographics Workshop on Graphics Hardware",
+       year =         "1987",
+       keywords =     "parallel processing",
+       annote =       "A final report on the Pixel-Planes system. See also
+                      [Fuchs 85].",
+     }
+
+@InProceedings{amanatides84a,
+       author =       "John Amanatides",
+       title =        "Ray Tracing with Cones",
+       pages =        "129--135",
+       journal =      "Computer Graphics (SIGGRAPH '84 Proceedings)",
+       volume =       "18",
+       number =       "3",
+       year =         "1984",
+       month =        jul,
+       conference =   "held in Minneapolis, Minnesota; 23--27 July 1984",
+       keywords =     "cone tracing, antialiasing, I35 Ray Tracing",
+       annote =       "ray tracing spheres and polygons with circular conical
+                      rays A technique for antialiasing in ray tracing is
+                      presented which utilizes cones instead of rays. Cones
+                      prevent problems generally associated with point
+                      sampling, and therefore allow for more natural images.
+                      The mathematics involved seem only ``pretty'' for
+                      spherical objects, so an acid test has yet to be
+                      performed. \\ A new approach to ray tracing is
+                      introduced. The definition of a ``ray'' is extended
+                      into a cone by including information on the spread
+                      angle and the virtual origin. The advantages of this
+                      approach, which tries to model light propagation with
+                      more fidelity, include a better method of antialiasing,
+                      a way of calculating fuzzy shadows and dull
+                      reflections, a method of calculating the correct level
+                      of detail in a procedural model and texture map, and
+                      finally, a procedure for faster intersection
+                      calculation.",
+     }
+
+@InProceedings{salesin89a,
+       author =       "David Salesin and Jorge Stolfi",
+       title =        "The {ZZ}-Buffer: a Simple and Efficient Rendering
+                      Algorithm with Reliable Antialiasing",
+       pages =        "451--466",
+       journal =      "Proceedings of the PIXIM '89",
+       year =         "1989",
+       annote =       "The ZZ-buffer is a new rendering algorithm that is
+                      simple, efficient, and produces high-quality images.
+                      The algorithm correctly renders transparent surfaces,
+                      shadows with real penumbrae, and depth of field
+                      effects. The ZZ-buffer algorithm is substantially
+                      faster than ray tracing an nearly as versatile. While
+                      the ZZ-buffer is somewhat slower than the Z-buffer or
+                      A-buffer, it avoids the aliasing and other artifacts of
+                      these algorithms. The algorithm's efficiency comes from
+                      a screen-space object indexing scheme, and from the use
+                      of lazy evaluation for visibility tests. It achieves
+                      reliable antialiasing by employing an adaptive form of
+                      stochastic supersampling. The algorithm is simple
+                      enough that we give most of its code here in this
+                      paper. The algorithm has been implemented as part of a
+                      commercial production system and has proved robust over
+                      a large variety of images.",
+     }
+
+@InProceedings{Muller:1994:FRR,
+       author =       "Stefan Muller and Frank Schoffel",
+       booktitle =    "Fifth Eurographics Workshop on Rendering",
+       title =        "Fast Radiosity Repropagation for Interactive Virtual
+                      Environments Using a Shadow-Form-Factor-List",
+       address =      "Darmstadt, Germany",
+       pages =        "325--342",
+       month =        jun,
+       year =         "1994",
+       keywords =     "dynamic environments, shadow-form-factor-list, scene
+                      coherence, radiosity repropagation, progressive
+                      refinement radiosity",
+       bibsource =    "sig-11-1994",
+     }
+
+
+@TechReport{Seales89,
+       author =       "W. Brent Seales and Charles R. Dyer",
+       title =        "Using the {ASP} for the Interactive Viewing of
+                      Polyhedral Scenes",
+       institution =  "University of Wisconsin",
+       number =       "TR 903",
+       month =        dec,
+       year =         "1989",
+       abstract =     "In this paper we discuss an approach for solving the
+                      problem of interactively viewing a polyhedral scene.
+                      Interactive viewing is the computation and display of
+                      an interactively controlled sequence of views of a
+                      scene corresponding to a viewer's movement along a
+                      continuous viewpath. We present an algorithm for
+                      generating such views with hidden-lines removed, and
+                      consider extensions to solve the problem of generating
+                      views with hidden-surfaces removed. The method relies
+                      on a precomputation phase which constructs the {\it
+                      aspect representation}, or asp. This representation can
+                      be used to interactively view a polyhedral scene at
+                      video rates with hidden-lines or surfaces removed. The
+                      method exploits {\it viewpath coherence}, a form of
+                      frame-to-frame coherence present in such a sequence of
+                      views. The display of polyhedral line drawings with
+                      hidden lines removed makes use of the topology of the
+                      image line drawing and the pre-ordering of visual
+                      events which change that topology. This approach is
+                      extended to interactive viewing with hidden-surfaces
+                      removed and with shading, shadows, and multiple light
+                      sources. The set of object resolution polygons
+                      representing the visible faces and the shadow polygons
+                      for a single frame can be computed efficiently from the
+                      previous frame using the asp. The hidden-line and
+                      hidden-surface algorithms are closely related via the
+                      asp. Interactive viewing with hidden-lines removed is
+                      shown to be about as fast as the interactive display of
+                      a wire-frame scene. The primary on-line cost of
+                      hidden-surface interactive viewing is the cost
+                      associated with scan converting the visible surfaces
+                      and shadow polygons.",
+     }
+
+@InProceedings{seales90a,
+       author =       "W. Brent Seales and Charles R. Dyer",
+       title =        "Shaded Rendering and Shadow Computation for Polyhedral
+                      Animation",
+       pages =        "175--182",
+       journal =      "Proceedings of Graphics Interface '90",
+       year =         "1990",
+       month =        may,
+       conference =   "held in Halifax, Nova Scotia; 14-18 May 1990",
+       keywords =     "animation, aspect representation, hidden-surface
+                      computation, interactive viewing, viewpath coherence",
+     }
+
+@InProceedings{wanger92a,
+       author =       "Leonard Wanger",
+       title =        "The effect of shadow quality on the perception of
+                      spatial relationships in computer generated imagery",
+       pages =        "39--42",
+       journal =      "Computer Graphics (1992 Symposium on Interactive 3D
+                      Graphics)",
+       volume =       "25",
+       number =       "2",
+       year =         "1992",
+       month =        mar,
+       keywords =     "interactive tasks, spatial relations, cue theory",
+     }
+
+@Article{wanger92b,
+  author =       "Leonard R. Wanger and James A. Ferwerda and Donald P.
+                 Greenberg",
+  title =        "Perceiving spatial relationships in computer-generated
+                 images",
+  journal =      "IEEE Computer Graphics and Applications",
+  pages =        "44--58",
+  volume =       "12",
+  number =       "3",
+  month =        may,
+  year =         "1992",
+  keywords =     "experimental psychology, perception cues, perspective
+                 projection, orthographic projection, shading, shadow,
+                 textures, motion",
+  annote =       "Visual information determines our perception of
+                 spatial relationships. We explored the visual cues we
+                 believe are most important for depth relations in
+                 computer-generated images.",
+}
+
+@TechReport{QMW-DCS-521-1990a,
+       author =       "M. Slater",
+       title =        "Dynamic Modification Of Objects In 3{D} Scenes Using
+                      Tiling And {A} {Z} -Buffer",
+       institution =  "Queen Mary College, Department of Computer Science",
+       year =         "1990",
+       month =        nov,
+       number =       "QMW-DCS-1990-521",
+       scope =        "ace",
+       abstract-url = "http://www.dcs.qmw.ac.uk/publications/report_abstracts/1990/521",
+       keywords =     "Interactive 3D Graphics, Z-Buffer, Tiling, Shadows,
+                      Graphica Objects, Segments.",
+     }
+
+     @InProceedings{Chrysantho1995a,
+	 author =       "Yiorgos Chrysanthou and Mel Slater",
+
+       booktitle =    "ACM SIGGRAPH Symposium on Interactive 3D Graphics,
+                      Monterey, CA",
+       title =        "Shadow Volume {BSP} Trees for Computation of Shadows
+                      in Dynamic Scenes",
+       year =         "1995",
+       month =        apr,
+	 pages =        "45--50",
+
+     }
+
+@Incollection{arvo89survey,
+       author =       "James Arvo and David Kirk",
+       title =        "A survey of ray tracing acceleration techniques",
+       pages =        "201--262",
+       booktitle =    "An introduction to ray tracing",
+       year =         "1989",
+       editor =       "Andrew S. Glassner",
+       publisher =    "Academic Press",
+     }
+
+@InProceedings{Arvo95irrad,
+  author =       "James Arvo",
+  title =        "Applications of Irradiance Tensors to the Simulation
+                 of Non-Lambertian Phenomena",
+  pages =        "335--342",
+  booktitle =    "SIGGRAPH 95 Proceedings",
+  year =         "1995",
+  month =        aug,
+  keywords={shadow, shading},
+}
+
+@Article{Hourcade85,
+       author =       "J. C. Hourcade and A. Nicolas",
+       title =        "Algorithms for Antialiased Cast Shadows",
+       pages =        "259--265",
+       journal =      "Computers and Graphics",
+       volume =       "9",
+       number =       "3",
+       year =         "1985",
+       keywords =     "z-buffer shadow",
+     }
+
+@InProceedings{Tanaka90,
+       author =       "Toshimitsu Tanaka and Tokiichiro Takahashi",
+       title =        "Cross Scanline Algorithm",
+       pages =        "63--74",
+       booktitle =    "Eurographics '90",
+       year =         "1990",
+       month =        sep,
+       publisher =    "North-Holland",
+     }
+
+@inproceedings{Tanaka91,
+       author =       "Toshimitsu Tanaka and Tokiichiro Takahashi",
+       title =        "Shading with Area Light Sources",
+       booktitle =    "Eurographics '91",
+       publisher =    "North-Holland",
+       pages =        "235--246, 535--537",
+       month =        sep,
+       year =         "1991",
+       annote = "no shadows",
+     }
+
+@ARTICLE{Tanaka94,
+       author =       "Toshimitsu Tanaka and Tokiichiro Takahashi",
+       journal =      "Computer Graphics Forum",
+       title =        "Cross Scan Buffer and its Applications",
+       volume =       "13",
+       number =       "3",
+       publisher =    "Basil Blackwell Ltd",
+       pages =        "467--376",
+       year =         "1994",
+       note =         "Eurographics '94 Conference issue",
+     }
+
+@ARTICLE{Tanaka95,
+       title =        "Fast Shadowing Algorithm for Linear Light Sources",
+       author =       "Toshimitsu Tanaka and Tokiichiro Takahashi",
+       journal =      "Computer Graphics Forum",
+       volume =       "14",
+       number =       "3",
+       pages =        "205--216",
+       year =         "1995",
+       note =         "Eurographics '95 Conference issue",
+     }
+
+@ARTICLE{Tanaka96,
+title={Fast Analytic Shading and Shadowing for Area Light Sources},
+author={Toshimitsu Tanaka and Tokiichiro Takahashi},
+note={Submitted for publication},
+year=1996,
+annote={diffuse and specular surfaces},
+}
+
+@ARTICLE{Max95,
+AUTHOR={Nelson Max},
+TITLE={Optimal Sampling for Hemicubes},
+JOURNAL={IEEE Trans. on Visualization and Computer Graphics},
+VOLUME={1},
+NUMBER={1},
+YEAR={1995},
+KEYWORDS={hemicube, radiosity, form factor, sampling, variance, optimization},
+ABSTRACT={
+The hemicube estimates of form factors are based on a finite set of
+sample directions. We obtain several optimal arrangements of sample
+directions, which minimize the variance of these estimates. They are
+based on changing the size or shape of the pixels or the shape of the
+hemicube, or using non-uniform pixel grids. The best reduces the
+variance by 43%.
+
+The variance calculation is based on the assumption that the errors in
+the estimate are caused by the projections of single polygon edges, and
+that the positions and orientations of these edges are random. This
+replaces the infinite dimensional space of possible environments by the
+two dimensional space of great circles on the unit sphere, making the
+numerical variance minimization possible.
+},
+}
+
+@InProceedings{Myszkowski94,
+       title =        "Texture Mapping as an Alternative for Meshing During
+                      Walkthrough Animation",
+       author =       "Karol Myszkowski and Tosiyasu L. Kunii",
+       booktitle =    "Fifth Eurographics Workshop on Rendering",
+       pages =        "375--388",
+       month =        jun,
+       year =         "1994",
+       keywords =     "texture mapping, Gouraud shading, meshing, radiosity",
+}
+
+@INPROCEEDINGS{Ayatsuka96,
+TITLE={Penumbrae for 3D Interactions},
+AUTHOR={Yuji Ayatsuka and Satoshi Matsuoka and Jun Rekimoto},
+BOOKTITLE={9th Annl. Symp. for User Interface Software and Technology (UIST96)},
+MONTH={Nov.},
+YEAR=1996,
+PAGES={165-166},
+ABSTRACT={
+We propose a new feedback technique for 3D interaction in augmented
+reality using penumbrae which the objects cast. Rather than generating
+a real penumbra, which is computationally expensive, a fast, simplified
+algorithm is employed, which also is better suited for position
+feedback purposes. User studies show that 1) compared to orthographic
+shadow projections, 3D spatial recognition and placement tasks are
+substantially faster with our penumbrae, and 2) the users feel the
+feedback to be more natural, which is especially important in augmented
+reality.
+from http://www-masuda.is.s.u-tokyo.ac.jp/~aya/works/penumbra.html
+},
+}
+
+@TECHREPORT{Goslin95,
+author={Michael Goslin},
+title={Illumination as Texture Maps for Faster Rendering},
+SCHOOL={Dept. of CS, U. of North Carolina, Chapel Hill},
+year=1995,
+number={TR 95-042},
+keywords={texture mapping, radiosity, walkthrough, graphics workstation},
+note={ftp://ftp.cs.unc.edu/pub/publications/techreports/95.html},
+}
+
+@TECHREPORT{Bastos96,
+AUTHOR={Rui Bastos and Michael Goslin and Hansong Zhang},
+TITLE={Efficient Rendering of Radiosity Using Textures and Bicubic
+Reconstruction},
+NUMBER={TR 96-025},
+INSTITUTION={Dept. of CS, U. of North Carolina at Chapel Hill},
+YEAR=1996,
+KEYWORDS={texture mapping},
+NOTE={http://www.cs.unc.edu/~bastos/radiosity.html},
+annote={also available at
+ftp://ftp.cs.unc.edu/pub/publications/techreports/96.html},
+}
+
+@INPROCEEDINGS{Bastos97,
+AUTHOR={Rui Bastos and Michael Goslin and Hansong Zhang},
+TITLE={Efficient Radiosity Rendering using Textures and Bicubic Reconstruction},
+BOOKTITLE={1997 Symposium on Interactive 3D Graphics},
+publisher={ACM SIGGRAPH},
+YEAR=1997,
+KEYWORDS={texture mapping},
+NOTE={To appear.
+http://www.cs.unc.edu/~bastos/radiosity.html},
+}
+
+@Article{Appel67qi,
+author =       "Arthur Appel",
+title =        "The Notion of Quantitative Invisibility and the
+Machine Rendering of Solids",
+year =         "1967",
+journal =      "Proc. ACM Natl. Mtg.",
+pages =        "387-393",
+keywords =     "hidden line",
+}
+
+@ARTICLE{Ackland81edge,
+  author =       "Bryan D. Ackland and Neil H. Weste",
+  title =        "The edge flag algorithm - a fill method for raster
+                 scan displays",
+  journal =      "IEEE Trans. on Comp.",
+  volume =       "C-30",
+  year =         "1981",
+  pages =        "41--47",
+  descriptors =  "Method; display; realization; two-dimensional plot;
+                 three-dimensional plot; graphics; frame store; polygon
+                 fill; raster scan; computer animation;",
+  annote =       "Contour (polygon) filling is a primitive required in
+                 many application areas of raster scan graphics. The
+                 bit-map memory in a frame-store display is
+                 computationally well suited to this task, as it
+                 provides a large scratch pad working space. In this
+                 paper, a number of contour filling algorithms based on
+                 the read/write properties of the frame-store memory are
+                 compared with the classical {"}ordered-edge-list{"}
+                 approach.",
+}
+
+@INPROCEEDINGS{Hardt96,
+author={Stephen Hardt and Seth Teller},
+title={High-Fidelity Radiosity Rendering at Interactive Rates},
+booktitle={Rendering Techniques '96},
+publisher={Springer-Verlag},
+year=1996,
+note={(Proc. Eurographics Workshop on Rendering)},
+pages={71-80,283},
+keywords={real time},
+}
+
+@TECHREPORT{Moller95ms,
+author={Tomas M\"oller},
+title={Virtual Radiosity},
+month={Sept.},
+year=1995,
+institution={Dept. of Computer Engineering, Lund Inst. of Tech., Sweden},
+keywords={texture mapping, graphics workstation, level of detail,
+virtual reality},
+note={Master's thesis, http://www.clarus.se/People/tompa/reports.html},
+annote={radiosity algorithm for graphics workstations that uses
+hardware texture mapping and multiple LODs},
+}
+
+@TECHREPORT{Moller96lic,
+author={Tomas M\"oller},
+title={Speed-Up Techniques for Computer Graphics},
+month={Dec.},
+year=1996,
+institution={Dept. of Computer Engineering, Chalmers U. of Tech., Sweden},
+number={250L},
+note={Licenciate thesis,
+http://www.clarus.se/People/tompa/reports.html},
+annote={66 pp.,
+contains four papers:
+(1) image resampling (Fast Bitmap Stretching, Gems III),
+(2) ray-surface intersection optimization (Faster Ray Tracing Using Scanline
+    Rejection, Gems V),
+(3) texturing for radiosity in VR (Radiosity Techniques for Virtual Reality,
+    Plzen, Czech, 1996),
+(4) faster soft shadows (Speed-Up Techniques for Soft Shadow Generation,
+    submitted 1996).
+},
+}
+
+@INPROCEEDINGS{Moller97shad,
+author={Tomas M\"oller},
+title={Speed-Up Techniques for Soft Shadow Generation},
+booktitle={SMCR'97 - Topical Workshop on VR
+and Advanced Man-Machine Interfaces},
+month={June},
+year=1997,
+address={Tampere, Finland},
+annote={variation on Heckbert-Herf soft shadow algorithm},
+}
+

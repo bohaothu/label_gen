@@ -1,0 +1,881 @@
+
+
+
+@MASTERSTHESIS{deNivelle1991,
+   AUTHOR      = {Hans de Nivelle},
+   TITLE       = {Complexity of Interpretation Problems in Truth Maintenance 
+                  Systems},
+   SCHOOL      = {Technische Universiteit Delft (the Netherlands)}, 
+   YEAR        = 1991,
+   MONTH       = {August},
+   ABSTRACT    = {A Truth Maintenance System is a system that maintains 
+                  {\em beliefs} using {\em non-monotonic justifications}.
+                  A non-monotonic justification is a rule of form
+                  $ A_1, \ldots, A_p, \mbox{abs}(B_1), \ldots, \mbox{abs}(B_q) 
+                   \rightarrow C, $ where $ \mbox{abs}(B_j) $ means that the
+                  belief $ B_j $ have to be absent. 
+                  Mostly, there are more than one interpretation possible:
+                  For example, the set 
+                  $ \abs(A) \rightarrow B, \ 
+                    \abs(B) \rightarrow A $ 
+                  would allow two belief sets, believing $ \{ A \}, $ 
+                  and believing $ \{ B \}. $ 
+                  The general problem of computing belief sets is
+                  NP-hard. If one allows $ 3 $-valued beliefs
+                  (by introducing dontknow), the problem becomes
+                  quadratic. This is called {\em skeptical semantics}.
+                  Unfortunately, for most interesting rule sets, nearly
+                  all beliefs will have the status 'dontknow', which
+                  is not very useful. 
+                  I showed in the thesis, that the skeptical semantics
+                  is the best possible tractable semantics. 
+               }
+}
+
+
+@INPROCEEDINGS{deNivelle1993,
+  AUTHOR       = {Hans de Nivelle},
+  EDITOR       = {Andrei Voronkov},
+  TITLE        = {Generic Resolution in Propositional Modal Systems}, 
+  BOOKTITLE    = {Proceedings of the 4th International Conference on 
+                  Logic Programming and Automated Reasoning (LPAR 93)}, 
+  PADDRESS     = {Berlin, Germany},
+  ADDRESS      = {St. Petersburg, Russia},
+  PUBLISHER    = {Springer Verlag},
+  MONTH        = {July},
+  SERIES       = {Lecture Notes in Artificial Intelligence},
+  VOLUME       = {698},
+  ISBN         = {3-540-56944-8},
+  YEAR         = {1993},
+  PAGES        = {241--252},
+  ABSTRACT     = {The papers presents a way of doing propositional 
+                  resolution directly in the modal calculus. Nice, 
+                  but obsolete by now}, 
+}
+
+
+@INPROCEEDINGS{deNivelle1994a,
+  AUTHOR       = {Hans de Nivelle},
+  EDITOR       = {Craig MacNish and David Pearce and
+                  {Lu\'{\i}s Moniz Pereira}},
+  TITLE        = {A Unification of Ordering Refinements of Resolution 
+                  in Classical Logic},
+  BOOKTITLE    = {Proceedings of the European Workshop on Logics in 
+                  Artificial Intelligence (JELIA) 94},
+  PADDRESS     = {Berlin, Germany},
+  ADDRESS      = {York, UK},
+  PUBLISHER    = {Springer Verlag},
+  MONTH        = {September},
+  SERIES       = {Lecture Notes in Artificial Intelligence},
+  VOLUME       = {838},
+  ISBN         = {3-540-58332-7},
+  YEAR         = {1994},
+  PAGES        = {217--230},
+  ABSTRACT     = {The papers gives a unified proof for several restrictions 
+                  of resolution. A naive paper},
+}
+
+
+@INPROCEEDINGS{deNivelle1994b,
+  AUTHOR       = {Cees Witteveen and Wiebe van der Hoek and Hans de Nivelle},
+  EDITOR       = {Craig MacNish and David Pearce and
+                  {Lu\'{\i}s Moniz Pereira}},
+  TITLE        = {Revision of Non-Monotonic Theories: Some Postulates and
+                  an Application to Logic Programming},
+  BOOKTITLE    = {Proceedings of the European Workshop on Logics in
+                  Artificial Intelligence (JELIA) 94},
+  PADDRESS     = {Berlin, Germany},
+  ADDRESS      = {York, UK},
+  PUBLISHER    = {Springer Verlag},
+  MONTH        = {September},
+  SERIES       = {Lecture Notes in Artificial Intelligence},
+  VOLUME       = {838},
+  ISBN         = {3-540-58332-7},
+  YEAR         = {1994},
+  PAGES        = {137--151},
+  ABSTRACT     = { },
+}
+ 
+
+@PHDTHESIS{deNivelle1995,
+   AUTHOR      = {Hans de Nivelle},
+   TITLE       = {Ordering Refinements of Resolution},
+   SCHOOL      = {Technische Universiteit Delft},
+   YEAR        = {1995},
+   ABSTRACT    = {The Thesis introduces the resolution game,
+                  proves completeness of non-liftable orders, 
+		  and proves decidability of the 
+                  $ E^{+} $-class by resolution}, 
+}
+
+
+@INPROCEEDINGS{deNivelle1996,
+   author =     {Hans de Nivelle},
+   title =      {Resolution Games and Non-Liftable Resolution Orderings},
+   editor =     {Leszek Pacholski and Jerzy Tiuryn},
+   year =       {1994},
+   pages =      {279--293}, 
+   address =    {Kazimierz Dolny, Poland}, 
+   month =      {september},
+   booktitle =  {Computer Science Logic (CSL) 94},
+   series =     {Lecture Notes in Computer Science},
+   volume =     {933},
+}
+
+
+@INPROCEEDINGS{deNivelle1996a,
+  AUTHOR       = {Hans de Nivelle},
+  EDITOR       = {Jos\'{e} J\'{u}lio Alferes and 
+                  Lu\'{\i}s Moniz Pereira and
+                  Ewa Orlowska},
+  TITLE        = {An Algorithm for Retrieval of Unifiers from Discrimination
+                  Trees},
+  BOOKTITLE    = {Proceedings of the European Workshop on Logics in 
+                  Artificial Intelligence (JELIA) 96},
+  PADDRESS     = {Berlin, Germany},
+  ADDRESS      = {\'{E}vora, Portugal},
+  PUBLISHER    = {Springer Verlag},
+  MONTH        = {September},
+  SERIES       = {Lecture Notes in Artificial Intelligence},
+  VOLUME       = {1126},
+  ISBN         = {3-540-61630-6},
+  YEAR         = {1996},
+  PAGES        = {18--33},
+  ABSTRACT     = {We present a modification of the unification algorithm that
+                  is adapted to the extraction of simultaneously unifiable
+                  literals from discrimination trees. The algorithm is useful
+                  for efficient implementation of binary resolution,
+                  hyperresolution, and paramodulation},
+}
+
+ 
+@INPROCEEDINGS{deNivelle1996b,
+  AUTHOR       = {Hans de Nivelle},
+  TITLE        = {Resolution Games and Non-liftable Resolution Orderings}, 
+  BOOKTITLE    = {Collegium Logicum: Annals of the Kurt-G\"{o}del Society}, 
+  PADDRESS     = {Wien, \"{O}stenreich},
+  ADDRESS      = {Wien, \"{O}stenreich},
+  PUBLISHER    = {Springer Verlag},
+  VOLUME       = {2},
+  ISBN         = {3-211-82796-X},
+  YEAR         = {1996},
+  PAGES        = {1--21},
+  ABSTRACT     = {One more time the resolution game is introduced,
+                  and it is used for proving completeness of resolution
+                  with Non-Liftable Orders. The proof of the completeness
+                  of resolution games proceeds by using proof tree 
+                  permutations}, 
+}
+
+@INPROCEEDINGS{deNivelle1997,
+  AUTHOR       = {de Nivelle, Hans},
+  EDITOR       = {William McCune},
+  TITLE        = {A Classification of Non-liftable Orders for Resolution}, 
+  BOOKTITLE    = {Proceedings of the 14th International Conference on Automated
+                  Deduction (CADE-14)}, 
+  PADDRESS     = {Berlin, Germany}, 
+  ADDRESS      = {Townsville, North Queensland Australia},
+  PUBLISHER    = {Springer Verlag},
+  MONTH        = {July},
+  SERIES       = {Lecture Notes in Artificial Intelligence},
+  VOLUME       = {1249},
+  ISBN         = {3-540-63104-6},
+  YEAR         = {1997},
+  PAGES        = {336--350},
+  ABSTRACT     = {The paper studies resolution restricted by various types 
+                  of non-liftable orders.
+                  Non-liftable orders are orders that do not satisfy 
+                  $ A \prec B \Rightarrow A \Theta \prec B \Theta. $ }, 
+}
+
+
+@ARTICLE{deNivelle1998a,
+  AUTHOR       = {de Nivelle, Hans},
+  JOURNAL      = {Journal of Automated Reasoning},
+  TITLE        = {An Algorithm for the Retrieval of Unifiers from Discrimination Trees},
+  NUMBER       = {1,2},
+  VOLUME       = {20}, 
+  PUBLISHER    = {Kluwer Academic Publishers},
+  ADDRESS      = {Dordrecht, the Netherlands}, 
+  MONTH        = {April},
+  ISBN         = {0168-7433},
+  YEAR         = {1998},
+  PAGES        = {5--25},
+  ABSTRACT     = {We present a modification of the unification algorithm that
+                  is adapted to the extraction of simultaneously unifiable 
+                  literals from discrimination trees. The algorithm is useful
+                  for efficient implementation of binary resolution, 
+                  hyperresolution, and paramodulation}, 
+}
+
+
+@INPROCEEDINGS{deNivelle1998b,
+  AUTHOR       = {Hans de Nivelle},
+  EDITOR       = {Claude Kirchner and H\'{e}l\`{e}ne Kirchner},
+  TITLE        = {A Resolution Decision Procedure for the Guarded Fragment}, 
+  BOOKTITLE    = {Proceedings of the 15th International Conference on Automated
+                  Deduction (CADE-15)}, 
+  PADDRESS     = {Berlin, Germany}, 
+  ADDRESS      = {Lindau, Germany},
+  PUBLISHER    = {Springer Verlag},
+  MONTH        = {July},
+  SERIES       = {Lecture Notes in Artificial Intelligence},
+  VOLUME       = {1421},
+  ISBN         = {3-540-64675-2},
+  YEAR         = {1998},
+  PAGES        = {191--204},
+  ABSTRACT     = {The paper gives a resolution decision procedure for the 
+                  guarded fragment of first-order logic. This is the 
+                  fragment of first-order logic that one obtains if one
+                  restricts quantification to the forms
+                  $ \forall \overline{x} a(\overline{x}, \overline{y}) 
+                            \rightarrow \Phi(\overline{x},\overline{y}), $ 
+                  and
+                  $ \exists \overline{x} a(\overline{x},\overline{y}) 
+                            \wedge \Phi( \overline{x}, \overline{y} ). $
+                  The procedure is theoretically optimal}, 
+ 
+}
+
+
+@INPROCEEDINGS{deNivelle1998natlang,
+   AUTHOR      = {Hans de Nivelle and Patrick Blackburn and Johan Bos 
+                  and Michael Kohlhase},
+   TITLE       = {Automated Theorem Proving for 
+                  Natural Language Understanding},
+   BOOKTITLE   = {Problem-solving Methodologies with Automated Deduction 
+                  (Workshop)},
+   YEAR =        {1998},
+   EDITOR =      {Peter Baumgartner and Ulrich Furbach and 
+                  Michael Kohlhase and William McCune and Wolfgang Reif and 
+                  Mark Stickel and Tomas Uribe},
+   NOTE =        {can be obtained from 
+                  \verb+http://www.uni-koblenz.de/~peter/cade-15-ws/+},
+}
+ 
+
+
+@MISC{deNivelleCASC1998,
+   AUTHOR = {de Nivelle, Hans},
+   TITLE = {Description of Bliksem~1.00},
+   YEAR = {1998}, 
+   HOWPUBLISHED = {Can be obtained from
+      \verb+http://www.cs.miami.edu/~tptp/CASC/15/SystemDescriptions.html+},
+   NOTE = {(A one page description of Bliksem~1.00 for CASC-15)},
+}
+
+
+@MISC{deNivelle1998++,
+   AUTHOR = {de Nivelle, Hans}, 
+   TITLE = {Theorem Prover {Bliksem}}, 
+   HOWPUBLISHED = {Can be obtained from 
+       \verb+http://www.mpi-sb.mpg.de/~nivelle/software/bliksem/index.html+},
+}
+
+@UNPUBLISHED{deNivelle1999_S4,
+   AUTHOR =      "Hans de Nivelle",
+   TITLE =       "Translation of {S4} and {K4} into {GF} and {2VAR}",
+   NOTE =        {Unpublished: can be found on 
+              \verb+http://www.mpi-sb.mpg.de/~nivelle+},
+   YEAR =        1999, 
+   MONTH =       {May},
+}
+
+
+@INPROCEEDINGS{deNivelle1999direct,
+  AUTHOR       = {Hans de Nivelle and Carlos Areces and Maarten de Rijke},
+  EDITOR       = {Ganzinger, Harald},
+  TITLE        = {Prefixed Resolution: A Resolution Method for Modal and Description Logics},
+  BOOKTITLE    = {Proceedings of the 16th International Conference on Automated Deduction (CADE-16)},
+  PADDRESS     = {Berlin, Germany},
+  ADDRESS      = {Trento, Italy},
+  PUBLISHER    = {Springer Verlag},
+  MONTH        = {July},
+  SERIES       = {Lecture Notes in Artificial Intelligence},
+  VOLUME       = {1632},
+  ISBN         = {3-540-66222-7},
+  YEAR         = {1999},
+  PAGES        = {187--201},
+  ABSTRACT     = {We provide a resolution-based proof procedure for modal
+and description logics that improves on previous proposals
+in a number of important ways. First, it avoids translations
+into large undecidable logics, and works directly on modal or
+description logic formulas instead. Second, by using labeled
+formulas, it avoids the complexities of earlier propositional
+resolution-based methods for modal logic. Third, it provides
+a method for manipulating so-called assertional information
+in the description-logic setting. And fourth, we believe
+that it combines ideas from the method of prefixes used in 
+tableaux and resolution in such a way that some of the
+heuristics and optimizations devised in either field
+are applicable.},
+}
+
+
+@INPROCEEDINGS{GanzingerNivelle-99-lics,
+  AUTHOR       = {Ganzinger, Harald and de Nivelle, Hans},
+  EDITOR       = {Longo, Giuseppe},
+  TITLE        = {A Superposition Decision Procedure for the Guarded 
+                  Fragment with Equality},
+  BOOKTITLE    = {Proceedings of the 14th Annual IEEE Symposium on 
+                  Logic in Computer Science (LICS-99)},
+  ORGANIZATION = {IEEE Computer Society},
+  PADDRESS     = {Los Alamitos, USA},
+  ADDRESS      = {Trento, Italy},
+  PUBLISHER    = {IEEE Computer Society},
+  ISBN         = {0-7695-0158-3},
+  YEAR         = {1999},
+  PAGES        = {295--303},
+  ABSTRACT     = {We give a decision procedure for the
+   guarded fragment with equality.
+   The procedure is based on resolution with superposition. 
+   The relevance of the guarded fragment lies in the fact
+   that many modal logics can be translated into it. 
+   In this way the guarded fragment acts as a framework explaining
+   some of the nice properties of these modal logics.
+   By constructing an implementable decision procedure for 
+   the guarded fragments we define an effective procedure
+   for deciding these modal logics. 
+   It is surprising to see that one does not need any sophisticated
+   simplification and redundancy elimination method to make superposition
+   terminate on the class of clauses that is obtained from the clausification
+   of guarded formulas. Yet the decision procedure obtained
+   is optimal with regard to time complexity.},
+}
+
+
+@ARTICLE{deNivelle2000,
+  AUTHOR       = {Hans de Nivelle},
+  JOURNAL      = {Annals of Pure and Applied Logic},
+  TITLE        = {Deciding the {$E^{+}$}-class by an a posteriori, 
+	          liftable order},
+  ADDRESS      = {Amsterdam, the Netherlands},
+  NUMBER       = {1},
+  PUBLISHER    = {Elsevier},
+  VOLUME       = {88},
+  YEAR         = {2000},
+  PAGES        = {219--232},
+}
+
+
+@INPROCEEDINGS{deNivelle2000a,
+  AUTHOR       = {Hans de Nivelle and Marc Bezem and Dimitri Hendriks},
+  EDITOR       = {McAllester, David},
+  TITLE        = {Automated Proof Construction in Type Theory Using Resolution},
+  BOOKTITLE    = {Proceedings of the 17th International Conference on 
+                  Automated Deduction (CADE-17)},
+  PADDRESS     = {Berlin, Germany},
+  ADDRESS      = {Carnegie Mellon University, Pittsburgh, PA, USA},
+  PUBLISHER    = {Springer Verlag},
+  MONTH        = {June},
+  SERIES       = {Lecture Notes in Artificial Intelligence},
+  VOLUME       = {1831},
+  ISBN         = {3-540-67664-3},
+  YEAR         = {2000},
+  PAGES        = {148--163},
+  ABSTRACT     = {We provide techniques to integrate resolution logic with 
+                  equality into type theory. The results may be rendered as 
+                  follows:
+
+                 - A clausification procedure in type theory, equipped with a 
+                 correctness proof, all encoded using higher-order primitive
+                 recursion.
+                 - A novel representation of clauses in minimal logic such that 
+                 the lambda-representation of resolution proofs is linear in 
+                 the size of the premises.
+                 - A translation of resolution proofs into lambda terms, 
+                 yielding a verification procedure for those proofs
+                 - The prower of resolution theorem provers becomes available
+                 in interactive proof construction systems based on type 
+                 theory},
+}
+
+
+@INPROCEEDINGS{deNivelle2000b,
+  AUTHOR       = {de Nivelle, Hans},
+  EDITOR       = {Faller, Martina and Kaufmann, Stefan and Pauly, Marc},
+  TITLE        = {An Overview of Resolution Decision Procedures},
+  BOOKTITLE    = {Formalizing the Dynamics of Information},
+  PADDRESS     = {Stanford, USA},
+  ADDRESS      = {Stanford University, Palo Alto, USA},
+  PUBLISHER    = {Center for the Study of Language and Information},
+  SERIES       = {CSLI Publications},
+  VOLUME       = {91},
+  ISBN         = {1-57586-239-5},
+  YEAR         = {2000},
+  PAGES        = {115--130},
+  ABSTRACT     = {In the paper I give a unified treatment of several first 
+                  order decidable classes, using resolution decision 
+		  procedures.},
+}
+
+
+
+@ARTICLE{deNivelle2000c,
+  AUTHOR       = {de Nivelle, Hans and Hustadt, Ullrich and Schmidt, Renate A.},
+  JOURNAL      = {Logic Journal of the IGPL},
+  TITLE        = {Resolution-Based Methods for Modal Logics},
+  ADDRESS      = {Oxford, UK},
+  NUMBER       = {3},
+  PUBLISHER    = {Oxford University Press},
+  MONTH        = {May},
+  VOLUME       = {8},
+  ISBN         = {1367-0751},
+  YEAR         = {2000},
+  PAGES        = {265--292},
+  NOTE         = {%My name is misspelt as 'Nivellle'},
+  ABSTRACT     = {We give an overview of resolution based methods for 
+                  propositional multimodal logics, and description logics. 
+		  The strategies that we give are decision procedures. 
+		  That means that they are guaranteed to terminate in 
+		  all cases.},
+}
+
+
+@UNPUBLISHED{deNivelle2000_data,
+   AUTHOR =      "Hans de Nivelle",
+   TITLE =       "Datastructures for Resolution",
+   NOTE =        {Unpublished: can be found on 
+                  \verb+http://www.mpi-sb.mpg.de/~nivelle+},
+   YEAR =        2000,
+   MONTH =       {February},
+}
+
+
+
+@PROCEEDINGS{deNivelleSchulz2001,
+  EDITOR = {Hans de Nivelle and Stehan Schulz},
+  TITLE =  {Proceedings of the 2nd International Workshop on the 
+            Implementation of Logics},
+  PUBLISHER = {Max-Planck-Institut {f\"{u}r} Informatik},
+  YEAR = {2001},
+  NUMBER = {MPI-I-2001-2-006},
+  PAGES = {102},
+  SERIES = {Research Report},
+  ADDRESS = {Havanna, Cuba},
+  ISBN = {0946-011X},
+  ABSTRACT = {The proceedings contain the papers that were accepted for
+     presentation at the Second International Workshop on the Implementation
+     of Logics. The workshop took place in Havana, Cuba on December 8th 
+     2001, in conjunction with the 8th International Conference on Logic
+     for Programming, Artificial Intelligence and Reasoning.
+     (LPAR 2001) All contributions were reviewed by an international
+     programm committee, whose names can be found in the introduction
+     of the proceedings}
+}
+
+
+
+@INPROCEEDINGS{deNivelle2001,
+  AUTHOR       = {Hans de Nivelle and Ian Pratt-Hartmann},
+  EDITOR       = {Gor{\'e}, Rajeev and Leitsch, Alexander and Nipkow, Tobias},
+  TITLE        = {A Resolution-Based Decision Procedure for the Two-Variable 
+                  Fragment with Equality},
+  BOOKTITLE    = {Proceedings of the 1st International Joint Conference on 
+                  Automated Reasoning (IJCAR-2001)},
+  PADDRESS     = {Berlin, Germany},
+  ADDRESS      = {Siena, Italy},
+  PUBLISHER    = {Springer Verlag},
+  MONTH        = {July},
+  SERIES       = {Lecture Notes in Artificial Intelligence},
+  VOLUME       = {2083},
+  ISBN         = {3-540-42254-4},
+  YEAR         = {2001},
+  PAGES        = {211--225},
+  ABSTRACT     = {The two-variable fragment of first-order logic is the
+                  set of formulas that do not contain function symbols,
+                  that possibly contain equality, and that contain at
+                  most two variables. This paper shows how resolution
+                  theorem-proving techniques can be used to provide an 
+                  algorithm for deciding whether or not any given formula 
+                  in the two-variable fragment is satisfiable. Previous
+                  resolution-based techniques could deal only with the 
+                  equality-free subset of the two-variable fragment. },
+}
+
+
+@INCOLLECTION{deNivelledeRijke2001a,
+   AUTHOR      = {Hans de Nivelle and Maarten de Rijke},
+   TITLE       = {Theorem Prover},
+   BOOKTITLE   = {{Encyclopedia of Mathematics, Supplement~2}},
+   PUBLISHER   = {Kluwer Academic Publishers},
+   YEAR        = {2000},
+   PAGES       = {452--453},
+   EDITOR      = {M. Hazewinkel},
+}
+
+
+@INCOLLECTION{deNivelledeRijke2001b,
+   AUTHOR      = {Hans de Nivelle and Maarten de Rijke},
+   TITLE       = {The {Boyer-Moore} Theorem Prover},
+   BOOKTITLE   = {{Encyclopedia of Mathematics, Supplement~2}},
+   PUBLISHER   = {Kluwer Academic Publishers},
+   YEAR        = {2000},
+   PAGES       = {83--84},
+   EDITOR      = {M. Hazewinkel},
+}
+
+
+@ARTICLE{deNivelle2001hyb,
+  AUTHOR       = {Carlos Areces and Maarten de Rijke and 
+                  Hans de Nivelle},
+  JOURNAL      = {Journal of Logic and Computation},
+  TITLE        = {Resolution in Modal, Description and Hybrid Logic},
+  ADDRESS      = {Oxford},
+  NUMBER       = {5},
+  PUBLISHER    = {Oxford University Press},
+  VOLUME       = {11},
+  YEAR         = {2001},
+  PAGES        = {717--736},
+  ABSTRACT     = {We provide a resolution-based proof procedure for modal,
+     description and hybrid logic that improves on previous proposals in 
+     important ways. It avoids translations into large undecidable logics,
+     and works directly on modal, description or hybrid logic formulas instead.
+     In addition, by using the hybrid machinery it avoids the complexities 
+     of earlier propositional resolution-based methods for modal logic.
+     It combines ideas from the method of prefixes used in tableaux,
+     and resolution ideas in such a way that some of the heuristics 
+     and optimizations devised in either field are applicable} 
+}    
+
+
+@INPROCEEDINGS{deNivelle2001lpar,
+  AUTHOR       = {Hans de Nivelle},
+  EDITOR       = {Robert Nieuwenhuis and Andrei Voronkov},
+  TITLE        = {Splitting through New Proposition Symbols},
+  BOOKTITLE    = {Proceedings of the 8th International Conference on Logic for Programming, Artificial Intelligence, and Reasoning (LPAR-2001)},
+  PADDRESS     = {Berlin, Germany},
+  ADDRESS      = {Havana, Cuba},
+  PUBLISHER    = {Springer Verlag},
+  MONTH        = {December},
+  SERIES       = {Lecture Notes in Computer Science},
+  VOLUME       = {2250},
+  ISBN         = {3-540-42957-3},
+  YEAR         = {2001},
+  PAGES        = {172--185},
+  ABSTRACT     = {This paper presents ways of simulating the splitting 
+                  rule by introducing new propositional symbols. The 
+		  contribution of the paper
+                  is that the method presented does not loose backward
+                  redundancy.
+                  We give a general method of obtaining a calculus with 
+                  splitting from a resolution restriction without splitting
+		  by adjoining splitting symbols.
+                  We then prove a relative completeness theorem: Every 
+                  saturated set of clauses of the resolution calculus with 
+                  adjoined proposition symbols contains a saturated set of 
+                  the original resolution refinement without adjoined 
+                  symbols},
+}
+
+
+
+@ARTICLE{deNivelle2001slp,
+  AUTHOR       = {Hans de Nivelle and Patrick Blackburn and 
+                  Johan Bos and Michael Kohlhase},
+  JOURNAL      = {Studies in Linguistics and Philosophy, Computing Meaning},
+  TITLE        = {Inference and Computational Semantics},
+  ADDRESS      = {Dordrecht, The Netherlands},
+  NUMBER       = {2},
+  PUBLISHER    = {Kluwer},
+  VOLUME       = {77},
+  ISBN         = {1-4020-0175-4},
+  YEAR         = {2001},
+  PAGES        = {11--28},
+}
+
+
+
+@INPROCEEDINGS{deNivelle2002a,
+  AUTHOR       = {Hans de Nivelle},
+  EDITOR       = {Julian Bradfield},
+  TITLE        = {Extraction of Proofs from the Clausal Normal Form 
+                  Transformation},
+  BOOKTITLE    = {Proceedings of the 16th International Workshop on Computer 
+                  Science Logic (CSL 2002)},
+  PADDRESS     = {Berlin, Germany},
+  ADDRESS      = {Edinburgh, Scotland, UK},
+  PUBLISHER    = {Springer Verlag},
+  MONTH        = {September},
+  SERIES       = {Lecture Notes in Artificial Intelligence},
+  VOLUME       = {2471},
+  ISBN         = {3-540-44240-5},
+  YEAR         = {2002},
+  PAGES        = {584--598},
+  ABSTRACT     = {The paper discusses three problems that arise
+                  when one wants to construct a clausal normal form of 
+		  a first-order formula, and simultaneously construct 
+		  a proof that this clausal normal form is correct. 
+		  We assume that the resulting proofs are in type theory. 
+		  First the problem of non-equivalence preserving
+		  transformations is discussed. It turns out that 
+		  all such transformations are second order provable
+		  if one assumes choice axioms. 
+		  Second, the problem of the size of the resulting proofs
+		  is discussed. It can be handled by using introduction of 
+		  definitions, and by using proof normalization.
+		  The third problem discussed, is the problem 
+		  of handling strong and optimized Skolemization.
+		  We show that both types of Skolemization can be
+		  reduced to standard Skolemization, so that only
+		  one type of choice axioms is needed.}, 
+}
+
+
+@ARTICLE{BezemHendriksdeNivelle2002b, 
+  AUTHOR       = {Marc Bezem and Dimitri Hendriks and Hans de Nivelle},
+  JOURNAL      = {Journal of Automated Reasoning},
+  TITLE        = {Automated Proof Construction in Type Theory Using 
+                  Resolution},
+  ADDRESS      = {Dordrecht, the Netherlands},
+  PUBLISHER    = {Kluwer Academic Publishers},
+  MONTH        = {December},
+  NUMBER       = {3-4},
+  VOLUME       = {29},
+  YEAR         = {2002},
+  PAGES        = {253--275},
+  ABSTRACT     = {We provide techniques to integrate resolution logic 
+                  with equality into type theory. Concretely, the paper 
+		  contains the following results: 
+                  A clausification procedure in type theory, equipped 
+		  with a correctness proof, all encoded in COQ using 
+		  higher-order primitive recursion.
+                  A novel representation of clauses in minimal logic such 
+		  that the representation of resolution steps is linear 
+		  in the size of the premisses.
+                  A translation of resolution proofs into lambda terms, 
+		  yielding a verification procedure for those proofs.}, 
+
+}
+
+
+@ARTICLE{deNivelledeRijke2003a,
+  AUTHOR       = {Hans de Nivelle and Maarten de Rijke},
+  JOURNAL      = {Journal of Symbolic Computation},
+  TITLE        = {Deciding the Guarded Fragments by Resolution},
+  ADDRESS      = {Amsterdam, the Netherlands},
+  PUBLISHER    = {Elsevier Science},
+  MONTH        = {January},
+  NUMBER       = {1},
+  VOLUME       = {35},
+  YEAR         = {2003},
+  ISBN         = {0747-7171}, 
+  PAGES        = {21--58},
+  ABSTRACT     = {We give resolution based decision procedures for both
+                  the strictly guarded fragment and the loosely guarded
+                  fragment of first-order logic. We prove that the 
+                  decision procedures are in 2EXPTIME, which is theoretically
+                  optimal.}, 
+}
+
+
+
+
+@INPROCEEDINGS{deNivelle2003b,
+   AUTHOR       = {Hans de Nivelle},
+   EDITOR       = {Franz Baader},
+   TITLE        = {Translation of Resolution Proofs into Short First-Order 
+                   Proofs without Choice Axioms}, 
+   BOOKTITLE    = {Proceedings of the 19th International Conference on Computer
+                   Aided Deduction (CADE 19)},
+   PADDRESS     = {Berlin, Germany},
+   ADDRESS      = {Miami, USA},
+   PUBLISHER    = {Springer Verlag},
+   MONTH        = {July},
+   SERIES       = {Lecture Notes in Artificial Intelligence},
+   VOLUME       = {2741},
+   ISBN         = {3-540-40559-3},
+   YEAR         = {2003},
+   PAGES        = {365--379},
+   NOTE         = "An extended version will appear in a special issue of
+                   selected CADE papers", 
+   ABSTRACT     = {The paper presents a technique for translating resolution
+                   proofs (including the clausal normal form transformation)
+		   into natural deduction proofs. The resulting proofs are in 
+		   pure first-order logic, do not use choice axioms, and
+		   have polynomial size, (compared to the resolution proof).
+		   Before, only non-elementary such procedures where known},
+}
+
+
+@TechReport{deNivelleDemri2003a,
+   author =      {St\'{e}phane Demri and Hans de Nivelle},
+   title =       {Deciding regular grammar logics with converse through 
+                  first-order logic},
+   institution = {Laboratoire Sp\'{e}cification et V\'{e}rification,
+                 ENS Cachan},
+   year =        {2003},
+   type =        "Research Report", 
+   number =      "LSV-03-4",
+   month =       "February",
+   note =        "29 pages, can be retrieved from
+                  \verb+www.lsv.ens-cachan.fr/Publis/publis-y3-all.php+",
+   address =     "Cachan, France", 
+}
+
+
+
+
+@Misc{deNivelleDemri2003b, 
+   author =       {St\'{e}phane Demri and Hans de Nivelle},
+   title =        {Deciding regular grammar logics with converse 
+                   through first-order logic},
+   howpublished = {arXiv:cs.LO/0306117},
+   month =        {June},
+   year =         {2003},
+   note =         {Submitted to TOCL, can be retrieved from
+                   \verb+arxiv.org/abs/cs.LO/0306117+},
+}
+
+
+
+			 
+@TECHREPORT{KazakovNivelle2003,
+  AUTHOR = {Yevgeny Kazakov and Hans de Nivelle},
+  TITLE = {Subsumption of concepts in {$DL$} {${\cal FL}_0$} for (cyclic) 
+           terminologies with respect to the descriptive semantics is 
+	   {PSPACE}-complete},
+  TYPE = {Research Report},
+  INSTITUTION = {Max-Planck-Institut f{\"u}r Informatik},
+  ADDRESS = {Stuhlsatzenhausweg 85, 66123 Saarbr{\"u}cken, Germany},
+  NUMBER = {MPI-I-2003-2-003},
+  MONTH = {April},
+  YEAR = {2003},
+  ISSN = {0946-011X},
+  abstract = {We show that the subsumption
+	      problem for {\cal FL}_0 with descriptive semantics is
+	      {PSPACE}-complete, when cyclic definitions are allowed. 
+              {\cal FL}_0 is the description logic that allows only 
+	      conjuction and universal value restriction. 
+	      The problem of the exact complexity of this problem
+	      has been open since 1990. Before, it was only known to be
+	      between co-NP and {PSPACE}},
+}
+
+
+@INPROCEEDINGS{Kazakov03SubsumptionFLzero,
+   AUTHOR = {Kazakov, Yevgeny and de Nivelle, Hans},
+   TITLE = {Subsumption of Concepts in $ {FL_0} $ for (Cyclic) 
+            Terminologies with Respect to Descriptive Semantics is 
+	    {PSPACE}-complete},
+   BOOKTITLE = {2003 International Workshop on Description Logics (DL2003)},
+   PUBLISHER = {CEUR},
+   YEAR = {2003},
+   ORGANIZATION = {University of Rome "La Sapienza" and Free 
+                   University of Bolzano/Bozen},
+   VOLUME = {81},
+   PAGES = {56--64},
+   SERIES = {CEUR Workshop Proceedings},
+   ADDRESS = {Rome, Italy},
+   MONTH = {September},
+   ISBN = {1613-0073},
+}
+
+
+
+
+@INPROCEEDINGS{deNivelleDemri2003c,
+   AUTHOR       = {St\'{e}phane Demri and Hans de Nivelle},
+   EDITOR       = {Carlos Areces and Patrick Blackburn},
+   TITLE        = {Deciding Modal Logics through Relational Translations
+                   into {GF$^2$}},
+   BOOKTITLE    = {Proceedings of the 3d Methods for Modalities Workshop},
+   PADDRESS     = {Berlin, Germany},
+   ADDRESS      = {Nancy, France},
+   MONTH        = {September},
+   YEAR         = {2003},
+}
+
+
+@INPROCEEDINGS{deNivelle2003c,
+   AUTHOR = {de Nivelle, Hans},
+   TITLE = {Implementing the clausal normal form transformation 
+            with proof generation},
+   BOOKTITLE = {fourth workshop on the implementation of logics},
+   PUBLISHER = {University of Liverpool, University of Manchester},
+   YEAR = {2003},
+   PAGES = {69--83},
+   ADDRESS = {Almaty, Kazachstan},
+}
+
+
+@INPROCEEDINGS{KazNiv04ResGFTG,
+   AUTHOR = {Kazakov, Yevgeny and de Nivelle, Hans},
+   TITLE = {A resolution decision procedure for the guarded fragment with
+            transitive guards},
+   BOOKTITLE = {Second International Joint Conference on Automated 
+                Reasoning (IJCAR~2004)},
+   PUBLISHER = {Springer Verlag},
+   YEAR = {2004},
+   VOLUME = {3097},
+   PAGES = {122--136},
+   SERIES = {Lecture Notes in Artificial Intelligence},
+   ADDRESS = {Cork, Ireland},
+   MONTH = {July},
+   ISBN = {3-540-22345-2},
+   EDITOR = {Micha\"{e}l Rusinowitch and David Basin},
+}
+
+
+@ARTICLE{deNivelle2005a,
+AUTHOR = {de Nivelle, Hans},
+EDITOR = {Franz Baader},
+TITLE = {Translation of Resolution Proofs into 
+         Short First-Order Proofs without Choice Axioms},
+JOURNAL = {Information and Computation},
+PUBLISHER = {Elsevier},
+YEAR = {2005},
+NUMBER = {1},
+VOLUME = {199},
+PAGES = {24--54},
+Month = {April},
+booktitle = {19th International Conference on Automated Deduction},
+}
+
+
+@ARTICLE{deNivelleDemri2005,
+AUTHOR = {de Nivelle, Hans and Demri, St\'{e}phane},
+TITLE = {Deciding Regular Grammar Logics with Converse through 
+         First-Order Logic},
+JOURNAL = {Journal of Logic, Language and Information},
+PUBLISHER = {Springer},
+YEAR = {2005},
+NUMBER = {3},
+VOLUME = {14},
+PAGES = {289--329},
+ADDRESS = {Dordrecht, the Netherlands},
+MONTH = {June},
+isbn = {0925-8531},
+}
+
+
+@inproceedings{deNivellePiskac2005a,
+   AUTHOR = {de Nivelle, Hans and Piskac, Ruzica},
+   TITLE = {Verification of an Off-Line Checker for Priority-Queues}, 
+   booktitle = {Proceedings of the 3d IEEE International Conference
+	        on Software Engineering and Formal Methods},
+   YEAR = {2005},
+   MONTH = {September},
+   pages = {210--219},
+   editor = {Peter H. Schmitt}, 
+   publisher = {IEEE Computer Society Press},
+   address = {Koblenz},
+}
+
+
+
+@INPROCEEDINGS{deNivelle2006a,
+   AUTHOR = {de Nivelle, Hans and Meng, Jia},
+   EDITOR = {John Harrison and Ulrich Furbach and Natarajan Shankar},
+   TITLE = {Geometric Resolution: 
+	    A Proof Procedure Based on Finite Model Search},
+   BOOKTITLE = {International Joint Conference on Automated Reasoning 2006},
+   PUBLISHER = {Springer},
+   YEAR = {2006},
+   PAGES = {15 pages},
+   ADDRESS = {Seattle, USA},
+   MONTH = {August},
+   note = {accepted}, 
+}
+
+

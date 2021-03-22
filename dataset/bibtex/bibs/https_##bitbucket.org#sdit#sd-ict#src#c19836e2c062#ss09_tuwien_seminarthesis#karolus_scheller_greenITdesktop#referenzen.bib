@@ -1,0 +1,1340 @@
+
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>
+  sdit / SD-ICT / source &mdash; Bitbucket
+</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="description" content="" />
+  <meta name="keywords" content="" />
+  <!--[if lt IE 9]>
+  <script src="https://dwz7u9t8u8usb.cloudfront.net/m/46c15ee9bc85/js/lib/html5.js"></script>
+  <![endif]-->
+
+  <script>
+    (function (window) {
+      // prevent stray occurrences of `console.log` from causing errors in IE
+      var console = window.console || (window.console = {});
+      console.log || (console.log = function () {});
+
+      var BB = window.BB || (window.BB = {});
+      BB.debug = false;
+      BB.cname = false;
+      BB.CANON_URL = 'https://bitbucket.org';
+      BB.MEDIA_URL = 'https://dwz7u9t8u8usb.cloudfront.net/m/46c15ee9bc85/';
+      BB.user || (BB.user = {});
+      BB.user.has = (function () {
+        var betaFeatures = [];
+        
+        return function (feature) {
+          return _.contains(betaFeatures, feature);
+        };
+      }());
+      BB.repo || (BB.repo = {});
+  
+  
+      BB.user.isAdmin = false
+      BB.repo.id = 22215;
+    
+    
+      BB.repo.slug = 'sd\u002Dict';
+    
+    
+      BB.repo.owner = {
+        username: 'sdit'
+      };
+    
+      // Coerce `BB.repo` to a string to get
+      // "davidchambers/mango" or whatever.
+      BB.repo.toString = function () {
+        return this.owner.username + '/' + this.slug;
+      }
+    
+      BB.changeset = 'c19836e2c062'
+    
+    
+  
+    }(this));
+  </script>
+
+  
+    <link rel="stylesheet" href="https://dwz7u9t8u8usb.cloudfront.net/m/46c15ee9bc85/bun/css/bundle.css"/>
+  
+
+  <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="Bitbucket" />
+  <link rel="icon" href="https://dwz7u9t8u8usb.cloudfront.net/m/46c15ee9bc85/img/logo_new.png" type="image/png" />
+  <link type="text/plain" rel="author" href="/humans.txt" />
+
+
+  
+    <script src="https://dwz7u9t8u8usb.cloudfront.net/m/46c15ee9bc85/bun/js/bundle.js"></script>
+  
+
+
+
+</head>
+
+<body class="">
+  <script type="text/javascript">
+    if (!RegExp(" AppleWebKit/").test(navigator.userAgent)) {
+    $('body').addClass('non-webkit');
+    }
+  </script>
+  <!--[if IE 8]>
+  <script>jQuery(document.body).addClass('ie8')</script>
+  <![endif]-->
+  <!--[if IE 9]>
+  <script>jQuery(document.body).addClass('ie9')</script>
+  <![endif]-->
+
+  <div id="wrapper">
+
+
+
+  <div id="header-wrap">
+    <div id="header">
+    <ul id="global-nav">
+      <li><a class="home" href="http://www.atlassian.com">Atlassian Home</a></li>
+      <li><a class="docs" href="http://confluence.atlassian.com/display/BITBUCKET">Documentation</a></li>
+      <li><a class="support" href="/support">Support</a></li>
+      <li><a class="blog" href="http://blog.bitbucket.org">Blog</a></li>
+      <li><a class="forums" href="http://groups.google.com/group/bitbucket-users">Forums</a></li>
+    </ul>
+    <a href="/" id="logo">Bitbucket by Atlassian</a>
+
+    <div id="main-nav" class="clearfix">
+    
+      <ul class="clearfix">
+        <li><a href="/features">Features</a></li>
+        <li><a href="/plans">Pricing &amp; signup</a></li>
+        <li><a href="/explore">Explore Bitbucket</a></li>
+        <li><a href="/account/signin/?next=/sdit/sd-ict/src/c19836e2c062/ss09_tuwien_seminarthesis/karolus_scheller_greenITdesktop/referenzen.bib">Log in</a></li>
+        
+
+<li class="search-box">
+  
+    <form action="/repo/all">
+      <input type="search" results="5" autosave="bitbucket-explore-search"
+             name="name" id="searchbox"
+             placeholder="Find a project" />
+  
+  </form>
+</li>
+
+      </ul>
+    
+    </div>
+    </div>
+  </div>
+
+    <div id="header-messages">
+  
+  
+    
+    
+    
+    
+  
+
+    
+   </div>
+
+
+
+    <div id="content">
+      <div id="unnamed">
+      
+  
+  
+
+
+
+
+
+  <script>
+    jQuery(function ($) {
+        var cookie = $.cookie,
+            cookieOptions, date,
+            $content = $('#content'),
+            $pane = $('#what-is-bitbucket'),
+            $hide = $pane.find('[href="#hide"]').css('display', 'block').hide();
+
+        date = new Date();
+        date.setTime(date.getTime() + 365 * 24 * 60 * 60 * 1000);
+        cookieOptions = { path: '/', expires: date };
+
+        if (cookie('toggle_status') == 'hide') $content.addClass('repo-desc-hidden');
+
+        $('#toggle-repo-content').click(function (event) {
+            event.preventDefault();
+            $content.toggleClass('repo-desc-hidden');
+            cookie('toggle_status', cookie('toggle_status') == 'show' ? 'hide' : 'show', cookieOptions);
+        });
+
+        if (!cookie('hide_intro_message')) $pane.show();
+
+        $hide.click(function (event) {
+            event.preventDefault();
+            cookie('hide_intro_message', true, cookieOptions);
+            $pane.slideUp('slow');
+        });
+
+        $pane.hover(
+            function () { $hide.fadeIn('fast'); },
+            function () { $hide.fadeOut('fast'); });
+
+      (function () {
+        // Update "recently-viewed-repos" cookie for
+        // the "repositories" drop-down.
+        var
+          id = BB.repo.id,
+          cookieName = 'recently-viewed-repos_' + BB.user.id,
+          rvr = cookie(cookieName),
+          ids = rvr? rvr.split(','): [],
+          idx = _.indexOf(ids, '' + id);
+
+        // Remove `id` from `ids` if present.
+        if (~idx) ids.splice(idx, 1);
+
+        cookie(
+          cookieName,
+          // Insert `id` as the first item, then call
+          // `join` on the resulting array to produce
+          // something like "114694,27542,89002,84570".
+          [id].concat(ids.slice(0, 4)).join(),
+          {path: '/', expires: 1e6} // "never" expires
+        );
+      }());
+    });
+  </script>
+
+
+
+  
+  
+  
+  
+  
+    <div id="what-is-bitbucket" class="new-to-bitbucket">
+      <h2>sdit <span id="slogan">is sharing code with you</span></h2>
+      <img src="https://dwz7u9t8u8usb.cloudfront.net/m/46c15ee9bc85/img/no_avatar.gif" alt="" class="avatar" />
+      <p>Bitbucket is a code hosting site. Unlimited public and private repositories. Free for small teams.</p>
+      <div class="primary-action-link signup"><a href="/account/signup/?utm_source=internal&utm_medium=banner&utm_campaign=what_is_bitbucket">Try Bitbucket free</a></div>
+      <a href="#hide" title="Don't show this again">Don't show this again</a>
+    </div>
+  
+
+
+<div id="tabs">
+  <ul class="tabs">
+    <li>
+      <a href="/sdit/sd-ict/overview">Overview</a>
+    </li>
+
+    <li>
+      <a href="/sdit/sd-ict/downloads">Downloads (<span id="downloads-count">5</span>)</a>
+    </li>
+
+    
+
+    <li>
+      <a href="/sdit/sd-ict/pull-requests">Pull requests (0)</a>
+    </li>
+
+    <li class="selected">
+      
+        <a href="/sdit/sd-ict/src">Source</a>
+      
+    </li>
+
+    <li>
+      <a href="/sdit/sd-ict/changesets">Commits</a>
+    </li>
+
+    
+      
+        <li class="dropdown">
+          <a href="/sdit/sd-ict/wiki">Wiki</a>
+        </li>
+      
+    
+
+    
+      
+        <li class="dropdown inertial-hover">
+          <a href="/sdit/sd-ict/issues?status=new&amp;status=open">Issues (0) &raquo;</a>
+          <ul>
+            <li><a href="/sdit/sd-ict/issues/new">Create new issue</a></li>
+            <li><a href="/sdit/sd-ict/issues?status=new">New issues</a></li>
+            <li><a href="/sdit/sd-ict/issues?status=new&amp;status=open">Open issues</a></li>
+            <li><a href="/sdit/sd-ict/issues?status=duplicate&amp;status=invalid&amp;status=resolved&amp;status=wontfix">Closed issues</a></li>
+            
+            <li><a href="/sdit/sd-ict/issues">All issues</a></li>
+            <li><a href="/sdit/sd-ict/issues/query">Advanced query</a></li>
+          </ul>
+        </li>
+      
+    
+
+    
+
+    <li class="secondary">
+      <a href="/sdit/sd-ict/descendants">Forks/queues (0)</a>
+    </li>
+
+    <li class="secondary">
+      <a href="/sdit/sd-ict/zealots">Followers (<span id="followers-count">2</span>)</a>
+    </li>
+  </ul>
+</div>
+
+
+  <div class="repo-menu" id="repo-menu">
+    <ul id="repo-menu-links">
+    
+      <li>
+        <a href="/sdit/sd-ict/rss" class="rss" title="RSS feed for SD-ICT">RSS</a>
+      </li>
+
+      <li><a href="/sdit/sd-ict/fork" class="fork">fork</a></li>
+      
+        
+          <li><a href="/sdit/sd-ict/hack" class="patch-queue">patch queue</a></li>
+        
+      
+      <li>
+        <a rel="nofollow" href="/sdit/sd-ict/follow" class="follow">follow</a>
+      </li>
+      
+          
+      
+      
+        <li class="get-source inertial-hover">
+          <a class="source">get source</a>
+          <ul class="downloads">
+            
+              
+              <li><a rel="nofollow" href="/sdit/sd-ict/get/c19836e2c062.zip">zip</a></li>
+              <li><a rel="nofollow" href="/sdit/sd-ict/get/c19836e2c062.tar.gz">gz</a></li>
+              <li><a rel="nofollow" href="/sdit/sd-ict/get/c19836e2c062.tar.bz2">bz2</a></li>
+            
+          </ul>
+        </li>
+      
+    </ul>
+
+  
+    <ul class="metadata">
+      
+      
+        <li class="branches inertial-hover">branches
+          <ul>
+            <li><a href="/sdit/sd-ict/src/a54895eb08e0">default</a>
+              
+              
+            </li>
+          </ul>
+        </li>
+      
+      
+      <li class="tags inertial-hover">tags
+        <ul>
+          <li><a href="/sdit/sd-ict/src/a54895eb08e0">tip</a>
+            
+            </li>
+        </ul>
+      </li>
+     
+     
+    </ul>
+  
+</div>
+<div class="repo-menu" id="repo-desc">
+  
+    <ul id="repo-menu-links-mini">
+      <li><a rel="nofollow" class="compare-link"
+             href="/sdit/sd-ict/compare/../"
+             title="Show changes between SD-ICT and "
+             ></a></li>
+      
+  
+
+      
+      <li>
+        <a href="/sdit/sd-ict/rss" class="rss" title="RSS feed for SD-ICT"></a>
+      </li>
+
+      <li><a href="/sdit/sd-ict/fork" class="fork" title="Fork"></a></li>
+      
+        
+          <li><a href="/sdit/sd-ict/hack" class="patch-queue" title="Patch queue"></a></li>
+        
+      
+      <li>
+        <a rel="nofollow" href="/sdit/sd-ict/follow" class="follow">follow</a>
+      </li>
+      
+          
+      
+    
+      
+        <li>
+          <a class="source" title="Get source"></a>
+          <ul class="downloads">
+            
+              
+                <li><a rel="nofollow" href="/sdit/sd-ict/get/a54895eb08e0.zip">zip</a></li>
+                <li><a rel="nofollow" href="/sdit/sd-ict/get/a54895eb08e0.tar.gz">gz</a></li>
+                <li><a rel="nofollow" href="/sdit/sd-ict/get/a54895eb08e0.tar.bz2">bz2</a></li>
+              
+            
+          </ul>
+        </li>
+      
+    
+    </ul>
+
+    <h3 id="repo-heading">
+      <a class="owner-username" href="/sdit">sdit</a> /
+      <a class="repo-name" href="/sdit/sd-ict/wiki/Home">SD-ICT</a>
+    
+
+    
+    </h3>
+
+
+  <p class="repo-desc-description">Sustainable Development and ICT</p>
+
+
+  <div id="repo-desc-cloneinfo">Clone this repository (size: 2.5 MB):
+    <a href="https://bitbucket.org/sdit/sd-ict" class="https">HTTPS</a> /
+    <a href="ssh://hg@bitbucket.org/sdit/sd-ict" class="ssh">SSH</a>
+    <pre id="clone-url-https">hg clone https://bitbucket.org/sdit/sd-ict</pre>
+    <pre id="clone-url-ssh">hg clone ssh://hg@bitbucket.org/sdit/sd-ict</pre>
+    
+  </div>
+
+  <a href="#" id="toggle-repo-content"></a>
+
+  
+
+</div>
+
+
+
+
+      
+
+  <div id="source-path">
+    <h1>
+      <a href="/sdit/sd-ict/src">SD-ICT</a> /
+
+  
+    
+      <a href="/sdit/sd-ict/src/c19836e2c062/ss09_tuwien_seminarthesis/">ss09_tuwien_seminarthesis</a> /
+    
+  
+
+  
+    
+      <a href="/sdit/sd-ict/src/c19836e2c062/ss09_tuwien_seminarthesis/karolus_scheller_greenITdesktop/">karolus_scheller_greenITdesktop</a> /
+    
+  
+
+  
+    
+      referenzen.bib
+    
+  
+
+    </h1>
+  </div>
+
+
+  
+  <div id="source-view">
+    <div class="header">
+      <ul class="metadata">
+        <li><code>c19836e2c062</code></li>
+        <li>392 loc</li>
+        <li>11.5 KB</li>
+      </ul>
+      <ul class="source-view-links">
+        
+        <li><a id="embed-link" href="https://bitbucket.org/sdit/sd-ict/src/c19836e2c062/ss09_tuwien_seminarthesis/karolus_scheller_greenITdesktop/referenzen.bib?embed=t">embed</a></li>
+        
+        <li><a href="/sdit/sd-ict/history/ss09_tuwien_seminarthesis/karolus_scheller_greenITdesktop/referenzen.bib">history</a></li>
+        
+        <li><a href="/sdit/sd-ict/annotate/c19836e2c062/ss09_tuwien_seminarthesis/karolus_scheller_greenITdesktop/referenzen.bib">annotate</a></li>
+        
+        <li><a href="/sdit/sd-ict/raw/c19836e2c062/ss09_tuwien_seminarthesis/karolus_scheller_greenITdesktop/referenzen.bib">raw</a></li>
+        <li>
+          <form action="/sdit/sd-ict/diff/ss09_tuwien_seminarthesis/karolus_scheller_greenITdesktop/referenzen.bib" class="source-view-form">
+          
+            <input type="hidden" name="diff2" value="c19836e2c062" />
+            <select name="diff1">
+            
+              
+                <option value="894c42fecf8e">894c42fecf8e</option>
+              
+            
+              
+            
+            </select>
+            <input type="submit" value="diff" />
+          
+          </form>
+        </li>
+      </ul>
+    </div>
+  
+    <div>
+    <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><a href="#cl-1">  1</a>
+<a href="#cl-2">  2</a>
+<a href="#cl-3">  3</a>
+<a href="#cl-4">  4</a>
+<a href="#cl-5">  5</a>
+<a href="#cl-6">  6</a>
+<a href="#cl-7">  7</a>
+<a href="#cl-8">  8</a>
+<a href="#cl-9">  9</a>
+<a href="#cl-10"> 10</a>
+<a href="#cl-11"> 11</a>
+<a href="#cl-12"> 12</a>
+<a href="#cl-13"> 13</a>
+<a href="#cl-14"> 14</a>
+<a href="#cl-15"> 15</a>
+<a href="#cl-16"> 16</a>
+<a href="#cl-17"> 17</a>
+<a href="#cl-18"> 18</a>
+<a href="#cl-19"> 19</a>
+<a href="#cl-20"> 20</a>
+<a href="#cl-21"> 21</a>
+<a href="#cl-22"> 22</a>
+<a href="#cl-23"> 23</a>
+<a href="#cl-24"> 24</a>
+<a href="#cl-25"> 25</a>
+<a href="#cl-26"> 26</a>
+<a href="#cl-27"> 27</a>
+<a href="#cl-28"> 28</a>
+<a href="#cl-29"> 29</a>
+<a href="#cl-30"> 30</a>
+<a href="#cl-31"> 31</a>
+<a href="#cl-32"> 32</a>
+<a href="#cl-33"> 33</a>
+<a href="#cl-34"> 34</a>
+<a href="#cl-35"> 35</a>
+<a href="#cl-36"> 36</a>
+<a href="#cl-37"> 37</a>
+<a href="#cl-38"> 38</a>
+<a href="#cl-39"> 39</a>
+<a href="#cl-40"> 40</a>
+<a href="#cl-41"> 41</a>
+<a href="#cl-42"> 42</a>
+<a href="#cl-43"> 43</a>
+<a href="#cl-44"> 44</a>
+<a href="#cl-45"> 45</a>
+<a href="#cl-46"> 46</a>
+<a href="#cl-47"> 47</a>
+<a href="#cl-48"> 48</a>
+<a href="#cl-49"> 49</a>
+<a href="#cl-50"> 50</a>
+<a href="#cl-51"> 51</a>
+<a href="#cl-52"> 52</a>
+<a href="#cl-53"> 53</a>
+<a href="#cl-54"> 54</a>
+<a href="#cl-55"> 55</a>
+<a href="#cl-56"> 56</a>
+<a href="#cl-57"> 57</a>
+<a href="#cl-58"> 58</a>
+<a href="#cl-59"> 59</a>
+<a href="#cl-60"> 60</a>
+<a href="#cl-61"> 61</a>
+<a href="#cl-62"> 62</a>
+<a href="#cl-63"> 63</a>
+<a href="#cl-64"> 64</a>
+<a href="#cl-65"> 65</a>
+<a href="#cl-66"> 66</a>
+<a href="#cl-67"> 67</a>
+<a href="#cl-68"> 68</a>
+<a href="#cl-69"> 69</a>
+<a href="#cl-70"> 70</a>
+<a href="#cl-71"> 71</a>
+<a href="#cl-72"> 72</a>
+<a href="#cl-73"> 73</a>
+<a href="#cl-74"> 74</a>
+<a href="#cl-75"> 75</a>
+<a href="#cl-76"> 76</a>
+<a href="#cl-77"> 77</a>
+<a href="#cl-78"> 78</a>
+<a href="#cl-79"> 79</a>
+<a href="#cl-80"> 80</a>
+<a href="#cl-81"> 81</a>
+<a href="#cl-82"> 82</a>
+<a href="#cl-83"> 83</a>
+<a href="#cl-84"> 84</a>
+<a href="#cl-85"> 85</a>
+<a href="#cl-86"> 86</a>
+<a href="#cl-87"> 87</a>
+<a href="#cl-88"> 88</a>
+<a href="#cl-89"> 89</a>
+<a href="#cl-90"> 90</a>
+<a href="#cl-91"> 91</a>
+<a href="#cl-92"> 92</a>
+<a href="#cl-93"> 93</a>
+<a href="#cl-94"> 94</a>
+<a href="#cl-95"> 95</a>
+<a href="#cl-96"> 96</a>
+<a href="#cl-97"> 97</a>
+<a href="#cl-98"> 98</a>
+<a href="#cl-99"> 99</a>
+<a href="#cl-100">100</a>
+<a href="#cl-101">101</a>
+<a href="#cl-102">102</a>
+<a href="#cl-103">103</a>
+<a href="#cl-104">104</a>
+<a href="#cl-105">105</a>
+<a href="#cl-106">106</a>
+<a href="#cl-107">107</a>
+<a href="#cl-108">108</a>
+<a href="#cl-109">109</a>
+<a href="#cl-110">110</a>
+<a href="#cl-111">111</a>
+<a href="#cl-112">112</a>
+<a href="#cl-113">113</a>
+<a href="#cl-114">114</a>
+<a href="#cl-115">115</a>
+<a href="#cl-116">116</a>
+<a href="#cl-117">117</a>
+<a href="#cl-118">118</a>
+<a href="#cl-119">119</a>
+<a href="#cl-120">120</a>
+<a href="#cl-121">121</a>
+<a href="#cl-122">122</a>
+<a href="#cl-123">123</a>
+<a href="#cl-124">124</a>
+<a href="#cl-125">125</a>
+<a href="#cl-126">126</a>
+<a href="#cl-127">127</a>
+<a href="#cl-128">128</a>
+<a href="#cl-129">129</a>
+<a href="#cl-130">130</a>
+<a href="#cl-131">131</a>
+<a href="#cl-132">132</a>
+<a href="#cl-133">133</a>
+<a href="#cl-134">134</a>
+<a href="#cl-135">135</a>
+<a href="#cl-136">136</a>
+<a href="#cl-137">137</a>
+<a href="#cl-138">138</a>
+<a href="#cl-139">139</a>
+<a href="#cl-140">140</a>
+<a href="#cl-141">141</a>
+<a href="#cl-142">142</a>
+<a href="#cl-143">143</a>
+<a href="#cl-144">144</a>
+<a href="#cl-145">145</a>
+<a href="#cl-146">146</a>
+<a href="#cl-147">147</a>
+<a href="#cl-148">148</a>
+<a href="#cl-149">149</a>
+<a href="#cl-150">150</a>
+<a href="#cl-151">151</a>
+<a href="#cl-152">152</a>
+<a href="#cl-153">153</a>
+<a href="#cl-154">154</a>
+<a href="#cl-155">155</a>
+<a href="#cl-156">156</a>
+<a href="#cl-157">157</a>
+<a href="#cl-158">158</a>
+<a href="#cl-159">159</a>
+<a href="#cl-160">160</a>
+<a href="#cl-161">161</a>
+<a href="#cl-162">162</a>
+<a href="#cl-163">163</a>
+<a href="#cl-164">164</a>
+<a href="#cl-165">165</a>
+<a href="#cl-166">166</a>
+<a href="#cl-167">167</a>
+<a href="#cl-168">168</a>
+<a href="#cl-169">169</a>
+<a href="#cl-170">170</a>
+<a href="#cl-171">171</a>
+<a href="#cl-172">172</a>
+<a href="#cl-173">173</a>
+<a href="#cl-174">174</a>
+<a href="#cl-175">175</a>
+<a href="#cl-176">176</a>
+<a href="#cl-177">177</a>
+<a href="#cl-178">178</a>
+<a href="#cl-179">179</a>
+<a href="#cl-180">180</a>
+<a href="#cl-181">181</a>
+<a href="#cl-182">182</a>
+<a href="#cl-183">183</a>
+<a href="#cl-184">184</a>
+<a href="#cl-185">185</a>
+<a href="#cl-186">186</a>
+<a href="#cl-187">187</a>
+<a href="#cl-188">188</a>
+<a href="#cl-189">189</a>
+<a href="#cl-190">190</a>
+<a href="#cl-191">191</a>
+<a href="#cl-192">192</a>
+<a href="#cl-193">193</a>
+<a href="#cl-194">194</a>
+<a href="#cl-195">195</a>
+<a href="#cl-196">196</a>
+<a href="#cl-197">197</a>
+<a href="#cl-198">198</a>
+<a href="#cl-199">199</a>
+<a href="#cl-200">200</a>
+<a href="#cl-201">201</a>
+<a href="#cl-202">202</a>
+<a href="#cl-203">203</a>
+<a href="#cl-204">204</a>
+<a href="#cl-205">205</a>
+<a href="#cl-206">206</a>
+<a href="#cl-207">207</a>
+<a href="#cl-208">208</a>
+<a href="#cl-209">209</a>
+<a href="#cl-210">210</a>
+<a href="#cl-211">211</a>
+<a href="#cl-212">212</a>
+<a href="#cl-213">213</a>
+<a href="#cl-214">214</a>
+<a href="#cl-215">215</a>
+<a href="#cl-216">216</a>
+<a href="#cl-217">217</a>
+<a href="#cl-218">218</a>
+<a href="#cl-219">219</a>
+<a href="#cl-220">220</a>
+<a href="#cl-221">221</a>
+<a href="#cl-222">222</a>
+<a href="#cl-223">223</a>
+<a href="#cl-224">224</a>
+<a href="#cl-225">225</a>
+<a href="#cl-226">226</a>
+<a href="#cl-227">227</a>
+<a href="#cl-228">228</a>
+<a href="#cl-229">229</a>
+<a href="#cl-230">230</a>
+<a href="#cl-231">231</a>
+<a href="#cl-232">232</a>
+<a href="#cl-233">233</a>
+<a href="#cl-234">234</a>
+<a href="#cl-235">235</a>
+<a href="#cl-236">236</a>
+<a href="#cl-237">237</a>
+<a href="#cl-238">238</a>
+<a href="#cl-239">239</a>
+<a href="#cl-240">240</a>
+<a href="#cl-241">241</a>
+<a href="#cl-242">242</a>
+<a href="#cl-243">243</a>
+<a href="#cl-244">244</a>
+<a href="#cl-245">245</a>
+<a href="#cl-246">246</a>
+<a href="#cl-247">247</a>
+<a href="#cl-248">248</a>
+<a href="#cl-249">249</a>
+<a href="#cl-250">250</a>
+<a href="#cl-251">251</a>
+<a href="#cl-252">252</a>
+<a href="#cl-253">253</a>
+<a href="#cl-254">254</a>
+<a href="#cl-255">255</a>
+<a href="#cl-256">256</a>
+<a href="#cl-257">257</a>
+<a href="#cl-258">258</a>
+<a href="#cl-259">259</a>
+<a href="#cl-260">260</a>
+<a href="#cl-261">261</a>
+<a href="#cl-262">262</a>
+<a href="#cl-263">263</a>
+<a href="#cl-264">264</a>
+<a href="#cl-265">265</a>
+<a href="#cl-266">266</a>
+<a href="#cl-267">267</a>
+<a href="#cl-268">268</a>
+<a href="#cl-269">269</a>
+<a href="#cl-270">270</a>
+<a href="#cl-271">271</a>
+<a href="#cl-272">272</a>
+<a href="#cl-273">273</a>
+<a href="#cl-274">274</a>
+<a href="#cl-275">275</a>
+<a href="#cl-276">276</a>
+<a href="#cl-277">277</a>
+<a href="#cl-278">278</a>
+<a href="#cl-279">279</a>
+<a href="#cl-280">280</a>
+<a href="#cl-281">281</a>
+<a href="#cl-282">282</a>
+<a href="#cl-283">283</a>
+<a href="#cl-284">284</a>
+<a href="#cl-285">285</a>
+<a href="#cl-286">286</a>
+<a href="#cl-287">287</a>
+<a href="#cl-288">288</a>
+<a href="#cl-289">289</a>
+<a href="#cl-290">290</a>
+<a href="#cl-291">291</a>
+<a href="#cl-292">292</a>
+<a href="#cl-293">293</a>
+<a href="#cl-294">294</a>
+<a href="#cl-295">295</a>
+<a href="#cl-296">296</a>
+<a href="#cl-297">297</a>
+<a href="#cl-298">298</a>
+<a href="#cl-299">299</a>
+<a href="#cl-300">300</a>
+<a href="#cl-301">301</a>
+<a href="#cl-302">302</a>
+<a href="#cl-303">303</a>
+<a href="#cl-304">304</a>
+<a href="#cl-305">305</a>
+<a href="#cl-306">306</a>
+<a href="#cl-307">307</a>
+<a href="#cl-308">308</a>
+<a href="#cl-309">309</a>
+<a href="#cl-310">310</a>
+<a href="#cl-311">311</a>
+<a href="#cl-312">312</a>
+<a href="#cl-313">313</a>
+<a href="#cl-314">314</a>
+<a href="#cl-315">315</a>
+<a href="#cl-316">316</a>
+<a href="#cl-317">317</a>
+<a href="#cl-318">318</a>
+<a href="#cl-319">319</a>
+<a href="#cl-320">320</a>
+<a href="#cl-321">321</a>
+<a href="#cl-322">322</a>
+<a href="#cl-323">323</a>
+<a href="#cl-324">324</a>
+<a href="#cl-325">325</a>
+<a href="#cl-326">326</a>
+<a href="#cl-327">327</a>
+<a href="#cl-328">328</a>
+<a href="#cl-329">329</a>
+<a href="#cl-330">330</a>
+<a href="#cl-331">331</a>
+<a href="#cl-332">332</a>
+<a href="#cl-333">333</a>
+<a href="#cl-334">334</a>
+<a href="#cl-335">335</a>
+<a href="#cl-336">336</a>
+<a href="#cl-337">337</a>
+<a href="#cl-338">338</a>
+<a href="#cl-339">339</a>
+<a href="#cl-340">340</a>
+<a href="#cl-341">341</a>
+<a href="#cl-342">342</a>
+<a href="#cl-343">343</a>
+<a href="#cl-344">344</a>
+<a href="#cl-345">345</a>
+<a href="#cl-346">346</a>
+<a href="#cl-347">347</a>
+<a href="#cl-348">348</a>
+<a href="#cl-349">349</a>
+<a href="#cl-350">350</a>
+<a href="#cl-351">351</a>
+<a href="#cl-352">352</a>
+<a href="#cl-353">353</a>
+<a href="#cl-354">354</a>
+<a href="#cl-355">355</a>
+<a href="#cl-356">356</a>
+<a href="#cl-357">357</a>
+<a href="#cl-358">358</a>
+<a href="#cl-359">359</a>
+<a href="#cl-360">360</a>
+<a href="#cl-361">361</a>
+<a href="#cl-362">362</a>
+<a href="#cl-363">363</a>
+<a href="#cl-364">364</a>
+<a href="#cl-365">365</a>
+<a href="#cl-366">366</a>
+<a href="#cl-367">367</a>
+<a href="#cl-368">368</a>
+<a href="#cl-369">369</a>
+<a href="#cl-370">370</a>
+<a href="#cl-371">371</a>
+<a href="#cl-372">372</a>
+<a href="#cl-373">373</a>
+<a href="#cl-374">374</a>
+<a href="#cl-375">375</a>
+<a href="#cl-376">376</a>
+<a href="#cl-377">377</a>
+<a href="#cl-378">378</a>
+<a href="#cl-379">379</a>
+<a href="#cl-380">380</a>
+<a href="#cl-381">381</a>
+<a href="#cl-382">382</a>
+<a href="#cl-383">383</a>
+<a href="#cl-384">384</a>
+<a href="#cl-385">385</a>
+<a href="#cl-386">386</a>
+<a href="#cl-387">387</a>
+<a href="#cl-388">388</a>
+<a href="#cl-389">389</a>
+<a href="#cl-390">390</a>
+<a href="#cl-391">391</a>
+<a href="#cl-392">392</a>
+</pre></div></td><td class="code"><div class="highlight"><pre><a name="cl-1"></a>Artikel
+<a name="cl-2"></a>
+<a name="cl-3"></a>@TechReport{PCvsTC,
+<a name="cl-4"></a>        title  ={Studie: Ökologischer Vergleich von PC und Thin Client Arbeitsplatzgeräten 2008},
+<a name="cl-5"></a>        year = {2008},
+<a name="cl-6"></a>        institution = {Fraunhofer Institut für Umwelt-, Sicherheits- und Energietechnik UMSICHT},
+<a name="cl-7"></a>        }
+<a name="cl-8"></a>        
+<a name="cl-9"></a>@article{EuP,
+<a name="cl-10"></a> author = {Piebalgs, Andris},
+<a name="cl-11"></a> title = {COMMISSION REGULATION (EC) No 1275/2008},
+<a name="cl-12"></a> journal = {Official Journal of the European Union},
+<a name="cl-13"></a> volume = {339},
+<a name="cl-14"></a> year = {2008}
+<a name="cl-15"></a> }
+<a name="cl-16"></a> 
+<a name="cl-17"></a>@TechReport{GreenComputingGuide,
+<a name="cl-18"></a> author = {Tarrie Burnett and Alliyah Mirza},
+<a name="cl-19"></a> title  ={Green Computing Guide},
+<a name="cl-20"></a> year = {2004},
+<a name="cl-21"></a> institution = {The University of Colorado - Boulder},
+<a name="cl-22"></a> }
+<a name="cl-23"></a> 
+<a name="cl-24"></a>@Mastersthesis{ComputerPowerConsumption,
+<a name="cl-25"></a>        author = {Mujtaba Talebi},
+<a name="cl-26"></a>        title  ={Computer Power Consumption Benchmarking for Green Computing},
+<a name="cl-27"></a>        year = {2008},
+<a name="cl-28"></a>        school = {Faculty of the Department of Computing Sciences Villanova University}
+<a name="cl-29"></a>}
+<a name="cl-30"></a>
+<a name="cl-31"></a>@article{PcGoGreen,
+<a name="cl-32"></a> author = {Weiss, Aaron},
+<a name="cl-33"></a> title = {Can the PC go green?},
+<a name="cl-34"></a> journal = {netWorker},
+<a name="cl-35"></a> volume = {11},
+<a name="cl-36"></a> number = {2},
+<a name="cl-37"></a> year = {2007},
+<a name="cl-38"></a> issn = {1091-3556},
+<a name="cl-39"></a> pages = {18--25},
+<a name="cl-40"></a> doi = {http://doi.acm.org/10.1145/1268577.1268578},
+<a name="cl-41"></a> publisher = {ACM},
+<a name="cl-42"></a> address = {New York, NY, USA},
+<a name="cl-43"></a> }
+<a name="cl-44"></a> 
+<a name="cl-45"></a>@article{SwImplStrategies,
+<a name="cl-46"></a> author = {Naik, Kshirasagar and Wei, David S. L.},
+<a name="cl-47"></a> title = {Software implementation strategies for power-conscious systems},
+<a name="cl-48"></a> journal = {Mob. Netw. Appl.},
+<a name="cl-49"></a> volume = {6},
+<a name="cl-50"></a> number = {3},
+<a name="cl-51"></a> year = {2001},
+<a name="cl-52"></a> issn = {1383-469X},
+<a name="cl-53"></a> pages = {291--305},
+<a name="cl-54"></a> doi = {http://dx.doi.org/10.1023/A:1011487018981},
+<a name="cl-55"></a> publisher = {Kluwer Academic Publishers},
+<a name="cl-56"></a> address = {Hingham, MA, USA},
+<a name="cl-57"></a> }
+<a name="cl-58"></a> 
+<a name="cl-59"></a>@article{OnlineStratsPowerMgmt,
+<a name="cl-60"></a> author = {Irani, Sandy and Shukla, Sandeep and Gupta, Rajesh},
+<a name="cl-61"></a> title = {Online strategies for dynamic power management in systems with multiple power-saving states},
+<a name="cl-62"></a> journal = {ACM Trans. Embed. Comput. Syst.},
+<a name="cl-63"></a> volume = {2},
+<a name="cl-64"></a> number = {3},
+<a name="cl-65"></a> year = {2003},
+<a name="cl-66"></a> issn = {1539-9087},
+<a name="cl-67"></a> pages = {325--346},
+<a name="cl-68"></a> doi = {http://doi.acm.org/10.1145/860176.860180},
+<a name="cl-69"></a> publisher = {ACM},
+<a name="cl-70"></a> address = {New York, NY, USA},
+<a name="cl-71"></a> }
+<a name="cl-72"></a>
+<a name="cl-73"></a>
+<a name="cl-74"></a>
+<a name="cl-75"></a>
+<a name="cl-76"></a>Konferenz-Artikel
+<a name="cl-77"></a>
+<a name="cl-78"></a>@inproceedings{VirtualDesktop,
+<a name="cl-79"></a> author = {Miller, Karissa and Pegah, Mahmoud},
+<a name="cl-80"></a> title = {Virtualization: virtually at the desktop},
+<a name="cl-81"></a> booktitle = {SIGUCCS &#39;07: Proceedings of the 35th annual ACM SIGUCCS conference on User services},
+<a name="cl-82"></a> year = {2007},
+<a name="cl-83"></a> isbn = {978-1-59593-634-9},
+<a name="cl-84"></a> pages = {255--260},
+<a name="cl-85"></a> location = {Orlando, Florida, USA},
+<a name="cl-86"></a> doi = {http://doi.acm.org/10.1145/1294046.1294107},
+<a name="cl-87"></a> publisher = {ACM},
+<a name="cl-88"></a> address = {New York, NY, USA},
+<a name="cl-89"></a> }
+<a name="cl-90"></a> 
+<a name="cl-91"></a>@inproceedings{ThreadFusion,
+<a name="cl-92"></a> author = {Gonz\&#39;{a}lez, Jos\&#39;{e} and Cai, Qiong and Chaparro, Pedro and Magklis, Grigorios and Rakvic, Ryan and Gonz\&#39;{a}lez, Antonio},
+<a name="cl-93"></a> title = {Thread fusion},
+<a name="cl-94"></a> booktitle = {ISLPED &#39;08: Proceeding of the thirteenth international symposium on Low power electronics and design},
+<a name="cl-95"></a> year = {2008},
+<a name="cl-96"></a> isbn = {978-1-60558-109-5},
+<a name="cl-97"></a> pages = {363--368},
+<a name="cl-98"></a> location = {Bangalore, India},
+<a name="cl-99"></a> doi = {http://doi.acm.org/10.1145/1393921.1394018},
+<a name="cl-100"></a> publisher = {ACM},
+<a name="cl-101"></a> address = {New York, NY, USA},
+<a name="cl-102"></a> }
+<a name="cl-103"></a>
+<a name="cl-104"></a>@inproceedings{EnergyAwareAppls,
+<a name="cl-105"></a> author = {Xian, Changjiu and Lu, Yung-Hsiang and Li, Zhiyuan},
+<a name="cl-106"></a> title = {A programming environment with runtime energy characterization for energy-aware applications},
+<a name="cl-107"></a> booktitle = {ISLPED &#39;07: Proceedings of the 2007 international symposium on Low power electronics and design},
+<a name="cl-108"></a> year = {2007},
+<a name="cl-109"></a> isbn = {978-1-59593-709-4},
+<a name="cl-110"></a> pages = {141--146},
+<a name="cl-111"></a> location = {Portland, OR, USA},
+<a name="cl-112"></a> doi = {http://doi.acm.org/10.1145/1283780.1283811},
+<a name="cl-113"></a> publisher = {ACM},
+<a name="cl-114"></a> address = {New York, NY, USA},
+<a name="cl-115"></a> }
+<a name="cl-116"></a>
+<a name="cl-117"></a>@inproceedings{LocAwarePowerMgmt,
+<a name="cl-118"></a> author = {Harle, R. K. and Hopper, A.},
+<a name="cl-119"></a> title = {The potential for location-aware power management},
+<a name="cl-120"></a> booktitle = {UbiComp &#39;08: Proceedings of the 10th international conference on Ubiquitous computing},
+<a name="cl-121"></a> year = {2008},
+<a name="cl-122"></a> isbn = {978-1-60558-136-1},
+<a name="cl-123"></a> pages = {302--311},
+<a name="cl-124"></a> location = {Seoul, Korea},
+<a name="cl-125"></a> doi = {http://doi.acm.org/10.1145/1409635.1409676},
+<a name="cl-126"></a> publisher = {ACM},
+<a name="cl-127"></a> address = {New York, NY, USA},
+<a name="cl-128"></a> }
+<a name="cl-129"></a> 
+<a name="cl-130"></a>@inproceedings{NotEasyBeingGreen,
+<a name="cl-131"></a> author = {Chetty, Marshini and Brush, A.J. Bernheim and Meyers, Brian R. and Johns, Paul},
+<a name="cl-132"></a> title = {It&#39;s not easy being green: understanding home computer power management},
+<a name="cl-133"></a> booktitle = {CHI &#39;09: Proceedings of the 27th international conference on Human factors in computing systems},
+<a name="cl-134"></a> year = {2009},
+<a name="cl-135"></a> isbn = {978-1-60558-246-7},
+<a name="cl-136"></a> pages = {1033--1042},
+<a name="cl-137"></a> location = {Boston, MA, USA},
+<a name="cl-138"></a> doi = {http://doi.acm.org/10.1145/1518701.1518860},
+<a name="cl-139"></a> publisher = {ACM},
+<a name="cl-140"></a> address = {New York, NY, USA},
+<a name="cl-141"></a> }
+<a name="cl-142"></a>
+<a name="cl-143"></a>@inproceedings{PowerMgmtMultiCore,
+<a name="cl-144"></a> author = {Bircher, W. Lloyd and John, Lizy K.},
+<a name="cl-145"></a> title = {Analysis of dynamic power management on multi-core processors},
+<a name="cl-146"></a> booktitle = {ICS &#39;08: Proceedings of the 22nd annual international conference on Supercomputing},
+<a name="cl-147"></a> year = {2008},
+<a name="cl-148"></a> isbn = {978-1-60558-158-3},
+<a name="cl-149"></a> pages = {327--338},
+<a name="cl-150"></a> location = {Island of Kos, Greece},
+<a name="cl-151"></a> doi = {http://doi.acm.org/10.1145/1375527.1375575},
+<a name="cl-152"></a> publisher = {ACM},
+<a name="cl-153"></a> address = {New York, NY, USA},
+<a name="cl-154"></a> }
+<a name="cl-155"></a>
+<a name="cl-156"></a>@inproceedings{GreenComputerScience,
+<a name="cl-157"></a> author = {Talebi, Mujtaba and Way, Thomas},
+<a name="cl-158"></a> title = {Methods, metrics and motivation for a green computer science program},
+<a name="cl-159"></a> booktitle = {SIGCSE &#39;09: Proceedings of the 40th ACM technical symposium on Computer science education},
+<a name="cl-160"></a> year = {2009},
+<a name="cl-161"></a> isbn = {978-1-60558-183-5},
+<a name="cl-162"></a> pages = {362--366},
+<a name="cl-163"></a> location = {Chattanooga, TN, USA},
+<a name="cl-164"></a> doi = {http://doi.acm.org/10.1145/1508865.1508995},
+<a name="cl-165"></a> publisher = {ACM},
+<a name="cl-166"></a> address = {New York, NY, USA},
+<a name="cl-167"></a> }
+<a name="cl-168"></a>
+<a name="cl-169"></a>@inproceedings{SwContrPowerMgmt,
+<a name="cl-170"></a> author = {Lu, Yung-Hsiang and \v{S}imuni\&#39;{c}, Tajana and De Micheli, Giovanni},
+<a name="cl-171"></a> title = {Software controlled power management},
+<a name="cl-172"></a> booktitle = {CODES &#39;99: Proceedings of the seventh international workshop on Hardware/software codesign},
+<a name="cl-173"></a> year = {1999},
+<a name="cl-174"></a> isbn = {1-58113-132-1},
+<a name="cl-175"></a> pages = {157--161},
+<a name="cl-176"></a> location = {Rome, Italy},
+<a name="cl-177"></a> doi = {http://doi.acm.org/10.1145/301177.301518},
+<a name="cl-178"></a> publisher = {ACM},
+<a name="cl-179"></a> address = {New York, NY, USA},
+<a name="cl-180"></a> }
+<a name="cl-181"></a>
+<a name="cl-182"></a>
+<a name="cl-183"></a>
+<a name="cl-184"></a>
+<a name="cl-185"></a>
+<a name="cl-186"></a>Referenzen im Web
+<a name="cl-187"></a>
+<a name="cl-188"></a>@Misc{GoogleDocs,
+<a name="cl-189"></a>        title  ={Google Docs Beta},
+<a name="cl-190"></a>        year = {2009},
+<a name="cl-191"></a>        howpublished = {\url{http://docs.google.com}}
+<a name="cl-192"></a>}
+<a name="cl-193"></a>
+<a name="cl-194"></a>@Misc{OfficeLive,
+<a name="cl-195"></a>        title  ={Microsoft Office Live Workspace Beta},
+<a name="cl-196"></a>        year = {2009},
+<a name="cl-197"></a>        howpublished = {\url{http://www.officelive.com}}
+<a name="cl-198"></a>}
+<a name="cl-199"></a>
+<a name="cl-200"></a>@Misc{ZeroClients,
+<a name="cl-201"></a>        title  ={heise online - Noch dünner als Thin: Zero Clients},
+<a name="cl-202"></a>        year = {2007},
+<a name="cl-203"></a>        howpublished = {\url{http://www.heise.de/newsticker/Noch-duenner-als-Thin-Zero-Client--/meldung/97449}}
+<a name="cl-204"></a>}
+<a name="cl-205"></a>
+<a name="cl-206"></a>@Misc{Citrix,
+<a name="cl-207"></a>        title  ={Citrix},
+<a name="cl-208"></a>        year = {2009},
+<a name="cl-209"></a>        howpublished = {\url{http://www.citrix.com}}
+<a name="cl-210"></a>}
+<a name="cl-211"></a>
+<a name="cl-212"></a>@Misc{VMWare,
+<a name="cl-213"></a>        title  ={VMWare},
+<a name="cl-214"></a>        year = {2009},
+<a name="cl-215"></a>        howpublished = {\url{http://www.vmware.com}}
+<a name="cl-216"></a>}
+<a name="cl-217"></a>
+<a name="cl-218"></a>@Misc{MooresLaw,
+<a name="cl-219"></a>        title  = {Moore&#39;s Law},
+<a name="cl-220"></a>        year = {2009},
+<a name="cl-221"></a>        howpublished = {\url{http://en.wikipedia.org/wiki/Moore&#39;s_law}}
+<a name="cl-222"></a>}
+<a name="cl-223"></a>
+<a name="cl-224"></a>@Misc{AsyncSoftware,
+<a name="cl-225"></a>        author = {Ralf Westphal},
+<a name="cl-226"></a>        title  = {Wider die Geißeln zukunftsfähiger Software: Abhängigkeiten und Synchronizität},
+<a name="cl-227"></a>        year = {2009},
+<a name="cl-228"></a>        howpublished = {\url{http://ralfw.blogspot.com/2009/06/wider-die-geieln-zukunftsfahiger.html}}
+<a name="cl-229"></a>}
+<a name="cl-230"></a>
+<a name="cl-231"></a>@Misc{CCR,
+<a name="cl-232"></a>        title  = {CCR \&amp; DSS},
+<a name="cl-233"></a>        year = {2009},
+<a name="cl-234"></a>        howpublished = {\url{http://www.microsoft.com/ccrdss/}}
+<a name="cl-235"></a>}
+<a name="cl-236"></a>
+<a name="cl-237"></a>@Misc{AlternateGreenIT,
+<a name="cl-238"></a>        title  = {Alternate - Green IT},
+<a name="cl-239"></a>        year = {2009},
+<a name="cl-240"></a>        howpublished = {\url{http://www.alternate.de/html/greenIT.html?tn=GREENIT&amp;l1=}}
+<a name="cl-241"></a>}
+<a name="cl-242"></a>
+<a name="cl-243"></a>@Misc{StatistikAustria,
+<a name="cl-244"></a>        title  = {Statistik Austria - Informationsgesellschaft},
+<a name="cl-245"></a>        year = {2009},
+<a name="cl-246"></a>        howpublished = {\url{http://www.statistik.at/web_de/statistiken/informationsgesellschaft/index.html}}
+<a name="cl-247"></a>}
+<a name="cl-248"></a>
+<a name="cl-249"></a>@Misc{ACPI,
+<a name="cl-250"></a>        title  = {ACPI - Advanced Configuration and Power Interface},
+<a name="cl-251"></a>        year = {2009},
+<a name="cl-252"></a>        howpublished = {\url{http://www.acpi.info}}
+<a name="cl-253"></a>}
+<a name="cl-254"></a>
+<a name="cl-255"></a>
+<a name="cl-256"></a>@Misc{IntelPentium4,
+<a name="cl-257"></a>        title  = {Intel Pentium 4 Processor Family},
+<a name="cl-258"></a>        year = {2009},
+<a name="cl-259"></a>        howpublished = {\url{http://ark.intel.com/ProductCollection.aspx?familyID=581}}
+<a name="cl-260"></a>}
+<a name="cl-261"></a>
+<a name="cl-262"></a>@Misc{GigahertzRennen,
+<a name="cl-263"></a>        title  = {Dual-Cores beenden Gigahertz-Rennen},
+<a name="cl-264"></a>        year = {2006},
+<a name="cl-265"></a>        howpublished = {\url{http://futurezone.orf.at/stories/94049/}}
+<a name="cl-266"></a>}
+<a name="cl-267"></a>
+<a name="cl-268"></a>@Misc{IntelCompare,
+<a name="cl-269"></a>        title  = {Compare Intel Products},
+<a name="cl-270"></a>        year = {2009},
+<a name="cl-271"></a>        howpublished = {\url{http://ark.intel.com/Compare.aspx?ids=37147,27486,}}
+<a name="cl-272"></a>}
+<a name="cl-273"></a>
+<a name="cl-274"></a>@Misc{CpuBenchmarks,
+<a name="cl-275"></a>        title  = {CPU Benchmarks},
+<a name="cl-276"></a>        year = {2009},
+<a name="cl-277"></a>        howpublished = {\url{http://www.cpubenchmark.net/cpu_list.php}}
+<a name="cl-278"></a>}
+<a name="cl-279"></a>
+<a name="cl-280"></a>@Misc{TestIntelCorei7,
+<a name="cl-281"></a>        title  = {Test: Intel Core i7 920, 940 und 965 Extreme Edition},
+<a name="cl-282"></a>        year = {2008},
+<a name="cl-283"></a>        howpublished = {\url{http://www.computerbase.de/artikel/hardware/prozessoren/2008/test_intel_core_i7_920_940_965_extreme_edition/28/}}
+<a name="cl-284"></a>}
+<a name="cl-285"></a>
+<a name="cl-286"></a>@Misc{Strommessgeraete,
+<a name="cl-287"></a>        title  = {Stiftung Warentest - Strommessgeräte},
+<a name="cl-288"></a>        year = {2009},
+<a name="cl-289"></a>        howpublished = {\url{http://www.test.de/themen/umwelt-energie/test/-Strommessgeraete/1781202/1781202/1781479/}}
+<a name="cl-290"></a>}
+<a name="cl-291"></a>
+<a name="cl-292"></a>@Misc{Ampeg,
+<a name="cl-293"></a>        title  = {Ampeg GmbH - Umweltschutz},
+<a name="cl-294"></a>        year = {2009},
+<a name="cl-295"></a>        howpublished = {\url{http://www.ampeg.de/de/Unternehmen/Umweltschutz.php}}
+<a name="cl-296"></a>}
+<a name="cl-297"></a>
+<a name="cl-298"></a>@Misc{EcoMonitore,
+<a name="cl-299"></a>        title  = {EcoTopTen - Computermonitore},
+<a name="cl-300"></a>        year = {2009},
+<a name="cl-301"></a>        howpublished = {\url{http://www.ecotopten.de/prod_monitore_prod.php}}
+<a name="cl-302"></a>}
+<a name="cl-303"></a>
+<a name="cl-304"></a>@Misc{StomSparenComputer,
+<a name="cl-305"></a>        title  = {Strom sparen mit Computer und Co},
+<a name="cl-306"></a>        year = {2009},
+<a name="cl-307"></a>        howpublished = {\url{http://www.stromeffizienz.de/stromsparen/tv-pc-und-co000/computer-co.html}}
+<a name="cl-308"></a>}
+<a name="cl-309"></a>
+<a name="cl-310"></a>@Misc{StomSparenComputer,
+<a name="cl-311"></a>        title  = {Strom sparen mit Computer und Co},
+<a name="cl-312"></a>        year = {2009},
+<a name="cl-313"></a>        howpublished = {\url{http://www.stromeffizienz.de/stromsparen/tv-pc-und-co000/computer-co.html}}
+<a name="cl-314"></a>}
+<a name="cl-315"></a>
+<a name="cl-316"></a>@Misc{EizoMonitor,
+<a name="cl-317"></a>        title  = {Eizo EV2411W},
+<a name="cl-318"></a>        year = {2009},
+<a name="cl-319"></a>        howpublished = {\url{http://www.eizo.de/pool/spec/de_EV2411W.pdf}}
+<a name="cl-320"></a>}
+<a name="cl-321"></a>
+<a name="cl-322"></a>@Misc{WDCaviarGreen,
+<a name="cl-323"></a>        title  = {Western Digital - WD Caviar Green},
+<a name="cl-324"></a>        year = {2009},
+<a name="cl-325"></a>        howpublished = {\url{http://www.wdc.com/en/products/products.asp?DriveID=559}}
+<a name="cl-326"></a>}
+<a name="cl-327"></a>
+<a name="cl-328"></a>@Misc{IntelSsd,
+<a name="cl-329"></a>        title  = {IntelŽ X25-E SATA Solid State Drive},
+<a name="cl-330"></a>        year = {2009},
+<a name="cl-331"></a>        howpublished = {\url{http://download.intel.com/design/flash/nand/extreme/319984.pdf}}
+<a name="cl-332"></a>}
+<a name="cl-333"></a>
+<a name="cl-334"></a>@Misc{GeforceSli,
+<a name="cl-335"></a>        title  = {Sind zwei besser als eine? GeForce GTX 295 vs. GTX 275 SLI},
+<a name="cl-336"></a>        year = {2009},
+<a name="cl-337"></a>        howpublished = {\url{http://www.tomshardware.com/de/geforce-gtx-295-275-sli,testberichte-240346-2.html}}
+<a name="cl-338"></a>}
+<a name="cl-339"></a>
+<a name="cl-340"></a>@Misc{GrafikMotherboard,
+<a name="cl-341"></a>        title  = {Energieverbrauch der Motherboards: 42 Watt Verschwendung bei gleicher CPU},
+<a name="cl-342"></a>        year = {2009},
+<a name="cl-343"></a>        howpublished = {\url{http://www.tomshardware.com/de/phenom-9850-7850-black-edition,testberichte-239994-12.html}}
+<a name="cl-344"></a>}
+<a name="cl-345"></a>
+<a name="cl-346"></a>@Misc{80Plus,
+<a name="cl-347"></a>        title  = {The 80 PLUS Program},
+<a name="cl-348"></a>        year = {2009},
+<a name="cl-349"></a>        howpublished = {\url{http://www.80plus.org}}
+<a name="cl-350"></a>}
+<a name="cl-351"></a>
+<a name="cl-352"></a>@Misc{80PlusGuidelines,
+<a name="cl-353"></a>        title  = {80 PLUS Procurement Guidelines},
+<a name="cl-354"></a>        year = {2009},
+<a name="cl-355"></a>        howpublished = {\url{http://www.80plus.org/docs/Procguid/procurement_guidelines_081506.doc}}
+<a name="cl-356"></a>}
+<a name="cl-357"></a>
+<a name="cl-358"></a>@Misc{RoHS,
+<a name="cl-359"></a>        title  = {RoHS},
+<a name="cl-360"></a>        year = {2009},
+<a name="cl-361"></a>        howpublished = {\url{http://www.rohs.gov.uk/}}
+<a name="cl-362"></a>}
+<a name="cl-363"></a>
+<a name="cl-364"></a>@Misc{EnergyStar,
+<a name="cl-365"></a>        title  = {Warum ENERGY START für Heimanwender?},
+<a name="cl-366"></a>        year = {2009},
+<a name="cl-367"></a>        howpublished = {\url{http://www.eu-energystar.org/de/de_001c.shtml}}
+<a name="cl-368"></a>}
+<a name="cl-369"></a>
+<a name="cl-370"></a>@Misc{TCO,
+<a name="cl-371"></a>        title  = {TCO Certification: Technology for you \&amp; the planet},
+<a name="cl-372"></a>        year = {2009},
+<a name="cl-373"></a>        howpublished = {\url{http://www.tcodevelopment.com/}}
+<a name="cl-374"></a>}
+<a name="cl-375"></a>
+<a name="cl-376"></a>@Misc{BlauerEngel,
+<a name="cl-377"></a>        title  = {Der Blaue Engel},
+<a name="cl-378"></a>        year = {2009},
+<a name="cl-379"></a>        howpublished = {\url{http://www.blauer-engel.de/}}
+<a name="cl-380"></a>}
+<a name="cl-381"></a>
+<a name="cl-382"></a>@Misc{AppleUmwelt,
+<a name="cl-383"></a>        title  = {Apple - Umweltschutz},
+<a name="cl-384"></a>        year = {2009},
+<a name="cl-385"></a>        howpublished = {\url{http://www.apple.com/at/environment/}}
+<a name="cl-386"></a>}
+<a name="cl-387"></a>
+<a name="cl-388"></a>@Misc{PowerMgmtTools,
+<a name="cl-389"></a>        title  = {Tools für das PC-Power-Management senken den Stromverbrauch},
+<a name="cl-390"></a>        year = {2009},
+<a name="cl-391"></a>        howpublished = {\url{http://www.computerwoche.de/knowledge_center/green-it/1894784/}}
+<a name="cl-392"></a>}
+</pre></div>
+</td></tr></table>
+    </div>
+  
+  </div>
+  
+
+
+
+      </div>
+    </div>
+
+  </div>
+
+  <div id="footer">
+    <ul id="footer-nav">
+      <li>Copyright © 2011 <a href="http://atlassian.com">Atlassian</a></li>
+      <li><a href="http://www.atlassian.com/hosted/terms.jsp">Terms of Service</a></li>
+      <li><a href="http://www.atlassian.com/about/privacy.jsp">Privacy</a></li>
+      <li><a href="//bitbucket.org/site/master/issues/new">Report a Bug to Bitbucket</a></li>
+      <li><a href="http://confluence.atlassian.com/x/IYBGDQ">API</a></li>
+      <li><a href="http://status.bitbucket.org/">Server Status</a></li>
+    </ul>
+    <ul id="social-nav">
+      <li class="blog"><a href="http://blog.bitbucket.org">Bitbucket Blog</a></li>
+      <li class="twitter"><a href="http://www.twitter.com/bitbucket">Twitter</a></li>
+    </ul>
+    <h5>We run</h5>
+    <ul id="technologies">
+      <li><a href="http://www.djangoproject.com/">Django 1.3.0</a></li>
+      <li><a href="//bitbucket.org/jespern/django-piston/">Piston 0.3dev</a></li>
+      <li><a href="http://www.selenic.com/mercurial/">Hg 1.8.2</a></li>
+      <li><a href="http://www.python.org">Python 2.7.2</a></li>
+      <li>r12427:b7404d13ceac | bitbucket01</li>
+    </ul>
+  </div>
+
+  <script src="https://dwz7u9t8u8usb.cloudfront.net/m/46c15ee9bc85/js/lib/global.js"></script>
+
+
+
+
+
+
+  <script>
+    BB.gaqPush(['_trackPageview']);
+  
+    BB.gaqPush(['atl._trackPageview']);
+
+    
+
+    
+
+    (function () {
+        var ga = document.createElement('script');
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        ga.setAttribute('async', 'true');
+        document.documentElement.firstChild.appendChild(ga);
+    }());
+  </script>
+
+</body>
+</html>

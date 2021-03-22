@@ -1,0 +1,254 @@
+<HTML>
+<pre>
+
+@string{brics =	"{BRICS}"}
+@string{daimi =	"Department of Computer Science, University of Aarhus"}
+@string{iesd  =	"Department of Mathematics and Computer Science, Aalborg University"}
+@string{rs    =	"Research Series"}
+@string{ns    =	"Notes Series"}
+@string{ls    =	"Lecture Series"}
+@string{ds    =	"Dissertation Series"}
+
+@TechReport{BRICS-DS-96-4,
+  author = 	 "Torben Bra{\"u}ner",
+  title = 	 "An Axiomatic Approach to Adequacy",
+  institution =  brics,
+  year = 	 1996,
+  type = 	 ds,
+  number = 	 "DS-96-4",
+  address = 	 daimi,
+  month = 	 nov,
+  note =	 "Ph.D. thesis. 168~pp",
+  abstract =	 "This thesis studies adequacy for PCF-like languages in a
+		  general categorical framework. An adequacy result relates
+		  the denotational semantics of a program to its
+		  operational semantics; it typically states that a program
+		  terminates whenever the interpretation is non-bottom. The
+		  main concern is to generalise to a linear version of PCF
+		  the adequacy results known for standard PCF, keeping in
+		  mind that there exists a Girard translation from PCF to
+		  linear PCF with respect to which the new constructs
+		  should be sound. General adequacy results have usually
+		  been obtained in order-enriched categories, that is,
+		  categories where all hom-sets are typically cpos, maps
+		  are assumed to be continuous and fixpoints are
+		  interpreted using least upper bounds. One of the main
+		  contributions of the thesis is to propose a completely
+		  different approach to the problem of axiomatising those
+		  categories which yield adequate semantics for PCF and
+		  linear PCF. The starting point is that the only
+		  unavoidable assumption for dealing with adequacy is the
+		  existence, in any object, of a particular ``undefined''
+		  point denoting the non-terminating computation of the
+		  corresponding type; hom-sets are pointed sets, and this
+		  is the only required structure. In such a category of
+		  pointed objects, there is a way of axiomatising fixpoint
+		  operators: They are maps satisfying certain equational
+		  axioms, and furthermore, satisfying a very natural
+		  non-equational axiom called rational openness. It is
+		  shown that this axiom is sufficient, and in a precise
+		  sense necessary, for adequacy. The idea is developed in
+		  the intuitionistic case (standard PCF) as well as in the
+		  linear case (linear PCF), which is obtained by augmenting
+		  a Curry-Howard interpretation of Intuitionistic Linear
+		  Logic with numerals and fixpoint constants, appropriate
+		  for the linear context. Using instantiations to concrete
+		  models of the general adequacy results, various purely
+		  syntactic properties of linear PCF are proved to hold",
+  linkhtmlabs =	 "",
+  linkps =	 "",
+  linkpdf =	 ""
+}
+
+@TechReport{BRICS-DS-96-3,
+  author = 	 "Lars Arge",
+  title = 	 "Efficient External-Memory Data Structures and Applications",
+  institution =  brics,
+  year = 	 1996,
+  type = 	 ds,
+  number = 	 "DS-96-3",
+  address = 	 daimi,
+  month = 	 aug,
+  note =	 "Ph.D. thesis. xii+169~pp",
+  abstract =	 "\bgroup\def\a{algorithms}
+In this thesis we study the Input/Output (I/O) complexity
+of large-scale problems arising e.g. in the areas of
+database systems, geographic information systems, VLSI
+design systems and computer graphics, and design
+I/O-efficient \a{} for them.\bibpar
+A general theme in our work is to design I/O-efficient
+\a{} through the design of I/O-efficient data
+structures. One of our philosophies is to try to design
+I/O \a{} from internal memory \a{} by
+exchanging the data structures used in internal memory
+with their external memory counterparts. The results in
+the thesis include a technique for transforming an
+internal memory tree data structure into an external data
+structure which can be used in a {\em batched\/} dynamic
+setting, that is, a setting where we for example do not
+require that the result of a search operation is returned
+immediately. Using this technique we develop batched
+dynamic external versions of the (one-dimensional)
+range-tree and the segment-tree and we develop an
+external priority queue. These structures can be used in
+standard internal memory sorting \a{} and
+\a{} for problems involving geometric objects. The
+latter has applications to VLSI design. Using the
+priority queue we improve upon known I/O \a{} for
+fundamental graph problems, and develop new efficient
+\a{} for the graph-related problem of ordered
+binary-decision diagram manipulation. Ordered
+binary-decision diagrams are the state-of-the-art data
+structure for boolean function manipulation and they are
+extensively used in large-scale applications like logic
+circuit verification.\bibpar
+Combining our batched dynamic segment tree with the novel
+technique of external-memory fractional cascading we
+develop I/O-efficient \a{} for a large number of
+geometric problems involving line segments in the plane,
+with applications to geographic informations
+systems. Such systems frequently handle huge amounts of
+spatial data and thus they require good use of
+external-memory techniques.\bibpar
+We also manage to use the ideas in the batched dynamic
+segment tree to develop ``on-line'' external data
+structures for a special case of two-dimensional range
+searching with applications to databases and constraint
+logic programming. We develop an on-line external version
+of the segment tree, which improves upon the previously
+best known such structure, and an optimal on-line
+external version of the interval tree. The last result
+settles an important open problem in databases and I/O
+\a. In order to develop these structure we use a
+novel balancing technique for search trees which can be
+regarded as weight-balancing of B-trees.\bibpar
+Finally, we develop a technique for transforming internal
+memory lower bounds to lower bounds in the I/O model, and
+we prove that our new ordered binary-decision diagram
+manipulation \a{} are asymptotically optimal among
+a class of \a{} that include all know manipulation
+\a\egroup.",
+  linkhtmlabs =	 "",
+  linkps =	 "",
+  linkpdf =	 ""
+}
+
+@TechReport{BRICS-DS-96-2,
+  author = 	 "Allan Cheng",
+  title = 	 "Reasoning About Concurrent Computational Systems",
+  institution =  brics,
+  year = 	 1996,
+  type = 	 ds,
+  number = 	 "DS-96-2",
+  address = 	 daimi,
+  month = 	 aug,
+  note =	 "Ph.D. thesis. xiv+229~pp",
+  abstract =	 "This thesis consists of three parts. The first presents
+		  contributions in the field of verification of finite
+		  state concurrent systems, the second presents
+		  contributions in the field of behavioural reasoning about
+		  concurrent systems based on the notions of behavioural
+		  preorders and behavioural equivalences, and, finally, the
+		  third presents contributions in the field of set
+		  constraints.\bibpar
+		  In the first part, we study the computational complexity
+		  of several standard verification problems for 1-safe
+		  Petri nets and some of its subclasses. Our results
+		  provide the first systematic study of the computational
+		  complexity of these problems.\bibpar
+		  We then investigate the computational complexity of a
+		  more general verification problem, model-checking, when
+		  an instance of the problem consists of a formula and a
+		  description of a system whose state space is at most
+		  exponentially larger than the description.\bibpar
+		  We continue by considering the problem of performing
+		  model-checking relative to a partial order semantics of
+		  concurrent systems, in which not all possible sequences
+		  of actions are considered relevant. We provide the first,
+		  to the best of our knowledge, set of sound and complete
+		  tableau rules for a CTL-like logic interpreted under
+		  progress fairness assumptions. \bibpar
+		  In the second part, we investigate Joyal, Nielsen, and
+		  Winskel's proposal of spans of open maps as an abstract
+		  category-theoretic way of adjoining a bisimulation
+		  equivalence, ${\cal P}$-bisimilarity, to a category of
+		  models of computation ${\cal M}$. We show that a
+		  representative selection of well-known bisimulations and
+		  behavioural equivalences can be captured in the setting
+		  of spans of open maps.\bibpar
+		  We then define the notion of functors being ${\cal
+		  P}$-factorisable and show how this ensures that ${\cal
+		  P}$-bisimilarity is a congruence with respect to such
+		  functors. \bibpar
+		  In the last part we investigate set constraints. Set
+		  constraints are inclusion relations between expressions
+		  denoting sets of ground terms over a ranked
+		  alphabet. They are typically derived from the syntax of a
+		  program and solutions to them can yield useful
+		  information for, e.g., type inference, implementations,
+		  and optimisations.\bibpar
+		  We provide a complete Gentzen-style axiomatisation for
+		  sequents $\Phi\vdash\Psi$, where $\Phi$ and $\Psi$ are
+		  finite sets of set constraints, based on the axioms of
+		  termset algebra. We show that the deductive system is
+		  complete for the restricted sequents $\Phi\vdash\bot$
+		  over standard models, incomplete for general sequents
+		  $\Phi\vdash\Psi$ over standard models, but complete for
+		  general sequents over set-theoretic termset
+		  algebras.\bibpar
+		  We then continue by investigating Kozen's rational
+		  spaces.  We give several interesting results, among
+		  others a Myhill-Nerode like characterisation of rational
+		  points.",
+  linkhtmlabs =	 "",
+  linkps =	 "",
+  linkpdf =	 ""
+}
+
+@TechReport{BRICS-DS-96-1,
+  author = 	 "Urban Engberg",
+  title = 	 "Reasoning in the Temporal Logic of Actions --- The design
+		  and implementation of an interactive computer system",
+  institution =  brics,
+  year = 	 1996,
+  type = 	 ds,
+  number = 	 "DS-96-1",
+  address = 	 daimi,
+  month = 	 aug,
+  note =	 "Ph.D. thesis. xvi+222~pp",
+  abstract =	 "Reasoning about algorithms stands out as an essential
+		  challenge of computer science.  Much work has been put
+		  into the development of formal methods, within recent
+		  years focusing especially on concurrent algorithms.  The
+		  Temporal Logic of Actions (TLA) is one of the formal
+		  frameworks that has been the result of such research.  In
+		  TLA a system and its properties may be specified as
+		  logical formulas, allowing the application of reasoning
+		  without any intermediate translation.  Being a
+		  linear-time temporal logic, it easily expresses liveness
+		  as well as safety properties.\bibpar
+		  TLP, the TLA Prover, is a system developed by the author
+		  for doing mechanical reasoning in TLA.  TLP is a complex
+		  system that combines different reasoning techniques to be
+		  able to handle verification of real systems.  It uses the
+		  Larch Prover as its main verification back-end, but as
+		  well makes it possible to utilize results provided by
+		  other back-ends, such as an automatic linear-time
+		  temporal logic checker for finite-state systems.
+		  Specifications to be verified within the TLP system are
+		  written in a dedicated language, an extension of pure
+		  TLA.  The language as well contains syntactical
+		  constructs for representing natural deduction proofs, and
+		  a separate language for defining methods to be applied
+		  during verification.  With the TLP translators and
+		  interactive front-end, it is possible to write
+		  specifications and incrementally develop mechanically
+		  verifiable proofs in a fashion that has not been seen
+		  before.",
+  linkhtmlabs =	 "",
+  linkps =	 "",
+  linkpdf =	 ""
+}
+
+</HTML>
+</pre>

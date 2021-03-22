@@ -1,0 +1,516 @@
+% Bibliography: Data Mining (Association rules) 
+% created by Michael Hahsler (http://wwwai.wu-wien.ac.at/~hahsler)
+% latest update: 3.2.2004 (MFH) 
+%
+
+@book{Adamo2001,
+  author = "Jean-Marc Adamo",
+  title = "Data Mining for Association Rules and Sequential Patterns",
+  year = "2001",
+  publisher = "Springer",
+  address ="New York",
+  abstract = {},
+}
+
+
+@book{Piatetsky-Shapiro1991,
+   author = "G. Piatetsky-Shapiro and W. J. Frawley",
+   title = "Knowledge Discovery in Databases",
+   year = "1991",
+   publisher = "AAAI/MIT Press",
+   address = "Cambridge, MA",
+   abstract={Introduces the measure leverage.}
+}
+
+
+@Inproceedings{Agrawal1993,
+  author = "R. Agrawal and T. Imielinski and A. Swami",
+  title =  "Mining Association Rules between Sets of Items in Large Databases",
+  booktitle = "Proc. of the ACM SIGMOD Int'l Conference on Management of Data",
+  pages = "207--216",
+  address = "Washington D.C.",
+  month = "May",
+  year = "1993",
+  abstract={Introduces association rules and the support-confidence framework.}
+}
+
+@Inproceedings{Brin1997,
+  author = "Sergey Brin and Rajeev Motwani and Jeffrey D. Ullman and Shalom Tsur",
+  title =  "Dynamic Itemset Counting and Implication Rules for Market Basket Data",
+  booktitle = "SIGMOD 1997, Proceedings ACM SIGMOD International Conference on Management of Data",
+  pages = "255--264",
+  address = "Tucson, Arizona, USA",
+  month = "May",
+  year = "1997",
+  abstract={Introduces conviction (as an improvement to confidence 
+  based on implication rules) 
+  and interest (later called lift).}
+}
+
+@Inproceedings{Brin1997b,
+  author = "Sergey Brin and Rajeev Motwani and Craig Silverstein",
+  title =  "Beyond Market Baskets: Generalizing Association Rules to Correlations",
+  booktitle = "SIGMOD 1997, Proceedings ACM SIGMOD International Conference on Management of Data",
+  pages = "265--276",
+  address = "Tucson, Arizona, USA",
+  month = "May",
+  year = "1997",
+  abstract={Tests the significance of rules using the Chi-Squared test for
+  correlation. A problem is cells with low counts and multiple tests.}
+}
+
+@Inproceedings{Aggarwal1998,
+  author = "C. C. Aggarwal and P. S. Yu",
+  title =  "A New Framework For Itemset Generation",
+  booktitle = "PODS 98, Symposium on Principles of Database Systems",
+  pages = "18--24",
+  address = "Seattle, WA, USA",
+  year = "1998",
+  abstract={Points out weaknesses of the large frequent 
+  itemset method using support (spuriousness,
+   dense datasets). Collective strength is introduced.}
+}
+
+@article{Bayardo2000,
+  author = "R. Bayardo and R. Agrawal and D. Gunopulos",
+  title = "Constraint-based rule mining in large, dense databases",
+  journal = "Data Mining and Knowledge Discovery",
+  volume = "4",
+  number = "2/3",
+  pages = "217-240",
+  year = "2000",
+  abstract={Introduces the minimum improvement constraint and
+  enforces all constraints already during a breadth-first search.
+  Finds all rules for a given consequent C.}
+}
+
+@misc{Webb2003,
+  author = "Geoffrey I Webb and Songmao Zhang",
+  title = "Beyond association rules: Generalized rule discovery",
+  journal = "",
+  volume = "",
+  number = "",
+  pages = "",
+  year = "2003",
+  note ="submitted for publication, see: http://www.csse.monash.edu.au/~webb/",
+  abstract={Develops GRD (based on the OPUS search strategy) 
+  which discovers all
+  rules satisfying a set of constraints (max. number of rules, 
+  min support, min confidence, max coverage, max leverage) in a depth-first
+  search.}
+}
+
+
+@Inproceedings{Agrawal1994,
+  author = "Rakesh Agrawal and Ramakrishnan Srikant",
+  title = "Fast Algorithms for Mining Association Rules in Large Databases",
+  booktitle = "Proc. 20th Int. Conf. Very Large Data Bases, {VLDB}",
+  editor = "Jorge B. Bocca and Matthias Jarke and Carlo Zaniolo",
+  pages = "487--499",
+  address = "Santiago, Chile",
+  month = "Sept",
+  year = "1994",
+  abstract={Introduction of the APRIORI algorithm (the first and best known
+  algorithm; it uses a breadth-first search strategy to counting the
+  support of itemsets). 
+  Also an algorithm to generate
+  synthetic transaction data is presented. Such synthetic transaction data
+  are widely used for the evaluation and comparison of new algorithms.}
+}
+
+@inproceedings{Savasere1995,
+  author = {Ashok Savasere and Edward Omiecinski and Shamkant Navathe}, 
+  title = {An efficient algorithm for mining association rules in large databases},
+  booktitle = {Proceedings of the 21st VLDB Conference},
+  address={Zurich, Switzerland},
+  pages= {432--443},
+  year={1995},
+  abstract = {Introduction of the PARTITION algorithm. 
+  The database is scanned only twice. For the first scan the DB is partitioned 
+  and in each partition support is counted. Then the counts are merged to
+  generate potential large itemsets. In the second scan the potential
+  large itemsets are counted to find the actual large itemsets.} 
+}
+
+
+
+@article{Kohavi1988,
+  author = "Ron Kohavi and Foster Provost",
+  title = "Glossary of Terms",
+  journal = "Machine Learning",
+  volume = "30",
+  number = "2--3",
+  pages = "271--274",
+  year = "1988",
+  abstract={Definition of measures from Machine Learning. Theses are
+  especially interesting for comparison and evaluation of association
+  rule algorithms.},
+}
+
+@InBook{Fayyad1996,
+  author = "Usama M. Fayyad and Gregory Piatetsky-Shapiro and Padhraic Smyth",
+  title =  "From Data Mining to Knowledge Discovery: An Overview",
+  booktitle = "Advances in knowledge discovery and data mining",
+  pages = "1--36",
+  publisher = "MIT Press",
+  address = "Cambridge, MA",
+  year = "1996",
+  abstract = {Introduction to the KDD process.},
+}
+
+
+
+@inproceedings{Zheng2001,
+  author = "Zijian Zheng and Ron Kohavi and Llew Mason",
+  title = "Real World Performance of Association Rule Algorithms",
+  booktitle = "Proceedings of the ACM SIGKDD Intentional Conference on Knowledge
+  Discovery in Databases \& Data Mining (KDD01)",
+  editor = "F. Provost and R. Srikant",
+  year = "2001",
+  publisher = {ACM Press},
+  pages = "401-406",
+  abstract={Compares the performance of 
+  association rule algorithms (APRIORI, CHARM, FP-Growth,
+  CLOSET, MagnumOpus) using one IBM-Artificial dataset and three real-world
+  e-commerce datasets. It shows that some improvements demonstrated 
+  on artificial
+  datasets do not carry over to real-world datasets.} 
+}
+
+
+
+@inproceedings{Liu1999,
+  author = "Bing Liu and Wynne Hsu and Yiming Ma",
+  title = "Mining Association Rules with Multiple Minimum Supports",
+  booktitle = "Proceedings of the ACM SIGKDD International Conference on Knowledge Discovery \& Data Mining (KDD-99)",
+  pages = "337--341",
+  year = "1999",
+  abstract={Adapts APRIORI to work with different minimum support thresholds 
+  assigned to different items (minimum item supports, MIS).
+  To preserve the downward closure property of support item sorting using
+  the MIS values is used.}
+}
+
+
+@article{Cohen2001,
+  author = "Edith Cohen and Mayur Datar and Shinji Fujiwara and Aristides Gionis and Piotr Indyk and Rajeev Motwani and Jeffrey D. Ullman and Cheng Yang",
+  title = "Finding Interesting Associations without Support Pruning",
+  journal = "IEEE Transactions on Knowledge and Data Engineering",
+  volume = "13",
+  number = "1",
+  pages = "64-78",
+  year = "2001",
+  abstract={Uses similarity measures between hashed values of rows in
+  a transaction database. The approach in the paper was only shown for 
+  associations between two items.}
+}
+
+@article{Silverstein2000,
+  author = "Craig Silverstein and Sergey Brin and Rajeev Motwani and Jeffrey D. Ullman",
+  title = "Scalable Techniques for Mining Causal Structures",
+  journal = "Data Mining and Knowledge Discovery",
+  volume = "4",
+  number = "2/3",
+  pages = "163-192",
+  year = "2000",
+  abstract={Explores the applicability of constraint-based causal discovery
+  (known from Bayesian learning) to discover causal relationships in
+  market basket data.}
+}
+
+
+@article{Aumann2003,
+  author = "Y. Aumann and Y. Lindell",
+  title = "Statistical Theory for Quantitative Association Rules",
+  journal = "Journal of Intelligent Information Systems",
+  volume = "20",
+  number = "3",
+  pages = "255-283",
+  year = "2003",
+  abstract={Defines quantitative association rules using statistical 
+  measures (e.g., 
+  mean and variance)
+  of continuous data. Also algorithms are discussed.}
+}
+
+
+
+@inproceedings{Srikant1997,
+  author = "Ramakrishnan Srikant and Quoc Vu and Rakesh Agrawal",
+  title = "Mining Association Rules with Item Constraints",
+  booktitle = "Proc. 3rd Int. Conf. Knowledge Discovery and Data Mining, {KDD}",
+  month = "14--17~",
+  publisher = "AAAI Press",
+  editor = "David Heckerman and Heikki Mannila and Daryl Pregibon and Ramasamy Uthurusamy",
+  pages = "67--73",
+  year = "1997",
+  abstract={Integrates boolean constraints  
+  on items (absence, presence) into the mining algorithm
+  to reduce the search space. Algorithms are discussed.}
+}
+
+@inproceedings{Bayardo1999,
+  author = "Robert J. {Bayardo Jr.} and Rakesh Agrawal",
+  title = "Mining the most interesting rules",
+  booktitle = "Proceedings of the ACM SIGKDD Invitational Conference on Knowledge Discovery in Databases \& Data Mining (KDD99)",
+  pages = "145--154",
+  year = "1999",
+  abstract={Shows that the best (optimal, most interesting) rules 
+  according to measures as confidence, support, gain, chi-squared value, gini,
+  entrophy gain, laplace, lift, conviction all must reside
+  along a support/confidence border.}
+}
+
+@inproceedings{Wirth2000,
+  author = "R{\"u}diger Wirth and Jochen Hipp",
+  title = "CRISP-DM: Towards a Standard Process Model for Data Mining",
+  booktitle = "Proceedings of the 4th International
+  Conference on the Practical Applications of Knowledge Discovery
+    and Data Mining",
+    address="Manchester, UK",
+  month="April",
+  year="2000",
+  abstract= {},
+}
+
+@Article{kddcup2000,
+ author = {Ron Kohavi and Carla Brodley and Brian Frasca and Llew Mason and Zijian Zheng}, 
+ title = {{KDD-Cup} 2000 Organizers' Report:  Peeling the Onion},
+ journal = {SIGKDD Explorations},
+ volume = {2},
+ number = {2},
+ pages = {86--98},
+ url = {http://robotics.stanford.edu/users/ronnyk/kddOrganizerReport.pdf},
+ year = 2000},
+ abstract ={Introduces also some freely available data sets.},
+}
+
+
+@Article{Coenen2004,
+ author = {Frans Coenen and  Graham Goulbourne and  Paul Leng}, 
+ title = {Tree structures for mining association rules},
+ journal = {Data Mining and Knowledge Discovery},
+ volume = {8},
+ number = {},
+ pages = {25-51},
+ year = {2004},
+ abstract  = {Describes how to compute partial support counts in one DB-pass 
+ and how to store them in an enumeration tree
+ (P-Tree).}
+}
+
+@Article{Han2004,
+ author = {Jiawei Han  and Jian Pei  and Yiwen Yin and Runying Mao},
+ title = {Mining frequent patterns without candidate generation},
+ journal = {Data Mining and Knowledge Discovery},
+ volume = {8},
+ number = {},
+ pages = {53-87},
+ year = {2004},
+ abstract  = {Describes the data mining method FP-growth 
+ (frequent pattern growth) which uses an extended
+ prefix-tree (FP-tree) structure to store the database in a compressed form.
+ ...}
+}
+
+@Article{Barber2003,
+ author = {Brock Barber and Howard J. Hamilton},
+ title = {Extracting share frequent itemsets with infrequent subsets},
+ journal = {Data Mining and Knowledge Discovery},
+ volume = {7},
+ number = {},
+ pages = {153-185},
+ year = {2003},
+ abstract  = {Itemset share is the fraction of some measure (e.g., sales,
+ profit) contributed by the items in the set. A itemset is itemshare 
+ frequent if it exceeds a threshold. Share frequency is not downward
+ closed! The article presents several algorithms and heuristics to
+ mine share frequent itemsets.}
+}
+
+@inproceedings{Borgelt2002,
+  author = {Christian Borgelt and Rudolf Kruse},
+  title = {Induction of Association Rules: Apriori Implementation},
+  booktitle = {15th Conference on Computational Statistics (Compstat 2002)},
+  address={Heidelberg, Germany },
+  publisher ={Physica Verlag},  
+  month="",
+  year="2002",
+  abstract = {An efficient implementation of APRIORI.}
+}
+
+@inproceedings{Borgelt2003,
+  author = {Christian Borgelt},
+  title = {Efficient Implementations of Apriori amd Eclat},
+  booktitle = {Proceedings of the IEEE ICDM Workshop on 
+  Frequent Itemset Mining Implementations},
+  address={Melbourne, FL, USA},
+  month="November",
+  year="2003",
+  editor = {Bart Goethals and Mohammed J. Zaki},
+  abstract = {Discusses the efficient implementation of Apriori 
+  (with prefix tree) and Eclat.}
+}
+
+
+
+
+
+@inproceedings{Tao2003,
+  author = {Feng Tao and Fionn Murtagh and Mohsen Farid},
+  title = {Weighted Association Rule Mining using Weighted Support and Significance Framework},
+  booktitle = {Proceedings of The Ninth ACM SIGKDD International Conference on Knowledge Discovery and Data Mining (ACM SIGKDD 2003)},
+  address={Washington, DC},
+  publisher = {ACM Press},
+  month="",
+  year="2003",
+  abstract = {Support is weighed using attributes of the items 
+  (e.g., price, page dwelling time). A support and significance framework is
+  presented which possesses a weighted downward closure property important
+  for pruning the search space.}
+}
+
+
+
+@inproceedings{Pasquir1999,
+  author = { Nicolas Pasquier   
+  and Yves Bastide   
+  and Rafik Taouil   
+  and Lotfi Lakhal},
+  title = {Discovering Frequent Closed Itemsets for Association Rules},
+  booktitle = {Lecture Notes In Computer Science archive
+  Proceeding of the 7th International Conference on Database Theory, Lecture Notes In Computer Science (LNCS)},
+  address={},
+  publisher = {Springer},
+  month="",
+  year="1999",
+  abstract = {Introduces closed itemsets. An itemset X is closed if no 
+  no proper super set
+  of the itemset has is contained in every transaction in which X is 
+  contained. Which means there exists no super set of X with the same
+  support count as X.} 
+}
+
+@inproceedings{Pei2000,
+  author = {Jian Pei and Jiawei Han and Runying Mao},
+  title = {CLOSET: An Efficient Algorithm for Mining Frequent Closed Itemsets},
+  booktitle = {ACM SIGMOD Workshop on Research Issues in Data Mining and Knowledge Discovery},
+  address={},
+  publisher = {},
+  month="",
+  year="2000",
+  abstract = {Introduces the algorithm CLOSET which 
+  mines frequent closed itemsets using FP-growth (a depth-first search using
+  support counting).} 
+}
+
+
+
+@Article{Hipp2000,
+ author = {Jochen Hipp and Ulrich Güntzer and Gholamreza
+ Nakhaeizadeh}, 
+ title = {Algorithms for Association Rule Mining - A General
+ Survey and Comparison},
+ journal = {SIGKDD Explorations},
+ volume = {2},
+ number = {2},
+ pages = {1--58},
+ year = 2000,
+ abstract ={Describes the fundamentals of association rule mining and
+ presents an systematization of existing algorithms.},
+}
+
+
+@inproceedings{Burdick2001,
+  author = {Douglas Burdick   
+  and Manuel Calimlim   
+  and Johannes Gehrke},
+  title = {MAFIA: A Maximal Frequent Itemset Algorithm for Transactional Databases},
+  booktitle = {Proceedings of the 17th International Conference on Data Engineering},
+  address={Washington, DC},
+  publisher = {IEEE Computer Society },
+  month="",
+  pages= {443 - 452},
+  year="2001",
+  abstract = {} 
+}
+
+@inproceedings{Wang2001,
+  author = {Ke Wang 
+  and Yu He   
+  and David W. Cheung},
+  title = {Mining confident rules without support requirement},
+  booktitle = {Proceedings of the tenth international conference on Information and knowledge management},
+  address={New York, NY},
+  publisher = {ACM Press},
+  month="",
+  pages= {89 - 96},
+  year="2001",
+  abstract = {} 
+}
+
+
+
+@Article{Omiecinski2003,
+ author = {Edward R. Omiecinski}, 
+ title = {Alternative Interest Measures for
+ Mining Associations in Databases},
+ journal = {IEEE Transactions on Knowledge and Data Engineering},
+ volume = {15},
+ number = {1},
+ month ={Jan/Feb},
+ pages = {57-69},
+ year = {2003},
+ abstract = {},
+ }
+
+@inproceedings{Zaki2002,
+  author = {Mohammed J. Zaki and Ching-Jiu Hsiao},
+  title = {CHARM: An Efficient Algorithm for Closed Itemset Mining},
+  booktitle = {Proceedings of the Second SIAM International Conference on Data Mining},
+  address={Arlington, VA},
+  publisher = {SIAM},
+  month="",
+  year="2002",
+  abstract = {},
+}
+
+
+@techreport{Zaki1997,
+  author = {Mohammed J. Zaki and  Srinivasan Parthasarathy and Mitsunori Ogihara and Wei Li},
+  title = {New Algorithms for Fast Discovery of Association Rules},
+  address={Rochester, NY 14627},
+  month="July",
+  year="1997",
+  number= {651}, 
+  institution = "Computer Science Department, University of Rochester",
+  abstract = {Quickly identify maximal frequent itemsets
+  (a frequent itemset is maximal if it is no proper subset of any other
+  frequent itemset)
+  using different
+  database layout schemes (regular, inverted) and clustering techniques 
+  (equivalence class ECLAT, max. clique). See also Zaki2000, Scalable 
+  Algorithms for Association Mining},
+}
+
+@Article{Zaki2000,
+ author = {Mohammed J. Zaki}, 
+ title = {Scalable Algorithms for Association Mining},
+ journal = {IEEE Transactions on Knowledge and Data Engineering},
+ volume = {12},
+ number = {3},
+ month ={May/June},
+ pages = {372-390},
+ year = {2000},
+  abstract = {
+  Introduces six new algorithms combining several features
+  (database format, the
+  decomposition technique, and the search procedure).
+  Includes Eclat (Equivalence CLAss Transformation),
+  MaxEclat, Clique, MaxClique, TopDown, and AprClique.
+  ECLAT is a well known depdth-first 
+  search algorithm using set intersection.
+ },
+}
+
+

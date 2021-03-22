@@ -1,0 +1,1277 @@
+%
+% Combined bibliography for LCN Paper.
+%
+% The format for this is to have the references for each chapter added
+% sequentially by chapter by the person doing the chapter, duplicates
+% can be dealt with later
+%
+
+@string {jsac     = "IEEE Journal on Selected Areas In Communications"}
+@string {acmtocs  = "ACM Transactions on Computer Systems"}
+@string {acmosr   = "ACM Operating Systems Review"}
+@string {sosp14   = "Proceedings of the 14th ACM SIGOPS Symposium on
+                     Operating Systems Principles, Operating Systems Review"}
+@string {sosp15   = "Proceedings of the 15th ACM SIGOPS Symposium on
+                     Operating Systems Principles, Operating Systems Review"}
+@string {ucb      = "University of California at Berkeley"}
+@string {lancs    = "Distributed Multimedia Research Group, Department
+                     of Computing, Lancaster University"}
+@string {cucl     = "University of Cambridge Computer Laboratory"}
+@string {apm      = "Architecture Projects Management Limited"}
+@string {apmaddr  = "Poseidon House, Castle Park, Cambridge,
+		     CB3 0RD, UK"} 
+@string {smli     = "Sun Microsystems Laboratories, Inc."}
+@string {smliaddr = "2550 Garcia Avenue, Mountain View, California 94043"}
+@string {wash     = "Department of Computer Science and Engineering,
+                     University of Washington"}
+@string {washaddr = "Seattle, WA 98195"}}
+@string {parc     = "Xerox Corporation, Palo Alto Research Center"}
+@string {src      = "Digital Equipment Corporation Systems Research Centre"}
+
+%%% \section{Introduction}
+
+
+
+@inproceedings{MLM:usenix94,
+  author =       "S. J. Mullender and I. M. Leslie and D. R. McAuley",
+  title =        "Operating-System Support for Distributed
+                  Multimedia",
+  month =        jun,
+  year =         1994,
+  booktitle =    "Proceedings of Summer 1994 Usenix Conference",
+  address =      "Boston, Massachusetts, USA",
+  pages =        "209--220",
+  note =         "Also available as Pegasus Paper 94--6"
+}
+
+@inproceedings{tennenhouse:VuSystem,
+  author =       "C. J. Lindblad and  D. J. Wetherall and D. L. Tennenhouse",
+  title =        "The VuSystem: A Programming System for Visual
+		  Processing of Digital Video",
+  month =        oct,
+  year =         1994,
+  booktitle =    "Proceedings of ACM Multimedia",
+  address =      "San Francisco, CA, USA",
+}
+
+
+@article{lancs:*,
+  author =       "G. Coulson and A.Campbell and P. Robin and G. Blair
+		  and M. Papathomas and D. Sheperd",
+  title =        "{The Design of A QoS-Controlled ATM-Based
+		   Communication System in Chorus}",
+  month =        may,
+  year =         1995,
+  journal =      jsac,
+  volume =       13,
+  number =       4,
+  pages =        "686--699",
+}
+
+
+%%% \section{The Model of \QoS\ Management}
+
+@TechReport{mac:thesis,
+  author =       "D.R. McAuley",
+  title =        "{Protocol Design for High Speed Networks}",
+  institution =  "{University of Cambridge Computer Laboratory}",
+  year =         1990,
+  number =       186,
+  month =        "January",
+  note =         "Ph.D. Dissertation"
+}
+
+
+@inproceedings{tennenhouse:multiplexing,
+    author = "D. L. Tennenhouse",
+    title = "Layered Multiplexing Considered Harmful",
+    booktitle = "Protocols for High Speed Networks",
+    editor = "Rudin and Williamson",
+    pages = "",
+    publisher = "Elsevier",
+    year = "1989"
+}
+
+@Article{fairqueues,
+  author = 	 "A. Demers and S. Keshave and S. Shenker",
+  title = 	 "{Analysis and Simulation of Fair Queueing Algorithm}",
+  journal =	 "Journal of Internetworking: Research and Experience",
+  year =	 1990,
+  volume =	 1,
+  number =	 1
+}
+
+
+%%% \section{Structural Overview: Domains and Activations}
+
+@InProceedings{cmu:mercer:multimedia,
+  author = 	 "Clifford W. Mercer and Stefan Savage and Hideyuki
+		  Tokuda", 
+  title =        "Processor Capacity Reserves: Operating System
+		  Support for Multimedia Applications",
+  booktitle =	 "Proceedings of the IEEE International Conference on
+		  Multimedia Computing and Systems",
+  year =	 1994,
+  month =	 "May"
+}
+
+% This pair are the same
+%TechReport{wash:network:user:level,
+%  author = 	 "Chandramohan A. Thekkath and Thu D. Nguyen and
+%		  Evelyn Moy and Edward D. Lazowska",
+%  title = 	 "Implementing Network Protocols at User Level",
+%  institution =  wash,
+%  year = 	 1993,
+%  number =	 "93-03-01",
+%  address =	 washaddr
+%}
+
+@InProceedings{sigcomm:thekkath,
+  author = 	 "Chandramohan A. Thekkath and Thu D. Nguyen and
+		  Evelyn Moy and Edward D. Lazowska",
+  title = 	 "{Implementing Network Protocols at User Level}",
+  volume =	 24,
+  pages =	 "64--73",
+  booktitle =	 "{Computer Communication Review}",
+  year =	 1993,
+  organization = "{ACM SIGCOMM}",
+  month =	 "September",
+}
+%  note =	 "{Also available as technical report 93-03-01 from Department of Computer Science and Engineering, University of Washington}"
+
+
+@Unpublished{plan9:client:windows,
+  author = 	 "Rob Pike",
+  title = 	 "{$8{1\over2}$ in Brazil}",
+  note = 	 "Personal communication",
+  year =	 1994,
+  month =	 "December"
+}
+
+@Article{dan:devices,
+  author = 	 "P. Barham and M. Hayter and D. McAuley and I. Pratt",
+  title = 	 "Devices on the Desk Area Network",
+  journal =	 jsac,
+  year =	 1995,
+  volume =	 13,
+  number =	 4,      
+  month =	 "May"
+}
+
+@TechReport{sun:spring:unix,
+  author = 	 "Yousef A. Khalidi and Michael N. Nelson",
+  title = 	 "An {I}mplementation of {UNIX} on an
+		  {O}bject-oriented {O}perating {S}ystem",
+  institution =  smli,
+  year = 	 1992,
+  number =	 "92-3",
+  month =	 "December"
+}
+
+@Book{dec:alpha:arm,
+  title = 	 "Alpha Architecture Reference Manual",
+  publisher = 	 "Digital Press",
+  year = 	 1992,
+  editor =	 "Richard L. Sites"
+}
+
+@Manual{decchip:21064:hrm,
+  title = 	 "DECchip 21064-AA Microprocessor Hardware Reference Manual",
+  key =		 "DEC",
+  organization = "Digital Equipment Corporation",
+  edition =      "1st",
+  year =	 1992,
+  month =	 "October",
+  note =	 "Order Number EC-N0079-72"
+}
+
+
+@Article{wash:sched:activations,
+  author = 	 "Thomas E. Anderson and Brian N. Bershad and Edward
+		  D. Lazowska and Henry M. Levy",
+  title = 	 "{S}cheduler {A}ctivations: {E}ffective {K}ernel
+		  {S}upport for the {U}ser-{L}evel {M}anagement of
+		  {P}arallelism",
+  journal = 	 acmtocs,
+  year = 	 1992,
+  volume = 	 10,
+  number = 	 1,
+  pages = 	 "53-79",
+  month = 	 "February"
+}
+
+
+
+%%% \section{Interfaces and Naming}
+
+@Article{birrell:rpc,
+  author = 	 "Andrew D. Birrell and Bruce Jay Nelson",
+  title = 	 "Implementing {R}emote {P}rocedure {C}alls",
+  journal =	 acmtocs,
+  year =	 1984,
+  volume =	 2,
+  number =	 1,
+  pages =	 "39-59",
+  month =	 "February"
+}
+
+@PhdThesis{cosmos:thesis,
+  author = 	 "Cosmos Nicolaou",
+  title = 	 "A Distributed Architecture for Multimedia
+		  Communication Systems",
+  school = 	 cucl,
+  year = 	 1990,
+  month = 	 "December",
+  note = 	 "Available as Technical Report no. 220"
+}
+
+@TechReport{ansa:binding-model,
+  author = 	 "Dave Otway",
+  title = 	 "The {A}{N}{S}{A} {B}inding {M}odel",
+  institution =  apm,
+  year = 	 1994,
+  type =	 "ANSA Phase III document",
+  number =	 "APM.1314.01",
+  address =	 apmaddr,
+  month =	 "October"
+}
+
+@Article{src:network:objects,
+  author = 	"Andrew Birrell and Greg Nelson and Susan Owicki and
+		  Ted Wobber", 
+  title = 	"{N}etwork {O}bjects",
+  journal =	sosp14,
+  year =	1993,
+  volume =	27,
+  number =	5,
+  pages =	"217--230",
+  month =	dec
+}
+
+@TechReport{src:network:objects:gc,
+  author = 	 "Andrew Birrell and David Evers and Greg Nelson and
+		  Susan Owicki and Ted Wobber",
+  title = 	 "Distributed {G}arbage {C}ollection for {N}etwork
+		  {O}bjects",
+  institution =  src,
+  year = 	 1993,
+  month =	 "March"
+}
+
+@PhdThesis{evers:thesis,
+  author = 	 "David Evers",
+  title = 	 "Distributed Computing with Objects",
+  school = 	 cucl,
+  year = 	 1993,
+  month =	 "September",
+  note =	 "Available as Technical Report No. 332"
+}
+
+@Manual{corba:archspec,
+  title = 	 "The Common Object Request Broker: Architecture and
+		  Specification",
+  organization = "Object Management Group",
+  year = 	 1991,
+  month = 	 "Draft 10th December",
+  note = 	 "OMG Document Number 91.12.1, revision 1.1"
+}
+
+@Article{wash:light:rpc,
+  author = 	 "Brian N. Bershad and Thomas E. Anderson and Edward
+		  D. Lazowska and Henry M. Levy",
+  title = 	 "Lightweight {R}emote {P}rocedure {C}all",
+  journal = 	 acmtocs,
+  year = 	 1990,
+  volume = 	 8,
+  number = 	 1,
+  pages = 	 "37-55",
+  month = 	 "February"
+}
+
+
+@techreport{wash:opal:shar-prot,
+  title =	 "{Sharing and Protection in a Single Address Space
+		  Operating System}",
+  author =	 "Jeffrey S. Chase and Henry M. Levy and Michael J.
+		  Feeley and Edward D. Lazowska", 
+  year =	 1993,
+  month =	 apr,
+  type =	 "{Technical Report 93-04-02, revised January 1994}",
+  institution =	 "Department of Computer Science and Engineering,
+		  University of Washington"
+}
+
+@Book{organick:multics,
+  author = 	 "E.I. Organick",
+  title = 	 "The Multics System: An Examination of Its Structure",
+  publisher = 	 "MIT Press",
+  year = 	 1972
+
+}
+@Book{cap,
+  author = 	 "M. V. Wilkes and R. M. Needham",
+  title = 	 "The Cambridge CAP Computer and its Operating System",
+  publisher = 	 "North Holland",
+  year = 	 1979
+}
+
+@Article{wash:user:rpc,
+  author = 	 "Brian N. Bershad and Thomas E. Anderson and Edward
+		  D. Lazowska and Henry M. Levy",
+  title = 	 "User-{L}evel {I}nterprocess {C}ommunication for
+		  {S}hared {M}emory {M}ultiprocessors",
+  journal = 	 acmtocs,
+  year = 	 1991,
+  volume = 	 9,
+  number = 	 2,
+  pages = 	 "175-198",
+  month = 	 "May"
+}
+
+@InProceedings{synthesis:threads,
+  author = 	 "Henry Massalin and Calton Pu",
+  title = 	 "Threads and Input/Output in the Synthesis Kernel",
+  booktitle =    "Proceedings of the 12th ACM Symposium on Operating
+		  Systems Principles",
+  year = 	  1989,
+  month = 	 "December 13-16"
+}
+
+@Article{wash:emerald:language,
+  author = 	 "Rajendra K. Raj and Ewan Tempero and Henry M. Levy
+		  and Andrew P. Black and Norman C. Hutchinson and
+		  Eric Jul",
+  title = 	 "{Emerald: A General-Purpose Programming Language}",
+  journal =	 "Software---Practice and Experience",
+  year =	 1991,
+  volume =	 21,
+  number =	 1,
+  pages =	 "91-118",
+  month =	 "January"
+}
+
+@Book{nelson:Modula3,
+  title =        "Systems Programming With {Modula-3}",
+  publisher =    "Prentice-Hall",
+  year =         "1991",
+  editor =       "Greg Nelson",
+  address =      "Englewood Cliffs, NJ 07632",
+}
+
+
+@Unpublished{pegasus:middl:manual,
+  author = 	 "Timothy Roscoe",
+  title = 	 "The \textsc{Middl} {M}anual",
+  note = 	 "Pegasus Working Document (4th Edition), available
+		  from \texttt{ftp:\slash \slash
+		  ftp.cl.cam.ac.uk\slash pegasus\slash Middl.ps.gz}",
+  year =	 1994,
+  month =	 "August"
+}
+
+@Book{stroustrup:2,
+  author = 	 "Bjarne Stroustrup",
+  title = 	 "The C++ Programming Language",
+  publisher = 	 "Addison-Wesley",
+  year = 	 1991,
+  edition =	 "2nd"
+}
+
+@Book{stroustrup:evolution,
+  author = 	 "Bjarne Stroustrup",
+  title = 	 "The Design and Evolution of C++",
+  publisher = 	 "Addison-Wesley",
+  year = 	 1994,
+}
+
+@InCollection{srg:msrpc2:manual,
+author = 	 "Timothy Roscoe and Simon Crosby and Richard Hayton",
+title = 	 "The {MSRPC2} {U}ser {M}anual \nocite{srg:blue-book}",
+crossref =	 "srg:blue-book",
+chapter =	 16
+}
+
+@Book{srg:blue-book,
+  author =	 "Systems Research Group",
+  title = 	 "ATM Document Collection",
+  publisher = 	 cucl,
+  year = 	 1994,
+  key =		 "SRG",
+  edition =	 "3rd ({B}lue {B}ook)",
+  month =	 "March",
+  note =	 "SRG Technical Note"
+}
+
+@Article{pegasus:linkage:osr,
+  author = 	 "Timothy Roscoe",
+  title = 	 "Linkage in the {N}emesis {S}ingle {A}ddress {S}pace
+		  {O}perating {S}ystem",
+  journal =	 acmosr,
+  year =	 1994,
+  volume =	 28,
+  number =	 4,
+  pages =	 "48-55",
+  month =	 "October"
+}
+%Misc{pegasus:linkage:osr,
+%  author =	 {A. Other},
+%  title =	 {Details removed for Anonymity}
+%}
+
+@Article{pegasus:clanger:osr,
+  author = 	 "Timothy Roscoe",
+  title = 	 "{\textsc{Clanger} : An Interpreted Systems
+		  Programming Language}", 
+  journal =	 acmosr,
+  year =	 1995,
+  volume =	 29,
+  number =	 2,
+  pages =        "13-20",
+  month =	 "April",
+}
+
+@Book{clu:reference,
+  author = 	 "Barbara Liskov and Russell Atkinson and Toby Bloom
+		  and Eliot Moss and J. Craig Schaffert and Robert
+		  Scheifler and Alan Snyder",
+  title = 	 "CLU Reference Manual",
+  publisher = 	 "Springer-Verlag",
+  year = 	 1981,
+  volume =	 114,
+  series =	 "LNCS"
+}
+
+@InCollection{saltzer:names,
+author = 	 "Saltzer, J. H.",
+title = 	 "Naming and {B}inding of {O}bjects\nocite{bayer:os-advanced}",
+crossref =	 "bayer:os-advanced",
+chapter =	 "3.A",
+pages =	         "100--208"
+}
+
+@Book{bayer:os-advanced,
+title = 	 "Operating Systems: an Advanced Course",
+publisher = 	 "Springer-Verlag",
+year = 	         1979,
+editor =	 "Bayer, R. and Graham, R. M.  and Seegmuller, G.",
+volume =	 60,
+series =	 "LNCS"
+}
+
+@TechReport{sun:spring:naming,
+  author = 	 "Sanjay Radia and Michael N. Nelson and Michael
+		  L. Powell",
+  title = 	 "The Spring Name Service",
+  institution =  smli,
+  year = 	 1993,
+  number =	 "93-16",
+  month =	 "November"
+}
+
+@TechReport{parc:cedar:garbage,
+  author = 	 "Paul Rovner",
+ title = 	 "On {A}dding {G}arbage {C}ollection and {R}untime
+		  {T}ypes to a {S}trongly-{T}yped,
+		  {S}tatically-{C}hecked, {C}oncurrent {L}anguage", 
+  institution =  parc,
+  year = 	 1985,
+  number =	 "CSL-84-7",
+  month =	 "July"
+}
+
+@Manual{oberon:guide,
+  title = 	 "The Oberon Guide",
+  author = 	 "J{\"u}rg Gutknecht",
+  note =	 "(version 2.2)"
+}
+
+%%% \section{Inter-Domain Scheduling} 
+
+
+@Article{liu:scheduling,
+  author = 	 "C. L. Liu and James W. Layland",
+  title = 	 "{Scheduling Algorithms for Multiprogramming in a
+		  Hard-Real-Time Environment}",
+  journal =	 jacm,
+  year =	 1973,
+  volume =	 20,
+  number =	 1,
+  pages =	 "46-61",
+  month =	 "January"
+}
+
+@PhdThesis{dixon:thesis,
+  author = 	 "Michael Joseph Dixon",
+  title = 	 "System Support for Multi-Service Traffic",
+  school = 	 cucl,
+  year = 	 1992,
+  month = 	 "January",
+  note = 	 "Available as Technical Report no. 245"
+}
+
+@Manual{dec:3000:spm,
+  title = 	 "DEC3000 300\slash 400\slash 500\slash 600\slash
+		  700\slash 800\slash 900 AXP Models:
+		  System Programmer's Manual",
+  key =		 "DEC",
+  organization = "Digital Equipment Corporation",
+  edition =	 "2nd",
+  year =	 1994,
+  month =	 "July",
+  note =	 "Order Number EK-D3SYS-PM.B01"
+}
+
+
+
+
+%%% \section{Events and Intra-Domain Scheduling} 
+
+@TechReport{reed,
+  author = 	 "D. Reed and R. Kanodia",
+  title = 	 "Synchronization with eventcounts and sequencers",
+  institution =  "MIT Laboratory for Computer Science",
+  year = 	 1977,
+  annote =	 "V104.266"
+}
+
+@Misc{mills,
+  key =		 "RFC1129",
+  author =	 "D. Mills",
+  title =	 "{Internet Time Synchronisation: The Network Time Protocol}",
+  howpublished = "{Internet Request for Comment Number 1129}",
+  year =	 1989,
+  month =	 "October"
+}
+
+@Unpublished{birrell,
+  author = 	 "A. Birrell",
+  title = 	 "{Taming the Windows NT (TM) Thread Primitives}",
+  note = 	 "{A presentation before the Systems Research Group of
+		  the University of Cambridge Computer Laboratory}",
+  year =	 1993,
+  month =	 "October",
+  annote =	 "{Taming the Windows NT (TM) Thread Primitives.
+For many years, people at SRC have been advocating (and using) concurrency 
+mechanisms centred around the use of lightweight threads with "mutexes" 
+and "condition variables".  These have been widely adopted, most 
+recently as the basis for the Posix threads standard.  We've implemented 
+mutexes and condition variables in a wide variety of situations: 
+with simple coroutine-based emulations within a single-threaded Unix 
+(TM) process, in microcoded implementations on uni-processors such 
+the Alto, and on true multi-processors such as the Firefly.  Most 
+recently, we implemented them in user processes on Windows NT (TM).  
+Windows NT provides kernel-based threads, and its own set of synchronization 
+primitives.  The mismatch between NT's primitives and ours is subtle: 
+everyone I know who has tried to implement condition variables on 
+top of Windows NT has got it wrong the first time (including myself).  
+In the talk, I will describe the two sets of primitives (ours and 
+NT's); I'll tempt you with some incorrect implementations; and I'll 
+lead you through the design and evaluation of some correct ones. }
+"
+}
+
+@Unpublished{fairbairns,
+  author = 	 "R. Fairbairns",
+  title = 	 "{Experience of implementing POSIX threads on Wanda}",
+  note = 	 "Personal communication",
+  year =	 1993,
+  month =	 "March"
+}
+
+@TechReport{dec:src20,
+  author = 	 "A.D. Birrell and J.V. Guttag",
+  title = 	 "{Synchronization Primitives for a Multiprocessor: A
+		  formal specification}",
+  institution =  "{Digital Equipment Corporation Systems Research Center}",
+  year = 	 1987,
+  number =	 20,
+  annote =	 "V107.351"
+}
+
+%%% \section{Inter-Domain Communication and Binding}
+
+@Unpublished{fairbairns:dtbmisscost,
+  author = 	 "Robin Fairbairns",
+  title = 	 "Cost of an Alpha Nemesis protection domain switch",
+  note = 	 "personal communication",
+  year =	 1995,
+  month =	 "March"
+}
+
+%%% \section{Networking Support} (rjb, dme, prb)
+
+@Book{daemon,
+  author = 	 "S. Leffler and M. McKusick and M. Karels and J. Quarterman",
+  title = 	 "{The Design and Implementation of the 4.3BSD UNIX
+		  Operating System}",
+  publisher = 	 "Addison-Wesley",
+  year = 	 1989,
+  annote =	 "1Y767"
+}
+
+@Manual{maxine,
+  title = 	 "{MAXine System Module Functional Specification
+		  Revision 1.2}",
+  key =		 "DEC",
+  organization = "{Digital Equipment Corporation Workstation Systems
+		  Engineering}",
+  year =	 1991,
+  month =	 "February"
+}
+
+@Manual{flamingo,
+  title = 	 "{Flamingo Macrocoder's Manual}",
+  key =		 "DEC",
+  organization = "{Digital Equipment Corporation Workstation Systems
+		  Engineering}",
+  year =	 1992,
+  month =	 "November"
+}
+
+@TechReport{dixon:92,
+  author = 	 "M.J. Dixon",
+  title = 	 "{System Support for Multi-Service Traffic}",
+  institution =  "{University of Cambridge Computer Laboratory}",
+  year = 	 1991,
+  month =	 "September",
+  number =	 245,
+  note =	 "{Ph.D. Dissertation}"
+}
+
+@TechReport{dec:src23,
+  author = 	 "C. Thacker and L. Stewart and E. Satterthwaite",
+  title = 	 "{Firefly: A Multiprocessor Workstation}",
+  institution =  "{Digital Equipment Corporation Systems Research Center}",
+  year = 	 1987,
+  number =	 23,
+  month =	 "December",
+  annote =	 "V107.576"
+}
+
+@TechReport{dec:src43,
+  author = 	 "M. Schroeder and M. Burrows",
+  title = 	 "{Performance of Firefly RPC}",
+  institution =  "{Digital Equipment Corporation Systems Research Center}",
+  year = 	 1989,
+  number =	 43,
+  month =	 "April",
+  annote =	 "V109.729"
+}
+
+@TechReport{lrpc,
+  author = 	 "B.N. Bershad and T.E. Anderson and E.D. Lazowska and
+		  H.M. Levy",
+  title = 	 "{Lightweight Remote Procedure Call}",
+  institution =  "{Department of Computer Science, University of Washington}",
+  year = 	 1989,
+  number =	 "89-04-02",
+  month =	 "April",
+  annote =	 "V108.436"
+}
+
+@TechReport{jardetzky:92,
+  author = 	 "P.W. Jardetzky",
+  title = 	 "{Network File Server Design for Continuous Media}",
+  institution =  "{University of Cambridge Computer Laboratory}",
+  year = 	 1992,
+  number =	 268,
+  month =	 "October",
+  note =	 "{Ph.D. Dissertation}"
+}
+
+@TechReport{dm,
+  author = 	 "D.R. McAuley",
+  title = 	 "{Protocol Design for High Speed Networks}",
+  institution =  "{University of Cambridge Computer Laboratory}",
+  year = 	 1990,
+  number =	 186,
+  month =	 "January",
+  note =	 "Ph.D. Dissertation"
+}
+
+@Book{uni3.0,
+  author = 	 "The ATM Forum",
+  title = 	 "{ATM user-network interface specification Version 3.0}",
+  publisher = 	 "{Prentice Hall}",
+  year = 	 1993,
+  annote =	 "2Y405"
+}
+
+@InProceedings{fbufs,
+  author = 	 "P. Druschel and L. Peterson",
+  title = 	 "{Fbufs: A High-Bandwidth Cross-Domain Transfer Facility}",
+  OPTcrossref =  "",
+  OPTkey = 	 "",
+  OPTeditor = 	 "",
+  OPTvolume = 	 "",
+  OPTnumber = 	 "",
+  OPTseries = 	 "",
+  pages =	 "189-202",
+  booktitle =	 "{Proceedings of the fourteenth ACM Symposium on
+		  Operating Systems Principles}",
+  year =	 "1993",
+  OPTorganization = "",
+  OPTpublisher = "",
+  OPTaddress = 	 "",
+  month =	 "December",
+  OPTnote = 	 "",
+  OPTannote = 	 ""
+}
+
+@InProceedings{osiris,
+  author = 	 "P. Druschel and L. Peterson and B. Davie",
+  title = 	 "{Experiences with a High-Speed Network Adaptor: A
+		  Software Perspective}",
+  volume =	 24,
+  pages =	 "2-13",
+  booktitle =	 "{Computer Communication Review}",
+  year =	 1994,
+  organization = "{ACM SIGCOMM}",
+  month =	 "September"
+}
+
+@Misc{ip:trailers,
+  key =		 "RFC893",
+  author =	 "S. Leffler and M. Karels",
+  title =	 "{Trailer Encapsulations}",
+  howpublished = "{Internet Request for Comment Number 893}",
+  year =	 1984,
+  month =	 "April"
+}
+
+@Unpublished{dan:ip,
+  author = 	 "I. Pratt",
+  title = 	 "{Internet Connectivity on the Desk Area Network}",
+  note = 	 "Personal communication",
+  year =	 1994,
+  month =	 "April"
+}
+
+@Article{oblast,
+  author = 	 "J. Carter and W. Zwaenepoel",
+  title = 	 "Optimistic bulk data transfer protocols",
+  journal =	 "Sigmetrics and Performance",
+  year =	 1989,
+  volume =	 17,
+  number =	 1,
+  pages =	 "61-69",
+  month =	 "May",
+  annote =	 "willy@cs.rice.edu, John Carter <retrac@porter.cs.utah.edu>"
+}
+
+@Article{xblast,
+  author = 	 "S. O'Malley and M. Abbott and N. Hutchinson and L. Peterson",
+  title = 	 "{A Transparent Blast Facility}",
+  journal =	 "{Internetworking: Research and Experience}",
+  year =	 1990,
+  volume =	 1,
+  number =	 2,
+  pages =	 "57-75",
+  month =	 "December"
+}
+
+@TechReport{hopper,
+  author = 	 "A. Hopper",
+  title = 	 "{Local Area Computer Communication Networks}",
+  institution =  "{University of Cambridge Computer Laboratory}",
+  year = 	 1978,
+  number =	 7,
+  note =	 "{Ph.D. Dissertation}"
+}
+
+@TechReport{temple,
+  author = 	 "S. Temple",
+  title = 	 "{The Design of a Ring Communication Network}",
+  institution =  "{University of Cambridge Computer Laboratory}",
+  year = 	 1984,
+  number =	 52,
+  month =	 "January",
+  note =	 "Ph.D. Dissertation"
+}
+
+@InCollection{yes,
+  author = 	 "D. Greaves",
+  title = 	 "{The Olivetti Research ``Yes V2'' option module}",
+  booktitle =	 "{ATM Document Collection 3 (The {\em Blue} Book)}",
+  publisher =	 "{University of Cambridge Computer Laboratory}",
+  year =	 1994,
+  chapter =	 33,
+  month =	 "March"
+}
+
+@InProceedings{sigcomm:jetstream,
+  author = 	 "A. Edwards and G. Watson and J. Lumley and D. Banks
+		  and C. Calamvokis and C. Dalton",
+  title = 	 "{User-space protocols deliver high performance to
+		  applications on a low-cost Gb/s LAN}",
+  volume =	 24,
+  pages =	 "14-23",
+  booktitle =	 "{Computer Communication Review}",
+  year =	 1994,
+  organization = "{ACM SIGCOMM}",
+  month =	 "September"
+}
+
+@InProceedings{packetfilter,
+  author = 	 "J. Mogul",
+  title = 	 "{Efficient Use of Workstations for Passive
+		  Monitoring of Local Area Networks}",
+  volume =	 20,
+  booktitle =	 "{Computer Communication Review}",
+  year =	 1990,
+  organization = "{ACM SIGCOMM}",
+  month =	 "September"
+}
+
+@InProceedings{bpf,
+  author = 	 "S. McCanne and V. Jacobson",
+  title = 	 "{The BSD Packet Filter: A New Architecture for
+		  User-level Packet Capture}",
+  pages =	 "259-269",
+  booktitle =	 "{USENIX Winter 1993 Conference}",
+  year =	 1993,
+  month =	 "January"
+}
+
+@InProceedings{mpf,
+  author = 	 "M. Yuhara and C. Maeda and B. Bershad and J. Moss",
+  title = 	 "{The MACH Packet Filter: Efficient Packet
+		  Demultiplexing for Multiple Endpoints and Large
+		  Messages}",
+  pages =	 "153-165",
+  booktitle =	 "{USENIX Winter 1994 Conference}",
+  year =	 1994,
+  month =	 "January"
+}
+
+@Manual{turbochannel,
+  title = 	 "{TURBOchannel Specifications Version 3.0}",
+  key =		 "DEC",
+  organization = "{Digital Equipment Corporation TURBOchannel Industry Group}",
+  year =	 1993
+}
+
+@InProceedings{vegas,
+  author = 	 "L. Brackmo and S. O'Malley and L. Peterson",
+  title = 	 "{TCP Vegas: New Techniques for Congestion Detection
+		  and Avoidance}",
+  volume =	 24,
+  pages =	 "24-35",
+  booktitle =	 "{Computer Communication Review}",
+  year =	 1994,
+  organization = "{ACM SIGCOMM}",
+  month =	 "September"
+}
+
+@InCollection{ava200,
+  author = 	 "I. Pratt and P. Barham",
+  title = 	 "{The ATM Camera V2: AVA200}",
+  booktitle =	 "{ATM Document Collection 3 (The {\em Blue} Book)}",
+  publisher =	 "{University of Cambridge Computer Laboratory}",
+  year =	 1994,
+  chapter =	 36,
+  month =	 "March"
+}
+
+@TechReport{mark,
+  author = 	 "M. Hayter",
+  title = 	 "{A Workstation Architecture to Support Multimedia}",
+  institution =  "{University of Cambridge Computer Laboratory}",
+  year = 	 1993,
+  number =	 319,
+  month =	 "September",
+  note =	 "Ph.D. Dissertation"
+}
+
+@TechReport{sreenan:93,
+  author = 	 "C.J. Sreenan",
+  title = 	 "{Synchronisation services for digital continuous media}",
+  institution =  "{University of Cambridge Computer Laboratory}",
+  year = 	 1993,
+  number =	 292,
+  month =	 "March",
+  note =	 "{Ph.D. Dissertation}"
+}
+
+%%% \section{Window System} (prb)
+
+%%% \section{Status}
+
+%%% \section{Other Systems} (lift from rjb, tr, etc)
+
+@TechReport{rjb:thesis,
+  author = 	 "R.J. Black",
+  title = 	 "{Explicit Network Scheduling}",
+  institution =  "{University of Cambridge Computer Laboratory}",
+  year = 	 1994,
+  number =	 361,
+  month =	 "December",
+  note =	 "{Ph.D. Dissertation}"
+}
+%Misc{rjb:thesis,
+%  author =	 {B. Other},
+%  title =	 {Details removed for Anonymity}
+%}
+
+%%% \section{Future}
+
+
+
+@inproceedings{ukts12,
+ author        = "Simon Crosby and Ian Leslie and John T. Lewis and
+                  Neil O'Connell and Raymond Russell and Fergal
+                  Toomey",
+ year          = 1995,
+ title         = "Bypassing modelling: an investigation of entropy as
+                  a traffic descriptor in the Fairisle ATM network",
+ booktitle     = "Proceedings of the 12th UK Teletraffic Symposium",
+ address       = "Old Windsor"
+}
+
+
+%%% \section{Conclusions} 
+
+%%%%%% Additions for ACM paper
+		  
+@InProceedings{edwards,
+  author = 	 "A. Edwards and S. Muir",
+  title = 	 "{Experiences implementing a high performance TCP in use-space}",
+  volume =	 "25(4)",
+  pages =	 "196-205",
+  booktitle =	 "{Computer Communication Review}",
+  year =	 1995,
+  organization = "{ACM SIGCOMM}",
+  month =	 "August"
+}
+
+@inproceedings{exokernel,
+ author        = "Dawson Engler and Frans Kaashoek and James {O'Toole~Jr.}",
+ year          = 1995,
+ title         = "Exokernel: an operating system architecture for 
+                  application-level resource management",
+ booktitle     = "Proceedings of the 15th ACM SIGOPS Symposium on
+                  Operating Systems Principles, Operating Systems Review"
+}
+	  
+@TechReport{sun:spring:general,
+  author = 	 "G. Hamilton and P. Kougiouris",
+  title = 	 "{The Spring nucleus: a microkernel for objects}",
+  institution =  "{Sun Microsystems Laboratories}",
+  year = 	 1993,
+  number =	 "SMLI TR-93-14",
+  month =	 "April",
+  note =	 "Also in USENIX 93",
+  annote =	 "V110.760"
+}
+
+@TechReport{spring,
+  author =       "G. Hamilton and P. Kougiouris",
+  title =        "{The Spring nucleus: a microkernel for objects}",
+  institution =  "{Sun Microsystems Laboratories}",
+  year =         1993,
+  number =       "SMLI TR-93-14",
+  month =        "April",
+  note =         "Also in USENIX 93",
+  annote =       "V110.760"
+}
+		  
+%%% bib at point of acm paper 9511 (failed)
+%%% added for hotos
+
+@Article{jsac:nemesis,
+  author = 	 {I. M. Leslie and D. McAuley and R. Black and T. Roscoe and P. Barham and D. Evers and R. Fairbairns and E. Hyden},
+  title = 	 {{The Design and Implementation of an Operating System to Support Distributed Multimedia Applications}},
+  journal = 	 jsac,
+  year = 	 1996,
+  volume =	 14,
+  number =	 7,
+  month =	 {September},
+  pages =	 {1280--1297},
+  note =	 {Article describes state in May 1995}
+}
+%Misc{jsac:nemesis,
+%  author =	 {C. Other},
+%  title =	 {Details removed for Anonymity}
+%}
+
+@Article{gpt:liedtke,
+  author = 	 {Jochen Liedtke and Kevin Elphinstone},
+  title = 	 {{Guarded Page Tables on Mips R4000 OR An exercise in architecture-dependent micro optimisation}},
+  journal = 	 acmosr,
+  year = 	 1996,
+  volume =	 30,
+  number =	 1,
+  month =	 {January},
+  pages =	 {4--15}
+}
+
+@TechReport{gpt:ss249,
+  author = 	 {Sebastian Sch\"{o}nberg},
+  title = 	 {{The L4 Microkernel on Alpha, Design and Implementation}},
+  institution =  cucl,
+  year = 	 1996,
+  number =	 407,
+  month =	 {November}
+}
+
+@TechReport{prb:thesis,
+  author = 	 "P. R. Barham",
+  title = 	 "{Devices in a Multi-Service Operating System}",
+  institution =  "{University of Cambridge Computer Laboratory}",
+  year = 	 1996,
+  month =	 "October",
+  number =	 403,
+  note =	 "{Ph.D. Dissertation}"
+}
+%Misc{prb:thesis,
+%  author =	 {D. Other},
+%  title =	 {Details removed for anonymity}
+%}
+
+@Misc{nemco:products,
+  key =		 {Fore},
+  author =	 {{Nemesys Research Ltd.}},
+  title =	 {{The AVA-200}},
+  howpublished = {\url{http://www.nemesys.co.uk/products.html}},
+  year =	 1994,
+  note =	 {Now part of Fore Systems Inc.}
+}
+
+@Misc{idt,
+  author =	 {Idt},
+  title =	 {{The IDT77201 NICStAR}},
+  howpublished = {\url{http://www.idt.com/net/Welcome.html}},
+  year =	 1995,
+  month =	 {November}
+}
+
+@TechReport{eah:thesis,
+  author = 	 "E. Hyden",
+  title = 	 "{Operating System Support for Quality of Service}",
+  institution =  "{University of Cambridge Computer Laboratory}",
+  year = 	 1994,
+  number =	 340,
+  month =	 "February",
+  note =	 "{Ph.D. Dissertation}"
+}
+
+@Article{sosp:unet,
+  author = 	 {Anindya Basu and Vineet Buch and Werner Vogels and Thorsten {von Eicken}},
+  title = 	 {{U-Net: A User-Level Network Interface for Parallel and Distributed Computing}},
+  journal = 	 sosp15,
+  year = 	 1995,
+  volume =	 29,
+  number =	 5,
+  month =	 {December},
+  pages =	 {40--53},
+}
+
+@Misc{iap:fellowship,
+  author =	 {Ian Pratt},
+  title =	 {{User-Safe Devices}},
+  howpublished = {{Submission to King's College Research Fellowship Competition}},
+  year =	 1995,
+  month =	 {November},
+  note =	 {A fuller version will be available soon as a technical report.}
+}
+%Misc{iap:usd,
+%  author =	 {E. Other},
+%  title =	 {Details removed for Anonymity}
+%}
+
+@PhdThesis{iap:usd,
+  author = 	 {Ian Pratt},
+  title = 	 {{User-Safe Devices}},
+  school = 	 cucl,
+  year = 	 1997,
+  note =	 {(In Preparation)}
+}
+
+@InProceedings{dpf,
+  author =	 {Dawson R. Engler and M. Frans Kaashoek},
+  title =	 {{DPF: Fast, flexible message demultiplexing using dynamic code generation}},
+  volume = 	 26,
+  pages = 	 "53--59",
+  booktitle =	 {{Computer Communications Review}},
+  year = 	 1996,
+  organization = {{ACM SIGCOMM}},
+  month =	 Aug,
+}
+
+@InProceedings{sigcomm:mogul,
+  author = 	 "C. Kent and J. Mogul",
+  title = 	 "Fragmentation Considered Harmfull",
+  volume =	 0,
+  number =	 0,
+  pages =	 "1--2",
+  booktitle =	 "{Computer Communication Review}",
+  year =	 1987,
+  organization = "{ACM SIGCOMM}",
+  month =	 "August"
+}
+
+@Article{synthesis:kernel,
+  author = 	 "Calton Pu and Henry Massalin and John Ioannidis",
+  title = 	 "The Synthesis Kernel",
+  journal = 	 "Computing Systems",
+  year = 	 1988,
+  volume = 	 1,
+  number = 	 1,
+  pages = 	 "11-32",
+  month = 	 "Winter",
+  abstract = 	 "The Synthesis distributed operating system combines
+		  efficient kernel calls with a high-level, orthogonal
+		  interface. The key concept is the use of a code
+		  synthesizer in the kernel to generate specialised
+		  (thus short and fast) kernel routines for specific
+		  situations. We have three methods of synthesizing
+		  code: Factoring Invariants to bypass redundant
+		  computations; Collapsing Layers to eliminate
+		  unnecessary procedure calls and context switches;
+		  and Executable Data Structures to shorten data
+		  structure traversal time. Applying these methods,
+		  the kernel call synthesized to read /dev/mem takes
+		  about 15 microseconds on a 68020 machine. A simple
+		  model of computation called a synthetic machine
+		  supports parallel and distribvuted processing. The
+		  interface to synthetic machine consists of six
+		  operations on four types of objects. This
+		  combination of a high-level interface with the code
+		  synthesizer avoids the traditional trade-off in
+		  operating systems between powerful interfaces and
+		  efficient implementations."
+}
+
+@Article{sosp:spin,
+  author = 	 {Brian Bershad and Stefan Savage and Przemyslaw Pardyak and Emin Gun Sirer and David Becker and Marc Fiuczynski and Craig Chambers and Susan Eggers},
+  title = 	 {{Extensibility, Safety and Performance in the SPIN Operating System}},
+  journal = 	 sosp15,
+  year = 	 1995,
+  volume =	 29,
+  number =	 5,
+  month =	 {December},
+  pages =	 {267--284},
+}
+
+@Misc{Newman96,
+  author =	 {Peter Newman and Tom Lyon and Greg Minshall},
+  title =	 "{Flow Labelled IP: Connectionless ATM Under IP}",
+  howpublished = "{Presentation at Networld+Interop, Las Vegas. Also
+available from: \url{http:www.ipsilon.com}}",
+  year =	 1996,
+  month =	 {April}
+}
+
+@Article{rfc1953,
+  author = 	 {P. Newman and W. L. Edwards and R. Hinden and E. Hoffman and F. Ching Liaw and T. Lyon and G. Minshall},
+  title = 	 {{Ipsilon Flow Management Protocol Specification for IPv4 - Version 1.0}},
+  journal = 	 {Internet RFC 1953},
+  year = 	 1996,
+  month =	 {May}
+}
+
+@Article{rfc1954,
+  author = 	 {P. Newman and W.L. Edwards and R. Hinden and E. Hoffman and
+F. Ching Liaw and T. Lyon and G. Minshall},
+  title = 	 "{Transmission of Flow Labelled IPv4 on ATM Data Links
+                         - Ipsilon Version 1.0}",
+  journal = 	 {Internet RFC1954},
+  year = 	 1996
+}
+
+@Article{rfc1987,
+  author = 	 {P. Newman and W. Edwards and R. Hinden and E. Hoffman,
+		  F. Ching Liaw and  T. Lyon and G.Minshall },
+  title = 	 "{Ipsilon's General Switch Management Protocol
+		  Specification Version 1.1.}",
+  journal = 	 {Internet RFC1987},
+  year = 	 1996
+}
+
+@Article{Newman97,
+  author = 	 {Peter Newman and Greg Minshall and Tom Lyon and Larry Huston},
+  title = 	 {IP Switching and Gigabit Routers},
+  journal = 	 {IEEE Communications Magazine},
+  year = 	 1997,
+  month =	 {Jan}
+}
+
+@TechReport{keshav:thesis,
+  author = 	 {Srinivasan Keshav},
+  title = 	 {Congestion Control in Computer Networks},
+  institution =  ucb,
+  year = 	 1991,
+  number =	 {UCB/CSD 91/469},
+  month =	 {September},
+  annote =	 {V110 560}
+}
+
+@InProceedings{zha:sigcomm91,
+  author = 	 "Hui Zhang and Srinivasan Keshav",
+  title = 	 "{Comparison of Rate-Based Service Disciplines}",
+  volume =	 "21(4)",
+  pages =	 "113--121",
+  booktitle =	 "{Computer Communication Review}",
+  year =	 1991,
+  organization = "{ACM SIGCOMM}",
+  month =	 "September"
+}
+
+@Manual{dec:otto,
+  title = 	 {ATMWorks 750 Infosheet},
+  key =          {DEC},
+  organization = {Digital Equipment Corporation},
+  year =	 1994,
+  month =	 {November},
+  note =	 "{DEC Order code EC-F3925-42, availible by ftp from {\tt gatekeeper.dec.com}}"
+}
+
+@Manual{ansaware:rt:manual,
+  title = 	 "A{N}{S}{A}ware/{R}{T} 1.0 Manual",
+  key =		 "ANSA",
+  address =      apmaddr,
+  organization = apm,
+  year = 	 1995,
+  month = 	 "March",
+}
+
+@TechReport{mit:stride-scheduling,
+  author = 	 {Carl A. Waldspurger and William E. Weihl},
+  title = 	 "{Stride Scheduling: Deterministic Proportional-Share
+       Resource Mangement}",
+  institution =  "{MIT Laboratory for Computer Science}",
+  year = 	 1995,
+  month =	 {June},
+  note =	 {Technical Memo MIT/LCS/TM-528}
+}
+
+@InProceedings{sigcomm:ilp,
+  author = 	 "David Clark and David Tennenhouse",
+  title =	 "{Architectural Considerations for a New Generation of Protocols}",
+  volume =	 "20(4)",
+  pages =	 "200--208",
+  booktitle =	 "{Computer Communication Review}",
+  year =	 1990,
+  organization = "{ACM SIGCOMM}",
+  month =	 "September"
+}
+
+
+@Manual{cert:synattack,
+  title = 	 {{TCP SYN Flooding and IP Spoofing Attacks}},
+  key =          {{CERT}},
+  organization = {{CERT}},
+  year =	 1996,
+  month =	 {September},
+  note =	 "{Availible via ftp from {\sf info.cert.org}}"
+}
+
+@Manual{sun:streams,
+  title = 	 {{STREAMS Programming Guide}},
+  key = 	 {{SunSoft}},
+  organization = {{SunSoft}},
+  year =         1995,
+  month =        Nov
+}
+
+%%% End bibliography.

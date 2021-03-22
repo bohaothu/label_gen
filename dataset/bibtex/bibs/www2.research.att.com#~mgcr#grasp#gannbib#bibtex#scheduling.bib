@@ -1,0 +1,504 @@
+@phdthesis{Aie02a,
+        author = "R.M. Aiex",
+        title = "Uma investiga\c{c}\~ao experimental da distribui\c{c}\~ao
+		 de probabilidade de tempo de solu\c{c}\~ao em heur\'{\i}sticas
+		 {GRASP} e sua aplica\c{c}\~ao na an\'alise de
+		 implementa\c{c}\~oes paralelas",
+	school = "Department of Computer Science, Catholic University of
+		  Rio de Janeiro",
+        address = "Rio de Janeiro, Brazil",
+        year = "2002",
+	annote	= "This thesis describes a new methodology
+		   for the analysis of {GRASP}.  Hybrid strategies
+		   with path-relinking are also proposed.  These
+		   are studied on the 3-index assignment problem
+		   as well as the job shop scheduling problem and
+		   analyzed with the proposed methodology to predict
+		   qualitatively how the quality of the solution
+		   varies in a parallel independent {GRASP}.",
+}
+
+@Article{AieBinRes03a,
+        author = "R.M. Aiex and S. Binato and M.G.C. Resende",
+        title = "Parallel {GRASP} with path-relinking for job  
+                 shop scheduling",
+        journal = "Parallel Computing",
+	volume  = {29},
+	pages = {393--430},
+        year = "2003",
+        annote   =     "In this paper, a parallel {GRASP} with path-relinking 
+			as intensification strategy for the job shop 
+			problem is described using some ideas proposed 
+			in the {GRASP} of Binato et al. (2002). 
+			During the construction phase, the restricted 
+			candidate list is made up of elements 
+			that among those that can be added to the current 
+			partial solution without causing any infeasibility 
+			have greedy function value above a specified 
+			threshold. 
+			While in Binato et al. (2002) the greedy function 
+			value of an operation $k$ is the makespan resulting 
+			from the inclusion of $k$ to the already scheduled 
+			operations, in this paper the authors propose 
+			the so called {\em time-remaining} function. 
+			It is a new greedy function to be used in conjunction 
+			with the makespan and that favors operations from 
+			jobs having long remaining processing times. 
+			The authors employ the two exchange local searches 
+			used in Binato et al. (2002). 
+			Two parallelization strategies are proposed: an 
+			independent and a cooperative strategy. 
+			The independent strategy shows a sub-linear 
+			speedup, while the cooperative one shows an 
+			approximate linear speedup, thus confirming that 
+			the extra time spent for processes communication 
+			is compensated by an increase in solution quality.",
+}
+
+@Article{AktKil99a,
+       	author = {M.S. Akturk and K. Kili\c{c}},
+       	title = {Generating short-term observations for space mission 
+                projects},
+       	journal = {J. of Intelligent Manufacturing},
+       	volume = {10},
+       	pages = {387--404},
+	annote = {Generating short-term observations for 
+		space mission projects is basically a scheduling problem.  
+		It consists in generating short-term observation schedules 
+		of Hubble Space Telescope (HST) such that the scientific 
+		return is maximized. 
+		In this paper, a new dispatching rule and a set of local 
+		search based algorithms are proposed. 
+		The algorithms are based on the filtered beam search and 
+		include a {GRASP} and a Simulated Annealing to construct 
+		short-term observation schedules of space mission 
+		projects, mainly for NASA HST. 
+		The greedy function used in the proposed {GRASP} is based 
+		start time and completion time of scheduled observations 
+		The local search is based on a simple exchange 
+		neighborhood structure and is not performed at each {GRASP} 
+		iteration, but only if the schedule output from the 
+		construction phase seems to be promising.},
+       	year = {1999}
+}
+
+@Article{AktOzd01a,
+	author = "M.S. Akturk and D. Ozdemir",
+	title = "A new dominance rule to minimize total weighted tardiness 
+		with unequal release dates", 
+	journal = "European Journal of Operational Research",
+	volume = "135",
+	pages = "394--412",
+	year = "2001",
+        annote   =     "The authors propose a new algorithm that provides 
+			sufficient condition for local optimality and that 
+			can be embedded into several heuristic framework, 
+			including {GRASP}.",
+}
+
+@Article{Atk98a,
+	author = "J.B. Atkinson",
+	title = "A greedy randomised search heuristic for time-constrained
+		 vehicle scheduling and the incorporation of a learning
+		 strategy",
+	journal = "Journal of the Operational Research Society",
+        volume = "49",
+        pages = "700--708",
+	year = "1998",
+        annote   =     "Two forms of adaptive search called {\em local}
+                	and {\em global} adaptation are identified. 
+			In both search techniques, the greedy function takes 
+			into account a quantity that measures heuristically 
+			the quality of the partial solution. 
+			While in local adaptation the decisions made
+                	within a particular run influence only the subsequent
+                	performance of the heuristic, global adaptation involves
+                	making decisions that affect the performance of
+                	the heuristic in subsequent runs.",
+}
+
+@Article{BarFeo89a,
+        author = "J.F. Bard and T.A. Feo",
+        title = "Operations sequencing in discrete parts
+                 manufacturing",
+        journal = "Management Science",
+        year = "1989",
+        volume = "35",
+        pages = "249--255",
+        annote   =	"This paper presents a method for efficiently sequencing
+                    	cutting operations associated with the manufacture of
+                    	discrete parts.
+                    	The problem is modeled as an integer program. 
+		    	This is relaxed via Lagrangian relaxation
+                	into a min-cut problem on a bipartite network. 
+			To obtain lower bounds, a max-flow algorithm is 
+			applied and the corresponding solution is input 
+			to a {GRASP}.",
+}
+
+@Article{BarFeoHol96a,
+	AUTHOR     = "J.F. Bard and T.A. Feo and S. Holland",
+	TITLE      = "A {GRASP} for scheduling printed wiring board
+		      assembly",
+        JOURNAL    = "I.I.E. Trans.",
+	VOLUME     = "28",
+	PAGES      = "155--165",
+	year       = "1996",
+        annote   =     "The assembly of printed wiring boards (PWBs) typically
+                	involves the coordination of thousands of components
+                	and hundreds of part numbers in a job shop environment
+                	with more than 50 different processes and workstations.
+                	The authors propose a {GRASP} for solving
+                	the daily scheduling problem that arises in such
+                	environment.
+                	The first phase of {GRASP} obtains a
+                	user-specified number of schedules. The greedy function
+                	is the product between the weighted processing time and
+                	and the slack time window.",
+}
+
+@incollection{BinHerLoeRes02a,
+	author = "S. Binato and W.J. Hery and D. Loewenstern and
+			  M.G.C. Resende",
+        title = "A greedy randomized adaptive search
+				  procedure for job shop scheduling",
+        booktitle = "Essays and surveys in metaheuristics",
+        editor = "C.C.  Ribeiro and P.  Hansen",
+        publisher = "Kluwer Academic Publishers",
+	pages = "58--79",
+        year = "2002",
+	annote = {The authors design a {GRASP} incorporating 
+		an intensification strategy and a POP (Proximate 
+		Optimality Principle) in the construction phase. 
+		The greedy criterion is to minimize the makespan 
+		resulting from the addition of an operation to 
+		the schedule under construction, while the local 
+		search procedure uses a $2$-exchange neighborhood.}
+}
+
+@mastersthesis{Chr02a,
+        author = "L.M. Christofoletti",
+        title = "M\'etodos de rein\'{\i}cio aplicados ao seq{\"u}enciamento 
+		em uma m\'aquina com tempos de prepara\c c\~ao e data 
+		de entrega",
+        school = "Departamento de Engenharia de Sistemas,
+                Universidade Estadual de Campinas",
+        address = "Brazil",
+        annote = "This thesis discusses about applications of {GRASP} and 
+		its variants to the problem of minimizing 
+		the total tardiness of jobs in a single machine with 
+		sequence dependent setup times. 
+		An innovative aspect of this thesis is the introduction 
+		in the multistart framework with some memory strategies 
+		for storing a population of high quality solutions. 
+		In Portuguese.",
+        month = "April",
+        year = "2002"
+}
+
+@inproceedings{ChrArm01a,
+        author = "L.M. Christofoletti and V.A. Armentano",
+        title = {{Estrat\'egias de rein\'{\i}cio de busca local baseadas
+	em mem\'oria para programa\c{c}\~ao de tarefas em uma m\'aquina}},
+        booktitle = {{Proceedings of te XXXIII Brazilan Symposium on
+	              Operations Research}},
+        city = "Campos do Jord\~ao, Brazil",
+        month = "November 6--9",
+	annote = "In this paper, it is shown that incorporating 
+		adaptive memory in multistart random methods improves 
+		their performance. 
+		To validate their thesis, the authors address the well 
+		known difficult combinatorial optimization problem consisting 
+		in minimizing the total job tardiness on a single machine 
+		with sequence dependent setup times and implemented 
+		a {GRASP} combined with some basic principles of 
+		memory utilization during the construction phase. 
+		In Portuguese.",
+        year = "2001",
+        pages = "1381--1389"
+}
+
+@Article{DeGhoWel94a,
+        author = "P. De and J.B. Ghosj and C.E. Wells",
+        title = "Solving a generalized model for {CON} due date
+		 assignment and sequencing",
+        journal = "International Journal of Production Economics",
+        volume = "34",
+        pages = "179--185",
+        year = "1994",
+        annote   =     "This paper deals with a generalized model for
+                	assigning a constant flow allowance (CON) due date to a
+                	set of jobs and sequencing them on a single machine.
+                	The problem is viewed as a $0$-$1$ quadratic problem
+                	and a {GRASP} is proposed to solve the quadratic 
+			problem.
+                	The randomization strategy used was inspired by a 
+			gradient-based variable forcing methodology
+                	proposed by Pardalos and Rodgers (1990) for a 
+			branch \& bound algorithm. 
+			The local search procedure is based on a
+                	definition of neighborhood in which two solutions are
+                	neighbors if they differ in the value of exactly one
+                	variable.",
+}
+
+@Article{FeoBar89a,
+        author = "T.A. Feo and J.F. Bard",
+        title = "Flight scheduling and maintenance base planning",
+        journal = "Management Science",
+        year = "1989",
+        volume = "35",
+	pages = "1415--1432",
+        annote   =   	"This paper presents a model that can be used by 
+			planners to both locate maintenance stations and 
+			develop flight schedules that better meet the 
+			cyclical demand for maintenance. 
+			The problem is formulated as large-scale mixed
+                	integer program, i.e. a minimum cost, multicommodity 
+			flow network with integral constraints, where each 
+			airplane represents a separate commodity and each 
+			arc has an upper and lower capacity of flow. 
+			Since obtaining feasible solutions from the relative
+                	LP relaxation is difficult, the authors propose a 
+			{GRASP}.",
+}
+
+@Article{FeoBarHol95a,
+	author = "T.A. Feo and J.F Bard and S. Holland",
+	title = "Facility-wide planning and scheduling of printed
+                 wiring board assembly",
+	journal = "Operations Research",
+        volume = "43",
+        pages = "219--230",
+	year = "1995",
+        annote   =     "This paper describes a decision support system known as
+                	{INSITES}, designed to assist {Texas Instruments} in the
+                	day-to-day assembly operations of their printed
+                	wiring board ({PWB}) facilities.
+                	A {GRASP} is used to solve the underlying
+                	multiple machine scheduling problem. The schedule
+                	produced at each {GRASP} iteration is evaluated based
+                	on one of five different optimization criteria. The
+                	choice of the criterion to be followed is made by the
+                	user to rank order the schedules provided by multiple
+                	{GRASP} iterations.",
+}
+
+@Article{FeoSarMcG96a,
+	author = "Feo, T.A. and K. Sarathy and  McGahan, J.",
+	title = "A {GRASP} for single machine scheduling with
+		 sequence dependent setup costs and linear delay
+		 penalties",
+	journal = "Computers \& Operations Research",
+        volume = "23",
+        pages = "881--895",
+	year = "1996",
+        annote   =     "A {GRASP} for single machine scheduling with sequence 
+			dependent setup costs and linear delay penalties
+                	is presented.
+                	The greedy function of the {GRASP} construction phase
+                	proposed is made up of two components: the switch over
+                	cost and the opportunity cost associated with not 
+			inserting a specific job in the next position and 
+			instead, inserting it after half of the unscheduled 
+			jobs have been scheduled.
+                	This greedy function tends to lead to a
+                	balance between the natural
+                	order and nearest neighbor approaches. The local search
+                	uses $2$-exchange, insertion exchange, and a combination
+                	of the two.",
+}
+
+@Article{FeoVenBar91a,
+        author = "T.A. Feo and K. Venkatraman and J.F. Bard",
+        title = "A {GRASP} for a difficult single machine
+		  scheduling problem",
+	journal = "Computers \& Operations Research",
+	volume = "18",
+        pages = "635--643",
+	year = "1991",
+        annote   =     "{GRASP} is applied in this paper to an unusually 
+			difficult scheduling problem with flow time and 
+			earliness penalties.
+                	Two greedy functions are developed and tested. 
+			The first is the difference between the flow time 
+			and earliness penalties, normalized by the 
+			processing time.
+                	The second function evaluates the cost of scheduling
+                	a job next by estimating the cost of the remaining
+                	schedule. 
+			The local search uses $2$-exchange and insertion 
+			exchange.",
+}
+
+@inproceedings{GarLozSmiGue01a,
+     	author = {J.M. Garc\'{\i}a and S. Lozano and K. Smith and F. Guerrero},
+     	title = {{A comparison of {GRASP} and an exact method for solving a 
+       	        production and delivery scheduling problem}},
+     	booktitle = {{First International Workshop on Hybrid Intelligent 
+                  Systems (HIS'01), Adelaide, Australia}},
+     	month = {December},
+	annote = {The production and delivery scheduling problem 
+		consists in selecting due dated orders to be processed by a 
+		manufacturing plant and immediately delivered to 
+		the customer. 
+		Moreover, a limited number of vehicles are available 
+		for delivery. 
+		To solve the problem, the authors propose an exact 
+		approach and a {GRASP}. 
+		The greedy criterion takes into account order weights, 
+		while the local search procedure uses an exchange 
+		neighborhood.},
+     	year = {2001}
+}
+
+@Article{LagGon91a,
+        author = "M. Laguna and J.L. Gonz\'alez-Velarde",
+        title = "A search heuristic for just-in-time scheduling
+		in parallel machines",
+        journal = "Journal of Intelligent Manufacturing",
+        year = "1991",
+        volume = "2",
+        pages = "253--260",
+        annote   =     "This paper presents a hybrid {GRASP}/tabu search
+                	metaheuristic for the weighted earliness penalty 
+			problem with deadlines in identical parallel machines.",
+}
+
+@Article{LouPaiPor01a,
+	author = "H.R. Louren\c{c}o and J.P. Paix{\~{a}}o and
+		  R. Portugal",
+	title = "Multiobjective metaheuristics for the bus-driver 
+		 scheduling problem",
+	journal = "Transportation Sciences",
+	volume = "35",
+	pages = "331--343",
+	year = "2001",
+        annote   = "To solve real driver scheduling problems 
+		in public transportation bus companies several 
+		metaheuristics are presented in this paper, including 
+		a {GRASP}. 
+		To design {GRASP}, the authors define 
+		a set $N$ of $n$ duties and used a greedy criterion 
+		based on a quantity proportional to the cost associated 
+		with the duties. 
+		The local search procedure uses a $1$-exchange 
+		neighborhood.",
+}
+
+@Article{RioBar98a,
+	author = "R.Z. R\'{\i}os-Mercado and J.F. Bard",
+	title = "Heuristics for the flow line problem with setup costs",
+	journal = "European Journal of Operational Research",
+        vol = "110",
+	pages = "76--98",
+	year = "1998",
+        annote   =     "This paper presents two new heuristics for the flowshop
+          		scheduling problem with sequence-dependent setup times 
+			and makespan minimization objective, one of which is a 
+			{GRASP}.
+          		Both heuristics are compared to a previously proposed
+          		algorithm, based on the traveling salesman problem 
+			(TSP), on randomly generated instances. When setup
+          		times are an order of magnitude smaller than processing
+          		times, the new approaches prove superior to the 
+			TSP-based heuristic. 
+			When both processing and setup times are identically 
+			distributed, the TSP-based heuristic outperforms
+          		the proposed procedures.",
+}
+
+@mastersthesis{Riv98a,
+        author = "L.I.D. Rivera",
+        title = "Evaluation of parallel implementations of heuristics
+		  for the course scheduling problem",
+	school = "Instituto Tecnologico y de Estudios Superiores de
+		  Monterrey",
+        address = "Monterrey, Mexico",
+        year = "1998",
+	annote   =	"This thesis presents several parallel
+                 	implementations of heuristics for the
+                 	course scheduling problem.
+                 	One of the heuristics is a {GRASP}.
+                 	In Spanish."
+}
+
+@Article{RojBar04a,
+        author = {S. Rojanasoonthon and J.F. Bard},
+        title = {{A {GRASP} for parallel machine scheduling with 
+		time windows}},
+        journal = {INFORMS Journal on Computing},
+        volume = {},
+        pages = {},
+        annote = {In this paper, the authors extend the {GRASP} 
+		they proposed in Rojanasoonthon, Bard, and Reddy (2003) 
+		to solve parallel machine scheduling problems in the 
+		presence of time windows.},
+	note = {To appear.},
+        year = {2004}
+}
+
+@Article{RojBarRed03a,
+       	author = {S. Rojanasoonthon and J.F. Bard and S.D. Reddy},
+       	title = {{Algorithms for parallel machine scheduling: A 
+                 case study of the tracking and data relay satellite system}},
+       	journal = {Journal of the Operational Research Society},
+       	volume = {54},
+       	pages = {806--821},
+	annote = {In this paper, a {GRASP} is designed, whose 
+		greedy criterion in the construction phase is based 
+		on maximizing a flexibility function that measures how much 
+		slack a schedule has after the insertion is made. 
+		Two different neighborhood are considered. 
+		The first is defined with respect to relocating scheduled 
+		jobs, while the second one with respect to interchanging 
+		jobs.},
+       	year = {2003}
+}
+
+@Incollection{SouMacOch03a,
+          author = "M.J.F. Souza and N. Maculan and L.S. Ochi",
+         title = "A {GRASP}-tabu search algorithm for school timetabling
+	          problems",
+	 booktitle = "Metaheuristics: Computer decision-making", 
+         editor = "M.G.C. Resende and J.P. de Sousa",
+	 publisher = {Kluwer Academic Publishers},
+         pages = "659--672",
+         year = "2003",
+        annote = "In this paper, a hybrid approach is proposed 
+		that uses a {GRASP} greedy randomized construction 
+		phase for obtaining a feasible solution to be hopefully 
+		improved applying a tabu search. 
+		The greedy choice takes into account first the number of 
+		available teachers and then the activity degree of each 
+		teacher. 
+		A timetable is represented as a $m\times q$ matrix $Q$ 
+		of integer values, such that each row $i$ represents the 
+		weekly schedule of teacher $i$ and $q_{ik}$ represents 
+		the activity of teacher $i$ in pariod $k$. 
+		A neighbor of a timetable $Q$ is a timetable $Q'$, 
+		obtained from $Q$ simply by changing two different and 
+		nonnegative values of a give row of $Q$.",
+}
+
+@inproceedings{XuChiu96a,
+	author = "J. Xu and S. Chiu",
+	title = "Solving a real-world field technician scheduling problem",
+	booktitle = "Proceedings of the International Conference on
+               Management Science and the Economic Development of China",
+        city = "Hong-Kong",
+	month = "July",
+	year = "1996",
+	pages = "240--248",
+	annote =	"The objective of the field technician scheduling 
+			problem is to assign a set of jobs at different 
+			locations with time windows to technicians
+                	with different job skills. The greedy choice of the
+                	proposed {GRASP} is to select jobs with the highest 
+			unit weight.
+                	The local search implements four different moves, among
+                	them the $2$-exchange and a swap that exchanges an 
+			assigned job with another job unassigned under the 
+			candidate schedule."
+}
+

@@ -1,0 +1,430 @@
+=======================================================================
+Regeln fuer bibtex-Eintraege (ein Vorschlag zur Guete)
+----------------------------
+
+A L L G E M E I N E S
+
+Der Sinn dieser Regeln ergibt sich aus den Gesichtspunkten
+- Vollstaendigkeit der Angaben, damit Bibliothekare die Literatur
+  (ggf. per Fernleihe) beschaffen koennen
+- Einheitlichkeit
+- ansprechendes Schriftbild
+Dies fuehrt nicht unbedingt zu eindeutigen, schon gar nicht zu
+juristisch abgesicherten Ergebnissen. Kompromisse sind notwendig.
+Viele Verlage pflegen je eigene Stilarten, manche arbeiten stillos.
+
+Keywords wie
+
+        AUTHOR          =
+        ADDRESS         =
+
+muessen den Regeln entsprechen, die in Handbuechern stehen,
+und auch so genutzt werden (also: keine `hacks', um uebliche 
+style-file Handhabungen zu umgehen!).
+
+
+Am ueblichsten ist es wohl, Namen von Autoren und Herausgebern in der Form
+- Nachname, Initialen des/der Vornamen(s) - anzugeben.
+Wir hatten bisher fuer das blaue Heft (und andere Verwendungen)
+Vornamen von Autoren moeglichst vollstaendig angegeben, bei Herausgebern
+allerdings ueblicherweise nur die Initialen. Das kann so schnell nicht
+alles geaendert werden, vielleicht demnaechst einmal.
+Doppelnamen sollten dabei mit doppeltem Bindestrich eingegeben werden.
+Hinter Punkten soll statt Leerraum eine Tilde eingegeben werden.
+
+Ortsnamen, die nicht jeder Gebildete eindeutig dem richtigen Land
+zuordnen kann, sollten durch den Landesnamen (hinter einem Komma)
+ergaenzt werden; z.B. "Niederlande" bzw. "The Netherlands" im Falle
+des Ortsnamens "Oude Poolgeest". Fuer Orte in den U.S.A. gilt:
+Der Ortsname ist (ohne Komma dazwischen) zu ergaenzen durch den
+ZIP code des Bundesstaates, der aus zwei Buchstaben besteht, z.B.
+MI fuer Michigan. Fuer die Hauptstadt Washington ist stattdessen
+"D.C." anzuhaengen, fuer die Stadt New York kein "NY".
+Fuer Grossbritannien zuzuegl. Nordirland wird ueblicherweise die
+Abkuerzung "U.K." verwendet.
+
+Im Titel eines Beitrags in einer Zeitschrift, einem Sammelband oder
+einem Konferenzbeitrag werden englische Worte stets alle klein
+geschrieben ausser dem 1. Wort zu Beginn bzw. nach einem ":" oder
+"--" sowie Akronymen.
+
+Im Titel eines Buches, Sammelbandes oder von Proceedings
+werden englische Worte fast alle gross geschrieben ausser
+Fuellwoerten wie "of", "the", "on", also neben Substantiven auch 
+Verben und Adjektive sowie meist auch Possessivpronomen.
+
+Schluessel (keys) hinter "@article{", "@proceedings{" usw. sollten
+nach folgenden Prinzipien aufgebaut werden:
+- bei einem Autor/Herausgeber: erste 3 Buchstaben, gefolgt von den
+  letzten zwei Ziffern der Jahreszahl, z.B. Bey97
+  bei Namen mit Sch muss allerdings mindestens noch ein weiterer
+  Buchstabe angefuegt werden, um Eindeutigkeit zu wahren, z.B. Schz99
+  bei mehreren Eintraegen des gleichen Autors im gleichen Jahr wird
+  an die Ziffern ein kleiner Buchstabe alphabetisch angehaengt,
+  beispielsweise Bey97b, Bey97c (wenn schon Bey97 verwendet wurde)
+- bei mehreren Autoren: jeweils die ersten Buchstaben der Nachnamen
+  hintereinandergehaengt, z.B. CPS89
+  bei mehr als 4 Namen wird an die ersten vier Buchstaben ein +
+  angehaengt, z.B. BHKR+90
+  bei nur zwei Autoren kommt es vor, dass der nach obigen Regeln
+  gebildete Schluessel noch nicht eindeutig ist (innerhalb einer
+  groesseren Liste); dann ist Einfallsreichtum gefragt, z.B. in der
+  Art von ArBe01b
+- bei Proceedings kann man auch den Namen der Konferenz, bzw. deren
+  Akronym, anstelle der aus den Herausgebernamen gebildeten
+  Buchstabenkombination verwenden, z.B. PPSN90, GECCO02
+
+S P E Z I E L L E S:
+
+Zeitschriftenartikel:
+=====================
+- Autor(en)
+- Titel
+- Name der Zeitschrift
+- Jahrgang (ggf. Jahr)
+- (Heft Nr.)
+- Seitenzahlen mit doppeltem Bindestrich dazwischen
+- Jahr, falls nicht gleich Jahrgang (s.o.)
+- evtl. "(im Druck)/(in print)"
+Die Heft-Nr. kann/soll entfallen, wenn im Jahrgang die Seiten voll
+durchnummeriert werden; sie muss angegeben werden, wenn jedes Heft
+mit Seite 1 beginnt (z.B. viele Wochenzeitschriften, diese haben oft
+keine Jahrgangsnummer, die verschieden von der Jahreszahl ist).
+Im Titel werden englische Worte alle klein geschrieben ausser 1. Wort
+und ggf. 1. Wort nach ":" oder "--" und Abkuerzungen/Sonderzeichen.
+
+@article{SHD81,
+        AUTHOR          = {Schwefel, H.--P. and Heckler, R. and Drepper, F.},
+        TITLE           = {Combining estimation, simulation, and optimization
+                        in computer-aided energy planning},
+        JOURNAL         = {Angewandte Systemanalyse},
+        VOLUME          = {2},
+        NUMBER          = {},
+        YEAR            = {1981},
+        PAGES           = {67--79}
+}
+
+@article{Hof87c,
+        AUTHOR          = {Hoffmeister, F.},
+        TITLE           = {{Risiken durch Computerviren
+                        -- Erste L{\"o}\-sungs\-ans{\"a}tze}},
+        JOURNAL         = {Praxis der Informationsverarbeitung
+                        und Kommunikation (PIK)},
+        VOLUME          = {10},
+        NUMBER          = {3},
+        YEAR            = {1987},
+        PAGES           = {196--202}
+}
+
+<doppelte geschweifte Klammern {{...}} dienen dazu, deren Inhalt nicht
+einem automatischen Umwandlungsprozess z.B. von Gross- in Kleinschreibung
+auszusetzen, wie er in manchen Umgebungen stattfindet>
+
+Monographie und Sammelband:
+===========================
+- Autor(en)
+- Titel
+- Verlag (so kurz wie moeglich, also (meist) ohne "-Verlag", 
+  "Publ. Co." und ohne Gesellschaftsformbezeichnungen wie "Inc.";
+  Gegenbeispiele: Mainz-Verlag in Aachen und Allied Publishers in New Delhi)
+- (nur erstgenannter) Verlagsort (bezueglich Land s.o.)
+- Jahr
+- evtl. Nummer der Auflage (falls >1) als NOTE-Zeile in der Art
+        NOTE            = {2.~Auflage}, bzw.
+        NOTE            = {2nd edition},
+- ggf. Titel und Bandnummer der Buchreihe
+
+@book{Schw77,
+        AUTHOR          = {Schwefel, H.--P.},
+        TITLE           = {{Numerische Optimierung von Computer--Modellen
+                        mittels der Evolutionsstrategie}},
+        PUBLISHER       = {Birkh{\"a}user},
+        ADDRESS         = {Basel},
+        YEAR            = {1977},
+%       SERIES          = {Interdisciplinary Systems Research},
+%       VOLUME          = {26},
+}
+
+<Eintragungen hinter einem "%" sollen Kommentare sein, bzw. solche
+Angaben enthalten, die auf spezielle Anforderung hin schnell
+zuschaltbar sind, ohne dass man die Angaben lange suchen muss;
+falls es Schwierigkeiten gibt, muessen diese Zeilen ad hoc
+interimsweise geloescht werden.>
+
+@book{SWW02,      % book, weil es collection nicht gibt !
+        EDITOR          = {Schwefel, H.--P. and Wegener, I. and Weinert, K.},
+        TITLE           = {Advances in Computational Intelligence --
+                        {T}heory and Practice},
+        PUBLISHER       = {Springer},
+        ADDRESS         = {Berlin},
+        YEAR            = {2002},
+%       SERIES          = {Natural Computing Series},
+%       VOLUME          = {},
+        ISBN            = {},
+        NOTE            = {(in print)}
+}
+
+Beitrag im Sammelband:
+======================
+- Autor(en)
+- Titel (Kleinschreibung wie bei Artikel, wenn englisch)
+- Herausgeber (Vorname(n): nur Initialen),
+- Buchtitel (Grossschreibung wie bei Buch)
+- Verlag usw. wie Monographie und Sammelband
+
+@incollection{Schw78,
+        AUTHOR          = {Schwefel, H.--P.},
+        TITLE           = {{Optimierung von Simulationsmodellen mit der
+                        Evolutionsstrategie}},
+        EDITOR          = {Schneider, B. and Ranft, U.},
+        BOOKTITLE       = {Simulationsmethoden in der Medizin und Biologie},
+        PAGES           = {115--129},
+        PUBLISHER       = {Springer},
+        ADDRESS         = {Berlin},
+        YEAR            = {1978}
+}
+
+Beitrag in Proceedings:
+=======================
+Hier gibt es zwei Formen. Die zweite gilt dann, wenn entweder der/die
+Herausgeber unbekannt sind und/oder der Verlag etc. entweder unbekannt
+oder dubios ist (wie Eigenverlag oder Forschungsinstitut).
+
+Form 1 (anzustreben)
+--------------------
+- Autor(en)
+- Titel (englisch: Kleinschreibung)
+- Herausgeber (nur Initialen bei Vornamen)
+- Buchtitel wie "Proc. Conf. ...
+  hierbei Abkuerzungen benutzen wie z.B. "Int'l" fuer International
+  und Fuellwoerter wie "of the" und "on" weglassen,
+- kein Ort und kein Datum der Konferenz,
+- Verlag usw. wie Monographie und Sammelband
+- evtl. Bandnummer, 
+- Seitenzahlen wie bei Zeischriftenartikel
+- Jahr (der Drucklegung, nicht unbedingt der Konferenz)
+
+@inproceedings{KS70,
+        AUTHOR          = {Klockgether, J. and Schwefel, H.--P.},
+        TITLE           = {Two--phase nozzle and hollow core jet
+                        experiments},
+        EDITOR          = {Elliott, D.~G.},
+        BOOKTITLE       = {Proc.~11th Symp.~Engineering Aspects of
+                        Magnetohydrodynamics},
+        PUBLISHER       = {California Institute of Technology},
+        ADDRESS         = {Pasadena CA},
+        PAGES           = {141--148},
+        YEAR            = {1970}
+}
+
+@inproceedings{LRS98,
+        AUTHOR          = {Laumanns, M. and Rudolph, G. and Schwefel, H.--P.},
+        TITLE           = {A spatial predator-prey approach to
+                        multi-objective optimization},
+        EDITOR          = {Eiben, A.~E. and B{\"a}ck, Th. and Schoenauer, M.
+                        and Schwefel, H.--P.},
+        BOOKTITLE       = {Parallel Problem Solving from Nature -- PPSN V,
+	                Paris},
+        PAGES           = {241--249},
+        PUBLISHER       = {Springer},
+        ADDRESS         = {Berlin},
+        YEAR            = {1998},
+%       ISBN            = {3-540-65078-4}
+}
+
+<bei obigem Eintrag wurde der Buchtitel gekuerzt, weil Datum und "Proc."
+unnoetig sind wegen sonst vollstaendiger Angaben, also mit Herausgeber
+und Verlag etc. (bei einigen wenigen Konferenzen wie PPSN, CEC, und GECCO
+wird aber der Ort mit angegeben, um die Eintraege in langen Literatur-
+listen leichter orten zu koennen)>
+
+@inproceedings{BNS00,
+        AUTHOR          = {B{\"a}ck, Th. and Naujoks, B. and Sch{\"u}tz, M.},
+        TITLE           = {{Industrial applications of evolutionary
+                        algorithms: Practical examples}},
+        EDITOR          = {Hafner, S. and Kiendl, H. and
+                        Kruse, R. and Schwefel, H.--P.},
+        BOOKTITLE       = {{Computational Intelligence im industriellen
+                        Einsatz: Fuzzy Systeme, Neuronale Netze,
+                        Evolution{\"a}re Algorithmen, Data Mining}},
+        PUBLISHER       = {VDI-Verlag},
+        ADDRESS         = {D{\"u}sseldorf},
+        YEAR            = {2000},
+%       SERIES          = {VDI-Berichte},
+%       VOLUME          = {1526},
+        PAGES           = {301--316}
+}
+
+<vergleiche diesen Eintrag mit HKKS00 weiter unten>
+
+Form 2 (fehlender Herausgeber und/oder fehlender Verlag)
+--------------------------------------------------------
+- Autor(en)
+- Titel
+- Buchtitel "Proc. Conf. ...(wie Form 1, aber zusaetzlich:
+  Ort und Datum der Konferenz)
+- evtl. Bandnummer
+- Seitenzahlen wie bei Form 1
+- Jahr
+
+<jede Zusatzinformation hilft bei der Beschaffung der Literatur;
+um Konfusionen zu vermeiden bei zwei Zeitangaben (Datum der Konferenz
+und Datum der Veroeffentlichung) und/oder zwei Ortsangaben (Ort
+der Konferenz und Ort der Drucklegung), ist etwas Phantasie und
+Flexibilitaet geboten - starre Regeln schaden eher>
+
+@inproceedings{Schw87,
+        AUTHOR          = {Schwefel, H.--P.},
+        TITLE           = {Collective phenomena in evolutionary systems},
+        BOOKTITLE       = {{Problems of Constancy and Change --
+                        The Complementarity of Systems Approaches to
+                        Complexity,
+                        Papers presented at the~31st Annual Meeting
+                        of the Int'l Soc. for General System Research,
+                        Budapest, 1.--5.~Juni~1987}},
+        PUBLISHER       = {Int'l Soc.~for General System Research},
+        VOLUME          = {2},
+        PAGES           = {1025--1033},
+        YEAR            = {1987}
+}
+
+<im obigen Beispiel ist die Angabe von Konferenzort und -datum essentiell,
+weil es keinen Herausgeber und keinen Verlag mit Verlagsort gibt;
+dennoch ist der Eintrag unter PUBLISHER hilfreich, weil die (Nicht-)
+Publikation bei der Gesellschaft, deren Ort mit dem Vorsitz wechselt,
+beschafft werden kann>
+
+Proceedings:
+============
+- Herausgeber (s.o.)
+- Buchtitel (ggf. ergaenzt um Angaben wie Ort und Datum der Konferenz,
+  wobei evtl. mit {\em...} gekennzeichnet werden kann, dass diese
+  zusaetzlichen Angaben nicht auf dem Umschlag des Buches stehen)
+- Verlag usw. wie bei Monographie und Sammelband
+
+@proceedings{SM91,
+        EDITOR          = {Schwefel, H.--P. and M{\"a}nner}, R.,
+        TITLE           = {{Parallel Problem Sol\-ving from Nature --
+                        First Workshop PPSN I, Dortmund, F.R.G.,
+                        October~1990, Proc.}},
+        PUBLISHER       = {Springer},
+        ADDRESS         = {Berlin},
+        YEAR            = {1991},
+        SERIES          = {Lecture Notes in Computer Science},
+        VOLUME          = {496},
+%       ISBN            = {3-540-54148-9}
+}
+
+<hier stehen Datum (nur Monat und Jahr) und Ort (incl. F.R.G.) wirklich
+im Titel auf dem Deckel des Konferenzbandes; ich wuerde etwas schummeln
+und F.R.G. weglassen, dafuer (bei deutscher Zitateliste) statt
+"October" lieber "1.--3.~Oktober" schreiben:
+        TITLE           = {{Parallel Problem Sol\-ving from Nature --
+                        First Workshop PPSN I, Dortmund, 1.--3.~Oktober~1990}}>
+
+@proceedings{HKKS00,
+        EDITOR          = {Hafner, S. and Kiendl, H. and
+                        Kruse, R. and Schwefel, H.--P.},
+        TITLE           = {{Computational Intelligence im industriellen
+                        Einsatz: Fuzzy Systeme, Neuronale Netze,
+                        Evolution{\"a}re Algorithmen, Data Mining;
+                        Proc.~VDI-VDE-GMA-Fachtagung, Baden-Baden, 11.--12.~Mai 2000}},
+        PUBLISHER       = {VDI-Verlag},
+        ADDRESS         = {D{\"u}sseldorf},
+        YEAR            = {2000},
+        SERIES          = {VDI-Berichte},
+        VOLUME          = {1526},
+        ISBN            = {3-18-091526-9}
+}
+
+<hier wurden die Angaben ueber Art, Ort und Datum der Konferenz in den Buchtitel
+integriert, obwohl es nicht unbedingt noetig waere; dies sollte man bei den
+einzelnen Beitraegen in dem Konferenzband aber weglassen (s.o.)>
+
+Dissertationen:
+===============
+- Name
+- Titel
+- Universitaet und Fachbereich/Fakultaet/Department
+- Ort (nur wenn nicht schon im Namen der Uni enthalten und somit klar;
+  Gegenbeispiele: Universitaet Paderborn in Soest oder Paderborn,
+  Oxford University Press in Oxford (U.K.) oder New York),
+- Jahr
+- Typ (siehe Beispiele)
+
+@phdthesis{Schw75,
+        AUTHOR          = {Schwefel, H.--P.},
+        TITLE           = {{Evolutionsstrategie und numerische Optimierung}},
+        SCHOOL          = {Technische Universit{\"a}t Berlin,
+                        Fachbereich Verfahrenstechnik},
+        YEAR            = {1975},
+        TYPE            = {{Dr.-Ing.~Dissertation}}
+}
+
+<englisch z.B. Ph.D.~thesis>
+
+Diplomarbeiten:
+===============
+analog zu Dissertationen, aber zusaetzlich Lehrstuhl/Institut und Monat
+
+@phdthesis{Schw65,
+        AUTHOR          = {Schwefel, H.--P.},
+        TITLE           = {{Kybernetische Evolution als Strategie der
+                        experimentellen Forschung in der
+                        Str{\"o}mungstechnik}},
+        SCHOOL          = {{Technische Universit{\"a}t Berlin, Hermann
+                        F{\"o}ttinger--Institut f{\"u}r Str{\"o}mungstechnik}},
+        YEAR            = {1965},
+        MONTH           = {M{\"a}rz},
+        TYPE            = {{Diplomarbeit}}
+}
+
+<deutsche Arbeit in englischen references: Diploma thesis>
+
+Technische/interne Berichte:
+============================
+- Autor(en)
+- Titel
+- Institution mit Ortsangabe
+- Typ und Nummer des Berichts (evtl. mit Akronymen)
+- Monat
+- Jahr
+
+@techreport{Schw68,
+        AUTHOR          = {Schwefel, H.--P.},
+        TITLE           = {{Experimentelle Optimierung einer
+                        Zweiphasend{\"u}se Teil I}},
+        INSTITUTION     = {AEG Forschungsinstitut, Berlin},
+        YEAR            = {1968},
+        MONTH           = {Oktober},
+        TYPE            = {Bericht Nr.~35 zum Projekt
+                        MHD--Staustrahlrohr},
+        NUMBER          = {11.034/68}
+}
+
+Anmerkung: mit XREF (crossreference) kann man Schreibarbeit sparen
+und fuer Vereinheitlichung sorgen.
+
+Nachtrag: References bzw. Literaturlisten werden bei Bewerbungen,
+Evaluierungen, Forschungsantraegen etc. von Gutachtern unterschiedlicher
+Art bewertet. Manchmal (eher selten) kommt es auf Masse an, manchmal
+(eher haeufig) auf Klasse. Im letzteren Falle sind Eintraege ohne
+Seitenangaben nicht nur nicht nuetzlich, sondern schaedlich, weil
+Gutachter dann argwoehnen, dass diese bewusst ausgelassen wurden, um zu
+verbergen, dass es sich um unbedeutende Publikationen handelt.
+Abstracts von einer (halben) Seite sollte man auch eher nicht erwaehnen.
+Graue Literatur, z.B. Forschungsberichte eines Instituts (das es evtl.
+bald nicht mehr gibt), Beitraege in Info-Blaettchen usw., alles was
+es nicht in mehreren Bibliotheken auszuleihen gibt, auch alle
+Beitraege, die von keinem Gremium einer Qualitaetskontrolle unterzogen
+wurden, foerdern hoechstens Masse, schaden aber eher der Klasse
+(`der/die scheint es noetig zu haben, so etwas anzugeben, weil
+er/sie nichts Ordentliches zu bieten hat').
+Uebrigens sind auch Vortraege, zu denen es keine Einladungen gegeben
+hat, die vielleicht nicht einmal angekuendigt worden sind, sowie
+Posterpraesentationen oder andere Mehr-Personen-Aeusserungen keine
+wissenschaftlichen Vortraege.
+
+-------------------------------------------------------
+Schmitt, Schwefel, Schwefel und Wiesmann, im Maerz 2002
+=======================================================

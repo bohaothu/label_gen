@@ -1,0 +1,376 @@
+%%% ====================================================================
+%%%  BibTeX-file{
+%%%     author          = "Todd L. Veldhuizen",
+%%%     version         = "1.00",
+%%%     date            = "29 October 1998",
+%%%     time            = "08:14:39 MDT",
+%%%     filename        = "veldhuizen-todd-l.bib",
+%%%     address         = "Indiana University Computer Science Dept.
+%%%                        ",
+%%%     telephone       = "?n/a?",
+%%%     FAX             = "?n/a?",
+%%%     URL             = "http://extreme.indiana.edu/~tveldhui/",
+%%%     checksum        = "45116 376 1888 19276",
+%%%     email           = "tveldhui at extreme.indiana.edu (Internet)",
+%%%     codetable       = "ISO/ASCII",
+%%%     keywords        = "",
+%%%     supported       = "yes",
+%%%     docstring       = "This is a bibliography of publications of
+%%%                        Todd L. Veldhuizen.  The companion LaTeX file
+%%%                        veldhuizen-todd-l.ltx can be used to typeset
+%%%                        this bibliography.
+%%%
+%%%                        At version 1.00, the year coverage looked
+%%%                        like this:
+%%%
+%%%                             1995 (   2)    1997 (   2)
+%%%                             1996 (   1)    1998 (   4)
+%%%
+%%%                             Article:          4
+%%%                             Book:             1
+%%%                             InProceedings:    4
+%%%
+%%%                             Total entries:    9
+%%%
+%%%                        This file is available as part of the BibNet
+%%%                        Project.  The master copy is available for
+%%%                        public access on ftp.math.utah.edu in the
+%%%                        directory tree /pub/bibnet/authors.  It is
+%%%                        mirrored to netlib.bell-labs.com in the directory
+%%%                        tree /netlib/bibnet/authors, from which it is
+%%%                        available via anonymous ftp and the Netlib
+%%%                        service.
+%%%
+%%%                        The checksum field above contains a CRC-16
+%%%                        checksum as the first value, followed by the
+%%%                        equivalent of the standard UNIX wc (word
+%%%                        count) utility output of lines, words, and
+%%%                        characters.  This is produced by Robert
+%%%                        Solovay's checksum utility.",
+%%%  }
+%%% ====================================================================
+
+%-----------------------------------------------------------------------
+% Journal abbreviations:
+
+@String{j-C-PLUS-PLUS-REPORT    = "C++ Report"}
+
+@String{j-DDJ                   = "Dr. Dobb's Journal of Software Tools"}
+
+%-----------------------------------------------------------------------
+% Publisher abbreviations:
+
+@String{pub-SIAM = "SIAM"}
+
+@String{pub-SIAM:adr = "Philadelphia, PA, USA"}
+
+@String{pub-SPRINGER = "Springer-Verlag"}
+
+@String{pub-SPRINGER:adr = "Berlin, Heidelberg, New York, Tokyo"}
+
+%-----------------------------------------------------------------------
+% Bibliography entries:
+
+@Article{Veldhuizen:1995:ET,
+  author =       "Todd L. Veldhuizen",
+  title =        "Expression templates",
+  journal =      j-C-PLUS-PLUS-REPORT,
+  volume =       "7",
+  number =       "5",
+  pages =        "26--31",
+  month =        jun,
+  year =         "1995",
+  CODEN =        "CRPTE7",
+  ISSN =         "1040-6042",
+  bibdate =      "Tue Mar 25 13:34:48 MST 1997",
+  bibsource =    "ftp://ftp.math.utah.edu/pub/bibnet/authors/v/veldhuizen-todd-l.bib",
+  note =         "Reprinted in C++ Gems, ed. Stanley Lippman",
+  URL =          "http://extreme.indiana.edu/~tveldhui/papers/",
+  abstract =     "The technique of expression templates is a powerful
+                 and convenient alternative to C-style callback
+                 functions. It allows logical and algebraic expressions
+                 to be passed to functions as arguments, and inlined
+                 directly into the function body. Expression templates
+                 also solve the problem of evaluating vector and matrix
+                 expressions in a single pass without temporaries.",
+  acknowledgement = ack-nhfb,
+  affiliation =  "Dept. of Syst. Design Eng., Waterloo Univ., Ont.,
+                 Canada",
+  classcodes =   "C6110J (Object-oriented programming); C6115
+                 (Programming support); C4140 (Linear algebra); C6120
+                 (File organisation)",
+  classification = "C4140 (Linear algebra); C6110J (Object-oriented
+                 programming); C6115 (Programming support); C6120 (File
+                 organisation)",
+  corpsource =   "Dept. of Syst. Design Eng., Waterloo Univ., Ont.,
+                 Canada",
+  keywords =     "abstract data types; Algebraic expressions; algebraic
+                 expressions; Arguments; arguments; C language; C-style
+                 callback functions; Expression templates; expression
+                 templates; expressions; libraries; logical; Logical
+                 expressions; matrix; matrix algebra; Matrix
+                 expressions; object-; object-oriented programming;
+                 oriented languages; Single pass; single pass; software;
+                 Vector expressions; vector expressions",
+  thesaurus =    "Abstract data types; C language; Matrix algebra;
+                 Object-oriented languages; Object-oriented programming;
+                 Software libraries",
+  treatment =    "T Theoretical or Mathematical",
+}
+
+@Article{Veldhuizen:1995:UCT,
+  author =       "Todd L. Veldhuizen",
+  title =        "Using {C++} template metaprograms",
+  journal =      j-C-PLUS-PLUS-REPORT,
+  volume =       "7",
+  number =       "4",
+  pages =        "36--43",
+  month =        may,
+  year =         "1995",
+  CODEN =        "CRPTE7",
+  ISSN =         "1040-6042",
+  bibdate =      "Tue Mar 25 13:34:48 MST 1997",
+  bibsource =    "ftp://ftp.math.utah.edu/pub/bibnet/authors/v/veldhuizen-todd-l.bib",
+  note =         "Reprinted in C++ Gems, ed. Stanley Lippman",
+  URL =          "http://extreme.indiana.edu/~tveldhui/papers/",
+  abstract =     "Template metaprograms can generate useful code when
+                 interpreted by the compiler, which results in large
+                 speed increases for many applications. A simple example
+                 that generates factorials at compile time is presented.
+                 Although this technique might seem like just a cute C++
+                 trick, it becomes powerful when combined with normal
+                 C++ code. In this hybrid approach, source code contains
+                 two programs: the normal C++ runtime program, and a
+                 template metaprogram that runs at compile time.
+                 Template metaprograms can generate useful code when
+                 interpreted by the compiler, such as a massively
+                 inlined algorithm-that is, an implementation of an
+                 algorithm that works for a specific input size, and has
+                 its loops unrolled. This results in large speed
+                 increases for many applications. The article presents a
+                 simple template metaprogram that generates a bubble
+                 sort algorithm and its performance is analysed.",
+  acknowledgement = ack-nhfb,
+  affiliation =  "Waterloo Univ., Ont., Canada",
+  classcodes =   "C6110J (Object-oriented programming); C6140D (High
+                 level languages); C6150C (Compilers, interpreters and
+                 other processors)",
+  classification = "C6110J (Object-oriented programming); C6140D (High
+                 level languages); C6150C (Compilers, interpreters and
+                 other processors)",
+  corpsource =   "Waterloo Univ., Ont., Canada",
+  keywords =     "algorithm; bubble sort; Bubble sort algorithm; C
+                 language; C++; C++ runtime program; C++ template
+                 metaprograms; Compiler interpretation; compiler
+                 interpretation; Factorials; factorials; Hybrid
+                 approach; hybrid approach; increases; Massively inlined
+                 algorithm; massively inlined algorithm; Normal C++
+                 code; normal C++ code; object-oriented; object-oriented
+                 languages; program compilers; program interpreters;
+                 programming; runtime program; speed; Speed increases",
+  thesaurus =    "C language; Object-oriented languages; Object-oriented
+                 programming; Program compilers; Program interpreters",
+  treatment =    "P Practical",
+}
+
+@Article{Veldhuizen:1996:LAC,
+  author =       "Todd L. Veldhuizen and Kumaraswamy Ponnambalam",
+  title =        "Linear algebra with {C++} template metaprograms",
+  journal =      j-DDJ,
+  volume =       "21",
+  number =       "8",
+  pages =        "38, 40--42, 44",
+  month =        aug,
+  year =         "1996",
+  CODEN =        "DDJOEB",
+  ISSN =         "1044-789X",
+  bibdate =      "Fri Jan 3 06:28:31 MST 1997",
+  bibsource =    "ftp://ftp.math.utah.edu/pub/bibnet/authors/v/veldhuizen-todd-l.bib",
+  URL =          "http://extreme.indiana.edu/~tveldhui/papers/",
+  acknowledgement = ack-nhfb,
+}
+
+@Article{Veldhuizen:1997:SCC,
+  author =       "Todd L. Veldhuizen",
+  title =        "Scientific Computing: {C++} Versus {Fortran}: {C++}
+                 has more than caught up",
+  journal =      j-DDJ,
+  volume =       "22",
+  number =       "11",
+  pages =        "34, 36--38, 91",
+  month =        nov,
+  year =         "1997",
+  CODEN =        "DDJOEB",
+  ISSN =         "1044-789X",
+  bibdate =      "Fri Nov 28 17:28:03 MST 1997",
+  bibsource =    "ftp://ftp.math.utah.edu/pub/bibnet/authors/v/veldhuizen-todd-l.bib",
+  URL =          "http://extreme.indiana.edu/~tveldhui/papers/",
+  abstract =     "In the past C++ programs were noticeably slower than
+                 their Fortran counterparts. But the performance of C++
+                 programs has improved mainly because of better
+                 optimizing C++ compilers and libraries such as Todd's
+                 Blitz++, a C++ class library designed for scientific
+                 computing.",
+  acknowledgement = ack-nhfb,
+}
+
+@InProceedings{Veldhuizen:1997:WCF,
+  author =       "Todd L. Veldhuizen and M. E. Jernigan",
+  booktitle =    "Proceedings of the 1st International Scientific
+                 Computing in Object-Oriented Parallel Environments
+                 (ISCOPE'97)",
+  title =        "Will {C++} be faster than {Fortran}?",
+  publisher =    pub-SPRINGER,
+  address =      pub-SPRINGER:adr,
+  year =         "1997",
+  bibdate =      "Thu Oct 29 08:09:18 MST 1998",
+  bibsource =    "ftp://ftp.math.utah.edu/pub/bibnet/authors/v/veldhuizen-todd-l.bib",
+  series =       "Lecture Notes in Computer Science",
+  URL =          "http://extreme.indiana.edu/~tveldhui/papers/",
+  abstract =     "After years of being dismissed as too slow for
+                 scientific computing, C++ has caught up with Fortran
+                 and appears ready to give it stiff competition. We
+                 survey the reasons for the historically poor
+                 performance of C++ (pairwise expression evaluation, the
+                 abstraction penalty, aliasing ambiguities) and explain
+                 how these problems have been resolved. C++ can be
+                 faster than Fortran for some applications, due to
+                 template techniques (such as expression templates and
+                 template metaprograms) which permit optimizations
+                 beyond the ability of current Fortran compilers.",
+  conflocation = "Marina del Rey, California",
+  conftitle =    "International Scientific Computing in Object-Oriented
+                 Parallel Environments",
+  keywords =     "object-oriented numerics; scientific computing in C++;
+                 expression templates; template metaprograms; loop
+                 transformations",
+}
+
+@InProceedings{Veldhuizen:1998:AB,
+  author =       "Todd L. Veldhuizen",
+  booktitle =    "Proceedings of the 2nd International Scientific
+                 Computing in Object-Oriented Parallel Environments
+                 (ISCOPE'98)",
+  title =        "Arrays in {Blitz++}",
+  publisher =    pub-SPRINGER,
+  address =      pub-SPRINGER:adr,
+  year =         "1998",
+  bibdate =      "Thu Oct 29 08:09:18 MST 1998",
+  bibsource =    "ftp://ftp.math.utah.edu/pub/bibnet/authors/v/veldhuizen-todd-l.bib",
+  series =       "Lecture Notes in Computer Science",
+  URL =          "http://extreme.indiana.edu/~tveldhui/papers/",
+  abstract =     "Numeric arrays in Blitz++ rival the efficiency of
+                 Fortran, but without any extensions to the C++
+                 language. Blitz++ has features unavailable in Fortran
+                 90/95, such as arbitrary transpose operations, array
+                 renaming, tensor notation, partial reductions,
+                 multicomponent arrays and stencil operators. The
+                 library handles parsing and analysis of array
+                 expressions on its own using the expression templates
+                 technique, and performs optimizations (such as loop
+                 transformations) which have until now been the
+                 responsibility of compilers.",
+  conflocation = "Santa Fe, New Mexico",
+  conftitle =    "International Scientific Computing in Object-Oriented
+                 Parallel Environments",
+  keywords =     "object-oriented numerics; high-performance computing;
+                 array loop transformations; array languages; expression
+                 templates; active libraries",
+}
+
+@InProceedings{Veldhuizen:1998:ALR,
+  author =       "Todd L. Veldhuizen and Dennis Gannon",
+  booktitle =    "Proceedings of the SIAM Workshop on Object Oriented
+                 Methods for Inter-operable Scientific and Engineering
+                 Computing (OO'98)",
+  title =        "Active Libraries: Rethinking the roles of compilers
+                 and libraries",
+  publisher =    pub-SIAM,
+  address =      pub-SIAM:adr,
+  year =         "1998",
+  bibdate =      "Thu Oct 29 08:09:18 MST 1998",
+  bibsource =    "ftp://ftp.math.utah.edu/pub/bibnet/authors/v/veldhuizen-todd-l.bib",
+  URL =          "http://extreme.indiana.edu/~tveldhui/papers/",
+  abstract =     "We describe Active Libraries, which take an active
+                 role in compilation. Unlike traditional libraries which
+                 are passive collections of functions and objects,
+                 Active Libraries may generate components, specialize
+                 algorithms, optimize code, configure and tune
+                 themselves for a target machine, and describe
+                 themselves to tools (such as profilers and debuggers)
+                 in an intelligible way. Several such libraries are
+                 described, as are implementation technologies.",
+  conflocation = "Yorktown Heights, New York",
+  conftitle =    "SIAM Workshop on Object Oriented Methods for
+                 Inter-operable Scientific and Engineering Computing",
+  keywords =     "abstraction penalty; domain-specific languages;
+                 object-oriented languages; self-optimizing
+                 abstractions; Blitz++; POOMA; MTL; GMCL; FFTW; PhiPAC;
+                 ATLAS; transformational optimization; generative
+                 optimization; explorative optimization; compositional
+                 optimization; C++ templates; component generation;
+                 generic programming; generative programming;
+                 reflection; metalevel processing; run-time code
+                 generation; partial evaluation; multilevel languages;
+                 extensible programming tools; active libraries",
+}
+
+@InProceedings{Veldhuizen:1998:GFLa,
+  author =       "Todd L. Veldhuizen and M. E. Jernigan",
+  booktitle =    "Proceedings of the International Conference on
+                 Acoustics, Speech, and Signal Processing (ICASSP'98)",
+  title =        "Grid Filters for Local Nonlinear Image Restoration",
+  year =         "1998",
+  bibsource =    "ftp://ftp.math.utah.edu/pub/bibnet/authors/v/veldhuizen-todd-l.bib",
+  URL =          "http://extreme.indiana.edu/~tveldhui/papers/",
+  abstract =     "We describe a new approach to local nonlinear image
+                 restoration, based on approximating functions using a
+                 regular grid of points in a many-dimensional space.
+                 Symmetry reductions and compression of the sparse grid
+                 make it feasible to work with eight-dimensional grids
+                 as large as $14^8$. Unlike polynomials and neural
+                 networks, whose filtering complexity per pixel is
+                 linear in the number of filter coefficients, grid
+                 filters have $O(1)$ complexity per pixel. Grid filters
+                 require only a single presentation of the training
+                 samples, are numerically stable, leave unusual image
+                 features unchanged, and are a superset of order
+                 statistic filters. Results are presented for blurring
+                 and additive noise.",
+  conflocation = "Seattle, Washington",
+  conftitle =    "ICASSP'98",
+  keywords =     "image restoration; nonlinear image processing;
+                 function approximation; sparse grids; piecewise linear
+                 interpolation; additive noise; grid filters",
+}
+
+@Book{Veldhuizen:1998:GFLb,
+  author =       "Todd L. Veldhuizen",
+  title =        "Grid Filters for Local Nonlinear Image Restoration",
+  publisher =    "University of Waterloo",
+  address =      "Waterloo, Ontario, Canada",
+  year =         "1998",
+  bibsource =    "ftp://ftp.math.utah.edu/pub/bibnet/authors/v/veldhuizen-todd-l.bib",
+  note =         "M.A.Sc. Thesis",
+  URL =          "http://extreme.indiana.edu/~tveldhui/papers/",
+  abstract =     "A new approach to local nonlinear image restoration is
+                 described, based on approximating functions using a
+                 regular grid of points in a many-dimensional space.
+                 Symmetry reductions and compression of the sparse grid
+                 make it feasible to work with twelve-dimensional grids
+                 as large as $22^{12}$. Unlike polynomials and neural
+                 networks whose filtering complexity per pixel is linear
+                 in the number of filter coefficients, grid filters have
+                 $O(1)$ complexity per pixel. Grid filters require only
+                 a single presentation of the training samples, are
+                 numerically stable, leave unusual image features
+                 unchanged, and are a superset of order statistic
+                 filters. Results are presented for additive noise,
+                 blurring, and superresolution.",
+  keywords =     "image restoration; nonlinear image processing;
+                 function approximation; sparse grids; piecewise linear
+                 interpolation; MMSE filters; grid filters; local
+                 nonlinear filters; order-statistic filters; symmetry;
+                 signal processing; regularization; document imaging;
+                 coherent superresolution; incoherent superresolution",
+}

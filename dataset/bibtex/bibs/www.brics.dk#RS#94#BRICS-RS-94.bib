@@ -1,0 +1,1688 @@
+<HTML>
+<pre>
+
+@string{brics =	"{BRICS}"}
+@string{daimi =	"Department of Computer Science, University of Aarhus"}
+@string{iesd  =	"Department of Computer Science, Institute
+		  of Electronic Systems, Aalborg University"}
+@string{rs    =	"Research Series"}
+@string{ns    =	"Notes Series"}
+@string{ls    =	"Lecture Series"}
+@string{ds    =	"Dissertation Series"}
+
+@techreport{BRICS-RS-94-48,
+  author = 	 "Godskesen, Jens Chr{.} and Larsen, Kim G.",
+  title = 	 "Synthesizing Distinguishing Formulae for Real
+                  Time Systems",
+  institution =  brics,
+  year = 	 1994,
+  type = 	 rs,
+  number = 	 "RS-94-48",
+  address = 	 iesd,
+  month = 	 dec,
+  note = 	 "21~pp. Extended abstract appears in " #
+                  lncs969 # ", pages 519--528",
+  abstract = 	 "This paper describes a technique for
+                  generating diagnostic information for the {\sl
+                  timed} bisimulation equivalence and the {\sl
+                  timed} simulation preorder. More precisely,
+                  given two (parallel) networks of regular
+                  real--time processes, the technique will
+                  provide a logical formula that differentiates
+                  them in case they are not timed (bi)similar.
+                  Our method may be seen as an extension of the
+                  algorithm by {\v C}er{\=a}ns for deciding timed
+                  bisimilarity in that information of
+                  time--quantities has been added sufficient for
+                  generating distinguishing formulae. The
+                  technique has been added to the automatic
+                  verification tool {\sc Epsilon} and applied to
+                  various examples.",
+  linkhtmlabs =  "",
+  linkdvi = 	 "",
+  linkps = 	 ""
+}
+@techreport{BRICS-RS-94-47,
+  author = 	 "Larsen, Kim G. and Steffen, Bernhard and
+                  Weise, Carsten",
+  title = 	 "A Constraint Oriented Proof Methodology based
+                  on Modal Transition Systems",
+  institution =  brics,
+  year = 	 1994,
+  type = 	 rs,
+  number = 	 "RS-94-47",
+  address = 	 iesd,
+  month = 	 dec,
+  note = 	 "13 pp",
+  abstract = 	 "In this paper, we present a
+                  constraint-oriented state-based proof
+                  methodology for concurrent software systems
+                  which exploits compositionality and abstraction
+                  for the reduction of the verification problem
+                  under investigation. Formal basis for this
+                  methodology are Modal Transition Systems
+                  allowing loose state-based specifications,
+                  which can be refined by successively adding
+                  constraints. Key concepts of our method are
+                  {\em projective views}, {\em separation of
+                  proof obligations}, {\em Skolemization} and
+                  {\em abstraction}. The method is even
+                  applicable to real time systems.",
+  linkhtmlabs =  "",
+  linkdvi = 	 "",
+  linkps = 	 ""
+}
+
+@techreport{BRICS-RS-94-46,
+  author = 	 "Beimel, Amos and G{\'a}l, Anna and Paterson,
+                  Mike",
+  title = 	 "Lower Bounds for Monotone Span Programs",
+  institution =  brics,
+  year = 	 1994,
+  type = 	 rs,
+  number = 	 "RS-94-46",
+  address = 	 daimi,
+  month = 	 dec,
+  note = 	 "14~pp. Appears in " # ieeefocs95 # ", pages
+                  674--681",
+  abstract = 	 "The model of span programs is a linear
+                  algebraic model of computation. Lower bounds
+                  for span programs imply lower bounds for
+                  contact schemes, symmetric branching programs
+                  and for formula size. Monotone span programs
+                  correspond also to linear secret-sharing
+                  schemes. We present a new technique for proving
+                  lower bounds for monotone span programs. The
+                  main result proved here yields quadratic lower
+                  bounds for the size of monotone span programs,
+                  improving on the largest previously known
+                  bounds for explicit functions. The bound is
+                  asymptotically tight for the function
+                  corresponding to a class of 4-cliques.",
+  linkhtmlabs =  "",
+  linkdvi = 	 "",
+  linkps = 	 ""
+}
+@techreport{BRICS-RS-94-45,
+  author = 	 "Andersen, J{\o}rgen H. and Kristoffersen,
+                  K{\aa}re J. and Larsen, Kim G. and Niedermann,
+                  Jesper",
+  title = 	 "Automatic Synthesis of Real Time Systems",
+  institution =  brics,
+  year = 	 1994,
+  type = 	 rs,
+  number = 	 "RS-94-45",
+  address = 	 iesd,
+  month = 	 dec,
+  note = 	 "17 pp. Appears in " # lncs944 # ", pages
+                  535--546",
+  abstract = 	 "This paper presents a method for automatically
+                  constructing real time systems directly from
+                  their specifications. The model--construction
+                  problem is considered for implicit
+                  specifications of the form: \[ (A_1\,{\mid
+                  }\,\ldots\,{\mid}\,A_n\,{\mid}\,X) \,\,\mbox
+                  {{\sf sat}}\,\, S \] where $S$ is a real time
+                  (logical) specification, $A_1\ldots A_n$ are
+                  given (regular) timed agents and the problem is
+                  to decide whether there exists (and if possible
+                  exhibit) a real time agent $X$ which when put
+                  in parallel with $A_1\ldots A_n$ will yield a
+                  network satisfying $S$. The method presented
+                  proceeds in two steps: first, the implicit
+                  specification of $X$ is transformed into an
+                  equivalent direct specification of $X$; second,
+                  a model for this direct specification is
+                  constructed (if possible) using a direct model
+                  construction algorithm. A prototype
+                  implementation of our method has been added to
+                  the real time verification tool EPSILON.",
+  linkhtmlabs =  "",
+  linkps = 	 ""
+}
+@techreport{BRICS-RS-94-44,
+  author = 	 "Agerholm, Sten",
+  title = 	 "A {HOL} Basis for Reasoning about Functional
+                  Programs",
+  institution =  brics,
+  year = 	 1994,
+  type = 	 rs,
+  number = 	 "RS-94-44",
+  address = 	 daimi,
+  month = 	 dec,
+  note = 	 "PhD thesis. viii+224 pp",
+  abstract = 	 "Domain theory is the mathematical theory
+                  underlying denotational semantics. This thesis
+                  presents a formalization of domain theory in
+                  the Higher Order Logic (HOL) theorem proving
+                  system along with a mechanization of proof
+                  functions and other tools to support reasoning
+                  about the denotations of functional programs.
+                  By providing a fixed point operator for
+                  functions on certain domains which have a
+                  special undefined (bottom) element, this
+                  extension of HOL supports the definition of
+                  recursive functions which are not also
+                  primitive recursive. Thus, it provides an
+                  approach to the long-standing and important
+                  problem of defining non-primitive recursive
+                  functions in the HOL system.\bibpar
+                  Our philosophy is that there must be a direct
+                  correspondence between elements of complete
+                  partial orders (domains) and elements of HOL
+                  types, in order to allow the reuse of higher
+                  order logic and proof infrastructure already
+                  available in the HOL system. Hence, we are able
+                  to mix domain theoretic reasoning with
+                  reasoning in the set theoretic HOL world to
+                  advantage, exploiting HOL types and tools
+                  directly. Moreover, by mixing domain and set
+                  theoretic reasoning, we are able to eliminate
+                  almost all reasoning about the bottom element
+                  of complete partial orders that makes the LCF
+                  theorem prover, which supports a first order
+                  logic of domain theory, difficult and tedious
+                  to use. A thorough comparison with LCF is
+                  provided.\bibpar
+                  The advantages of combining the best of the
+                  domain and set theoretic worlds in the same
+                  system are demonstrated in a larger example,
+                  showing the correctness of a unification
+                  algorithm. A major part of the proof is
+                  conducted in the set theoretic setting of
+                  higher order logic, and only at a late stage of
+                  the proof domain theory is introduced to give a
+                  recursive definition of the algorithm, which is
+                  not primitive recursive. Furthermore, a total
+                  well-founded recursive unification function can
+                  be defined easily in pure HOL by proving that
+                  the unification algorithm (defined in domain
+                  theory) always terminates; this proof is
+                  conducted by a non-trivial well-founded
+                  induction. In such applications, where
+                  non-primitive recursive HOL functions are
+                  defined via domain theory and a proof of
+                  termination, domain theory constructs only
+                  appear temporarily.",
+  linkhtmlabs =  "",
+  linkps = 	 ""
+}
+@techreport{BRICS-RS-94-43,
+  author = 	 "Aceto, Luca and Jeffrey, Alan~S.~A.",
+  title = 	 "A Complete Axiomatization of Timed
+                  Bisimulation for a Class of Timed Regular
+                  Behaviours (Revised Version)",
+  institution =  brics,
+  year = 	 1994,
+  type = 	 rs,
+  number = 	 "RS-94-43",
+  address = 	 iesd,
+  month = 	 dec,
+  note = 	 "18 pp. Appears in {\em Theoretical Computer
+                  Science} vol.~152(2) pages 251--268, December
+                  1995",
+  abstract = 	 "One of the most satisfactory results in
+                  process theory is Milner's axiomatization of
+                  strong bisimulation for regular CCS. This
+                  result holds for open terms with finite-state
+                  recursion. Wang has shown that timed
+                  bisimulation can also be axiomatized, but only
+                  for closed terms without recursion. In this
+                  paper, we provide an axiomatization for timed
+                  bisimulation of open terms with finite-state
+                  recursion.",
+  linkhtmlabs =  "",
+  linkdvi = 	 "",
+  linkps = 	 ""
+}
+@techreport{BRICS-RS-94-42,
+  author = 	 "Breslauer, Dany and G{\c{a}}sieniec, Leszek",
+  title = 	 "Efficient String Matching on Coded Texts",
+  institution =  brics,
+  year = 	 1994,
+  type = 	 rs,
+  number = 	 "RS-94-42",
+  address = 	 daimi,
+  month = 	 dec,
+  note = 	 "20 pp. Appears with the title {\em Efficient
+                  String Matching on Packed Texts} in " # lncs937
+                  # ", pages 27--40 and in {\em RAIRO
+                  Informatique Th{\'e}orique et Applications},
+                  30(6):521--544, 1996",
+  abstract = 	 "The so called ``four Russians technique'' is
+                  often used to speed up algorithms by encoding
+                  several data items in a single memory cell.
+                  Given a sequence of $n$ symbols over a constant
+                  size alphabet, one can encode the sequence into
+                  $O(n / \lambda)$ memory cells in $O(\log\lambda
+                  )$ time using $n / \log\lambda$
+                  processors.\bibpar
+                  
+                  This paper presents an efficient CRCW-PRAM
+                  string-matching algorithm for coded texts that
+                  takes $O(\log\log(m/\lambda))$ time making only
+                  $O(n / \lambda)$ operations, an improvement by
+                  a factor of $\lambda= O(\log n)$ on the number
+                  of operations used in previous algorithms.
+                  Using this string-matching algorithm one can
+                  test if a string is square-free and find all
+                  palindromes in a string in $O(\log\log n)$ time
+                  using $n / \log\log n$ processors.",
+  linkhtmlabs =  "",
+  linkdvi = 	 "",
+  linkps = 	 ""
+}
+@techreport{BRICS-RS-94-41,
+  author = 	 "Miltersen, Peter Bro and Nisan, Noam and
+                  Safra, Shmuel and Wigderson, Avi",
+  title = 	 "On Data Structures and Asymmetric
+                  Communication Complexity",
+  institution =  brics,
+  year = 	 1994,
+  type = 	 rs,
+  number = 	 "RS-94-41",
+  address = 	 daimi,
+  month = 	 dec,
+  note = 	 "17 pp. Appears in " # acmstoc95 # ", pages
+                  103--111. Appears also in {\em Journal of
+                  Computer and System Sciences}, 57(1):37--49,
+                  1998",
+  abstract = 	 "In this paper we consider two party
+                  communication complexity when the input sizes
+                  of the two players differ significantly, the
+                  ``asymmetric'' case. Most of previous work on
+                  communication complexity only considers the
+                  total number of bits sent, but we study
+                  tradeoffs between the number of bits the first
+                  player sends and the number of bits the second
+                  sends. These types of questions are closely
+                  related to the complexity of static data
+                  structure problems in the cell probe model. We
+                  derive two generally applicable methods of
+                  proving lower bounds, and obtain several
+                  applications. These applications include new
+                  lower bounds for data structures in the cell
+                  probe model. Of particular interest is our
+                  ``round elimination'' lemma, which is
+                  interesting also for the usual symmetric
+                  communication case. This lemma generalizes and
+                  abstracts in a very clean form the ``round
+                  reduction'' techniques used in many previous
+                  lower bound proofs.",
+  linkhtmlabs =  "",
+  linkdvi = 	 "",
+  linkps = 	 ""
+}
+@techreport{BRICS-RS-94-40,
+  author = 	 "Aceto, Luca and Ing{\'o}lfsd{\'o}ttir, Anna",
+  title = 	 "{CPO} Models for {GSOS} Languages --- Part
+                  {I}: Compact {GSOS} Languages",
+  institution =  brics,
+  year = 	 1994,
+  type = 	 rs,
+  number = 	 "RS-94-40",
+  address = 	 iesd,
+  month = 	 dec,
+  note = 	 "70 pp. An extended abstract of the paper
+                  appears in: {\em Proceedings of CAAP~'95}, LNCS
+                  915, 1995, pages 439--453. Full version also
+                  appears in {\em Information and Computation},
+                  129(2):107--141, September 1996.",
+  abstract = 	 "In this paper, we present a general way of
+                  giving denotational semantics to a class of
+                  languages equipped with an operational
+                  semantics that fits the GSOS format of Bloom,
+                  Istrail and Meyer. The canonical model used for
+                  this purpose will be Abramsky's domain of
+                  synchronization trees, and the denotational
+                  semantics automatically generated by our
+                  methods will be guaranteed to be fully abstract
+                  with respect to the finitely observable part of
+                  the bisimulation preorder. In the process of
+                  establishing the full abstraction result, we
+                  also obtain several general results on the
+                  bisimulation preorder (including a complete
+                  axiomatization for it), and give a novel
+                  operational interpretation of GSOS languages",
+  linkhtmlabs =  "",
+  linkdvi = 	 "",
+  linkps = 	 ""
+}
+@techreport{BRICS-RS-94-39,
+  author = 	 "Damg{\aa}rd, Ivan B. and Goldreich, Oded and
+                  Wigderson, Avi",
+  title = 	 "Hashing Functions can Simplify Zero-Knowledge
+                  Protocol Design (too)",
+  institution =  brics,
+  year = 	 1994,
+  type = 	 rs,
+  number = 	 "RS-94-39",
+  address = 	 daimi,
+  month = 	 nov,
+  note = 	 "18 pp",
+  abstract = 	 "In {\em Crypto93}, Damg{\aa}rd showed that
+                  any constant-round protocol in which the
+                  verifier sends only independent, random bits
+                  and which is zero-knowledge against the {\em
+                  honest} verifier can be transformed into a
+                  protocol (for the same problem) that is
+                  zero-knowledge {\em in general}. His
+                  transformation was based on the interactive
+                  hashing technique of Naor, Ostrovsky,
+                  Venkatesan and Yung, and thus the resulting
+                  protocol had very large
+                  round-complexity.\bibpar
+                  
+                  
+                  We adopt Damg{\aa}rd's methods, using ordinary
+                  hashing functions, instead of the
+                  abovementioned interactive hashing technique.
+                  Typically, the protocols we derive have much
+                  lower round-complexity than those derived by
+                  Damg{\aa}rd's transformation. As in
+                  Damg{\aa}rd's transformation, our
+                  transformation preserves statistical/perfect
+                  zero-knowledge and does not rely on any
+                  computational assumptions. However, unlike
+                  Damg{\aa}rd's transformation, the new
+                  transformation is not applicable to argument
+                  systems or to proofs of knowledge",
+  linkhtmlabs =  "",
+  linkdvi = 	 "",
+  linkps = 	 ""
+}
+
+@techreport{BRICS-RS-94-38,
+  author = 	 "Damg{\aa}rd, Ivan B. and Knudsen, Lars
+                  Ramkilde",
+  title = 	 "Enhancing the Strength of Conventional
+                  Cryptosystems",
+  institution =  brics,
+  year = 	 1994,
+  type = 	 rs,
+  number = 	 "RS-94-38",
+  address = 	 daimi,
+  month = 	 nov,
+  note = 	 "12 pp",
+  abstract = 	 "We look at various ways of enhancing the
+                  strength of conventional cryptosystems such as
+                  DES by building a new system which has longer
+                  keys and which uses the original system as a
+                  building block. We propose a new variant of
+                  two-key triple encryption which is not
+                  vulnerable to the meet in the middle attack by
+                  van Oorschot and Wiener. Under an appropriate
+                  assumption on the security of DES, we can prove
+                  that our system is at least as hard to break as
+                  single DES",
+  linkhtmlabs =  "",
+  linkdvi = 	 "",
+  linkps = 	 ""
+}
+
+@techreport{BRICS-RS-94-37,
+  author = 	 "van Oosten, Jaap",
+  title = 	 "Fibrations and Calculi of Fractions",
+  institution =  brics,
+  year = 	 1994,
+  type = 	 rs,
+  number = 	 "RS-94-37",
+  address = 	 daimi,
+  month = 	 nov,
+  note = 	 "21 pp. Appears in {\em Journal of Pure and
+                  Applied}, 146(1):77--102, 2000",
+  abstract = 	 "Given a fibration ${\cal E}\rightarrow\cal B$
+                  and a class $\Sigma$ of arrows of $\cal B$, one
+                  can construct the free fibration (on $\cal E$
+                  over $\cal B$ such that all reindexing functors
+                  over elements of $\Sigma$ are
+                  equivalences.\bibpar
+                  
+                  In this work I give an explicit construction of
+                  this, and study its properties. For example,
+                  the construction preserves the property of
+                  being fibrewise discrete, and it commutes up to
+                  equivalence with fibrewise exact completions. I
+                  show that mathematically interesting situations
+                  are examples of this construction. In
+                  particular, subtoposes of the effective topos
+                  are treated.",
+  linkhtmlabs =  "",
+  linkdvi = 	 "",
+  linkps = 	 ""
+}
+@techreport{BRICS-RS-94-36,
+  author = 	 "Razborov, Alexander A.",
+  title = 	 "On provably disjoint {{\bf NP}}-pairs",
+  institution =  brics,
+  year = 	 1994,
+  type = 	 rs,
+  number = 	 "RS-94-36",
+  address = 	 daimi,
+  month = 	 nov,
+  note = 	 "27 pp",
+  abstract = 	 "In this paper we study the pairs $(U,V)$ of
+                  disjoint {\bf NP}-sets representable in a
+                  theory $T$ of Bounded Arithmetic in the sense
+                  that $T$ proves $U \cap V = \emptyset$. For a
+                  large variety of theories $T$ we exhibit a
+                  natural disjoint {\bf NP}-pair which is
+                  complete for the class of disjoint {\bf
+                  NP}-pairs representable in $T$. This allows us
+                  to clarify the approach to showing independence
+                  of central open questions in Boolean complexity
+                  from theories of Bounded Arithmetic initiated
+                  in [1]. Namely, in order to prove the
+                  independence result from a theory $T$, it is
+                  sufficient to separate the corresponding
+                  complete {\bf NP}-pair by a (quasi)poly-time
+                  computable set. We remark that such a
+                  separation is obvious for the theory ${\cal
+                  S}(S_2) + {\cal S}\Sigma^b_2 - PIND$ considered
+                  in [1], and this gives an alternative proof of
+                  the main result from that paper.\bibpar
+                  
+                  [1] A. Razborov. Unprovability of lower bounds
+                  on circuit size in certain fragments of Bounded
+                  Arithmetic. To appear in {\em Izvestiya of the
+                  RAN}, 1994. ",
+  linkhtmlabs =  "",
+  linkdvi = 	 "",
+  linkps = 	 ""
+}
+@techreport{BRICS-RS-94-35,
+  author = 	 "Brodal, Gerth St{\o}lting",
+  title = 	 "Partially Persistent Data Structures of
+                  Bounded Degree with Constant Update Time",
+  institution =  brics,
+  year = 	 1994,
+  type = 	 rs,
+  number = 	 "RS-94-35",
+  address = 	 daimi,
+  month = 	 nov,
+  note = 	 "24~pp. Appears in {\em Nordic Journal of
+                  Computing}, 3(3):238--255, 1996",
+  abstract = 	 "The problem of making bounded in-degree and
+                  out-degree data structures partially persistent
+                  is considered. The node copying method of
+                  Driscoll {\it et al.\/} is extended so that
+                  updates can be performed in {\em worst-case\/}
+                  constant time on the pointer machine model.
+                  Previously it was only known to be possible in
+                  amortised constant time [Driscoll89].
+                  
+                  The result is presented in terms of a new
+                  strategy for Dietz and Raman's dynamic two
+                  player pebble game on graphs.
+                  
+                  It is shown how to implement the strategy and
+                  the upper bound on the required number of
+                  pebbles is improved from $2b+2d+O(\sqrt{b})$ to
+                  $d+2b$, where $b$ is the bound of the in-degree
+                  and $d$ the bound of the out-degree. We also
+                  give a lower bound that shows that the number
+                  of pebbles depends on the out-degree $d$.",
+  linkhtmlabs =  "",
+  linkps = 	 ""
+}
+@techreport{BRICS-RS-94-34,
+  author = 	 "Andersen, Henrik Reif and Stirling, Colin and
+                  Winskel, Glynn",
+  title = 	 "A Compositional Proof System for the Modal
+                  $\mu$-Calculus",
+  institution =  brics,
+  year = 	 1994,
+  type = 	 rs,
+  number = 	 "RS-94-34",
+  address = 	 daimi,
+  month = 	 oct,
+  note = 	 "18~pp. Appears in " # lics9 # ", pages
+                  144--153. Superseeded by BRICS Report
+                  RS-98-40",
+  abstract = 	 "We present a proof system for determining
+                  satisfaction between processes in a fairly
+                  general process algebra and assertions of the
+                  modal $\mu$-calculus. The proof system is
+                  compositional in the structure of processes. It
+                  extends earlier work on compositional reasoning
+                  within the modal $\mu$-calculus and combines it
+                  with techniques from work on local model
+                  checking. The proof system is sound for all
+                  processes and complete for a class of
+                  finite-state processes.",
+  linkhtmlabs =  "",
+  linkdvi = 	 "",
+  linkps = 	 ""
+}
+@techreport{BRICS-RS-94-33,
+  author = 	 "Sassone, Vladimiro",
+  title = 	 "Strong Concatenable Processes: An Approach to
+                  the Category of Petri Net Computations",
+  institution =  brics,
+  year = 	 1994,
+  type = 	 rs,
+  number = 	 "RS-94-33",
+  address = 	 daimi,
+  month = 	 oct,
+  note = 	 "40 pp. Workshop version appears in " # nwpt6 #
+                  ", pages 385--399 with the title {\em An
+                  Approach to the Category of Net Computations}.
+                  Revised version appears in " # lncs915 # ",
+                  pages 334--348 with the title {\em On the
+                  Category of {P}etri Net Computations}",
+  abstract = 	 "We introduce the notion of {\it strong
+                  concatenable process\/} for Petri nets as the
+                  least refinement of non-sequential
+                  (concatenable) processes which can be expressed
+                  abstractly by means of a {\it functor\/} ${\cal
+                  Q}[\_]$ from the category of Petri nets to an
+                  appropriate category of symmetric strict
+                  monoidal categories with free non-commutative
+                  monoids of objects, in the precise sense that,
+                  for each net~$N$, the strong concatenable
+                  processes of~$N$ are isomorphic to the arrows
+                  of~${\cal Q}[N]$. This yields an axiomatization
+                  of the causal behaviour of Petri nets in terms
+                  of symmetric strict monoidal categories.\bibpar
+                  
+                  In addition, we identify a {\it coreflection\/}
+                  right adjoint to ${\cal Q}[\_]$ and we
+                  characterize its replete image in the category
+                  of symmetric monoidal categories, thus yielding
+                  an abstract description of the category of net
+                  computations",
+  linkhtmlabs =  "",
+  linkdvi = 	 "",
+  linkps = 	 ""
+}
+@techreport{BRICS-RS-94-32,
+  author = 	 "Aiken, Alexander and Kozen, Dexter and
+                  Wimmers, Ed",
+  title = 	 "Decidability of Systems of Set Constraints
+                  with Negative Constraints",
+  institution =  brics,
+  year = 	 1994,
+  type = 	 rs,
+  number = 	 "RS-94-32",
+  address = 	 daimi,
+  month = 	 oct,
+  note = 	 "33 pp. Appears in {\em Information and Computation},
+		  122(1):30-44, October 1995",
+  abstract = 	 "Set constraints are relations between sets of
+                  terms. They have been used extensively in
+                  various applications in program analysis and
+                  type inference. Recently, several algorithms
+                  for solving general systems of positive set
+                  constraints have appeared. In this paper we
+                  consider systems of mixed positive and negative
+                  constraints, which are considerably more
+                  expressive than positive constraints alone. We
+                  show that it is decidable whether a given such
+                  system has a solution. The proof involves a
+                  reduction to a number-theoretic decision
+                  problem that may be of independent interest.",
+  linkhtmlabs =  "",
+  linkdvi = 	 "",
+  linkps = 	 ""
+}
+
+@techreport{BRICS-RS-94-31,
+  author = 	 "Nisan, Noam and Ta-Shma, Amnon",
+  title = 	 "Symmetric Logspace is Closed Under
+                  Complement",
+  institution =  brics,
+  year = 	 1994,
+  type = 	 rs,
+  number = 	 "RS-94-31",
+  address = 	 daimi,
+  month = 	 sep,
+  note = 	 "8 pp",
+  abstract = 	 "We present a Logspace, many-one reduction
+                  from the undirected st-connectivity problem to
+                  its complement. This shows that $SL = co -
+                  SL$",
+  linkhtmlabs =  "",
+  linkdvi = 	 "",
+  linkps = 	 ""
+}
+
+@techreport{BRICS-RS-94-30,
+  author = 	 "Husfeldt, Thore",
+  title = 	 "Fully Dynamic Transitive Closure in Plane Dags
+                  with one Source and one Sink",
+  institution =  brics,
+  year = 	 1994,
+  type = 	 rs,
+  number = 	 "RS-94-30",
+  address = 	 daimi,
+  month = 	 sep,
+  note = 	 "26 pp. Appears in " # lncs979 # ", pages
+                  199--212",
+  abstract = 	 "We give an algorithm for the Dynamic
+                  Transitive Closure Problem for planar directed
+                  acyclic graphs with one source and one sink.
+                  The graph can be updated in logarithmic time
+                  under arbitrary edge insertions and deletions
+                  that preserve the embedding. Queries of the
+                  form `is there a directed path from $u$ to
+                  $v$?' for arbitrary vertices $u$ and $v$ can be
+                  answered in logarithmic time. The size of the
+                  data structure and the initialisation time are
+                  linear in the number of edges.\bibpar
+                  
+                  The result enlarges the class of graphs for
+                  which a logarithmic (or even polylogarithmic)
+                  time dynamic transitive closure algorithm
+                  exists. Previously, the only algorithms within
+                  the stated resource bounds put restrictions on
+                  the topology of the graph or on the delete
+                  operation. To obtain our result, we use a new
+                  characterisation of the transitive closure in
+                  plane graphs with one source and one sink and
+                  introduce new techniques to exploit this
+                  characterisation.\bibpar
+                  
+                  We also give a lower bound of $\Omega(\log
+                  n/\log\log n)$ on the amortised complexity of
+                  the problem in the cell probe model with
+                  logarithmic word size. This is the first
+                  dynamic directed graph problem with almost
+                  matching lower and upper bounds.",
+  linkhtmlabs =  "",
+  linkps = 	 ""
+}
+@techreport{BRICS-RS-94-29,
+  author = 	 "Cramer, Ronald and Damg{\aa}rd, Ivan B.",
+  title = 	 "Secure Signature Schemes Based on Interactive
+                  Protocols",
+  institution =  brics,
+  year = 	 1994,
+  type = 	 rs,
+  number = 	 "RS-94-29",
+  address = 	 daimi,
+  month = 	 sep,
+  note = 	 "24~pp. Appears in " # lncs963 # ", pages
+                  297--310",
+  abstract = 	 "A method is proposed for constructing from
+                  interactive protocols digital signature schemes
+                  secure against adaptively chosen message
+                  attacks. Our main result is that practical
+                  secure signature schemes can now also be based
+                  on computationally difficult problems other
+                  than factoring, such as the discrete logarithm
+                  problem.\bibpar
+                  
+                  More precisely, given only an interactive
+                  protocol of a certain type as a primitive, we
+                  can build a (non-interactive) signature scheme
+                  that is secure in the strongest sense of
+                  Goldwasser, Micali and Rivest (GMR): not
+                  existentially forgeable under adaptively chosen
+                  message attacks. There are numerous examples of
+                  primitives that satisfy our conditions, e.g.
+                  Feige-Fiat-Shamir, Schnorr, Guillou-Quisquater,
+                  Okamoto and Brickell-Mc.Curley.\bibpar
+                  
+                  In fact, the existence of one-way group
+                  homomorphisms is a sufficient assumption to
+                  support our construction. As we also
+                  demonstrate that our construction can be based
+                  on claw-free pairs of trapdoor one-way
+                  permutations, our results can be viewed as a
+                  generalization of the GMR signature scheme",
+  linkhtmlabs =  "",
+  linkdvi = 	 "",
+  linkps = 	 ""
+}
+@techreport{BRICS-RS-94-28,
+  author = 	 "Goldreich, Oded",
+  title = 	 "Probabilistic Proof Systems",
+  institution =  brics,
+  year = 	 1994,
+  type = 	 rs,
+  number = 	 "RS-94-28",
+  address = 	 "Department of Applied Mathematics and Computer
+                  Science, Weizmann Institute of Science,
+                  Rehovot, Israel",
+  month = 	 sep,
+  note = 	 "19 pp",
+  abstract = 	 "Various types of {\em probabilistic} proof
+                  systems have played a central role in the
+                  development of computer science in the last
+                  decade. In this exposition, we concentrate on
+                  three such proof systems --- {\em interactive
+                  proofs}, {\em zero-knowledge proofs}, and {\em
+                  probabilistic checkable proofs} --- stressing
+                  the essential role of randomness in each of
+                  them.\bibpar
+                  
+                  
+                  This exposition is an expanded version of a
+                  survey written for the proceedings of the
+                  International Congress of Mathematicians ({\em
+                  ICM94}) held in Zurich in 1994. It is hope that
+                  this exposition may be accessible to a broad
+                  audience of computer scientists and
+                  mathematians.",
+  linkhtmlabs =  "",
+  linkdvi = 	 "",
+  linkps = 	 ""
+}
+
+@techreport{BRICS-RS-94-27,
+  author = 	 "Bra{\"u}ner, Torben",
+  title = 	 "A Model of Intuitionistic Affine Logic from
+                  Stable Domain Theory (Revised and Expanded
+                  Version)",
+  institution =  brics,
+  year = 	 1994,
+  type = 	 rs,
+  number = 	 "RS-94-27",
+  address = 	 daimi,
+  month = 	 sep,
+  note = 	 "19 pp. Full version of paper appearing in " #
+                  lncs820 # ", pages 340--351. This report is a
+                  revised and expanded version of DAIMI IR-118",
+  abstract = 	 "Girard worked with the category of coherence
+                  spaces and continuous stable maps and observed
+                  that the functor that forgets the linearity of
+                  linear stable maps has a left adjoint. This
+                  fundamental observation gave rise to the
+                  discovery of Linear Logic. Since then, the
+                  category of coherence spaces and linear stable
+                  maps, with the comonad induced by the
+                  adjunction, has been considered a canonical
+                  model of Linear Logic. Now, the same phenomenon
+                  is present if we consider the category of pre
+                  dI domains and continuous stable maps, and the
+                  category of dI domains and linear stable maps;
+                  the functor that forgets the linearity has a
+                  left adjoint. This gives an alternative model
+                  of Intuitionistic Linear Logic. It turns out
+                  that this adjunction can be factored in two
+                  adjunctions yielding a model of Intuitionistic
+                  Affine Logic; the category of pre dI domains
+                  and affine stable functions. It is the goal of
+                  this paper to show that this category is
+                  actually a model of Intuitionistic Affine
+                  Logic, and to show that this category moreover
+                  has properties which make it possible to use it
+                  to model convergence/divergence behaviour and
+                  recursion.",
+  linkhtmlabs =  "",
+  linkdvi = 	 "",
+  linkps = 	 ""
+}
+@techreport{BRICS-RS-94-26,
+  author = 	 "Riis, S{\o}ren",
+  title = 	 "Count($q$) versus the Pigeon-Hole Principle",
+  institution =  brics,
+  year = 	 1994,
+  type = 	 rs,
+  number = 	 "RS-94-26",
+  address = 	 daimi,
+  month = 	 aug,
+  note = 	 "3 pp. Appears in {\em Archive for Mathematical
+                  Logic\/} 36(3):157--188 (1997) (expanded to a
+                  selfcontained paper)",
+  abstract = 	 "For each $p \leq 2$ there exist a model
+                  ${M\!\!I}^{*}$ of $I\Delta_{0}(\alpha)$ which
+                  satisfies the Count($p$) principle. Furthermore
+                  if $p$ contain all prime factors of $q$ there
+                  exist $n,r \in{M\!\!I}^{*}$ and a bijective map
+                  $f \in{\rm Set}({M\!\!I}^{*})$ mapping
+                  $\{1,2,...,n\}$ onto $\{1,2,...,n+q^{r}\}$.
+                  \bibpar
+                  
+                  A corollary is a complete classification of the
+                  Count($q$) versus Count($p$) problem. Another
+                  corollary solves an open question by M.
+                  Ajtai.",
+  linkhtmlabs =  "",
+  linkdvi = 	 "",
+  linkps = 	 ""
+}
+@techreport{BRICS-RS-94-25,
+  author = 	 "Riis, S{\o}ren",
+  title = 	 "Bootstrapping the Primitive Recursive
+                  Functions by 47 Colors",
+  institution =  brics,
+  year = 	 1994,
+  type = 	 rs,
+  number = 	 "RS-94-25",
+  address = 	 daimi,
+  month = 	 aug,
+  note = 	 "5 pp. Improved version appears in {\em Decrete
+                  Mathematics} 169(1--3):269--272 (1997) under
+                  the title {\em Bootstrapping the Primitive
+                  Recursive Functions by Only 27 Colors}",
+  abstract = 	 "I construct a concrete coloring of the 3
+                  element subsets of $I\!N$. It has the property
+                  that each homogeneous set
+                  $\{s_{1},s_{2},...,s_{u}\}, u \geq s_{1}$ has
+                  its elements spread so much apart that
+                  $F_{\omega}(s_{i})<s_{i+1}$ for
+                  $i=1,2,...,s_{1}$. It uses only $47$ colors.
+                  This is more economical than the approximately
+                  160000 colors used by Ketonen and Solovay.",
+  linkhtmlabs =  "",
+  linkdvi = 	 "",
+  linkps = 	 ""
+}
+@techreport{BRICS-RS-94-24,
+  author = 	 "Riis, S{\o}ren",
+  title = 	 "A Fractal which violates the Axiom of
+                  Determinacy",
+  institution =  brics,
+  year = 	 1994,
+  type = 	 rs,
+  number = 	 "RS-94-24",
+  address = 	 daimi,
+  month = 	 aug,
+  note = 	 "3 pp",
+  abstract = 	 "By use of the axiom of choice I construct a
+                  symmetrical and elf similar subset $A \subseteq
+                  [0,1] \subseteq I\!R$. hen by an elementary
+                  strategy stealing argument it is shown hat $A$
+                  is not determined. The (possible) existence of
+                  ractals like $A$ clarifies the status of the
+                  controversial xiom of Determinacy.",
+  linkhtmlabs =  "",
+  linkdvi = 	 "",
+  linkps = 	 ""
+}
+
+@techreport{BRICS-RS-94-23,
+  author = 	 "Riis, S{\o}ren",
+  title = 	 "Finitisation in Bounded Arithmetic",
+  institution =  brics,
+  year = 	 1994,
+  type = 	 rs,
+  number = 	 "RS-94-23",
+  address = 	 daimi,
+  month = 	 aug,
+  note = 	 "31 pp. Manuscript presented at The Tenth
+                  Workshop on the Mathematical Foundations of
+                  Programming Semantics, Kansas, USA, 1994",
+  abstract = 	 "I prove various results concerning
+                  un-decidability in weak fragments of
+                  Arithmetic. All results are concerned with
+                  $S^{1}_{2} \subseteq T^{1}_{2} \subseteq
+                  S^{2}_{2} \subseteq T^{2}_{2} \subseteq....$ a
+                  hierarchy of theories which have already been
+                  intensively studied in the literature. Ideally
+                  one would like to separate these systems.
+                  However this is generally expected to be a very
+                  deep problem, closely related to some of the
+                  most famous and open problems in complexity
+                  theory.\bibpar
+                  
+                  In order to throw some light on the separation
+                  problems, I consider the case where the
+                  underlying language is enriched by extra
+                  relation and function symbols. The paper
+                  introduces a new type of results. These state
+                  that the first three levels in the hierarchy
+                  (i.e. $S^{1}_{2},T^{1}_{2}$ and $S^{2}_{2}$)
+                  are never able to distinguish (in a precise
+                  sense) the ``finite'' from the ``infinite''.
+                  The fourth level (i.e. $T^{2}_{2}$) in some
+                  cases can make such a distinction. More
+                  precisely, elementary principles from
+                  finitistical combinatorics (when expressed
+                  solely by the extra relation and function
+                  symbols) are only provable on the first three
+                  levels if they are valid when considered as
+                  principles of general (infinitistical)
+                  combinatorics. I show that this does not hold
+                  for the fourth level.\bibpar
+                  
+                  All results are proved by forcing.",
+  linkhtmlabs =  "",
+  linkdvi = 	 "",
+  linkps = 	 ""
+}
+@techreport{BRICS-RS-94-22,
+  author = 	 "Bra{\"u}ner, Torben",
+  title = 	 "A General Adequacy Result for a Linear
+                  Functional Language",
+  institution =  brics,
+  year = 	 1994,
+  type = 	 rs,
+  number = 	 "RS-94-22",
+  address = 	 daimi,
+  month = 	 aug,
+  note = 	 "39 pp. Presented at {\em Mathematical
+                  Foundations of Programming Semantics: 10th
+                  International Conference}, MFPS~'94. Strongly
+                  revised version accepted for publication in a
+                  special issue of {\em Theoretical Computer
+                  Science\/} devoted the proceedings of
+                  MFPS~'94.",
+  abstract = 	 "A main concern of the paper will be a
+                  Curry-Howard interpretation of Intuitionistic
+                  Linear Logic. It will be extended with
+                  recursion, and the resulting functional
+                  programming language will be given operational
+                  as well as categorical semantics. The two
+                  semantics will be related by soundness and
+                  adequacy results. The main features of the
+                  categorical semantics are that
+                  convergence/divergence behaviour is modelled by
+                  a strong monad, and that recursion is modelled
+                  by ``linear fixpoints'' induced by CPO
+                  structure on the hom-sets. The ``linear
+                  fixpoints'' correspond to ordinary fixpoints in
+                  the category of free coalgebras w.r.t. the
+                  comonad used to interpret the ``of course''
+                  modality. Concrete categories from (stable)
+                  domain theory satisfying the axioms of the
+                  categorical model are given, and thus adequacy
+                  follows in these instances from the general
+                  result.",
+  linkhtmlabs =  "",
+  linkdvi = 	 "",
+  linkps = 	 ""
+}
+@techreport{BRICS-RS-94-21,
+  author = 	 "Riis, S{\o}ren",
+  title = 	 "Count($q$) does not imply Count($p$)",
+  institution =  brics,
+  year = 	 1994,
+  type = 	 rs,
+  number = 	 "RS-94-21",
+  address = 	 daimi,
+  month = 	 jul,
+  note = 	 "55 pp. Appears in {\em Annals of Pure and
+                  Applied Logic} 90(1--3):1--56 (1997)",
+  abstract = 	 "I solve a conjecture originally studied by
+                  M.Ajtai. It states that for different primes
+                  $q,p$ the matching principles Count($q$) and
+                  Count($p$) are logically independent. I prove
+                  that this indeed is the case. Actually I show
+                  that Count($q$) implies Count($p$) exactly when
+                  each prime in $p$ also is a factor in $q$.",
+  linkhtmlabs =  "",
+  linkdvi = 	 "",
+  linkps = 	 ""
+}
+@techreport{BRICS-RS-94-20,
+  author = 	 "Mosses, Peter D. and Musicante, Mart{\'\i}n",
+  title = 	 "An Action Semantics for {ML} Concurrency
+                  Primitives",
+  institution =  brics,
+  year = 	 1994,
+  type = 	 rs,
+  number = 	 "RS-94-20",
+  address = 	 daimi,
+  month = 	 jul,
+  note = 	 "21~pp. Appears in " # lncs873 # ", pages
+                  461--479",
+  abstract = 	 "This paper is about the recently-developed
+                  framework of action semantics. The pragmatic
+                  qualities of action semantic descriptions are
+                  particularly good, which encourages their use
+                  in industrial-scale applications where semantic
+                  descriptions are needed, e.g., compiler
+                  development.\bibpar
+                  
+                  The paper has two main aims: to demonstrate the
+                  remarkable extensibility of action semantic
+                  descriptions, and to illustrate the action
+                  semantics treatment of concurrency. These aims
+                  are achieved simultaneously, by first giving
+                  the description of a sequential (ML-like)
+                  programming language fragment, and then
+                  extending the described language with some
+                  concurrency primitives (taken from CML). The
+                  action semantic description of the sequential
+                  part of the language {\em does not change at
+                  all\/} when the concurrency primitives are
+                  added, it merely gets augmented by the
+                  description of the new features!",
+  linkhtmlabs =  "",
+  linkdvi = 	 "",
+  linkps = 	 ""
+}
+@techreport{BRICS-RS-94-19,
+  author = 	 "Godskesen, Jens Chr{.} and Larsen, Kim G. and
+                  Skou, Arne",
+  title = 	 "Automatic Verification of Real--Timed Systems
+                  Using {\sc Epsilon}",
+  institution =  brics,
+  year = 	 1994,
+  type = 	 rs,
+  number = 	 "RS-94-19",
+  address = 	 iesd,
+  month = 	 jun,
+  note = 	 "8~pp. Appears in " # ifipPSTV94 # ", pages
+                  323--330",
+  abstract = 	 "In this paper we report on an application and
+                  extension of the theory of {\sl Timed Modal
+                  Specifications} ({TMS}) and its associated
+                  verification tool {\sc Epsilon}. The novel
+                  feature with which {\sc Epsilon} has been
+                  extended is the ability to automatically
+                  generate {\sl diagnostic information} in cases
+                  of erroneous refinement steps.",
+  linkhtmlabs =  "",
+  linkps = 	 ""
+}
+@techreport{BRICS-RS-94-18,
+  author = 	 "Agerholm, Sten",
+  title = 	 "{LCF} Examples in {HOL}",
+  institution =  brics,
+  year = 	 1994,
+  type = 	 rs,
+  number = 	 "RS-94-18",
+  address = 	 daimi,
+  month = 	 jun,
+  note = 	 "16 pp. Revised version appears in {\em The
+                  Computer Journal}, 38(2): 121--130, 1995. Also
+                  in " # lncs859 # ", pages 1--16",
+  abstract = 	 "The LCF system provides a logic of fixed point
+                  theory and is useful to reason about
+                  non-termination, arbitrary recursive
+                  definitions and infinite types as lazy lists.
+                  It is unsuitable for reasoning about finite
+                  types and strict functions. The HOL system
+                  provides set theory and supports reasoning
+                  about finite types and total functions well. In
+                  this paper a number of examples are used to
+                  demonstrate that an extension of HOL with
+                  domain theory combines the benefits of both
+                  systems. The examples illustrate reasoning
+                  about infinite values and non-terminating
+                  functions and show how mixing domain and set
+                  theoretic reasoning eases reasoning about
+                  finite LCF types and strict functions. An
+                  example presents a proof of the correctness and
+                  termination of a recursive unification
+                  algorithm using well-founded induction.",
+  linkhtmlabs =  "",
+  linkdvi = 	 "",
+  linkps = 	 ""
+}
+@techreport{BRICS-RS-94-17,
+  author = 	 "Cheng, Allan",
+  title = 	 "Local Model Checking and Traces",
+  institution =  brics,
+  year = 	 1994,
+  type = 	 rs,
+  number = 	 "RS-94-17",
+  address = 	 daimi,
+  month = 	 jun,
+  note = 	 "30 pp. Please refer to the revised version
+                  \htmladdnormallink
+                  {BRICS-RS-95-39}{http://www.brics.dk/RS/95/39/index.html}",
+  abstract = 	 "We present a {\em CTL}-like logic which is
+                  interpreted over labeled asynchronous
+                  transition systems. The interpretation reflects
+                  the desire to reason about these only with
+                  respect their progress fair behaviours. For
+                  finite systems we provide a set of tableau
+                  rules and prove soundness and completeness with
+                  respect to the given interpretation of our
+                  logic. We also provide a model checking
+                  algorithm which solves the model checking
+                  problem in deterministic polynomial time in the
+                  size of the formula and the labelled
+                  asynchronous transition system. We then
+                  consider different extensions of the logic with
+                  modalities expressing concurrent behaviour and
+                  investigate how this affects the decidability
+                  of the satisfiability problem.",
+  linkhtmlabs =  ""
+}
+@techreport{BRICS-RS-94-16,
+  author = 	 "Arge, Lars",
+  title = 	 "External-Storage Data Structures for
+                  Plane-Sweep Algorithms",
+  institution =  brics,
+  year = 	 1994,
+  type = 	 rs,
+  number = 	 "RS-94-16",
+  address = 	 daimi,
+  month = 	 jun,
+  note = 	 "37 pp. Revised version appears in " # lncs955
+                  # ", pages 334--345. Please refer to the
+                  revised and extended version \htmladdnormallink
+                  {BRICS-RS-96-28}{http://www.brics.dk/RS/96/28/index.html}.",
+  abstract = 	 "In this paper we develop a technique for
+                  transforming an internal memory datastructure
+                  into an external storage data structure
+                  suitable for plane-sweep algorithms. We use
+                  this technique to develop external storage
+                  versions of the range tree and the segment
+                  tree. We also obtain an external priority
+                  queue. Using the first two structures, we solve
+                  the orthogonal segment intersection, the
+                  isothetic rectangle intersection, and the
+                  batched range searching problem in the optimal
+                  number of I/O-operations. Unlike previously
+                  known I/O-algorithms the developed algorithms
+                  are straightforward generalizations of the
+                  ordinary internal memory plane-sweep
+                  algorithms. Previously almost no dynamic data
+                  structures were known for the model we are
+                  working in.",
+  linkhtmlabs =  ""
+}
+@techreport{BRICS-RS-94-15,
+  author = 	 "Nielsen, Mogens and Winskel, Glynn",
+  title = 	 "{P}etri Nets and Bisimulations",
+  institution =  brics,
+  year = 	 1994,
+  type = 	 rs,
+  number = 	 "RS-94-15",
+  address = 	 daimi,
+  month = 	 may,
+  note = 	 "36~pp. Please refer to the revised and
+                  corrected version \htmladdnormallink
+                  {BRICS-RS-95-4}{http://www.brics.dk/RS/95/4/index.html}.",
+  abstract = 	 "Several categorical relationships
+                  (adjunctions) between models for concurrency
+                  have been established, allowing the translation
+                  of concepts and properties from one model to
+                  another. The purpose of the present paper is
+                  twofold: firstly to present a central example
+                  of such a relationship (a coreflection between
+                  asynchronous transition systems and Petri
+                  nets), and secondly to illustrate its use by
+                  transferring to nets a general concept of
+                  bisimulation.",
+  linkhtmlabs =  "",
+}
+@techreport{BRICS-RS-94-14,
+  author = 	 "Klarlund, Nils",
+  title = 	 "The Limit View of Infinite Computations",
+  institution =  brics,
+  year = 	 1994,
+  type = 	 rs,
+  number = 	 "RS-94-14",
+  address = 	 daimi,
+  month = 	 may,
+  note = 	 "16~pp. Appears in " # lncs836 # ", pages
+                  351--366",
+  abstract = 	 "We show how to view computations involving
+                  very general liveness properties as limits of
+                  finite approximations. This computational model
+                  does not require introduction of infinite
+                  nondeterminism as with most traditional
+                  approaches. Our results allow us directly to
+                  relate finite computations in order to infer
+                  properties about infinite computations. Thus we
+                  are able to provide a mathematical
+                  understanding of what simulations and
+                  bisimulations are when liveness is
+                  involved.\bibpar
+                  
+                  In addition, we establish links between
+                  verification theory and classical results in
+                  descriptive set theory. Our result on
+                  simulations is the essential contents of the
+                  Kleene-Suslin Theorem, and our result on
+                  bisimulation expresses Martin's Theorem about
+                  the determinacy of Borel games.",
+  linkhtmlabs =  "",
+  linkps = 	 ""
+}
+@techreport{BRICS-RS-94-13,
+  author = 	 "Winskel, Glynn",
+  title = 	 "Stable Bistructure Models of {PCF}",
+  institution =  brics,
+  year = 	 1994,
+  type = 	 rs,
+  number = 	 "RS-94-13",
+  address = 	 daimi,
+  month = 	 may,
+  note = 	 "26~pp. {\it Preliminary draft}. Invited
+                  lecture for MFCS~'94. Appears in " # lncs841 #
+                  ", pages 177--197",
+  abstract = 	 "Stable bistructures are a generalisation of
+                  event structures to represent spaces of
+                  functions at higher types; the partial order of
+                  causal dependency is replaced by two orders,
+                  one associated with input and the other output
+                  in the behaviour of functions. They represent
+                  Berry's bidomains. The representation can
+                  proceed in two stages. Bistructures form a
+                  categorical model of Girard's linear logic
+                  consisting of a linear category together with a
+                  comonad. The comonad has a co-Kleisli category
+                  which is equivalent to a cartesian-closed full
+                  subcategory of Berry's bidomains. A main
+                  motivation for bidomains came from the full
+                  abstraction problem for Plotkin's functional
+                  language PCF. However, although the bidomain
+                  model incorporates both the Berry stable order
+                  and the Scott pointwise order, its PCF theory
+                  (those inequalities on terms which hold in the
+                  bidomain model) does not include that of the
+                  Scott model. With a simple modification we can
+                  obtain a new model of PCF, combining the Berry
+                  and Scott orders, which does not have this
+                  inadequacy",
+  linkhtmlabs =  "",
+  linkdvi = 	 "",
+  linkps = 	 ""
+}
+@techreport{BRICS-RS-94-12,
+  author = 	 "Winskel, Glynn and Nielsen, Mogens",
+  title = 	 "Models for Concurrency",
+  institution =  brics,
+  year = 	 1994,
+  type = 	 rs,
+  number = 	 "RS-94-12",
+  address = 	 daimi,
+  month = 	 may,
+  note = 	 "144 pp. Appears as a chapter in the {\em
+                  Handbook of Logic and the Foundations of
+                  Computer Science}, vol.\ 4, pages 1--148,
+                  Oxford University Press, 1995.",
+  abstract = 	 "This report surveys a range of models for
+                  parallel computation to include interleaving
+                  models like transition systems, synchronisation
+                  trees and languages (often called Hoare traces
+                  in this context), and models like Petri nets,
+                  asynchronous transition systems, event
+                  structures, pomsets and Mazurkiewicz traces
+                  where concurrency is represented more
+                  explicitly by a form of causal independence.
+                  The presentation is unified by casting the
+                  models in a category-theoretic framework. One
+                  aim is to use category theory to provide
+                  abstract characterisations of constructions
+                  like parallel composition valid throughout a
+                  range of different models and to provide formal
+                  means for translating between different
+                  models.\bibpar
+                  
+                  A knowledge of basic category theory is
+                  assumed, up to an acquaintance with the notion
+                  of adjunction.",
+  linkhtmlabs =  ""
+}
+@techreport{BRICS-RS-94-11,
+  author = 	 "Klarlund, Nils",
+  title = 	 "A Homomorphism Concept for $\omega
+                  $-Regu\-larity",
+  institution =  brics,
+  year = 	 1994,
+  type = 	 rs,
+  number = 	 "RS-94-11",
+  address = 	 daimi,
+  month = 	 may,
+  note = 	 "16 pp. Appears in " # lncs933 # ", pages
+                  471--485",
+  abstract = 	 "The Myhill-Nerode Theorem (that for any
+                  regular language, there is a canonical
+                  recognizing device) is of paramount importance
+                  for the computational handling of many
+                  formalisms about finite words.\bibpar
+                  
+                  For infinite words, no prior concept of
+                  homomorphism or structural comparison seems to
+                  have generalized the Myhill-Nerode Theorem in
+                  the sense that the concept is both language
+                  preserving and representable by
+                  automata.\bibpar
+                  
+                  In this paper, we propose such a concept based
+                  on Families of Right Congruences (Maler and
+                  Staiger 93), which we view as a recognizing
+                  structures.\bibpar
+                  
+                  We also establish an exponential lower and
+                  upper bound on the change in size when a
+                  representation is reduced to its canonical
+                  form.",
+  linkhtmlabs =  "",
+  linkps = 	 ""
+}
+@techreport{BRICS-RS-94-10,
+  author = 	 "Jensen, Jakob L. and J{\o}rgensen, Michael E.
+                  and Klarlund, Nils",
+  title = 	 "Monadic Second-order Logic for Parameterized
+                  Verification",
+  institution =  brics,
+  year = 	 1994,
+  type = 	 rs,
+  number = 	 "RS-94-10",
+  address = 	 daimi,
+  month = 	 may,
+  note = 	 "14 pp",
+  abstract = 	 "Much work in automatic verification considers
+                  families of similar finite-state systems. But
+                  an often overlooked property is that sometimes
+                  a single finite-state system can be used to
+                  describe a parameterized, infinite family of
+                  systems. Thus verification of unbounded state
+                  spaces can take place by reduction to finite
+                  ones.\bibpar
+                  
+                  The purpose of this article is to introduce
+                  Monadic Second-order Logic as a practical means
+                  of carrying out such reductions. The logic is a
+                  highly succinct alternative to the use of
+                  regular expressions. We have built a tool that
+                  acts as a decision procedure and translator to
+                  DFAs.\bibpar
+                  
+                  The potential applications are numerous. We
+                  discuss text processing, Boolean circuits, and
+                  distributed systems. Our main example is an
+                  automatic proof of properties for the ``Dining
+                  Philosophers with Encyclopedia'' example by
+                  Kurshan and MacMillan. We establish these
+                  properties for the parameterized case {\em
+                  without} the use of induction.",
+  linkhtmlabs =  "",
+  linkps = 	 ""
+}
+@techreport{BRICS-RS-94-9,
+  author = 	 "Plotkin, Gordon and Winskel, Glynn",
+  title = 	 "Bistructures, Bidomains and Linear Logic",
+  institution =  brics,
+  year = 	 1994,
+  type = 	 rs,
+  number = 	 "RS-94-9",
+  address = 	 daimi,
+  month = 	 may,
+  note = 	 "16~pp. Appears in " # lncs820 # ", pages
+                  352--363",
+  abstract = 	 "Bistructures are a generalisation of event
+                  structures to represent spaces of functions at
+                  higher types; the partial order of causal
+                  dependency is replaced by two orders, one
+                  associated with input and the other output in
+                  the behaviour of functions. Bistructures form a
+                  categorical model of Girard's classical linear
+                  logic in which the involution of linear logic
+                  is modelled, roughly speaking, by a reversal of
+                  the roles of input and output. The comonad of
+                  the model has associated co-Kleisli category
+                  which is equivalent to a cartesian-closed full
+                  subcategory of Berry's bidomains.",
+  linkhtmlabs =  "",
+  linkdvi = 	 "",
+  linkps = 	 ""
+}
+@techreport{BRICS-RS-94-8,
+  author = 	 "Esparza, Javier and Nielsen, Mogens",
+  title = 	 "Decidability Issues for {P}etri Nets",
+  institution =  brics,
+  year = 	 1994,
+  type = 	 rs,
+  number = 	 "RS-94-8",
+  address = 	 daimi,
+  month = 	 may,
+  note = 	 "23 pp. Appears in {\em Journal of Information
+                  Processing and Cybernet. EIK}, 30:143--160,
+                  1994",
+  abstract = 	 "This is a survey of some decidability results
+                  for Petri nets, covering the last three
+                  decades. The presentation is structured around
+                  decidability of specific {\em properties},
+                  various behavioural {\em equivalences} and
+                  finally the model checking problem for {\em
+                  temporal logics}.",
+  linkhtmlabs =  "",
+  linkdvi = 	 "",
+  linkps = 	 ""
+}
+
+@techreport{BRICS-RS-94-7,
+  author = 	 "Joyal, Andr{\'e} and Nielsen, Mogens and
+                  Winskel, Glynn",
+  title = 	 "Bisimulation from Open Maps",
+  institution =  brics,
+  year = 	 1994,
+  type = 	 rs,
+  number = 	 "RS-94-7",
+  address = 	 daimi,
+  month = 	 may,
+  note = 	 "42~pp. Appears in LICS~'93 special issue of
+                  {\em Information and Computation},
+                  127(2):164--185, " # jun # " 1986",
+  abstract = 	 "An abstract definition of bisimulation is
+                  presented. It enables a uniform definition of
+                  bisimulation across a range of different models
+                  for parallel computation presented as
+                  categories. As examples, transition systems,
+                  synchronisation trees, transition systems with
+                  independence (an abstraction from Petri nets)
+                  and labelled event structures are considered.
+                  On transition systems the abstract definition
+                  readily specialises to Milner's strong
+                  bisimulation. On event structures it explains
+                  and leads to a revision of history-preserving
+                  bisimulation of Rabinovitch and Traktenbrot,
+                  Goltz and van Glabeek. A tie-up with open maps
+                  in a (pre)topos, as they appear in the work of
+                  Joyal and Moerdijk, brings to light a promising
+                  new model, presheaves on categories of pomsets,
+                  into which the usual category of labelled event
+                  structures embeds fully and faithfully. As an
+                  indication of its promise, this new presheaf
+                  model has ``refinement'' operators, though
+                  further work is required to justify their
+                  appropriateness and understand their relation
+                  to previous attempts. The general approach
+                  yields a logic, generalising Hennessy-Milner
+                  logic, which is characteristic for the
+                  generalised notion of bisimulation.",
+  linkhtmlabs =  "",
+  linkdvi = 	 "",
+  linkps = 	 ""
+}
+@techreport{BRICS-RS-94-6,
+  author = 	 "Nielsen, Mogens and Clausen, Christian",
+  title = 	 "Bisimulations, Games, and Logic",
+  institution =  brics,
+  year = 	 1994,
+  type = 	 rs,
+  number = 	 "RS-94-6",
+  address = 	 daimi,
+  month = 	 apr,
+  note = 	 "37~pp. Full version of paper appearing in " #
+                  lncs812 # ", pages 289--305",
+  abstract = 	 "In a recent paper by Joyal, Nielsen, and
+                  Winskel, bisimulation is defined in an abstract
+                  and uniform way across a wide range of
+                  different models for concurrency. In this
+                  paper, following a recent trend in theoretical
+                  computer science, we characterize their
+                  abstract definition game-theoretically and
+                  logically in a non-interleaving model. Our
+                  characterizations appear as surprisingly simple
+                  extensions of corresponding characterizations
+                  of interleaving bisimulation.",
+  linkhtmlabs =  "",
+  linkdvi = 	 "",
+  linkps = 	 ""
+}
+@techreport{BRICS-RS-94-5,
+  author = 	 "Mosses, Peter D.",
+  title = 	 "Unified Algebras and Abstract Syntax",
+  institution =  brics,
+  year = 	 1994,
+  type = 	 rs,
+  number = 	 "RS-94-5",
+  address = 	 daimi,
+  month = 	 mar,
+  note = 	 "21~pp. Appears in " # lncs785 # ", pages
+                  280--294",
+  abstract = 	 "We consider the algebraic specification of
+                  abstract syntax in the framework of unified
+                  algebras. We illustrate the expressiveness of
+                  unified algebraic specifications, and provide a
+                  grammar-like notation for specifying abstract
+                  syntax, particularly attractive for use in
+                  semantic descriptions of full-scale programming
+                  languages.",
+  linkhtmlabs =  "",
+  linkdvi = 	 "",
+  linkps = 	 ""
+}
+@techreport{BRICS-RS-94-4,
+  author = 	 "Klarlund, Nils and Schwartzbach, Michael I.",
+  title = 	 "Graphs and Decidable Transductions based on
+                  Edge Constraints",
+  institution =  brics,
+  year = 	 1994,
+  type = 	 rs,
+  number = 	 "RS-94-4",
+  address = 	 daimi,
+  month = 	 feb,
+  note = 	 "19~pp. Appears in " # lncs787 # ", pages
+                  187--201",
+  abstract = 	 "We give examples to show that not even {\rm\bf
+                  c-edNCE}, the most general known notion of
+                  context-free graph grammar, is suited for the
+                  specification of some common data
+                  structures.\bibpar
+                  
+                  To overcome this problem, we use monadic
+                  second-order logic and introduce {\em edge
+                  constraints\/} as a new means of specifying a
+                  large class of graph families. Our notion stems
+                  from a natural dichotomy found in programming
+                  practice between ordinary pointers forming
+                  spanning trees and auxiliary pointers cutting
+                  across.\bibpar
+                  
+                  Our main result is that for certain
+                  transformations of graphs definable in monadic
+                  second-order logic, the question of whether a
+                  graph family given by a specification $\cal A$
+                  is mapped to a family given by a specification
+                  $\cal B$ is decidable. Thus a decidable Hoare
+                  logic arises.",
+  linkhtmlabs =  "",
+  linkdvi = 	 "",
+  linkps = 	 ""
+}
+@techreport{BRICS-RS-94-3,
+  author = 	 "Engberg, Uffe H. and Winskel, Glynn",
+  title = 	 "Linear Logic on {P}etri Nets",
+  institution =  brics,
+  year = 	 1994,
+  type = 	 rs,
+  number = 	 "RS-94-3",
+  address = 	 daimi,
+  month = 	 feb,
+  note = 	 "54 pp. Appears in " # lncs803 # ", pages
+                  176--229",
+  abstract = 	 "This article shows how individual Petri nets
+                  form models of Girard's intuitionistic linear
+                  logic. It explores questions of expressiveness
+                  and completeness of linear logic with respect
+                  to this interpretation. An aim is to use Petri
+                  nets to give an understanding of linear logic
+                  and give some appraisal of the value of linear
+                  logic as a specification logic for Petri nets.
+                  This article might serve as a tutorial,
+                  providing one in-road into Girard's linear
+                  logic via Petri nets. With this in mind we have
+                  added several exercises and their solutions. We
+                  have made no attempt to be exhaustive in our
+                  treatment, dedicating our treatment to one
+                  semantics of intuitionistic linear
+                  logic.\bibpar
+                  
+                  Completeness is shown for several versions of
+                  Girard's linear logic with respect to Petri
+                  nets as the class of models. The strongest
+                  logic considered is intuitionistic linear
+                  logic, with $\otimes$, $-\!\raise+.3ex\hbox
+                  {\boldmath$\scriptscriptstyle\circ$}$,
+                  $\vphantom{\oplus}\raisebox{-1.15pt}{\rm\&}$,
+                  $\oplus$ and the exponential ${!}$ (``of
+                  course''), and forms of quantification. This
+                  logic is shown sound and complete with respect
+                  to {\em atomic nets} (these include nets in
+                  which every transition leads to a nonempty
+                  multiset of places). The logic is remarkably
+                  expressive, enabling descriptions of the kinds
+                  of properties one might wish to show of nets;
+                  in particular, negative properties, asserting
+                  the impossibility of an assertion, can also be
+                  expressed. A start is made on decidability
+                  issues.",
+  linkhtmlabs =  "",
+  linkdvi = 	 "",
+  linkps = 	 ""
+}
+@techreport{BRICS-RS-94-2,
+  author = 	 "Andreev, Alexander {E.}",
+  title = 	 "Complexity of Nondeterministic Functions",
+  institution =  brics,
+  year = 	 1994,
+  type = 	 rs,
+  number = 	 "RS-94-2",
+  address = 	 daimi,
+  month = 	 feb,
+  note = 	 "47 pp",
+  abstract = 	 "The complexity of a nondeterministic function
+                  is the minimum possible complexity of its
+                  determinisation. The entropy of a
+                  nondeterministic function, $F$, is minus the
+                  logarithm of the ratio between the number of
+                  determinisations of $F$ and the number of all
+                  deterministic functions.\bibpar
+                  
+                  
+                  We obtain an upper bound on the complexity of a
+                  nondeterministic function with restricted
+                  entropy for the worst case.\bibpar
+                  
+                  
+                  These bounds have strong applications in the
+                  problem of algorithm derandomization. A lot of
+                  randomized algorithms can be converted to
+                  deterministic ones if we have an effective
+                  hitting set with certain parameters (a set is
+                  hitting for a set system if it has a nonempty
+                  intersection with any set from the
+                  system).\bibpar
+                  
+                  
+                  Linial, Luby, Saks and Zuckerman (1993)
+                  constructed the best effective hitting set for
+                  the system of $k$-value, $n$-dimensional
+                  rectangles. The set size is polynomial in
+                  $k(\log n)/\epsilon $.\bibpar
+                  
+                  
+                  Our bounds of nondeterministic functions
+                  complexity offer a possibility to construct an
+                  effective hitting set for this system with
+                  almost linear size in $k(\log n)/\epsilon$.",
+  linkhtmlabs =  "",
+  linkdvi = 	 "",
+  linkps = 	 ""
+}
+
+@techreport{BRICS-RS-94-1,
+  author = 	 "Winskel, Glynn",
+  title = 	 "Semantics, Algorithmics and Logic: Basic
+                  Research in Computer Science. {BRICS} Inaugural
+                  Talk",
+  institution =  brics,
+  year = 	 1994,
+  type = 	 rs,
+  number = 	 "RS-94-1",
+  address = 	 daimi,
+  month = 	 feb,
+  note = 	 "8 pp",
+  abstract = 	 "This is a transcript of a talk at the
+                  inauguration of {BRICS}, Basic Research in
+                  Computer Science, Centre of the Danish Research
+                  Foundation, on 2 February 1994 at the Steno
+                  museum, University of Aarhus, Denmark.",
+  linkps = 	 ""
+}
+
+</HTML>
+</pre>

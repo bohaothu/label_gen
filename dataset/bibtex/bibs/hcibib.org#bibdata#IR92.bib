@@ -1,0 +1,845 @@
+%M C.IR.92.1
+%T Relevance Feedback Revisited
+%S Interaction in Information Retrieval
+%A Harman, Donna
+%B Proceedings of the Fifteenth Annual International ACM SIGIR Conference on
+Research and Development in Information Retrieval
+%D 1992-06-21
+%P 1-10
+%* (c) Copyright 1992 Association for Computing Machinery
+%W http://www.acm.org/pubs/articles/proceedings/ir/133160/p1-harman/p1-harman.pdf
+%X Researchers have found relevance feedback to be effective in interactive
+information retrieval, although few formal user experiments have been made.  In
+order to run a user experiment on a large document collection, experiments were
+performed at NIST to complete some of the missing links found in using the
+probabilistic retrieval model.  These experiments, using the Cranfield 1400
+collection, showed the importance of query expansion in addition to query
+reweighing, and showed that adding as few as 20 well-selected terms could
+result in performance improvements of over 100%.  Additionally it was shown
+that performing multiple iterations of feedback is highly effective.
+
+%M C.IR.92.11
+%T Incremental Relevance Feedback
+%S Interaction in Information Retrieval
+%A Aalbersberg, IJsbrand Jan
+%B Proceedings of the Fifteenth Annual International ACM SIGIR Conference on
+Research and Development in Information Retrieval
+%D 1992-06-21
+%P 11-22
+%* (c) Copyright 1992 Association for Computing Machinery
+%W http://www.acm.org/pubs/articles/proceedings/ir/133160/p11-aalbersberg/p11-aalbersberg.pdf
+%X Although relevance feedback techniques have been investigated for more than
+20 years, hardly any of these techniques has been implemented in a commercial
+full-text document retrieval system.  In addition to pure performance problems,
+this is due to the fact that the application of relevance feedback techniques
+increases the complexity of the user interface and thus also the use of a
+document retrieval system.  In this paper we concentrate on a relevance
+feedback technique that allows easily understandable and manageable user
+interfaces, and at the same time provides high-quality retrieval results. 
+Moreover, the relevance feedback technique introduced unifies as well as
+improves other well-known relevance feedback techniques.
+
+%M C.IR.92.23
+%T Measuring the Informativeness of a Retrieval Process
+%S Interaction in Information Retrieval
+%A Tague-Sutcliffe, Jean
+%B Proceedings of the Fifteenth Annual International ACM SIGIR Conference on
+Research and Development in Information Retrieval
+%D 1992-06-21
+%P 23-36
+%* (c) Copyright 1992 Association for Computing Machinery
+%W http://www.acm.org/pubs/articles/proceedings/ir/133160/p23-tague-sutcliffe/p23-tague-sutcliffe.pdf
+%X Evaluation of information retrieval systems should be based on measures of
+the information provided by the retrieval process, 'informativeness' measures
+which take into account the interactive and full-text nature of present-day
+systems and the different types of questions which are asked of them. 
+Desirable properties for an informativeness measure are developed, including
+context sensitivity, user centrality, and logarithmic response.  A
+hypergraph-based framework for measuring the informativeness of a retrieval
+process is presented and a measure developed which satisfies the desired
+properties.  The measure is compared to previously developed information
+measures and illustrated via an application.
+
+%M C.IR.92.37
+%T An Evaluation of Phrasal and Clustered Representations on a Text
+Categorization Task
+%S Text Categorisation
+%A Lewis, David D.
+%B Proceedings of the Fifteenth Annual International ACM SIGIR Conference on
+Research and Development in Information Retrieval
+%D 1992-06-21
+%P 37-50
+%* (c) Copyright 1992 Association for Computing Machinery
+%W http://www.acm.org/pubs/articles/proceedings/ir/133160/p37-lewis/p37-lewis.pdf
+%X Syntactic phrase indexing and term clustering have been widely explored as
+text representation techniques for text retrieval.  In this paper we study the
+properties of phrasal and clustered indexing languages on a text categorization
+task, enabling us to study their properties in isolation from query
+interpretation issues.  We show that optimal effectiveness occurs when using
+only a small proportion of the indexing terms available, and that effectiveness
+peaks at a higher feature set size and lower effectiveness level for a
+syntactic phase indexing than for word-based indexing.  We also present results
+suggesting that traditional term clustering method are unlikely to provide
+significantly improved text representations.  An improved probabilistic text
+categorization method is also presented.
+
+%M C.IR.92.51
+%T Automatic Document Classification: Natural Language Processing, Statistical
+Analysis, and Expert System Techniques Used Together
+%S Text Categorisation
+%A Blosseville, M. J.
+%A Hebrail, G.
+%A Monteil, M. G.
+%A Penot, N.
+%B Proceedings of the Fifteenth Annual International ACM SIGIR Conference on
+Research and Development in Information Retrieval
+%D 1992-06-21
+%P 51-58
+%* (c) Copyright 1992 Association for Computing Machinery
+%W http://www.acm.org/pubs/articles/proceedings/ir/133160/p51-blosseville/p51-blosseville.pdf
+%X In this paper we describe an automated method of classifying research
+project descriptions: a human expert classifies a sample set of projects into a
+set of disjoint and pre-defined classes, and then the computer learns from this
+sample how to classify new projects into these classes.  Both textual and
+non-textual information associated with the projects are used in the learning
+and classification phases.  Textual information is processed by two methods of
+analysis: a natural language analysis followed by a statistical analysis. 
+Non-textual information is processed by a symbolic learning technique.  We
+present the results of some experiments done on real data: two different
+classifications of our research projects.
+
+%M C.IR.92.59
+%T Classifying News Stories using Memory Based Reasoning
+%S Text Categorisation
+%A Masand, Brij
+%A Linoff, Gordon
+%A Waltz, David
+%B Proceedings of the Fifteenth Annual International ACM SIGIR Conference on
+Research and Development in Information Retrieval
+%D 1992-06-21
+%P 59-65
+%* (c) Copyright 1992 Association for Computing Machinery
+%W http://www.acm.org/pubs/articles/proceedings/ir/133160/p59-masand/p59-masand.pdf
+%X We describe a method for classifying news stories using Memory Based
+Reasoning (MBR) (a k-nearest neighbor method), that does not require manual
+topic definitions.  Using an already coded training database of about 50,000
+stories from the Dow Jones Press Release News Wire, and SEEKER [Stanfill] (a
+text retrieval system that supports relevance feedback) as the underlying match
+engine, codes are assigned to new, unseen stories with a recall of about 80%
+and precision of about 70%.  There are about 350 different codes to be
+assigned.  Using a massively parallel supercomputer, we leverage the
+information already contained in the thousands of coded stories and are able to
+code a story in about 2 seconds.  Given SEEKER, the text retrieval system, we
+achieved these results in about two person-months.  We believe this approach is
+effective in reducing the development time to implement classification systems
+involving large number of topics for the purpose of classification, message
+routing etc.
+
+%M C.IR.92.66
+%T Term Position Ranking: Some New Test Results
+%S Text Manipulation
+%A Keen, E. Michael
+%B Proceedings of the Fifteenth Annual International ACM SIGIR Conference on
+Research and Development in Information Retrieval
+%D 1992-06-21
+%P 66-76
+%* (c) Copyright 1992 Association for Computing Machinery
+%W http://www.acm.org/pubs/articles/proceedings/ir/133160/p66-keen/p66-keen.pdf
+%X Presents seven sets of laboratory results testing variables in term position
+ranking which produce a phrase effect by weighting the distance between
+proximate terms.  Results of the 73 tests conducted by this project are
+included, covering variant term position algorithms, sentence boundaries,
+stopword counting, every pairs testing, field selection, and combinations of
+algorithm including collection frequency, record frequency and searcher
+weighted.  The discussion include the results of tests by Fagan and by Croft,
+the need for term stemming, proximity as a precision device, comparisons with
+Boolean, and the quality of test collections.
+
+%M C.IR.92.77
+%T Experiments in Automatic Statistical Thesaurus Construction
+%S Text Manipulation
+%A Crouch, Carolyn J.
+%A Yang, Bokyung
+%B Proceedings of the Fifteenth Annual International ACM SIGIR Conference on
+Research and Development in Information Retrieval
+%D 1992-06-21
+%P 77-88
+%* (c) Copyright 1992 Association for Computing Machinery
+%W http://www.acm.org/pubs/articles/proceedings/ir/133160/p77-crouch/p77-crouch.pdf
+%X A well constructed thesaurus has long been recognized as a valuable tool in
+the effective operation of an information retrieval system.  This paper reports
+the results of experiments designed to determine the validity of an approach to
+the automatic construction of global thesauri (described originally by Crouch
+in [1] and [2]) based on a clustering of the document collection.  The authors
+validate the approach by showing that the use of thesauri generated by this
+method results in substantial improvements in retrieval effectiveness in four
+test collections.  The term discrimination value theory, used in the thesaurus
+generation algorithm to determine a term's membership in a particular thesaurus
+class, is found not to be useful in distinguishing between thesaurus classes
+(i.e., in differentiating a "good" from an "indifferent" or "poor" thesaurus
+class).  In conclusion, the authors suggest an alternate approach to automatic
+thesaurus construction which greatly simplifies the work of producing viable
+thesaurus classes.  Experimental results show that the alternate approach
+described herein in some cases produces thesauri which are comparable in
+retrieval effectiveness to those produced by the first method at much lower
+cost.
+
+%M C.IR.92.89
+%T Use of Syntactic Context to Produce Term Association Lists for Text
+Retrieval
+%S Text Manipulation
+%A Grefenstette, Gregory
+%B Proceedings of the Fifteenth Annual International ACM SIGIR Conference on
+Research and Development in Information Retrieval
+%D 1992-06-21
+%P 89-97
+%* (c) Copyright 1992 Association for Computing Machinery
+%W http://www.acm.org/pubs/articles/proceedings/ir/133160/p89-grefenstette/p89-grefenstette.pdf
+%X One aspect of world knowledge essential to information retrieval is knowing
+when two words are related.  Knowing word relatedness allows a system given a
+user's query terms to retrieve relevant documents not containing those exact
+terms.  Two words can be said to be related if they appear in the same
+contexts.  Document co-occurrence gives a measure of word relatedness that has
+proved to be too rough to be useful.  The relatively recent apparition of
+on-line dictionaries and robust and rapid parsers permits the extraction of
+finer word contexts from large corpora.  In this paper, we will describe such
+an extraction technique that uses only coarse syntactic analysis and no domain
+knowledge.  This technique produces lists of words related to any word
+appearing in a corpus.  When the closest related terms were used in query
+expansion of a standard information retrieval testbed, the results were much
+better than that given by document co-occurrence techniques, and slightly
+better than using unexpanded queries, supporting the contention that
+semantically similar words were indeed extracted by this technique.
+
+%M C.IR.92.98
+%T Versioning a Full-Text Information Retrieval System
+%S Database Structures
+%A Anick, Peter G.
+%A Flynn, Rex A.
+%B Proceedings of the Fifteenth Annual International ACM SIGIR Conference on
+Research and Development in Information Retrieval
+%D 1992-06-21
+%P 98-111
+%* (c) Copyright 1992 Association for Computing Machinery
+%W http://www.acm.org/pubs/articles/proceedings/ir/133160/p98-anick/p98-anick.pdf
+%X In this paper, we present an approach to the incorporation of object
+versioning into a distributed full-text information retrieval system.  We
+propose an implementation based on "partially versioned" index sets, arguing
+that its space overhead and query-time performance make it suitable for
+full-text IR, with its heavy dependence on inverted indexing.  We develop
+algorithms for computing both historical queries and tune range queries and
+show how these algorithms can be applied to a number of problems in distributed
+information management, such as data replication, caching, transactional
+consistency, and hybrid media repositories.
+
+%M C.IR.92.112
+%T Retrieval Activities in a Database Consisting of Heterogeneous Collections
+of Structured Text
+%S Database Structures
+%A Burkowski, Forbes J.
+%B Proceedings of the Fifteenth Annual International ACM SIGIR Conference on
+Research and Development in Information Retrieval
+%D 1992-06-21
+%P 112-125
+%* (c) Copyright 1992 Association for Computing Machinery
+%W http://www.acm.org/pubs/articles/proceedings/ir/133160/p112-burkowski/p112-burkowski.pdf
+%X The first part of this paper briefly describes a mathematical framework
+(called the containment model) that provides the operations and data structures
+for a text dominated database with a hierarchical structure.  The database is
+considered to be a hierarchical collection of contiguous extents each extent
+being a word, word phrase, text element or non-text element.  The filter
+operations making up a search command are expressed in terms of containment
+criteria that specify whether a contiguous extent will be selected or rejected
+during a search.  This formalism, comprised of the mathematical framework and
+its associated language, defines a conceptual layer upon which we can construct
+a well-defined higher level layer, specifically the user interface that serves
+to provide a level of functionality that is closer to the needs of the user and
+the application domain.
+   With the conceptual layer established, we go on to describe the design and
+implementation of a versatile interface which handles queries that search and
+navigate a heterogeneous collection of structured documents.  Interface
+functionality is provided by a set of "worker" modules supported by an
+"environment" that is the same for all interfaces.  The interface environment
+allows a worker to communicate with the underlying text retrieval engine using
+a well-defined command protocol that is based on a small set of filter
+operators.  The overall design emphasizes: a) interface flexibility for a
+variety of search and browsing capabilities, b) the modular independence of the
+interface with respect to its underlying retrieval engine, and c) the
+advantages to be accrued by defining retrieval commands using operators that
+are part of a text algebra that provides a sound theoretical foundation for the
+database.
+
+%M C.IR.92.126
+%T A Textual Object Management System
+%S Database Structures
+%A Deerwester, Scott C.
+%A Waclena, Keith
+%A LaMar, Michelle
+%B Proceedings of the Fifteenth Annual International ACM SIGIR Conference on
+Research and Development in Information Retrieval
+%D 1992-06-21
+%P 126-139
+%* (c) Copyright 1992 Association for Computing Machinery
+%W http://www.acm.org/pubs/articles/proceedings/ir/133160/p126-deerwester/p126-deerwester.pdf
+%X Computer programs that access significant amounts of text usually include
+code that manipulates the textual objects that comprise it.  Such programs
+include electronic mail readers, typesetters and, in particular, full-text
+information retrieval systems.  Such code is often unsatisfying in that access
+to textual objects is either efficient, or flexible, but not both.  A
+programming language like Awk or Perl provides very general facilities for
+describing textual objects, but at the cost of rescanning the text for every
+textual object.  At the other extreme, full text information retrieval systems
+usually offer access to a very limited number of kinds of textual objects, but
+this access is very efficient.  The system described in this paper is a
+programming tool for managing textual objects.  It provides a great deal of
+flexibility, giving access to very complex document structure, with a large
+number of constituent kinds of textual objects.  Further, it provides access to
+these objects very efficiently, both in terms of time and auxiliary space, by
+being very careful to access secondary storage only when absolutely necessary.
+
+%M C.IR.92.140
+%T Towards a Probabilistic Modal Logic for Semantic-Based Information Retrieval
+%S Information Retrieval Theory
+%A Nie, Jian-Yun
+%B Proceedings of the Fifteenth Annual International ACM SIGIR Conference on
+Research and Development in Information Retrieval
+%D 1992-06-21
+%P 140-151
+%* (c) Copyright 1992 Association for Computing Machinery
+%W http://www.acm.org/pubs/articles/proceedings/ir/133160/p140-nie/p140-nie.pdf
+%X Semantic-based approaches to Information Retrieval make a query evaluation
+similar to an inference process based on semantic relations.  Semantic-based
+approaches find out hidden semantic relationships between a document and a
+query, but quantitative estimation of the correspondence between them is often
+empiric.  On the other hand, probabilistic approaches usually consider only
+statistical relationships between terms.  It is expected that improvement may
+be brought by integrating these two approaches.  This paper demonstrates, using
+some particular probabilistic models which are strongly related to modal logic,
+that such an integration is feasible and natural.  A new model is developed on
+the basis of an extended modal logic.  It has the advantages of: (1) augmenting
+a semantic-based approach with a probabilistic measurement, and (2) augmenting
+a probabilistic approach with finer semantic relations than just statistical
+ones.  It is shown that this model verifies most of the conditions for an
+absolute probability function.
+
+%M C.IR.92.152
+%T An Analysis of Vector Space Models Based on Computational Geometry
+%S Information Retrieval Theory
+%A Wang, Z. W.
+%A Wong, S. K. M.
+%A Yao, Y. Y.
+%B Proceedings of the Fifteenth Annual International ACM SIGIR Conference on
+Research and Development in Information Retrieval
+%D 1992-06-21
+%P 152-160
+%* (c) Copyright 1992 Association for Computing Machinery
+%W http://www.acm.org/pubs/articles/proceedings/ir/133160/p152-wang/p152-wang.pdf
+%X This paper analyzes the properties, structures and limitations of
+vector-based models for information retrieval from the computational geometry
+point of view.  It is shown that both the pseudo-cosine and the standard vector
+space models can be viewed as special cases of a generalized linear model. 
+More importantly, both the necessary and sufficient conditions have been
+identified, under which ranking functions such as the inner-product, cosine,
+pseudo-cosine, Dice, covariance and product-moment correlation measures can be
+used to rank the documents.  The structure of the solution region for
+acceptable ranking is analyzed and an algorithm for finding all the solution
+vectors is suggested.
+
+%M C.IR.92.161
+%T Latent Semantic Indexing is an Optimal Special Case of Multidimensional
+Scaling
+%S Information Retrieval Theory
+%A Bartell, Brian T.
+%A Cottrell, Garrison W.
+%A Belew, Richard K.
+%B Proceedings of the Fifteenth Annual International ACM SIGIR Conference on
+Research and Development in Information Retrieval
+%D 1992-06-21
+%P 161-167
+%* (c) Copyright 1992 Association for Computing Machinery
+%W http://www.acm.org/pubs/articles/proceedings/ir/133160/p161-bartell/p161-bartell.pdf
+%X Latent Semantic Indexing (LSI) is a technique for representing documents,
+queries, and terms as vectors in a multidimensional real-valued space.  The
+representations are approximations to the original term space encoding, and are
+found using the matrix technique of Singular Value Decomposition.  In
+comparison, Multidimensional Scaling (MDS) is a class of data analysis
+techniques for representing data points as points in a multidimensional
+real-valued space.  The objects are represented so that inter-point
+similarities in the space match inter object similarity information provided by
+the researcher.  We illustrate how the document representations given by LSI
+are equivalent to the optimal representations found when solving a particular
+MDS problem in which the given inter-object similarity information is provided
+by the inner product similarities between the documents themselves.  We further
+analyze a more general MDS problem in which the inter-document similarity
+information, although still in inner product form, is arbitrary with respect to
+the vector space encoding of the documents.
+
+%M C.IR.92.168
+%T A System for Retrieving Speech Documents
+%S Language Processing
+%A Glavitsch, Ulrike
+%A Schauble, Peter
+%B Proceedings of the Fifteenth Annual International ACM SIGIR Conference on
+Research and Development in Information Retrieval
+%D 1992-06-21
+%P 168-176
+%* (c) Copyright 1992 Association for Computing Machinery
+%W http://www.acm.org/pubs/articles/proceedings/ir/133160/p168-glavitsch/p168-glavitsch.pdf
+%X An information retrieval model is presented for the retrieval of speech
+documents, i.e. audio recordings containing speech.  The indexing vocabulary
+consists of indexing features that have the following characteristics.  First,
+they are easy to recognize by speech recognition methods.  Second, the number
+of different indexing features is small such that a reasonable amount of
+training data is sufficient to train the hidden Markov models that are used by
+the speech recognition process.  Third, the retrieval method based on such
+indexing features achieves an acceptable retrieval effectiveness as shown by
+experiments on text collections.  Fourth, these indexing features cannot only
+be identified in speech documents but also in text documents.  From the last
+characteristic follows that speech documents and text documents can be
+retrieved simultaneously.  Analogously, the queries may contain either speech
+or text.  Thus, we have a simple multimedia retrieval model where two different
+medias are indexed coherently.  We also describe a prototype retrieval system
+under development.
+
+%M C.IR.92.177
+%T N-Poisson Document Modelling
+%S Language Processing
+%A Margulis, Eugene L.
+%B Proceedings of the Fifteenth Annual International ACM SIGIR Conference on
+Research and Development in Information Retrieval
+%D 1992-06-21
+%P 177-189
+%* (c) Copyright 1992 Association for Computing Machinery
+%W http://www.acm.org/pubs/articles/proceedings/ir/133160/p177-margulis/p177-margulis.pdf
+%X This paper is a report of a study investigating the validity of the Multiple
+Poisson (nP) model of word distribution in document collections.  An nP
+distribution is a mixture of n Poisson distributions with different means.  We
+describe a practical algorithm for determining if a certain word is distributed
+according to an nP distribution and computing the distribution parameters.  The
+algorithm was applied to every word in four different document collections.  It
+was found that over 70% of frequently occurring words and terms indeed behave
+according to the nP distributions.  The result indicate that the proportion of
+nP words depends on the collection size, document length and the frequency of
+the individual words.  Most of the nP words recognised are distributed
+according to the mixture of relatively few single Poisson distributions (two,
+three or four).  There is an indication that the number of single Poisson
+components in the mixture depends on the collection frequency of words.
+
+%M C.IR.92.190
+%T An Incrementally Extensible Document Retrieval System Based on Linguistic
+and Logical Principles
+%S Language Processing
+%A Hess, Michael
+%B Proceedings of the Fifteenth Annual International ACM SIGIR Conference on
+Research and Development in Information Retrieval
+%D 1992-06-21
+%P 190-197
+%* (c) Copyright 1992 Association for Computing Machinery
+%W http://www.acm.org/pubs/articles/proceedings/ir/133160/p190-hess/p190-hess.pdf
+%X Most natural language based document retrieval systems use the syntax
+structures of constituent phrases of documents as index terms.  Many of these
+systems also attempt to reduce the syntactic variability of natural language by
+some normalisation procedure applied to these syntax structures.  However, the
+retrieval performance of such systems remains fairly disappointing.  Some
+systems therefore use a meaning representation language to index and retrieve
+documents.  In this paper, a system is presented that uses Horn Clause Logic as
+meaning representation language, employs advanced techniques from Natural
+Language Processing to achieve incremental extensibility, and uses methods from
+Logic Programming to achieve robustness in the face of insufficient data.
+
+%M C.IR.92.198
+%T Probabilistic Retrieval Based on Staged Logistic Regression
+%S Probabilistic Information Retrieval
+%A Cooper, William S.
+%A Gey, Fredric C.
+%A Dabney, Daniel P.
+%B Proceedings of the Fifteenth Annual International ACM SIGIR Conference on
+Research and Development in Information Retrieval
+%D 1992-06-21
+%P 198-210
+%* (c) Copyright 1992 Association for Computing Machinery
+%W http://www.acm.org/pubs/articles/proceedings/ir/133160/p198-cooper/p198-cooper.pdf
+%X The goal of a probabilistic retrieval system design is to rank the elements
+of the search universe in descending order of their estimated probability of
+usefulness to the user.  Previously explored methods for computing such a
+ranking have involved the use of statistical independence assumptions and
+multiple regression analysis on a learning sample.  In this paper these
+techniques are recombined in a new way to achieve greater accuracy of
+probabilistic estimate without undue additional computational complexity.  The
+novel element of the proposed design is that the regression analysis be carried
+out in two or more levels or stages.  Such an approach allows composite or
+grouped retrieval clues to be analyzed in an orderly manner -- first within
+groups, and then between.  It compensates automatically for systematic biases
+introduced by the statistical simplifying assumptions, and gives rise to search
+algorithms of reasonable computational efficiency.
+
+%M C.IR.92.211
+%T Integration of Probabilistic Fact and Text Retrieval
+%S Probabilistic Information Retrieval
+%A Fuhr, Norbert
+%B Proceedings of the Fifteenth Annual International ACM SIGIR Conference on
+Research and Development in Information Retrieval
+%D 1992-06-21
+%P 211-222
+%* (c) Copyright 1992 Association for Computing Machinery
+%W http://www.acm.org/pubs/articles/proceedings/ir/133160/p211-fuhr/p211-fuhr.pdf
+%X In this paper, a model for combining text and fact retrieval is described. 
+A query is a set of conditions, where a single condition is either a text or
+fact condition.  Fact conditions can be interpreted as being vague, thus
+leading to nonbinary weights for fact conditions with respect to database
+objects.  For text conditions, we use descriptions of the occurrence of terms
+in documents instead of precomputed indexing weights, thus treating terms
+similar to attributes.  Probabilistic indexing weights for conditions are
+computed by introducing the notion of correctness (or acceptability) of a
+condition w.r.t. an object.  These indexing weights are used in retrieval for a
+probabilistic ranking of objects based on the
+retrieval-with-probabilistic-indexing (RPI) model, for which a new derivation
+is given here.
+
+%M C.IR.92.223
+%T A Loosely-Coupled Integration of a Text Retrieval System and an
+Object-Oriented Database System
+%S Probabilistic Information Retrieval
+%A Croft, W. Bruce
+%A Smith, Lisa A.
+%A Turtle, Howard R.
+%B Proceedings of the Fifteenth Annual International ACM SIGIR Conference on
+Research and Development in Information Retrieval
+%D 1992-06-21
+%P 223-232
+%* (c) Copyright 1992 Association for Computing Machinery
+%W http://www.acm.org/pubs/articles/proceedings/ir/133160/p223-croft/p223-croft.pdf
+%X Document management systems are needed for many business applications.  This
+type of system would combine the functionality of a database system, (for
+describing storing and maintaining documents with complex structure and
+relationships) with a text retrieval system (for effective retrieval based on
+full text).  The retrieval model for a document management system is
+complicated by the variety and complexity of the objects that are represented.
+In this paper, we describe an approach to complex object retrieval using a
+probabilistic inference net model, and an implementation of this approach using
+a loose coupling of an object-oriented database system (IRIS) and a text
+retrieval system based on inference nets (INQUERY).  The resulting system is
+used to store long, structured documents and can retrieve document components
+(sections, figures, etc.) based on their text contents or the contents of
+related components.  The lessons learnt from the implementation are discussed.
+
+%M C.IR.92.233
+%T Automating the Assignment of Submitted Manuscripts to Reviewers
+%S IR Applications
+%A Dumais, Susan T.
+%A Nielsen, Jakob
+%B Proceedings of the Fifteenth Annual International ACM SIGIR Conference on
+Research and Development in Information Retrieval
+%D 1992-06-21
+%P 233-244
+%K Conferences, Program committees, Reviewers, Referees, Manuscripts, Papers,
+Assignment, Matching, Interests, Latent semantic indexing, LSI, Hypertext,
+Information retrieval
+%* (c) Copyright 1992 Association for Computing Machinery
+%W http://www.acm.org/pubs/articles/proceedings/ir/133160/p233-dumais/p233-dumais.pdf
+%X The 117 manuscripts submitted for the Hypertext'91 conference were assigned
+to members of the review committee, using a variety of automated methods based
+on information retrieval principles and Latent Semantic Indexing.  Fifteen
+reviewers provided exhaustive ratings for the submitted abstracts, indicating
+how well each abstract matched their interests.  The automated methods do a
+fairly good job of assigning relevant papers for review, but they are still
+some what poorer than assignments made manually by human experts and
+substantially poorer than an assignment perfectly matching the reviewers' own
+ranking of the papers.  A new automated assignment method called "n of 2n"
+achieves better performance than human experts by sending reviewers more papers
+than they actually have to review and then allowing them to choose part of
+their review load themselves.
+
+%M C.IR.92.245
+%T Design of an OPAC Database to Permit Different Subject Searching Accesses in
+a Multi-Disciplines Universities Library Catalogue Database
+%S IR Applications
+%A Agosti, Maristella
+%A Masotti, Maurizio
+%B Proceedings of the Fifteenth Annual International ACM SIGIR Conference on
+Research and Development in Information Retrieval
+%D 1992-06-21
+%P 245-255
+%* (c) Copyright 1992 Association for Computing Machinery
+%W http://www.acm.org/pubs/articles/proceedings/ir/133160/p245-agosti/p245-agosti.pdf
+%X This paper presents searching approaches and user interface capabilities of
+DUO, an Online Public Access Catalogue (OPAC) designed to permit the users of
+three Universities of the North-East of Italy different subject searching
+accesses to the co-operative multi-disciplines library catalogue database.
+   The co-operative catalogue database is managed by one of the software
+systems developed under the Italian National Project for library automation:
+the SBN project.  Since the SBN database has not been designed to be
+efficiently accessed for end-user searches, the DUO database has been designed
+to avoid duplication of the SBN database data and to be usable for making
+efficient subjects accesses to the catalogue documents.  The DUO design choices
+are presented, in particular the main choice of designing a "virtual" document
+that corresponds to each SBN document and that has unstructured data usable for
+subject search purposes.
+   The paper presents a new kind of user-OPAC dialogue that makes available to
+the use different search approaches and on-line dictionaries.  In particular
+the user during the interaction with the search tool can represent his
+information needs with the support of interface capabilities that are based on
+retrieval path history, and words and codes on-line dictionaries.
+   DUO is the first Italian OPAC that has been made openly available to users
+of universities and research institutions.  For this reason, it is also the
+first time that OPAC log data is going to be collected in Italy.  This work
+mainly intends to make a modern OPAC available to the users of a SBN catalogue
+database, but it is going to permit also to build up a knowledge on OPAC usage
+in Italy.
+
+%M C.IR.92.256
+%T Searching for Historical Word-Forms in a Database of 17th-Century English
+Text using Spelling-Correction Methods
+%S IR Applications
+%A Robertson, Alexander M.
+%A Willett, Peter
+%B Proceedings of the Fifteenth Annual International ACM SIGIR Conference on
+Research and Development in Information Retrieval
+%D 1992-06-21
+%P 256-265
+%* (c) Copyright 1992 Association for Computing Machinery
+%W http://www.acm.org/pubs/articles/proceedings/ir/133160/p256-robertson/p256-robertson.pdf
+%X This paper discusses the application of algorithmic spelling-correction
+techniques to the identification of those worlds in a database of 17th century
+English text that are most similar to a query word in modern English.  The
+experiments have used n-gram matching, non-phonetic coding and dynamic
+programming methods for spelling correction, and have demonstrated that
+high-recall searches can be carried out, although some of the searches are very
+demanding of computational resources.  The methods are, in principle,
+applicable to historical texts in many languages and from many different
+periods.
+
+%M C.IR.92.266
+%T A Faster Algorithm for Constructing Minimal Perfect Hash Functions
+%S Data Structures
+%A Fox, Edward A.
+%A Chen, Qi Fan
+%A Heath, Lenwood S.
+%B Proceedings of the Fifteenth Annual International ACM SIGIR Conference on
+Research and Development in Information Retrieval
+%D 1992-06-21
+%P 266-273
+%* (c) Copyright 1992 Association for Computing Machinery
+%W http://www.acm.org/pubs/articles/proceedings/ir/133160/p266-fox/p266-fox.pdf
+%X Our previous research on one-probe access to large collections of data
+indexed by alphanumeric keys has produced the first practical minimal perfect
+hash functions for this problem.  Here, a new algorithm is described for
+quickly finding minimal perfect hash functions whose specification space is
+very close to the theoretical lower bound, i.e., around 2 bits per key.  The
+various stages of processing are detailed, along with analytical and empirical
+results, including timing for a set over 3.8 million keys that was processed on
+a NeXTstation in about 6 hours.
+
+%M C.IR.92.274
+%T Parameterised Compression for Sparse Bitmaps
+%S Data Structures
+%A Moffat, Alistair
+%A Zobel, Justin
+%B Proceedings of the Fifteenth Annual International ACM SIGIR Conference on
+Research and Development in Information Retrieval
+%D 1992-06-21
+%P 274-285
+%* (c) Copyright 1992 Association for Computing Machinery
+%W http://www.acm.org/pubs/articles/proceedings/ir/133160/p274-moffat/p274-moffat.pdf
+%X Full-text retrieval systems often use either a bitmap or an inverted file to
+identify which documents contain which terms, so that the documents containing
+any combination of query terms can be quickly located.  Bitmaps of term
+occurrences are large, but are usually sparse, and thus are amenable to a
+variety of compression techniques.  Here we consider techniques in which the
+encoding of each bitvector within the bitmap is parameterised, so that a
+different code can be used for each bitvector.  Our experimental results show
+that the new methods yield better compression than previous techniques.
+
+%M C.IR.92.286
+%T Frame-Sliced Partitioned Parallel Signature Files
+%S Data Structures
+%A Grandi, Fabio
+%A Tiberio, Paolo
+%A Zezula, Pavel
+%B Proceedings of the Fifteenth Annual International ACM SIGIR Conference on
+Research and Development in Information Retrieval
+%D 1992-06-21
+%P 286-297
+%* (c) Copyright 1992 Association for Computing Machinery
+%W http://www.acm.org/pubs/articles/proceedings/ir/133160/p286-grandi/p286-grandi.pdf
+%X The retrieval capabilities of the signatures file access methods have become
+very attractive for many data processing applications dealing with both
+formatted and unformatted data.  However, performance is still a problem,
+mainly when large flies are used and fast response required.  In this paper, a
+high performance signature file organization is proposed, integrating the
+latest developments both in storage structure and parallel computing
+architectures.  It combines horizontal and vertical approaches to the signature
+file fragmentation.  In this way, a new, mixed decomposition scheme,
+particularly suitable for parallel implementation, is achieved.  The
+organization, based on this fragmentation scheme, is called Fragmented
+Signature File.  Performance analysis shows that this organization provides
+very good and relatively stable performance, covering the full range of
+possible queries.  For the same degree of parallelism, it outperforms any other
+parallel signature file organization that has been defined so far.  The
+proposed method also has other important advantages concerning processing of
+dynamic files, adaptability to the number of available processors, load
+balancing, and, to some extent, fault-tolerant query processing.
+
+%M C.IR.92.298
+%T Cognitive Differences in End User Searching of a CD-ROM Index
+%S Interface Design and Display
+%A Allen, Bryce
+%B Proceedings of the Fifteenth Annual International ACM SIGIR Conference on
+Research and Development in Information Retrieval
+%D 1992-06-21
+%P 298-309
+%* (c) Copyright 1992 Association for Computing Machinery
+%W http://www.acm.org/pubs/articles/proceedings/ir/133160/p298-allen/p298-allen.pdf
+%X Cognitive abilities of fifty university students were tested using eight
+tests from the Kit of Factor-Referenced Cognitive Tests.  All students searched
+for references on the same topic using a standard computerized index, and
+performance in the searches was analyzed using a variety of measures.  Effects
+for cognitive differences, as well as for differences in demographic
+characteristics, and knowledge, were identified using multiple regression. 
+Perceptual speed had an effect on the quality of searches, and logical
+reasoning, verbal comprehension, and spatial scanning abilities influenced
+search tactics.  It is suggested that information retrieval systems can made
+more accessible to users with different levels of cognitive abilities through
+improvements that will assist users to scan lists of terms, choose appropriate
+vocabulary for searching, and select useful references.
+
+%M C.IR.92.310
+%T Developing a Theory to Guide the Process of Designing Information Retrieval
+Systems
+%S Interface Design and Display
+%A Sonnenwald, Diane H.
+%B Proceedings of the Fifteenth Annual International ACM SIGIR Conference on
+Research and Development in Information Retrieval
+%D 1992-06-21
+%P 310-317
+%* (c) Copyright 1992 Association for Computing Machinery
+%W http://www.acm.org/pubs/articles/proceedings/ir/133160/p310-sonnenwald/p310-sonnenwald.pdf
+%X The dominant approaches to information retrieval system design are based on
+rational theory and cognitive engineering.  However, these theories as well as
+approaches in other disciplines, reviewed in this paper, do not account for
+communication, or interaction, among design participants which is critical to
+design outcomes.  This research attempts to develop a descriptive design model
+that accounts for communication among users, designers, and developers
+throughout the design process.  A pilot study has been completed and a
+preliminary model that represents a first step in understanding participants'
+evolving perceptions and expectations of the design process and its outcomes is
+described in this paper.
+
+%M C.IR.92.318
+%T Scatter/Gather: A Cluster-Based Approach to Browsing Large Document
+Collections
+%S Interface Design and Display
+%A Cutting, Douglass R.
+%A Karger, David R.
+%A Pedersen, Jan O.
+%A Tukey, John W.
+%B Proceedings of the Fifteenth Annual International ACM SIGIR Conference on
+Research and Development in Information Retrieval
+%D 1992-06-21
+%P 318-329
+%* (c) Copyright 1992 Association for Computing Machinery
+%W http://www.acm.org/pubs/articles/proceedings/ir/133160/p318-cutting/p318-cutting.pdf
+%X Document clustering has not been well received as an information retrieval
+tool.  Objections to its use fall into two main categories: first, that
+clustering is too slow for large corpora (with running time often quadratic in
+the number of documents); and second, that clustering does not appreciably
+improve retrieval.
+   We argue that these problems arise only when clustering is used in an
+attempt to improve conventional search techniques.  However, looking at
+clustering as an information access tool in its own right obviates these
+objections, and provides a powerful new access paradigm.  We present a document
+browsing technique that employs document clustering as its primary operation. 
+We also present fast (linear time) clustering algorithms which support this
+interactive browsing paradigm.
+
+%M C.IR.92.330
+%T Bead: Explorations in Information Visualization
+%S Interface Design and Display
+%A Chalmers, Matthew
+%A Chitson, Paul
+%B Proceedings of the Fifteenth Annual International ACM SIGIR Conference on
+Research and Development in Information Retrieval
+%D 1992-06-21
+%P 330-337
+%K Information storage and retrieval, Information search and retrieval,
+Computer graphics, Picture/image generation, Computer graphics, Computational
+geometry and object modeling, Simulation and modeling, Applications,
+Visualization, Information retrieval, Particle systems, N-body problem
+%* (c) Copyright 1992 Association for Computing Machinery
+%W http://www.acm.org/pubs/articles/proceedings/ir/133160/p330-chalmers/p330-chalmers.pdf
+%X We describe work on the visualization of bibliographic data and, to aid in
+this task, the application of numerical techniques for multidimensional
+scaling.
+   Many areas of scientific research involve complex multivariate data.  One
+example of this is Information Retrieval.  Document comparisons may be done
+using a large number of variables.  Such conditions do not favour the more
+well-known methods of visualization and graphical analysis, as it is rarely
+feasible to map each variable onto one aspect of even a three-dimensional,
+coloured and textured space.
+   Bead is a prototype system for the graphically-based exploration of
+information.  In this system, articles in a bibliography are represented by
+particles in 3-space.  By using physically-based modelling techniques to take
+advantage of fast methods for the approximation of potential fields, we
+represent the relationships between articles by their relative spatial
+positions.  Inter-particle forces tend to make similar articles move closer to
+one another and dissimilar ones move apart.  The result is a 3D scene which can
+be used to visualize patterns in the high-D information space.
+
+%M C.IR.92.338
+%T The Dynamic HomeFinder: Evaluating Dynamic Queries in a Real-Estate
+Information Exploration System
+%S Interface Design and Display
+%A Williamson, Christopher
+%A Shneiderman, Ben
+%B Proceedings of the Fifteenth Annual International ACM SIGIR Conference on
+Research and Development in Information Retrieval
+%D 1992-06-21
+%P 338-346
+%* (c) Copyright 1992 Association for Computing Machinery
+%W http://www.acm.org/pubs/articles/proceedings/ir/133160/p338-williamson/p338-williamson.pdf
+%X We designed, implemented, and evaluated a new concept for visualizing and
+searching databases utilizing direct manipulation called dynamic queries. 
+Dynamic queries allow users to formulate queries by adjusting graphical
+widgets, such as sliders, and see the results immediately.  By providing a
+graphical visualization of the database and search results, users can find
+trends and exceptions easily.  User testing was done with eighteen
+undergraduate students who performed significantly faster using a dynamic
+queries interface compared to both a natural language system and paper
+printouts.  The interfaces were used to explore a real-estate database and find
+homes meeting specific search criteria.
+
+%M C.IR.92.347
+%T Experience with Large Document Collections
+%S Panel Sessions
+%A Croft, W. Bruce
+%A Fuhr, Norbert
+%A Harman, Donna
+%A Stanfill, Craig
+%B Proceedings of the Fifteenth Annual International ACM SIGIR Conference on
+Research and Development in Information Retrieval
+%D 1992-06-21
+%P 347
+%* (c) Copyright 1992 Association for Computing Machinery
+%W http://www.acm.org/pubs/articles/proceedings/ir/133160/p347-croft/p347-croft.pdf
+%X N/A
+
+%M C.IR.92.347
+%T Corpus Linguistics and Information Retrieval
+%S Panel Sessions
+%A Krovetz, Robert
+%A Garside, Roger
+%A Meijs, Willem
+%A Church, Kenneth W.
+%A Chiaramella, Yves
+%B Proceedings of the Fifteenth Annual International ACM SIGIR Conference on
+Research and Development in Information Retrieval
+%D 1992-06-21
+%P 348-351
+%* (c) Copyright 1992 Association for Computing Machinery
+%W http://www.acm.org/pubs/articles/proceedings/ir/133160/p348-krovetz/p348-krovetz.pdf
+%Y Text Annotation and Stochastic Parsing
+Relating Dictionaries and Corpora
+Using Bilingual Materials to Develop Word Sense Disambiguation Methods
+The Use of Corpus Linguistics Techniques in the IOTA Project
+%X N/A
+

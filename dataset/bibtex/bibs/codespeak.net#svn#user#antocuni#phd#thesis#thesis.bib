@@ -1,0 +1,617 @@
+@string{lncs="Lecture Notes in Computer Science"}
+
+@article{Arnold05,
+    abstract = {Virtual machines face significant performance challenges
+                  beyond those confronted by traditional static
+                  optimizers. First, portable program representations and
+                  dynamic language features, such as dynamic class loading,
+                  force the deferral of most optimizations until runtime,
+                  inducing runtime optimization overhead. Second, modular
+                  program representations preclude many forms of whole-program
+                  interprocedural optimization. Third, virtual machines incur
+                  additional costs for runtime services such as security
+                  guarantees and automatic memory management. To address these
+                  challenges, vendors have invested considerable resources
+                  into adaptive optimization systems in production virtual
+                  machines. Today, mainstream virtual machine implementations
+                  include substantial infrastructure for online monitoring and
+                  profiling, runtime compilation, and feedback-directed
+                  optimization. As a result, adaptive optimization has begun
+                  to mature as a widespread production-level technology. This
+                  paper surveys the evolution and current state of adaptive
+                  optimization technology in virtual machines.},
+    author = {Arnold, M. and Fink, S. J. and Grove, D. and Hind, M. and Sweeney, P. F.},
+    booktitle = {Proceedings of the IEEE},
+    citeulike-article-id = {218259},
+    citeulike-linkout-0 = {http://dx.doi.org/10.1109/JPROC.2004.840305},
+    citeulike-linkout-1 = {http://ieeexplore.ieee.org/xpls/abs_all.jsp?arnumber=1386662},
+    doi = {10.1109/JPROC.2004.840305},
+    journal = {Proceedings of the IEEE},
+    keywords = {compilation, dynamic, interpretation, translation, visa},
+    number = {2},
+    pages = {449--466},
+    posted-at = {2009-08-19 14:14:04},
+    priority = {2},
+    title = {A Survey of Adaptive Optimization in Virtual Machines},
+    url = {http://dx.doi.org/10.1109/JPROC.2004.840305},
+    volume = {93},
+    year = {2005}
+}
+
+@article{Ertl03,
+    abstract = {Interpreters designed for high general-purpose performance
+                  typically perform a large number of indirect branches
+                  (3.2\%-13\% of all executed instructions in our
+                  benchmarks). These branches consume...},
+    author = {Ertl, M. and Gregg, D.},
+    citeulike-article-id = {1653092},
+    citeulike-linkout-0 = {http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.58.26},
+    journal = {Journal of Instruction-Level Parallelism},
+    keywords = {interpreters},
+    pages = {1--25},
+    posted-at = {2007-09-13 22:51:44},
+    priority = {2},
+    title = {The structure and performance of efficient interpreters},
+    url = {http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.58.26},
+    volume = {5},
+    year = {2003}
+}
+
+
+@article{bala_dynamo:transparent_2000,
+	title = {Dynamo: a Transparent Dynamic Optimization System},
+	volume = {35},
+	url = {http://citeseer.ist.psu.edu/bala00dynamo.html},
+	number = {5},
+	journal = {{ACM} {SIGPLAN} Notices},
+	author = {Vasanth Bala and Evelyn Duesterwald and Sanjeev Banerjia},
+	year = {2000},
+	pages = {1--12}
+},
+
+
+@inproceedings{gal_hotpathvm:effective_2006,
+	address = {Ottawa, Ontario, Canada},
+	title = {{HotpathVM:} An Effective {JIT} Compiler for Resource-Constrained
+                  Devices},
+	isbn = {1-59593-332-6},
+	url = {http://portal.acm.org/citation.cfm?doid=1134760.1134780},
+	doi = {10.1145/1134760.1134780},
+	abstract = {We present a just-in-time compiler for a Java {VM} that is
+                  small enough to fit on resource-constrained devices, yet is
+                  surprisingly effective. Our system dynamically identifies
+                  traces of frequently executed bytecode instructions (which
+                  may span several basic blocks across several methods) and
+                  compiles them via Static Single Assignment {(SSA)}
+                  construction. Our novel use of {SSA} form in this context
+                  allows to hoist instructions across trace side-exits without
+                  necessitating expensive compensation code in off-trace
+                  paths. The overall memory consumption (code and data) of our
+                  system is only 150 {kBytes,} yet benchmarks show a speedup
+                  that in some cases rivals heavy-weight just-in-time
+                  compilers.},
+	booktitle = {Proceedings of the 2nd International Conference on Virtual
+                  Execution Environments},
+	publisher = {{ACM}},
+	author = {Andreas Gal and Christian W. Probst and Michael Franz},
+	year = {2006},
+	pages = {144--153}
+},
+
+@techreport{andreas_gal_incremental_2006,
+	title = {Incremental Dynamic Code Generation with Trace Trees},
+	abstract = {The unit of compilation for traditional just-in-time compilers
+                  is the method. We have explored trace-based compilation, in
+                  which the unit of compilation is a loop, potentially
+                  spanning multiple methods and even library code. Using a new
+                  intermediate representation that is discovered and updated
+                  lazily on-demand while the program is being executed, our
+                  compiler generates code that is competitive with traditional
+                  dynamic compilers, but that uses only a fraction of the
+                  compile time and memory footprint.},
+	number = {{ICS-TR-06-16}},
+	institution = {University of California, Irvine},
+	author = {Andreas Gal and Michael Franz},
+	month = nov,
+	year = {2006},
+	pages = {11}
+},
+
+
+@techreport{mason_chang_efficient_2007,
+	title = {Efficient {Just-In-Time} Execution of Dynamically Typed Languages
+                  Via Code Specialization Using Precise Runtime Type
+                  Inference},
+	abstract = {Dynamically typed languages such as {JavaScript} present a
+                  challenge to just-in-time compilers. In contrast to
+                  statically typed languages such as {JVML,} in which there
+                  are specific opcodes for common operations on primitive
+                  types (such as iadd for integer addition), all operations in
+                  dynamically typed language such as {JavaScript} are
+                  late-bound. Often enough, types cannot be inferred with
+                  certainty ahead of execution. As a result, just-in-time
+                  compilers for dynamically typed languages have tended to
+                  perform worse than their statically-typed counterparts. We
+                  present a new approach to compiling dynamically typed
+                  languages in which code traces observed during execution are
+                  dynamically specialized for each actually observed run-time
+                  type. For most benchmark programs, our prototype
+                  {JavaScript} virtual machine outperforms every other
+                  {JavaScript} platform known to us.},
+	number = {{ICS-TR-07-10}},
+	institution = {Donald Bren School of Information and Computer Science,
+                  University of California, Irvine},
+	author = {Mason Chang and Michael Bebenita and Alexander Yermolovich and
+                  Andreas Gal and Michael Franz},
+	year = {2007},
+},
+
+
+@inproceedings{andreas_gal_trace-based_2009,
+	title = {Trace-based {Just-in-Time} Type Specialization for Dynamic Languages},
+	booktitle = {{PLDI}},
+	author = {Andreas Gal and Brendan Eich and Mike Shaver and David Anderson
+                  and Blake Kaplan and Graydon Hoare and David Mandelin and
+                  Boris Zbarsky and Jason Orendorff and Michael Bebenita and
+                  Mason Chang and Michael Franz and Edwin Smith and Rick
+                  Reitmaier and Mohammad Haghighat},
+	year = {2009},
+},
+
+
+@inproceedings{chang_tracing_2009,
+	address = {Washington, {DC,} {USA}},
+	title = {Tracing for {Web} 3.0: Trace Compilation for the Next Generation
+                  Web Applications},
+	isbn = {978-1-60558-375-4},
+	url = {http://portal.acm.org/citation.cfm?id=1508293.1508304},
+	doi = {10.1145/1508293.1508304},
+	abstract = {Today's web applications are pushing the limits of modern web
+                  browsers. The emergence of the browser as the platform of
+                  choice for rich client-side applications has shifted the use
+                  of in-browser {JavaScript} from small scripting programs to
+                  large computationally intensive application logic. For many
+                  web applications, {JavaScript} performance has become one of
+                  the bottlenecks preventing the development of even more
+                  interactive client side applications. While traditional
+                  just-in-time compilation is successful for statically typed
+                  virtual machine based languages like Java, compiling
+                  {JavaScript} turns out to be a challenging task. Many
+                  {JavaScript} programs and scripts are short-lived, and users
+                  expect a responsive browser during page loading. This leaves
+                  little time for compilation of {JavaScript} to generate
+                  machine code.},
+	booktitle = {Proceedings of the 2009 {ACM} {SIGPLAN/SIGOPS} International
+                  Conference on Virtual Execution Environments},
+	publisher = {{ACM}},
+	author = {Mason Chang and Edwin Smith and Rick Reitmaier and Michael
+                  Bebenita and Andreas Gal and Christian Wimmer and Brendan
+                  Eich and Michael Franz},
+	year = {2009},
+	pages = {71--80}
+},
+
+
+@inproceedings{rigo_representation-based_2004,
+	address = {Verona, Italy},
+	title = {Representation-Based Just-in-Time Specialization and the {Psyco}
+                  Prototype for {Python}},
+	isbn = {1-58113-835-0},
+	url = {http://portal.acm.org/citation.cfm?id=1014010},
+	doi = {10.1145/1014007.1014010},
+	abstract = {A powerful application of specialization is to remove
+                  interpretative overhead: a language can be implemented with
+                  an interpreter, whose performance is then improved by
+                  specializing it for a given program source. This approach is
+                  only moderately successful with very high level languages,
+                  where the operation of each single step can be highly
+                  dependent on run-time data and context. In the present
+                  paper, the Psyco prototype for the Python language is
+                  presented. It introduces two novel techniques. The first is
+                  just-in-time specialization, or specialization by need,
+                  which introduces the "unlifting" ability for a value to be
+                  promoted from run-time to compile-time during specialization
+                  -- the inverse of the lift operator of partial
+                  evaluation. Its presence gives an unusual and powerful
+                  perspective on the specialization process. The second
+                  technique is representations, a theory of data-oriented
+                  specialization generalizing the traditional specialization
+                  domains (i.e. the compile-time/run-time dichotomy).},
+	booktitle = {Proceedings of the 2004 {ACM} {SIGPLAN} Symposium on Partial
+                  Evaluation and Semantics-Based Program Manipulation},
+	publisher = {{ACM}},
+	author = {Armin Rigo},
+	year = {2004},
+	pages = {15--26}
+},
+
+
+@techreport{D12.1,
+    title = "High-Level Backends and Interpreter Feature Prototypes",
+    author = {Antonio Cuni and Samuele Pedroni and Anders Chrigstr\"om and
+                  Holger Krekel and Guido Wesdorp and Carl Friedrich Bolz},
+    year = "2007",
+    institution = "PyPy Consortium",
+    number = "D12.1",
+    url = "http://codespeak.net/pypy/extradoc/eu-report/D12.1_H-L-Backends_and_Feature_Prototypes-2007-03-22.pdf",
+    note = "\url{http://codespeak.net/pypy/dist/pypy/doc/index-report.html}"
+}
+
+
+@techreport{hlzle_adaptive_1994,
+	title = {Adaptive Optimization for {SELF:} Reconciling High Performance with Exploratory Programming},
+	url = {http://portal.acm.org/citation.cfm?id=891759#},
+	abstract = {Crossing abstraction boundaries often incurs a substantial run-time overhead in the form of frequent procedure calls. Thus, pervasive use of abstraction, while desirable from a design standpoint, may lead to very inefficient programs. Aggressively optimizing compilers can reduce this overhead but conflict with interactive programming environments because they introduce long compilation pauses and often preclude source-level debugging. Thus, programmers are caught on the horns of two dilemmas: they have to choose between abstraction and efficiency, and between responsive programming environments and efficiency. This dissertation shows how to reconcile these seemingly contradictory goals. Four new techniques work together to achieve this: - Type feedback achieves high performance by allowing the compiler to inline message sends based on information extracted from the runtime system. - Adaptive optimization achieves high responsiveness without sacrificing performance by using a fast compiler to generate initial code while automatically recompiling heavily used program parts with an optimizing compiler. - Dynamic deoptimization allows source-level debugging of optimized code by transparently recreating non-optimized code as needed. - Polymorphic inline caching speeds up message dispatch and, more significantly, collects concrete type information for the compiler. With better performance yet good interactive behavior, these techniques reconcile exploratory programming, ubiquitous abstraction, and high performance.},
+	institution = {Stanford University},
+	author = {Urs H\"olzle},
+	year = {1994}
+},
+
+@inproceedings{PIC91,
+ author = {H\"{o}lzle, Urs and Chambers, Craig and Ungar, David},
+ title = {Optimizing Dynamically-Typed Object-Oriented Languages With Polymorphic Inline Caches},
+ booktitle = {ECOOP '91: Proceedings of the European Conference on Object-Oriented Programming},
+ year = {1991},
+ isbn = {3-540-54262-0},
+ pages = {21--38},
+ publisher = {Springer-Verlag},
+ address = {London, UK},
+ }
+
+
+@INPROCEEDINGS{PVC01,
+    author = {Michael Paleczny and Christopher Vick and Cliff Click},
+    title = {The Java Hotspot(tm) Server Compiler},
+    booktitle = {In USENIX Java Virtual Machine Research and Technology Symposium},
+    year = {2001},
+    pages = {1--12}
+}
+
+@MISC{Cannon05localizedtype,
+    author = {Brett Cannon},
+    title = {Localized Type Inference of Atomic Types in Python},
+    year = {2005}
+}
+
+@INPROCEEDINGS{Salib04fasterthan,
+    author = {Michael Salib},
+    title = {Faster than C: Static type inference with Starkiller},
+    booktitle = {in PyCon Proceedings, Washington DC},
+    year = {2004},
+    pages = {2--26},
+    publisher = {SpringerVerlag}
+}
+
+@InProceedings{RigoPedroni06,
+author    = {A.~Rigo and
+               S.~Pedroni},
+title     = {Py{P}y's approach to virtual machine construction},
+booktitle = {OOPSLA Companion},
+year      = {2006},
+pages     = {944-953},
+}
+
+@InProceedings{BolzEtAl08,
+  author    = {C. F. Bolz and
+               A. Kuhn and
+               A. Lienhard and
+               N. D. Matsakis and
+               O. Nierstrasz and
+               L. Renggli and
+               A. Rigo and
+               T. Verwaest},
+  title     = {Back to the Future in One Week - Implementing a Smalltalk
+               VM in {P}y{P}y},
+  booktitle = {Self-Sustaining Systems, First Workshop, S3 2008, Potsdam, Revised Selected Papers},
+  series    = lncs,
+  volume    = {5146},
+  year      = {2008},
+  pages     = {123--139},
+}
+
+@article{Bacon94,
+ author = {Bacon, David F. and Graham, Susan L. and Sharp, Oliver J.},
+ title = {Compiler transformations for high-performance computing},
+ journal = {ACM Comput. Surv.},
+ volume = {26},
+ number = {4},
+ year = {1994},
+ issn = {0360-0300},
+ pages = {345--420},
+ doi = {http://doi.acm.org/10.1145/197405.197406},
+ publisher = {ACM},
+ address = {New York, NY, USA},
+ }
+
+
+@INPROCEEDINGS{Blanchet99escapeanalysis,
+    author = {Bruno Blanchet},
+    title = {Escape Analysis for Object Oriented Languages. Application to Java},
+    booktitle = {In Proceedings of the 14th Annual Conference on Object-Oriented Programming Systems, Languages and Applications},
+    year = {1999},
+    pages = {20--34}
+}
+
+@INPROCEEDINGS{Choi99escapeanalysis,
+    author = {Jong-deok Choi and Manish Gupta and Mauricio Serrano and Vugranam C. Sreedhar and Sam Midkiff},
+    title = {Escape Analysis for Java},
+    booktitle = {In Proceedings of the 14th Annual Conference on Object-Oriented Programming Systems, Languages and Applications},
+    year = {1999},
+    pages = {1--19},
+    publisher = {ACM Press}
+}
+
+
+@INPROCEEDINGS{Georges07statisticallyrigorous,
+    author = {Andy Georges and Dries Buytaert and Lieven Eeckhout},
+    title = {Statistically rigorous Java performance evaluation},
+    booktitle = {In Proceedings of the ACM SIGPLAN Conference on Object-Oriented Programming, Systems, Languages, and Applications (OOPSLA},
+    year = {2007},
+    pages = {57--76},
+    publisher = {ACM}
+}
+
+@TechReport{ananian99static,
+  author = "C. Scott~Ananian",
+  title = "The static single information form",
+  note = "Master's thesis",
+  institution = "MIT Laboratory for Computer Science Technical Report",
+  number = "MIT-LCS-TR-801",
+  month = "September", 
+  year = "1999",
+}
+
+ @misc{dhrystone,
+   author = "Wikipedia",
+   title = "Dhrystone --- Wikipedia{,} The Free Encyclopedia",
+   year = "2010",
+   url = "\url{http://en.wikipedia.org/wiki/Dhrystone}",
+   note = "\url{http://en.wikipedia.org/wiki/Dhrystone}"
+ }
+
+
+ @misc{fasta,
+   author = "National Center for Biotechnology Information",
+   title = "FASTA format description",
+   year = "2010",
+   url = "\url{http://www.ncbi.nlm.nih.gov/blast/fasta.shtml}",
+   note = "\url{http://www.ncbi.nlm.nih.gov/blast/fasta.shtml}",
+ }
+
+@misc{pep-255,
+    author = {Neil Schemenauer and Tim Peters and Magnus Lie Hetland},
+    title = {Simple Generators},
+    year = "2001",
+    url = "\url{http://www.python.org/dev/peps/pep-0255/}",
+    note = "\url{http://www.python.org/dev/peps/pep-0255/}",
+}
+
+@inproceedings{Bruni09,
+  author = {Camillo Bruni and Toon Verwaest},
+  booktitle = {TOOLS (47)},
+  editor = {Manuel Oriol and Bertrand Meyer},
+  interHash = {6c06712473fc33d16e80f2dec3b2e578},
+  intraHash = {d993a4a93eb22efc9642dfd19ee00b2b},
+  pages = {328-347},
+  publisher = {Springer},
+  series = {Lecture Notes in Business Information Processing},
+  title = {PyGirl: Generating Whole-System VMs from High-Level Prototypes Using PyPy.},
+  url = {http://dblp.uni-trier.de/db/conf/tools/tools47-2009.html#BruniV09},
+  volume = {33},
+  year = {2009},
+  ee = {http://dx.doi.org/10.1007/978-3-642-02571-6_19},
+  isbn = {978-3-642-02570-9},
+  date = {2009-09-14}
+}
+@inproceedings{rpython,
+	address = {Montreal, Quebec, Canada},
+	title = {{RPython:} A Step towards Reconciling Dynamically and Statically Typed {OO} Languages},
+	isbn = {978-1-59593-868-8},
+	url = {http://portal.acm.org/citation.cfm?id=1297091},
+	doi = {10.1145/1297081.1297091},
+	abstract = {Although the C-based interpreter of Python is reasonably fast, implementations on the {CLI} or the {JVM} platforms offers some advantages in terms of robustness and interoperability. Unfortunately, because the {CLI} and {JVM} are primarily designed to execute statically typed, object-oriented languages, most dynamic language implementations cannot use the native bytecodes for common operations like method calls and exception handling; as a result, they are not able to take full advantage of the power offered by the {CLI} and {JVM.}},
+	booktitle = {Proceedings of the 2007 Symposium on Dynamic Languages},
+	publisher = {{ACM}},
+	author = {Davide Ancona and Massimo Ancona and Antonio Cuni and Nicholas D. Matsakis},
+	year = {2007},
+	pages = {53--64}
+},
+
+@techreport{cuni2006,
+	title = {Implementing Python in .{NET}},
+	institution = {{DISI}, University of Genova},
+	author = {Antonio Cuni},
+	year = {2006},
+    note = "\url{http://codespeak.net/~antocuni/papers/implementing_python_in_dotnet2006.pdf}"}
+
+
+@inproceedings{Cuni2009,
+ author = {Cuni, Antonio and Ancona, Davide and Rigo, Armin},
+ title = {Faster than C\#: efficient implementation of dynamic languages on .NET},
+ booktitle = {Proceedings of the 4th workshop on the Implementation, Compilation, Optimization of Object-Oriented Languages and Programming Systems},
+ year = {2009},
+ isbn = {978-1-60558-541-3},
+ location = {Genova, Italy},
+ pages = {26--33},
+ numpages = {8},
+ url = {http://portal.acm.org/citation.cfm?id=1565824.1565828},
+ doi = {10.1145/1565824.1565828},
+ acmid = {1565828},
+ publisher = {ACM},
+ address = {New York, NY, USA},
+}
+
+@techreport{PyPyJIT09,
+	title = {Automatic generation of {JIT} compilers for dynamic
+                   languages in .{NET}},
+	institution = {{DISI}, University of Genova and Institut f\"ur Informatik,
+                  {Heinrich-Heine-Universit\"at D\"usseldorf}},
+	author = {Davide Ancona and Carl Friedrich Bolz and Antonio Cuni and Armin Rigo},
+	year = {2008},
+}
+
+@MISC{Anderson_performinglisp,
+    author = {Kenneth Anderson and Duane Rettig},
+    title = {Performing Lisp Analysis of the FANNKUCH Benchmark},
+    year = {}
+}
+
+@misc{asm,
+    title = {ASM - Home Page},
+    url = "\url{http://asm.ow2.org/}",
+    note = "\url{http://asm.ow2.org/}"
+}
+
+@misc{bcel,
+    title = {The Byte Code Engineering Library},
+    url = "\url{http://jakarta.apache.org/bcel/}",
+    note = "\url{http://jakarta.apache.org/bcel/}"
+}
+
+@inproceedings{steele77,
+ author = {Steele,Jr., Guy Lewis},
+ title = {Debunking the ``expensive procedure call'' myth or, procedure call implementations considered harmful or, LAMBDA: The Ultimate GOTO},
+ booktitle = {ACM '77: Proceedings of the 1977 annual conference},
+ year = {1977},
+ pages = {153--162},
+ doi = {http://doi.acm.org/10.1145/800179.810196},
+ publisher = {ACM},
+ address = {New York, NY, USA},
+ }
+
+@MISC{Schwaighofer09,
+    author = {Arnold Schwaighofer},
+    title = {Tail Call Optimization in the Java HotSpot(TM) VM},
+    year = {2009}
+}
+
+@MISC{Gamma93designpatterns,
+    author = {Erich Gamma and Richard Helm and Ralph Johnson and John Vlissides},
+    title = {Design Patterns: Abstraction and Reuse of Object-Oriented Design},
+    year = {1993}
+}
+
+@inproceedings{bolz09,
+ author = {Bolz, Carl Friedrich and Cuni, Antonio and Fijalkowski, Maciej and Rigo, Armin},
+ title = {Tracing the meta-level: PyPy's tracing JIT compiler},
+ booktitle = {ICOOOLPS '09: Proceedings of the 4th workshop on the Implementation, Compilation, Optimization of Object-Oriented Languages and Programming Systems},
+ year = {2009},
+ isbn = {978-1-60558-541-3},
+ pages = {18--25},
+ location = {Genova, Italy},
+ doi = {http://doi.acm.org/10.1145/1565824.1565827},
+ publisher = {ACM},
+ address = {New York, NY, USA},
+ }
+
+@INPROCEEDINGS{Lattner04llvm:a,
+    author = {Chris Lattner and Vikram Adve},
+    title = {LLVM: A Compilation Framework for Lifelong Program Analysis \& Transformation},
+    booktitle = {In Proceedings of the 2004 International Symposium on Code Generation and Optimization (CGO\u201904},
+    year = {2004}
+}
+
+@INPROCEEDINGS{Hoschka93controlflow,
+    author = {Philipp Hoschka and Christian Huitema},
+    title = {Control Flow Graph Analysis for Automatic Fast Path Implementation},
+    booktitle = {In Second IEEE workshop on the architecture and Implementation of},
+    year = {1993}
+}
+
+@misc{pareto ,
+   author = "Wikipedia",
+   title = "Pareto principle --- Wikipedia{,} The Free Encyclopedia",
+   year = "2010",
+   url = "\url{http://en.wikipedia.org/wiki/Pareto_principle}",
+   note = "\url{http://en.wikipedia.org/wiki/Pareto_principle}"
+}
+
+
+@misc{pypy,
+    title = {PyPy},
+    url = "\url{http://codespeak.net/pypy}",
+    note = "\url{http://codespeak.net/pypy}"
+}
+
+@misc{python,
+    title = {Python Programming Language},
+    url = "\url{http://www.python.org"}",
+    note = "\url{http://www.python.org}"
+}
+
+@misc{jython,
+    title = {The Jython Project},
+    url = "\url{http://jython.org}",
+    note = "\url{http://jython.org}"
+}
+
+@misc{ironpython,
+    title = {{IronPython}},
+    url = "\url{http://www.codeplex.com/IronPython}",
+    note = "\url{http://www.codeplex.com/IronPython}",
+}
+
+@misc{unladen-swallow,
+    title = {{unladen-swallow}},
+    url = "\url{http://code.google.com/p/unladen-swallow/}",
+    note = "\url{http://code.google.com/p/unladen-swallow/}",
+}
+
+@misc{dotnet,
+    title = {{Microsoft .NET Framework}},
+    url = "\url{http://www.microsoft.com/NET/}",
+    url = "\url{http://www.microsoft.com/NET/}",
+}
+
+@misc{bug-mono,
+    title = {{Bug 502575 - Tail call problems with F\#}},
+    url = "\url{https://bugzilla.novell.com/show_bug.cgi?id=502575}",
+    note = "\url{https://bugzilla.novell.com/show_bug.cgi?id=502575}"
+}
+
+@misc{mlvm,
+     title = {{the Da Vinci Machine Project}},
+     url = "\url{http://openjdk.java.net/projects/mlvm/}",
+     note = "\url{http://openjdk.java.net/projects/mlvm/}"}
+
+@book{Ecma335,
+        title = {Standard ECMA-335 - Common Language Infrastructure (CLI)},
+        author = {ECMA International},
+        edition = 4,
+        year = 2006,
+        url = {http://www.ecma-international.org/publications/standards/Ecma-335.htm},
+        
+      month = {June},
+    biburl = {http://www.bibsonomy.org/bibtex/2bae3db7d698436c276f984a75ba1f5ce/gron},
+	keywords = {.NET CLI PhD Proposal Specification Standard VM},
+    }
+
+
+@inproceedings{BolzLR09,
+  author    = {Carl Friedrich Bolz and
+               Michael Leuschel and
+               Armin Rigo},
+  title     = {Towards Just-In-Time Partial Evaluation of Prolog},
+  booktitle = {LOPSTR},
+  year      = {2009},
+  pages     = {158-172},
+  ee        = {http://dx.doi.org/10.1007/978-3-642-12592-8_12},
+  crossref  = {DBLP:conf/lopstr/2009},
+  bibsource = {DBLP, http://dblp.uni-trier.de}
+}
+
+@proceedings{DBLP:conf/lopstr/2009,
+  editor    = {Danny De Schreye},
+  title     = {Logic-Based Program Synthesis and Transformation, 19th International
+               Symposium, LOPSTR 2009, Coimbra, Portugal, September 2009,
+               Revised Selected Papers},
+  booktitle = {LOPSTR},
+  publisher = {Springer},
+  series    = {Lecture Notes in Computer Science},
+  volume    = {6037},
+  year      = {2010},
+  isbn      = {978-3-642-12591-1},
+  ee        = {http://dx.doi.org/10.1007/978-3-642-12592-8},
+  bibsource = {DBLP, http://dblp.uni-trier.de}
+}
+

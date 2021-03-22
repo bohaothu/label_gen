@@ -1,0 +1,480 @@
+@inproceedings{Ghuloum:letrec-reloaded,
+author = {Abdulaziz Ghuloum and R. Kent Dybvig},
+title = {Fixing letrec (reloaded)},
+booktitle = {Proceedings of the 2009 Workshop on Scheme and Functional Programming},
+year = 2009,
+texturl = "http://www.cs.indiana.edu/~dyb/pubs/letrec-reloaded.pdf",
+abstracturl = "http://www.cs.indiana.edu/~dyb/pubs/letrec-reloaded-abstract.html",
+pages = "57--65",
+annote = {Describes how Chez Scheme and Ikarus handle {\tt letrec} and
+          {\tt letrec*} expressions efficiently while taking advantange of the
+          R6RS prohibition on invoking the continuation of a right-hand
+          side more than once.}}
+
+@book{Dybvig:csug8,
+author = {R. Kent Dybvig},
+title = {{Chez Scheme Version 8 User's Guide}},
+publisher = {Cadence Research Systems},
+year = 2010,
+texturl = "http://www.scheme.com/csug8/",
+biburl = "http://www.cs.indiana.edu/~dyb/pubs/csug8.bib",
+annote = {User's guide and reference manual for Chez Scheme Version 8.
+Complements \cite{Dybvig:tspl4}.}}
+
+@book{Dybvig:tspl4,
+author = {R. Kent Dybvig},
+title = {The {Scheme} Programming Language},
+publisher = {{MIT} Press},
+edition = {Fourth},
+year = 2009,
+texturl = "http://www.scheme.com/tspl4/",
+biburl = "http://www.cs.indiana.edu/~dyb/pubs/tspl4.bib",
+annote = {Introduction and reference manual for R6RS Scheme with
+numerous short and extended examples and exercises.}}
+
+@inproceedings{mdadams:equal,
+  author = {Michael D. Adams and R. Kent Dybvig},
+  title = {Efficient nondestructive equality checking for trees and graphs},
+  booktitle = {Proceedings of the 13 ACM SIGPLAN International Conference on
+    Functional Programming},
+  pages = {179--188},
+  year = {2008},
+  texturl = "http://www.cs.indiana.edu/~dyb/pubs/equal.pdf",
+  biburl = "http://www.cs.indiana.edu/~dyb/pubs/equal.bib",
+  abstracturl = "http://www.cs.indiana.edu/~dyb/pubs/equal-abstract.html",
+  annote = {An efficient algorithm for the nonterminating
+     equal? R6RS procedure}
+}
+
+@inproceedings{ghuloum:libraries,
+  author = {Abdulaziz Ghuloum and R. Kent Dybvig},
+  title = {Implicit phasing for {R6RS} libraries},
+  booktitle = {Proceedings of the 12 ACM SIGPLAN International Conference on
+    Functional Programming},
+  pages = {303--314},
+  year = {2007},
+  texturl = "http://www.cs.indiana.edu/~dyb/pubs/implicit-phasing.pdf",
+  biburl = "http://www.cs.indiana.edu/~dyb/pubs/implicit-phasing.bib",
+  abstracturl = "http://www.cs.indiana.edu/~dyb/pubs/implicit-phasing-abstract.html",
+  annote = {A description of the implicit phasing model for R6RS libraries,
+     adopted by Chez Scheme, Ikarus, and various other Scheme systems}
+}
+
+@incollection{dybvig:bc-syntax-case,
+  author = {R. Kent Dybvig},
+  title = {Syntactic abstraction: the syntax-case expander},
+  booktitle = {Beautiful Code: Leading Programmers Explain How They Think},
+  chapter = 25,
+  editor = {Andy Oram and Greg Wilson},
+  publisher = {O'Reilly and Associates},
+  month = jun,
+  year = 2007,
+  pages = {407--428},
+  biburl = {http://www.cs.indiana.edu/~dyb/pubs/bc-syntax-case.bib},
+  texturl = {http://www.cs.indiana.edu/~dyb/pubs/bc-syntax-case.pdf},
+  annote = {Provides a description and examples of the syntax-case
+            expansion algorithm}
+}
+
+@inproceedings{Dybvig:hocs,
+  author = {R. Kent Dybvig},
+  title = {The Development of {Chez Scheme}},
+  booktitle = {Proceedings of the Eleventh {ACM SIGPLAN} International
+   Conference on Functional Programming},
+  pages = {1--12},
+  month = sep,
+  year = 2006,
+  texturl = "http://www.cs.indiana.edu/~dyb/pubs/hocs.pdf",
+  biburl = "http://www.cs.indiana.edu/~dyb/pubs/hocs.bib",
+  abstracturl = "http://www.cs.indiana.edu/~dyb/pubs/hocs-abstract.html",
+  annote = {A brief history of Chez Scheme's development}
+}
+
+@book{Dybvig:csug7,
+author = {R. Kent Dybvig},
+title = {{Chez Scheme Version 7 User's Guide}},
+publisher = {Cadence Research Systems},
+year = 2005,
+texturl = "http://www.scheme.com/csug7/",
+biburl = "http://www.cs.indiana.edu/~dyb/pubs/csug7.bib",
+annote = {User's guide and reference manual for Chez Scheme Version 7.
+Complements \cite{Dybvig:tspl3}.}}
+
+@article{Waddell:fixing-letrec,
+author = {Oscar Waddell and Dipanwita Sarkar and R. Kent Dybvig},
+title = {Fixing Letrec: A Faithful Yet Efficient Implementation of {Scheme}'s
+Recursive Binding Construct},
+journal = {Higher-order and and symbolic computation},
+volume = 18,
+number = "3/4",
+pages = {299--326},
+year = 2005,
+texturl = "http://www.cs.indiana.edu/~dyb/pubs/fixing-letrec.pdf",
+abstracturl = "http://www.cs.indiana.edu/~dyb/pubs/fixing-letrec-abstract.html",
+biburl = "http://www.cs.indiana.edu/~dyb/pubs/fixing-letrec.bib",
+annote = {Describes how Chez Scheme handles {\tt letrec} expressions
+          efficiently and with full enforcement of the revised
+          report's restriction preventing evaluation of left-hand-side
+          variable references and assignments before the righ-hand
+          sides have been evaluated.}}
+
+@book{Dybvig:tspl3,
+author = {R. Kent Dybvig},
+title = {The {Scheme} Programming Language},
+publisher = {{MIT} Press},
+edition = {Third},
+year = 2003,
+texturl = "http://www.scheme.com/tspl3/",
+biburl = "http://www.cs.indiana.edu/~dyb/pubs/tspl3.bib",
+annote = {Introduction and reference manual for ANSI Standard Scheme with
+numerous short and extended examples and exercises.}}
+
+@inproceedings{Waddell:modules,
+author = {Oscar Waddell and R. Kent Dybvig},
+title = {Extending the Scope of Syntactic Abstraction},
+booktitle = {Conference Record of the Twenty Sixth Annual {ACM}
+                    Symposium on Principles of Programming Languages},
+month = jan,
+year = 1999,
+pages = {203--213},
+texturl = "http://www.cs.indiana.edu/~dyb/pubs/popl99.pdf",
+abstracturl = "http://www.cs.indiana.edu/~dyb/pubs/popl99-abstract.html",
+biburl = "http://www.cs.indiana.edu/~dyb/pubs/popl99.bib",
+annote = {Describes the Chez Scheme module system and its
+interaction with the syntax-case expander.}}
+
+@book{Dybvig:csug,
+author = {R. Kent Dybvig},
+title = {{Chez Scheme} User's Guide},
+publisher = {Cadence Research Systems},
+year = 1998,
+texturl = "http://www.scheme.com/csug/",
+biburl = "http://www.cs.indiana.edu/~dyb/pubs/csug.bib",
+annote = {User's guide and reference manual for Chez Scheme.  Complements
+\cite{Dybvig:tspl3}.}}
+
+@inproceedings{Burger:pdrtc,
+author = {Robert G. Burger and R. Kent Dybvig},
+title = {An Infrastructure for Profile-Driven Dynamic Recompilation},
+booktitle = {Proceedings of the IEEE Computer Society 1998 International
+                    Conference on Computer Languages},
+pages = {240--251},
+month = may,
+year = 1998,
+texturl = "http://www.cs.indiana.edu/~dyb/pubs/pdrtc.pdf",
+abstracturl = "http://www.cs.indiana.edu/~dyb/pubs/pdrtc-abstract.html",
+biburl = "http://www.cs.indiana.edu/~dyb/pubs/pdrtc.bib",
+annote = {Describes support for dynamic recompilation based on information
+gathered by an edge-count profiler.  Only the profiling support is implemented
+in Chez Scheme.}}
+
+@InProceedings{waddell-dybvig:97,
+author = "Oscar Waddell and R. Kent Dybvig",
+title = "Fast and Effective Procedure Inlining",
+year = 1997,
+booktitle = {Proceedings of the Fourth International Symposium on
+                   Static Analysis},
+month = sep,
+pages = "35--52",
+series = {Lecture Notes in Computer Science},
+volume = 1302,
+publisher = {Springer-Verlag},
+texturl = "http://www.cs.indiana.edu/~dyb/pubs/inlining.pdf",
+abstracturl = "http://www.cs.indiana.edu/~dyb/pubs/inlining-abstract.html",
+biburl = "http://www.cs.indiana.edu/~dyb/pubs/inlining.bib",
+annote = {Describes a source optimization pass used in Chez Scheme
+          to perform several optimizations, including
+          procedure inlining.}}
+
+@book{Dybvig:tspl2,
+author = {R. Kent Dybvig},
+title = {The {Scheme} Programming Language},
+publisher = {Prentice Hall},
+edition = {Second},
+year = 1996,
+texturl = "http://www.scheme.com/tspl2/",
+biburl = "http://www.cs.indiana.edu/~dyb/pubs/tspl2.bib",
+annote = {Second edition of~\cite{Dybvig:tspl3}.}}
+
+@inproceedings{Bruggeman:oneshot,
+author = {Carl Bruggeman and
+          Oscar Waddell and
+          R. Kent Dybvig},
+title = {Representing control in the presence of one-shot continuations},
+booktitle = {Proceedings of the {SIGPLAN} '96 Conference
+                    on Programming Language Design and Implementation},
+pages = {99--107},
+month = may,
+year = 1996,
+texturl = "http://www.cs.indiana.edu/~dyb/pubs/call1cc.pdf",
+abstracturl = "http://www.cs.indiana.edu/~dyb/pubs/call1cc-abstract.html",
+biburl = "http://www.cs.indiana.edu/~dyb/pubs/call1cc.bib",
+annote = {Describes the implementation of call/1cc.}}
+
+@inproceedings{burger:floatprinting,
+author = {Robert G. Burger and R. Kent Dybvig},
+title = {Printing Floating-Point Numbers Quickly and Accurately},
+booktitle = {Proceedings of the {SIGPLAN} '96 Conference
+                    on Programming Language Design and Implementation},
+pages = {108--116},
+month = may,
+year = 1996,
+texturl = "http://www.cs.indiana.edu/~dyb/pubs/FP-Printing-PLDI96.pdf",
+abstracturl = "http://www.cs.indiana.edu/~dyb/pubs/FP-Printing-PLDI96-abstract.html",
+biburl = "http://www.cs.indiana.edu/~dyb/pubs/FP-Printing-PLDI96.bib",
+annote = {Describes an algorithm for printing floating point numbers
+accurately yet with the minimum number of digits.}}
+
+@inproceedings{Hilsdale95,
+author = {Eric Hilsdale and J. Michael Ashley and R. Kent Dybvig and
+          Daniel P.  Friedman},
+title = {Compiler construction using {Scheme}},
+booktitle = {Functional programming languages in education ({FPLE}),
+            {LNCS} 10 22},
+editor = {P. H. Hartel and M. J. Plasmeijer},
+publisher = {Springer-Verlag, Heidelberg},
+address = {Nijmegen, The Netherlands},
+month = {Dec},
+year = {1995},
+pages = {251--268},
+texturl = "http://www.cs.indiana.edu/~dyb/pubs/fple95.pdf",
+abstracturl = "http://www.cs.indiana.edu/~dyb/pubs/fple95-abstract.html",
+biburl = "http://www.cs.indiana.edu/~dyb/pubs/fple95.bib",
+annote = {Describes a course on compiler construction and sketches a
+simple compiler model similar in principle to Chez Scheme's.}}
+
+@inproceedings{Burger:regs,
+author = {Robert G. Burger and
+          Oscar Waddell and
+          R. Kent Dybvig},
+title = {Register Allocation Using Lazy Saves, Eager Restores,
+         and Greedy Shuffling},
+booktitle = {Proceedings of the {SIGPLAN} '95 Conference
+                    on Programming Language Design and Implementation},
+pages = {130--138},
+month = jun,
+year = 1995,
+texturl = "http://www.cs.indiana.edu/~dyb/pubs/Reg-Alloc-PLDI95.pdf",
+abstracturl = "http://www.cs.indiana.edu/~dyb/pubs/Reg-Alloc-PLDI95-abstract.html",
+biburl = "http://www.cs.indiana.edu/~dyb/pubs/Reg-Alloc-PLDI95.bib",
+annote = {Describes a register allocation mechanism used by Chez Scheme.}}
+
+@manual{Cadence:cssm,
+title = {{Chez Scheme} System Manual},
+organization = {Cadence Research Systems},
+address = {Bloomington, Indiana},
+month = "August",
+year = 1989
+}
+
+@manual{Cadence:cssm2.0,
+title = {{Chez Scheme} System Manual, Rev. 2.0},
+organization = {Cadence Research Systems},
+address = {Bloomington, Indiana},
+month = "December",
+year = 1990
+}
+
+@manual{Cadence:cssm2.5,
+title = {{Chez Scheme} System Manual, Rev. 2.5},
+organization = {Cadence Research Systems},
+month = "October",
+year = 1994,
+biburl = "http://www.cs.indiana.edu/~dyb/pubs/cssm.bib",
+annote = {Describes various aspects of Chez Scheme not covered
+in~\cite{Dybvig:tspl}.  Obsoleted by the Chez Scheme User's
+Guide~\cite{Dybvig:csug}.}}
+
+@inproceedings{Ashley:mvalues,
+author = {J. Michael Ashley and R. Kent Dybvig},
+title = {An efficient implementation of multiple return values in {Scheme}},
+booktitle = {Proceedings of the 1994 {ACM} Conference on {Lisp}
+                   and Functional Programming},
+pages = {140--149},
+month = jun,
+year = 1994,
+texturl = "http://www.cs.indiana.edu/~dyb/pubs/mrvs.pdf",
+abstracturl = "http://www.cs.indiana.edu/~dyb/pubs/mrvs-abstract.html",
+biburl = "http://www.cs.indiana.edu/~dyb/pubs/mrvs.bib",
+annote = {Describes Chez Scheme's implementation of the Scheme multiple
+return values interface.}}
+
+@techreport{Dybvig:sm,
+author = {R. Kent Dybvig and David Eby and Carl Bruggeman},
+title = {Don't stop the {BiBOP}:  Flexible and efficient storage
+management for dynamically-typed languages},
+institution = {Indiana Computer Science Department},
+number = 400,
+month = "March",
+year = 1994,
+texturl = "http://www.cs.indiana.edu/~dyb/pubs/bibop.pdf",
+abstracturl = "http://www.cs.indiana.edu/~dyb/pubs/bibop-abstract.html",
+biburl = "http://www.cs.indiana.edu/~dyb/pubs/bibop.bib",
+annote = {Describes Chez Scheme's storage management system.}}
+
+@article{Dybvig:syntactic,
+author = {R. Kent Dybvig and Robert Hieb and Carl Bruggeman},
+title = {Syntactic abstraction in {Scheme}},
+journal = {{Lisp} and Symbolic Computation},
+volume = 5,
+number = 4,
+pages = {295--326},
+year = 1993,
+texturl = "http://www.cs.indiana.edu/~dyb/pubs/LaSC-5-4-pp295-326.pdf",
+abstracturl = "http://www.cs.indiana.edu/~dyb/pubs/LaSC-5-4-pp295-326-abstract.html",
+biburl = "http://www.cs.indiana.edu/~dyb/pubs/LaSC-5-4-pp295-326.bib",
+annote = {Describes the {\tt syntax-case} macro system and its
+implementation and argues why it is superior to previous attempts at
+hygienic macro systems.}}
+
+@inproceedings{Dybvig:guardians,
+author = {R. Kent Dybvig and Carl Bruggeman and David Eby},
+title = {Guardians in a generation-based garbage collector},
+booktitle = {Proceedings of the {SIGPLAN} '93 Conference
+                    on Programming Language Design and Implementation},
+pages = "207--216",
+month = jun,
+year = 1993,
+texturl = "http://www.cs.indiana.edu/~dyb/pubs/guardians-pldi93.pdf",
+abstracturl = "http://www.cs.indiana.edu/~dyb/pubs/guardians-pldi93-abstract.html",
+biburl = "http://www.cs.indiana.edu/~dyb/pubs/guardians-pldi93.bib",
+annote = {Introduces guardians and describes the implementation of
+guardians and weak pairs in Chez Scheme.}}
+
+@techreport{Dybvig:syntax-case,
+author = {R. Kent Dybvig},
+title = {Writing hygienic macros in {Scheme} with syntax-case},
+institution = {Indiana Computer Science Department},
+number = 356,
+month = jun,
+year = 1992,
+texturl = "http://www.cs.indiana.edu/~dyb/pubs/tr356.pdf",
+abstracturl = "http://www.cs.indiana.edu/~dyb/pubs/tr356-abstract.html",
+biburl = "http://www.cs.indiana.edu/~dyb/pubs/tr356.bib",
+annote = {Introduces the {\tt syntax-case} macro system through a
+series of examples.  Some overlap with~\cite{Dybvig:syntactic}.}}
+
+@article{Dybvig:arity,
+author = {R. Kent Dybvig and Robert Hieb},
+title = {A new approach to procedures with variable arity},
+journal = {{Lisp} and Symbolic Computation},
+volume = 3,
+number = 3,
+pages = {229--244},
+month = sep,
+year = 1990,
+texturl = "http://www.cs.indiana.edu/~dyb/pubs/LaSC-3-3-pp229-244.pdf",
+abstracturl = "http://www.cs.indiana.edu/~dyb/pubs/LaSC-3-3-pp229-244-abstract.html",
+biburl = "http://www.cs.indiana.edu/~dyb/pubs/LaSC-3-3-pp229-244.bib",
+annote = {Describes an alternative to the ``dot'' notation for defining
+procedures that accept variable numbers of arguments; only the
+multiple-case notion is adopted in Chez Scheme (as {\tt case-lambda}).}}
+
+@inproceedings{Dybvig:arityprelim,
+author = {R. Kent Dybvig and Robert Hieb},
+title = {A Variable-arity Procedural Interface},
+booktitle = {Proceedings of the 1988 {ACM} Conference on {Lisp}
+                   and Functional Programming},
+pages = {106--115},
+month = jul,
+year = 1988,
+biburl = "http://www.cs.indiana.edu/~dyb/pubs/arityprelim.bib",
+annote = {Preliminary version of~\cite{Dybvig:arity}.}}
+
+@inproceedings{Hieb:representing,
+author = {Robert Hieb and
+          R. Kent Dybvig and
+          Carl Bruggeman},
+title = {Representing control in the presence of first-class continuations},
+booktitle = {Proceedings of the {SIGPLAN} '90 Conference
+                    on Programming Language Design and Implementation},
+pages = {66--77},
+month = jun,
+year = 1990,
+texturl = "http://www.cs.indiana.edu/~dyb/pubs/stack.pdf",
+abstracturl = "http://www.cs.indiana.edu/~dyb/pubs/stack-abstract.html",
+biburl = "http://www.cs.indiana.edu/~dyb/pubs/stack.bib",
+annote = {Describes Chez Scheme's segmented stack representation of
+continuations.}}
+
+@techreport{Dybvig:destination,
+author = {R. Kent Dybvig and Robert Hieb and Tom Butler},
+title = {Destination-driven code generation},
+institution = {Indiana Computer Science Department},
+number = 302,
+month = feb,
+year = 1990,
+texturl = "http://www.cs.indiana.edu/~dyb/pubs/ddcg.pdf",
+abstracturl = "http://www.cs.indiana.edu/~dyb/pubs/ddcg-abstract.html",
+biburl = "http://www.cs.indiana.edu/~dyb/pubs/ddcg.bib",
+annote = {Describes the basic mechanism used by Chez Scheme's code
+generator to generate code from abstract syntax trees.}}
+
+@article{Dybvig:engines,
+author = {R. Kent Dybvig and Robert Hieb},
+title = {Engines from continuations},
+journal = {Computer Languages},
+volume = 14,
+number = 2,
+pages = {109--123},
+year = 1989,
+texturl = "http://www.cs.indiana.edu/~dyb/pubs/engines.pdf",
+abstracturl = "http://www.cs.indiana.edu/~dyb/pubs/engines-abstract.html",
+biburl = "http://www.cs.indiana.edu/~dyb/pubs/engines.bib",
+annote = {Describes the continuation-based engine implementation used by
+Chez Scheme.}}
+
+@article{Dybvig:eps,
+author = {R. Kent Dybvig and Daniel P. Friedman and Christopher T. Haynes},
+title = {Expansion-passing style: A general macro mechanism},
+journal = {{Lisp} and Symbolic Computation},
+volume = 1,
+number = 1,
+pages = {53--75},
+year = 1988,
+texturl = "http://www.cs.indiana.edu/~dyb/pubs/LaSC-1-1-pp53-75.pdf",
+abstracturl = "http://www.cs.indiana.edu/~dyb/pubs/LaSC-1-1-pp53-75-abstract.html",
+biburl = "http://www.cs.indiana.edu/~dyb/pubs/LaSC-1-1-pp53-75.bib",
+annote = {Describes the low-level macro mechanism provided by Chez Scheme
+Versions~2--4.}}
+
+@inproceedings{Dybvig:epsprelim,
+author = {R. Kent Dybvig and Daniel P. Friedman and Christopher T. Haynes},
+title = {Expansion-Passing Style: Beyond Conventional Macros},
+booktitle = {Proceedings of the 1986 {ACM} Conference on {Lisp}
+                   and Functional Programming},
+pages = {143--150},
+year = 1986,
+biburl = "http://www.cs.indiana.edu/~dyb/pubs/epsprelim.bib",
+annote = {Preliminary version of~\cite{Dybvig:eps}.}}
+
+@phdthesis{Dybvig:phd,
+author = {R. Kent Dybvig},
+title = {Three Implementation Models for {Scheme}},
+school = {University of North Carolina Technical Report \#87-011},
+address = {Chapel Hill},
+month = apr,
+year = 1987,
+texturl = "http://www.cs.indiana.edu/~dyb/pubs/3imp.pdf",
+abstracturl = "http://www.cs.indiana.edu/~dyb/pubs/3imp-abstract.html",
+biburl = "http://www.cs.indiana.edu/~dyb/pubs/3imp.bib",
+annote = {Chapter 4 describes the essence of the
+Chez Scheme Version~1 run-time architecture.}}
+
+@book{Dybvig:tspl,
+author = {R. Kent Dybvig},
+title = {The {Scheme} Programming Language},
+publisher = {Prentice-Hall},
+year = 1987,
+biburl = "http://www.cs.indiana.edu/~dyb/pubs/tspl.bib",
+annote = {First edition of~\cite{Dybvig:tspl3}.}}
+
+@manual{Cadence:csrm,
+title = {{Chez Scheme} Reference Manual, {Version} 1.0},
+author = {R. Kent Dybvig and Bruce T. Smith},
+organization = {Cadence Research Systems},
+address = {Chapel Hill, North Carolina},
+month = "May",
+year = 1985,
+biburl = "http://www.cs.indiana.edu/~dyb/pubs/csrm.bib",
+annote = {Precursor to~\cite{Dybvig:tspl}.}}

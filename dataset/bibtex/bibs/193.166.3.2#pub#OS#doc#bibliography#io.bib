@@ -1,0 +1,1401 @@
+
+% BibTeX bibliography: Parallel I/O
+% 
+% This supercedes my older bibliography. The entries are alphabetized
+% by cite key. The emphasis is on including everything relevant,
+% rather than selecting a few key arcticles of interest.
+% Thus, you probably don't want (or need) to read everything
+% here. There are many repeated entries, in the sense that a paper is
+% often published first as a TR, then in a conference, then in a
+% journal. 
+% 
+% Please let me know if you have any additions or corrections.  You may
+% use the bibliography (and copy it around) as you please except for
+% publishing it as a whole, since the compilation is mine.
+% 
+% David Kotz, February 1991
+% Now at Dartmouth.
+@string {email = "david.kotz@dartmouth.edu"} % have to hide this from bibtex
+
+% STRINGS
+
+@string{ieeetrans = "IEEE Transactions on "}
+@string{procof = "Proceedings of "}
+@string{procofthe = procof # "the "}
+@string{metrics = " ACM Sigmetrics Conference on Measurement and
+			  Modeling of Computer Systems"} 
+@string{carch = " Annual International Symposium on Computer Architecture"}
+@string{dcs = " International Conference on Distributed Computer Systems"}
+@string{icpp = " International Conference on Parallel Processing"}
+
+@string{ctr = "Computer Technology Review"}
+@string{ieeecomp = "IEEE Computer"}
+@string{superc = "International Conference on Supercomputing"}
+@string{electron = "Electronics"}
+@string{sigmodconf = "ACM SIGMOD Conference"}
+@string{super89 = procof # "Supercomputing '89"}
+@string{dbm2 = procofthe# "Fourth International Workshop on Database Machines"}
+@string{metrics87 = procofthe # "1987" # metrics}
+@string{metrics90 = procofthe # "1990" # metrics}
+@string{metrics91 = procofthe # "1991" # metrics}
+@string{asplos89 = "Third International Conference on Architectural
+Support for Programming Languages and Operating Systems"}
+@string{ieeetpds = ieeetrans # "Parallel and Distributed Systems"}
+@string{ieeetor = ieeetrans # "Reliability"}
+@string{carch5 = procofthe # "5th" # carch}
+@string{carch15 = procofthe # "15th" # carch}
+@string{hyper88 = "Third Conference on Hypercube Concurrent Computers
+and Applications"}
+@string{hyper89 = "Fourth Conference on Hypercube Concurrent Computers
+and Applications"}
+@string{vldb12 = "12th International Conference on Very Large Data
+Bases"}
+@string{archnews = "Computer Architecture News"}
+@string{duke = "Dept. of Computer Science, Duke University"}
+@string{vldb14 = "14th International Conference on Very Large Data
+Bases"}
+@string{ieeetokde = ieeetrans # "Knowledge and Data Engineering"}
+@string{compcon = procof # "IEEE Compcon"}
+@string{dcs88 = procofthe # "Eighth" # dcs}
+@string{icpp88 = procofthe # "1988" # icpp}
+@string{icpp89 = procofthe # "1989" # icpp}
+
+@techreport{abu-safah:speedup,
+    author = "Walid Abu-Safah and Harlan Husmann and David Kuck",
+    title = "On {Input/Output} Speed-up in Tightly-coupled
+Multiprocessors",
+    institution = "Department of Computer Science, Univ. of
+Illinois at Urbana-Champaign",
+    year = 1984,
+    number = "UIUCDCS-R-84-1182",
+    comment = "Derives formulas for the speedup with and without
+I/O considered and with parallel software and hardware format
+conversion. Considering I/O gives a more optimistic view of the
+speedup of a program {\em assuming} that the parallel version can use
+its I/O bandwidth as effectively as the serial processor. Concludes
+that, for a given number of processors, increasing the I/O bandwaidth
+is the most effective way to speed up the program (over the format
+conversion improvements).",
+    keyword = "parallel I/O, I/O"
+}
+
+@inproceedings{asbury:fortranio,
+    author = "Raymond K. Asbury and David S. Scott",
+    title = "{FORTRAN} {I/O} on the {iPSC/2}: Is there read after write?",
+    booktitle = hyper89,
+    year = 1989,
+    pages = "129--132",
+    keyword = "parallel I/O, hypercube, IPSC2, file access pattern" 
+}
+
+@techreport{barak:hfs,
+    author = "Amnon Barak and Bernard A. Galler and Yaron Farber",
+    title = "A Holographic File System for a Multicomputer with Many
+Disk Nodes",
+    institution = "Dept. of Computer Science, Hebrew University of
+Jerusalem",
+    year = 1988,
+    number = "88-6",
+    month = may,
+    comment = "Describes a file system for a distributed system that
+scatters records of each file over many disks using hash functions.
+The hash function is known by all processors, so no one processor must
+be up to access the file. Any portion of the file whose disknode is
+available may be accessed. Shadow nodes are used to take over for
+nodes that go down, saving the info for later use by the proper node.
+Intended to easily parallelize read/write accesses and global file
+operations, and to increase file availability.",
+    keyword = "parallel I/O, hashing, reliability, disk shadowing"
+}
+
+@inproceedings{bitton:schedule,
+    author = "Dina Bitton",
+    title = "Arm Scheduling in Shadowed Disks",
+    booktitle = compcon,
+    year = 1989,
+    month = "Spring",
+    pages = "132--136",
+    comment = "Goes further than bitton:shadow. Uses simulation to
+verify results from that paper, which were expressions for the
+expected seek distance of shadowed disks, using shortest-seek-time
+arm scheduling. She assumes that arm positions stay
+independent, in the face of correlating effects like writes, which
+move all arms to the same place. Shadowed disks can improve performance
+for workloads more than 60 or 70\% reads.",
+    keyword = "parallel I/O, disk shadowing, reliability, mirrored
+disk, disk seek time"
+}
+
+@inproceedings{bitton:shadow,
+    author = "D. Bitton and J. Gray",
+    title = "Disk Shadowing",
+    booktitle = vldb14,
+    year = 1988,
+    pages = "331--338",
+    comment = "Also TR UIC EECS 88-1 from Univ of Illinois at Chicago.
+Shadowed disks are mirroring with more than 2 disks.  Writes to all
+disks, reads from one with shortest seek time.  Acknowledges but
+ignores problem posed by lo:disks. Also considers that newer disk
+technology does not have linear seek time $(a+bx)$ but rather
+$(a+b\sqrt{x})$. Shows that with either seek distribution the average
+seek time for workloads with at least 60\% reads decreases in the
+number of disks. See also bitton:schedule.", 
+    keyword = "parallel I/O, disk shadowing, reliability, mirrored
+disk, disk seek time"
+}
+
+@article{boral:bubba,
+    author = "Haran Boral and William Alexander and Larry Clay and
+George Copeland and Scott Danforth and Michael Franklin and Brian Hart
+and Marc Smith and Patrick Valduriez",
+    title = "Prototyping {Bubba}, a Highly Parallel Database System",
+    journal = ieeetokde,
+    volume = 2,
+    number = 1,
+    year = 1990,
+    month = mar,
+    comment = "More recent than copeland:bubba, and a little more
+general. This gives few details, and doesn't spend much time on the
+parallel I/O. Bubba does use parallel independent disks, with a
+significant effort to place data on the disks, and do the work local
+to the disks, to balance the load and minimize interprocessor
+communication. Also they use a single-level store (i.e., memory-mapped
+files) to improve performance of their I/O system, including page
+locking that is assisted by the MMU. The OS has hooks for the database
+manager to give memory-management policy hints.",
+    keyword = "parallel I/O, database, disk caching"
+}
+
+@inproceedings{boral:critique,
+    author = "H. Boral and D. {DeWitt}",
+    title = " Database machines: an idea whose time has passed?",
+    booktitle = dbm2,
+    year = 1983,
+    publisher = "Springer-Verlag", 
+    pages = "166--187",
+    comment = "Improvements in I/O bandwidth crucial for supporting
+database machines, otherwise highly parallel DB machines are useless
+(I/O bound). Two ways to do it: 1) synchronized interleaving by using
+custom controller and regular disks to read/write same track on all
+disks, which speeds individual accesses. 2) use very large cache
+(100-200M) to keep blocks to re-use and to do prefetching.",
+    keyword = "file access pattern, parallel I/O, I/O, database machine"
+}
+
+@TechReport{cabrera:swift,
+  author = 	"Luis-Felipe Cabrera and Darrell D. E. Long",
+  title = 	"Swift: A Storage Architecture fo Large Objects",
+  institution = 	"U.C. Santa Cruz",
+  year = 	1990,
+  number = 	"UCSC-CRL-89-04",
+  keyword = "parallel I/O, disk striping, distributed file system",
+  comment = "A brief outline of a design for a high-performance
+			  storage system, designed for storing and retrieving
+			  large objects like color video or visualization data
+			  at very high speed. They distribute data over several
+			  ``storage agents'', which are some form of disk or
+			  RAID. They are all connected by a high-speed network.
+			  A ``storage manager'' decides where to spread each
+			  file, what kind of reliability mechanism is used.
+			  User provides preallocation info such as size,
+			  reliability level, data rate requirements, and so on."
+}
+
+@inproceedings{chen:eval,
+    author = "Peter Chen and Garth Gibson and Randy Katz and David Patterson", 
+    title = "An Evaluation of Redundant Arrays of Disks using an
+			  {Amdahl 5890}",
+    booktitle = metrics90,
+    month = may,
+    year = 1990,
+    pages = "74--85",
+    comment = "A experimental validation of the performance
+			  predictions of patterson:raid, plus some extensions.
+			  Confirms that RAID level 5 (rotated parity) is best
+			  for large read/writes, and RAID level 1 (mirroring)
+			  is best for small reads/writes.",
+    keyword = "parallel I/O, RAID, disk array"
+}
+
+@techreport{chen:raid,
+    author = "Peter Chen and Garth Gibson and Randy Katz and David
+    Patterson and Martin Schulze", 
+    title = "Two papers on {RAIDs}",
+    number = "UCB/CSD 88/479",
+    month = dec,
+    year = 1988,
+    institution = "UC Berkeley",
+    comment = "Basically an updated version of patterson:raid
+and the prepublished version of gibson:failcorrect.",
+    keyword = "parallel I/O, RAID, disk array"
+}
+
+@manual{convex:stripe,
+    title = "{CONVEX UNIX} Programmer's Manual, Part I",
+    organization = "CONVEX Computer Corporation ",
+    address = "Richardson, Texas",
+    edition = "Eighth",
+    month = oct,
+    year = 1988,
+    comment = "Implementation of striped disks on the CONVEX. Uses
+partitions of normal device drivers. Kernel data structure knows about
+the interleaving granularity, the set of partitions, sizes, etc.",
+    keyword = "parallel I/O, parallel file system, striping"
+}
+
+@inproceedings{copeland:bubba,
+    author = "George Copeland and William Alexander and Ellen
+    Boughter and Tom Keller",
+    title = "Data Placement in {Bubba}",
+    booktitle = sigmodconf,
+    month = jun,
+    year = 1988,
+    pages = "99--108",
+    comment = "A database machine. Experimental/analytical model
+of a placement algorithm that declusters relations across several
+parallel, independent disks. The declustering is done on a subset of
+the disks, and the choices involved are the number of disks to
+decluster onto, which relations to put where, and whether a relation
+should be cache-resident. Communications overhead limits the
+usefulness of declustering in some cases, depending on the workload.
+See boral:bubba",
+    keyword = "parallel I/O, database, disk caching"
+}
+
+@misc{cray:pario,
+    key = "Cray89",
+    author = "Cray Research",
+    year = 1989,
+    title = "{Cray Research I/O} Solutions",
+    note = "Sales literature",
+    comment = "Glossies from Cray describing their I/O products.",
+    keyword = "parallel I/O, disk hardware"
+}
+
+@misc{cray:pario2,
+    key = "Cray90",
+    author = "Cray Research",
+    title = "{DS-41} Disk Subsystem",
+    year = 1990,
+    note = "Sales literature number MCFS-4-0790",
+    comment = "Glossy from Cray describing their new disk subsystem:
+			  up two four controllers and up to four ``drives'',
+			  each of which actually have four spindles. Thus, a
+			  full subsystem has 16 disks. Each drive or controller
+			  sustains 9.6 MBytes/sec sustained, for a total
+			  of 38.4 MBytes/sec. Each drive has 4.8 GBytes, for a
+			  total of 19.2 Gbytes. Access time per drive is
+			  2--46.6 msec, average 24 msec. They don't say how the
+			  4 spindles within a driver are controlled or arranged.",
+    keyword = "parallel I/O, disk hardware"
+}
+
+@unpublished{crockett:manual,
+    author = "Thomas W. Crockett",
+    title = "Specification of the Operating System Interface for
+    Parallel File Organizations",
+    year = 1988,
+    note = "Publication status unknown",
+    comment = "Man pages for his Flex version of file interface.",
+    keyword = "parallel I/O, parallel file system"
+}
+
+@inproceedings{crockett:par-files,
+    author = "Thomas W. Crockett",
+    title = "File Concepts for Parallel {I/O}",
+    booktitle = super89,
+    year = 1989,
+    pages = "574--579",
+    comment = "Two views of a file: global (for sequential programs)
+and internal (for parallel programs). Standardized forms for these
+views, for long-lived files. Temp files have specialized forms.  The
+access types are sequential, partitioned, interleaved, and
+self-scheduled, plus global random and partitioned random. He relates
+these to their best storage patterns.  Buffer cache only needed for
+direct (random) access. The application must specify the access
+pattern desired.",
+    keyword = "parallel I/O, file access pattern, parallel file
+system" 
+}
+
+@article{csa-io,
+    author = "T. J. M.",
+    title = "Now: Parallel storage to match parallel {CPU} power",
+    journal = electron,
+    year = 1988,
+    month = dec,
+    volume = 61,
+    number = 12,
+    pages = 112,
+    keyword = "parallel I/O, disk array"
+}
+
+@techreport{dewitt:gamma,
+    author = "David J. {DeWitt} and Robert H. Gerber and Goetz Graefe and
+    Michael L. Heytens and Krishna B. Kumar and M. Muralikrishna",
+    title = "{GAMMA}: A High Performance Dataflow Database Machine ",
+    institution = "Dept. of Computer Science, Univ. of Wisconsin-Madison",
+    year = 1986,
+    number = "TR-635",
+    month = mar,
+    comment = "Better to cite dewitt:gamma2. Multiprocessor (VAX) DBMS
+on a token ring with disk at each processor. They thought this was
+better than separating disks from processors by network since then
+network must handle {\em all\/} I/O rather than just what needs to
+move.  Conjecture that shared memory might be best interconnection
+network.  Relations are horizontally partitioned in some way, and each
+processor reads its own set and operates on them there.",
+    keyword = "parallel I/O, database, GAMMA"
+}
+
+@inproceedings{dewitt:gamma-dbm,
+    author = "David J. DeWitt and Shahram Ghandeharizadeh and
+    Donovan Schneider", 
+    title = "A Performance Analysis of the {GAMMA} Database Machine",
+    booktitle = sigmodconf,
+    month = jun,
+    year = 1988,
+    pages = "350--360",
+    comment = "Compared Gamma with Teradata and showed speedup.
+For various operations on big relations. See fairly good linear
+speedup in many cases. Note that they vary one variable at a time to
+examine different things. Their bottleneck was at the memory-network
+interface.",
+    keyword = "parallel I/O, database, performance analysis, Teradata, GAMMA"
+}
+
+@inproceedings{dewitt:gamma2,
+    author = "David J. DeWitt and Robert H. Gerber and Goetz Graefe
+and Michael L. Heytens and Krishna B. Kumar and M. Muralikrishna", 
+    title = "{GAMMA} --- {A} High Performance Dataflow Database Machine",
+    booktitle = vldb12,
+    year = 1986,
+    pages = "228--237",
+    comment = "Almost identical to dewitt:gamma, with some updates.
+			  See that for comments, but cite this one. See also
+			  dewitt:gamma3 for a more recent paper.",
+    keyword = "parallel I/O, database, GAMMA"
+}
+
+@article{dewitt:gamma3,
+    author = "David J. DeWitt and Shahram Ghandeharizadeh and Donovan
+			  A. Schneider and Allan Bricker and Hui-I Hsaio and
+			  Rick Rasmussen", 
+    title = "The {Gamma} Database Machine Project",
+    journal = ieeetokde,
+    month = mar,
+    year = 1990,
+    volume = 2,
+    number = 1,
+    pages = "44--62",
+    comment = "An updated version of dewitt:gamma2, with elements of
+			  dewitt:gamma-dbm. Really only need to cite this one.
+			  This is the same basic idea as dewitt:gamma2, but
+			  after they ported the system from the VAXen to an
+			  iPSC/2. Speedup results good.",
+    keyword = "parallel I/O, database, GAMMA"
+}
+
+@inproceedings{dibble:bridge,
+    author = "Peter Dibble and Michael Scott and Carla Ellis",
+    title = "Bridge: {A} High-Performance File System for
+    Parallel Processors",
+    booktitle = dcs88,
+    year = 1988,
+    month = jun,
+    pages = "154--161",
+    comment = "See dibble:thesis",
+    keyword = "Bridge, parallel file system, Butterfly"
+}
+
+@article{dibble:sort,
+    author = "Peter C. Dibble and Michael L. Scott",
+    title = "External Sorting on a Parallel Interleaved File System",
+    journal = "University of Rochester 1989--90 Computer Science and
+Engineering Research Review",
+    year = 1989,
+    comment = "Cite dibble:sort2. Based on Bridge file system (see
+dibble:bridge).  Parallel external merge-sort tool. Sort file on each
+disk, then do a parallel merge. The merge is serialized by the
+token-passing mechanism, but the I/O time dominates. The key is to
+keep disks busy constantly. Uses some read-ahead, write-behind to
+control fluctuations in disk request timing. Analytical analysis of
+the algorithm lends insight and matches well with the timings.
+Locality is a big win in Bridge tools.",
+    keyword = "parallel I/O, sorting, merging, parallel file reference
+pattern" 
+}
+
+@article{dibble:sort2,
+    author = "Peter C. Dibble and Michael L. Scott",
+    title = "Beyond Striping: The {Bridge} Multiprocessor File System",
+    journal = archnews,
+    year = 1989,
+    month = sep,
+    volume = 19,
+    number = 5,
+    comment = "Subset of dibble:sort. Extra comments to distinguish
+from striping and RAID work. Good point that those projects are
+addressing a different bottleneck, and that they can provide
+essentially unlimited bandwidth to a single processor. Bridge could
+use those as individual file systems, parallelizing the overall file
+system, avoiding the software bottleneck.  Using a very-reliable RAID
+at each node in Bridge could safeguard Bridge against failure for
+reasonable periods, removing reliability from Bridge level.",
+    keyword = "parallel I/O, external sorting, merging, parallel file
+reference pattern" 
+}
+
+@phdthesis{dibble:thesis,
+    author = "Peter C. Dibble",
+    title = "A Parallel Interleaved File System",
+    year = 1990,
+    month = mar,
+    school = "University of Rochester",
+    comment = "Also TR 334. Mostly covered by other papers, but
+includes good introduction, discussion of reliability and maintenance
+issues, and implementation. The three interfaces to the PIFS server
+are interesting. A fourth compromise might help make tools easier to
+write.",
+    keyword = "parallel I/O, external sorting, merging, parallel file
+system"  
+}
+
+@TechReport{edelson:pario,
+  author = 	"Daniel Edelson and Darrell D. E. Long",
+  title = 	"High Speed Disk {I/O} for Parallel Computers",
+  institution = 	"Baskin Center for Computer Engineering and
+			  Information Science",
+  year = 	1990,
+  number = 	"UCSC-CRL-90-02",
+  month = 	jan,
+  keyword = "parallel I/O, disk caching, parallel file system",
+  comment = "Essentially a small literature survey. A reasonable
+overview of the situation. No new ideas here, just an overview.
+Mentions caching, striping, disk layout optimization, log-structured
+file systems, and Bridge and Intel CFS. Plugs their Swift
+architecture."
+}
+
+@techreport{ellis:interleaved,
+    author = "Carla Ellis and P. Dibble",
+    title = "An Interleaved File System for the {Butterfly}",
+    institution = duke,
+    year = "1987",
+    number = "CS-1987-4",
+    month = "January",
+    comment = "See dibble:thesis",
+    keyword = "Carla, parallel file system, Bridge, Butterfly"
+}
+
+@inproceedings{ellis:prefetch,
+    author = "Carla Schlatter Ellis and David Kotz",
+    title = "Prefetching in File Systems for {MIMD} Multiprocessors",
+    booktitle = icpp89,
+    year = 1989,
+    month = aug,
+    pages = "I:306--314",
+    comment = "See kotz:prefetch for journal version.",
+    keyword = "dfk, parallel file system, prefetching, disk caching,
+MIMD, parallel I/O"
+}
+
+@inproceedings{flynn:hyper-fs,
+    author = "Robert J. Flynn and Haldun Hadimioglu",
+    title = "A Distributed {Hypercube} File System",
+    booktitle = hyper88,
+    year = 1988,
+    pages = "1375--1381",
+    comment = "For hypercube-like architectures. Interleaved
+files, though flexible. Separate network for I/O, maybe not hypercube.
+I/O is blocked and buffered -- no coherency or prefetching issues
+discussed. Buffered close to point of use. Parallel access is ok.
+Broadcast supported? I/O nodes distinguished from comp nodes. I/O
+hooked to front-end too.",
+    keyword = "parallel I/O, hypercube, parallel file system"
+}
+
+@InBook{fox:cubix,
+  author = 	"G. Fox and M. Johnson and G. Lyzenga and S. Otto and
+			  J. Salmon and D. Walker",
+  title = 	"Solving Problems on Concurrent Processors",
+  publisher = 	"Prentice Hall",
+  year = 	"1988",
+  address = 	"Englewood Cliffs, NJ",
+  volume = 1,
+  chapter = "6 and 15",
+  keyword = "parallel file system, hypercube",
+  comment = "In files. Parallel I/O control, called CUBIX. Interesting
+			  method. Depends a lot on ``loose synchronization'',
+			  which is sortof SIMD-like."
+}
+
+@article{french:ipsc2io,
+     author = "James C. French and Terrence W. Pratt and Mriganka
+			  Das",
+     title = "Performance Measurement of a Parallel Input/Output
+			  System for the {Intel iPSC/2} Hypercube",
+	journal =	metrics91,
+	year = 1991,
+     note = "To appear",
+     keyword = "parallel I/O, iPSC/2",
+     comment = "See french:ipsc2io-tr."
+}
+
+@techreport{french:ipsc2io-tr,
+     author = "James C. French and Terrence W. Pratt and Mriganka
+			  Das",
+     title = "Performance Measurement of a Parallel Input/Output
+			  System for the {Intel iPSC/2} Hypercube",
+     number = "IPC-TR-91-002",
+     institution = "Institute for Parallel Computation, University of
+			  Virginia", 
+     year = 1991,
+     note = "To appear, SIGMETRICS '91",
+     keyword = "verify sigmetrics version and copy, parallel I/O,
+			  IPSC2, disk caching, prefetching", 
+     comment = "Really nice study of performance of existing CFS
+			  system on 32-node + 4 I/O-node iPSC/2. They show big
+			  improvements due to declustering, preallocation,
+			  caching, and prefetching. See also pratt:twofs."
+}
+
+@article{garcia:striping-reliability,
+    author = "Hector Garcia-Molina and Kenneth Salem",
+    title = "The Impact of Disk Striping on Reliability",
+    journal = "{IEEE} Database Engineering Bulletin",
+    month = mar,
+    year = 1988,
+    volume = 11,
+    number = 1,
+    pages = "26--39",
+    comment = "Reliability of striped filesystems may not be as bad
+as you think. Parity disks help. Performance improvements limited to
+small number of disks ($n<10$). Good point: efficiency of striping
+will increase as the gap between CPU/memory performance and disk speed
+and file size widens.  Reliability may be better if measured in terms
+of performing a task in time T, since the striped version may take
+less time. This gives disks less opportunity to fail during that
+period. Also consider the CPU failure mode, and its use over less
+time.",
+    keyword = "parallel I/O, disk striping, reliability, disk array"
+}
+
+@inproceedings{gibson:failcorrect,
+    author = "Garth A. Gibson and Lisa Hellerstein and Richard M.
+    Karp and Randy H. Katz and David A. Patterson",
+    title = "Failure Correction Techniques for Large Disk Arrays",
+    booktitle = asplos89,
+    month = apr,
+    year = 1989,
+    pages = "123--132",
+    comment = "See gibson:raid for comments since it is the same.",
+    keyword = "parallel I/O, disk array, RAID, reliability"
+}
+
+@techreport{gibson:raid,
+    author = "Garth Gibson and Lisa Hellerstein and Richard Karp
+    and Randy Katz and David Patterson", 
+    title = "Coding techniques for handling failures in large disk arrays",
+    number = "UCB/CSD 88/477",
+    month = dec,
+    year = 1988,
+    institution = "UC Berkeley",
+    comment = "Published as gibson:failcorrect. Design of parity
+encodings to handle more than one bit failure in any group. Their
+2-bit correcting codes are good enough for 1000-disk RAIDs that 3-bit
+correction is not needed.",
+    keyword = "parallel I/O, RAID, reliability, disk array"
+}
+
+@mastersthesis{husmann:format,
+    author = "Harlan Edward Husmann",
+    title = "High-Speed Format Conversion and Parallel {I/O} in
+Numerical Programs",
+    year = 1984,
+    month = jan,
+    school = "Department of Computer Science, Univ. of Illinois at
+Urbana-Champaign",
+    note = "Available as TR number UIUCDCS-R-84-1152.",
+    comment = "Does FORTRAN format conversion in software in
+parallel or in hardware, to obtain good speedups for lots of programs.
+However he found that increasing the I/O bandwidth was the most
+significant change that could be made in the parallel program.",
+    keyword = "parallel I/O, I/O"
+}
+
+@booklet{intel:examples,
+    key = "Intel",
+    howpublished = "Intel Corporation Background Information",
+    title = "Concurrent {I/O} Application Examples",
+    year = 1989,
+    comment = "Lists several examples and the amount and types of
+data they require, and how much bandwidth. Fluid flow modeling,
+Molecular modeling, Seismic processing, and Tactical and strategic
+systems.",
+    keyword = "file access pattern, parallel I/O, IPSC2, hypercube"
+}
+
+@booklet{intel:ipsc2io,
+    key = "Intel",
+    howpublished = "Intel Corporation",
+    title = "{iPSC/2} {I/O} Facilities",
+    year = 1988,
+    note = "Order number 280120-001",
+    comment = "Simple overview, not much detail. See intel:ipsc2,
+pierce:pario, asbury:fortranio, french:ipsc2io. Separate I/O nodes
+from compute nodes.  Each I/O node has a SCSI bus to the disks, and
+communicates with other nodes in the system via Direct-Connect
+hypercube routing.",
+    keyword = "parallel I/O, hypercube, IPSC2"
+}
+
+@misc{intelio,
+    key = "Intel",
+    title = "Intel beefs up its {iPSC/2} supercomputer's {I/O} and
+memory capabilities",
+    howpublished = electron,
+    year = 1988,
+    month = nov,
+    volume = 61,
+    number = 11,
+    pages = 24,
+    keyword = "parallel I/O, hypercube, IPSC2"
+}
+
+@article{katz:io-subsys,
+    author = "Randy H. Katz and John K. Ousterhout and David A.
+    Patterson and Michael R. Stonebraker",
+    title = "A Project on High Performance {I/O} Subsystems",
+    journal = "{IEEE} Database Engineering Bulletin",
+    month = mar,
+    year = 1988,
+    volume = 11,
+    number = 1,
+    pages = "40--47",
+    comment = "Early RAID project paper. Describes the Berkeley team's
+plan to use an array of small (100M) hard disks as an I/O server for
+network file service, transaction processing, and supercomputer I/O.
+Considering performance, reliability, and flexibility. Initially
+hooked to their SPUR multiprocessor, using Sprite operating system,
+new filesystem.  Either asynchronous striped or independent operation.
+For me: they mention that supercomputer I/O is characterized as
+sequential, minimum latency, low throughput. Use of parity disks to
+boost reliability.  files may be striped across one or more disks and
+extend over several sectors, thus a two-dimensional filesystem;
+striping need not involve all disks." ,
+    keyword = "parallel I/O, RAID, Sprite, reliability, disk striping,
+disk array" 
+}
+
+@article{katz:update,
+   author = "Randy H. Katz and John K. Ousterhout and David A.
+Patterson and Peter Chen and Ann Chervenak and Rich Drewes and Garth
+Gibson and Ed Lee and Ken Lutz and Ethan Miller and Mendel Rosenblum",
+   title = "A Project on High Performance {I/O} Subsystems",
+   journal = archnews,
+   month = sep,
+   year = 1989,
+   volume = 17,
+   number = 5,
+   pages = "24--31",
+   keyword = "parallel I/O, RAID, reliability, disk array",
+   comment = "A short summary of the RAID project. Some more
+up-to-date info, like that they have completed the first prototype
+with 8 SCSI strings and 32 disks. "
+}
+
+@phdthesis{kim:interleave,
+    author = "Michelle Y. Kim",
+    title = "Synchronously Interleaved Disk Systems with their
+    Application to the Very Large {FFT}",
+    school = "IBM Thomas J. Watson Research Center",
+    address = "Yorktown Heights, New York 10598",
+    year = 1986,
+    note = "IBM Report number RC12372",
+    comment = "Uniprocessor interleaving techniques. Good case
+for interleaving. Probably better to reference kim:interleaving.
+Discusses an 3D FFT algorithm in which the matrix is broken into
+subblocks that are accessed in layers. The layers are stored so this
+is either contiguous or with a regular stride, in fairly large chunks.",
+    keyword = "parallel I/O, disk striping, file access pattern,
+disk array" 
+}
+
+@article{kim:interleaving,
+    author = "Michelle Y. Kim",
+    title = "Synchronized Disk Interleaving",
+    journal = ieeetc,
+    year = 1986,
+    volume = "C-35",
+    number = 11,
+    pages = "978--988",
+    month = nov,
+    comment = "See kim:interleave.",
+    keyword = "parallel I/O, disk striping, disk array"
+}
+
+@article{kotz:prefetch,
+    author = "David Kotz and Carla Schlatter Ellis",
+    title = "Prefetching in File Systems for {MIMD} Multiprocessors",
+    journal = ieeetpds,
+    year = 1990,
+    month = apr,
+    volume = 1,
+    number = 2,
+    pages = "218--230",
+    comment = "See kotz:thesis, ellis:prefetch.",
+    keyword = "parallel file system, prefetching, MIMD, disk
+caching, parallel I/O" 
+}
+
+@PhDThesis{kotz:thesis,
+  author = "David Kotz",
+  title = "Prefetching and Caching Techniques in File Systems for {MIMD}
+Multiprocessors",
+  school = 	"Duke University",
+  year = 	1991,
+  month = apr,
+  note = 	"In preparation",
+  keyword = "parallel file system, prefetching, MIMD, disk
+caching, parallel I/O" 
+}
+
+@inproceedings{livny:stripe,
+    author = "M. Livny and S. Khoshafian and H. Boral",
+    title = "Multi-Disk Management Algorithms",
+    booktitle = metrics87,
+    year = "1987",
+    pages = "69--77",
+    month = may,
+    keyword = "parallel I/O, disk striping, disk array"
+}
+
+@techreport{lo:disks,
+    author = "Raymond Lo and Norman Matloff",
+    title = "A Probabilistic Limit on the Virtual Size of
+Replicated File Systems",
+    institution = "Department of EE and CS, UC Davis",
+    year = 1989,
+    comment = "A look at shadowed disks. If you have $k$ disks set up
+to read from the disk with the shortest seek, but write to all disks,
+you have increased reliability, read time like the min of the seeks,
+and write time like the max of the seeks. It appears that with
+increasing $k$ you can get good performance. But this paper clearly
+shows, since writes move all disk heads to the same location,
+that the effective value of $k$ is actually quite low. Only 4--10
+disks are likely to be useful for most traffic loads.",
+    keyword = "parallel I/O, replication, file system, disk shadowing"
+}
+
+@article{manuel:logjam,
+    author = "Tom Manuel",
+    title = "Breaking the Data-rate Logjam with arrays of small
+    disk drives",
+    journal = electron,
+    year = 1989,
+    month = feb,
+    volume = 62,
+    number = 2,
+    pages = "97--100",
+    comment = "See also Electronics, Nov. 88 p 24, Dec. 88 p 112.
+Trade journal short on disk arrays. Very good intro. No technical
+content. Concentrates on RAID project. Lists several commercial
+versions. Mostly concentrates on single-controller versions.",
+    keyword = "parallel I/O, disk array, I/O bottleneck"
+}
+
+@article{masters:pario,
+    author = "Masters",
+    title = "Improve Disk Subsystem Performance with Multiple Serial
+Drives in Parallel",
+    journal = ctr,
+    volume = 7,
+    number = 9,
+    month = jul,
+    year = 1987,
+    keyword = "verify publication, parallel I/O"
+}
+
+@article{matloff:multidisk,
+    author = "Norman S. Matloff",
+    title = "A Multiple-Disk System for both Fault Tolerance and
+Improved Performance",
+    journal = ieeetor,
+    volume = "R-36",
+    number = 2,
+    year = 1987,
+    month = jun,
+    pages = "199--201",
+    comment = "Variation on mirrored disks using more than 2
+disks, to spread the files around. Good performance increases.",
+    keyword = "parallel I/O, reliability, disk shadowing"
+}
+
+@inproceedings{meador:array,
+    author = "Wes E. Meador",
+    title = "Disk Array Systems",
+    booktitle = compcon,
+    year = 1989,
+    month = "Spring",
+    pages = "143--146",
+    comment = "Describes {\em Strategy 2 Disk Array Controller}, which
+allows 4 or 8 drives, hardware striped, with parity drive and 0-4 hot
+spares. Up to 4 channels to cpu(s). Logical block interface. Defects,
+errors, formatting, drive failures all handled automatically. Peak 40
+MB/s data transfer on each channel.",
+    keyword = "parallel I/O, disk array, disk striping"
+}
+
+@techreport{milenkovic:model,
+    author = "Milan Milenkovic",
+    title = "A Model for Multiprocessor {I/O}",
+    institution = "Dept. of Computer Science and Engineering, Southern
+Methodist University",
+    number = "89-CSE-30",
+    month = jul,
+    year = 1989,
+    keyword = "multiprocessor I/O, I/O architecture, distributed systems",
+    comment = "Advocates using dedicated server processors for all
+I/O, e.g., disk server, terminal server, network server. Pass I/O
+requests and data via messages or RPC calls over the interconnect
+(here a shared bus). Server handles packaging, blocking, caching,
+errors, interrupts, and so forth, freeing the main processors and the
+interconnect from all this activity. Benefits: encapsulates
+I/O-related stuff in specific places, accomodates heterogeneity,
+improves performance.  I/O bottleneck might be a problem."
+}
+
+@article{mokhoff:pario,
+    author = "Nicholas Mokhoff",
+    title = "Parallel Disk Assembly Packs 1.5 {GBytes}, runs at 4
+{MBytes/s}", 
+    journal = "Electronic Design",
+    month = nov,
+    year = 1987,
+    pages = "45--46",
+    comment = "Commercially available: Micropolis Systems'
+Parallel Disk 1800 series. Four disks plus one parity disk,
+synchronized and byte-interleaved. SCSI interface. Total capacity 1.5
+GBytes, sustained transfer rate of 4 MBytes/s. MTTF 140,000 hours.
+Hard and soft errors corrected in real-time. Failed drives can be
+replaced while system is running.",
+    keyword = "parallel I/O, I/O, disk hardware, disk striping,
+reliability"
+}
+
+@inproceedings{ng:diskarray,
+    author = "Spencer Ng",
+    title = "Some Design Issues of Disk Arrays",
+    booktitle = compcon,
+    note = "San Francisco, CA",
+    month = "Spring",
+    year = 1989,
+    pages = "137--142",
+    comment = "Discusses disk arrays and striping. Transfer size is
+important to striping success: small size transfers are better off
+with independent disks. Sychronized rotation is especially important
+for small transfer sizes, since then the increased rotational delays
+dominate. Fine grain striping involves less assembly/disassembly
+delay, but coarse grain (block) striping allows for request
+parallelism. Fine grain striping wastes capacity due to fixed size
+formatting overhead. He also derives exact MTTF equation for 1-failure
+tolerance and on-line repair.",
+    keyword = "parallel I/O, disk array"
+}
+
+@inproceedings{ng:interleave,
+    author = "S. Ng and D. Lang and R. Selinger",
+    title = "Trade-offs Between Devices and Paths in Achieving
+    Disk Interleaving",
+    booktitle = carch15,
+    year = 1988,
+    pages = "196--201",
+    comment = "Compares four different ways of restructuring IBM
+disk controllers and channels to obtain more parallelism. They use
+parallel heads or parallel actuators. The best results come when they
+replicate the control electronics to maintain the number of data paths
+through the controller. Otherwise the controller bottleneck reduces
+performance. Generally, for large or small transfer sizes, parallel
+heads with replication gave better performance.",
+    keyword = "parallel I/O, disk hardware, disk caching, I/O bottleneck"
+}
+
+@InProceedings{nishino:sfs,
+  author = 	"H. Nishino and S. Naka and K Ikumi",
+  title = 	"High Performance File System for Supercomputing Environment",
+  booktitle = 	super89,
+  year = 	1989,
+  pages = 	"747--756",
+  keyword = "supercomputer, file system, parallel I/O",
+  comment = "A modification to the Unix file system to allow for
+			  supercomputer access. Workload: file size from few KB
+			  to few GB, I/O operation size from few bytes to
+			  hundreds of MB. Generally programs split into
+			  I/O-bound and CPU-bound parts. Sequential and random
+			  access. Needs: giant files (bigger than device), peak
+			  hardware performance for large files, NFS access.
+			  Their FS is built into Unix ``transparently''. Space
+			  allocated in clusters, rather than blocks; clusters
+			  might be as big as a cylinder. Allows for efficient,
+			  large files. Mentions parallel disks as part of a
+			  ``virtual volume'' but does not elaborate."
+}
+
+@TechReport{ogata:diskarray,
+  author = 	"Mikito Ogata and Michael J. Flynn",
+  title = 	"A Queueing Analysis for Disk Array Systems",
+  institution = 	"Stanford University",
+  year = 	"1990",
+  number = 	"CSL-TR-90-443",
+  keyword = "disk array, performance analysis",
+  comment = "Fairly complex analysis of a multiprocessor attached to a
+			  disk array system through a central server that is
+			  the buffer. Not very well written; I didn't read it
+			  carefully. Assumes task-oriented model for parallel
+			  system, where tasks can be assigned to any CPU; this
+			  makes for an easy model. Like Reddy, they compare
+			  declustering and striping (they call them striped
+			  and synchronized disks)."
+}
+
+@article{olson:random,
+   author = "Thomas M. Olson",
+   title = "Disk Array Performance in a Random {I/O} Environment",
+   journal = archnews,
+   month = sep,
+   year = 1989,
+   volume = 17,
+   number = 5,
+   pages = "71--77",
+   keyword = "I/O benchmark, transaction processing",
+   comment = "See wolman:iobench. Used IOBENCH to compare normal disk
+configuration with striped disks, RAID level 1, and RAID level 5,
+under a random I/O workload. Multiple disks with files on different
+disks gave good performance (high throughput  and low response time)
+when multiple users. Striping ensures balanced load, similar
+performance. RAID level 1 or level 5 ensures reliability at
+performance cost over striping, but still good. Especially sensitive
+to write/read ratio --- performance lost for large number of writes."
+}
+
+@techreport{park:pario,
+    author = "Arvin Park and K. Balasubramanian",
+    title = "Providing Fault Tolerance in Parallel Secondary Storage
+Systems",
+    number = "CS-TR-057-86",
+    institution = "Department of Computer Science, Princeton University",
+    month = nov,
+    year = 1986,
+    comment = "They use ECC with one or more parity drives in
+bit-interleaved systems, and on-line regeneration of failed drives
+from spares. More cost-effective than mirrored disks.",
+    keyword = "parallel I/O, reliability"
+}
+
+@inproceedings{patterson:raid,
+    author = "David Patterson and Garth Gibson and Randy Katz",
+    title = "A case for redundant arrays of inexpensive disks {(RAID)}",
+    booktitle = sigmodconf,
+    month = jun,
+    year = 1988,
+    pages = "109--116",
+    comment = "Make a good case for the upcoming I/O crisis,
+compare single large expensive disks (SLED) with small cheap disks.
+Outline five levels of RAID the give different reliabilities, costs,
+and performances. Block-interleaved with a single check disk (level 4)
+or with check blocks interspersed (level 5) seem to give best
+performance for supercomputer I/O or database I/O or both. Note: the
+TR by the same name (UCB/CSD 87/391) is essentially identical.",
+    keyword = "parallel I/O, RAID, reliability, cost analysis, I/O
+bottleneck, disk array"
+}
+
+@inproceedings{patterson:raid2,
+    author = "David Patterson and Peter Chen and Garth Gibson and
+Randy H. Katz",
+    title = "Introduction to Redundant Arrays of Inexpensive Disks {(RAID)}",
+    booktitle = compcon,
+    month = "Spring",
+    year = 1989,
+    pages = "112--117",
+    comment = "A short version of patterson:raid, with some slight updates.",
+    keyword = "parallel I/O, RAID, reliability, cost analysis, I/O
+bottleneck, disk array"
+}
+
+@inproceedings{pierce:pario,
+    author = "Paul Pierce",
+    title = "A Concurrent File System for a Highly Parallel Mass
+    Storage System",
+    booktitle = hyper89,
+    year = 1989,
+    pages = "155--160",
+    comment = "Chose to tailor system for high performance for
+large files, read in large chunks. Uniform logical file system view,
+Unix stdio interface. Blocks scattered over all disks, but not
+striped. Blocksize 4K optimizes message-passing performance without
+using blocks that are too big. Tree-directory is stored in ONE file
+and managed by ONE process, so opens are bottlenecked, but that is not
+their emphasis. File headers, however, are scattered. The file header
+info contains a list of blocks. File header is managed by disk process
+on its I/O node. Data caching is done only at the I/O node of the
+originating disk drive.",
+    keyword = "parallel I/O, hypercube, IPSC2, parallel file system" 
+}
+
+@InProceedings{pratt:twofs,
+  author = 	"Terrence W. Pratt and James C. French and Phillip M.
+			  Dickens and Janet, Jr., Stanley A.",
+  title = 	"A Comparison of the Architecture and Performance of
+			  Two Parallel File Systems",
+  booktitle = 	hyper89,
+  year = 	1989,
+  pages = 	"161--166",
+  keyword = "verify publication, parallel I/O, IPSC2, NCUBE",
+  comment = "Comparison of the iPSC/2 and NCUBE/10 parallel I/O
+			  systems. Short description of each system, with
+			  simple transfer rate measurements. See also
+			  french:ipsc2io-tr." 
+}
+
+@inproceedings{reddy:hyperio1,
+    author = "A. L. Reddy and P. Banerjee and Santosh G. Abraham",
+    title = "{I/O} Embedding in Hypercubes",
+    booktitle = icpp88,
+    year = 1988,
+    volume = 1,
+    pages = "331--338",
+    comment = "Emphasis is on adjacency (as usual for hypercube
+stuff), though this seems to be less important with more machines
+using fancy routers. Is also implies (and they assume) that data is
+distributed well across the disks so no data needs to move beyond the
+neighbors of an I/O node. Still, the idea of adjacency is good since
+it allows for good data distribution while not requiring it, and for
+balancing I/O procs among procs in a good way. Also avoids messing up
+the hypercube regularity with dedicated I/O nodes. ",
+    keyword = "parallel I/O, hypercube"
+}
+
+@inproceedings{reddy:hyperio2,
+    author = "A. L. Reddy and P. Banerjee",
+    title = "{I/O} issues for hypercubes",
+    booktitle = superc,
+    year = 1989,
+    note = "To appear",
+    keyword = "verify pages, parallel I/O, hypercube"
+}
+
+@article{reddy:hyperio3,
+    author = "A. L. Narasimha Reddy and Prithviraj Banerjee",
+    title = "Design, Analysis, and Simulation of {I/O} Architectures
+for Hypercube Multiprocessors",
+    journal = ieeetpds,
+    month = apr,
+    year = 1990,
+    volume = 1,
+    number = 2,
+    pages = "140--151",
+    comment = "An overall paper restating their embedding technique
+from reddy:hyperio1, plus a little bit of evaluation along the lines
+of reddy:pario2, plus some ideas about matrix layout on the disks.
+They claim that declustering is important, since synchronized disks do
+not provide enough parallelism, especially in the communication across
+the hypercube (since the synchronized disks must hang off one node). ",
+    keyword = "parallel I/O, hypercube"
+}
+
+@inproceedings{reddy:pario,
+    author = "A. Reddy and P. Banerjee",
+    title = "An Evaluation of multiple-disk {I/O} systems",
+    booktitle = icpp89,
+    year = 1989,
+    pages = "I:315--322",
+    comment = "see also expanded version reddy:pario2",
+    keyword = "parallel I/O, disk array, disk striping"
+}
+
+@article{reddy:pario2,
+    author = "A. Reddy and P. Banerjee",
+    title = "Evaluation of multiple-disk {I/O} systems",
+    journal = ieeetc,
+    month = dec,
+    year = 1989,
+    volume = 38,
+    pages = "1680--1690",
+    comment = "see version reddy:pario. Compares declustered
+disks (sortof MIMD-like) to synchronized-interleaved (SIMD-like).
+Declustering needed for scalability, and is better for scientific
+workloads. Handles large parallelism needed for scientific workloads
+and for RAID-like architectures. Synchronized interleaving is better
+for general file system workloads due to better utilization and
+reduction of seek overhead.",
+    keyword = "parallel I/O, disk array, disk striping"
+}
+
+@article{reddy:pario3,
+    author = "A. L. Reddy and Prithviraj Banerjee",
+    title = "A Study of Parallel Disk Organizations",
+    journal = archnews,
+    year = 1989,
+    month = sep,
+    volume = 17,
+    number = 5,
+    pages = "40--47",
+    comment = "nothing new over expanded version reddy:pario2, little
+different from reddy:pario",
+    keyword = "parallel I/O, disk array, disk striping"
+}
+
+@article{rettberg:monarch,
+    author = "Randall D. Rettberg and William R. Crowther and Philip
+P. Carvey and Raymond S. Tomlinson",
+    title = "The {Monarch Parallel Processor} Hardware Design",
+    journal = ieeecomp,
+    month = apr,
+    year = 1990,
+    volume = 23,
+    number = 4,
+    pages = "18--30",
+    comment = "This describes the Monarch computer from BBN. At this
+point it seems unlikely to be built, though the article does not say
+this. 65K processors and memory modules. 65GB RAM. Bfly-style switch
+in dance-hall layout.  Switch is synchronous; one switch time is a
+{\em frame} (one microsecond, equal to 3 processor cycles) and all
+processors may reference memory in one frame time. Local I-cache
+only.y Contention reduces full bandwidth by 16 percent. Full 64-bit
+machine.  Custom VLSI. Each memory location has 8 tag bits. One allows
+for a location to be locked by a processor.  Thus, any FetchAndOp or
+full/empty model can be supported. I/O is done by adding I/O
+processors (up to 2K in a 65K-proc machine) in the switch. They plan
+200 disks, each with an I/O processor, for 65K nodes. They would
+spread each block over 9 disks, including one for parity (essentially
+RAID).",
+    keyword = "MIMD, parallel architecture, shared memory, parallel I/O"
+}
+
+@inproceedings{salem:diskstripe,
+    author = "Kenneth Salem and Hector Garcia-Molina",
+    title = "Disk Striping",
+    booktitle = "IEEE 1986 Conference on Data Engineering",
+    year = 1986,
+    pages = "336--342",
+    comment = "See the techreport salem:striping for a nearly
+identical but more detailed version.",
+    keyword = "parallel I/O, disk striping, disk array"
+}
+
+@techreport{salem:striping, 
+    author = "Kenneth Salem and Hector Garcia-Molina",
+    title = "Disk Striping", 
+    institution = "EECS Dept. Princeton Univ.", 
+    number = 332, 
+    year = 1984, 
+    month = dec, 
+    comment = "Cite salem:diskstripe instead. Basic paper on striping.
+For uniprocessor, single-user machine. Interleaving asynchronous, even
+without matching disk locations though this is discussed. All done
+with models.",
+    keyword = "parallel I/O, disk striping, disk array"
+}
+
+@techreport{schulze:raid,
+    author = "Martin Schulze", 
+    title = "Considerations in the Design of a {RAID} Prototype",
+    number = "UCB/CSD 88/448",
+    month = aug,
+    year = 1988,
+    institution = "UC Berkeley",
+    comment = "Practical description of the RAID I prototype.",
+    keyword = "parallel I/O, RAID, disk array, disk hardware"
+}
+
+@inproceedings{schulze:raid2,
+    author = "Martin Schulze and Garth Gibson and Randy Katz and David
+Patterson", 
+    title = "How Reliable is a {RAID}?",
+    booktitle = compcon,
+    year = 1989,
+    month = "Spring",
+    comment = "Published version of second paper in chen:raid. Some
+overlap with schulze:raid, though that paper has more detail.",
+    keyword = "parallel I/O, reliability, RAID, disk array, disk hardware"
+}
+
+@mastersthesis{stabile:disks,
+    author = "James Joseph Stabile",
+    title = "Disk Scheduling Algorithms for a Multiple Disk
+System",
+    school = "UC Davis",
+    year = 1988,
+    comment = "Describes simulation based on model of disk access
+pattern. Multiple-disk system, much like in matloff:multidisk. Files
+stored in two copies, each on a separate disk, but there are more than
+two disks, so this differs from mirroring. He compares several disk
+scheduling algorithms. A variant of SCAN seems to be the best.",
+    keyword = "parallel I/O, parallel file system, mirrored disk, disk
+scheduling"
+}
+
+@article{stone:query,
+    author = "Harold S. Stone",
+    title = "Parallel Querying of Large Databases: {A} Case
+    Study",
+    journal = ieeecomp,
+    year = 1987,
+    month = oct,
+    volume = 20,
+    number = 10,
+    pages = "11--21",
+    comment = "See also IEEE Computer, Jan 1988, p. 8 and 10.
+Examines a database query that is parallelized for the Connection
+Machine. He shows that in many cases, a smarter serial algorithm that
+reads only a portion of the database (through an index) will be faster
+than 64K processors reading the whole database. Uses a simple model
+for the machines to show this. Reemphasizes the point of Boral and
+DeWitt that I/O is the bottleneck of a database machine, and that
+parallelizing the processing will not necessarily help a great deal.",
+    keyword = "parallel I/O, database, SIMD, connection machine"
+}
+
+@Unpublished{taber:metadisk,
+  author = "David Taber",
+  title = "{MetaDisk} Driver Technical Description",
+  note = "SunFlash electronic mailing list 22(9)",
+  year = 1990,
+  month = oct,
+  keyword = "disk mirroring, parallel I/O",
+  comment = "MetaDisk is a addition to the Sun SPARCstation
+			  server kernel. It allows disk mirroring between any
+			  two local disk partitions, or concatenation of
+			  several disk partitions into one larger partition.
+			  Can span up to 4 partitions simultaneously. Appears
+			  not to be striped, just allows bigger partitions, and
+			  (by chance) some parallel I/O for large files."
+}
+
+@booklet{teradata:dbc,
+    key = "Teradata",
+    howpublished = "Teradata Corporation Booklet",
+    title = "{DBC/1012}",
+    year = 1988,
+    keyword = "parallel I/O, database machine, Teradata"
+}
+
+% Ok to have an "empty author" warning here
+@techreport{think:cm-2,
+    key = "TM",
+    title = "Connection Machine Model {CM-2} Technical Summary",
+    institution = "Thinking Machines",
+    number = "HA87-4",
+    month = apr,
+    year = 1987,
+    comment = "I/O and Data Vault, pp. 27--30",
+    keyword = "parallel I/O, connection machine, disk hardware, SIMD"
+}
+
+@inproceedings{towsley:cpuio,
+    author = "Donald F. Towsley",
+    title = "The Effects of {CPU: I/O} Overlap in Computer System
+    Configurations",
+    booktitle = carch5,
+    pages = "238--241",
+    year = 1978,
+    month = apr,
+    comment = "Difficult to follow since it is missing its
+figures. ``Our most important result is that multiprocessor systems
+can benefit considerably more than single processor systems with the
+introduction of CPU: I/O overlap.''  They overlap I/O needed by some
+future CPU sequence with the current CPU operation. They claim it
+looks good for large numbers of processors. Their orientation seems to
+be for multiprocessors operating on independent tasks.",
+    keyword = "parallel processing, I/O"
+}
+
+@article{towsley:cpuio-parallel,
+    author = "D. Towsley and K. M. Chandy and J. C. Browne",
+    title = "Models for Parallel Processing within Programs:
+    {Application} to {CPU: I/O} and {I/O: I/O} Overlap",
+    journal = cacm,
+    month = oct,
+    year = 1978,
+    volume = 21,
+    number = 10,
+    pages = "821--831",
+    comment = "Models CPU:I/O and I/O:I/O overlap within a program.
+Not particularly exciting. ``Overlapping is helpful only when it allows
+a device to be utilized which would not be utilized without
+overlapping.'' In general the overlapping seems to help.",
+    keyword = "parallel processing, I/O"
+}
+
+@Manual{vms:stripe,
+  key = "DEC",
+  title = 	"{VAX} Disk Striping Driver for {VMS}",
+  organization = 	"Digital Equipment Corporation",
+  year = 	1989,
+  month = 	dec,
+  note = 	"Order Number AA-NY13A-TE",
+  keyword = "disk striping",
+  comment = "Describes the VAX disk striping driver. Stripes an
+			  apparently arbitrary number of disk devices. All
+			  devices must be the same type, and
+			  apparently completely used. Manager can specify
+			  ``chunksize'', the number of logical blocks per
+			  striped block. They suggest using the track size of
+			  the device as the chunk size. They also point out
+			  that multiple controllers should be used in order to
+			  gain parallelism."
+}
+
+@inproceedings{wilcke:victor,
+   author = "W. W. Wilcke and D. G. Shea and R. C. Booth and D. H.
+Brown and M. F. Giampapa and L. Huisman and G. R. Irwin and E. Ma and
+T. T. Murakami and F. T. Tong and P. R. Varker and D. J. Zukowski",
+   title = "The {IBM Victor} Multiprocessor Project",
+   booktitle = hyper89,
+   year = 1989,
+   pages = "201--207",
+   comment = "Interesting architecture. Transputers arranged in a 2-D
+mesh with one disk for each column, and one graphics host for each
+quadrant. Each disk has its own controller (PID).  This paper says
+little about I/O, and application examples include no I/O.
+Message-passing paradigm, although messages must pass through the CPUs
+along the route.",
+   keyword = "parallel architecture, MIMD, message passing, parallel I/O" 
+}
+
+@techreport{wilkes:datamesh,
+    author = "John Wilkes",
+    title = "{DataMesh} - scope and objectives: a commentary",
+    institution = "Hewlett-Packard",
+    number = "HP-DSD-89-44",
+    month = jul,
+    year = 1989,
+    keyword = "parallel I/O, distributed systems, disk caching",
+    comment = "Interesting ``proposal'' for a project at HP, that
+hooks a heterogeneous set of storage devices together over a fast
+interconnect, each with its own identical processor. The whole would
+then act as a file server for a network. Data storage devices would
+range from fast to slow (e.g. optical jukebox), varying availability,
+and so on. Many ideas here but few concrete suggestions. Very little
+mention of algorithms they might use to control the thing. Have to
+watch for further developments. "
+}
+
+@inproceedings{witkowski:hyper-fs,
+    author = "Andrew Witkowski and Kumar Chandrakumar and Greg
+Macchio",
+    title = "Concurrent {I/O} System for the {Hypercube} Multiprocessor",
+    booktitle = hyper88,
+    year = 1988,
+    pages = "1398--1407",
+    comment = "Concrete system for the Hypercube. Files resident on
+one disk only. Little support for cooperation except for
+sequentialized access to parts of the file, or broadcast. No mention
+of random-access files. I/O nodes are distinguished from computation
+nodes. I/O nodes have separate communication network. No parallel
+access. I/O hooked to front-end too.",
+    keyword = "parallel I/O, hypercube, parallel file system"
+}
+

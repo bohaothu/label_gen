@@ -1,0 +1,1452 @@
+
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>
+  josephwright / biblatex-science / source &mdash; Bitbucket
+</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="description" content="" />
+  <meta name="keywords" content="" />
+  <!--[if lt IE 9]>
+  <script src="https://dwz7u9t8u8usb.cloudfront.net/m/46c15ee9bc85/js/lib/html5.js"></script>
+  <![endif]-->
+
+  <script>
+    (function (window) {
+      // prevent stray occurrences of `console.log` from causing errors in IE
+      var console = window.console || (window.console = {});
+      console.log || (console.log = function () {});
+
+      var BB = window.BB || (window.BB = {});
+      BB.debug = false;
+      BB.cname = false;
+      BB.CANON_URL = 'https://bitbucket.org';
+      BB.MEDIA_URL = 'https://dwz7u9t8u8usb.cloudfront.net/m/46c15ee9bc85/';
+      BB.user || (BB.user = {});
+      BB.user.has = (function () {
+        var betaFeatures = [];
+        
+        return function (feature) {
+          return _.contains(betaFeatures, feature);
+        };
+      }());
+      BB.repo || (BB.repo = {});
+  
+  
+      BB.user.isAdmin = false
+      BB.repo.id = 60294;
+    
+    
+      BB.repo.slug = 'biblatex\u002Dscience';
+    
+    
+      BB.repo.owner = {
+        username: 'josephwright'
+      };
+    
+      // Coerce `BB.repo` to a string to get
+      // "davidchambers/mango" or whatever.
+      BB.repo.toString = function () {
+        return this.owner.username + '/' + this.slug;
+      }
+    
+      BB.changeset = '35c9120ce743'
+    
+    
+  
+    }(this));
+  </script>
+
+  
+    <link rel="stylesheet" href="https://dwz7u9t8u8usb.cloudfront.net/m/46c15ee9bc85/bun/css/bundle.css"/>
+  
+
+  <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="Bitbucket" />
+  <link rel="icon" href="https://dwz7u9t8u8usb.cloudfront.net/m/46c15ee9bc85/img/logo_new.png" type="image/png" />
+  <link type="text/plain" rel="author" href="/humans.txt" />
+
+
+  
+    <script src="https://dwz7u9t8u8usb.cloudfront.net/m/46c15ee9bc85/bun/js/bundle.js"></script>
+  
+
+
+
+</head>
+
+<body class="">
+  <script type="text/javascript">
+    if (!RegExp(" AppleWebKit/").test(navigator.userAgent)) {
+    $('body').addClass('non-webkit');
+    }
+  </script>
+  <!--[if IE 8]>
+  <script>jQuery(document.body).addClass('ie8')</script>
+  <![endif]-->
+  <!--[if IE 9]>
+  <script>jQuery(document.body).addClass('ie9')</script>
+  <![endif]-->
+
+  <div id="wrapper">
+
+
+
+  <div id="header-wrap">
+    <div id="header">
+    <ul id="global-nav">
+      <li><a class="home" href="http://www.atlassian.com">Atlassian Home</a></li>
+      <li><a class="docs" href="http://confluence.atlassian.com/display/BITBUCKET">Documentation</a></li>
+      <li><a class="support" href="/support">Support</a></li>
+      <li><a class="blog" href="http://blog.bitbucket.org">Blog</a></li>
+      <li><a class="forums" href="http://groups.google.com/group/bitbucket-users">Forums</a></li>
+    </ul>
+    <a href="/" id="logo">Bitbucket by Atlassian</a>
+
+    <div id="main-nav" class="clearfix">
+    
+      <ul class="clearfix">
+        <li><a href="/features">Features</a></li>
+        <li><a href="/plans">Pricing &amp; signup</a></li>
+        <li><a href="/explore">Explore Bitbucket</a></li>
+        <li><a href="/account/signin/?next=/josephwright/biblatex-science/src/35c9120ce743/biblatex-science.bib">Log in</a></li>
+        
+
+<li class="search-box">
+  
+    <form action="/repo/all">
+      <input type="search" results="5" autosave="bitbucket-explore-search"
+             name="name" id="searchbox"
+             placeholder="Find a project" />
+  
+  </form>
+</li>
+
+      </ul>
+    
+    </div>
+    </div>
+  </div>
+
+    <div id="header-messages">
+  
+  
+    
+    
+    
+    
+  
+
+    
+   </div>
+
+
+
+    <div id="content">
+      <div id="unnamed">
+      
+  
+  
+
+
+
+
+
+  <script>
+    jQuery(function ($) {
+        var cookie = $.cookie,
+            cookieOptions, date,
+            $content = $('#content'),
+            $pane = $('#what-is-bitbucket'),
+            $hide = $pane.find('[href="#hide"]').css('display', 'block').hide();
+
+        date = new Date();
+        date.setTime(date.getTime() + 365 * 24 * 60 * 60 * 1000);
+        cookieOptions = { path: '/', expires: date };
+
+        if (cookie('toggle_status') == 'hide') $content.addClass('repo-desc-hidden');
+
+        $('#toggle-repo-content').click(function (event) {
+            event.preventDefault();
+            $content.toggleClass('repo-desc-hidden');
+            cookie('toggle_status', cookie('toggle_status') == 'show' ? 'hide' : 'show', cookieOptions);
+        });
+
+        if (!cookie('hide_intro_message')) $pane.show();
+
+        $hide.click(function (event) {
+            event.preventDefault();
+            cookie('hide_intro_message', true, cookieOptions);
+            $pane.slideUp('slow');
+        });
+
+        $pane.hover(
+            function () { $hide.fadeIn('fast'); },
+            function () { $hide.fadeOut('fast'); });
+
+      (function () {
+        // Update "recently-viewed-repos" cookie for
+        // the "repositories" drop-down.
+        var
+          id = BB.repo.id,
+          cookieName = 'recently-viewed-repos_' + BB.user.id,
+          rvr = cookie(cookieName),
+          ids = rvr? rvr.split(','): [],
+          idx = _.indexOf(ids, '' + id);
+
+        // Remove `id` from `ids` if present.
+        if (~idx) ids.splice(idx, 1);
+
+        cookie(
+          cookieName,
+          // Insert `id` as the first item, then call
+          // `join` on the resulting array to produce
+          // something like "114694,27542,89002,84570".
+          [id].concat(ids.slice(0, 4)).join(),
+          {path: '/', expires: 1e6} // "never" expires
+        );
+      }());
+    });
+  </script>
+
+
+
+  
+  
+  
+  
+  
+    <div id="what-is-bitbucket" class="new-to-bitbucket">
+      <h2>Joseph Wright <span id="slogan">is sharing code with you</span></h2>
+      <img src="https://secure.gravatar.com/avatar/b03f5bc06e8f0abab0061774a597df9b?d=identicon&s=32" alt="" class="avatar" />
+      <p>Bitbucket is a code hosting site. Unlimited public and private repositories. Free for small teams.</p>
+      <div class="primary-action-link signup"><a href="/account/signup/?utm_source=internal&utm_medium=banner&utm_campaign=what_is_bitbucket">Try Bitbucket free</a></div>
+      <a href="#hide" title="Don't show this again">Don't show this again</a>
+    </div>
+  
+
+
+<div id="tabs">
+  <ul class="tabs">
+    <li>
+      <a href="/josephwright/biblatex-science/overview">Overview</a>
+    </li>
+
+    <li>
+      <a href="/josephwright/biblatex-science/downloads">Downloads (<span id="downloads-count">0</span>)</a>
+    </li>
+
+    
+
+    <li>
+      <a href="/josephwright/biblatex-science/pull-requests">Pull requests (0)</a>
+    </li>
+
+    <li class="selected">
+      
+        <a href="/josephwright/biblatex-science/src">Source</a>
+      
+    </li>
+
+    <li>
+      <a href="/josephwright/biblatex-science/changesets">Commits</a>
+    </li>
+
+    
+      
+        <li class="dropdown">
+          <a href="/josephwright/biblatex-science/wiki">Wiki</a>
+        </li>
+      
+    
+
+    
+      
+        <li class="dropdown inertial-hover">
+          <a href="/josephwright/biblatex-science/issues?status=new&amp;status=open">Issues (0) &raquo;</a>
+          <ul>
+            <li><a href="/josephwright/biblatex-science/issues/new">Create new issue</a></li>
+            <li><a href="/josephwright/biblatex-science/issues?status=new">New issues</a></li>
+            <li><a href="/josephwright/biblatex-science/issues?status=new&amp;status=open">Open issues</a></li>
+            <li><a href="/josephwright/biblatex-science/issues?status=duplicate&amp;status=invalid&amp;status=resolved&amp;status=wontfix">Closed issues</a></li>
+            
+            <li><a href="/josephwright/biblatex-science/issues">All issues</a></li>
+            <li><a href="/josephwright/biblatex-science/issues/query">Advanced query</a></li>
+          </ul>
+        </li>
+      
+    
+
+    
+
+    <li class="secondary">
+      <a href="/josephwright/biblatex-science/descendants">Forks/queues (0)</a>
+    </li>
+
+    <li class="secondary">
+      <a href="/josephwright/biblatex-science/zealots">Followers (<span id="followers-count">1</span>)</a>
+    </li>
+  </ul>
+</div>
+
+
+  <div class="repo-menu" id="repo-menu">
+    <ul id="repo-menu-links">
+    
+      <li>
+        <a href="/josephwright/biblatex-science/rss" class="rss" title="RSS feed for biblatex-science">RSS</a>
+      </li>
+
+      <li><a href="/josephwright/biblatex-science/fork" class="fork">fork</a></li>
+      
+        
+          <li><a href="/josephwright/biblatex-science/hack" class="patch-queue">patch queue</a></li>
+        
+      
+      <li>
+        <a rel="nofollow" href="/josephwright/biblatex-science/follow" class="follow">follow</a>
+      </li>
+      
+          
+      
+      
+        <li class="get-source inertial-hover">
+          <a class="source">get source</a>
+          <ul class="downloads">
+            
+              
+              <li><a rel="nofollow" href="/josephwright/biblatex-science/get/35c9120ce743.zip">zip</a></li>
+              <li><a rel="nofollow" href="/josephwright/biblatex-science/get/35c9120ce743.tar.gz">gz</a></li>
+              <li><a rel="nofollow" href="/josephwright/biblatex-science/get/35c9120ce743.tar.bz2">bz2</a></li>
+            
+          </ul>
+        </li>
+      
+    </ul>
+
+  
+    <ul class="metadata">
+      
+      
+        <li class="branches inertial-hover">branches
+          <ul>
+            <li><a href="/josephwright/biblatex-science/src/547cec4fb5c1">default</a>
+              
+              
+            </li>
+          </ul>
+        </li>
+      
+      
+      <li class="tags inertial-hover">tags
+        <ul>
+          <li><a href="/josephwright/biblatex-science/src/547cec4fb5c1">tip</a>
+            
+            </li>
+          <li><a href="/josephwright/biblatex-science/src/3afc8151c97b">v1.1</a>
+            
+            
+              <a rel="nofollow" class='menu-compare'
+                 href="/josephwright/biblatex-science/compare/..v1.1"
+                 title="Show changes between v1.1 and the main branch.">compare</a>
+            </li>
+          <li><a href="/josephwright/biblatex-science/src/35c9120ce743">v1.0a</a>
+            
+            
+              <a rel="nofollow" class='menu-compare'
+                 href="/josephwright/biblatex-science/compare/..v1.0a"
+                 title="Show changes between v1.0a and the main branch.">compare</a>
+            </li>
+          <li><a href="/josephwright/biblatex-science/src/ac6395ced29c">v1.0</a>
+            
+            
+              <a rel="nofollow" class='menu-compare'
+                 href="/josephwright/biblatex-science/compare/..v1.0"
+                 title="Show changes between v1.0 and the main branch.">compare</a>
+            </li>
+          <li><a href="/josephwright/biblatex-science/src/b1e9a248652c">v0.9b</a>
+            
+            
+              <a rel="nofollow" class='menu-compare'
+                 href="/josephwright/biblatex-science/compare/..v0.9b"
+                 title="Show changes between v0.9b and the main branch.">compare</a>
+            </li>
+          <li><a href="/josephwright/biblatex-science/src/e33a24359e14">v0.9a</a>
+            
+            
+              <a rel="nofollow" class='menu-compare'
+                 href="/josephwright/biblatex-science/compare/..v0.9a"
+                 title="Show changes between v0.9a and the main branch.">compare</a>
+            </li>
+          <li><a href="/josephwright/biblatex-science/src/ffad3046de99">v0.9</a>
+            
+            
+              <a rel="nofollow" class='menu-compare'
+                 href="/josephwright/biblatex-science/compare/..v0.9"
+                 title="Show changes between v0.9 and the main branch.">compare</a>
+            </li>
+          <li><a href="/josephwright/biblatex-science/src/bfed1467e5d3">v0.8a</a>
+            
+            
+              <a rel="nofollow" class='menu-compare'
+                 href="/josephwright/biblatex-science/compare/..v0.8a"
+                 title="Show changes between v0.8a and the main branch.">compare</a>
+            </li>
+          <li><a href="/josephwright/biblatex-science/src/9cb5c55c34ec">v0.8</a>
+            
+            
+              <a rel="nofollow" class='menu-compare'
+                 href="/josephwright/biblatex-science/compare/..v0.8"
+                 title="Show changes between v0.8 and the main branch.">compare</a>
+            </li>
+        </ul>
+      </li>
+     
+     
+    </ul>
+  
+</div>
+<div class="repo-menu" id="repo-desc">
+  
+    <ul id="repo-menu-links-mini">
+      <li><a rel="nofollow" class="compare-link"
+             href="/josephwright/biblatex-science/compare/../"
+             title="Show changes between biblatex-science and "
+             ></a></li>
+      
+  
+
+      
+      <li>
+        <a href="/josephwright/biblatex-science/rss" class="rss" title="RSS feed for biblatex-science"></a>
+      </li>
+
+      <li><a href="/josephwright/biblatex-science/fork" class="fork" title="Fork"></a></li>
+      
+        
+          <li><a href="/josephwright/biblatex-science/hack" class="patch-queue" title="Patch queue"></a></li>
+        
+      
+      <li>
+        <a rel="nofollow" href="/josephwright/biblatex-science/follow" class="follow">follow</a>
+      </li>
+      
+          
+      
+    
+      
+        <li>
+          <a class="source" title="Get source"></a>
+          <ul class="downloads">
+            
+              
+                <li><a rel="nofollow" href="/josephwright/biblatex-science/get/547cec4fb5c1.zip">zip</a></li>
+                <li><a rel="nofollow" href="/josephwright/biblatex-science/get/547cec4fb5c1.tar.gz">gz</a></li>
+                <li><a rel="nofollow" href="/josephwright/biblatex-science/get/547cec4fb5c1.tar.bz2">bz2</a></li>
+              
+            
+          </ul>
+        </li>
+      
+    
+    </ul>
+
+    <h3 id="repo-heading">
+      <a class="owner-username" href="/josephwright">josephwright</a> /
+      <a class="repo-name" href="/josephwright/biblatex-science">biblatex-science</a>
+    
+      <span><a href="http://www.texdev.net/">http://texdev.net/</a></span>
+    
+
+    
+    </h3>
+
+
+  <p class="repo-desc-description">Provides a bibliography style for the LaTeX biblatex package following the requirements of the journal Science</p>
+
+
+  <div id="repo-desc-cloneinfo">Clone this repository (size: 47.0 KB):
+    <a href="https://bitbucket.org/josephwright/biblatex-science" class="https">HTTPS</a> /
+    <a href="ssh://hg@bitbucket.org/josephwright/biblatex-science" class="ssh">SSH</a>
+    <pre id="clone-url-https">hg clone https://bitbucket.org/josephwright/biblatex-science</pre>
+    <pre id="clone-url-ssh">hg clone ssh://hg@bitbucket.org/josephwright/biblatex-science</pre>
+    
+  </div>
+
+  <a href="#" id="toggle-repo-content"></a>
+
+  
+
+</div>
+
+
+
+
+      
+
+  <div id="source-path">
+    <h1>
+      <a href="/josephwright/biblatex-science/src">biblatex-science</a> /
+
+  
+    
+      biblatex-science.bib
+    
+  
+
+    </h1>
+  </div>
+
+
+  
+  <div id="source-view">
+    <div class="header">
+      <ul class="metadata">
+        <li><code>35c9120ce743</code></li>
+        <li>421 loc</li>
+        <li>12.6 KB</li>
+      </ul>
+      <ul class="source-view-links">
+        
+        <li><a id="embed-link" href="https://bitbucket.org/josephwright/biblatex-science/src/35c9120ce743/biblatex-science.bib?embed=t">embed</a></li>
+        
+        <li><a href="/josephwright/biblatex-science/history/biblatex-science.bib">history</a></li>
+        
+        <li><a href="/josephwright/biblatex-science/annotate/35c9120ce743/biblatex-science.bib">annotate</a></li>
+        
+        <li><a href="/josephwright/biblatex-science/raw/35c9120ce743/biblatex-science.bib">raw</a></li>
+        <li>
+          <form action="/josephwright/biblatex-science/diff/biblatex-science.bib" class="source-view-form">
+          
+            <input type="hidden" name="diff2" value="ffad3046de99" />
+            <select name="diff1">
+            
+              
+                <option value="ff00e5cbb6f5">ff00e5cbb6f5</option>
+              
+            
+              
+                <option value="f0bf2741dc85">f0bf2741dc85</option>
+              
+            
+              
+                <option value="ffad3046de99">ffad3046de99</option>
+              
+            
+              
+                <option value="9cb5c55c34ec">9cb5c55c34ec</option>
+              
+            
+            </select>
+            <input type="submit" value="diff" />
+          
+          </form>
+        </li>
+      </ul>
+    </div>
+  
+    <div>
+    <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><a href="#cl-1">  1</a>
+<a href="#cl-2">  2</a>
+<a href="#cl-3">  3</a>
+<a href="#cl-4">  4</a>
+<a href="#cl-5">  5</a>
+<a href="#cl-6">  6</a>
+<a href="#cl-7">  7</a>
+<a href="#cl-8">  8</a>
+<a href="#cl-9">  9</a>
+<a href="#cl-10"> 10</a>
+<a href="#cl-11"> 11</a>
+<a href="#cl-12"> 12</a>
+<a href="#cl-13"> 13</a>
+<a href="#cl-14"> 14</a>
+<a href="#cl-15"> 15</a>
+<a href="#cl-16"> 16</a>
+<a href="#cl-17"> 17</a>
+<a href="#cl-18"> 18</a>
+<a href="#cl-19"> 19</a>
+<a href="#cl-20"> 20</a>
+<a href="#cl-21"> 21</a>
+<a href="#cl-22"> 22</a>
+<a href="#cl-23"> 23</a>
+<a href="#cl-24"> 24</a>
+<a href="#cl-25"> 25</a>
+<a href="#cl-26"> 26</a>
+<a href="#cl-27"> 27</a>
+<a href="#cl-28"> 28</a>
+<a href="#cl-29"> 29</a>
+<a href="#cl-30"> 30</a>
+<a href="#cl-31"> 31</a>
+<a href="#cl-32"> 32</a>
+<a href="#cl-33"> 33</a>
+<a href="#cl-34"> 34</a>
+<a href="#cl-35"> 35</a>
+<a href="#cl-36"> 36</a>
+<a href="#cl-37"> 37</a>
+<a href="#cl-38"> 38</a>
+<a href="#cl-39"> 39</a>
+<a href="#cl-40"> 40</a>
+<a href="#cl-41"> 41</a>
+<a href="#cl-42"> 42</a>
+<a href="#cl-43"> 43</a>
+<a href="#cl-44"> 44</a>
+<a href="#cl-45"> 45</a>
+<a href="#cl-46"> 46</a>
+<a href="#cl-47"> 47</a>
+<a href="#cl-48"> 48</a>
+<a href="#cl-49"> 49</a>
+<a href="#cl-50"> 50</a>
+<a href="#cl-51"> 51</a>
+<a href="#cl-52"> 52</a>
+<a href="#cl-53"> 53</a>
+<a href="#cl-54"> 54</a>
+<a href="#cl-55"> 55</a>
+<a href="#cl-56"> 56</a>
+<a href="#cl-57"> 57</a>
+<a href="#cl-58"> 58</a>
+<a href="#cl-59"> 59</a>
+<a href="#cl-60"> 60</a>
+<a href="#cl-61"> 61</a>
+<a href="#cl-62"> 62</a>
+<a href="#cl-63"> 63</a>
+<a href="#cl-64"> 64</a>
+<a href="#cl-65"> 65</a>
+<a href="#cl-66"> 66</a>
+<a href="#cl-67"> 67</a>
+<a href="#cl-68"> 68</a>
+<a href="#cl-69"> 69</a>
+<a href="#cl-70"> 70</a>
+<a href="#cl-71"> 71</a>
+<a href="#cl-72"> 72</a>
+<a href="#cl-73"> 73</a>
+<a href="#cl-74"> 74</a>
+<a href="#cl-75"> 75</a>
+<a href="#cl-76"> 76</a>
+<a href="#cl-77"> 77</a>
+<a href="#cl-78"> 78</a>
+<a href="#cl-79"> 79</a>
+<a href="#cl-80"> 80</a>
+<a href="#cl-81"> 81</a>
+<a href="#cl-82"> 82</a>
+<a href="#cl-83"> 83</a>
+<a href="#cl-84"> 84</a>
+<a href="#cl-85"> 85</a>
+<a href="#cl-86"> 86</a>
+<a href="#cl-87"> 87</a>
+<a href="#cl-88"> 88</a>
+<a href="#cl-89"> 89</a>
+<a href="#cl-90"> 90</a>
+<a href="#cl-91"> 91</a>
+<a href="#cl-92"> 92</a>
+<a href="#cl-93"> 93</a>
+<a href="#cl-94"> 94</a>
+<a href="#cl-95"> 95</a>
+<a href="#cl-96"> 96</a>
+<a href="#cl-97"> 97</a>
+<a href="#cl-98"> 98</a>
+<a href="#cl-99"> 99</a>
+<a href="#cl-100">100</a>
+<a href="#cl-101">101</a>
+<a href="#cl-102">102</a>
+<a href="#cl-103">103</a>
+<a href="#cl-104">104</a>
+<a href="#cl-105">105</a>
+<a href="#cl-106">106</a>
+<a href="#cl-107">107</a>
+<a href="#cl-108">108</a>
+<a href="#cl-109">109</a>
+<a href="#cl-110">110</a>
+<a href="#cl-111">111</a>
+<a href="#cl-112">112</a>
+<a href="#cl-113">113</a>
+<a href="#cl-114">114</a>
+<a href="#cl-115">115</a>
+<a href="#cl-116">116</a>
+<a href="#cl-117">117</a>
+<a href="#cl-118">118</a>
+<a href="#cl-119">119</a>
+<a href="#cl-120">120</a>
+<a href="#cl-121">121</a>
+<a href="#cl-122">122</a>
+<a href="#cl-123">123</a>
+<a href="#cl-124">124</a>
+<a href="#cl-125">125</a>
+<a href="#cl-126">126</a>
+<a href="#cl-127">127</a>
+<a href="#cl-128">128</a>
+<a href="#cl-129">129</a>
+<a href="#cl-130">130</a>
+<a href="#cl-131">131</a>
+<a href="#cl-132">132</a>
+<a href="#cl-133">133</a>
+<a href="#cl-134">134</a>
+<a href="#cl-135">135</a>
+<a href="#cl-136">136</a>
+<a href="#cl-137">137</a>
+<a href="#cl-138">138</a>
+<a href="#cl-139">139</a>
+<a href="#cl-140">140</a>
+<a href="#cl-141">141</a>
+<a href="#cl-142">142</a>
+<a href="#cl-143">143</a>
+<a href="#cl-144">144</a>
+<a href="#cl-145">145</a>
+<a href="#cl-146">146</a>
+<a href="#cl-147">147</a>
+<a href="#cl-148">148</a>
+<a href="#cl-149">149</a>
+<a href="#cl-150">150</a>
+<a href="#cl-151">151</a>
+<a href="#cl-152">152</a>
+<a href="#cl-153">153</a>
+<a href="#cl-154">154</a>
+<a href="#cl-155">155</a>
+<a href="#cl-156">156</a>
+<a href="#cl-157">157</a>
+<a href="#cl-158">158</a>
+<a href="#cl-159">159</a>
+<a href="#cl-160">160</a>
+<a href="#cl-161">161</a>
+<a href="#cl-162">162</a>
+<a href="#cl-163">163</a>
+<a href="#cl-164">164</a>
+<a href="#cl-165">165</a>
+<a href="#cl-166">166</a>
+<a href="#cl-167">167</a>
+<a href="#cl-168">168</a>
+<a href="#cl-169">169</a>
+<a href="#cl-170">170</a>
+<a href="#cl-171">171</a>
+<a href="#cl-172">172</a>
+<a href="#cl-173">173</a>
+<a href="#cl-174">174</a>
+<a href="#cl-175">175</a>
+<a href="#cl-176">176</a>
+<a href="#cl-177">177</a>
+<a href="#cl-178">178</a>
+<a href="#cl-179">179</a>
+<a href="#cl-180">180</a>
+<a href="#cl-181">181</a>
+<a href="#cl-182">182</a>
+<a href="#cl-183">183</a>
+<a href="#cl-184">184</a>
+<a href="#cl-185">185</a>
+<a href="#cl-186">186</a>
+<a href="#cl-187">187</a>
+<a href="#cl-188">188</a>
+<a href="#cl-189">189</a>
+<a href="#cl-190">190</a>
+<a href="#cl-191">191</a>
+<a href="#cl-192">192</a>
+<a href="#cl-193">193</a>
+<a href="#cl-194">194</a>
+<a href="#cl-195">195</a>
+<a href="#cl-196">196</a>
+<a href="#cl-197">197</a>
+<a href="#cl-198">198</a>
+<a href="#cl-199">199</a>
+<a href="#cl-200">200</a>
+<a href="#cl-201">201</a>
+<a href="#cl-202">202</a>
+<a href="#cl-203">203</a>
+<a href="#cl-204">204</a>
+<a href="#cl-205">205</a>
+<a href="#cl-206">206</a>
+<a href="#cl-207">207</a>
+<a href="#cl-208">208</a>
+<a href="#cl-209">209</a>
+<a href="#cl-210">210</a>
+<a href="#cl-211">211</a>
+<a href="#cl-212">212</a>
+<a href="#cl-213">213</a>
+<a href="#cl-214">214</a>
+<a href="#cl-215">215</a>
+<a href="#cl-216">216</a>
+<a href="#cl-217">217</a>
+<a href="#cl-218">218</a>
+<a href="#cl-219">219</a>
+<a href="#cl-220">220</a>
+<a href="#cl-221">221</a>
+<a href="#cl-222">222</a>
+<a href="#cl-223">223</a>
+<a href="#cl-224">224</a>
+<a href="#cl-225">225</a>
+<a href="#cl-226">226</a>
+<a href="#cl-227">227</a>
+<a href="#cl-228">228</a>
+<a href="#cl-229">229</a>
+<a href="#cl-230">230</a>
+<a href="#cl-231">231</a>
+<a href="#cl-232">232</a>
+<a href="#cl-233">233</a>
+<a href="#cl-234">234</a>
+<a href="#cl-235">235</a>
+<a href="#cl-236">236</a>
+<a href="#cl-237">237</a>
+<a href="#cl-238">238</a>
+<a href="#cl-239">239</a>
+<a href="#cl-240">240</a>
+<a href="#cl-241">241</a>
+<a href="#cl-242">242</a>
+<a href="#cl-243">243</a>
+<a href="#cl-244">244</a>
+<a href="#cl-245">245</a>
+<a href="#cl-246">246</a>
+<a href="#cl-247">247</a>
+<a href="#cl-248">248</a>
+<a href="#cl-249">249</a>
+<a href="#cl-250">250</a>
+<a href="#cl-251">251</a>
+<a href="#cl-252">252</a>
+<a href="#cl-253">253</a>
+<a href="#cl-254">254</a>
+<a href="#cl-255">255</a>
+<a href="#cl-256">256</a>
+<a href="#cl-257">257</a>
+<a href="#cl-258">258</a>
+<a href="#cl-259">259</a>
+<a href="#cl-260">260</a>
+<a href="#cl-261">261</a>
+<a href="#cl-262">262</a>
+<a href="#cl-263">263</a>
+<a href="#cl-264">264</a>
+<a href="#cl-265">265</a>
+<a href="#cl-266">266</a>
+<a href="#cl-267">267</a>
+<a href="#cl-268">268</a>
+<a href="#cl-269">269</a>
+<a href="#cl-270">270</a>
+<a href="#cl-271">271</a>
+<a href="#cl-272">272</a>
+<a href="#cl-273">273</a>
+<a href="#cl-274">274</a>
+<a href="#cl-275">275</a>
+<a href="#cl-276">276</a>
+<a href="#cl-277">277</a>
+<a href="#cl-278">278</a>
+<a href="#cl-279">279</a>
+<a href="#cl-280">280</a>
+<a href="#cl-281">281</a>
+<a href="#cl-282">282</a>
+<a href="#cl-283">283</a>
+<a href="#cl-284">284</a>
+<a href="#cl-285">285</a>
+<a href="#cl-286">286</a>
+<a href="#cl-287">287</a>
+<a href="#cl-288">288</a>
+<a href="#cl-289">289</a>
+<a href="#cl-290">290</a>
+<a href="#cl-291">291</a>
+<a href="#cl-292">292</a>
+<a href="#cl-293">293</a>
+<a href="#cl-294">294</a>
+<a href="#cl-295">295</a>
+<a href="#cl-296">296</a>
+<a href="#cl-297">297</a>
+<a href="#cl-298">298</a>
+<a href="#cl-299">299</a>
+<a href="#cl-300">300</a>
+<a href="#cl-301">301</a>
+<a href="#cl-302">302</a>
+<a href="#cl-303">303</a>
+<a href="#cl-304">304</a>
+<a href="#cl-305">305</a>
+<a href="#cl-306">306</a>
+<a href="#cl-307">307</a>
+<a href="#cl-308">308</a>
+<a href="#cl-309">309</a>
+<a href="#cl-310">310</a>
+<a href="#cl-311">311</a>
+<a href="#cl-312">312</a>
+<a href="#cl-313">313</a>
+<a href="#cl-314">314</a>
+<a href="#cl-315">315</a>
+<a href="#cl-316">316</a>
+<a href="#cl-317">317</a>
+<a href="#cl-318">318</a>
+<a href="#cl-319">319</a>
+<a href="#cl-320">320</a>
+<a href="#cl-321">321</a>
+<a href="#cl-322">322</a>
+<a href="#cl-323">323</a>
+<a href="#cl-324">324</a>
+<a href="#cl-325">325</a>
+<a href="#cl-326">326</a>
+<a href="#cl-327">327</a>
+<a href="#cl-328">328</a>
+<a href="#cl-329">329</a>
+<a href="#cl-330">330</a>
+<a href="#cl-331">331</a>
+<a href="#cl-332">332</a>
+<a href="#cl-333">333</a>
+<a href="#cl-334">334</a>
+<a href="#cl-335">335</a>
+<a href="#cl-336">336</a>
+<a href="#cl-337">337</a>
+<a href="#cl-338">338</a>
+<a href="#cl-339">339</a>
+<a href="#cl-340">340</a>
+<a href="#cl-341">341</a>
+<a href="#cl-342">342</a>
+<a href="#cl-343">343</a>
+<a href="#cl-344">344</a>
+<a href="#cl-345">345</a>
+<a href="#cl-346">346</a>
+<a href="#cl-347">347</a>
+<a href="#cl-348">348</a>
+<a href="#cl-349">349</a>
+<a href="#cl-350">350</a>
+<a href="#cl-351">351</a>
+<a href="#cl-352">352</a>
+<a href="#cl-353">353</a>
+<a href="#cl-354">354</a>
+<a href="#cl-355">355</a>
+<a href="#cl-356">356</a>
+<a href="#cl-357">357</a>
+<a href="#cl-358">358</a>
+<a href="#cl-359">359</a>
+<a href="#cl-360">360</a>
+<a href="#cl-361">361</a>
+<a href="#cl-362">362</a>
+<a href="#cl-363">363</a>
+<a href="#cl-364">364</a>
+<a href="#cl-365">365</a>
+<a href="#cl-366">366</a>
+<a href="#cl-367">367</a>
+<a href="#cl-368">368</a>
+<a href="#cl-369">369</a>
+<a href="#cl-370">370</a>
+<a href="#cl-371">371</a>
+<a href="#cl-372">372</a>
+<a href="#cl-373">373</a>
+<a href="#cl-374">374</a>
+<a href="#cl-375">375</a>
+<a href="#cl-376">376</a>
+<a href="#cl-377">377</a>
+<a href="#cl-378">378</a>
+<a href="#cl-379">379</a>
+<a href="#cl-380">380</a>
+<a href="#cl-381">381</a>
+<a href="#cl-382">382</a>
+<a href="#cl-383">383</a>
+<a href="#cl-384">384</a>
+<a href="#cl-385">385</a>
+<a href="#cl-386">386</a>
+<a href="#cl-387">387</a>
+<a href="#cl-388">388</a>
+<a href="#cl-389">389</a>
+<a href="#cl-390">390</a>
+<a href="#cl-391">391</a>
+<a href="#cl-392">392</a>
+<a href="#cl-393">393</a>
+<a href="#cl-394">394</a>
+<a href="#cl-395">395</a>
+<a href="#cl-396">396</a>
+<a href="#cl-397">397</a>
+<a href="#cl-398">398</a>
+<a href="#cl-399">399</a>
+<a href="#cl-400">400</a>
+<a href="#cl-401">401</a>
+<a href="#cl-402">402</a>
+<a href="#cl-403">403</a>
+<a href="#cl-404">404</a>
+<a href="#cl-405">405</a>
+<a href="#cl-406">406</a>
+<a href="#cl-407">407</a>
+<a href="#cl-408">408</a>
+<a href="#cl-409">409</a>
+<a href="#cl-410">410</a>
+<a href="#cl-411">411</a>
+<a href="#cl-412">412</a>
+<a href="#cl-413">413</a>
+<a href="#cl-414">414</a>
+<a href="#cl-415">415</a>
+<a href="#cl-416">416</a>
+<a href="#cl-417">417</a>
+<a href="#cl-418">418</a>
+<a href="#cl-419">419</a>
+<a href="#cl-420">420</a>
+</pre></div></td><td class="code"><div class="highlight"><pre><a name="cl-1"></a>@Report{Allen1961,
+<a name="cl-2"></a>  hyphenation = {british},
+<a name="cl-3"></a>  author      = {Allen, R. A. and Smith, D. B. and Hiscott, J. 
+<a name="cl-4"></a>    E.},
+<a name="cl-5"></a>  title       = {Radioisotope Data},
+<a name="cl-6"></a>  institution = {H.M.S.O.},
+<a name="cl-7"></a>  location    = {London},
+<a name="cl-8"></a>  type        = {UKAEA Research Group Report},
+<a name="cl-9"></a>  number      = {AERE-R 2938},
+<a name="cl-10"></a>  year        = {1961}
+<a name="cl-11"></a>}
+<a name="cl-12"></a>
+<a name="cl-13"></a>@Article{Arduengo1991,
+<a name="cl-14"></a>  hyphenation = {american},
+<a name="cl-15"></a>  author      = {Arduengo, III, Anthony J. and Harlow, 
+<a name="cl-16"></a>    Richard L. and Kline, Michael},
+<a name="cl-17"></a>  title       = {A stable crystalline carbene},
+<a name="cl-18"></a>  journal     = {J.~Am. Chem. Soc.},
+<a name="cl-19"></a>  year        = {1991},
+<a name="cl-20"></a>  volume      = {113},
+<a name="cl-21"></a>  pages       = {361--363},
+<a name="cl-22"></a>  number      = {1},
+<a name="cl-23"></a>  doi         = {10.1021/ja00001a054},
+<a name="cl-24"></a>  annotation  = {An article with ``III&#39;&#39; in the author 
+<a name="cl-25"></a>    section}
+<a name="cl-26"></a>}
+<a name="cl-27"></a>
+<a name="cl-28"></a>@Patent{Arduengo2001,
+<a name="cl-29"></a>  author     = {Arduengo, III, Anthony J. and Gentry, Jr.,
+<a name="cl-30"></a>    Frederick P. and Taverkere,  Prakash~K. and Simmons, 
+<a name="cl-31"></a>    III, Howard E.},
+<a name="cl-32"></a>  title      = {Process for manufacture of imidazoles},
+<a name="cl-33"></a>  year       = {2001},
+<a name="cl-34"></a>  type       = {patentus},
+<a name="cl-35"></a>  holder     = {{E.~I. DuPont}},
+<a name="cl-36"></a>  number     = {6177575},
+<a name="cl-37"></a>  annotation =  {Notice the use of the \texttt{type} field
+<a name="cl-38"></a>    here},
+<a name="cl-39"></a>}
+<a name="cl-40"></a>
+<a name="cl-41"></a>@Book{Armarego2003,
+<a name="cl-42"></a>  hyphenation = {british},
+<a name="cl-43"></a>  title       = {Purification of Laboratory Chemicals},
+<a name="cl-44"></a>  publisher   = {Butterworth--Heine\-mann},
+<a name="cl-45"></a>  year        = {2003},
+<a name="cl-46"></a>  author      = {Armarego, W. L. F. and Chai, Christina Lin Li},
+<a name="cl-47"></a>  location    = {London},
+<a name="cl-48"></a>  edition     = {5},
+<a name="cl-49"></a>  annotation  = {A simple \texttt{book} entry}
+<a name="cl-50"></a>}
+<a name="cl-51"></a>
+<a name="cl-52"></a>@Book{Augustine1995,
+<a name="cl-53"></a>  hyphenation = {american},
+<a name="cl-54"></a>  author             = {Augustine, Robert L.},
+<a name="cl-55"></a>  title       = {Heterogeneous Catalysis for the Synthetic 
+<a name="cl-56"></a>    Chemist},
+<a name="cl-57"></a>  shorttitle  = {Heterogeneous catalysis},
+<a name="cl-58"></a>  publisher   = {Marcel Dekker},
+<a name="cl-59"></a>  location    = {New York},
+<a name="cl-60"></a>  year       = {1995},
+<a name="cl-61"></a>  annotation  = {A plain \texttt{book} entry, taken from the
+<a name="cl-62"></a>    \textsf{biblatex} examples}
+<a name="cl-63"></a>}
+<a name="cl-64"></a>
+<a name="cl-65"></a>@Article{Booth1962,
+<a name="cl-66"></a>  hyphenation  = {british},
+<a name="cl-67"></a>  author       = {Booth, G. and Chatt, J.},
+<a name="cl-68"></a>  title        = {The reactions of carbon monoxide and nitric 
+<a name="cl-69"></a>    oxide with tertiary phosphine complexes of iron(II), 
+<a name="cl-70"></a>    cobalt(II), and nickel(II)},
+<a name="cl-71"></a>  journaltitle = {J.~Chem. Soc.},
+<a name="cl-72"></a>  year         = {1962},
+<a name="cl-73"></a>  pages        = {2099--2106},
+<a name="cl-74"></a>  doi          = {10.1039/JR9620002099},
+<a name="cl-75"></a>  annotation   = {An article which does not have a volume number}
+<a name="cl-76"></a>}
+<a name="cl-77"></a>
+<a name="cl-78"></a>@Book{Coghill2006,
+<a name="cl-79"></a>  hyphenation = {american},
+<a name="cl-80"></a>  title       = {The ACS Style Guide},
+<a name="cl-81"></a>  publisher   = {Oxford University Press, Inc. and The 
+<a name="cl-82"></a>    American Chemical Society},
+<a name="cl-83"></a>  year        = {2006},
+<a name="cl-84"></a>  editor      = {Coghill, Anne M. and Garson, LorrinR.},
+<a name="cl-85"></a>  location    = {New York},
+<a name="cl-86"></a>  edition     = {3}
+<a name="cl-87"></a>}
+<a name="cl-88"></a>
+<a name="cl-89"></a>@Misc{Corina2006,
+<a name="cl-90"></a>  title = {CORINA: Generation of 3D coordinates},
+<a name="cl-91"></a>  url   = {http://www.molecular-networks.com/software/corina/index.html},
+<a name="cl-92"></a>  year  = {2006}
+<a name="cl-93"></a>}
+<a name="cl-94"></a>
+<a name="cl-95"></a>@Book{Cotton1999,
+<a name="cl-96"></a>  hyphenation = {british},
+<a name="cl-97"></a>  author             = {Cotton, Frank Albert and Wilkinson, Geoffrey 
+<a name="cl-98"></a>    and Murillio, Carlos A. and Bochmann, Manfred},
+<a name="cl-99"></a>  title         = {Advanced Inorganic Chemistry},
+<a name="cl-100"></a>  edition       = {6},
+<a name="cl-101"></a>  publisher     = {Wiley},
+<a name="cl-102"></a>  location      = {Chichester, United Kingdom},
+<a name="cl-103"></a>  year          = {1999},
+<a name="cl-104"></a>  annotation    = {A \texttt{book} entry with \arabic{author} 
+<a name="cl-105"></a>    authors and an \texttt{edition} field}
+<a name="cl-106"></a>}
+<a name="cl-107"></a>
+<a name="cl-108"></a>@Unpublished{Danopoulos2008,
+<a name="cl-109"></a>  author       = {Pugh, David and Wright, Joseph A. and 
+<a name="cl-110"></a>    Danopoulos, Andreas A.},
+<a name="cl-111"></a>  title        = {`Pincer&#39; pyridine dicarbene iridium 
+<a name="cl-112"></a>    complexes: facile C--H activations and unexpected 
+<a name="cl-113"></a>    $\eta^2$-imidazol-2-ylidene coordination},
+<a name="cl-114"></a>  journal      = {Angew. Chem. Int. Ed.},
+<a name="cl-115"></a>  howpublished = {in press}
+<a name="cl-116"></a>}
+<a name="cl-117"></a>
+<a name="cl-118"></a>@Article{Dehnicke1981,
+<a name="cl-119"></a>  hyphenation  = {german},
+<a name="cl-120"></a>  author       = {Dehnicke, Kurt and Str{\&quot;a}hle, Joachim},
+<a name="cl-121"></a>  title        = {Die 
+<a name="cl-122"></a>    {\&quot;U}bergangsmetall-Stickstoff-Mehrfachbindung},
+<a name="cl-123"></a>  journaltitle = {Angew. Chem.},
+<a name="cl-124"></a>  year         = {1981},
+<a name="cl-125"></a>  volume       = {93},
+<a name="cl-126"></a>  pages        = {451--464},
+<a name="cl-127"></a>  number       = {5},
+<a name="cl-128"></a>  doi          = {10.1002/ange.19810930506},
+<a name="cl-129"></a>  annotation   = {A journal article published in two languages,
+<a name="cl-130"></a>    which has to handled manually}
+<a name="cl-131"></a>}
+<a name="cl-132"></a>
+<a name="cl-133"></a>@Article{Dehnicke1981a,
+<a name="cl-134"></a>  hyphenation  = {british},
+<a name="cl-135"></a>  author       = {Dehnicke, Kurt and Str{\&quot;a}hle, Joachim},
+<a name="cl-136"></a>  title        = {The transition metal--nitrogen multiple bond},
+<a name="cl-137"></a>  journaltitle = {Angew. Chem., Int. Ed. Engl.},
+<a name="cl-138"></a>  year         = {1981},
+<a name="cl-139"></a>  volume       = {20},
+<a name="cl-140"></a>  pages        = {413--426},
+<a name="cl-141"></a>  number       = {5},
+<a name="cl-142"></a>  doi          = {10.1002/anie.198104133},
+<a name="cl-143"></a>  annotation   = {The English version of the preceding article,
+<a name="cl-144"></a>    which should really only be cited as along with its 
+<a name="cl-145"></a>    partner}
+<a name="cl-146"></a>}
+<a name="cl-147"></a>
+<a name="cl-148"></a>@Thesis{Gaunt1999,
+<a name="cl-149"></a>  hyphenation = {british},
+<a name="cl-150"></a>  author      = {Gaunt, Matthew James},
+<a name="cl-151"></a>  title       = {The investigation and design of palladium 
+<a name="cl-152"></a>    catalysed reactions},
+<a name="cl-153"></a>  institution = {University of Cambridge},
+<a name="cl-154"></a>  year        = {1999},
+<a name="cl-155"></a>  type        = {phdthesis},
+<a name="cl-156"></a>  location    = {Cambridge, United Kingdom}
+<a name="cl-157"></a>}
+<a name="cl-158"></a>
+<a name="cl-159"></a>@Book{Glorius2007,
+<a name="cl-160"></a>  hyphenation = {british},
+<a name="cl-161"></a>  editor      = {Glorius, Frank},
+<a name="cl-162"></a>  title       = {N-Heterocyclic Carbenes in Transition 
+<a name="cl-163"></a>    Metal Catalysis},
+<a name="cl-164"></a>  series     = {Topics in Organometallic Chemistry},
+<a name="cl-165"></a>  year       = {2007},
+<a name="cl-166"></a>  volume     = {21},
+<a name="cl-167"></a>  publisher  = {Springer},
+<a name="cl-168"></a>  location   = {Berlin},
+<a name="cl-169"></a>  annotation = {A book which is part of a regular series}
+<a name="cl-170"></a>}
+<a name="cl-171"></a>
+<a name="cl-172"></a>@Book{Hahn2002,
+<a name="cl-173"></a>  hyphenation = {british},
+<a name="cl-174"></a>  title       = {International Tables for Crystallography},
+<a name="cl-175"></a>  publisher   = {Kluwer Academic Publishers},
+<a name="cl-176"></a>  year        = {2002},
+<a name="cl-177"></a>  editor      = {Hahn, Theo},
+<a name="cl-178"></a>  volume      = {A},
+<a name="cl-179"></a>  location    = {Dordrecht, Netherlands},
+<a name="cl-180"></a>  edition     = {5},
+<a name="cl-181"></a>  annotation  = {Compare with data entry for vol.~C}
+<a name="cl-182"></a>}
+<a name="cl-183"></a>
+<a name="cl-184"></a>@Book{Hammond1997,
+<a name="cl-185"></a>  hyphenation = {british},
+<a name="cl-186"></a>  author      = {Hammond, Christopher},
+<a name="cl-187"></a>  title       = {The Basics of Crystallography and 
+<a name="cl-188"></a>    Diffraction},
+<a name="cl-189"></a>  publisher   = {International Union of Crystallography and 
+<a name="cl-190"></a>    Oxford University Press},
+<a name="cl-191"></a>  location    = {Oxford, United Kingdom},
+<a name="cl-192"></a>  year        = {1997},
+<a name="cl-193"></a>  chapter     = {1},
+<a name="cl-194"></a>  pages       = {1--40}
+<a name="cl-195"></a>}
+<a name="cl-196"></a>
+<a name="cl-197"></a>@InCollection{Henry2002,
+<a name="cl-198"></a>  hyphenation = {american},
+<a name="cl-199"></a>  author      = {Henry, Patrick M.},
+<a name="cl-200"></a>  title       = {The Wacker oxidation and related asymmetric 
+<a name="cl-201"></a>    syntheses},
+<a name="cl-202"></a>  booktitle   = {Handbook Of Organopalladium Chemistry for 
+<a name="cl-203"></a>    Organic Synthesis},
+<a name="cl-204"></a>  publisher   = {Wiley Interscience},
+<a name="cl-205"></a>  year        = {2002},
+<a name="cl-206"></a>  editor      = {Negishi, Ei-Ichi},
+<a name="cl-207"></a>  volume      = {2},
+<a name="cl-208"></a>  chapter     = {V.3.1.1},
+<a name="cl-209"></a>  pages       = {2119--2140},
+<a name="cl-210"></a>  location    = {New York},
+<a name="cl-211"></a>}
+<a name="cl-212"></a>
+<a name="cl-213"></a>@Book{Heyn1986,
+<a name="cl-214"></a>  hyphenation = {german},
+<a name="cl-215"></a>  title       = {Anorganische Synthesechemie: ein integriertes
+<a name="cl-216"></a>    Praktikum},
+<a name="cl-217"></a>  publisher   = {Springer-Verlag},
+<a name="cl-218"></a>  location    = {Weinheim, Germany},
+<a name="cl-219"></a>  year        = {1986},
+<a name="cl-220"></a>  author      = {Heyn, Bodo and Hippler, B. and Kreisel, G. and
+<a name="cl-221"></a>    Schreer, H. and Walther, D.},
+<a name="cl-222"></a>  annotation  = {A book in German}
+<a name="cl-223"></a>}
+<a name="cl-224"></a>
+<a name="cl-225"></a>@InProceedings{Hope2005,
+<a name="cl-226"></a>  hyphenation  = {american},
+<a name="cl-227"></a>  author       = {Hope, E. and Bennett, J. and Stuart, A.},
+<a name="cl-228"></a>  title        = {Fluorous zirconium phosphonates: novel 
+<a name="cl-229"></a>    inorganic supports for catalysis},
+<a name="cl-230"></a>  booktitle    = {Pacifichem (International Chemical 
+<a name="cl-231"></a>    Congress of Pacific Basin Societies)},
+<a name="cl-232"></a>  year         = {2005},
+<a name="cl-233"></a>  number       = {961},
+<a name="cl-234"></a>  venue        = {Hawaii, USA},
+<a name="cl-235"></a>  organization = {Pacific Basin Chemical Societies}
+<a name="cl-236"></a>}
+<a name="cl-237"></a>
+<a name="cl-238"></a>@InCollection{Kabbe1973,
+<a name="cl-239"></a>  hyphenation  = {german},
+<a name="cl-240"></a>  author       = {Kabbe, H.-J. and Jira, R.},
+<a name="cl-241"></a>  title        = {Durch Oxidation unter erhalt des 
+<a name="cl-242"></a>    Kohlenstoffger{\&quot;u}stes},
+<a name="cl-243"></a>  substitle    = {C) Ketone aus Olefinen},
+<a name="cl-244"></a>  booktitle    = {Ketone},
+<a name="cl-245"></a>  booksubtitle = {Teil 1},
+<a name="cl-246"></a>  chapter      = {III},
+<a name="cl-247"></a>  pages        = {781--790},
+<a name="cl-248"></a>  maintitle    = {Methoden der organischen Chemie},
+<a name="cl-249"></a>  mainsubtitle = {Houben--Weyl},
+<a name="cl-250"></a>  publisher    = {Georg Thieme Verlag},
+<a name="cl-251"></a>  location     = {Stuttgart, Germany},
+<a name="cl-252"></a>  year         = {1973},
+<a name="cl-253"></a>  volume       = {VII},
+<a name="cl-254"></a>  part         = {2a},
+<a name="cl-255"></a>  edition      = {4}
+<a name="cl-256"></a>}
+<a name="cl-257"></a>
+<a name="cl-258"></a>@Periodical{Kirschning2004,
+<a name="cl-259"></a>  title      = {Topics in Current Chemisty},
+<a name="cl-260"></a>  issuetitle = {Immobilized Catalysts},
+<a name="cl-261"></a>  publisher  = {Springer-Verlag},
+<a name="cl-262"></a>  year       = {2004},
+<a name="cl-263"></a>  editor     = {Kirschning, Andreas},
+<a name="cl-264"></a>  volume     = {242},
+<a name="cl-265"></a>  location   = {Berlin, Germany and London},
+<a name="cl-266"></a>  doi        = {10.1007/b94543},
+<a name="cl-267"></a>  annotation = {An entire issue, which is very similar to a
+<a name="cl-268"></a>    book}
+<a name="cl-269"></a>}
+<a name="cl-270"></a>
+<a name="cl-271"></a>@Online{Lancaster2003,
+<a name="cl-272"></a>  author   = {Lancaster, Simon J.},
+<a name="cl-273"></a>  title    = {Alkylation of boron trifluoride with 
+<a name="cl-274"></a>    pentafluorophenyl Grignard reagent},
+<a name="cl-275"></a>  year     = {2003},
+<a name="cl-276"></a>  urlyear  = {2008},
+<a name="cl-277"></a>  urlmonth = {10},
+<a name="cl-278"></a>  urlday   = {8},
+<a name="cl-279"></a>  url      = {http://www.syntheticpages.org/pages/215}
+<a name="cl-280"></a>}
+<a name="cl-281"></a>
+<a name="cl-282"></a>@Collection{Leeuwen1995,
+<a name="cl-283"></a>  hyphenation = {british},
+<a name="cl-284"></a>  title       = {Theoretical Aspects of Homogeneous Catalysis},
+<a name="cl-285"></a>  publisher   = {Kluwer Academic Press},
+<a name="cl-286"></a>  year        = {1995},
+<a name="cl-287"></a>  editor      = {van Leeuwen, Piet W. M. N. and Morokuma, Keiji 
+<a name="cl-288"></a>    and van Lenthe, Joop~H.},
+<a name="cl-289"></a>  number      = {18},
+<a name="cl-290"></a>  series      = {Catalysis by Metal Compounds},
+<a name="cl-291"></a>  location    = {Dordrecht, Netherlands}
+<a name="cl-292"></a>}
+<a name="cl-293"></a>
+<a name="cl-294"></a>@InBook{Muller2006,
+<a name="cl-295"></a>  hyphenation   = {british},
+<a name="cl-296"></a>  booktitle     = {Crystal Structure Refinement},
+<a name="cl-297"></a>  booksubstitle = {A Crystallographer&#39;s Guide to SHELXL},
+<a name="cl-298"></a>  bookauthor    = {M{\&quot;u}ller, Peter and Herbst-Irmer, Regine
+<a name="cl-299"></a>    and Spek, Anthony L. and Schneider, Thomas R. and Sawaya,
+<a name="cl-300"></a>    Michael R.},   
+<a name="cl-301"></a>  publisher     = {International Union of Crystallography and 
+<a name="cl-302"></a>    Oxford University Press},
+<a name="cl-303"></a>  location      = {Oxford, United Kingdom},
+<a name="cl-304"></a>  year          = {2006},
+<a name="cl-305"></a>  title         = {A Short History of SHELXL},
+<a name="cl-306"></a>  author        = {Sheldrick, George M.}
+<a name="cl-307"></a>}
+<a name="cl-308"></a>
+<a name="cl-309"></a>@Collection{Negishi2002,
+<a name="cl-310"></a>  hyphenation = {american},
+<a name="cl-311"></a>  title       = {Handbook of Organopalladium Chemistry for 
+<a name="cl-312"></a>    Organic Synthesis},
+<a name="cl-313"></a>  publisher   = {Wiley Interscience},
+<a name="cl-314"></a>  location    = {New York},
+<a name="cl-315"></a>  year        = {2002},
+<a name="cl-316"></a>  editor      = {Negishi, Ei-Ichi}
+<a name="cl-317"></a>}
+<a name="cl-318"></a>
+<a name="cl-319"></a>@Manual{OxfordDiffraction2006,
+<a name="cl-320"></a>  hyphenation  = {british},
+<a name="cl-321"></a>  organization = {Oxford Diffraction Ltd.},
+<a name="cl-322"></a>  title        = {ABSPACK, CrysAlis CCD and CrysAlis RED},
+<a name="cl-323"></a>  location     = {Abingdon, United Kingdom},
+<a name="cl-324"></a>  year         = {2006},
+<a name="cl-325"></a>  version      = {1.171}
+<a name="cl-326"></a>}
+<a name="cl-327"></a>
+<a name="cl-328"></a>@Article{Rees2000,
+<a name="cl-329"></a>  hyphenation  = {british},
+<a name="cl-330"></a>  author       = {Bunge, Scott D. and Just, Oliver and Rees, Jr.,
+<a name="cl-331"></a>  William S.},
+<a name="cl-332"></a>  title        = {[\{Au[$\mu$-N(SiMe$_3$)$_2$]\}$_4$]: the first
+<a name="cl-333"></a>    base-free gold amide},
+<a name="cl-334"></a>  journaltitle = {Angew. Chem. Int. Ed.},
+<a name="cl-335"></a>  year         = {2000},
+<a name="cl-336"></a>  volume       = {39},
+<a name="cl-337"></a>  pages        = {3082--3084},
+<a name="cl-338"></a>  number       = {17},
+<a name="cl-339"></a>  annotation = {An article with ``Jr.&#39;&#39; in the author list.}
+<a name="cl-340"></a>}
+<a name="cl-341"></a>
+<a name="cl-342"></a>@Booklet{Sheldrick1997,
+<a name="cl-343"></a>  hyphenation = {british},
+<a name="cl-344"></a>  title       = {SHELX-97: Programs for crystal structure 
+<a name="cl-345"></a>    analysis},
+<a name="cl-346"></a>  author      = {Sheldrick, George M.},
+<a name="cl-347"></a>  location    = {G{\&quot;o}ttingen, Germany},
+<a name="cl-348"></a>  year        = {1997},
+<a name="cl-349"></a>  annotation  = {A slightly forced example of a 
+<a name="cl-350"></a>    \texttt{booklet}}
+<a name="cl-351"></a>}
+<a name="cl-352"></a>
+<a name="cl-353"></a>@Article{Smidt1959,
+<a name="cl-354"></a>  hyphenation  = {german},
+<a name="cl-355"></a>  author       = {Smidt, J. and Hafner, W. and Jira, R. and 
+<a name="cl-356"></a>    Sedlmeier, J. and Sieber, R. and R{\&quot;u}ttinger, R. and 
+<a name="cl-357"></a>    Kojer, H.},
+<a name="cl-358"></a>  title        = {Katalytische Umsetzungen von Olefinen an
+<a name="cl-359"></a>    Platinmetall-Verbindungen},
+<a name="cl-360"></a>  journaltitle = {Angew. Chem.},
+<a name="cl-361"></a>  year         = {1959},
+<a name="cl-362"></a>  volume       = {71},
+<a name="cl-363"></a>  pages        = {176--182},
+<a name="cl-364"></a>  number       = {5},
+<a name="cl-365"></a>  annotation = {A standard chemistry article, with the title in
+<a name="cl-366"></a>    German.  This makes no difference for the chemistry styles, 
+<a name="cl-367"></a>    but will of course with the standard \textsf{biblatex} 
+<a name="cl-368"></a>    styles}
+<a name="cl-369"></a>}
+<a name="cl-370"></a>
+<a name="cl-371"></a>@Article{Smidt1962,
+<a name="cl-372"></a>  hyphenation  = {british},
+<a name="cl-373"></a>  author       = {Smidt, J{\&quot;u}rgen  and Hafner, W. and Jira, R.
+<a name="cl-374"></a>    and Sieber, R. and Sedlmeier, J. and Sabel, A.},
+<a name="cl-375"></a>  title        = {The oxidation of olefins with palladium 
+<a name="cl-376"></a>    chloride catalysts},
+<a name="cl-377"></a>  journaltitle = {Angew. Chem., Int. Ed. Engl.},
+<a name="cl-378"></a>  year         = {1962},
+<a name="cl-379"></a>  volume       = {1},
+<a name="cl-380"></a>  pages        = {80--88},
+<a name="cl-381"></a>  number       = {2},
+<a name="cl-382"></a>  doi          = {10.1002/anie.196200801},
+<a name="cl-383"></a>  annotation = {A standard chemistry article, with the title in
+<a name="cl-384"></a>    English}
+<a name="cl-385"></a>}
+<a name="cl-386"></a>
+<a name="cl-387"></a>@Article{Sofield2004,
+<a name="cl-388"></a>  hyphenation  = {british},
+<a name="cl-389"></a>  author       = {Sofield, Chadwick D. and Walter, Marc D. and 
+<a name="cl-390"></a>    Andersen, Richard A.},
+<a name="cl-391"></a>  title        = {\{Amidobis[$\eta^5$-1,3-bis\-(trimethylsilyl)%
+<a name="cl-392"></a>    \-cyclopentadienyl]titanium(III)\}},
+<a name="cl-393"></a>  journaltitle = {Acta Crystallogr., Sect.~C: Cryst. Struct.
+<a name="cl-394"></a>    Commun.},
+<a name="cl-395"></a>  year         = {2004},
+<a name="cl-396"></a>  doi          = {10.1107/S0108270104018840},
+<a name="cl-397"></a>  annotation   = {An article where the volume and page details 
+<a name="cl-398"></a>    have deliberately been omitted, to force the use of the
+<a name="cl-399"></a>    \textsc{doi}}
+<a name="cl-400"></a>}
+<a name="cl-401"></a>
+<a name="cl-402"></a>@Proceedings{Toulouse1980,
+<a name="cl-403"></a>  title = {Proceedings of the 21st International 
+<a name="cl-404"></a>    Conference on Coordination Chemistry},
+<a name="cl-405"></a>  venue = {Toulouse, France},
+<a name="cl-406"></a>  year  = {1980},
+<a name="cl-407"></a>}
+<a name="cl-408"></a>
+<a name="cl-409"></a>@Book{Wilson1992,
+<a name="cl-410"></a>  hyphenation = {british},
+<a name="cl-411"></a>  title       = {Mathematical, Physical and Chemical Tables},
+<a name="cl-412"></a>  maintitle   = {International Tables for Crystallography},
+<a name="cl-413"></a>  publisher   = {Kluwer Academic Publishers},
+<a name="cl-414"></a>  year        = {1992},
+<a name="cl-415"></a>  editor      = {Wilson, A. J. C. and Prince, E.},
+<a name="cl-416"></a>  volume      = {C},
+<a name="cl-417"></a>  location    = {Dordrecht, Netherlands},
+<a name="cl-418"></a>  edition     = {3},
+<a name="cl-419"></a>  annotation  = {Compare with data entry for vol.~A},
+<a name="cl-420"></a>}
+</pre></div>
+</td></tr></table>
+    </div>
+  
+  </div>
+  
+
+
+
+      </div>
+    </div>
+
+  </div>
+
+  <div id="footer">
+    <ul id="footer-nav">
+      <li>Copyright © 2011 <a href="http://atlassian.com">Atlassian</a></li>
+      <li><a href="http://www.atlassian.com/hosted/terms.jsp">Terms of Service</a></li>
+      <li><a href="http://www.atlassian.com/about/privacy.jsp">Privacy</a></li>
+      <li><a href="//bitbucket.org/site/master/issues/new">Report a Bug to Bitbucket</a></li>
+      <li><a href="http://confluence.atlassian.com/x/IYBGDQ">API</a></li>
+      <li><a href="http://status.bitbucket.org/">Server Status</a></li>
+    </ul>
+    <ul id="social-nav">
+      <li class="blog"><a href="http://blog.bitbucket.org">Bitbucket Blog</a></li>
+      <li class="twitter"><a href="http://www.twitter.com/bitbucket">Twitter</a></li>
+    </ul>
+    <h5>We run</h5>
+    <ul id="technologies">
+      <li><a href="http://www.djangoproject.com/">Django 1.3.0</a></li>
+      <li><a href="//bitbucket.org/jespern/django-piston/">Piston 0.3dev</a></li>
+      <li><a href="http://www.selenic.com/mercurial/">Hg 1.8.2</a></li>
+      <li><a href="http://www.python.org">Python 2.7.2</a></li>
+      <li>r12427:b7404d13ceac | bitbucket01</li>
+    </ul>
+  </div>
+
+  <script src="https://dwz7u9t8u8usb.cloudfront.net/m/46c15ee9bc85/js/lib/global.js"></script>
+
+
+
+
+
+
+  <script>
+    BB.gaqPush(['_trackPageview']);
+  
+    BB.gaqPush(['atl._trackPageview']);
+
+    
+
+    
+
+    (function () {
+        var ga = document.createElement('script');
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        ga.setAttribute('async', 'true');
+        document.documentElement.firstChild.appendChild(ga);
+    }());
+  </script>
+
+</body>
+</html>

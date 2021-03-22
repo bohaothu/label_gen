@@ -1,0 +1,5858 @@
+@Preamble{
+"\def\ifundefined#1{\expandafter\ifx\csname#1\endcsname\relax}" #
+"\ifundefined{diagminuskern}
+{\def\diagminuskern#1#2{{%
+        \dimen0#2\relax
+        \count0=\wd#1%
+        \multiply\count0by100
+        \divide\count0by\ht#1%
+        \multiply\dimen0by\count0
+        \kern-.01\dimen0}}}
+\fi" #
+"\ifundefined{cmix}
+{\def\cmix{{\upshape
+        C%
+        \setbox0\hbox{C}%
+        \dimen0\ht0
+        \advance\dimen0by-.13ex
+        \kern-.1ex
+        \raise.5\dimen0\hbox{\vrule height.13ex width.5ex}%
+        \kern-.05ex
+        Mix%
+        \setbox0\hbox{\setbox0\hbox{/}\raise\dp0\box0}%
+        \dimen0=.1\wd0                    % line width in 'II' part
+        \dimen2=\ht0\advance\dimen2by-1ex % descender length for slash
+        \ifdim\dimen2>1ex\relax\dimen2=1ex\fi
+        \diagminuskern0{\dimen2}%
+        \raise-\dimen2\copy0
+        \dimen4\ht0\advance\dimen4by-\dimen2
+        \dimen2=.6ex
+        \advance\dimen4by-\dimen2
+        \diagminuskern0{\dimen4}\kern-\dimen0
+        \dimen4=\dimen2\advance\dimen4by-\dimen0
+        \raise-\dimen2\vbox{\hrule height\dimen0\hbox{%
+                \hskip.5\dimen4
+                \vrule width\dimen0 height\dimen4 depth\dimen4
+                \hskip.5\dimen4
+                \vrule width\dimen0
+                \hskip.5\dimen4
+                }\hrule height\dimen0}}}}
+\fi" #
+"\ifundefined{BibTeX}
+\newcommand{\BibTeX}{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
+T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
+\fi" #
+"\ifundefined{Xy}
+\newcommand{\Xy}{{\kern-.1em X\kern-.3em\lower.4ex\hbox{Y\kern-.15em}}}
+\fi"}
+
+@String{DIKU = "{DIKU}, Department of Computer Science,
+						University of Copenhagen"}
+@String{DIKURep = "{DIKU} Technical Report"}
+@String{BRICS = "{BRICS}, Department of Computer Science,
+						University of Aarhus"}
+@String{DAIMI = "{DAIMI}, Department of Computer Science,
+						University of Aarhus"}
+@String{DAIMIRep = "{DAIMI} Technical Report"}
+@String{Courant = "Courant Institute of Mathematical Sciences,
+						New York University"}
+@String{CLCamb = "University of Cambridge, Computer Laboratory"}
+@String{TUM = "Institut f{\"u}r Informatik, Technische Universit{\"a}t M{\"u}nchen"}
+@String{MCSL = "Department of Mathematics and Computer Science, University of Leicester"}
+@String{Turku = "Turku Centre for Computer Science"}
+@String{TurkuRep = "{TUCS} Technical Report"}
+@String{UCph = "University of Copenhagen"}
+@String{UAarhus = "University of Aarhus"}
+@String{UTwente = "University of Twente"}
+@String{UPenn = "University of Pennsylvania"}
+@String{LNCS = "Lecture Notes in Computer Science"}
+@String{LNAI = "Lecture Notes in Artificial Intelligence"}
+@String{FOC = "Foundations of Computing"}
+@String{NGC = "New Generation Computing"}
+@String{LFM = "Studies in Logic and the Foundations of Mathematics"}
+@String{TCS = "Theoretical Computer Science"}
+@String{e-TCS = "Electronic Notes in Theoretical Computer Science"}
+@String{CTTCS = "Cambridge Tracts in Theoretical Computer Science"}
+@String{GTM = "Graduate Texts in Mathematics"}
+@String{GTCS = "Graduate Texts in Computer Science"}
+@String{ISCS = "International Series in Computer Science"}
+@String{CSAM = "Computer Science and Applied Mathematics Series"}
+
+@String{j-JFP = "Journal of Functional Programming"}
+@String{j-JAR = "Journal of Automated Reasoning"}
+
+%=======================================================================
+% Journal abbreviations:
+
+@String{j-ACTA-INFO             = "Acta Informatica"}
+@String{j-CACM                  = "Communications of the ACM"}
+@String{j-ACM                   = "Journal of the ACM"}
+@String{j-COMP-SURV             = "ACM Computing Surveys"}
+@String{j-IEEE-TRANS-SOFTW-ENG  = "IEEE Transactions on Software
+                                  Engineering"}
+@String{j-INFO-PROC-LETT        = "Information Processing Letters"}
+@String{j-SIGPLAN               = "ACM SIG{\-}PLAN Notices"}
+@String{j-TOPLAS                = "ACM Transactions on Programming
+                                  Languages and Systems"}
+@String{j-JSL			= "The Journal of Symbolic Logic"}
+@String{j-IAC			= "Information and Computation"}
+@String{j-SIAM			= "SIAM Journal of Computing"}
+@String{j-SCP			= "Science of Computer Programming"}
+@String{j-TACM			= "Transactions of the American Mathematical Society"}
+@String{j-ANN-MATH              = "Annals of Mathematics"}
+@String{j-ANN-HC                = "Annals of the History of Computing"}
+@String{j-FUND-MATH             = "Fundamenta Mathematicae"}
+@String{j-AJM                   = "American Journal of Mathematics"}
+@String{j-MH-MP                 = "Monatshefte f{\"u}r Mathematik und Physik"}
+
+%=======================================================================
+% Publisher abbreviations:
+
+@String{pub-ACM                 = "ACM Press"}
+@String{pub-ACM:adr             = "New York, NY, USA"}
+@String{pub-ANSI                = "American National Standards Institute"}
+@String{pub-ANSI:adr            = "1430 Broadway, New York, NY 10018, USA"}
+@String{pub-AP                  = "Academic Press"}
+@String{pub-AP:adr              = "New York, USA"}
+@String{pub-APL-PRESS           = "APL Press"}
+@String{pub-APL-PRESS:adr       = "Palo Alto, CA"}
+@String{pub-AW                  = "Addison-Wesley"}
+@String{pub-CH                  = "Chapman \& Hall"}
+@String{pub-CSP                 = "Computer Science Press"}
+@String{pub-CSP:adr             = "Rockville, MD, USA"}
+@String{pub-CUP                 = "Cambridge University Press"}
+@String{pub-CUP:adr             = "Cambridge, UK"}
+@String{pub-ESP                 = "Elsevier Science Publishers"}
+@String{pub-HUP                 = "Harvard University Press"}
+@String{pub-IEEE                = "IEEE Computer Society Press"}
+@String{pub-JWS			= "John Wiley \& Sons"}
+@String{pub-MIT                 = "MIT Press"}
+@String{pub-MIT:adr             = "Massachusetts Institute of Technology,
+												Cambridge, MA 02142, USA"}
+@String{pub-NH			= "North-Holland"}
+@String{pub-ORA                 = "O'Reilly \& Associates"}
+@String{pub-OUP                 = "Oxford University Press"}
+@String{pub-PETROCELLI          = "Petrocelli Books"}
+@String{pub-PETROCELLI:adr      = "Princeton, NJ, USA"}
+@String{pub-PH                  = "Prentice-Hall"}
+@String{pub-PH:adr              = "Englewood Cliffs, NJ, USA"}
+@String{pub-PHI                 = "Prentice-Hall International"}
+@String{pub-PHI:adr             = "Englewood Cliffs, NJ 07632, USA"}
+@String{pub-SUCSLI              = "Stanford University Center for the Study of
+                                  Language and Information"}
+@String{pub-SUCSLI:adr          = "Stanford, CA, USA"}
+@String{pub-SV                  = "Springer-Verlag"}
+@String{pub-SV:adr              = "Berlin, Heidelberg, New York"}
+@String{pub-UNIV-MICROFILM      = "University Microfilms"}
+@String{pub-UNIV-MICROFILM:adr  = "Ann Arbor, MI, USA"}
+
+%=======================================================================
+
+@mastersthesis
+{
+	nielsen:pe-deforestation,
+	author = "Kristian Nielsen",
+	title = "A Unified Approach to Partial Evaluation and Deforestation",
+	school = DIKU,
+	year = "1996",
+	month = sep,
+	library = "SCS",
+}
+
+@incollection
+{
+	nielsen:cps-deforestation,
+	author = "Kristian Nielsen and Morten Heine [Bj{\o}rnlund] S{\o}rensen",
+	title = "Call-By-Name {CPS}-Translation as a Binding-Time Improvement",
+	booktitle = "Static Analysis Symposium",
+	editor = "A[lan] Mycroft",
+	series = LNCS,
+	volume = "983",
+	publisher = pub-SV,
+	pages = "296--313",
+	year = "1994",
+	library = "SCS-38",
+	postscript = "ftp://ftp.diku.dk/diku/semantics/papers/D-234.ps.gz",
+}
+
+@incollection
+{
+	thiemann:poly-exp,
+	author = "Peter Thiemann and Michael Sperber",
+	title = "Polyvariant Expansion and Compiler Generators",
+	crossref = "sv:perspectives",
+	pages = "285--296",
+	library = "SCS-34",
+}
+
+@manual
+{
+	def:refal-5,
+	author = "Valentin F[edorovich] Turchin",
+	title = "REFAL-5: programming guide and reference manual",
+	organization = "New England Publishing Co.",
+	year = "1989",
+	library = "NA",
+}
+
+@book
+{
+	crole:categories,
+	author = "Roy L. Crole",
+	title = "Categories for Types",
+	year = "1993",
+	publisher = pub-CUP,
+	url = "http://titles.cambridge.org/catalogue.asp?isbn=0521457017",
+	library = "SCS",
+}
+
+@article
+{
+	turchin:supercompilation,
+	author = "Valentin F[edorovich] Turchin",
+	title = "The Concept of a Supercompiler",
+	journal = j-TOPLAS,
+	year = "1986",
+	volume = "8",
+	number = "3",
+	pages = "292--325",
+	month = jul,
+	publisher = pub-ACM,
+	library = "SCS-30",
+}
+
+@misc
+{
+	mogensen:linear-lambda-selfint,
+	author = "Torben {\AE}[gidius] Mogensen",
+	title = "Linear Time Self-Interpretation of the Pure Lambda Calculus",
+	note = "To appear",
+	year = "1998",
+	library = "SCS-96",
+}
+
+@inproceedings
+{
+	mogensen:online-lambda,
+	author = "Torben {\AE}[gidius] Mogensen",
+	title = "Self-Applicable Online Partial Evaluation of the
+		Pure Lambda Calculus",
+	booktitle = "Proceedings of PEPM '95",
+	editor = "William L. Scherlis",
+	year = "1995",
+	pages = "39--44",
+	publisher = pub-ACM,
+	library = "SCS-23",
+}
+
+@inproceedings
+{
+	mogensen:offline-lambda,
+	author = "Torben {\AE}[gidius] Mogensen",
+	title = "Self-applicable Partial Evaluation for Pure Lambda Calculus",
+	booktitle = "{ACM} {SIGPLAN} Workshop on Partial Evaluation and
+		Semantics-based Program Manipulation",
+	year = "1992",
+	editor = "Charles Consel",
+	pages = "116--121",
+	organization = "ACM",
+	publisher = "Yale University Press",
+	library = "SCS-24",
+	dvi = "ftp://ftp.diku.dk/diku/semantics/papers/D-141.dvi.Z",
+	postscript = "ftp://ftp.diku.dk/diku/semantics/papers/D-141.ps.Z",
+}
+
+@article
+{
+	mogensen:selfint,
+	author = "Torben {\AE}[gidius] Mogensen",
+	title = "Efficient self-interpretation in lambda calculus",
+	journal = j-JFP,
+	year = "1992",
+	volume = "2",
+	number = "3",
+	pages = "345--364",
+	month = jul,
+	publisher = pub-CUP,
+	library = "SCS-99",
+	dvi = "ftp://ftp.diku.dk/diku/semantics/papers/D-128.dvi.Z",
+	postscript = "ftp://ftp.diku.dk/diku/semantics/papers/D-128.ps.Z",
+}
+
+@article
+{
+	mitchell:type-inf-simple-subtypes,
+	author = "John C. Mitchell",
+	title = "Type inference with simple subtypes",
+	journal = j-JFP,
+	year = "1991",
+	volume = "1",
+	number = "3",
+	pages = "245--285",
+	month = jul,
+	publisher = pub-CUP,
+	library = "SCS-117",
+}
+
+@article
+{
+	barendregt:undef-lambda,
+	author = "Hen[dri]k [Pieter] Barendregt",
+	title = "Representing `undefined' in lambda calculus",
+	journal = j-JFP,
+	year = "1992",
+	volume = "2",
+	number = "3",
+	pages = "367--374",
+	month = jul,
+	publisher = pub-CUP,
+	library = "SCS-189",
+}
+
+@article
+{
+	barendregt:enum-lambda-red,
+	author = "Hen[dri]k [Pieter] Barendregt",
+	title = "Enumerators of lambda terms are reducing",
+	journal = j-JFP,
+	year = "1992",
+	volume = "2",
+	number = "2",
+	pages = "233--236",
+	month = apr,
+	publisher = pub-CUP,
+	library = "SCS-190",
+}
+
+@article
+{
+	barendregt:selfint,
+	author = "Hen[dri]k [Pieter] Barendregt",
+	title = "Self-interpretation in lambda calculus",
+	journal = j-JFP,
+	year = "1991",
+	volume = "1",
+	number = "2",
+	pages = "229--234",
+	month = apr,
+	publisher = pub-CUP,
+	library = "SCS-102",
+}
+
+@inproceedings
+{
+	pfenning:ho-abs-syntax,
+	author = "Frank Pfenning and Conal Elliott",
+	title = "Higher-Order Abstract Syntax",
+	booktitle = "Proceedings of the SIGPLAN '88 Conference on Programming
+		Language Design and Implementation",
+	year = "1988",
+	pages = "199--208",
+	library = "SCS-57",
+	postscript = "http://www.cs.cmu.edu/{\~{}}fp/papers/pldi88.ps.gz",
+}
+
+@article
+{
+	palsberg:correctness-bta,
+	author = "Jens Palsberg",
+	title = "Correctness of Binding-Time Analysis",
+	journal = j-JFP,
+	year = "1993",
+	volume = "3",
+	number = "3",
+	pages = "347--363",
+	month = jul,
+	publisher = pub-CUP,
+	library = "SCS-12",
+	postscript = "http://www.cs.purdue.edu/homes/palsberg/paper/jfp93.ps.gz",
+}
+
+@article
+{
+	wand:spec-correctness-bta,
+	author = "Mitchell Wand",
+	title = "Specifying the Correctness of Binding-Time Analysis",
+	journal = j-JFP,
+	year = "1993",
+	volume = "3",
+	number = "3",
+	pages = "365--387",
+	month = jul,
+	publisher = pub-CUP,
+	library = "SCS-13",
+}
+
+@article
+{
+	gomard:pe-unt-lambda,
+	author = "Carsten K[rogh] Gomard and Neil D[eaton] Jones",
+	title = "A Partial Evaluator for the Untyped Lambda-Calculus",
+	journal = j-JFP,
+	year = "1991",
+	volume = "1",
+	number = "1",
+	pages = "21--69",
+	month = jan,
+	publisher = pub-CUP,
+	library = "SCS-27",
+}
+
+@mastersthesis
+{
+	gomard:hope-lambda,
+	author = "Carsten K[rogh] Gomard",
+	title = "{H}igher {O}rder {P}artial {E}valuation---{HOPE}
+		for the Lambda Calculus",
+	school = DIKU,
+	year = "1989",
+	month = sep,
+	library = "SCS-129",
+
+}
+
+@phdthesis
+{
+	kuper:phd,
+	author = "J[an] Kuper",
+	title = "Partiality in Logic and
+		Computation---Aspects of Undefinedness",
+	school = UTwente,
+	year = "1994",
+	library = "SCS-182",
+}
+
+@phdthesis
+{
+	welinder:pe-correctness,
+	author = "Morten Welinder",
+	title = "Partial Evaluation and Correctness",
+	school = UCph,
+	year = "1997",
+	note = "DIKU Technical Report 98/13",
+	postscript = "ftp://ftp.diku.dk/diku/semantics/papers/D-374.ps.gz",
+	library = "SCS",
+}
+
+@incollection
+{
+	jones:not-to-do,
+	author = "Neil D[eaton] Jones",
+	title = "What \emph{not} to do when writing an interpreter for
+		specialization",
+	crossref = "lncs:1110",
+	pages = "216--237",
+	library = "SCS-19",
+	postscript = "ftp://ftp.diku.dk/diku/semantics/papers/D-266.ps.gz",
+	dvi = "ftp://ftp.diku.dk/diku/semantics/papers/D-266.dvi.gz",
+}
+
+@techreport
+{
+	hatcliff:mech-verif-correctness-ext,
+	author = "John Hatcliff",
+	title = "Mechanically Verifying the Correctness of an Offline Partial
+		Evaluator (extended version)",
+	type = DIKURep,
+	number = "95/14",
+	institution = DIKU,
+	year = "1996",
+	note = "Revised version of \cite{hatcliff:mech-verif-correctness}",
+	postscript = "ftp://ftp.diku.dk/diku/semantics/papers/D-316.ps.gz",
+	library = "SCS",
+}
+
+@incollection
+{
+	hatcliff:mech-verif-correctness,
+	author = "John Hatcliff",
+	title = "Mechanically Verifying the Correctness of an Offline Partial
+		Evaluator",
+	crossref = "lncs:982",
+	pages = "279--298",
+	dvi = "ftp://ftp.diku.dk/diku/semantics/papers/D-239.dvi.gz",
+	library = "SCS",
+}
+
+@techreport
+{
+	turchin:refal-report,
+	author = "Valentin F[edorovich] Turchin",
+	title = "The Language {REFAL}---The Theory of Compilation and
+				Metasystem Analysis",
+	institution = Courant,
+	year = "1980",
+	type = "Courant Computer Science Report",
+	number = "20",
+	month = feb,
+	library = "NDJ",
+}
+
+@book
+{
+	def:sml90,
+	author = "[Arthur John] Robin [Gorell] Milner
+		and Mads Tofte and Robert Harper",
+	title = "The Definition of Standard ML",
+	edition = "Revised",
+	publisher = pub-MIT,
+	year = "1997",
+	url = "http://mitpress.mit.edu/book-home.tcl?isbn=0262631814",
+	library = "SCS",
+}
+
+@book
+{
+	pierce:basic-category,
+	author = "Benjamin C. Pierce",
+	title = "Basic Category Theory for Computer Scientists",
+	publisher = pub-MIT,
+	year = "1991",
+	series = FOC,
+	library = "SCS-133",
+	url = "http://mitpress.mit.edu/book-home.tcl?isbn=0262660717",
+}
+
+@book
+{
+	nederpelt:automath,
+	editor = "R[ob] P. Nederpelt and J. H[erman] Geuvers
+		and R[oel] C. de Vrijer",
+	title = "Selected Papers on {A}utomath",
+	publisher = pub-NH,
+	year = "1994",
+	volume = "133",
+	series = LFM,
+	library = "DNLB",
+	url = "http://www.elsevier.nl/inca/publications/store/5/2/4/2/1/6/",
+}
+
+@book
+{
+	barendregt:lambda,
+	author = "H[endrik] P[ieter] Barendregt",
+	title = "The Lambda Calculus: Its Syntax and Semantics",
+	publisher = pub-NH,
+	edition = "Revised",
+	year = "1984",
+	volume = "103",
+	series = LFM,
+	url = "http://www.elsevier.nl/inca/publications/store/5/0/1/7/2/7/",
+	library = "SCS",
+}
+
+@book
+{
+	winskel,
+	author = "Glynn Winskel",
+	title = "The Formal Semantics of Programming Languages:
+		An Introduction",
+	publisher = pub-MIT,
+	year = "1993",
+	series = FOC,
+	url = "http://www-mitpress.mit.edu/book-home.tcl?isbn=0262231697",
+	library = "SCS",
+}
+
+@unpublished
+{
+	pitts:co-ind,
+	author = "Andrew M[awdesley] Pitts",
+	title = "Some Notes on Inductive and Co-inductive Techniques in the
+		Semantics of Functional Programs",
+	institution = CLCamb,
+	year = "1994",
+	note = "Draft Version",
+	library = "SCS-135",
+}
+
+@inproceedings
+{
+	gabbay:new-approach,
+	author = "Murdoch [J.] Gabbay and Andrew [Mawdesley] Pitts",
+	title = "A New Approach to Abstract Syntax Involving Binders",
+	booktitle = "14th Annual Symposium on Logic in Computer Science",
+	year = "1999",
+	publisher = pub-IEEE,
+	library = "SCS-193",
+	note = "To appear",
+	pdf = "ftp://ftp.cl.cam.ac.uk/papers/ap/newaas.pdf",
+	postscript = "ftp://ftp.cl.cam.ac.uk/papers/ap/newaas.ps.gz",
+}
+
+@misc
+{
+	despeyroux:proof-trans,
+	author = "Jo{\"e}lle Despeyroux",
+	title = "Proof of Translation in Natural Semantics",
+	institution = "INRIA, Sophia-Antipolis",
+	year = "1987",
+	month = jul,
+	library = "SCS-16",
+}
+
+@unpublished
+{
+	henglein:fund-type-inf-sys,
+	author = "Fritz Henglein",
+	title = "Fundamentals of type inference systems",
+	year = "1994",
+	institution = DIKU,
+	note = "Course notes",
+	library = "SCS-119",
+}
+
+@unpublished
+{
+	henglein:intro-lambda,
+	author = "Fritz Henglein",
+	title = "Introduction to Lambda Calculus and Operational Semantics
+		of Functional Programming Languages",
+	year = "1994",
+	institution = DIKU,
+	note = "Course notes",
+	library = "SCS-134",
+}
+
+@unpublished
+{
+	elsman:otp,
+	author = "Martin Elsman",
+	title = "Optimising Typed Programs",
+	year = "1998",
+	institution = DIKU,
+	note = "Course notes",
+	library = "SCS",
+}
+
+@techreport
+{
+	andersen:correct-selfint,
+	author = "Lars Ole Andersen",
+	title = "Correctness Proof for a Self-Interpreter",
+	institution = DIKU,
+	type = DIKURep,
+	year = "1991",
+	month = dec,
+	library = "SCS-14",
+}
+
+@book
+{
+	def:ansi-c,
+	author = "Brian W. Kernighan and Dennis M. Ritchie",
+	title = "The {C} Programming Language",
+	publisher = pub-PH,
+	year = "1988",
+	edition = "Second",
+	url = "http://cm.bell-labs.com/cm/cs/cbook/index.html",
+	library = "SCS",
+}
+
+@incollection
+{
+	leuschel:homeomorphic-embedding,
+	author = "Michael Leuschel",
+	title = "On the Power of Homeomorphic Embedding for Online Termination",
+	booktitle = "Proceedings of SAS '98",
+	series = LNCS,
+	year = "1998",
+	publisher = pub-SV,
+	note = "To appear",
+	library = "SCS-32",
+}
+
+@incollection
+{
+	fuh:poly-sub-inf,
+	author = "You-Chin Fuh and Prateek Mishra",
+	title = "Polymorphic Subtype Inference: Closing the
+		Theory-Practice Gap",
+	booktitle = "TAPSOFT '89",
+	series = LNCS,
+	volume = "352",
+	editor = "Josep D{\'\i}az and Fernando Orejas",
+	year = "1989",
+	publisher = pub-SV,
+	library = "SCS-116",
+}
+
+@article
+{
+	glueck:deg-prog-gen,
+	author = "Robert Gl{\"u}ck and Andrei [V.] Klimov",
+	title = "On the Degeneration of Program Generators by Program
+		Composition",
+	journal = NGC,
+	volume = "16",
+	number = "1",
+	pages = "75--95",
+	year = "1998",
+	publisher = "OHMSHA, LTD.\ and Springer-Verlag",
+	library = "SCS-36",
+}
+
+@incollection
+{
+	glueck:fast-binding-mls,
+	author = "Robert Gl{\"u}ck and Jesper J{\o}rgensen",
+	title = "Fast Binding-Time Analysis for Multi-Level Specialization",
+	crossref = "sv:perspectives",
+	pages = "261--272",
+	library = "SCS-37",
+}
+
+@inproceedings
+{
+	glueck:gen-opt-spec,
+	author = "Robert Gl{\"u}ck and Jesper J{\o}rgensen",
+	title = "Generating Optimizing Specializers",
+	crossref = "ieee:iccl94",
+	library = "SCS-20",
+	dvi = "ftp://ftp.diku.dk/diku/semantics/papers/D-186.dvi.Z",
+}
+
+@incollection
+{
+	scedrov:guide-poly,
+	author = "Andre Scedrov",
+	title = "A Guide to Polymorphic Types",
+	booktitle = "Logic and Computer Science",
+	publisher = pub-AP,
+	year = "1990",
+	pages = "387--420",
+	library = "SCS-118",
+}
+
+@article
+{
+	glueck:apg-mls,
+	author = "Robert Gl{\"u}ck and Jesper J{\o}rgensen",
+	title = "An Automatic Program Generator for Multi-Level Specialization",
+	journal = "{LISP} and Symbolic Computation",
+	year = "1997",
+	volume = "10",
+	number = "2",
+	pages = "113--158",
+	publisher = "Kluwer Academic Publishers",
+	library = "SCS-43",
+}
+
+@article
+{
+	fuh:type-inf-subtypes,
+	author = "You-Chin Fuh and Prateek Mishra",
+	title = "Type Inference with Subtypes",
+	journal = TCS,
+	month = jun,
+	year = "1990",
+	volume = "73",
+	number = "2",
+	pages = "155--175",
+	publisher = pub-ESP,
+	library = "SCS-115",
+}
+
+@incollection
+{
+	bohm:norm-func,
+	author = "Corrado B{\"o}hm and Adolfo Piperno and Stefano Guerrini",
+	title = "$\lambda$-definition of Function(al)s by Normal Forms",
+	booktitle = "Programming Languages and Systems",
+	series = LNCS,
+	volume = "788",
+	editor = "Donald Sannella",
+	year = "1994",
+	pages = "135--149",
+	publisher = pub-SV,
+	library = "SCS-54",
+}
+
+@article
+{
+	bohm:auto-synt,
+	author = "Corrado B{\"o}hm and Alessandro Berarducci",
+	title = "Automatic Synthesis of Typed $\Lambda$-Programs on
+		Term Algebras",
+	journal = TCS,
+	month = aug,
+	year = "1985",
+	volume = "39",
+	number = "2--3",
+	pages = "135--154",
+	publisher = pub-ESP,
+	library = "SCS-55",
+}
+
+@incollection
+{
+	bohm:norm-selfint,
+	author = "Corrado B{\"o}hm and Alessandro Berarducci",
+	title = "A self-interpreter of lambda calculus having a normal form",
+	booktitle = "Computer Science Logic",
+	series = LNCS,
+	editor = "E. Borger and G. Jager and Kleine Buning, H. and
+		Simone Martini and M. M. Richter",
+	volume = "702",
+	year = "1993",
+	pages = "85--99",
+	publisher = pub-SV,
+	library = "SCS-97",
+}
+
+@article
+{
+	wadler:deforestation,
+	author = "Philip Wadler",
+	title = "Deforestation: Transforming Programs to eliminate trees",
+	journal = TCS,
+	month = jun,
+	year = "1990",
+	volume = "73",
+	number = "2",
+	pages = "231--248",
+	publisher = pub-ESP,
+	library = "SCS-31",
+	url = "http://cm.bell-labs.com/who/wadler/topics/deforestation.html",
+	dvi = "http://cm.bell-labs.com/who/wadler/papers/deforest/deforest.dvi.gz",
+	postscript = "http://cm.bell-labs.com/who/wadler/papers/deforest/deforest.ps.gz",
+}
+
+@article
+{
+	barendregt:impact-lambda,
+	author = "Hen[dri]k [Pieter] Barendregt",
+	title = "The impact of the lambda calculus
+		in logic and computer science",
+	journal = "The Bulletin of Symbolic Logic",
+	volume = "3",
+	number = "2",
+	pages = "181--215",
+	month = jun,
+	year = "1997",
+	library = "SCS-95",
+	postscript = "ftp://ftp.cs.kun.nl/pub/CompMath.Found/church.ps.Z",
+}
+
+@misc
+{
+	barendregt:quest-correctness,
+	author = "Hen[dri]k [Pieter] Barendregt",
+	title = "The quest for correctness",
+	year = "1996",
+	month = apr,
+	library = "SCS-188",
+	postscript = "ftp://ftp.cs.kun.nl/pub/CompMath.Found/quest.ps.Z",
+}
+
+@misc
+{
+	barendregt:problems-type-theory,
+	author = "Hen[dri]k [Pieter] Barendregt",
+	title = "Problems in Type Theory",
+	year = "1998",
+	month = feb,
+	library = "SCS-88",
+	postscript = "ftp://ftp.cs.kun.nl/pub/CompMath.Found/marktoberdorf.ps.Z",
+}
+
+@misc
+{
+	barendregt:lambda-nat-seq-cut,
+	author = "Hen[dri]k [Pieter] Barendregt and Silvia Ghilezan",
+	title = "Lambda Terms for Natural Deduction, Sequent Calculus and
+		Cut Elimination",
+	year = "1998",
+	month = may,
+	library = "SCS-100",
+	postscript = "ftp://ftp.cs.kun.nl/pub/CompMath.Found/bg2.ps.Z",
+}
+
+@book
+{
+	jones:pe-and-apg,
+	author = "Neil D[eaton] Jones and
+		Carsten K[rogh] Gomard and Peter Sestoft",
+	title = "Partial Evaluation and Automatic Program Generation",
+	year = "1993",
+	publisher = pub-PHI,
+	series = ISCS,
+	library = "SCS",
+}
+
+@book
+{
+	bird:func-prog,
+	author = "Richard J. Bird and Philip Wadler",
+	title = "Introduction to Functional Programming",
+	year = "1988",
+	publisher = pub-PHI,
+	series = ISCS,
+	library = "SCS",
+}
+
+@book
+{
+	barr:category-cs,
+	author = "Michael Barr and Charles Wells",
+	title = "Category Theory for Computing Science",
+	year = "1990",
+	publisher = pub-PHI,
+	series = ISCS,
+	library = "SCS",
+}
+
+@book
+{
+	peyton:impl-fun,
+	author = "Peyton Jones, Simon L.",
+	title = "The Implementation of Functional Programming Languages",
+	year = "1987",
+	publisher = pub-PHI,
+	series = ISCS,
+	library = "DIKU",
+}
+
+@inproceedings
+{
+	ariola:need-lambda,
+	author = "Zena M. Ariola and Matthias Felleisen and
+		John Maraist and Martin Odersky and Philip Wadler",
+	title = "A Call-By-Need Lambda Calculus",
+	booktitle = "Proceedings of POPL '95",
+	year = "1995",
+	pages = "233--246",
+	publisher = pub-ACM,
+	library = "SCS-98",
+	url = "http://cm.bell-labs.com/who/wadler/topics/call-by-need.html#need",
+	postscript = "http://cm.bell-labs.com/who/wadler/papers/need/need.ps.gz",
+}
+
+@book
+{
+	dybvig:scheme,
+	author = "R. Kent Dybvig",
+	title = "The Scheme Programming Language",
+	year = "1987",
+	publisher = pub-PH,
+	library = "DIKU",
+}
+
+@book
+{
+	dybvig:scheme-2nd,
+	author = "R. Kent Dybvig",
+	title = "The Scheme Programming Language",
+	year = "1996",
+	publisher = pub-PH,
+	edition = "Second",
+	url = "http://www.prenhall.com/books/ptr_0134546466.html",
+}
+
+@article
+{
+	sorensen:pos-supercomp,
+	author = "Morten Heine [Bj{\o}rnlund] S{\o}rensen and
+		Robert Gl{\"u}ck and Neil D[eaton] Jones",
+	title = "A Positive Supercompiler",
+	journal = j-JFP,
+	year = "1996",
+	volume = "6",
+	number = "6",
+	pages = "811--838",
+	month = nov,
+	publisher = pub-CUP,
+	postscript = "ftp://ftp.diku.dk/diku/semantics/papers/D-300.ps.gz",
+}
+
+@incollection
+{
+	shankar:pvs-proof-search,
+	author = "N[atarajan] Shankar",
+	title = "Proof Search in the Intuitionistic Sequent Calculus",
+	booktitle = "Automated Deduction---{CADE}-11",
+	year = "1992",
+	pages = "522--536",
+	series = LNCS,
+	publisher = pub-SV,
+	editor = "Deepak Kapur",
+	volume = "607",
+	library = "SCS-79",
+	dvi = "http://www.csl.sri.com/shankar/cade92-ns.dvi.Z",
+}
+
+@article
+{
+	sorensen:strong-from-weak,
+	author = "Morten Heine [Bj{\o}rnlund] S{\o}rensen",
+	title = "Strong Normalization from Weak Normalization in Typed
+		$\lambda$-Calculi",
+	journal = j-IAC,
+	year = "1997",
+	volume = "133",
+	number = "1",
+	pages = "35--71",
+	month = feb,
+	publisher = pub-AP,
+	postscript = "ftp://ftp.diku.dk/diku/semantics/papers/D-339.ps.gz",
+	library = "SCS",
+}
+
+@article
+{
+	raamsdonk:perpetual-reductions,
+	author = "Femke van Raamsdonk and Paula Severi and Morten Heine
+		B[j{\o}rnlund] S{\o}rensen and Hongwei Xi",
+	title = "Perpetual Reductions in $\lambda$-Calculus",
+	journal = j-IAC,
+	volume = "149",
+	number = "2",
+	month = mar,
+	year = "1999",
+	pages = "173--225",
+	publisher = pub-AP,
+	library = "SCS",
+}
+
+@article
+{
+	grue:map-theory,
+	author = "Klaus [Ebbe] Grue",
+	title = "Map Theory",
+	journal = TCS,
+	year = "1992",
+	month = aug,
+	volume = "102",
+	number = "1",
+	pages = "1--133",
+	publisher = pub-ESP,
+	library = "SCS",
+}
+
+@article
+{
+	knuth:structure-goto,
+	author = "Donald E[rvin] Knuth",
+	title = "Structured programming with go to statements",
+	journal = j-COMP-SURV,
+	volume = "6",
+	number = "4",
+	pages = "261--302",
+	month = dec,
+	year = "1974",
+	note = "Reprinted as chapter~2 in \cite{knuth:literate}.",
+}
+
+@book
+{
+	knuth:literate,
+	author = "Donald E[rvin] Knuth",
+	title = "Literate Programming",
+	series = "CSLI Lecture Notes",
+	number = "27",
+	publisher = "Center for the Study of Language and Information",
+	year = "1992",
+	library = "DIKU",
+}
+
+@book
+{
+	knuth:art-1,
+	author = "Donald E[rvin] Knuth",
+	title = "Fundamental Algorithms",
+	year = "1973",
+	volume = "1",
+	series = "The Art of Computer Programming",
+	edition = "Second",
+	publisher = pub-AW,
+	url = "http://www-cs-staff.stanford.edu/{\~{}}knuth/taocp.html#vol1",
+	library = "SCS",
+}
+
+@book
+{
+	knuth:art-2,
+	author = "Donald E[rvin] Knuth",
+	title = "Seminumerical Algorithms",
+	year = "1981",
+	volume = "2",
+	series = "The Art of Computer Programming",
+	edition = "Second",
+	publisher = pub-AW,
+	url = "http://www-cs-staff.stanford.edu/{\~{}}knuth/taocp.html#vol2",
+	library = "SCS",
+}
+
+@book
+{
+	knuth:art-3,
+	author = "Donald E[rvin] Knuth",
+	title = "Sorting and Searching",
+	year = "1973",
+	volume = "3",
+	series = "The Art of Computer Programming",
+	publisher = pub-AW,
+	url = "http://www-cs-staff.stanford.edu/{\~{}}knuth/taocp.html#vol3",
+	library = "SCS",
+}
+
+@book
+{
+	knuth:tex,
+	author = "Donald E[rvin] Knuth",
+	title = "The \TeX book",
+	year = "1992",
+	volume = "A",
+	series = "Computers \& Typesetting",
+	edition = "Revised",
+	publisher = pub-AW,
+	url = "http://www-cs-staff.stanford.edu/{\~{}}knuth/abcde.html#texbk",
+	library = "SCS",
+}
+
+@book
+{
+	goossens:latex-companion,
+	author = "Michel Goossens and Frank Mittelbach and Alexander Samarin",
+	title = "The \LaTeX{} Companion",
+	year = "1994",
+	publisher = pub-AW,
+	url = "http://cseng.awl.com/bookdetail.qry?ISBN=0-201-54199-8&ptype=0",
+	library = "SCS",
+}
+
+@book
+{
+	lamport:latex-guide,
+	author = "Leslie Lamport",
+	title = "\LaTeX{} User's Guide and Reference Manual",
+	year = "1994",
+	edition = "Second",
+	publisher = pub-AW,
+	url = "http://cseng.awl.com/bookdetail.qry?ISBN=0-201-52983-1&ptype=0",
+	library = "SCS",
+}
+
+@article
+{
+	nipkow:winskel,
+	author = "Tobias Nipkow",
+	title = "Winskel is (almost) Right: Towards a Mechanized
+		Semantics Textbook",
+	journal = "Formal Aspects of Computing",
+	year = "1998",
+	volume = "10",
+	pages = "171--186",
+	library = "SCS-70",
+	url = "http://www4.informatik.tu-muenchen.de/{\~{}}nipkow/pubs/fac98.html",
+	dvi = "http://www4.informatik.tu-muenchen.de/{\~{}}nipkow/pubs/fac98.dvi.gz",
+	postscript = "http://www4.informatik.tu-muenchen.de/{\~{}}nipkow/pubs/fac98.ps.gz",
+}
+
+@inproceedings
+{
+	iwasaki:manipulation,
+	author = "Hideya Iwasaki and Zhenjiang Hu and Masato Takeichi",
+	title = "Towards Manipulation of Mutually Recursive Functions",
+	booktitle = "Third Fuji International Symposium on Functional
+		and Logic Programming",
+	editor = "M. Sato and Y. Toyama",
+	publisher = "World Scientific",
+	year = "1998",
+	library = "SCS-40",
+}
+
+@inproceedings
+{
+	takano:shortcut-calc,
+	author = "Akihiko Takano and Erik Meijer",
+	title = "Shortcut Deforestation in Calculational Form",
+	booktitle = "Conference on Functional Programming Languages and
+		Computer Architecture",
+	year = "1995",
+	publisher = pub-ACM,
+	library = "SCS-41",
+	url = "http://www.cs.ruu.nl/{\~{}}erik/acid.html",
+	postscript = "http://www.cs.ruu.nl/{\~{}}erik/acid.ps",
+}
+
+@manual
+{
+	pvs:prover-guide,
+	author = "N[atarajan] Shankar and S[am] Owre and J[ohn] M. Rushby and
+		D[avid] W[illiam] J[ohn] Stringer-Calvert",
+	title = "{PVS} Prover Guide",
+	organization = "SRI International",
+	year = "1998",
+	postscript = "http://pvs.csl.sri.com/doc/pvs-prover-guide.ps.gz",
+	library = "SCS",
+}
+
+@manual
+{
+	pvs:lang-ref,
+	author = "S[am] Owre and N[atarajan] Shankar and J[ohn] M. Rushby and
+		D[avid] W[illiam] J[ohn] Stringer-Calvert",
+	title = "{PVS} Language Reference",
+	organization = "SRI International",
+	year = "1998",
+	postscript = "http://pvs.csl.sri.com/doc/pvs-language-reference.ps.gz",
+	library = "SCS",
+}
+
+@manual
+{
+	pvs:system-guide,
+	author = "S[am] Owre and N[atarajan] Shankar and J[ohn] M. Rushby and
+		D[avid] W[illiam] J[ohn] Stringer-Calvert",
+	title = "{PVS} System Guide",
+	organization = "SRI International",
+	year = "1998",
+	postscript = "http://pvs.csl.sri.com/doc/pvs-system-guide.ps.gz",
+	library = "SCS",
+}
+
+@techreport
+{
+	rushby:less-elem-tutorial,
+	author = "J[ohn] M. Rushby and
+		D[avid] W[illiam] J[ohn] Stringer-Calvert",
+	title = "A Less Elementary Tutorial for the {PVS} Specification and
+		Verification System",
+	institution = "Computer Science Laboratory, SRI International",
+	year = "1996",
+	number = "CSL-95-10",
+	postscript = "http://pvs.csl.sri.com/pvs/examples/elementary-tutorial/csl-95-10.html",
+	url = "http://www.csl.sri.com/reports/html/csl-95-10.html",
+	library = "SCS",
+}
+
+@techreport
+{
+	skakkebaek:dc-pvs,
+	author = "Jens U[lrik] Skakkeb{\ae}k and N[atarajan] Shankar",
+	title = "A Duration Calculus Proof Checker: Using {PVS} as a
+		Semantic Framework",
+	institution = "Computer Science Laboratory, SRI International",
+	year = "1997",
+	number = "CSL-93-10",
+	library = "SCS-142",
+	url = "http://www.csl.sri.com/reports/html/csl-93-10.html",
+	dvi = "http://www.csl.sri.com/reports/csl-93-10.dvi.Z",
+	postscript = "http://www.csl.sri.com/reports/postscript/csl-93-10.ps.gz",
+}
+
+@book
+{
+	aho:compilers,
+	author = "Alfred V. Aho and Ravi Sethi and Jeffrey D. Ullman",
+	title = "Compilers: Principles, Techniques, and Tools",
+	year = "1986",
+	series = "Addison-{W}esley series in Computer Science",
+	publisher = pub-AW,
+	library = "SCS",
+}
+
+@book
+{
+	jones:comp-and-comp,
+	author = "Neil D[eaton] Jones",
+	title = "Computability and Complexity: From a Programming Perspective",
+	publisher = pub-MIT,
+	year = "1997",
+	series = FOC,
+	url = "http://www-mitpress.mit.edu/book-home.tcl?isbn=0262100649",
+	library = "SCS",
+}
+
+@book
+{
+	maclane:categories,
+	author = "Mac Lane, Saunders",
+	title = "Categories for the Working Mathematician",
+	edition = "Second",
+	publisher = pub-SV,
+	series = GTM,
+	volume = "5",
+	year = "1998",
+	url = "http://www.springer.de/cgi-bin/search_book.pl?isbn=0-387-98403-8",
+	library = "SCS",
+}
+
+@book
+{
+	hindley:basic-simple,
+	author = "J[ohn] Roger Hindley",
+	title = "Basic Simple Type Theory",
+	publisher = pub-CUP,
+	series = CTTCS,
+	volume = "42",
+	year = "1997",
+	url = "http://titles.cambridge.org/catalogue.asp?isbn=0521465184",
+	library = "SCS",
+}
+
+@book
+{
+	nielson:two-lvl-func,
+	author = "F[lemming] Nielson and H[anne] R[iis] Nielson",
+	title = "Two-Level Functional Languages",
+	publisher = pub-CUP,
+	series = CTTCS,
+	volume = "34",
+	year = "1992",
+	url = "http://titles.cambridge.org/catalogue.asp?isbn=0521403847",
+	library = "DIKU",
+}
+
+@book
+{
+	paulson:ml,
+	author = "Lawrence C. Paulson",
+	title = "{ML} for the Working Programmer",
+	publisher = pub-CUP,
+	year = "1996",
+	edition = "Second",
+	url = "http://www.cl.cam.ac.uk/users/lcp/MLbook/",
+	library = "SCS",
+}
+
+@phdthesis
+{
+	havelund:fork-calculus,
+	author = "Klaus Havelund",
+	title = "The Fork Calculus: Towards a Logic for Concurrent {ML}",
+	school = UCph,
+	year = "1994",
+	note = "DIKU Technical Report 94/4",
+	library = "SCS",
+}
+
+@mastersthesis
+{
+	fogh-olsen:multi-scale,
+	author = "Ole Fogh Olsen",
+	title = "Multi-Scale Segmentation of Grey-Scale Images",
+	school = DIKU,
+	year = "1996",
+	note = "DIKU Technical Report 96/30",
+	postscript = "http://www.diku.dk/research/published/96-30.ps.gz",
+	library = "SCS",
+}
+
+@mastersthesis
+{
+	sorensen:turchin,
+	author = "Morten Heine [Bj{\o}rnlund] S{\o}rensen",
+	title = "Turchin's Supercompiler Revisited---An operational theory
+		of positive information propagation",
+	school = DIKU,
+	year = "1994",
+	note = "DIKU Technical Report 94/9",
+	postscript = "ftp://ftp.diku.dk/diku/semantics/papers/D-297.ps.gz",
+	library = "SCS",
+}
+
+@mastersthesis
+{
+	rehof:poly-typ,
+	author = "Jakob Rehof",
+	title = "Polymorphic Dynamic Typing: Aspects of Proof Theory
+		and Inference",
+	school = DIKU,
+	year = "1995",
+	note = "DIKU Technical Report 95/9",
+	library = "SCS",
+}
+
+@phdthesis
+{
+	sorensen:lambda-norm,
+	author = "Morten Heine [Bj{\o}rnlund] S{\o}rensen",
+	title = "Normalization in $\lambda$-Calculus and Type Theory",
+	school = UCph,
+	year = "1997",
+	note = "DIKU Technical Report 95/27",
+	postscript = "ftp://ftp.diku.dk/diku/semantics/papers/D-367.ps.gz",
+	library = "SCS",
+}
+
+@proceedings
+{
+	johansen:guassian-scale-space,
+	editor = "Peter Johansen",
+	title = "Proceedings of the Copenhagen Workshop on Gaussian Scale-Space
+		Theory",
+	year = "1996",
+	note = "DIKU Technical Report 96/19",
+	library = "SCS",
+}
+
+@proceedings
+{
+	johansen:anden-dk-konf,
+	editor = "Peter Johansen",
+	title = "Proceedings fra Den Anden Danske Konference om
+		M{\o}nstergenkendelse og Billedanalyse",
+	year = "1993",
+	note = "DIKU Technical Report 93/17",
+	library = "SCS",
+}
+
+@incollection
+{
+	jones:abs-int,
+	author = "Neil D[eaton] Jones and Flemming Nielson",
+	title = "Abstract Interpretation: A Semantics-Based Tool for Program
+		Analysis",
+	year = "1994",
+	booktitle = "Handbook of Logic in Computer Science",
+	pages = "527--629",
+	publisher = pub-OUP,
+	note = "DIKU Technical Report 94/2",
+	dvi = "ftp://ftp.diku.dk/diku/semantics/papers/D-58.dvi.Z",
+	postscript = "ftp://ftp.diku.dk/diku/semantics/papers/D-58.ps.Z",
+	library = "SCS",
+}
+
+@techreport
+{
+	sorensen:curry-howard,
+	author = "Morten Heine B[j{\o}rnlund] S{\o}rensen and Pawel Urzyczyn",
+	title = "Lectures on the {C}urry-{H}oward Isomorphism",
+	institution = DIKU,
+	type = DIKURep,
+	year = "1998",
+	number = "98/14",
+	postscript = "ftp://ftp.diku.dk/diku/semantics/papers/D-368.ps.gz",
+	library = "SCS",
+}
+
+@techreport
+{
+	grue:stable-mt,
+	author = "Klaus [Ebbe] Grue",
+	title = "Stable Map Theory",
+	institution = DIKU,
+	type = DIKURep,
+	month = apr,
+	year = "1996",
+	number = "96/10",
+	postscript = "ftp://ftp.diku.dk/diku/semantics/papers/D-311.ps.gz",
+	library = "SCS",
+}
+
+@article
+{
+	berline:sem-map-theory,
+	author = "Chantal Berline and Klaus [Ebbe] Grue",
+	title = "A $\kappa$-denotional Semantics for Map Theory in
+		{ZFC+SI}",
+	journal = TCS,
+	volume = "179",
+	number = "1--2",
+	pages = "137--202",
+	month = jun,
+	year = "1997",
+	note = "DIKU Technical Report 96/11",
+	dvi = "ftp://ftp.diku.dk/diku/semantics/papers/D-335.dvi.gz",
+	postscript = "ftp://ftp.diku.dk/diku/semantics/papers/D-335.ps.gz",
+	library = "SCS",
+}
+
+@incollection
+{
+	griffioen:pvs-isabell-hol,
+	author = "[W. O.] David Griffioen and Marieke Huisman",
+	title = "A Comparison of {PVS} and {I}sabelle/{HOL}",
+	pages = "123--142",
+	crossref = "lncs:1479",
+	library = "SCS-86",
+	url = "http://www.cs.kun.nl/{\~{}}marieke/Comparison.html",
+	postscript = "http://www.cs.kun.nl/{\~{}}marieke/Tphols98.ps",
+}
+
+@article
+{
+	naraschewski:w-inf,
+	author = "Wolfgang Naraschewski and Tobias Nipkow",
+	title = "Type Inference Verified: Algorithm
+		{W} in {I}sabelle/{HOL}",
+	journal = j-JAR,
+	year = "1999",
+	note = "To appear",
+	library = "SCS-71",
+	url = "http://www4.informatik.tu-muenchen.de/{\~{}}nipkow/pubs/W.html",
+	dvi = "http://www4.informatik.tu-muenchen.de/{\~{}}nipkow/pubs/jarw.dvi.gz",
+
+}
+
+@book
+{
+	mendelson:intro-logic,
+	author = "Elliott Mendelson",
+	title = "Introduction to Mathematical Logic",
+	year = "1997",
+	edition = "Fourth",
+	publisher = pub-CH,
+	url = "http://www.wkap.nl/book.htm/0-412-80830-7",
+	library = "DIKU",
+}
+
+@book
+{
+	gunter:formal-semantics,
+	author = "Carl A. Gunter",
+	title = "Semantics of Programming Languages: Structures and Techniques",
+	publisher = pub-MIT,
+	year = "1992",
+	series = FOC,
+	url = "http://www-mitpress.mit.edu/book-home.tcl?isbn=0262071436",
+	library = "SCS",
+}
+
+@article
+{
+	gomard:toplas,
+	author = "Carsten K[rogh] Gomard",
+	title = "A Self-Applicable Partial Evaluator for the Lambda Calculus:
+		Correctness and Pragmatics",
+	journal = j-TOPLAS,
+	year = "1992",
+	editor = "Susan L. Graham",
+	volume = "14",
+	number = "2",
+	pages = "147--172",
+	month = apr,
+	publisher = pub-ACM,
+	library = "SCS-44",
+	pdf = "http://www.acm.org/pubs/articles/journals/toplas/1992-14-2/p147-gomard/p147-gomard.pdf",
+}
+
+@phdthesis
+{
+	bondorf:self-app-pe,
+	author = "Anders Bondorf",
+	title = "Self-Applicable Partial Evaluation",
+	school = UCph,
+	year = "1990",
+	edition = "Revised",
+	note = "DIKU Technical Report 90/17",
+	library = "SCS",
+}
+
+@mastersthesis
+{
+	andersen:c-spec,
+	author = "Lars Ole Andersen",
+	title = "C Program Specialization",
+	school = DIKU,
+	year = "1992",
+	note = "DIKU Technical Report 92/14",
+	postscript = "http://www.diku.dk/research-groups/topps/activities/cmix/cmix/thesis.ps.gz",
+	dvi = "http://www.diku.dk/research-groups/topps/activities/cmix/cmix/thesis.dvi",
+	library = "SCS",
+}
+
+@mastersthesis
+{
+	filinski:decl-cont-cat-dual,
+	author = "Andrzej Filinski",
+	title = "Declarative Continuations and Categorical Duality",
+	school = DIKU,
+	year = "1989",
+	month = jul,
+	note = "DIKU Technical Report 89/11",
+	library = "SCS",
+}
+
+@mastersthesis
+{
+	birkedal:sml-pe,
+	author = "Lars Birkedal and Morten Welinder",
+	title = "Partial Evaluation of {S}tandard {ML}",
+	school = DIKU,
+	month = oct,
+	year = "1993",
+	note = "DIKU Technical Report 93/22",
+	dvi = "ftp://ftp.diku.dk/diku/semantics/papers/D-176.dvi.Z",
+	library = "SCS",
+}
+
+@techreport
+{
+	jones:mix-exp,
+	author = "Neil D[eaton] Jones and Peter Sestoft
+		and Harald S{\o}ndergaard",
+	title = "An Experiment in Partial Evaluation: The Generation of a
+		Compiler Generator",
+	institution = DIKU,
+	type = DIKURep,
+	month = jan,
+	year = "1985",
+	number = "85/1",
+	library = "SCS",
+}
+
+@article
+{
+	futamura:pe,
+	author = "Yoshihiko Futamura",
+	title = "Partial Evaluation of Computing Process---an Approach to a
+		Compiler-Compiler",
+	journal = "Systems, Computers, Controls",
+	year = "1971",
+	volume = "2",
+	number = "5",
+	pages = "45--50",
+	library = "SCS-25",
+}
+
+@book
+{
+	bernays:axiom-set-theory,
+	author = "Paul Bernays",
+	title = "Axiomatic Set Theory",
+	publisher = pub-NH,
+	address = "Amsterdam",
+	year = "1968",
+	series = LFM,
+	edition = "Second",
+	note = "Republished by Dover in 1991",
+	library = "SCS",
+}
+
+@book
+{
+	suppes:axiom-set-theory,
+	author = "Patrick Suppes",
+	title = "Axiomatic Set Theory",
+	publisher = "Van Nostrand",
+	year = "1960",
+	note = "Republished with corrections by Dover in 1972",
+	library = "SCS",
+}
+
+@phdthesis
+{
+	gomard:prog-anal,
+	author = "Carsten Krogh Gomard",
+	title = "Program Analysis Matters",
+	school = UCph,
+	month = nov,
+	year = "1991",
+	note = "DIKU Technical Report 91/17",
+	library = "SCS",
+}
+
+@manual
+{
+	isabelle:intro,
+	author = "Lawrence C. Paulson",
+	title = "Introduction to {I}sabelle",
+	organization = CLCamb,
+	year = "1998",
+	library = "SCS-60",
+	dvi = "http://www.cl.cam.ac.uk/Research/Reports/TR280-lcp-isabelle-intro.dvi.gz",
+}
+
+@manual
+{
+	isabelle:ref,
+	author = "Lawrence C. Paulson",
+	title = "The {I}sabelle Reference Manual",
+	organization = CLCamb,
+	year = "1998",
+	dvi = "http://www.cl.cam.ac.uk/Research/Reports/TR283-lcp-isabelle-ref.dvi.gz",
+	library = "SCS",
+}
+
+@manual
+{
+	isabelle:obj-logic,
+	author = "Lawrence C. Paulson",
+	title = "{I}sabelle's Object-Logics",
+	organization = CLCamb,
+	year = "1998",
+	dvi = "http://www.cl.cam.ac.uk/Research/Reports/TR286-lcp-isabelle-logics.dvi.gz",
+	library = "SCS",
+}
+
+@phdthesis
+{
+	klop:thesis,
+	author = "Jan Willem Klop",
+	title = "Combinatory Reduction Systems",
+	school = "Utrecht University",
+	year = "1980",
+	address = "Amsterdam",
+	note = "{CWI} Tract 127",
+	library = "PMN",
+}
+
+@book
+{
+	annreview:1,
+	editor = "Richard Goodman",
+	title = "Annual Review in Automatic Programming",
+	publisher = "Pergamon Press",
+	volume = "1",
+	year = "1960",
+	library = "DIKU",
+}
+
+@article
+{
+	turing:comp-num-ent,
+	author = "A[lan] M[athison] Turing",
+	title = "On Computable Numbers, with an Application to the
+		Entscheidungsproblem",
+	journal = "Proceedings of the London Mathematical Society",
+	volume = 42,
+	number = 2,
+	pages = "230--265",
+	year = "1936--7",
+	note = "Reprinted with corrections as appendix One in
+		\cite{annreview:1}.",
+	library = "SCS-92",
+}
+
+@Article{
+	kelsey:scheme5,
+	author = "Richard Kelsey and William Clinger and Jonathan Rees",
+	title = "Revised$^5$ Report on the Algorithmic Language {S}cheme",
+	journal = j-SIGPLAN,
+	volume = "33",
+	number = "9",
+	pages = "26--76",
+	month = sep,
+	year = "1998",
+	note = "With H. Abelson, N. I. {Adams, IV}, D. H. Bartley, G.
+		Brooks, R. K. Dybvig, D. P. Friedman, R. Halstead, C.
+		Hanson, C. T. Haynes, E. Kohlbecker, D. Oxley, K. M.
+		Pitman, G. J. Rozas, G. L. {Steele, Jr.}, G. J.
+		Sussman, and M. Wand.",
+	dvi = "ftp://swissnet.ai.mit.edu/pub/scheme-reports/r5rs.dvi.gz",
+	postscript = "ftp://swissnet.ai.mit.edu/pub/scheme-reports/r5rs.ps.gz",
+	url = "http://www-swiss.ai.mit.edu/{\~{}}jaffer/r5rs_toc.html",
+	library = "SCS",
+}
+
+@incollection
+{
+	futamura:pe-prog,
+	author = "Yoshihiko Futamura",
+	title = "Partial Computation of Programs",
+	pages = "1--35",
+	library = "SCS-26",
+	booktitle = "{RIMS} Symposia on Software Science and Engineering",
+	editor = "Eiichi Goto and Koichi Furukawa and Reiji
+		Nakajima and Ikuo Nakata and Akinori Yonezawa",
+	series = LNCS,
+	publisher = pub-SV,
+	volume = "147",
+	year = "1983",
+}
+
+@inproceedings
+{
+	futamura:gen-pc,
+	author = "Yoshihiko Futamura and Kenroku Nogi",
+	title = "Generalized Partial Computation",
+	pages = "133--151",
+	crossref = "pe-mix:ifip-87",
+	library = "SCS-22",
+}
+
+@techreport
+{
+	danvy:func-abs-typ-cont,
+	author = "Olivier Danvy and Andrzej Filinski",
+	title = "A Functional Abstraction of Typed Contexts",
+	institution = DIKU,
+	type = DIKURep,
+	year = "1989",
+	number = "89/12",
+	library = "SCS",
+}
+
+@techreport
+{
+	andersen:approx-trs,
+	author = "Nils Andersen",
+	title = "Approximating Term Rewriting Systems With Tree Grammars",
+	institution = DIKU,
+	type = DIKURep,
+	year = "1986",
+	number = "86/16",
+	library = "SCS",
+}
+
+@techreport
+{
+	sondergaard:ref-trans,
+	author = "Harald S{\o}ndergaard and Peter Sestoft",
+	title = "Referential Transparancy and Allied Notions",
+	institution = DIKU,
+	type = DIKURep,
+	year = "1988",
+	number = "88/7",
+	library = "SCS",
+}
+
+@techreport
+{
+	bondorf:sim-man,
+	author = "Anders Bondorf",
+	title = "Similix Manual (system version 3.0)",
+	institution = DIKU,
+	type = DIKURep,
+	year = "1991",
+	number = "91/9",
+	library = "SCS",
+}
+
+@techreport
+{
+	bondorf:auto-auto,
+	author = "Anders Bondorf and Olivier Danvy",
+	title = "Automatic Autoprojection of Recursive Equations
+		with Global Variables and Abstract Data Types",
+	institution = DIKU,
+	type = DIKURep,
+	year = "1990",
+	number = "90/4",
+	library = "SCS",
+}
+
+@article
+{
+	gomard:comp-gen-pe,
+	author = "Carsten K[rogh] Gomard and Neil D[eaton] Jones",
+	title = "Compiler Generation by Partial Evaluation: a Case Study",
+	year = "1991",
+	journal = "Structured Programming",
+	volume = "12",
+	pages = "123--144",
+	note = "DIKU Technical Report 90/16",
+	library = "SCS",
+}
+
+@techreport
+{
+	sondergaard:sem-non-det,
+	author = "Harald S{\o}ndergaard and Peter Sestoft",
+	title = "Non-Determinacy and Its Semantics",
+	institution = DIKU,
+	type = DIKURep,
+	year = "1986",
+	number = "86/12",
+	library = "SCS",
+}
+
+@techreport
+{
+	grue:eff-form-theory,
+	author = "Klaus E[bbe] Grue",
+	title = "An Efficient Formal Theory",
+	institution = DIKU,
+	type = DIKURep,
+	month = feb,
+	year = "1987",
+	number = "87/14",
+	library = "SCS",
+}
+
+@techreport
+{
+	tofte:th-stack-alloc,
+	author = "Mads Tofte and Jean-Pierre Talpin",
+	title = "A Theory of Stack Allocation in Polymorphically
+		Typed Languages",
+	institution = DIKU,
+	type = DIKURep,
+	year = "1993",
+	number = "93/15",
+	library = "SCS",
+}
+
+@article
+{
+	jones:mix-rev,
+	author = "Neil D[eaton] Jones and Peter Sestoft and
+		Harald S{\o}ndergaard",
+	title = "Mix: A Self-Applicable Partial Evaluator for Experiments
+		in Compiler Generation",
+	journal = "{LISP} and Symbolic Computation",
+	volume = "2",
+	number = "1",
+	pages = "9--50",
+	year = "1989",
+	note = "DIKU Technical Report 91/12, revised version of 87/8",
+	library = "SCS",
+}
+
+@incollection
+{
+	sestoft:struct-pe,
+	author = "Peter Sestoft",
+	title = "The Structure of a Self-Applicable Partial Evaluator",
+	booktitle = "Programs as Data Objects",
+	series = LNCS,
+	volume = "217",
+	pages = "236--256",
+	editor = "H. Ganzinger and N[eil] D[eaton] Jones",
+	publisher = pub-SV,
+	year = "1986",
+	note = "DIKU Technical Report 85/11",
+	library = "SCS",
+}
+
+@techreport
+{
+	jones:pe-gpg,
+	author = "Neil D[eaton] Jones",
+	title = "Partial Evaluation and the Generation of Program Generators",
+	institution = DIKU,
+	type = DIKURep,
+	year = "1992",
+	number = "92/18",
+	dvi = "ftp://ftp.diku.dk/diku/semantics/papers/D-130.dvi.Z",
+	postscript = "ftp://ftp.diku.dk/diku/semantics/papers/D-130.ps.Z",
+	library = "SCS",
+}
+
+@phdthesis
+{
+	dybkjaer:cat-theory,
+	author = "Hans Dybkj{\ae}r",
+	title = "Category Theory, Types, and Programming Languages",
+	school = UCph,
+	month = mar,
+	year = "1991",
+	note = "DIKU Technical Report 91/11",
+	library = "SCS",
+}
+
+@phdthesis
+{
+	agerholm:hol-func-prog,
+	author = "Sten Agerholm",
+	title = "A {HOL} Basis for Reasoning about Functional Programs",
+	school = UAarhus,
+	month = dec,
+	year = "1994",
+	note = "BRICS Technical Report RS-94-44",
+	postscript = "http://www.brics.dk/RS/94/44/BRICS-RS-94-44.ps.gz",
+	library = "SCS",
+}
+
+@phdthesis
+{
+	sondergaard:sem-based-anal,
+	author = "Harald S{\o}ndergaard",
+	title = "Semantics-Based Analysis and Transformation of Logic
+		Programs",
+	school = UCph,
+	year = "1989",
+	note = "A revised report is found as DIKU Technical Report 89/22",
+	library = "SCS",
+}
+
+@techreport
+{
+	danvy:mem-alloc,
+	author = "Olivier Danvy",
+	title = "Memory Allocation and Higher-Order Functions: Capture,
+		Sharing, and Incremental Recovery, an Alternative to the
+		Stack Strategy Using a Heap Memory",
+	institution = DIKU,
+	type = DIKURep,
+	year = "1987",
+	number = "87/1",
+	library = "SCS",
+}
+
+@incollection
+{
+	jones:flow-anal,
+	author = "Neil D[eaton] Jones",
+	title = "Flow Analysis of Lazy Higher-Order Functional Languages",
+	booktitle = "Abstract Interpretation of Declarative Languages",
+	editor = "S[amson] Abramsky and C. Hankin",
+	publisher = "Ellis Horwood",
+	year = "1987",
+	pages = "103--122",
+	note = "DIKU Technical Report 86/15",
+	library = "SCS",
+}
+
+@phdthesis
+{
+	hannan:doctoral,
+	author = "John J. Hannan",
+	title = "Investigating a Proof-Theoretic Meta-Language for Functional
+		Programs",
+	school = UPenn,
+	year = "1991",
+	number = "DIKU Technical Report 91/1",
+	library = "SCS",
+}
+
+@mastersthesis
+{
+	sestoft:glob-var,
+	author = "Peter Sestoft",
+	title = "Replacing Function Parameters by Global Variables",
+	school = DIKU,
+	year = "1988",
+	month = oct,
+	library = "SCS-159",
+	postscript = "ftp://ftp.dina.kvl.dk/pub/Staff/Peter.Sestoft/papers/MSc-thesis.ps.gz",
+	url = "http://www.dina.kvl.dk/{\~{}}sestoft/mscthesis/",
+}
+
+@techreport
+{
+	danvy:comp-act-pe,
+	author = "Olivier Danvy and Morten Rhiger",
+	title = "Compiling Actions by Partial Evaluation, Revisited",
+	institution = BRICS,
+	year = "1998",
+	number = "RS-98-13",
+	library = "SCS-28",
+	url = "http://www.brics.dk/RS/98/13/index.html",
+	dvi = "http://www.brics.dk/RS/98/13/BRICS-RS-98-13.dvi.gz",
+	postscript = "http://www.brics.dk/RS/98/13/BRICS-RS-98-13.ps.gz",
+	pdf = "http://www.brics.dk/RS/98/13/BRICS-RS-98-13.pdf",
+}
+
+@mastersthesis
+{
+	niss:horrap,
+	author = "Henning Niss",
+	title = "An Unfold/Fold Framework for First-Order Hereditary {H}arrop
+		Formulas: Transformations and Correctness Proofs",
+	school = DIKU,
+	year = "1997",
+	month = aug,
+	library = "SCS-130",
+	url = "http://www.diku.dk/users/hniss/thesis.html",
+	dvi = "http://www.diku.dk/users/hniss/Publications/thesis.dvi.gz",
+	postscript = "http://www.diku.dk/users/hniss/Publications/thesis.ps.gz",
+}
+
+@incollection
+{
+	pfenning:practice-lf,
+	author = "Frank Pfenning",
+	title = "The Practice of Logical Frameworks",
+	booktitle = "Trees in Algebra and Programming---CAAP '96. Proceedings",
+	series = LNCS,
+	publisher = pub-SV,
+	volume = "1059",
+	year = "1996",
+	editor = "H{\'e}l{\`e}ne Kirchner",
+	pages = "119--134",
+	library = "SCS-78",
+	postscript = "ftp://ftp.cs.cmu.edu/user/fp/papers/caap96.ps.gz",
+}
+
+@techreport
+{
+	rasmussen:cr-isabelle,
+	author = "Ole Rasmussen",
+	title = "The {C}hurch-{R}osser Theorem in {I}sabelle: A Proof Porting
+		Experiment",
+	institution = CLCamb,
+	month = mar,
+	year = 1995,
+	number = 364,
+	library = "SCS-72",
+	postscript = "http://www.cl.cam.ac.uk/Research/Reports/TR364-or200-church-rosser-isabelle.ps.gz",
+}
+
+@inproceedings
+{
+	niss:form-op-sep,
+	author = "Henning Niss and John Hatcliff",
+	title = "Formalizing Operational Semantics in Logical
+		Frameworks: A Case Study using {LF}/{E}lf",
+	booktitle = "Proceedings of the 7th Nordic Workshop on Programming
+		Theory",
+	editor = "Bror Bjerner and Marie Larsson and Bengt Nordstr{\"o}m",
+	address = "G{\"o}teborg, Sweden",
+	pages = "277--297",
+	month = nov,
+	year = 1995,
+	library = "SCS-82",
+	postscript = "http://www.diku.dk/users/hniss/Publications/nw95.ps.gz",
+	dvi = "http://www.diku.dk/users/hniss/Publications/nw95.dvi.gz",
+}
+
+@article
+{
+	debruijn:lam-not,
+	author = "N[icolaas] G[overt] de Bruijn",
+	title = "Lambda-Calculus Notation with Nameless Dummies: a Tool for
+		Automatic Formula Manipulation with Application to the
+		{C}hurch-{R}osser Theorem",
+	journal = "Indagationes Mathematicae",
+	volume = "34",
+	number = "5",
+	year = "1972",
+	pages = "381--392",
+	publisher = pub-NH,
+	note = "Reprinted in \cite{nederpelt:automath}, pp.\ 375--388",
+	library = "SCS-53",
+}
+
+@techreport
+{
+	harrison:form-math,
+	author = "John Harrison",
+	title = "Formalized Mathematics",
+	institution = Turku,
+	year = "1996",
+	type = TurkuRep,
+	number = "36",
+	month = aug,
+	library = "SCS-110",
+	url = "http://www.cl.cam.ac.uk/users/jrh/papers/form-math3.html",
+	dvi = "http://www.cl.cam.ac.uk/users/jrh/papers/form-math3-times.dvi.gz",
+	postscript = "http://www.cl.cam.ac.uk/users/jrh/papers/form-math3-times.ps.gz",
+}
+
+@incollection{
+	paulson:700,
+	author = "Lawrence C. Paulson",
+	title = "{I}sabelle: The Next 700 Theorem Provers",
+	booktitle = "Logic and Computer Science",
+	editor = "Piergiorgio Odifreddi",
+	publisher = pub-AP,
+	year = "1990",
+	pages = "361--386",
+	library = "SCS-80",
+	dvi = "http://www.cl.cam.ac.uk/Research/Reports/TR143-lcp-experience.dvi.gz",
+	pdf = "http://www.cl.cam.ac.uk/Research/Reports/TR143-lcp-experience.pdf",
+}
+
+%% -------------------------------------------------------------------------
+%% Partiel Evaluering: Sommerskole DIKU '98
+%% -------------------------------------------------------------------------
+
+@inproceedings{
+  mogensen:partial-concepts-applications,
+  author = 	 "Torben {\AE}[gidius] Mogensen",
+  title = 	 "Partial Evaluation: Concepts and Applications",
+  pages =	 {1--20},
+  crossref =	 {diku:pe-summerschool-98}
+}
+
+@inproceedings{
+  hatcliff:fcl,
+  author = 	 "John Hatcliff",
+  title = 	 "An Introduction to Partial Evaluation Using a Simple
+                  Flowchart Language",
+  pages =	 {21--90},
+  crossref =	 {diku:pe-summerschool-98}
+}
+
+@inproceedings{
+  jorgensen:similix,
+  author = 	 "Jesper J{\o}rgensen",
+  title = 	 "{S}imilix: A Self-applicable partial evaluator for {S}cheme",
+  pages =	 {91--115},
+  crossref =	 {diku:pe-summerschool-98}
+}
+
+@inproceedings{
+  secher:c-mix,
+  author = 	 "Jens Peter Secher",
+  title = 	 "{C}-mix---Specialization of {C} programs",
+  pages =	 {119--156},
+  crossref =	 {diku:pe-summerschool-98}
+}
+
+@inproceedings{
+  leuschel:logic-program-spec,
+  author = 	 "Michael Leuschel",
+  title = 	 "Logic Program Specialization",
+  pages =	 {159--205},
+  crossref =	 {diku:pe-summerschool-98}
+}
+
+@inproceedings{
+  mogensen:inherited-limits,
+  author = 	 "Torben {\AE}[gidius] Mogensen",
+  title = 	 "Inherited Limits",
+  pages =	 {1--10},
+  crossref =	 {diku:pe-summerschool-98}
+}
+
+@inproceedings{
+  augustsson:aircraft-crew,
+  author = 	 "Lennart Augustsson",
+  title = 	 "Partial Evaluation in Aircraft Crew Planning",
+  pages =	 {29--40},
+  crossref =	 {diku:pe-summerschool-98}
+}
+
+@inproceedings{
+  sorensen:convergence-program-transform,
+  author = 	 "Morten Heine B[j{\o}rnlund] S{\o}rensen",
+  title = 	 "Convergence of Program Tansformers in the Metric Space of
+                  Trees",
+  pages =	 {41--65},
+  crossref =	 {diku:pe-summerschool-98},
+  postscript = "ftp://ftp.diku.dk/diku/semantics/papers/D-366.ps.gz",
+
+}
+
+@inproceedings{
+  glueck:multi-level-spec,
+  author = 	 "Robert Gl{\"u}ck and Jesper J{\o}rgensen",
+  title = 	 "Multi-Level Specialization (Extended Abstract)",
+  pages =	 {69--81},
+  crossref =	 {diku:pe-summerschool-98}
+}
+
+@inproceedings{
+  lawall:fft-program-spec,
+  author = 	 "Julia L. Lawall",
+  title = 	 "Faster Fourier Transforms via Automatic Program
+                  Specialization",
+  pages =	 {81--93},
+  crossref =	 {diku:pe-summerschool-98}
+}
+
+@inproceedings{
+  palsberg:eta-redexes,
+  author = 	 "Jens Palsberg",
+  title = 	 "Eta-Redexes in Partial Evaluation",
+  pages =	 {97--108},
+  crossref =	 {diku:pe-summerschool-98}
+}
+
+@inproceedings{
+  thiemann:spec-std-scheme,
+  author = 	 "Peter Thiemann",
+  title = 	 "Aspects of the {PGG} System: Specialization for Standard
+                  {S}cheme", 
+  pages =	 {109--128},
+  crossref =	 {diku:pe-summerschool-98}
+}
+
+@inproceedings
+{
+	jones:partial-lambda-calculus,
+	author = "Neil D[eaton] Jones and Carsten K[rogh] Gomard
+		and Peter Sestoft",
+	title = "Partial Evaluation for the Lambda Calculus",
+	pages = "13--27",
+	note = "Abbreviated version of chapter~8 of \cite{jones:pe-and-apg}.",
+	crossref = "diku:pe-summerschool-98",
+}
+
+@proceedings
+{
+	diku:pe-summerschool-98,
+	title = "Partial Evaluation: Practice and Theory",
+	booktitle = "Partial Evaluation: Practice and Theory",
+	editor = "John Hatcliff and Torben {\AE}[gidius] Mogensen and
+	Peter Thiemann",
+	address = "Copenhagen",
+	year = 1998,
+	month = jul,
+	library = "SCS",
+}
+
+@book
+{
+	andrews:intro-ml-tt,
+	author = "Peter B. Andrews",
+	title = "An Introduction to Mathematical Logic and Type Theory:
+		To Truth Through Proof",
+	publisher = pub-AP,
+	series = CSAM,
+	year = "1986",
+	library = "DIKU",
+}
+
+@inproceedings
+{
+	martin-lof:constr-math-prog,
+	author = "Per Martin-L{\"o}f",
+	title = "Constructive Mathematics and Computer Programming",
+	booktitle = "Logic, Methodology and Philosophy of Science, VI, 1979",
+	pages = "153--175",
+	year = "1982",
+	publisher = pub-NH,
+	library = "SCS-224",
+	color = "#800000",
+}
+
+@book
+{
+	martin-lof:intui-tt,
+	author = "Per Martin-L{\"o}f",
+	title = "Intuitionistic Type Theory",
+	series = "Studies in Proof Theory",
+	publisher = "Bibliopolis",
+	year = "1984",
+	library = "SCS-223",
+}
+
+@book
+{
+	gordon:intro-hol,
+	author = "M[ichael] J[ohn] C[aldwell] Gordon and T[homas] F. Melham",
+	title = "Introduction to {HOL}: A Theorem Proving Environment
+		for Higher Order Logic",
+	publisher = pub-CUP,
+	year = "1993",
+	url = "http://titles.cambridge.org/catalogue.asp?isbn=0521441897",
+	library = "DIKU",
+}
+
+@book
+{
+	gordon:edinburgh-lcf,
+	editor = "Michael [John Caldwell] Gordon and
+		[Arthur John] Robin [Gorell] Milner and
+		Christopher [P.] Wadsworth",
+	title = "Edinburgh {LCF}: A Mechanised Logic of Computation",
+	series = LNCS,
+	publisher = pub-SV,
+	volume = "78",
+	year = "1979",
+	library = "DIKU",
+}
+
+@incollection
+{
+	howard:formulae-as-types,
+	author = "W. A. Howard",
+	title = "The Formulae-as-types Notion of Construction",
+	crossref = "seldin:curry-essays",
+	pages = "479--490",
+	library = "SCS-132",
+}
+
+@incollection
+{
+	debruijn:overview-am,
+	author = "N[icolaas] G[overt] de Bruijn",
+	title = "A Survey of the Project {A}utomath",
+	crossref = "seldin:curry-essays",
+	pages = "579--606",
+	note = "Reprinted in \cite{nederpelt:automath}, pp.\ 141--161",
+	library = "SCS-84",
+}
+
+@book
+{
+	seldin:curry-essays,
+	title = "To H. B. Curry: Essays on Combinatory Logic,
+		Lambda Calculus and Formalism",
+	booktitle = "To H. B. Curry: Essays on Combinatory Logic,
+		Lambda Calculus and Formalism",
+	editor = "Jonathan P. Seldin and John Roger Hindley",
+	pages = "579--606",
+	publisher = pub-AP,
+	year = "1980",
+	library = "DIKU",
+}
+
+@article
+{
+	turing:p-func-conv,
+	author = "A[lan] M[athison] Turing",
+	title = "The p-Function in $\lambda$-{K}-Conversion",
+	journal = j-JSL,
+	volume = 2,
+	number = 4,
+	pages = "164",
+	month = dec,
+	year = "1937",
+	library = "SCS-93",
+}
+
+@article
+{
+	turing:comp-ldef,
+	author = "A[lan] M[athison] Turing",
+	title = "Computability and $\lambda$-definability",
+	journal = j-JSL,
+	volume = 2,
+	number = 4,
+	pages = "153--163",
+	month = dec,
+	year = "1937",
+	library = "SCS-94",
+}
+
+@inproceedings
+{
+	damas:prin-ts-fp,
+	author = "Luis Damas and [Arthur John] Robin [Gorell] Milner",
+	title = "Principal Type-Schemes for Functional Programs",
+	booktitle = "9th ACM Symposium on Principles of Programming Languages",
+	pages = "207--212",
+	publisher = pub-ACM,
+	year = "1982",
+	library = "SCS-121",
+}
+
+@inproceedings
+{
+	gomard:part-type-inf,
+	author = "Carsten K[rogh] Gomard",
+	title = "Partial Type Inference for Untyped Functional Programs",
+	booktitle = "Proceedings of the 1990 ACM Conference on Lisp
+		and Functional Programming",
+	note = "Extended abstract",
+	address = "Nice, France",
+	publisher = pub-ACM,
+	month = jun,
+	year = "1990",
+	pages = "282--287",
+	library = "SCS-114",
+}
+
+@manual
+{
+	bondorf:similix-50,
+	author = "Anders Bondorf",
+	title = "Similix 5.0 Manual",
+	organization = DIKU,
+	year = "1993",
+	month = may,
+	library = "SCS-17",
+}
+
+@manual
+{
+	consel:rep-schism,
+	author = "Charles Consel",
+	title = "Report on {S}chism",
+	year = "1996",
+	month = jan,
+	library = "SCS",
+}
+
+@manual
+{
+	nipkow:isahol,
+	author = "Tobias Nipkow",
+	title = "Isabelle/{HOL}: The Tutorial",
+	year = "1998",
+	month = oct,
+	organization = TUM,
+	note = "Draft",
+	library = "SCS-64",
+	url = "http://www4.informatik.tu-muenchen.de/{\~{}}nipkow/pubs/HOL.html",
+	postscript = "http://www4.informatik.tu-muenchen.de/{\~{}}nipkow/pubs/HOL.ps.gz",
+}
+
+@techreport
+{
+	ambler:mech-op-sem,
+	author = "Simon J. Ambler and Roy L. Crole",
+	title = "Mechanized Operational Semantics via (Co)Induction",
+	number = "1998/22",
+	institution = MCSL,
+	year = "1998",
+	note = "Submitted for publication",
+	library = "SCS-67",
+	postscript = "http://www.mcs.le.ac.uk/{\~{}}rcrole/papers/mosci98.ps.gz",
+}
+
+@inproceedings
+{
+	jones:challenge,
+	author = "Neil D[eaton] Jones",
+	title = "Challenging Problems in Partial Evaluation and
+		Mixed Computation",
+	pages = "1--14",
+	crossref = "pe-mix:ifip-87",
+	library = "SCS-62",
+}
+
+@inproceedings
+{
+	nielson:formal-type-comp-pe,
+	author = "Flemming Nielson",
+	title = "A Formal Type System for Comparing Partial Evaluators",
+	pages = "349--384",
+	crossref = "pe-mix:ifip-87",
+	library = "SCS-179",
+}
+
+@proceedings
+{
+	pe-mix:ifip-87,
+	title = "Partial Evaluation and Mixed Computation",
+	booktitle = "Partial Evaluation and Mixed Computation",
+	editor = "Dines Bj{\o}rner and Andrei P[etrovich] Ershov and Neil
+		D[eaton] Jones",
+	year = "1988",
+	publisher = pub-NH,
+	library = "NDJ",
+}
+
+@article
+{
+	mackenzie:hist-ap,
+	author = "Donald MacKenzie",
+	title = "The Automation of Proof: A Historical
+		and Sociological Exploration",
+	journal = j-ANN-HC,
+	publisher = pub-IEEE,
+	volume = 17,
+	number = 3,
+	year = "1995",
+	pages = "7--29",
+	url = "http://dream.dai.ed.ac.uk/papers/donald/donald.html",
+        library = "SCS-242",
+}
+
+@phdthesis
+{
+	stringer-c:phd,
+	author = "David William John Stringer-Calvert",
+	title = "Mechanical Verification of Compiler Correctness",
+	school = "University of York",
+	year = "1998",
+	month = mar,
+	library = "SCS-65",
+	url = "http://www.csl.sri.com/{\~{}}dave_sc/papers/thesis.html",
+	postscript = "http://www.csl.sri.com/{\~{}}dave_sc/papers/thesis.ps.gz",
+}
+
+@incollection
+{
+	moggi:func-cat-2lvl,
+	author = "E[ugenio] Moggi",
+	title = "Functor categories and two-level languages",
+	booktitle = "Foundations of Software Science and Computation
+		Structures",
+	series = LNCS,
+	publisher = pub-SV,
+	volume = "1378",
+	year = "1998",
+	editor = "Maurice Nivat",
+	pages = "211--225",
+	library = "SCS-2",
+	dvi = "http://www.disi.unige.it/person/MoggiE/ftp/fossacs98.dvi.gz",
+}
+
+@article
+{
+	parberry:referee,
+	author = "Ian Parberry",
+	title = "A Guide for New Referees in Theoretical Computer Science",
+	journal = j-IAC,
+	publisher = pub-AP,
+	pages = "96--116",
+	volume = "112",
+	number = "1",
+	month = jul,
+	year = "1994",
+	library = "SCS-107",
+	url = "http://hercule.csci.unt.edu/ian/guides/referee.html",
+	postscript = "http://hercule.csci.unt.edu/ian/guides/postscript/referee.ps",
+}
+
+@misc
+{
+	abramsky:games-full-abs-pcf,
+	author = "Samson Abramsky and Radha Jagadeesan and Pasquale Malacaria",
+	title = "Games and Full Abstraction for {PCF}:
+		Preliminary Announcement",
+	color = "#800000",
+	library = "SCS-165",
+}
+
+@inproceedings
+{
+	abramsky:game-semantics,
+	author = "Samson Abramsky and Guy McCusker",
+	title = "Game Semantics",
+	booktitle = "Proceedings of Marktorberdorf '97 Summerschool",
+	year = "1997",
+	note = "Lecture notes",
+	library = "SCS-8",
+	postscript = "http://www.dcs.ed.ac.uk/home/samson/mdorf97.ps.gz",
+}
+
+@misc
+{
+	andersen:obj-typ-mod,
+	author = "Dan S. Andersen and Lars H. Pedersen and Hans H{\"u}ttel",
+	title = "Objects, Types and Modal Logics",
+	color = "#800000",
+	library = "SCS-87",
+}
+
+@misc
+{
+	andersen:topics-lambda,
+	author = "Nils Andersen and Fritz Henglein and Neil [Deaton] Jones and
+		Torben [{\AE}gidius] Mogensen",
+	title = "Topics in lambda calculus",
+	color = "#800000",
+	library = "SCS-123",
+}
+
+@unpublished
+{
+	andersen:illative-comb-logic,
+	author = "Steen Andersen and Kim Michael Mortensen",
+	title = "Illative Combinatory Logic",
+	note = "Student project, DIKU",
+	month = feb,
+	year = "1999",
+	library = "SCS-131",
+}
+
+@book
+{
+	asperti:cat-types-struct,
+	author = "Andrea Asperti and Giuseppe Longo",
+	title = "Categories, Types, and Structures: An Introduction
+		to Category Theory for the Working Computer Scientist",
+	publisher = pub-MIT,
+	year = "1991",
+	series = FOC,
+	url = "http://mitpress.mit.edu/book-home.tcl?isbn=0262011255",
+	postscript = "ftp://ftp.ens.fr/pub/dmi/users/longo/CategTypesStructures",
+	library = "SCS",
+}
+
+@article
+{
+	baker:algo-struct-fc,
+	author = "Brenda S. Baker",
+	title = "An Algorithm for Structuring Flowgraphs",
+	journal = j-ACM,
+	pages = "98--120",
+	month = jan,
+	year = "1977",
+	volume = "24",
+	number = "1",
+	library = "SCS-169",
+}
+
+@misc
+{
+	banerjee:cat-interp-corr-prin,
+	author = "Anindya Banerjee and David A. Schmidt",
+	title = "A Categorical Interpretation of {L}andin's
+		Correspondence Principle",
+	color = "#800000",
+	library = "SCS-166",
+}
+
+@misc
+{
+	barendregt:adv-lambda-calc,
+	author = "Hen[dri]k [Pieter] Barendregt",
+	title = "Advanced lambda calculus",
+	note = "Course notes",
+	library = "SCS-138",
+}
+
+@misc
+{
+	barendregt:discr-lambda,
+	author = "Hen[dri]k [Pieter] Barendregt",
+	title = "Discriminating coded lambda terms",
+	year = "1994",
+	library = "SCS-104",
+	postscript = "ftp://ftp.cs.kun.nl/pub/CompMath.Found/baay.ps.Z",
+}
+
+@incollection
+{
+	birkedal:hand-write-pgg,
+	author = "Lars Birkedal and Morten Welinder",
+	title = "Hand-Writing Program Generator Generators",
+	booktitle = "Programming Language Implementation and Logic
+		Programming",
+	year = "1994",
+	publisher = pub-SV,
+	series = LNCS,
+	volume = "844",
+	pages = "198--214",
+	editor = "M[anuel] Hermenegildo and J. Penjam",
+	library = "SCS-148",
+	dvi = "ftp://ftp.diku.dk/diku/semantics/papers/D-199.dvi.Z",
+}
+
+@book
+{
+	sv:perspectives,
+	editor = "Dines Bj{\o}rner and Manfred Broy and Igor V.
+		Pottosin",
+	title = "Perspectives of System Informatics",
+	booktitle = "Perspectives of System Informatics",
+	series = LNCS,
+	publisher = pub-SV,
+	volume = "1181",
+	year = "1996",
+	library = "DIKU",
+}
+
+@misc
+{
+	blinn:general-alg-surf,
+	author = "James F. Blinn",
+	title = "A Generalization of Algebraic Surface Drawing",
+	color = "#800000",
+	library = "SCS-47",
+}
+
+@misc
+{
+	bloomenthal:impl-surf-poly,
+	author = "Jules Bloomenthal",
+	title = "An Implicit Surface Polygonizer",
+	color = "#800000",
+	library = "SCS-48",
+}
+
+@article
+{
+	bohm:fd-turing-two,
+	author = "Corrado B{\"o}hm and Giuseppe Jacopini",
+	title = "Flow Diagrams, {T}uring Machines and Languages
+		With Only Two Formation Rules",
+	journal = j-CACM,
+	pages = "366--371",
+	month = may,
+	year = "1966",
+	volume = "9",
+	number = "5",
+	library = "SCS-172",
+}
+
+@book
+{
+	bollobas:modern-graph,
+	author = "B{\'e}la Bollob{\'a}s",
+	title = "Modern Graph Theory",
+	publisher = pub-SV,
+	series = GTM,
+	volume = "184",
+	year = "1998",
+	url = "http://www.springer.de/cgi-bin/search_book.pl?isbn=0-387-98491-7",
+	library = "SCS",
+}
+
+@misc
+{
+	bondorf:imp-bta-wo-cps,
+	author = "Anders Bondorf",
+	title = "Improving Binding Times without Explicit {CPS}-Conversion",
+	color = "#800000",
+	library = "SCS-167",
+}
+
+@misc
+{
+	bourdoncle:int-abs-int-block,
+	author = "Fran{\c{c}}ois Bourdoncle",
+	title = "Interprocedural Abstract Interpretation of Block Structured
+		Languages with Nested Procedures, Aliasing and Recursivity",
+	color = "#800000",
+	library = "SCS-151",
+}
+
+@techreport
+{
+	bundy:researchers-bible,
+	author = "Alan Bundy and Ben du Boulay and Jim Howe and Gordon
+		[D.] Plotkin",
+	title = "The Researcher's Bible",
+	type = "DAI Teaching Paper",
+	number = "4",
+	institution = "Department of Artificial Intelligence, University
+		of Edinburgh",
+	month = sep,
+	year = "1986",
+	library = "SCS-111",
+	url = "http://www.dai.ed.ac.uk/daidb/people/homes/bundy/how-tos/resbible.ps.gz",
+}
+
+@article
+{
+	burstall:trans-sys-rec,
+	author = "R. M. Burstall and John Darlington",
+	title = "A Transformation System for Developing Recursive Programs",
+	journal = j-ACM,
+	pages = "44--67",
+	month = jan,
+	year = "1977",
+	volume = "24",
+	number = "1",
+	library = "SCS-170",
+}
+
+@misc
+{
+	carroll:getting-phd,
+	author = "Martin Carroll",
+	title = "Getting a {P}h.{D}",
+	color = "#800000",
+	library = "SCS-112",
+}
+
+@misc
+{
+	chin:rem-ho-exp-pt,
+	author = "Wei-Ngan Chin and John Darlington",
+	title = "Removing Higher-Order Expressions by Program Transformation",
+	color = "#800000",
+	library = "SCS-152",
+}
+
+@incollection
+{
+	damm:subt,
+	author = "Flemming M. Damm",
+	title = "Subtyping with Union Types, Intersection Types and Recursive
+		Types",
+	booktitle = "Theoretical Aspects of Computer Software",
+	volume = "789",
+	series = LNCS,
+	publisher = pub-SV,
+	year = "1994",
+	pages = "687--706",
+	editor = "M. Hagiya and John C. Mitchell",
+	library = "SCS-122",
+}
+
+@misc
+{
+	danvy:advice-talk,
+	author = "Olivier Danvy",
+	title = "Some advice on giving a talk",
+	note = "Slides",
+	library = "SCS-178",
+	url = "http://www.brics.dk/{\~{}}danvy/talk.html",
+	dvi = "http://www.brics.dk/{\~{}}danvy/Papers/talk-on-talks.dvi.gz",
+	postscript = "http://www.brics.dk/{\~{}}danvy/Papers/talk-on-talks-A4-2up.ps.gz",
+	pdf = "http://www.brics.dk/{\~{}}danvy/Papers/talk-on-talks-A4-2up.pdf",
+}
+
+@article
+{
+	danvy:essence-eta-exp,
+	author = "Olivier Danvy and Karoline Malmkj{\ae}r and Jens Palsberg",
+	title = "The Essence of Eta-Expansion in Partial Evaluation",
+	journal = "{LISP} and Symbolic Computation",
+	volume = "8",
+	number = "3",
+	pages = "209--227",
+	year = "1995",
+	library = "SCS-163",
+	url = "http://www.daimi.aau.dk/{\~{}}danvy/Papers/danvy-malmkjaer-palsberg-lasc95.html",
+	postscript = "ftp://ftp.daimi.au.dk/pub/empl/danvy/Papers/danvy-malmkjaer-palsberg-lasc95.ps.gz",
+}
+
+@article
+{
+	demillo:social-process,
+	author = "DeMillo, Richard A. and Richard J. Lipton
+		and Alan J. Perlis",
+	title = "Social Processes and Proofs of Theorems and Programs",
+	journal = j-CACM,
+	month = may,
+	year = "1979",
+	volume = "22",
+	number = "5",
+	pages = "271--280",
+	library = "SCS-109",
+}
+
+@article
+{
+	dijkstra:goto-harmful,
+	author = "Edsger W[ybe] Dijkstra",
+	title = "Go To Statement Considered Harmful",
+	journal = j-CACM,
+	month = mar,
+	year = "1968",
+	volume = "11",
+	number = "3",
+	pages = "147--148",
+	library = "SCS-171",
+}
+
+@mastersthesis
+{
+	dzafic:form-prog-trans,
+	author = "Belmina Dzafic",
+	title = "Formalizing Program Transformations",
+	school = DAIMI,
+	year = "1998",
+	month = dec,
+	library = "SCS-128",
+}
+
+@inproceedings
+{
+	erosa:taming-goto,
+	author = "Ana M. Erosa and Laurie J. Hendren",
+	title = "Taming Control Flow: A Structured Approach to
+		Eliminating Goto Statements",
+	pages = "229--240",
+	crossref = "ieee:iccl94",
+	library = "SCS-56",
+	postscript = "ftp://ftp-acaps.cs.mcgill.ca/pub/doc/papers/ICCL94.ps.gz",
+}
+
+@proceedings
+{
+	ieee:iccl94,
+	organization = "IEEE Computer Society",
+	title = "Proceedings of the 1994 International Conference
+		on Computer Languages",
+	booktitle = "Proceedings of the 1994 International Conference
+		on Computer Languages",
+	year = "1994",
+	publisher = pub-IEEE,
+}
+
+@proceedings
+{
+	lambda:nijmegen,
+	organization = "Faculty of Mathematics and Computer Science,
+		University of Nijmegen",
+	address = "Nijmegen, The Netherlands",
+	month = jul,
+	year = "1991",
+	title = "Summer School in Lambda Calculus",
+	booktitle = "Summer School in Lambda Calculus",
+	library = "SCS-144",
+}
+
+@misc
+{
+	filinski:norm-eval-td-pe,
+	author = "Andrzej Filinski",
+	title = "From Normalization by Evaluation to Type-Directed
+		Partial Evaluation",
+	month = may,
+	year = "1998",
+	note = "Slides",
+	library = "SCS-143",
+}
+
+@misc
+{
+	fiech:cat-delta-func,
+	author = "Adrian Fiech",
+	title = "Category of {$\Delta$}-Functors",
+	color = "#800000",
+	library = "SCS-168",
+}
+
+@techreport
+{
+	frost:coind-isa,
+	author = "Jacob Frost",
+	title = "A Case Study of Co-induction in {I}sabelle",
+	month = feb,
+	year = "1995",
+	number = "359",
+	institution = CLCamb,
+	library = "SCS-66",
+	dvi = "http://www.cl.cam.ac.uk/Research/Reports/TR359-jf10008-co-induction-in-isabelle.dvi.gz",
+}
+
+@incollection
+{
+	glueck:mech-meta-hier,
+	author = "Robert Gl{\"u}ck",
+	title = "On the Mechanics of Metasystem Hierarchies in
+		Program Transformation",
+	booktitle = "Logic Program Synthesis and Transformation",
+	editor = "M. Proietti",
+	volume = "1048",
+	year = "1996",
+	series = LNCS,
+	publisher = pub-SV,
+	pages = "234--251",
+	library = "SCS-149",
+}
+
+@article
+{
+	mariast:call-by-need,
+	author = "John Maraist and Martin Odersky and Philip Wadler",
+	title = "The call-by-need lambda calculus",
+	journal = j-JFP,
+	month = may,
+	year = "1998",
+	volume = "8",
+	number = "3",
+	pages = "275--317",
+	publisher = pub-CUP,
+	url = "http://cm.bell-labs.com/who/wadler/topics/call-by-need.html#need-journal",
+	dvi = "http://cm.bell-labs.com/who/wadler/papers/need-journal/need-journal.dvi.gz",
+	postscript = "http://cm.bell-labs.com/who/wadler/papers/need-journal/need-journal.ps.gz",
+	library = "SCS-211",
+}
+
+@article
+{
+	glueck:gen-spec,
+	author = "Robert Gl{\"u}ck",
+	title = "On the generation of specializers",
+	journal = j-JFP,
+	year = "1994",
+	volume = "4",
+	number = "4",
+	pages = "499--514",
+	month = oct,
+	publisher = pub-CUP,
+	library = "SCS-42",
+}
+
+@incollection
+{
+	glueck:eff-multi-lvl-ge,
+	author = "Robert Gl{\"u}ck and Jesper J{\o}rgensen",
+	title = "Efficient Multi-level Generating Extensions for
+		Program Specialization",
+	crossref = "lncs:982",
+	pages = "259--278",
+	library = "SCS-150",
+	postscript = "ftp://ftp.diku.dk/diku/semantics/papers/D-229.ps.gz",
+}
+
+@misc
+{
+	glueck:gen-trans-ho,
+	author = "Robert Gl{\"u}ck and Jesper J{\o}rgensen",
+	title = "Generating Transformers for Deforestation and Supercompilation
+		of Higher-Order Languages",
+	note = "Outline",
+	library = "SCS-175",
+}
+
+@incollection
+{
+	glueck:gen-trans,
+	author = "Robert Gl{\"u}ck and Jesper J{\o}rgensen",
+	title = "Generating Transformers for Deforestation and
+		Supercompilation",
+	booktitle = "Static Analysis",
+	editor = "Le Charlier, B.",
+	series = LNCS,
+	publisher = pub-SV,
+	year = "1994",
+	pages = "432--448",
+	volume = "864",
+	library = "SCS-21",
+	dvi = "ftp://ftp.diku.dk/diku/semantics/papers/D-195.dvi.Z",
+}
+
+@incollection
+{
+	glueck:occam,
+	author = "Robert Gl{\"u}ck and Andrei V. Klimov",
+	title = "Occam's Razor in Metacomputation: the Notion of a
+		Perfect Process Tree",
+	booktitle = "3rd International Workshop on Static Analysis",
+	editor = "P. Cousot and M. Falaschi and G. Fil{\`e} and A. Rauzy",
+	series = LNCS,
+	publisher = pub-SV,
+	year = "1993",
+	pages = "112--123",
+	volume = "724",
+	library = "SCS-18",
+	postscript = "ftp://ftp.diku.dk/diku/semantics/papers/D-170.ps.gz",
+}
+
+@misc
+{
+	glueck:roadmap-metac-superc,
+	author = "Robert Gl{\"u}ck and Morten Heine [Bj{\o}rnlund]
+		S{\o}rensen",
+	title = "A Roadmap to Metacomputation by Supercompilation",
+	library = "SCS-164",
+	pages = "137--160",
+	crossref = "lncs:1110",
+	postscript = "ftp://ftp.diku.dk/diku/semantics/papers/D-267.ps.gz",
+}
+
+@incollection
+{
+	goguen:int-alg,
+	author = "J[oseph] A. Goguen and J. W. Thatcher and E. G. Wagner",
+	title = "An Initial Algebra Approach to the Specification, Correctness,
+		and Implementation of Abstract Data Types",
+	booktitle = "Data Structuring",
+	volume = "4",
+	series = "Current Trends in Programming Methodology",
+	editor = "Raymond T[zuu-Yau] Yeh",
+	year = "1978",
+	pages = "80--149",
+	chapter = "5",
+	publisher = pub-PH,
+	library = "SCS-10",
+}
+
+@incollection
+{
+	gordon:mech-prog-ho,
+	author = "Michael J[ohn] C[aldwell] Gordon",
+	title = "Mechanizing Programming Logics in Higher Order Logic",
+	booktitle = "Current Trends in Hardware Verification and Automated
+		Theorem Proving",
+	editor = "G. Birtwistle and P. A. Subrahmanyam",
+	publisher = pub-SV,
+	year = "1989",
+	pages = "387--439",
+	library = "SCS-85",
+	dvi = "ftp://ftp.cl.cam.ac.uk/hvg/papers/Banffpaper.dvi.gz",
+}
+
+@misc
+{
+	grue:lcalc-found-math,
+	author = "Klaus [Ebbe] Grue",
+	title = "$\lambda$-calculus as a foundation of mathematics",
+	note = "To appear in the \emph{Church Memorial Volume}",
+	month = aug,
+	year = "1997",
+	library = "SCS-177",
+	dvi = "ftp://ftp.diku.dk/diku/semantics/papers/D-334.dvi.gz",
+	postscript = "ftp://ftp.diku.dk/diku/semantics/papers/D-334.ps.gz",
+}
+
+@article
+{
+	halmos:how-write-math,
+	author = "P[aul] R[ichard] Halmos",
+	title = "How to Write Mathematics",
+	journal = "L'Enseignement Math{\'e}matique",
+	volume = "16",
+	pages = "123--152",
+	year = "1970",
+	note = "Reprinted in \cite{lambda:nijmegen}",
+}
+
+@article
+{
+	halmos:how-talk-math,
+	author = "P[aul] R[ichard] Halmos",
+	title = "How to Talk Mathematics",
+	journal = "AMS NOTICES",
+	volume = "21",
+	number = "3",
+	pages = "155--158",
+	month = apr,
+	year = "1974",
+	note = "Reprinted in \cite{lambda:nijmegen}",
+}
+
+@mastersthesis
+{
+	skalberg:opt-lambdamix,
+	author = "Sebastian C[hristian] Skalberg",
+	title = "Mechanical Proof of the Optimality of a Partial Evaluator",
+	school = DIKU,
+	year = "1999",
+	month = feb,
+	url = "http://www.mangust.dk/skalberg/msc/",
+	postscript = "http://www.mangust.dk/skalberg/msc/skalberg-msc.ps",
+	dvi = "http://www.mangust.dk/skalberg/msc/skalberg-msc.dvi",
+}
+
+@misc
+{
+	hannan:intro-clas-logic-pl,
+	author = "John [J.] Hannan",
+	title = "An Introduction to Classical Logic as a Programming Language",
+	note = "Slides",
+	library = "SCS-154",
+}
+
+@incollection
+{
+	hannan:ho-uni-prog-trans,
+	author = "John [J.] Hannan and Dale Miller",
+	title = "Uses of Higher-Order Unification for Implementing Program
+		Transformers",
+	pages = "942--959",
+	editor = "Robert A. Kowalski and Kenneth A. Bowen",
+	booktitle = "Fifth International Logic Programming Conference",
+	year = "1988",
+	publisher = pub-MIT,
+	library = "SCS-127",
+}
+
+@article
+{
+	harrison:construct-real,
+	author = "John Harrison",
+	title = "Constructing the real numbers in {HOL}",
+	journal = "Formal Methods in System Design",
+	volume = "5",
+	number = "1--2",
+	month = jul,
+	year = "1994",
+	pages = "35--59",
+	library = "SCS-69",
+	url = "http://www.cl.cam.ac.uk/users/jrh/papers/reals1.html",
+	postscript = "http://www.cl.cam.ac.uk/users/jrh/papers/reals1.ps.gz",
+}
+
+@misc
+{
+	hartmanis:godel-von-neumann,
+	author = "Juris Hartmanis",
+	title = "G{\"o}del, von {N}eumann and the {P=?NP} Problem",
+	color = "#800000",
+	library = "SCS-108",
+}
+
+@misc
+{
+	heckbert:survey-text-map,
+	author = "Paul S. Heckbert",
+	title = "Survey of Texture Mapping",
+	color = "#800000",
+	library = "SCS-45",
+}
+
+@misc
+{
+	henglein:simple-ti-uni,
+	author = "Fritz Henglein",
+	title = "Simple Type Inference and Unification",
+	color = "#800000",
+	library = "SCS-125",
+}
+
+@inproceedings
+{
+	hill:miranda,
+	author = "Steve Hill and Simon Thompson",
+	title = "Miranda in {I}sabelle",
+	month = sep,
+	year = "1995",
+	pages = "122--135",
+	booktitle = "Proceedings of the First {I}sabelle Users Workshop",
+	editor = "Lawrence C. Paulson",
+	library = "SCS-68",
+	url = "http://www.cs.ukc.ac.uk/pubs/1995/209/index.html",
+	postscript = "http://www.cs.ukc.ac.uk/pubs/1995/209/content.ps.gz",
+}
+
+@misc
+{
+	hoang:lower-bounds-typ-inf,
+	author = "My Hoang and John C. Mitchell",
+	title = "Lower bounds on type inference with subtypes",
+	color = "#800000",
+	library = "SCS-120",
+}
+
+@misc
+{
+	huet:ccc-lambda,
+	author = "G{\'e}rard Huet",
+	title = "Cartesian Closed Categories and Lambda-Calculus",
+	note = "Notes",
+	library = "SCS-9",
+}
+
+@misc
+{
+	coq:tutorial,
+	author = "G{\'e}rard Huet and Gilles Kahn and Christine
+		Paulin-Mohring",
+	title = "The {C}oq Proof Assistant: A Tutorial",
+	color = "#800000",
+	library = "SCS-59",
+}
+
+@article
+{
+	moggi:notions,
+	author = "Eugenio Moggi",
+	title = "Notions of computation and monads",
+	journal = j-IAC,
+	publisher = pub-AP,
+	pages = "55--92",
+	volume = "93",
+	number = "1",
+	month = jul,
+	year = "1991",
+	library = "SCS-7",
+	dvi = "http://www.disi.unige.it/person/MoggiE/ftp/ic91.dvi.gz",
+}
+
+@article
+{
+	kuper:axiom-part-func,
+	author = "Jan Kuper",
+	title = "An Axiomatic Theory for Partial Functions",
+	journal = j-IAC,
+	publisher = pub-AP,
+	pages = "104--150",
+	volume = "107",
+	number = "1",
+	month = nov,
+	year = "1993",
+	library = "SCS-183",
+}
+
+@article
+{
+	landin:700,
+	author = "P. J. Landin",
+	title = "The Next 700 Programming Languages",
+	journal = j-CACM,
+	pages = "157--166",
+	month = mar,
+	year = "1966",
+	volume = "9",
+	number = "3",
+	library = "SCS-174",
+}
+
+@misc
+{
+	launchbury:self-appl-wo-s,
+	author = "John Launchbury",
+	title = "Self-Applicable Partial Evaluation Without {S}-Expressions",
+	color = "#800000",
+	library = "SCS-146",
+}
+
+@misc
+{
+	milner:theory-typ-poly,
+	author = "[Arthur John] Robin [Gorell] Milner",
+	title = "A Theory of Type Polymorphism in Programming",
+	color = "#800000",
+	library = "SCS-156",
+}
+
+@inproceedings
+{
+	mogensen:constr-spec,
+	author = "Torben {\AE}[gidius] Mogensen",
+	title = "Constructor Specialization",
+	booktitle = "{ACM} Symposium on Partial Evaluation and Semantics-Based
+		Program Manipulation",
+	month = jun,
+	year = "1993",
+	editor = "David Schmidt",
+	pages = "22--32",
+	publisher = pub-ACM,
+	library = "SCS-162",
+	dvi = "ftp://ftp.diku.dk/diku/semantics/papers/D-159.dvi.Z",
+	postscript = "ftp://ftp.diku.dk/diku/semantics/papers/D-159.ps.Z",
+}
+
+@incollection
+{
+	moggi:cat-account-2lvl,
+	author = "Eugenio Moggi",
+	title = "A Categorical Account of Two-level Languages",
+	booktitle = "{MFPS} {XIII} {M}athematical {F}oundations of
+		{P}rogramming {S}emantics, Thirteenth Annual Conference",
+	series = e-TCS,
+	volume = "6",
+	publisher = pub-ESP,
+	year = "1997",
+	editor = "S. Brooks and M. Mislove",
+	url = "http://www.elsevier.nl/locate/entcs/volume6.html",
+	library = "SCS-11",
+}
+
+@incollection
+{
+	muller:traces-io,
+	author = "Olaf M{\"u}ller and Tobias Nipkow",
+	title = "Traces of {I/O}-Automata in {I}sabelle/{HOLCF}",
+	booktitle = "Theory and Practice of Software Development",
+	editor = "M. Bidoit and M. Dauchet",
+	volume = "1214",
+	year = "1997",
+	pages = "580--594",
+	publisher = pub-SV,
+	series = LNCS,
+	library = "SCS-76",
+	url = "http://www4.informatik.tu-muenchen.de/{\~{}}nipkow/pubs/tapsoft97.html",
+	postscript = "http://www4.informatik.tu-muenchen.de/{\~{}}nipkow/pubs/tapsoft97.ps.gz",
+}
+
+@misc
+{
+	muller:isahol-partiality,
+	author = "Olaf M{\"u}ller and Konrad Slind",
+	title = "Isabelle/{HOL} as a Platform for Partiality",
+	month = jul,
+	year = "1996",
+	note = "Presented at the CADE-13 Workshop \emph{Mechanization of
+		Partial Functions}",
+	library = "SCS-83",
+	postscript = "http://www4.informatik.tu-muenchen.de/{\~{}}mueller/pubs/partiality.ps.gz",
+}
+
+@article
+{
+	muller:partiality,
+	author = "Olaf M{\"u}ller and Konrad Slind",
+	title = "Treating Partiality in a Logic of Total Functions",
+	journal = "The Computer Journal",
+	publisher = pub-OUP,
+	volume = "40",
+	number = "10",
+	year = "1997",
+	library = "SCS-155",
+	postscript = "http://www4.informatik.tu-muenchen.de/{\~{}}mueller/pubs/CJ97.ps.gz",
+}
+
+@misc
+{
+	muraki:blobby,
+	author = "Shigeru Muraki",
+	title = "Volumetric Shape Description of Range Data using
+		``Blobby Model''",
+	color = "#800000",
+	library = "SCS-50",
+}
+
+@misc
+{
+	murthy:classical-logic-prog,
+	author = "Chetan R. Murthy",
+	title = "Classical Logic as a Programming Language: Typing
+		Nonlocal Control",
+	color = "#800000",
+	library = "SCS-126",
+}
+
+@unpublished
+{
+	skalberg:refal-5,
+	author = "Sebastian [Christian] Skalberg",
+	title = "A Formal Semantics of Refal",
+	month = jun,
+	year = "1998",
+	note = "Student project, DIKU",
+	postscript = "http://www.mangust.dk/skalberg/papers/refal-5.ps",
+	dvi = "http://www.mangust.dk/skalberg/papers/refal-5.dvi",
+}
+
+@unpublished
+{
+	neergaard:impl-os,
+	author = "Peter M{\o}ller Neergaard",
+	title = "Implementation of Operational Semantics",
+	month = mar,
+	year = "1998",
+	note = "Student project, DIKU",
+	library = "SCS-15",
+}
+
+@unpublished
+{
+	neergaard:strong-from-weak,
+	author = "Peter M{\o}ller Neergaard",
+	title = "Towards Inferring Strong Normalization from Weak
+		Normalization for Classical First Order Logic",
+	month = jan,
+	year = "1999",
+	note = "Student project, DIKU",
+	library = "SCS-101",
+}
+
+@incollection
+{
+	nipkow:ver-la,
+	author = "Tobias Nipkow",
+	title = "Verified Lexical Analysis",
+	crossref = "lncs:1479",
+	library = "SCS-77",
+	url = "http://www.in.tum.de/{\~{}}nipkow/pubs/tphols98.html",
+	dvi = "http://www4.informatik.tu-muenchen.de/{\~{}}nipkow/pubs/tphols98.dvi.gz",
+	postscript = "http://www4.informatik.tu-muenchen.de/{\~{}}nipkow/pubs/tphols98.ps.gz",
+}
+
+@techreport
+{
+	owre:abs-data-pvs,
+	author = "S[am] Owre and N[atarajan] Shankar",
+	title = "Abstract Datatypes in {PVS}",
+	institution = "Computer Science Laboratory, SRI International",
+	year = "1997",
+	number = "CSL-93-9R",
+	library = "SCS-139",
+	postscript = "http://www.csl.sri.com/reports/postscript/csl-93-9.ps.gz",
+	dvi = "http://www.csl.sri.com/reports/csl-93-9.dvi.Z",
+	url = "http://www.csl.sri.com/reports/html/csl-93-9.html",
+}
+
+@techreport
+{
+	owre:form-sem-pvs,
+	author = "Sam Owre and Natarajan Shankar",
+	title = "The Formal Semantics of {PVS}",
+	institution = "Computer Science Laboratory, SRI International",
+	year = "1997",
+	number = "CSL-97-2",
+	library = "SCS-141",
+	postscript = "http://www.csl.sri.com/reports/postscript/csl-97-2.ps.gz",
+	dvi = "http://www.csl.sri.com/reports/csl-97-2.dvi.Z",
+	url = "http://www.csl.sri.com/reports/html/csl-97-2.html",
+}
+
+@misc
+{
+	patashnik:bibtex-design,
+	author = "Oren Patashnik",
+	title = "Designing {\BibTeX} Styles",
+	month = feb,
+	year = "1988",
+	library = "SCS-105",
+}
+
+@misc
+{
+	patashnik:bibtexing,
+	author = "Oren Patashnik",
+	title = "{\BibTeX}ing",
+	month = feb,
+	year = "1988",
+	library = "SCS-106",
+}
+
+@inproceedings
+{
+	paulson:fix-coi-cod,
+	author = "Lawrence C. Paulson",
+	title = "A Fixedpoint Approach to (Co)Inductive and (Co)Datatype
+		Definitions",
+	pages = "148--161",
+	library = "SCS-58",
+	editor = "Alan Bundy",
+	booktitle = "Automated Deduction---{CADE}-12",
+	publisher = pub-SV,
+	series = LNAI,
+	volume = "814",
+	year = "1994",
+	dvi = "http://www.cl.cam.ac.uk/users/lcp/papers/milner-ind-defs.dvi.gz",
+	pdf = "http://www.cl.cam.ac.uk/users/lcp/papers/milner-ind-defs.pdf",
+}
+
+@incollection
+{
+	paulson:design-tp,
+	author = "Lawrence C. Paulson",
+	title = "Designing a Theorem Prover",
+	pages = "415--475",
+	booktitle = "Handbook of Logic in Computer Science",
+	editor = "S[amson] Abramsky and Dov M. Gabbay
+		and T[homas] S. E. Maibaum",
+	library = "SCS-81",
+	year = "1992",
+	volume = "2",
+	publisher = pub-OUP,
+	dvi = "http://www.cl.cam.ac.uk/Research/Reports/TR192-lcp-designing.dvi.gz",
+	pdf = "http://www.cl.cam.ac.uk/Research/Reports/TR192-lcp-designing.pdf",
+}
+
+@techreport
+{
+	paulson:form-mut-chess,
+	author = "Lawrence C. Paulson",
+	title = "A Simple Formalization and Proof for the Mutilated Chess
+		Board",
+	institution = CLCamb,
+	year = "1996",
+	number = "394",
+	month = may,
+	library = "SCS-73",
+	postscript = "http://www.cl.cam.ac.uk/Research/Reports/TR394-lcp-mutilated-chess-board.ps.gz",
+	dvi = "http://www.cl.cam.ac.uk/ftp/papers/reports/TR394-lcp-mutilated-chess-board.dvi.gz",
+	pdf = "http://www.cl.cam.ac.uk/ftp/papers/reports/TR394-lcp-mutilated-chess-board.pdf",
+}
+
+@article
+{
+	paulson:mech-set-theory,
+	author = "Lawrence C. Paulson and Krzysztof Gr{\c{a}}bczewski",
+	title = "Mechanizing Set Theory: Cardinal Arithmetic and the
+		Axiom of Choice",
+	journal = j-JAR,
+	volume = "17",
+	number = "3",
+	pages = "291--323",
+	month = dec,
+	year = "1996",
+	library = "SCS-74",
+	postscript = "http://www.cl.cam.ac.uk/Research/Reports/TR377-lcp-mechanising-set-theory.ps.gz",
+	pdf = "http://www.cl.cam.ac.uk/Research/Reports/TR377-lcp-mechanising-set-theory.pdf",
+}
+
+@misc
+{
+	pedersen:dec-imp-surf,
+	author = "Hans K{\o}hling Pedersen",
+	title = "Decorating Implicit Surfaces",
+	color = "#800000",
+	library = "SCS-46",
+}
+
+@misc
+{
+	pedersen:int-text-curved,
+	author = "Hans K{\o}hling Pedersen",
+	title = "A Framework for Interactive Texturing on Curved Surfaces",
+	color = "#800000",
+	library = "SCS-49",
+}
+
+@mastersthesis
+{
+	pedersen:masters,
+	author = "Hans K{\o}hling Pedersen",
+	title = "A Framework for Interactive Texturing on Curved Surfaces",
+	school = DIKU,
+	library = "SCS-136",
+	month = may,
+	year = "1996",
+}
+
+@inproceedings
+{
+	peyton:imp-fun-prog,
+	author = "Peyton Jones, Simon L. and Philip Wadler",
+	title = "Imperative functional programming",
+	booktitle = "20th {ACM} Symposium on Principles of
+		Programming Languages",
+	publisher = pub-ACM,
+	month = jan,
+	year = "1993",
+	library = "SCS-153",
+	dvi = "http://cm.bell-labs.com/who/wadler/papers/imperative/imperative.dvi.gz",
+	postscript = "http://cm.bell-labs.com/who/wadler/papers/imperative/imperative.ps.gz",
+	url = "http://cm.bell-labs.com/who/wadler/topics/monads.html#imperative",
+}
+
+@inproceedings
+{
+	pfenning:part-poly-ti,
+	author = "Frank Pfenning",
+	title = "Partial Polymorphic Type Inference and
+		Higher-Order Unification",
+	booktitle = "{ACM} Conference on {L}isp and Functional Programming",
+	pages = "153--163",
+	month = jul,
+	year = "1988",
+	publisher = pub-ACM,
+	library = "SCS-157",
+}
+
+@article
+{
+	plotkin:name-value-lambda,
+	author = "G[ordon] D. Plotkin",
+	title = "Call-By-Name, Call-By-Value and the $\lambda$-Calculus",
+	journal = TCS,
+	month = dec,
+	year = "1975",
+	volume = "1",
+	number = "2",
+	pages = "125--159",
+	publisher = pub-ESP,
+	library = "SCS-103",
+}
+
+@article
+{
+	plotkin:lcf-prog,
+	author = "G[ordon] D. Plotkin",
+	title = "{LCF} Considered as a Programming Language",
+	journal = TCS,
+	month = dec,
+	year = "1977",
+	volume = "5",
+	number = "3",
+	pages = "223--255",
+	publisher = pub-ESP,
+	library = "SCS-52",
+}
+
+@techreport
+{
+	plotkin:structural-os,
+	author = "Gordon D. Plotkin",
+	title = "A Structural Approach to Operational Semantics",
+	institution = DAIMI,
+	type = DAIMIRep,
+	number = "FN-19",
+	year = "1981",
+	month = sep,
+	library = "SCS",
+}
+
+@incollection
+{
+	pollack:ext-proof-check,
+	author = "Robert Pollack",
+	title = "On Extensibility of Proof Checkers",
+	booktitle = "Types for Proofs and Programs",
+	editor = "P[eter] Dybjer and B[engt] Nordstr{\"o}m and J[an] Smith",
+	year = "1995",
+	series = "LNCS",
+	publisher = pub-SV,
+	volume = "996",
+	pages = "140--161",
+	library = "SCS-192",
+}
+
+@incollection
+{
+	pollack:believe-mech-proof,
+	author = "Robert Pollack",
+	title = "How to Believe a Machine-Checked Proof",
+	month = aug,
+	year = "1998",
+	editor = "Giovanni Sambin and Jan Smith",
+	booktitle = "Twenty-Five Years of Constructive Type Theory",
+	series = "Oxford Logic Guides",
+	publisher = "Clarendon Press",
+	library = "SCS-113",
+	note = "Also found as BRICS Report RS-97-18",
+	postscript = "ftp://ftp.dcs.ed.ac.uk/pub/lego/pollack-belief.ps.gz",
+}
+
+@misc
+{
+	poulsen:inf-theory,
+	author = "Jacob Weismann Poulsen and Peter Andreasen",
+	title = "Information theory 1948--1998: Universal Source Coding",
+	month = jan,
+	year = "1999",
+	library = "SCS-6",
+}
+
+@misc
+{
+	romaguera:quasi-metric,
+	author = "S. Romaguera and M[ichel] Schellekens",
+	title = "Quasi-metric Properties of Complexity Spaces",
+	note = "To appear",
+	library = "SCS-5",
+	postscript = "http://www.informatik.uni-siegen.de/{\~{}}michel/TopApp.ps.gz",
+}
+
+@misc
+{
+	rosendahl:comp-part-ord,
+	author = "Mads Rosendahl",
+	title = "Complete partial orders",
+	color = "#800000",
+	library = "SCS-158",
+}
+
+@misc
+{
+	rudnicki:equiv-wf,
+	author = "Piotr Rudnicki and Andrzej Trybulec",
+	title = "On Equivalents of Well-foundedness: An experiment in
+		{M}izar",
+	note = "Accepted for the special issue of \emph{Journal
+		of Automated Reason} on Formal Proof",
+	library = "SCS-75",
+	url = "http://www.cs.ualberta.ca/{\~{}}piotr/Mizar/Wfnd/",
+	dvi = "http://www.cs.ualberta.ca/{\~{}}piotr/Mizar/Wfnd/wfnd.dvi",
+	postscript = "http://www.cs.ualberta.ca/{\~{}}piotr/Mizar/Wfnd/wfnd.ps",
+}
+
+@article
+{
+	rushby:subtypes-pred-pvs,
+	author = "John [M.] Rushby and Sam Owre and N[atarajan] Shankar",
+	title = "Subtypes for Specifications: Predicate Subtyping in
+		{PVS}",
+	journal = j-IEEE-TRANS-SOFTW-ENG,
+	volume = "24",
+	number = "9",
+	month = sep,
+	year = "1998",
+	pages = "709--720",
+	publisher = pub-IEEE,
+	library = "SCS-140",
+	url = "http://www.csl.sri.com/reports/html/tse98.html",
+	postscript = "http://www.csl.sri.com/reports/postscript/tse98.ps.gz",
+	dvi = "http://www.csl.sri.com/reports/tse98.dvi.Z",
+}
+
+@article
+{
+	sammet:english-programming,
+	author = "Jean E. Sammet",
+	title = "The Use of {E}nglish as a Programming Language",
+	journal = j-CACM,
+	pages = "228--230",
+	month = mar,
+	year = "1966",
+	volume = "9",
+	number = "3",
+	library = "SCS-173",
+}
+
+@misc
+{
+	schwichtenberg:type-theory,
+	author = "Helmut Schwichtenberg",
+	title = "Type Theory",
+	note = "Lecture notes",
+	year = "1992",
+	library = "SCS-89",
+	dvi = "http://www.mathematik.uni-muenchen.de/{\~{}}schwicht/lectures/typeth/ss92/tt.dvi.Z",
+}
+
+@misc
+{
+	schwichtenberg:proof-theory,
+	author = "Helmut Schwichtenberg",
+	title = "Proof Theory",
+	note = "Lecture notes",
+	year = "1994",
+	library = "SCS-90",
+	dvi = "http://www.mathematik.uni-muenchen.de/{\~{}}schwicht/lectures/proofth/ss94/pt.dvi.Z",
+}
+
+@incollection
+{
+	scott:domains,
+	author = "Dana S. Scott",
+	title = "Domains for Denotational Semantics",
+	booktitle = "Automata, Languages and Programming",
+	editor = "Mogens Nielsen and Erik Meineche Schmidt",
+	series = LNCS,
+	volume = "140",
+	publisher = pub-SV,
+	pages = "577--613",
+	year = "1982",
+	library = "SCS-1",
+}
+
+@mastersthesis
+{
+	secher:perfect-super,
+	author = "Jens Peter Secher",
+	title = "Perfect Supercompilation",
+	school = DIKU,
+	year = "1999",
+	month = feb,
+	library = "SCS-29",
+	postscript = "http://www.diku.dk/{\~{}}jpsecher/perfectscp.ps.gz",
+}
+
+@misc
+{
+	singh:pe-hardware,
+	author = "Satnam Singh and Nicholas McKay",
+	title = "Partial Evaluation of Hardware",
+	color = "#800000",
+	library = "SCS-33",
+}
+
+@incollection
+{
+	sorensen:grammar-stop-df,
+	author = "Morten Heine [Bj{\o}rnlund] S{\o}rensen",
+	title = "A Grammar-based Data-flow Analysis to Stop Deforestation",
+	booktitle = "Colloqium on Trees in Algebra and Programming",
+	editor = "S. Tison",
+	series = LNCS,
+	volume = "787",
+	year = "1994",
+	publisher = pub-SV,
+	pages = "335--351",
+	library = "SCS-161",
+	postscript = "ftp://ftp.diku.dk/diku/semantics/papers/D-191.ps.gz",
+}
+
+@inproceedings
+{
+	sperber:bootstrap,
+	author = "Michael Sperber and Robert Gl{\"u}ck and Peter Thiemann",
+	title = "Bootstrapping Higher-Order Program Transformers from
+		Interpreters",
+	booktitle = "{ACM} Symposium on Applied Computing",
+	publisher = pub-ACM,
+	editor = "K. M. George and Janice H. Carroll and Dave Oppenheim
+		and Jim Hightower",
+	year = "1996",
+	pages = "408--413",
+	library = "SCS-35",
+	postscript = "ftp://ftp.diku.dk/diku/semantics/papers/D-282.ps.gz",
+}
+
+@misc
+{
+	stoughton:mech-log-rel,
+	author = "Allen Stoughton",
+	title = "Mechanizing Logical Relations",
+	color = "#800000",
+	library = "SCS-160",
+}
+
+@misc
+{
+	takano:gen-pc-dis,
+	author = "Akihiko Takano",
+	title = "Generalized Partial Computation using Disunification to
+		Solve Constraints",
+	color = "#800000",
+	library = "SCS-145",
+}
+
+@misc
+{
+	taylor:comm-diag-tex,
+	author = "Paul Taylor",
+	title = "Commutative Diagrams in {\TeX} (version 4)",
+	month = jul,
+	year = "1994",
+	library = "SCS-176",
+}
+
+@inproceedings
+{
+	thiemann:gen-ho-pe,
+	author = "Peter Thiemann and Robert Gl{\"u}ck",
+	title = "The Generation of a Higher-Order Online Partial Evaluator",
+	booktitle = "Fuji International Workshop on Functional and Logic
+		Programming",
+	pages = "239--253",
+	editor = "M. Takeichi and T. Ida",
+	publisher = "World Scientific",
+	year = "1995",
+	library = "SCS-39",
+}
+
+@unpublished
+{
+	urzycyn:flowcourse,
+	author = "Pawel Urzyczyn",
+	title = "Computability in Abstract Structures",
+	year = "1997",
+	institution = DIKU,
+	note = "Course notes",
+	library = "SCS-91",
+	url = "http://www.diku.dk/research-groups/topps/activities/schematology/index.html",
+}
+
+@techreport
+{
+	oosten:basic-cat-theory,
+	author = "Jaap van Oosten",
+	title = "Basic Category Theory",
+	institution = BRICS,
+	month = jan,
+	year = "1995",
+	number = "LS-95-1",
+	library = "SCS-137",
+	postscript = "http://www.brics.dk/LS/95/1/BRICS-LS-95-1.ps.gz",
+	dvi = "http://www.brics.dk/LS/95/1/BRICS-LS-95-1.dvi.gz",
+}
+
+@misc
+{
+	wadler:essence,
+	author = "Philip Wadler",
+	title = "The essence of functional programming",
+	note = "Invited talk at the 19th Symposium on Principles of
+		Programming Languages",
+	year = "1992",
+	library = "SCS-4",
+	url = "http://cm.bell-labs.com/who/wadler/topics/monads.html#essence",
+	dvi = "http://cm.bell-labs.com/who/wadler/papers/essence/essence.dvi.gz",
+	postscript = "http://cm.bell-labs.com/who/wadler/papers/essence/essence.ps.gz",
+}
+
+@inproceedings
+{
+	wadler:listlessness,
+	author = "Philip Wadler",
+	title = "Listlessness is Better than Laziness: Lazy evaluation
+		and garbage collection at compile-time",
+	booktitle = "{ACM} Symposium on {L}isp and Functional Programming",
+	year = "1984",
+	library = "SCS-147",
+}
+
+@article
+{
+	hoare:incomp,
+	author = "C[harles] A[nthony] R[ichard] Hoare and D. C. S. Allison",
+	title = "Incomputability",
+	journal = j-COMP-SURV,
+	volume = "4",
+	number = "3",
+	pages = "169--178",
+	month = sep,
+	year = "1972",
+	library = "SCS-191",
+}
+
+@article
+{
+	wadler:decl-imp,
+	author = "Philip Wadler",
+	title = "How to Declare an Imperative",
+	journal = j-COMP-SURV,
+	volume = "29",
+	number = "3",
+	pages = "240--263",
+	month = sep,
+	year = "1997",
+	library = "SCS-3",
+	url = "http://cm.bell-labs.com/who/wadler/topics/monads.html#monadsdeclare",
+	dvi = "http://cm.bell-labs.com/who/wadler/papers/monadsdeclare/monadsdeclare.dvi.gz",
+	postscript = "http://cm.bell-labs.com/who/wadler/papers/monadsdeclare/monadsdeclare.ps.gz",
+}
+
+@manual
+{
+	isabelle:system,
+	author = "Markus Wenzel",
+	title = "The {I}sabelle System Manual",
+	year = "1998",
+	month = oct,
+	organization = TUM,
+	library = "SCS-61",
+	dvi = "http://www4.informatik.tu-muenchen.de/{\~{}}isabelle/dist/Isabelle98-1/doc/system.dvi",
+}
+
+@manual
+{
+	isabelle:axiom,
+	author = "Markus Wenzel",
+	title = "Using Axiomatic Type Classes in {I}sabelle: a Tutorial",
+	year = "1998",
+	month = oct,
+	organization = TUM,
+	library = "SCS-63",
+	dvi = "http://www4.informatik.tu-muenchen.de/{\~{}}isabelle/dist/Isabelle98-1/doc/axclass.dvi",
+}
+
+@misc
+{
+	witkin:part-samp-control,
+	author = "Andrew P. Witkin and Paul S. Heckbert",
+	title = "Using Particles to Sample and Control Implicit Surfaces",
+	color = "#800000",
+	library = "SCS-51",
+}
+
+@incollection
+{
+	norrish:det-exp-c,
+	author = "Michael Norrish",
+	title = "Deterministic Expressions in {C}",
+	crossref = "lncs:1576",
+	pages = "147--161",
+	library = "SCS-180",
+}
+
+@proceedings
+{
+	acm:hopl-ii,
+	title = "Proceedings, {ACM} History of Programming Languages II",
+	booktitle = "Proceedings, {ACM} History of Programming Languages II",
+	organization = "ACM",
+	month = apr,
+	year = "1993",
+}
+
+@article{
+	ritchie:c-hist,
+	author = "D[ennis] M. Ritchie",
+	title = "The Development of the {C} Language",
+	journal = j-SIGPLAN,
+	volume = "28",
+	number = "3",
+	pages = "201--208",
+	month = mar,
+	year = "1993",
+	library = "SCS-181",
+	note = "Also found in \cite{acm:hopl-ii}",
+	url = "http://cm.bell-labs.com/cm/cs/who/dmr/chist.html",
+	postscript = "http://cm.bell-labs.com/cm/cs/who/dmr/chist.ps",
+}
+
+@book
+{
+	knuth:math-writ,
+	author = "Donald E[rvin] Knuth and Tracy [L.] Larrabee
+		and Paul M. Roberts",
+	title = "Mathematical Writing",
+	series = "Mathematical Association of America Notes",
+	number = "14",
+	publisher = "Mathematical Association of America",
+	year = "1989",
+	note = "Republished by " # pub-CUP # " in 1996",
+	dvi = "http://www.mangust.dk/skalberg/papers/mathwriting.dvi",
+	url = "http://www-cs-staff.stanford.edu/{\~{}}knuth/klr.html",
+	library = "SCS",
+}
+
+@inproceedings
+{
+	glueck:aps-pe,
+	author = "Robert Gl{\"u}ck and Neil D[eaton] Jones",
+	title = "Automatic Program Specialization by Partial Evaluation:
+		an Introduction",
+	booktitle = "Software Engineering im Scientific Computing",
+	editor = "W. Mackens and S. M. Rump",
+	pages = "70--77",
+	year = "1996",
+	publisher = "Vieweg",
+	library = "SCS-185",
+	postscript = "ftp://ftp.diku.dk/diku/semantics/papers/D-288.ps.gz",
+}
+
+@misc
+{
+	correnson:gen-pr-pc,
+	author = "Lo{\"i}c Correnson and Etienne Duris and
+		Didier Parigot and Gilles Roussel",
+	title = "Generic Programming by Program Composition (position paper)",
+	color = "#800000",
+	library = "SCS-186",
+}
+
+@article
+{
+	klimov:ps-vs-pc,
+	author = "Andrei V. Klimov",
+	title = "Program Specialization vs.\ Program Composition",
+	journal = j-COMP-SURV,
+	volume = "30",
+	number = "3es",
+	month = sep,
+	year = "1998",
+	pages = "3-es",
+	library = "SCS-187",
+	pdf = "http://www.acm.org/pubs/articles/journals/surveys/1998-30-3es/a3-klimov/a3-klimov.pdf",
+}
+
+@book
+{
+	lncs:1110,
+	title = "Partial Evaluation",
+	booktitle = "Partial Evaluation",
+	series = LNCS,
+	publisher = pub-SV,
+	volume = "1110",
+	year = "1996",
+	editor = "Olivier Danvy and Robert Gl{\"u}ck and Peter Thiemann",
+	library = "DIKU",
+}
+
+@book
+{
+	lncs:982,
+	title = "Programming Languages: Implementations, Logics and Programs",
+	booktitle = "Programming Languages: Implementations, Logics and
+		Programs",
+	series = LNCS,
+	publisher = pub-SV,
+	editor = "M[anuel] Hermenegildo and Doaitse Swierstra, D.",
+	volume = "982",
+	year = "1995",
+	library = "DIKU",
+}
+
+@book
+{
+	lncs:1479,
+	title = "Theorem Proving in Higher Order Logics",
+	booktitle = "Theorem Proving in Higher Order Logics",
+	editor = "J. Grundy and M. Newey",
+	volume = "1479",
+	publisher = pub-SV,
+	series = LNCS,
+	month = sep,
+	year = "1998",
+	library = "DIKU",
+}
+
+@book
+{
+	dedekind:numbers,
+	author = "Richard Dedekind",
+	title = "Essays on the Theory of Numbers",
+	publisher = "The Open Court Publishing Company",
+	year = "1901",
+	note = "Translations of \emph{Stetigkeit und irrationale Zahlen} and
+		\emph{Was sind und was sollen die Zahlen} by Wooster Woodruff
+		Beman. Republished by Dover in 1963",
+	library = "SCS",
+}
+
+@book
+{
+	weyl:continuum,
+	author = "Hermann Weyl",
+	title = "The Continuum: A Critical Examination of the Foundation of
+		Analysis",
+	publisher = "Thomas Jefferson University Press",
+	year = "1987",
+	note = "Contains a translation of \emph{Der circulus vitiosus in der
+		heutigen Begr{\"u}ndung der Analysis} by Stephen Pollard
+		and Thomas Bole. Republished with corrections by Dover
+		in 1994",
+	library = "SCS",
+}
+
+@book
+{
+	smullyan:fo-logic,
+	author = "Raymond M. Smullyan",
+	title = "First-Order Logic",
+	publisher = pub-SV,
+	series = "Ergebnisse der Mathematik und ihrer Grenzgebeite",
+	type = "band",
+	number = "43",
+	year = "1968",
+	note = "Republished with corrections by Dover in 1995",
+	library = "SCS",
+}
+
+@book
+{
+	whitesitt:bool-alg-app,
+	author = "J[ohn] Eldon Whitesitt",
+	title = "Boolean Algebra and Its Applications",
+	publisher = pub-AW,
+	year = "1961",
+	note = "Republished by Dover in 1995",
+	library = "SCS",
+}
+
+@book
+{
+	maunder:alg-top,
+	author = "C. R. F. Maunder",
+	title = "Algebraic Topology",
+	publisher = "Van Nostrand Reinhold Company",
+	year = "1970",
+	note = "Republished with corrections by Cambridge University Press
+		in 1980, this, in turn, republished by Dover in 1996",
+	library = "SCS",
+}
+
+@book
+{
+	hocking:topology,
+	author = "John G[ilbert] Hocking and Gail S. Young",
+	title = "Topology",
+	publisher = pub-AW,
+	series = "Addison-{W}esley Series in Mathematics",
+	year = "1961",
+	note = "Republished with corrections by Dover in 1988",
+	library = "SCS",
+}
+
+@book
+{
+	langer:symbolic-logic,
+	author = "Susanne K. Langer",
+	title = "An Introduction to Symbolic Logic",
+	publisher = pub-AW,
+	year = "1967",
+	edition = "Third revised",
+	library = "SCS",
+}
+
+@book
+{
+	rudin:func-anal,
+	author = "Walter Rudin",
+	title = "Functional Analysis",
+	series = "International Series in Pure and Applied Mathematics",
+	edition = "Second",
+	publisher = "McGraw-Hill",
+	year = "1991",
+	library = "SCS",
+}
+
+@book
+{
+	osborne:game-theory,
+	author = "Martin J. Osborne and Ariel Rubinstein",
+	title = "A Course in Game Theory",
+	publisher = pub-MIT,
+	year = "1994",
+	library = "SCS",
+}
+
+@book
+{
+	silverman:intro-comp-anal,
+	author = "Richard A. Silverman",
+	title = "Introductory Complex Analysis",
+	publisher = "Prentice-Hall",
+	year = "1967",
+	note = "Republished by Dover in 1972",
+	library = "SCS",
+}
+
+@book
+{
+	scott:group-theory,
+	author = "W[illiam] R[aymond] Scott",
+	title = "Group Theory",
+	publisher = "Prentice-Hall",
+	year = "1964",
+	note = "Republished with corrections by Dover in 1987",
+	library = "SCS",
+}
+
+@book
+{
+	pontryagin:found-comb-top,
+	author = "L. S. Pontryagin",
+	title = "Foundations of Combinatorial Topology",
+	publisher = "Graylock Press",
+	year = "1952",
+	note = "Translated from Russian by F. Bagemihl, H. Komm, and W. Seidel",
+	library = "SCS",
+}
+
+@book
+{
+	appel:modern-comp-ml,
+	author = "Andrew W. Appel",
+	title = "Modern Compiler Implementation in {ML}",
+	publisher = pub-CUP,
+	year = "1998",
+	url = "http://www.CS.Princeton.EDU/{\~{}}appel/modern/ml/",
+	library = "SCS",
+}
+
+@book
+{
+	arnold:java,
+	author = "Ken Arnold and James Gosling",
+	title = "The {J}ava Programming Language",
+	publisher = pub-AW,
+	year = "1996",
+	series = "The {J}ava Series",
+	url = "http://cseng.awl.com/bookdetail.qry?ISBN=0-201-63455-4&ptype=0",
+	library = "SCS",
+}
+
+@book
+{
+	cargill:cpp-prog-style,
+	author = "Tom Cargil",
+	title = "C++ Programming Style",
+	publisher = pub-AW,
+	year = "1992",
+	series = "Addison-{W}esley Proffesional Computing Series",
+	url = "http://cseng.awl.com/bookdetail.qry?ISBN=0-201-56365-7&ptype=0",
+	library = "SCS",
+}
+
+@book
+{
+	bratko:prolog,
+	author = "Ivan Bratko",
+	title = "Prolog: Programming for Artificial Initelligence",
+	edition = "Second",
+	publisher = pub-AW,
+	year = "1990",
+	series = "International Computer Science Series",
+	library = "SCS",
+}
+
+@book
+{
+	mcconnell:code-complete,
+	author = "Steve[n] [C.] McConnell",
+	title = "Code Complete: A Practical Handbook of Software Construction",
+	publisher = "Microsoft Press",
+	year = "1993",
+	library = "SCS",
+}
+
+@book
+{
+	lamb:vi,
+	author = "Linda Lamb",
+	title = "Learning the \emph{vi} Editor",
+	publisher = pub-ORA,
+	year = "1990",
+	edition = "Fifth",
+	library = "SCS",
+}
+
+@book
+{
+	dougherty:sed-awk,
+	author = "Dale Dougherty",
+	title = "sed \& awk",
+	publisher = pub-ORA,
+	year = "1990",
+	library = "SCS",
+}
+
+@book
+{
+	curry:c-unix,
+	author = "David A. Curry",
+	title = "Using {C} on the {UNIX} System",
+	publisher = pub-ORA,
+	year = "1989",
+	library = "SCS",
+}
+
+@book
+{
+	bolinger:rcs-sccs,
+	author = "Don Bolinger and Tan Bronson",
+	title = "Applying {RCS} and {SCCS}",
+	publisher = pub-ORA,
+	year = "1995",
+	library = "SCS",
+}
+
+@book
+{
+	levine:lex-yacc,
+	author = "John R. Levine and Tony Mason and Doug Brown",
+	title = "lex \& yacc",
+	publisher = pub-ORA,
+	year = "1992",
+	edition = "Second",
+	library = "SCS",
+}
+
+@book
+{
+	oram:make,
+	author = "Andrew Oram and Steve Talbott",
+	title = "Managing Projects with \emph{make}",
+	publisher = pub-ORA,
+	year = "1991",
+	edition = "Second",
+	library = "SCS",
+}
+
+@book
+{
+	garfinkel:unix-sec,
+	author = "Simson Garfinkel and Gene Spafford",
+	title = "Practical {UNIX} Security",
+	publisher = pub-ORA,
+	year = "1991",
+	library = "SCS",
+}
+
+@book
+{
+	deberg:comp-geo,
+	author = "M[ark] de Berg and M[arc] van Kreveld and M[ark] Overmars
+		and O[tfried] Schwarzkopf",
+	title = "Computational Geometry: Algorithms and Applications",
+	publisher = pub-SV,
+	year = "1997",
+	url = "http://www.cs.ruu.nl/geobook/",
+	library = "SCS",
+}
+
+@book
+{
+	oxley:matroid,
+	author = "James G. Oxley",
+	title = "Matroid Theory",
+	series = "Oxford Graduate Texts in Mathematics",
+	volume = "3",
+	publisher = pub-OUP,
+	year = "1992",
+	library = "SCS",
+}
+
+@book
+{
+	gilbert:knots-surf,
+	author = "N. D. Gilbert and T[imothy] Porter",
+	title = "Knots and Surfaces",
+	publisher = pub-OUP,
+	year = "1994",
+	library = "SCS",
+}
+
+@book
+{
+	stewart:compl-anal,
+	author = "Ian Stewart and David Tall",
+	title = "Complex Analysis",
+	publisher = pub-CUP,
+	year = "1983",
+	library = "SCS",
+}
+
+@book
+{
+	rich:ai,
+	author = "Elaine Rich",
+	title = "Artificial Intelligence",
+	publisher = "McGraw-Hill",
+	series = "McGraw-Hill Series in Artificial Intelligence",
+	year = "1983",
+	library = "SCS",
+}
+
+@book
+{
+	wos:ar-intro-app,
+	author = "Larry Wos and Ross Overbeek and Ewing Lusk and Jim Boyle",
+	title = "Automated Reasoning: Introduction and Applications",
+	publisher = pub-PH,
+	year = "1984",
+	library = "SCS",
+}
+
+@book
+{
+	bryant:aspects-comb,
+	author = "Victor Bryant",
+	title = "Aspects of Combinatorics: A wide-ranging introduction",
+	publisher = pub-CUP,
+	year = "1992",
+	library = "SCS",
+}
+
+@book
+{
+	acm:turing-awards,
+	editor = "Robert L. Ashenhurst and Susan Graham",
+	title = "{ACM} {T}uring Award Lecutres: The First Twenty Years",
+	series = "{ACM} Press Anthology Series",
+	year = "1987",
+	publisher = pub-AW,
+	library = "SCS",
+}
+
+@book
+{
+	stroustrup:design-evo-c,
+	author = "Bjarne Stroustrup",
+	title = "The Design and Evolution of {C++}",
+	publisher = pub-AW,
+	year = "1994",
+	url = "http://cseng.awl.com/bookdetail.qry?ISBN=0-201-54330-3&ptype=0",
+	library = "SCS",
+}
+
+@book
+{
+	stroustrup:cpp-prog-lang,
+	author = "Bjarne Stroustrup",
+	title = "The {C++} Programming Language",
+	publisher = pub-AW,
+	year = "1991",
+	edition = "Second",
+	url = "http://cseng.awl.com/bookdetail.qry?ISBN=0-201-53992-6&ptype=0",
+	library = "SCS",
+}
+
+@book
+{
+	press:num-rec-c,
+	author = "William H. Press and Saul A. Teukolsky
+		and William T. Verrerling and Brian B. Flannery",
+	title = "Numerical Recipes in {C}: The Art of Scientific Programming",
+	publisher = pub-CUP,
+	year = "1992",
+	edition = "Second",
+	url = "http://www.nr.com",
+	library = "SCS",
+}
+
+@book
+{
+	turchin:phenomenon,
+	author = "V[alentin] F[edorovich] Turchin",
+	title = "The Phenomenon of Science",
+	publisher = "Columbia University Press",
+	year = "1977",
+	note = "Translated from Russian by Brand Frentz",
+	library = "NDJ",
+}
+
+@book
+{
+	whitehead:principia,
+	author = "Alfred North Whitehead and Bertrand Russell",
+	title = "Principia Mathematica",
+	edition = "Second",
+	year = "1927",
+	publisher = pub-CUP,
+	url = "http://titles.cambridge.org/catalogue.asp?isbn=052106791X",
+}
+
+@book
+{
+	whitehead:principia-to-56,
+	author = "Alfred North Whitehead and Bertrand Russell",
+	title = "Principia Mathematica to *56",
+	publisher = pub-CUP,
+	year = "1962",
+	note = "Abridged version of \cite{whitehead:principia}.
+		Reprinted in the \emph{Cambridge Mathematical Library}
+		series in 1997, also by " # pub-CUP,
+	url = "http://titles.cambridge.org/catalogue.asp?isbn=0521626064",
+	library = "SCS",
+}
+
+@article
+{
+	coquand:coc,
+	author = "Thierry Coquand and G{\'e}rard Huet",
+	title = "The Calculus of Constructions",
+	journal = j-IAC,
+	volume = "76",
+	number = "2/3",
+	pages = "95--120",
+	year = "1988",
+	publisher = pub-AP,
+	month = feb # "/" # mar,
+	library = "SCS-204",
+}
+
+@article
+{
+	naur:goto,
+	author = "Peter Naur",
+	title = "Go to statements and good {A}lgol style",
+	journal = "BIT",
+	volume = "3",
+	year = "1963",
+	pages = "204--205",
+	library = "SCS-194",
+}
+
+@article
+{
+	lipton:compl-control-data,
+	author = "R[ichard] J. Lipton and S[tanley] C. Eisenstadt and
+		R[ichard] A. DeMillo",
+	title = "Space and Time Hierarchies for Classes of Control
+		Structures and Data Structures",
+	journal = j-ACM,
+	month = oct,
+	year = "1976",
+	pages = "720--732",
+	volume = "23",
+	number = "4",
+	library = "SCS-195",
+}
+
+@article
+{
+	lipton:tradeoff-control-data,
+	author = "Richard J. Lipton and Stanley C. Eisenstadt and
+		Richard A. DeMillo",
+	title = "Space-Time Trade-Offs in Structured Programming:
+		An Improved Combinatorial Embedding Theorem",
+	journal = j-ACM,
+	month = jan,
+	year = "1980",
+	pages = "123--127",
+	volume = "27",
+	number = "1",
+	library = "SCS-196",
+}
+
+@misc
+{
+	rose:xyuser,
+	author = "Kristoffer H[{\o}gsbro] Rose",
+	title = "{\Xy}-pic User's Guide",
+	month = dec,
+	year = "1996",
+	library = "SCS-197",
+}
+
+@article
+{
+	knuth:notes-goto,
+	author = "D[onald] E[rvin] Knuth and R[obert] W. Floyd",
+	title = "Notes on Avoiding ``go to'' Statements",
+	journal = "Information Processing Letters",
+	volume = "1",
+	year = "1971",
+	pages = "23--31",
+	publisher = pub-NH,
+	library = "SCS-198",
+}
+
+@book
+{
+	li:kolmogorov,
+	author = "Ming Li and Paul Vit{\'a}nyi",
+	title = "An Introduction to {K}olmogorov Complexity and Its
+		Applications",
+	edition = "Second",
+	publisher = pub-SV,
+	series = GTCS,
+	year = "1997",
+	url = "http://www.springer.de/cgi-bin/search_book.pl?isbn=0-387-94868-6",
+	library = "SCS",
+}
+
+@book
+{
+	fitting:fo-logic-atp,
+	author = "Melvin Fitting",
+	title = "First-Order Logic and Automated Theorem Proving",
+	edition = "Second",
+	publisher = pub-SV,
+	series = GTCS,
+	year = "1996",
+	url = "http://www.springer.de/cgi-bin/search_book.pl?isbn=0-387-94593-8",
+	library = "DIKU",
+}
+
+@book
+{
+	devlin:set-func-logic,
+	author = "Keith Devlin",
+	title = "Sets, Functions and Logic: An introduction to abstract
+		mathematics",
+	publisher = pub-CH,
+	edition = "Second",
+	year = "1992",
+	series = "Chapman \& Hall Mathematics",
+	library = "SCS",
+}
+
+@book
+{
+	quine:logical-pov,
+	author = "Willard Van Orman Quine",
+	title = "From a Logical Point of View",
+	edition = "Second revised",
+	year = "1980",
+	publisher = pub-HUP,
+	library = "SCS",
+}
+
+@article
+{
+	hecht:char-red-fg,
+	author = "M[atthew] S. Hecht and J[effrey] D. Ullman",
+	title = "Characterizations of Reducible Flow Graphs",
+	journal = j-ACM,
+	volume = "21",
+	number = "3",
+	month = jul,
+	year = "1974",
+	pages = "367--375",
+	library = "SCS-199",
+}
+
+@inproceedings
+{
+	kildall:uni-glob-prog-opt,
+	author = "Gary A. Kindall",
+	title = "A Unified Approach to Global Program Optimization",
+	booktitle = "Symposium on Principles of Programming Languages",
+	month = oct,
+	year = "1973",
+	pages = "194--206",
+	library = "SCS-205",
+}
+
+@phdthesis
+{
+	cifuentes:rev-comp-tech,
+	author = "Cristina Cifuentes",
+	title = "Reverse Compilation Techniques",
+	dvi = "ftp://ftp.csee.uq.edu.au/pub/CSM/dcc/decompilation_thesis.dvi.gz",
+	ps = "ftp://ftp.csee.uq.edu.au/pub/CSM/dcc/decompilation_thesis.ps.gz",
+	school = "Queensland University of Technology",
+	month = jul,
+	year = "1994",
+	library = "SCS-200",
+}
+
+@incollection
+{
+	mycroft:type-dec,
+	author = "Alan Mycroft",
+	title = "Type-Based Decompilation (or Program Reconstruction via
+		Type Reconstruction)",
+	crossref = "lncs:1576",
+	pages = "208--223",
+	postscript = "http://www.cl.cam.ac.uk/users/am/papers/decomp.ps.gz",
+}
+
+@book
+{
+	lncs:1576,
+	title = "Programming Languages and Systems",
+	booktitle = "Programming Languages and Systems",
+	editor = "S. Doaitse Swiestra",
+	series = LNCS,
+	volume = "1576",
+	publisher = pub-SV,
+	year = "1999",
+	library = "DIKU",
+}
+
+@inproceedings
+{
+	gannod:inf-form-rev-c,
+	author = "Gerald C. Gannod and Betty H. C. Chang",
+	title = "Using Informal and Formal",
+	booktitle = "Proceedings of the 1996 IEEE International
+		Conference on Software Maintenance",
+	pages = "265--274",
+	month = nov,
+	year = "1996",
+	publisher = pub-IEEE,
+	postscript = "http://www.cps.msu.edu/~gannod/papers/icsm96.ps.gz",
+}
+
+@article
+{
+	cooper:bj-answer,
+	author = "David C. Cooper",
+	title = "B{\"o}hm and {J}acopini's Reduction of Flow Charts",
+	journal = j-CACM,
+	pages = "463, 473",
+	month = aug,
+	year = "1967",
+	volume = "10",
+	number = "8",
+	library = "SCS-201",
+}
+
+@article
+{
+	thorup:struct-prog,
+	author = "Mikkel Thorup",
+	title = "All Structured Programs Have Small Tree-Width
+		and Good Register Allocation",
+	journal = j-IAC,
+	month = may,
+	year = "1998",
+	volume = "142",
+	number = "2",
+	pages = "159--181",
+	postscript = "http://www.diku.dk/users/mthorup/PAPERS/register.ps.gz",
+	library = "SCS-202",
+}
+
+@incollection
+{
+	ashcroft:goto-2-while,
+	author = "Edward Ashcroft and Zohar Manna",
+	title = "The Translation of `go to' Programs to `while' Programs",
+	crossref = "ifip:71",
+	pages = "250--255",
+	library = "SCS-203",
+}
+
+@incollection
+{
+	allen:basis-prog-opt,
+	author = "Frances E. Allen",
+	title = "A Basis for Program Optimization",
+	crossref = "ifip:71",
+	pages = "385--390",
+	library = "SCS-208",
+}
+
+@proceedings
+{
+	ifip:71,
+	title = "Information Processing 71",
+	booktitle = "Information Processing 71",
+	volume = "1",
+	editor = "C. V. Freiman",
+	year = "1972",
+	publisher = pub-NH,
+	library = "DIKU",
+}
+
+@article
+{
+	hecht:flow-graph-red,
+	author = "Matthew S. Hecht and Jeffrey D. Ullman",
+	title = "Flow Graph Reducibility",
+	journal = j-SIAM,
+	volume = "1",
+	number = "2",
+	month = jun,
+	year = "1972",
+	pages = "188--202",
+	library = "SCS-206",
+}
+
+@article
+{
+	cocke:glob-com-subexp-elim,
+	author = "John Cocke",
+	title = "Global Common Subexpression Elimination",
+	journal = j-SIGPLAN,
+	month = jul,
+	year = "1970",
+	pages = "20--24",
+	volume = "5",
+	number = "7",
+	library = "SCS-207",
+}
+
+@incollection
+{
+	cifuentes:struct-dec-graph,
+	author = "Cristina Cifuentes",
+	title = "Struturing Decompiled Graphs",
+	booktitle = "Compiler Construction",
+	editor = "Tibor Gyim{\'o}thy",
+	series = LNCS,
+	publisher = pub-SV,
+	volume = "1060",
+	pages = "91--105",
+	year = "1996",
+	library = "SCS-209",
+}
+
+@manual
+{
+	fenlason:gprof,
+	author = "Jay Fenlason and Richard Stallman",
+	title = "{GNU} gprof",
+	organization = "Free Software Foundation",
+	year = "1998",
+	library = "SCS-210",
+}
+
+@unpublished
+{
+	grue:math-comp,
+	author = "Klaus [Ebbe] Grue",
+	title = "Mathematics and Computation",
+	note = "Course notes",
+	organization = DIKU,
+	year = "1994--2001",
+	library = "SCS",
+}
+
+@article
+{
+	wadler:lazy-vs-strict,
+	author = "Philip Wadler",
+	title = "Lazy versus strict",
+	journal = j-COMP-SURV,
+	volume = "28",
+	number = "2",
+	month = jun,
+	year = "1996",
+	pages = "318--320",
+	library = "SCS-212",
+	url = "http://cm.bell-labs.com/who/wadler/topics/call-by-need.html#lazyvsstrict",
+	postscript = "http://cm.bell-labs.com/who/wadler/papers/lazyvsstrict/lazyvsstrict.ps.gz",
+	dvi = "http://cm.bell-labs.com/who/wadler/papers/lazyvsstrict/lazyvsstrict.dvi.gz",
+}
+
+@inproceedings
+{
+	launchbury:lazy-sem,
+	author = "John Launchbury",
+	title = "A Natural Semantics for Lazy Evaluation",
+	booktitle = "Proceedings of POPL '93",
+	library = "SCS-213",
+	year = "1993",
+}
+
+@incollection
+{
+	ariola:cyclic-lambda,
+	author = "Zena M. Ariola and Stefan Blom",
+	title = "Cyclic Lambda Calculi",
+	booktitle = "Theoretical Aspects of Computer Software",
+	series = LNCS,
+	volume = "1281",
+	editor = "Mart{\'\i}n Abadi and Takayasu Ito",
+	year = "1997",
+	library = "SCS-214",
+	publisher = pub-SV,
+	pages = "77--106",
+}
+
+@book
+{
+	norman:design-everyday-things,
+	author = "Donald A. Norman",
+	title = "The Design of Everyday Things",
+	publisher = pub-MIT,
+	year = "1988",
+	url = "http://mitpress.mit.edu/book-home.tcl?isbn=0262640376",
+	library = "SCS",
+}
+
+@manual
+{
+	cederqvist:cvs,
+	author = "Per Cederqvist",
+	title = "Version Management with {CVS}",
+	organization = "Signum Support {AB}",
+	note = "For {CVS} 1.8.1",
+	year = "1993",
+	library = "SCS",
+}
+
+@article
+{
+	paulson:found-gen-tp,
+	author = "Lawrence C. Paulson",
+	title = "The Foundation of a Generic Theorem Prover",
+	journal = j-JAR,
+	volume = "5",
+	number = "3",
+	pages = "363--397",
+	year = "1989",
+	dvi = "http://www.cl.cam.ac.uk/Research/Reports/TR130-lcp-generic-theorem-prover.dvi.gz"}
+	library = "SCS-215",
+}
+
+@article
+{
+	robinson:resolution,
+	author = "J. A. Robinson",
+	title = "A Machine-Oriented Logic Based on the Resolution Principle",
+	journal = j-ACM,
+	volume = "12",
+	number = "1",
+	pages = "23--41",
+	month = jan,
+	year = "1965",
+	library = "SCS-216",
+}
+
+@unpublished
+{
+	neergaard:cons-uni-norm,
+	author = "Peter M{\o}ller Neergaard and Morten Heine B[j{\o}rnlund]
+		S{\o}rensen",
+	title = "Conservation and Uniform Normalisation in Lambda Calculi
+		with Erasing Reductions",
+	year = "1999",
+	note = "Submitted for publication",
+	library = "SCS-217",
+}
+
+@article
+{
+	appel:four-color,
+	author = "Kenneth Appel and Wolfgang Haken",
+	title = "The Solution of the Four-Color-Map Problem",
+	journal = "Scientific American",
+	volume = "237",
+	month = oct,
+	year = "1977",
+	pages = "108--121",
+	library = "SCS-218",
+}
+
+@book
+{
+	landau:dictionaries,
+	author = "Sidney I. Landau",
+	title = "Dictionaries: The Art and Craft of Lexicography",
+	publisher = pub-CUP,
+	year = "1989",
+	library = "SCS",
+}
+
+@book
+{
+	hoffman:adios-strunk-white,
+	author = "Gary Hoffman and Glynis Hoffman",
+	title = "Adios, Strunk and White",
+	edition = "Second",
+	publisher = "Verve Press",
+	year = "1999",
+	library = "SCS",
+}
+
+@book
+{
+	goossens:latex-gfx-companion,
+	author = "Michel Goossens and Sebastian Rahtz and Frank Mittelbach",
+	title = "The \LaTeX{} Graphics Companion: Illustrating documents with
+		\TeX{} and PostScript",
+	year = "1997",
+	publisher = pub-AW,
+	url = "http://cseng.awl.com/bookdetail.qry?ISBN=0-201-85469-4&ptype=0",
+	library = "SCS",
+}
+
+@book
+{
+	vanleunen:handbook-scholars,
+	author = "Mary-Claire van Leunen",
+	title = "A Handbook for Scholars",
+	year = "1992",
+	edition = "Revised",
+	publisher = pub-OUP,
+	library = "SCS",
+}
+
+@book
+{
+	dupre:bugs-writing,
+	author = "Lyn Dupr{\'e}",
+	title = "Bugs in Writing: A Guide to Debugging Your Prose",
+	year = "1998",
+	edition = "Revised",
+	publisher = pub-AW,
+	url = "http://cseng.awl.com/bookdetail.qry?ISBN=0-201-37921-X&ptype=0",
+	library = "SCS",
+}
+
+@article
+{
+	jay:semantics-shape,
+	author = "C. Barry Jay",
+	title = "A Semantics for Shape",
+	journal = j-SCP,
+	volume = "25",
+	number = "2--3",
+	month = dec,
+	year = "1995",
+	pages = "251--283",
+	library = "SCS-184",
+	url = "http://www-staff.mcs.uts.edu.au/~cbj/Publications/Abstracts/shape_semantics.html",
+	ps = "http://www-staff.mcs.uts.edu.au/~cbj/Publications/shape_semantics.ps.gz",
+}
+
+@book
+{
+	mitchell:found-prog-lang,
+	author = "John C. Mitchell",
+	title = "Foundations for Programming Languages",
+	publisher = pub-MIT,
+	year = "1996",
+	series = FOC,
+	url = "http://mitpress.mit.edu/book-home.tcl?isbn=0262133210",
+	library = "SCS",
+}
+
+@book
+{
+	vandam:computer-graphics,
+	author = "James D. Foley and Andries van Dam and Steven K. Feiner
+		and John F. Hughes",
+	title = "Computer Graphics: Principles and Practice",	
+	publisher = pub-AW,
+	year = "1996",
+	series = "Addison-{W}esley System Programming Series",
+	edition = "Second in C",
+	library = "SCS",
+}
+
+@book
+{
+	robinson:non-std-analysis,
+	author = "Abraham Robinson",
+	title = "Non-standard Analysis",
+	publisher = "Princeton University Press",
+	year = "1974",
+	series = "Princeton Landmarks in Mathematics",
+	edition = "Second",
+	note = "Reprinted in 1996",
+	library = "SCS",
+}
+
+@book
+{
+	gilmore:catastrophe-theory,
+	author = "Robert Gilmore",
+	title = "Catastrophe Theory for Scientists and Engineers",
+	publisher = pub-JWS,
+	address = "New York",
+	year = "1981",
+	note = "Republished by Dover in 1993",
+	library = "SCS",
+}
+
+@book
+{
+	williams:model-solv,
+	author = "H. P. Williams",
+	title = "Model Solving in Mathematical Programming",
+	publisher = pub-JWS,
+	year = "1993",
+	library = "SCS",
+}
+
+
+@book
+{
+	williams:model-build,
+	author = "H. P. Williams",
+	title = "Model Buliding in Mathematical Programming",
+	publisher = pub-JWS,
+	edition = "Third revised",
+	year = "1993",
+	library = "SCS",
+}
+
+@book
+{
+	boyer:history-math,
+	author = "Carl B[enjamin] Boyer and Uta C. Merzbach",
+	title = "A History of Mathematics",
+	publisher = pub-JWS,
+	edition = "Second",
+	year = "1989",
+	library = "SCS",
+}
+
+@book
+{
+	wall:geo-intro-topology,
+	author = "C[harles] T[errence] C[legg] Wall",
+	title = "A Geometric Introduction to Topology",
+	publisher = pub-AW,
+	year = "1972",
+	note = "Republished by Dover in 1993",
+	library = "SCS",
+}
+
+@book
+{
+	welsh:intro-pascal,
+	author = "Jim Welsh and John Elder",
+	title = "Introduction to {P}ascal",
+	year = "1988",
+	publisher = pub-PHI,
+	series = ISCS,
+	edition = "Third",
+	library = "SCS",
+}
+
+@book
+{
+	docarmo:diff-geom,
+	author = "Manfredo P[erdigao] do Carmo",
+	title = "Differential Geometry of Curves and Surfaces",
+	year = "1976",
+	publisher = pub-PH,
+	library = "SCS",
+}
+
+@book
+{
+	johnson:pde-by-fem,
+	author = "Claes Johnson",
+	title = "Numerical solution of partial differential equations by the
+		finite element method",
+	year = "1987",
+	publisher = "Studentlitteratur",
+	library = "SCS",
+}
+
+@book
+{
+	kincaid:numerical-analysis,
+	author = "David [Ronald] Kincaid and [Elliot] Ward Cheney",
+	title = "Numerical Analysis",
+	year = "1991",
+	publisher = "Brooks/Cole Publishing Company",
+	library = "SCS",
+}
+
+@book
+{
+	lehey:porting-unix-sw,
+	author = "Greg Lehey",
+	title = "Porting {UNIX} Software",
+	publisher = pub-ORA,
+	year = "1995",
+	library = "SCS",
+}
+
+@book
+{
+	stevens:unix-net-prog,
+	author = "W. Richard Stevens",
+	title = "{UNIX} Network Programming",
+	year = "1990",
+	publisher = pub-PH,
+	library = "SCS",
+}
+
+@book
+{
+	baader:term-rewriting,
+	author = "Franz Baader and Tobias Nipkow",
+	title = "Term Rewriting and All That",
+	year = "1998",
+	publisher = pub-CUP,
+	url = "http://titles.cambridge.org/catalogue.asp?isbn=0521779200",
+	library = "SCS",
+}
+
+@article
+{
+	church:prop-conv,
+	author = "Alonzo Church and J. B[arkley] Rosser",
+	title = "Some Properties of Conversion",
+	journal = j-TACM,
+	volume = "39",
+	year = "1936",
+	pages = "472--482",
+	library = "SCS-219",
+}
+
+@book
+{
+	beeson:found-constr-math,
+	author = "Michael J. Beeson",
+	title = "Foundations of Constructive Mathematics:
+		Metamathematical Studies",
+	publisher = pub-SV,
+	series = "Ergebnisse der Mathematik und ihrer Grenzgebeite, 3. Folge:
+		A Series of Modern Surveys in Mathematics",
+	volume = "3",
+	year = "1985",
+	library = "DIKU",
+}
+
+@article
+{
+	bingham:fluctuations,
+	author = "N[ick] H. Bingham",
+	title = "Fluctuations",
+	journal = "The Mathematical Scientist",
+	volume = "23",
+	pages = "63--73",
+	year = "1998",
+	library = "SCS-220",
+	publisher = "CSRIO (Australia's Commonwealth Scientific and
+		Industrial Research Organisation)",
+	address = "Canberra City",
+}
+
+@phdthesis
+{
+	arts:phd,
+	author = "Thomas Henricus Johannes Joseph Arts",
+	title = "Automatically proving termination and innermost
+		normalisation of term rewriting systems",
+	school = "Utrecht University",
+	year = "1997",
+	url = "ftp://ftp.cs.uu.nl/pub/RUU/CS/phdtheses/Arts/thesis.ps.gz",
+	month = may,
+	library = "SCS",
+}
+
+@techreport
+{
+	grue:map-pref-app-index,
+	author = "Klaus [Ebbe] Grue",
+	title = "Map Theory: Preface, Appendix and Index",
+	institution = DIKU,
+	type = DIKURep,
+	year = "1992",
+	month = oct,
+	number = "92/16",
+	library = "SCS",
+}
+
+@book
+{
+	bishop:constr-anal,
+	author = "Errett Bishop and Douglas [S.] Bridges",
+	title = "Constructive Analysis",
+	publisher = pub-SV,
+	series = "Grundlehren der mathematischen Wissenschaften:
+		A Series of Comprehensive Studies in Mathematics",
+	volume = "279",
+	year = "1985",
+	library = "DNLB",
+}
+
+@misc
+{
+	loader:undec-lambda-def,
+	author = "Ralph Loader",
+	title = "The Undecidability of $\lambda$-Definability",
+	note = "To appear in the \emph{Church Memorial Volume}",
+	library = "SCS-221",
+	dvi = "http://www.dcs.ed.ac.uk/home/loader/papers/Church.dvi.gz",
+	ps = "http://www.dcs.ed.ac.uk/home/loader/papers/Church.ps.gz",
+}
+
+@book
+{
+	vandalen:logic-struct,
+	author = "Dirk van Dalen",
+	title = "Logic and Structure",
+	library = "DIKU",
+	publisher = pub-SV,
+	edition = "Third augmented",
+	series = "Universitext",
+	year = "1994",
+}
+
+@incollection
+{
+	aczel:intro-ind-def,
+	author = "Peter Aczel",
+	title = "An Introduction to Inductive Definitions",
+        chapter = "C.7",
+	pages = "739--782",
+        crossref = "barwise:math-logic",
+}
+
+@book
+{
+	barwise:math-logic,
+	editor = "Jon Barwise",
+	title = "Handbook of Mathematical Logic",
+	booktitle = "Handbook of Mathematical Logic",
+	publisher = pub-NH,
+	year = "1977",
+	series = LFM,
+	volume = "90",
+	library = "SCS",
+}
+
+@phdthesis
+{
+	oosten:ex-real,
+	author = "Jaap van Oosten",
+	title = "Exercises in realizability",
+	school = "University of Amsterdam",
+	year = "1991",
+	library = "SCS",
+}
+
+@misc
+{
+	skalberg:mt-errata,
+	author = "Sebastian C[hristian] Skalberg",
+	title = "Errata for Map Theory",
+	note = "A list of corrections for~\cite{grue:map-theory}.",
+	year = "1999",
+	postscript = "http://www.mangust.dk/skalberg/papers/mt-errata.ps",
+	dvi = "http://www.mangust.dk/skalberg/papers/mt-errata.dvi",
+}
+
+@article
+{
+	harrop:disj-ext-intuitionistic-systems,
+	author = "Ronald Harrop",
+	title = "Concerning Formulas of the Types
+		${A}\to {B}\land {C}$,
+		${A}\to({E}x){B}(x)$ in Intuitionistic Formal Systems",
+	journal = j-JSL,
+	volume = 25,
+	number = 1,
+	pages = "27--32",
+	month = mar,
+	year = "1960",
+	library = "SCS-222",
+}
+
+@book
+{
+	lakatos:proofs-and-refs,
+	author = "Imre Lakatos",
+	title = "Proofs and Refutations: The Logic of Mathematical Discovery",
+	year = "1976",
+	publisher = pub-CUP,
+	url = "http://titles.cambridge.org/catalogue.asp?isbn=0521290384",
+	library = "SCS",
+}
+
+@book
+{
+	nordstrom:prog-ml-tt,
+	author = "Bengt Nordstr{\"o}m and Kent Petersson and Jan M. Smith",
+	title = "Programming in {M}artin-{L}{\"o}f's Type Theory:
+		An Introduction",
+	series = "The International Series of Monographs on Computer Science",
+	number = "7",
+	publisher = pub-OUP,
+	year = "1990",
+	library = "SCS",
+	url = "http://www.cs.chalmers.se/Cs/Research/Logic/book/",
+}
+
+@misc
+{
+	dybjer:finite-ax-ir-def,
+	author = "Peter Dybjer and Anton Setzer",
+	title = "A Finite Axiomatization of Inductive-Recursive Definitions",
+	url = "ftp://ftp.cs.chalmers.se/pub/clics/peterd/Finite_IR.ps",
+	color = "#800000",
+	library = "SCS-226",
+}
+
+@misc
+{
+	dybjer:inductive-families,
+	author = "Peter Dybjer",
+	title = "Inductive Families",
+	url = "ftp://ftp.cs.chalmers.se/pub/clics/peterd/Inductive_Families.ps",
+	color = "#800000",
+	library = "SCS-225",
+}
+
+@book
+{
+	sierpinski:theory-of-numbers,
+	author = "W[aclaw] Sierpi{\'n}ski",
+	title = "Elementary Theory of Numbers",
+	series = "North-Holland Mathematical Library",
+	volume = "31",
+	publisher = pub-NH,
+	year = "1988",
+	library = "DIKU",
+}
+%	editor = "A[ndrzej] Schinzel",
+
+@article
+{
+	bryant:obbd,
+	author = "Randal E. Bryant",
+	title = "Symbolic Boolean Manipulation with Ordered Binary-Decision
+		Diagrams",
+	journal = j-COMP-SURV,
+	volume = "24",
+	number = "3",
+	pages = "293--318",
+	month = sep,
+	year = "1992",
+}
+
+@inproceedings
+{
+	aczel:frege-struct,
+	author = "Peter Aczel",
+	title = "Frege Structures and the Notions of Proposition, Truth
+		and Set",
+	booktitle = "The Kleene Symposium",
+	series = LFM,
+	volume = "101",
+	publisher = pub-NH,
+	year = "1980",
+	pages = "31--59",
+	library = "SCS-227",
+}
+
+@article
+{
+	huet:confl-red,
+	author = "G{\'e}rard Huet",
+	title = "Confluent Reductions:  Abstract Properties and Applications
+		to Term Rewriting Systems",
+	journal = j-ACM,
+	year = "1980",
+	month = oct,
+	volume = "27",
+	number = "4",
+	pages = "797--821",
+	library = "SCS-228",
+}
+
+@article
+{
+	church:simpl-types,
+	author = "Alonzo Church",
+	title = "A Formulation of the Simple Theory of Types",
+	journal = j-JSL,
+	year = "1940",
+	pages = "56--68",
+	volume = "5",
+	month = jun,
+	number = "2",
+	library = "SCS-234",
+}
+
+@book
+{
+        potter:intro-form-spec-z,
+	author = "Ben Potter and Jane Sinclair and David Till",
+	title = "An Introduction to Formal Specification and {Z}",
+	year = "1996",
+	publisher = pub-PHI,
+	series = ISCS,
+	edition = "Second",
+	library = "SCS",
+}
+
+@article
+{
+	kleene:incons-formal-logics,
+	author = "S[tephen] C[ole] Kleene and J. B[arkley] Rosser",
+	title = "The inconsistency of certain formal logics",
+	journal = j-ANN-MATH,
+	year = "1935",
+	pages = "630--636",
+	volume = "36",
+	month = jul,
+	number = "3",
+	library = "SCS-229",
+}
+
+@article
+{
+	church:postulates-found-logic-2,
+	author = "Alonzo Church",
+	title = "A set of postulates for the foundation of logic (second paper)",
+	journal = j-ANN-MATH,
+	year = "1933",
+	pages = "839--864",
+	volume = "34",
+	library = "SCS-238",
+}
+
+@article
+{
+	church:postulates-found-logic,
+	author = "Alonzo Church",
+	title = "A set of postulates for the foundation of logic",
+	journal = j-ANN-MATH,
+	year = "1932",
+	pages = "346--366",
+	volume = "33",
+	library = "SCS-235",
+}
+
+@article
+{
+	church:form-def-ordinals,
+	author = "Alonzo Church and S[tephen] C[ole] Kleene",
+	title = "Formal definitions in the theory of ordinal numbers",
+	journal = j-FUND-MATH,
+	year = "1937",
+	pages = "11--21",
+	volume = "28",
+	library = "SCS-230",
+}
+
+@article
+{
+	church:unsolvable,
+	author = "Alonzo Church",
+	title = "An unsolvable problem of elementary number theory",
+	journal = j-AJM,
+	year = "1936",
+	pages = "345--363",
+	volume = "58",
+	library = "SCS-231",
+}
+
+@article
+{
+	godel:undecidable-prin-math,
+	author = "Kurt G{\"o}del",
+	title = "{\"U}ber formal unentscheidbare {S}{\"a}tze der {P}rincipia
+		{M}athematica und verwandter {S}ysteme {I}",
+	journal = j-MH-MP,
+	year = "1931",
+	pages = "173--198",
+	volume = "38",
+	library = "SCS-232",
+}
+
+@incollection
+{
+	scott:relating-lambda-theories,
+	author = "Dana S. Scott",
+	title = "Relating theories of the $\lambda$-calculus",
+	crossref = "seldin:curry-essays",
+	pages = "403--450",
+	library = "SCS-233",
+}
+
+@article
+{
+	kleene:origins-rec-func-theory,
+	author = "Stephen C[ole] Kleene",
+	title = "Origins of Recursive Function Theory",
+	journal = j-ANN-HC,
+	publisher = pub-IEEE,
+	volume = "3",
+	number = "1",
+	month = jan,
+	year = "1981",
+	pages = "52--67",
+	library = "SCS-236",
+}
+
+@article
+{
+	rosser:highlights-lambda,
+	author = "J. Barkley Rosser",
+	title = "Highlights of the History of the Lambda Calculus",
+	journal = j-ANN-HC,
+	publisher = pub-IEEE,
+	volume = "6",
+	number = "4",
+	month = oct,
+	year = "1984",
+	pages = "337--349",
+	library = "SCS-237",
+}
+
+@book
+{
+	halmos:naive-set-theory,
+	author = "Paul R[ichard] Halmos",
+	title = "Naive Set Theory",
+	publisher = "Van Nostrand",
+	year = "1960",
+	series = "The University series in undergraduate mathematics",
+	note = "Republished by " # pub-SV # " in 1974 in the \emph{Undergraduate texts in mathematics} series",
+	library = "SCS",
+}
+
+@article
+{
+	cardelli:understanding-types,
+	author = "Luca Cardelli and Peter Wagner",
+	title = "On Understanding Types, Data Abstraction, and Polymorphism",
+	journal = j-COMP-SURV,
+	year = "1985",
+	volume = "17",
+	number = "4",
+	pages = "471--522",
+	month = dec,
+	publisher = pub-ACM,
+	library = "SCS-239",
+	pdf = "http://research.microsoft.com/Users/luca/Papers/OnUnderstanding.pdf",
+}
+
+@book
+{
+	van-heijenoort:from-frege,
+	author = "Jean van Heijenoort",
+	title = "From Frege to G{\"o}del: A source book in mathematical logic 1879--1931",
+	year = "1967",
+	publisher = pub-HUP,
+	library = "SCS",
+}
+
+@article
+{
+	smullyan-analytic-nat-ded,
+	author = "Raymond M. Smullyan",
+	title = "Analytic natural deduction",
+	journal = j-JSL,
+	volume = 30,
+	number = 2,
+	pages = "123--139",
+	month = jun,
+	year = "1965",
+	library = "SCS-240",
+}
+
+@article
+{
+	tait:subst-method,
+	author = "W. W. Tait",
+	title = "The substitution method",
+	journal = j-JSL,
+	volume = 30,
+	number = 2,
+	pages = "175--192",
+	month = jun,
+	year = "1965",
+	library = "SCS-241",
+}
+
+@book
+{
+	thurston:number-system,
+	author = "H. A. Thurston",
+	title = "The Number-System",
+	publisher = "Interscience Publishers Inc.",
+        address = "New York",
+	year = "1956",
+	library = "DNLB",
+}
+
+@unpublished
+{
+	grue:mt-classical,
+	author = "Klaus [Ebbe] Grue",
+	title = "Map theory with classical maps",
+	note = "As yet unpublished. Can be found from \url{http://www.diku.dk/users/grue}",
+	year = "2001",
+	library = "SCS",
+}
+
+@phdthesis
+{
+	skalberg:isabelle-mt,
+	author = "Sebastian C[hristian] Skalberg",
+	title = "An Interactive Proof System for Map Theory",
+	school = UCph,
+	year = "2002",
+	month = oct,
+	url = "http://www.mangust.dk/skalberg/phd/",
+	postscript = "http://www.mangust.dk/skalberg/phd/skalberg-phd.ps",
+	pdf = "http://www.mangust.dk/skalberg/phd/skalberg-phd.pdf",
+	dvi = "http://www.mangust.dk/skalberg/phd/skalberg-phd.dvi",
+}
+
+@phdthesis
+{
+	vallee:phd,
+	author = "Thierry Vallée",
+	title = "Map Theory et Antifoundation",
+	school = "Université Paris VII",
+	year = "2001",
+}
+
+@book
+{
+	chazelle:discrepancy,
+	author = "Bernard Chazelle",
+	title = "The Discrepancy Method",
+	year = "2002",
+	publisher = pub-CUP,
+	url = "http://titles.cambridge.org/catalogue.asp?isbn=0521003571",
+	library = "SCS",
+}
+	
+
+@book
+{
+	charniak:ai-programming,
+	author = "Eugene Charniak and Christopher K. Riesbeck and Drew V. McDermott",
+	title = "Artificial Intelligence Programming",
+	publisher = "Lawrence Erlbaum Associates",
+	year = "1980",
+	library = "TUM",
+}

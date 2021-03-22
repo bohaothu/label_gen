@@ -1,0 +1,1218 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>BibSoup - from the Open Knowledge Foundation</title>
+    <meta name="description" content="BibSever - http://bibserver.okfn.org/">
+    <meta name="author" content="Open Knowledge Foundation">
+
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:300&v2">
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Nova+Square">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Bootstrap styles -->
+    <link rel="stylesheet" href="/static/bootstrap-1.2.0.min.css">
+
+    <!-- our styles -->
+    <link rel="stylesheet" type="text/css" href="/static/bibsoup.css">
+    <link rel="stylesheet" type="text/css" href="/static/solreyes.css"/>
+
+    <link rel="stylesheet" type="text/css" href="/static/jquery-ui/jquery-ui.css"/>
+
+    <script type="text/javascript" src="/static/jquery.js"></script>
+    <script type="text/javascript" src="/static/jquery.tinysort.js"></script>
+    <script type="text/javascript" src="/static/jquery-ui/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="/static/bibserver.js"></script>
+    
+<!--    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
+
+  </head>
+
+  <body>
+
+    <div class="topbar">
+      <div class="fill">
+        <div class="container">
+          <h3><a href="/">BibSoup</a></h3>
+          <ul class="nav">
+            <li class="active"><a href="/">Home</a></li>
+            <li><a href="/upload">Upload</a></li>
+            <li><a href="/content/howto">FAQ</a></li>
+          </ul>
+          <ul class="nav secondary-nav">
+            <li>
+              <form action="/search" method="GET">
+                <input type="text" name="q" placeholder="search" />
+              </form>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+
+
+    <div class="content">
+
+
+
+<div id="bibserver_search">
+  <div class="search_box">
+      <form method="get" action="">
+          <input type="text" name="q" value='' />
+          <input type="submit" name="search" value="Search" />
+      </form>
+      <form method="get" action="">
+            <input type="submit" name="submit" value="clear" />
+      </form>
+
+  </div>
+</div>
+
+    <h3>collection : <a href="/collection/Berkeley_Statistics:breiman.leo.bib">Berkeley_Statistics:breiman.leo.bib</a></h3>
+
+    <div id="navigation">
+        
+        <div class="facet">
+
+            <div class="facet_heading">
+                <a href="" class="facet_heading" id="fh_type"><span class="facet_pm">+&nbsp;</span>type</a>
+            </div>
+            <div id="selected_type" class="facet_selected">
+                        
+                
+            </div>
+                        
+            <ul id="fr_type" class="facet_value">
+
+                    <li><a href="/collection/Berkeley_Statistics:breiman.leo.bib?type=[%22article%22]&">
+                    article</a> (<span class="count">147</span>)
+                    </li>
+                    <li><a href="/collection/Berkeley_Statistics:breiman.leo.bib?type=[%22misc%22]&">
+                    misc</a> (<span class="count">21</span>)
+                    </li>
+                    <li><a href="/collection/Berkeley_Statistics:breiman.leo.bib?type=[%22book%22]&">
+                    book</a> (<span class="count">18</span>)
+                    </li>
+                    <li><a href="/collection/Berkeley_Statistics:breiman.leo.bib?type=[%22collection%22]&">
+                    collection</a> (<span class="count">3</span>)
+                    </li>
+
+            </li>
+                
+        </div>
+        <div class="facet">
+
+            <div class="facet_heading">
+                <a href="" class="facet_heading" id="fh_journal"><span class="facet_pm">+&nbsp;</span>journal</a>
+            </div>
+            <div id="selected_journal" class="facet_selected">
+                        
+                
+            </div>
+                        
+            <ul id="fr_journal" class="facet_value">
+
+                    <li><a href="/collection/Berkeley_Statistics:breiman.leo.bib?journal=[%22Ann.%20Math.%20Stat.%22]&">
+                    Ann. Math. Stat.</a> (<span class="count">45</span>)
+                    </li>
+                    <li><a href="/collection/Berkeley_Statistics:breiman.leo.bib?journal=[%22Mach.%20Learn.%22]&">
+                    Mach. Learn.</a> (<span class="count">18</span>)
+                    </li>
+                    <li><a href="/collection/Berkeley_Statistics:breiman.leo.bib?journal=[%22Technometrics%22]&">
+                    Technometrics</a> (<span class="count">12</span>)
+                    </li>
+                    <li><a href="/collection/Berkeley_Statistics:breiman.leo.bib?journal=[%22J.%20Am.%20Stat.%20Assoc.%22]&">
+                    J. Am. Stat. Assoc.</a> (<span class="count">12</span>)
+                    </li>
+                    <li><a href="/collection/Berkeley_Statistics:breiman.leo.bib?journal=[%22Ann.%20Stat.%22]&">
+                    Ann. Stat.</a> (<span class="count">12</span>)
+                    </li>
+                    <li><a href="/collection/Berkeley_Statistics:breiman.leo.bib?journal=[%22Stat.%20Sci.%22]&">
+                    Stat. Sci.</a> (<span class="count">6</span>)
+                    </li>
+                    <li><a href="/collection/Berkeley_Statistics:breiman.leo.bib?journal=[%22Ann.%20Probab.%22]&">
+                    Ann. Probab.</a> (<span class="count">6</span>)
+                    </li>
+                    <li><a href="/collection/Berkeley_Statistics:breiman.leo.bib?journal=[%22Z.%20Wahrscheinlichkeitstheor.%20Verw.%20Geb.%22]&">
+                    Z. Wahrscheinlichkeitstheor. Verw. Geb.</a> (<span class="count">3</span>)
+                    </li>
+                    <li><a href="/collection/Berkeley_Statistics:breiman.leo.bib?journal=[%22Teor.%20Veroyatn.%20Primen.%22]&">
+                    Teor. Veroyatn. Primen.</a> (<span class="count">3</span>)
+                    </li>
+                    <li><a href="/collection/Berkeley_Statistics:breiman.leo.bib?journal=[%22Nav.%20Res.%20Logist.%20Q.%22]&">
+                    Nav. Res. Logist. Q.</a> (<span class="count">3</span>)
+                    </li>
+                    <li><a href="/collection/Berkeley_Statistics:breiman.leo.bib?journal=[%22Math.%20Program.%2C%20Ser.%20A%22]&">
+                    Math. Program., Ser. A</a> (<span class="count">3</span>)
+                    </li>
+                    <li><a href="/collection/Berkeley_Statistics:breiman.leo.bib?journal=[%22J.%20Stat.%20Comput.%20Simulation%22]&">
+                    J. Stat. Comput. Simulation</a> (<span class="count">3</span>)
+                    </li>
+                    <li><a href="/collection/Berkeley_Statistics:breiman.leo.bib?journal=[%22J.%20R.%20Stat.%20Soc.%2C%20Ser.%20B%22]&">
+                    J. R. Stat. Soc., Ser. B</a> (<span class="count">3</span>)
+                    </li>
+                    <li><a href="/collection/Berkeley_Statistics:breiman.leo.bib?journal=[%22Int.%20Stat.%20Rev.%22]&">
+                    Int. Stat. Rev.</a> (<span class="count">3</span>)
+                    </li>
+                    <li><a href="/collection/Berkeley_Statistics:breiman.leo.bib?journal=[%22Ill.%20J.%20Math.%22]&">
+                    Ill. J. Math.</a> (<span class="count">3</span>)
+                    </li>
+                    <li><a href="/collection/Berkeley_Statistics:breiman.leo.bib?journal=[%22IEEE%20Trans.%20Inf.%20Theory%22]&">
+                    IEEE Trans. Inf. Theory</a> (<span class="count">3</span>)
+                    </li>
+                    <li><a href="/collection/Berkeley_Statistics:breiman.leo.bib?journal=[%22Comput.%20Stat.%20Data%20Anal.%22]&">
+                    Comput. Stat. Data Anal.</a> (<span class="count">3</span>)
+                    </li>
+                    <li><a href="/collection/Berkeley_Statistics:breiman.leo.bib?journal=[%22Bull.%20Inst.%20Int.%20Stat.%22]&">
+                    Bull. Inst. Int. Stat.</a> (<span class="count">3</span>)
+                    </li>
+
+            </li>
+                
+        </div>
+        <div class="facet">
+
+            <div class="facet_heading">
+                <a href="" class="facet_heading" id="fh_author"><span class="facet_pm">+&nbsp;</span>author</a>
+            </div>
+            <div id="selected_author" class="facet_selected">
+                        
+                
+            </div>
+                        
+            <ul id="fr_author" class="facet_value">
+
+                    <li><a href="/collection/Berkeley_Statistics:breiman.leo.bib?author=[%22Breiman%2C%20Leo%22]&">
+                    Breiman, Leo</a> (<span class="count">144</span>)
+                    </li>
+                    <li><a href="/collection/Berkeley_Statistics:breiman.leo.bib?author=[%22Breiman%2C%20L.%22]&">
+                    Breiman, L.</a> (<span class="count">42</span>)
+                    </li>
+                    <li><a href="/collection/Berkeley_Statistics:breiman.leo.bib?author=[%22Friedman%2C%20Jerome%20H.%22]&">
+                    Friedman, Jerome H.</a> (<span class="count">12</span>)
+                    </li>
+                    <li><a href="/collection/Berkeley_Statistics:breiman.leo.bib?author=[%22Thomasian%2C%20A.J.%22]&">
+                    Thomasian, A.J.</a> (<span class="count">9</span>)
+                    </li>
+                    <li><a href="/collection/Berkeley_Statistics:breiman.leo.bib?author=[%22Blackwell%2C%20David%22]&">
+                    Blackwell, David</a> (<span class="count">9</span>)
+                    </li>
+                    <li><a href="/collection/Berkeley_Statistics:breiman.leo.bib?author=[%22Cutler%2C%20Adele%22]&">
+                    Cutler, Adele</a> (<span class="count">6</span>)
+                    </li>
+                    <li><a href="/collection/Berkeley_Statistics:breiman.leo.bib?author=[%22Zemel%2C%20Amos%22]&">
+                    Zemel, Amos</a> (<span class="count">3</span>)
+                    </li>
+                    <li><a href="/collection/Berkeley_Statistics:breiman.leo.bib?author=[%22Wurtele%2C%20Z.S.%22]&">
+                    Wurtele, Z.S.</a> (<span class="count">3</span>)
+                    </li>
+                    <li><a href="/collection/Berkeley_Statistics:breiman.leo.bib?author=[%22Tsur%2C%20Yacov%22]&">
+                    Tsur, Yacov</a> (<span class="count">3</span>)
+                    </li>
+                    <li><a href="/collection/Berkeley_Statistics:breiman.leo.bib?author=[%22Stone%2C%20Charles%20J.%22]&">
+                    Stone, Charles J.</a> (<span class="count">3</span>)
+                    </li>
+                    <li><a href="/collection/Berkeley_Statistics:breiman.leo.bib?author=[%22Stone%2C%0ACharles%20J.%22]&">
+                    Stone,
+Charles J.</a> (<span class="count">3</span>)
+                    </li>
+                    <li><a href="/collection/Berkeley_Statistics:breiman.leo.bib?author=[%22Schwartz%2C%20Lorraine%22]&">
+                    Schwartz, Lorraine</a> (<span class="count">3</span>)
+                    </li>
+                    <li><a href="/collection/Berkeley_Statistics:breiman.leo.bib?author=[%22Purcell%2C%20Edward%22]&">
+                    Purcell, Edward</a> (<span class="count">3</span>)
+                    </li>
+                    <li><a href="/collection/Berkeley_Statistics:breiman.leo.bib?author=[%22Peters%2C%20Steve%22]&">
+                    Peters, Steve</a> (<span class="count">3</span>)
+                    </li>
+                    <li><a href="/collection/Berkeley_Statistics:breiman.leo.bib?author=[%22Olshen%2C%20Richard%20A.%22]&">
+                    Olshen, Richard A.</a> (<span class="count">3</span>)
+                    </li>
+                    <li><a href="/collection/Berkeley_Statistics:breiman.leo.bib?author=[%22Meisel%2C%20William%22]&">
+                    Meisel, William</a> (<span class="count">3</span>)
+                    </li>
+                    <li><a href="/collection/Berkeley_Statistics:breiman.leo.bib?author=[%22Meisel%2C%20W.S.%22]&">
+                    Meisel, W.S.</a> (<span class="count">3</span>)
+                    </li>
+                    <li><a href="/collection/Berkeley_Statistics:breiman.leo.bib?author=[%22Le%20Cam%2C%20Lucien%22]&">
+                    Le Cam, Lucien</a> (<span class="count">3</span>)
+                    </li>
+                    <li><a href="/collection/Berkeley_Statistics:breiman.leo.bib?author=[%22Kooperberg%2C%20Charles%22]&">
+                    Kooperberg, Charles</a> (<span class="count">3</span>)
+                    </li>
+                    <li><a href="/collection/Berkeley_Statistics:breiman.leo.bib?author=[%22Gnanadesikan%2C%20Ramanathan%22]&">
+                    Gnanadesikan, Ramanathan</a> (<span class="count">3</span>)
+                    </li>
+                    <li><a href="/collection/Berkeley_Statistics:breiman.leo.bib?author=[%22Freedman%2C%20D.%22]&">
+                    Freedman, D.</a> (<span class="count">3</span>)
+                    </li>
+                    <li><a href="/collection/Berkeley_Statistics:breiman.leo.bib?author=[%22Dunn%2C%20Olive%20J.%22]&">
+                    Dunn, Olive J.</a> (<span class="count">3</span>)
+                    </li>
+                    <li><a href="/collection/Berkeley_Statistics:breiman.leo.bib?author=[%22Blashfield%2C%20Roger%20K.%22]&">
+                    Blashfield, Roger K.</a> (<span class="count">3</span>)
+                    </li>
+                    <li><a href="/collection/Berkeley_Statistics:breiman.leo.bib?author=[%22Blackwell%2C%20D.%22]&">
+                    Blackwell, D.</a> (<span class="count">3</span>)
+                    </li>
+                    <li><a href="/collection/Berkeley_Statistics:breiman.leo.bib?author=[%22Bickel%2C%20Peter%20J.%22]&">
+                    Bickel, Peter J.</a> (<span class="count">3</span>)
+                    </li>
+                    <li><a href="/collection/Berkeley_Statistics:breiman.leo.bib?author=[%22Bell%2C%20C.B.%22]&">
+                    Bell, C.B.</a> (<span class="count">3</span>)
+                    </li>
+
+            </li>
+                
+        </div>
+        <div class="facet">
+
+            <div class="facet_heading">
+                <a href="" class="facet_heading" id="fh_person"><span class="facet_pm">+&nbsp;</span>person</a>
+            </div>
+            <div id="selected_person" class="facet_selected">
+                        
+                
+            </div>
+                        
+            <ul id="fr_person" class="facet_value">
+
+
+            </li>
+                
+        </div>
+        <div class="facet">
+
+            <div class="facet_heading">
+                <a href="" class="facet_heading" id="fh_year"><span class="facet_pm">+&nbsp;</span>year</a>
+            </div>
+            <div id="selected_year" class="facet_selected">
+                        
+                
+            </div>
+                        
+            <ul id="fr_year" class="facet_value">
+
+                    <li><a href="/collection/Berkeley_Statistics:breiman.leo.bib?year=[%221960%22]&">
+                    1960</a> (<span class="count">21</span>)
+                    </li>
+                    <li><a href="/collection/Berkeley_Statistics:breiman.leo.bib?year=[%221996%22]&">
+                    1996</a> (<span class="count">12</span>)
+                    </li>
+                    <li><a href="/collection/Berkeley_Statistics:breiman.leo.bib?year=[%221993%22]&">
+                    1993</a> (<span class="count">12</span>)
+                    </li>
+                    <li><a href="/collection/Berkeley_Statistics:breiman.leo.bib?year=[%222001%22]&">
+                    2001</a> (<span class="count">9</span>)
+                    </li>
+                    <li><a href="/collection/Berkeley_Statistics:breiman.leo.bib?year=[%221992%22]&">
+                    1992</a> (<span class="count">9</span>)
+                    </li>
+                    <li><a href="/collection/Berkeley_Statistics:breiman.leo.bib?year=[%221964%22]&">
+                    1964</a> (<span class="count">9</span>)
+                    </li>
+                    <li><a href="/collection/Berkeley_Statistics:breiman.leo.bib?year=[%221958%22]&">
+                    1958</a> (<span class="count">9</span>)
+                    </li>
+                    <li><a href="/collection/Berkeley_Statistics:breiman.leo.bib?year=[%221957%22]&">
+                    1957</a> (<span class="count">9</span>)
+                    </li>
+                    <li><a href="/collection/Berkeley_Statistics:breiman.leo.bib?year=[%221999%22]&">
+                    1999</a> (<span class="count">6</span>)
+                    </li>
+                    <li><a href="/collection/Berkeley_Statistics:breiman.leo.bib?year=[%221983%22]&">
+                    1983</a> (<span class="count">6</span>)
+                    </li>
+                    <li><a href="/collection/Berkeley_Statistics:breiman.leo.bib?year=[%221973%22]&">
+                    1973</a> (<span class="count">6</span>)
+                    </li>
+                    <li><a href="/collection/Berkeley_Statistics:breiman.leo.bib?year=[%221969%22]&">
+                    1969</a> (<span class="count">6</span>)
+                    </li>
+                    <li><a href="/collection/Berkeley_Statistics:breiman.leo.bib?year=[%221967%22]&">
+                    1967</a> (<span class="count">6</span>)
+                    </li>
+                    <li><a href="/collection/Berkeley_Statistics:breiman.leo.bib?year=[%222004%22]&">
+                    2004</a> (<span class="count">3</span>)
+                    </li>
+                    <li><a href="/collection/Berkeley_Statistics:breiman.leo.bib?year=[%222003%22]&">
+                    2003</a> (<span class="count">3</span>)
+                    </li>
+                    <li><a href="/collection/Berkeley_Statistics:breiman.leo.bib?year=[%222000%22]&">
+                    2000</a> (<span class="count">3</span>)
+                    </li>
+                    <li><a href="/collection/Berkeley_Statistics:breiman.leo.bib?year=[%221998%22]&">
+                    1998</a> (<span class="count">3</span>)
+                    </li>
+                    <li><a href="/collection/Berkeley_Statistics:breiman.leo.bib?year=[%221997%22]&">
+                    1997</a> (<span class="count">3</span>)
+                    </li>
+                    <li><a href="/collection/Berkeley_Statistics:breiman.leo.bib?year=[%221995%22]&">
+                    1995</a> (<span class="count">3</span>)
+                    </li>
+                    <li><a href="/collection/Berkeley_Statistics:breiman.leo.bib?year=[%221994%22]&">
+                    1994</a> (<span class="count">3</span>)
+                    </li>
+                    <li><a href="/collection/Berkeley_Statistics:breiman.leo.bib?year=[%221991%22]&">
+                    1991</a> (<span class="count">3</span>)
+                    </li>
+                    <li><a href="/collection/Berkeley_Statistics:breiman.leo.bib?year=[%221990%22]&">
+                    1990</a> (<span class="count">3</span>)
+                    </li>
+                    <li><a href="/collection/Berkeley_Statistics:breiman.leo.bib?year=[%221989%22]&">
+                    1989</a> (<span class="count">3</span>)
+                    </li>
+                    <li><a href="/collection/Berkeley_Statistics:breiman.leo.bib?year=[%221985%22]&">
+                    1985</a> (<span class="count">3</span>)
+                    </li>
+                    <li><a href="/collection/Berkeley_Statistics:breiman.leo.bib?year=[%221984%22]&">
+                    1984</a> (<span class="count">3</span>)
+                    </li>
+                    <li><a href="/collection/Berkeley_Statistics:breiman.leo.bib?year=[%221977%22]&">
+                    1977</a> (<span class="count">3</span>)
+                    </li>
+                    <li><a href="/collection/Berkeley_Statistics:breiman.leo.bib?year=[%221976%22]&">
+                    1976</a> (<span class="count">3</span>)
+                    </li>
+                    <li><a href="/collection/Berkeley_Statistics:breiman.leo.bib?year=[%221971%22]&">
+                    1971</a> (<span class="count">3</span>)
+                    </li>
+                    <li><a href="/collection/Berkeley_Statistics:breiman.leo.bib?year=[%221970%22]&">
+                    1970</a> (<span class="count">3</span>)
+                    </li>
+                    <li><a href="/collection/Berkeley_Statistics:breiman.leo.bib?year=[%221968%22]&">
+                    1968</a> (<span class="count">3</span>)
+                    </li>
+                    <li><a href="/collection/Berkeley_Statistics:breiman.leo.bib?year=[%221965%22]&">
+                    1965</a> (<span class="count">3</span>)
+                    </li>
+                    <li><a href="/collection/Berkeley_Statistics:breiman.leo.bib?year=[%221963%22]&">
+                    1963</a> (<span class="count">3</span>)
+                    </li>
+                    <li><a href="/collection/Berkeley_Statistics:breiman.leo.bib?year=[%221962%22]&">
+                    1962</a> (<span class="count">3</span>)
+                    </li>
+                    <li><a href="/collection/Berkeley_Statistics:breiman.leo.bib?year=[%221961%22]&">
+                    1961</a> (<span class="count">3</span>)
+                    </li>
+                    <li><a href="/collection/Berkeley_Statistics:breiman.leo.bib?year=[%221959%22]&">
+                    1959</a> (<span class="count">3</span>)
+                    </li>
+
+            </li>
+                
+        </div>
+
+    </div>
+    
+    <div id="panel">
+    
+        
+<div class="paging">
+
+
+    <form method="get" action="">
+          <input type="hidden" name="q" value="" />
+    <select class="small" name="from" id="page_select">
+
+    <option value="0" selected>
+    1 - 
+        10
+    </option>
+    <option value="10">
+    11 - 
+        20
+    </option>
+    <option value="20">
+    21 - 
+        30
+    </option>
+    <option value="30">
+    31 - 
+        40
+    </option>
+    <option value="40">
+    41 - 
+        50
+    </option>
+    <option value="50">
+    51 - 
+        60
+    </option>
+    <option value="60">
+    61 - 
+        70
+    </option>
+    <option value="70">
+    71 - 
+        80
+    </option>
+    <option value="80">
+    81 - 
+        90
+    </option>
+    <option value="90">
+    91 - 
+        100
+    </option>
+    <option value="100">
+    101 - 
+        110
+    </option>
+    <option value="110">
+    111 - 
+        120
+    </option>
+    <option value="120">
+    121 - 
+        130
+    </option>
+    <option value="130">
+    131 - 
+        140
+    </option>
+    <option value="140">
+    141 - 
+        150
+    </option>
+    <option value="150">
+    151 - 
+        160
+    </option>
+    <option value="160">
+    161 - 
+        170
+    </option>
+    <option value="170">
+    171 - 
+        180
+    </option>
+    <option value="180">
+    181 - 
+        189
+    </option>
+    
+    </select>
+
+    <span class="io_total">of 189 results. </span><span>Show </span>
+
+    <select class="small" name="size" id="rpp_select">
+        <option selected>10</option>
+        <option value="20">20</option>
+        <option value="50">50</option>
+        <option value="100">100</option>
+    </select>
+
+     Sort
+    <select class="small" name="sort" id="sort_select">
+        <option>...</option>
+        <option value="received">received</option>
+        <option value="title">title</option>
+        <option value="year">year</option>
+        <option value="journal">journal</option>
+        <option value="url">url</option>
+        <option value="source">source</option>
+    </select>
+
+     desc: 
+
+    <input id="order_select" type="checkbox" name="order" value="desc" />
+    
+    <input type="submit" name="submit" value="update" id="paging_trigger" />
+    </form>
+
+    <form method="get" action="">
+          <input type="hidden" name="q" value="" />
+    <input type="hidden" name="from" value="10" />
+    <input type="hidden" name="size" value="10" />
+    <input type="hidden" name="sort" value="" />
+    <input type="hidden" name="order" value="" />
+    <input type="submit" class="paging_submit_right" name="submit" value="next" />
+    </form>
+
+</div>
+
+<div class="spacer"></div>        
+
+
+
+    
+        
+        <!-- the result set itself -->        
+        
+
+
+<div class="list_view">
+        <div class="list_result_odd">
+                    <div class="list_result_field"><a href="?q=Breiman, Leo" alt="search for Breiman, Leo" title="search for Breiman, Leo">Breiman, Leo</a> and <a href="?q=Friedman, Jerome H." alt="search for Friedman, Jerome H." title="search for Friedman, Jerome H.">Friedman, Jerome H.</a></div>
+                    <div class="list_result_field"><a class="list_result_field_showall" href="" alt="show more info" title="show more info"><strong>Estimating optimal transformations for multiple regression and
+correlation.</strong></a></div>
+                    <div class="list_result_field"><em>J. Am. Stat. Assoc.</em></div>
+
+
+            <table class="list_result_hidden list_table">
+                <tr>
+                <td>doi</td><td><a href="http://dx.doi.org/10.2307/2288473">10.2307/2288473</a></td>
+                </tr>
+                <tr>
+                <td>language</td><td>English</td>
+                </tr>
+                <tr>
+                <td>title</td><td><a class="list_result_field_showall" href="" alt="show more info" title="show more info"><strong>Estimating optimal transformations for multiple regression and
+correlation.</strong></a></td>
+                </tr>
+                <tr>
+                <td>journal</td><td><em>J. Am. Stat. Assoc.</em></td>
+                </tr>
+                <tr>
+                <td>abstract</td><td>For regression problems with the response variable Y and the
+predictor variables $X\sb 1,...,X\sb p$, the authors propose a procedure,
+alternating conditional expectations (ACE) algorithm, for estimating the
+function $\theta$ (Y) and $\phi\sb 1(X\sb 1),...,\phi\sb p(X\sb p)$ that
+minimize $$ e\sp 2=E[\theta (Y)-\sum\spp\sbj=1\phi\sb j(X\sb j)]\sp
+2/Var(\theta (Y)), $$ given only a sample $\(Y\sb
+k,x\sbk1,...,x\sbkp)$; $k=1,...,N\$ and making minimal assumptions
+concerning the data distribution or the form of the solution functions. \par
+The article is presented in two distinct parts. Sections 1 through 4 give a
+fairly nontechnical overview of the ACE and discuss its application to data.
+Section 5 and Appendix A provide some theoretical foundation for the
+algorithm. They involve the existence of optimal transformations and
+consistency results. \par For the bivariate case, $p=1$, the optimal
+transformations $\theta\sp*,\phi\sp*$ satisfy $̊ho\sp*=̊ho
+(\theta\sp*,\phi\sp*)=\max\sb\theta,\phiρ(\theta (Y),φ(X))$, where
+$̊ho$ is the product moment correlation coefficient and $̊ho\sp*$ is the
+maximal correlation between X and Y.</td>
+                </tr>
+                <tr>
+                <td>author</td><td><a href="?q=Breiman, Leo" alt="search for Breiman, Leo" title="search for Breiman, Leo">Breiman, Leo</a> and <a href="?q=Friedman, Jerome H." alt="search for Friedman, Jerome H." title="search for Friedman, Jerome H.">Friedman, Jerome H.</a></td>
+                </tr>
+                <tr>
+                <td>collection</td><td><a href="/collection/Berkeley_Statistics:breiman.leo.bib" alt="go to collection - Berkeley_Statistics:breiman.leo.bib" title="go to collection - Berkeley_Statistics:breiman.leo.bib">Berkeley_Statistics:breiman.leo.bib</a></td>
+                </tr>
+                <tr>
+                <td>id</td><td>0f4395d9e8784a48ac05545ade491249</td>
+                </tr>
+                <tr>
+                <td>volume</td><td>80</td>
+                </tr>
+                <tr>
+                <td>citekey</td><td>0594.62044</td>
+                </tr>
+                <tr>
+                <td>year</td><td>1985</td>
+                </tr>
+                <tr>
+                <td>keywords</td><td>smoothing; random designs in regression; autoregressive schemes in;
+stationary ergodic time series; controlled designs in regression;
+alternating conditional expectations (ACE) algorithm; existence of optimal
+transformations; consistency; product moment correlation coefficient;
+maximal correlation</td>
+                </tr>
+                <tr>
+                <td>reviewer</td><td>Songgui Wang</td>
+                </tr>
+                <tr>
+                <td>classmath</td><td>*62G05 (Nonparametric estimation)
+62J02 (General nonlinear regression)
+</td>
+                </tr>
+                <tr>
+                <td>type</td><td>article</td>
+                </tr>
+                <tr>
+                <td>pages</td><td>580 to 619</td>
+                </tr>
+            </table>
+
+            <div class="list_result_options list_result_hidden">
+                <a class="viewrecord" href="/collection/Berkeley_Statistics:breiman.leo.bib/0594.62044">View record</a>
+            </div>
+
+        </div>
+        <div class="list_result_even">
+                    <div class="list_result_field"><a href="?q=Breiman, Leo" alt="search for Breiman, Leo" title="search for Breiman, Leo">Breiman, Leo</a></div>
+                    <div class="list_result_field"><a class="list_result_field_showall" href="" alt="show more info" title="show more info"><strong>The little bootstrap and other methods for dimensionality selection in
+regression: X-fixed prediction error.</strong></a></div>
+                    <div class="list_result_field"><em>J. Am. Stat. Assoc.</em></div>
+
+
+            <table class="list_result_hidden list_table">
+                <tr>
+                <td>doi</td><td><a href="http://dx.doi.org/10.2307/2290212">10.2307/2290212</a></td>
+                </tr>
+                <tr>
+                <td>language</td><td>English</td>
+                </tr>
+                <tr>
+                <td>title</td><td><a class="list_result_field_showall" href="" alt="show more info" title="show more info"><strong>The little bootstrap and other methods for dimensionality selection in
+regression: X-fixed prediction error.</strong></a></td>
+                </tr>
+                <tr>
+                <td>journal</td><td><em>J. Am. Stat. Assoc.</em></td>
+                </tr>
+                <tr>
+                <td>author</td><td><a href="?q=Breiman, Leo" alt="search for Breiman, Leo" title="search for Breiman, Leo">Breiman, Leo</a></td>
+                </tr>
+                <tr>
+                <td>number</td><td>419</td>
+                </tr>
+                <tr>
+                <td>collection</td><td><a href="/collection/Berkeley_Statistics:breiman.leo.bib" alt="go to collection - Berkeley_Statistics:breiman.leo.bib" title="go to collection - Berkeley_Statistics:breiman.leo.bib">Berkeley_Statistics:breiman.leo.bib</a></td>
+                </tr>
+                <tr>
+                <td>pages</td><td>738 to 754</td>
+                </tr>
+                <tr>
+                <td>volume</td><td>87</td>
+                </tr>
+                <tr>
+                <td>citekey</td><td>0850.62518</td>
+                </tr>
+                <tr>
+                <td>year</td><td>1992</td>
+                </tr>
+                <tr>
+                <td>classmath</td><td>*62J05 (Linear regression)
+</td>
+                </tr>
+                <tr>
+                <td>type</td><td>article</td>
+                </tr>
+                <tr>
+                <td>id</td><td>7aa2ccc13dd44006b9bb4fdc2cc6cdd2</td>
+                </tr>
+            </table>
+
+            <div class="list_result_options list_result_hidden">
+                <a class="viewrecord" href="/collection/Berkeley_Statistics:breiman.leo.bib/0850.62518">View record</a>
+            </div>
+
+        </div>
+        <div class="list_result_odd">
+                    <div class="list_result_field"><a href="?q=Breiman, Leo" alt="search for Breiman, Leo" title="search for Breiman, Leo">Breiman, Leo</a></div>
+                    <div class="list_result_field"><a class="list_result_field_showall" href="" alt="show more info" title="show more info"><strong>Hinging hyperplanes for regression, classification, and function
+approximation.</strong></a></div>
+                    <div class="list_result_field"><em>IEEE Trans. Inf. Theory</em></div>
+
+
+            <table class="list_result_hidden list_table">
+                <tr>
+                <td>doi</td><td><a href="http://dx.doi.org/10.1109/18.256506">10.1109/18.256506</a></td>
+                </tr>
+                <tr>
+                <td>language</td><td>English</td>
+                </tr>
+                <tr>
+                <td>title</td><td><a class="list_result_field_showall" href="" alt="show more info" title="show more info"><strong>Hinging hyperplanes for regression, classification, and function
+approximation.</strong></a></td>
+                </tr>
+                <tr>
+                <td>journal</td><td><em>IEEE Trans. Inf. Theory</em></td>
+                </tr>
+                <tr>
+                <td>author</td><td><a href="?q=Breiman, Leo" alt="search for Breiman, Leo" title="search for Breiman, Leo">Breiman, Leo</a></td>
+                </tr>
+                <tr>
+                <td>number</td><td>3</td>
+                </tr>
+                <tr>
+                <td>collection</td><td><a href="/collection/Berkeley_Statistics:breiman.leo.bib" alt="go to collection - Berkeley_Statistics:breiman.leo.bib" title="go to collection - Berkeley_Statistics:breiman.leo.bib">Berkeley_Statistics:breiman.leo.bib</a></td>
+                </tr>
+                <tr>
+                <td>id</td><td>b85015ac27f04846b519a05ff22d83e7</td>
+                </tr>
+                <tr>
+                <td>volume</td><td>39</td>
+                </tr>
+                <tr>
+                <td>citekey</td><td>0793.62031</td>
+                </tr>
+                <tr>
+                <td>abstract</td><td>Summary: A hinge function $y=h(x)$ consists of two hyperplanes
+continuously joined together at a hinge. In regression (prediction),
+classification (pattern recognition), and noiseless function approximation,
+use of sums of hinge functions gives a powerful and efficient alternative to
+neural networks with computing times several orders of magnitude less than
+fitting neural networks with a comparable number of parameters. The core of
+the methodology is a simple and effective method for finding good hinges.</td>
+                </tr>
+                <tr>
+                <td>year</td><td>1993</td>
+                </tr>
+                <tr>
+                <td>keywords</td><td>prediction; pattern recognition; hyperplanes; classification;
+noiseless function approximation; sums of hinge functions</td>
+                </tr>
+                <tr>
+                <td>classmath</td><td>*62H30 (Statistical classification, etc.)
+62J99 (Linear statistical inference)
+65C99 (Numerical simulation)
+65D15 (Algorithms for functional approximation)
+65D99 (Numerical approximation)
+</td>
+                </tr>
+                <tr>
+                <td>type</td><td>article</td>
+                </tr>
+                <tr>
+                <td>pages</td><td>999 to 1013</td>
+                </tr>
+            </table>
+
+            <div class="list_result_options list_result_hidden">
+                <a class="viewrecord" href="/collection/Berkeley_Statistics:breiman.leo.bib/0793.62031">View record</a>
+            </div>
+
+        </div>
+        <div class="list_result_even">
+                    <div class="list_result_field"><a href="?q=Breiman, Leo" alt="search for Breiman, Leo" title="search for Breiman, Leo">Breiman, Leo</a></div>
+                    <div class="list_result_field"><a class="list_result_field_showall" href="" alt="show more info" title="show more info"><strong>Technical note: Some properties of splitting criteria.</strong></a></div>
+                    <div class="list_result_field"><em>Mach. Learn.</em></div>
+
+
+            <table class="list_result_hidden list_table">
+                <tr>
+                <td>language</td><td>English</td>
+                </tr>
+                <tr>
+                <td>title</td><td><a class="list_result_field_showall" href="" alt="show more info" title="show more info"><strong>Technical note: Some properties of splitting criteria.</strong></a></td>
+                </tr>
+                <tr>
+                <td>journal</td><td><em>Mach. Learn.</em></td>
+                </tr>
+                <tr>
+                <td>abstract</td><td>Summary: Various criteria have been proposed for deciding which split
+is best at a given node of a binary classification tree. Consider the
+question: given a goodness-of-split criterion and the class populations of
+the instances at a node, what distribution of the instances between the two
+children nodes maximizes the goodness-of-split criterion? The answers reveal
+an interesting distinction between the gini and entropy criterion.</td>
+                </tr>
+                <tr>
+                <td>author</td><td><a href="?q=Breiman, Leo" alt="search for Breiman, Leo" title="search for Breiman, Leo">Breiman, Leo</a></td>
+                </tr>
+                <tr>
+                <td>number</td><td>1</td>
+                </tr>
+                <tr>
+                <td>collection</td><td><a href="/collection/Berkeley_Statistics:breiman.leo.bib" alt="go to collection - Berkeley_Statistics:breiman.leo.bib" title="go to collection - Berkeley_Statistics:breiman.leo.bib">Berkeley_Statistics:breiman.leo.bib</a></td>
+                </tr>
+                <tr>
+                <td>id</td><td>15f506b32aea4303afe73b88c2a24866</td>
+                </tr>
+                <tr>
+                <td>volume</td><td>24</td>
+                </tr>
+                <tr>
+                <td>citekey</td><td>0849.68095</td>
+                </tr>
+                <tr>
+                <td>year</td><td>1996</td>
+                </tr>
+                <tr>
+                <td>keywords</td><td>split; binary classification tree</td>
+                </tr>
+                <tr>
+                <td>classmath</td><td>*68R10 (Graph theory in connection with computer science)
+</td>
+                </tr>
+                <tr>
+                <td>type</td><td>article</td>
+                </tr>
+                <tr>
+                <td>pages</td><td>41 to 47</td>
+                </tr>
+            </table>
+
+            <div class="list_result_options list_result_hidden">
+                <a class="viewrecord" href="/collection/Berkeley_Statistics:breiman.leo.bib/0849.68095">View record</a>
+            </div>
+
+        </div>
+        <div class="list_result_odd">
+                    <div class="list_result_field"><a href="?q=Breiman, Leo" alt="search for Breiman, Leo" title="search for Breiman, Leo">Breiman, Leo</a> and <a href="?q=Friedman, Jerome H." alt="search for Friedman, Jerome H." title="search for Friedman, Jerome H.">Friedman, Jerome H.</a></div>
+                    <div class="list_result_field"><a class="list_result_field_showall" href="" alt="show more info" title="show more info"><strong>Predicting multivariate responses in multiple linear regression.</strong></a></div>
+                    <div class="list_result_field"><em>J. R. Stat. Soc., Ser. B</em></div>
+
+
+            <table class="list_result_hidden list_table">
+                <tr>
+                <td>language</td><td>English</td>
+                </tr>
+                <tr>
+                <td>title</td><td><a class="list_result_field_showall" href="" alt="show more info" title="show more info"><strong>Predicting multivariate responses in multiple linear regression.</strong></a></td>
+                </tr>
+                <tr>
+                <td>journal</td><td><em>J. R. Stat. Soc., Ser. B</em></td>
+                </tr>
+                <tr>
+                <td>abstract</td><td>Summary: We look at the problem of predicting several response
+variables from the same set of explanatory variables. The question is how to
+take advantage of correlations between the response variables to improve
+predictive accuracy compared with the usual procedure of doing individual
+regressions of each response variable on the common set of predictor
+variables.\par A new procedure is introduced called the curds and whey
+method. Its use can substantially reduce prediction errors when there are
+correlations between responses while maintaining accuracy even if the
+responses are uncorrelated. In extensive simulations, the new procedure is
+compared with several previously proposed methods for predicting multiple
+responses (including partial least squares) and exhibits superior accuracy.
+One version can be easily implemented in the context of standard statistical
+packages.</td>
+                </tr>
+                <tr>
+                <td>author</td><td><a href="?q=Breiman, Leo" alt="search for Breiman, Leo" title="search for Breiman, Leo">Breiman, Leo</a> and <a href="?q=Friedman, Jerome H." alt="search for Friedman, Jerome H." title="search for Friedman, Jerome H.">Friedman, Jerome H.</a></td>
+                </tr>
+                <tr>
+                <td>number</td><td>1</td>
+                </tr>
+                <tr>
+                <td>collection</td><td><a href="/collection/Berkeley_Statistics:breiman.leo.bib" alt="go to collection - Berkeley_Statistics:breiman.leo.bib" title="go to collection - Berkeley_Statistics:breiman.leo.bib">Berkeley_Statistics:breiman.leo.bib</a></td>
+                </tr>
+                <tr>
+                <td>id</td><td>441406977c754653aa4313b659db1339</td>
+                </tr>
+                <tr>
+                <td>volume</td><td>59</td>
+                </tr>
+                <tr>
+                <td>citekey</td><td>0897.62068</td>
+                </tr>
+                <tr>
+                <td>year</td><td>1997</td>
+                </tr>
+                <tr>
+                <td>keywords</td><td>canonical regression; cross-validation; partial least squares; rank
+regression; ridge regression; curds and whey method; prediction errors</td>
+                </tr>
+                <tr>
+                <td>classmath</td><td>*62J05 (Linear regression)
+62H12 (Multivariate estimation)
+</td>
+                </tr>
+                <tr>
+                <td>type</td><td>article</td>
+                </tr>
+                <tr>
+                <td>pages</td><td>3 to 54</td>
+                </tr>
+            </table>
+
+            <div class="list_result_options list_result_hidden">
+                <a class="viewrecord" href="/collection/Berkeley_Statistics:breiman.leo.bib/0897.62068">View record</a>
+            </div>
+
+        </div>
+        <div class="list_result_even">
+                    <div class="list_result_field"><a href="?q=Breiman, L." alt="search for Breiman, L." title="search for Breiman, L.">Breiman, L.</a></div>
+                    <div class="list_result_field"><a class="list_result_field_showall" href="" alt="show more info" title="show more info"><strong>An elementary theorem concerning stationary ergodic processes.</strong></a></div>
+                    <div class="list_result_field"><em>Ann. Math. Stat.</em></div>
+
+
+            <table class="list_result_hidden list_table">
+                <tr>
+                <td>doi</td><td><a href="http://dx.doi.org/10.1214/aoms/1177706638">10.1214/aoms/1177706638</a></td>
+                </tr>
+                <tr>
+                <td>language</td><td>English</td>
+                </tr>
+                <tr>
+                <td>title</td><td><a class="list_result_field_showall" href="" alt="show more info" title="show more info"><strong>An elementary theorem concerning stationary ergodic processes.</strong></a></td>
+                </tr>
+                <tr>
+                <td>journal</td><td><em>Ann. Math. Stat.</em></td>
+                </tr>
+                <tr>
+                <td>author</td><td><a href="?q=Breiman, L." alt="search for Breiman, L." title="search for Breiman, L.">Breiman, L.</a></td>
+                </tr>
+                <tr>
+                <td>collection</td><td><a href="/collection/Berkeley_Statistics:breiman.leo.bib" alt="go to collection - Berkeley_Statistics:breiman.leo.bib" title="go to collection - Berkeley_Statistics:breiman.leo.bib">Berkeley_Statistics:breiman.leo.bib</a></td>
+                </tr>
+                <tr>
+                <td>pages</td><td>592 to 595</td>
+                </tr>
+                <tr>
+                <td>volume</td><td>29</td>
+                </tr>
+                <tr>
+                <td>citekey</td><td>0107.34804</td>
+                </tr>
+                <tr>
+                <td>year</td><td>1958</td>
+                </tr>
+                <tr>
+                <td>keywords</td><td>probability theory</td>
+                </tr>
+                <tr>
+                <td>type</td><td>article</td>
+                </tr>
+                <tr>
+                <td>id</td><td>26e12727cddd4d3080149f7b317aaeae</td>
+                </tr>
+            </table>
+
+            <div class="list_result_options list_result_hidden">
+                <a class="viewrecord" href="/collection/Berkeley_Statistics:breiman.leo.bib/0107.34804">View record</a>
+            </div>
+
+        </div>
+        <div class="list_result_odd">
+                    <div class="list_result_field"><a href="?q=Breiman, Leo" alt="search for Breiman, Leo" title="search for Breiman, Leo">Breiman, Leo</a></div>
+                    <div class="list_result_field"><a class="list_result_field_showall" href="" alt="show more info" title="show more info"><strong>Transient atomic Markov chains with a denumerable number of states.</strong></a></div>
+                    <div class="list_result_field"><em>Ann. Math. Stat.</em></div>
+
+
+            <table class="list_result_hidden list_table">
+                <tr>
+                <td>doi</td><td><a href="http://dx.doi.org/10.1214/aoms/1177706718">10.1214/aoms/1177706718</a></td>
+                </tr>
+                <tr>
+                <td>language</td><td>English</td>
+                </tr>
+                <tr>
+                <td>title</td><td><a class="list_result_field_showall" href="" alt="show more info" title="show more info"><strong>Transient atomic Markov chains with a denumerable number of states.</strong></a></td>
+                </tr>
+                <tr>
+                <td>journal</td><td><em>Ann. Math. Stat.</em></td>
+                </tr>
+                <tr>
+                <td>author</td><td><a href="?q=Breiman, Leo" alt="search for Breiman, Leo" title="search for Breiman, Leo">Breiman, Leo</a></td>
+                </tr>
+                <tr>
+                <td>collection</td><td><a href="/collection/Berkeley_Statistics:breiman.leo.bib" alt="go to collection - Berkeley_Statistics:breiman.leo.bib" title="go to collection - Berkeley_Statistics:breiman.leo.bib">Berkeley_Statistics:breiman.leo.bib</a></td>
+                </tr>
+                <tr>
+                <td>pages</td><td>212 to 218</td>
+                </tr>
+                <tr>
+                <td>volume</td><td>29</td>
+                </tr>
+                <tr>
+                <td>citekey</td><td>0087.13503</td>
+                </tr>
+                <tr>
+                <td>year</td><td>1958</td>
+                </tr>
+                <tr>
+                <td>keywords</td><td>probability theory</td>
+                </tr>
+                <tr>
+                <td>type</td><td>article</td>
+                </tr>
+                <tr>
+                <td>id</td><td>42d693eb14014e2fa82b511b4325e926</td>
+                </tr>
+            </table>
+
+            <div class="list_result_options list_result_hidden">
+                <a class="viewrecord" href="/collection/Berkeley_Statistics:breiman.leo.bib/0087.13503">View record</a>
+            </div>
+
+        </div>
+        <div class="list_result_even">
+                    <div class="list_result_field"><a href="?q=Bell, C.B." alt="search for Bell, C.B." title="search for Bell, C.B.">Bell, C.B.</a> and <a href="?q=Blackwell, David" alt="search for Blackwell, David" title="search for Blackwell, David">Blackwell, David</a> and <a href="?q=Breiman, Leo" alt="search for Breiman, Leo" title="search for Breiman, Leo">Breiman, Leo</a></div>
+                    <div class="list_result_field"><a class="list_result_field_showall" href="" alt="show more info" title="show more info"><strong>On the completeness of order statistics.</strong></a></div>
+                    <div class="list_result_field"><em>Ann. Math. Stat.</em></div>
+
+
+            <table class="list_result_hidden list_table">
+                <tr>
+                <td>doi</td><td><a href="http://dx.doi.org/10.1214/aoms/1177705808">10.1214/aoms/1177705808</a></td>
+                </tr>
+                <tr>
+                <td>language</td><td>English</td>
+                </tr>
+                <tr>
+                <td>title</td><td><a class="list_result_field_showall" href="" alt="show more info" title="show more info"><strong>On the completeness of order statistics.</strong></a></td>
+                </tr>
+                <tr>
+                <td>journal</td><td><em>Ann. Math. Stat.</em></td>
+                </tr>
+                <tr>
+                <td>author</td><td><a href="?q=Bell, C.B." alt="search for Bell, C.B." title="search for Bell, C.B.">Bell, C.B.</a> and <a href="?q=Blackwell, David" alt="search for Blackwell, David" title="search for Blackwell, David">Blackwell, David</a> and <a href="?q=Breiman, Leo" alt="search for Breiman, Leo" title="search for Breiman, Leo">Breiman, Leo</a></td>
+                </tr>
+                <tr>
+                <td>collection</td><td><a href="/collection/Berkeley_Statistics:breiman.leo.bib" alt="go to collection - Berkeley_Statistics:breiman.leo.bib" title="go to collection - Berkeley_Statistics:breiman.leo.bib">Berkeley_Statistics:breiman.leo.bib</a></td>
+                </tr>
+                <tr>
+                <td>pages</td><td>794 to 797</td>
+                </tr>
+                <tr>
+                <td>volume</td><td>31</td>
+                </tr>
+                <tr>
+                <td>citekey</td><td>0101.12201</td>
+                </tr>
+                <tr>
+                <td>year</td><td>1960</td>
+                </tr>
+                <tr>
+                <td>keywords</td><td>statistics</td>
+                </tr>
+                <tr>
+                <td>type</td><td>article</td>
+                </tr>
+                <tr>
+                <td>id</td><td>ec724a2628ed41d4ab5b2a8658036238</td>
+                </tr>
+            </table>
+
+            <div class="list_result_options list_result_hidden">
+                <a class="viewrecord" href="/collection/Berkeley_Statistics:breiman.leo.bib/0101.12201">View record</a>
+            </div>
+
+        </div>
+        <div class="list_result_odd">
+                    <div class="list_result_field"><a href="?q=Breiman, L." alt="search for Breiman, L." title="search for Breiman, L.">Breiman, L.</a> and <a href="?q=Wurtele, Z.S." alt="search for Wurtele, Z.S." title="search for Wurtele, Z.S.">Wurtele, Z.S.</a></div>
+                    <div class="list_result_field"><a class="list_result_field_showall" href="" alt="show more info" title="show more info"><strong>Convergence properties of a learning algorithm.</strong></a></div>
+                    <div class="list_result_field"><em>Ann. Math. Stat.</em></div>
+
+
+            <table class="list_result_hidden list_table">
+                <tr>
+                <td>doi</td><td><a href="http://dx.doi.org/10.1214/aoms/1177700406">10.1214/aoms/1177700406</a></td>
+                </tr>
+                <tr>
+                <td>language</td><td>English</td>
+                </tr>
+                <tr>
+                <td>title</td><td><a class="list_result_field_showall" href="" alt="show more info" title="show more info"><strong>Convergence properties of a learning algorithm.</strong></a></td>
+                </tr>
+                <tr>
+                <td>journal</td><td><em>Ann. Math. Stat.</em></td>
+                </tr>
+                <tr>
+                <td>author</td><td><a href="?q=Breiman, L." alt="search for Breiman, L." title="search for Breiman, L.">Breiman, L.</a> and <a href="?q=Wurtele, Z.S." alt="search for Wurtele, Z.S." title="search for Wurtele, Z.S.">Wurtele, Z.S.</a></td>
+                </tr>
+                <tr>
+                <td>collection</td><td><a href="/collection/Berkeley_Statistics:breiman.leo.bib" alt="go to collection - Berkeley_Statistics:breiman.leo.bib" title="go to collection - Berkeley_Statistics:breiman.leo.bib">Berkeley_Statistics:breiman.leo.bib</a></td>
+                </tr>
+                <tr>
+                <td>pages</td><td>1819 to 1822</td>
+                </tr>
+                <tr>
+                <td>volume</td><td>35</td>
+                </tr>
+                <tr>
+                <td>citekey</td><td>0125.09904</td>
+                </tr>
+                <tr>
+                <td>year</td><td>1964</td>
+                </tr>
+                <tr>
+                <td>keywords</td><td>mathematical biology</td>
+                </tr>
+                <tr>
+                <td>type</td><td>article</td>
+                </tr>
+                <tr>
+                <td>id</td><td>9641f37106364f5e9acf0007505513ad</td>
+                </tr>
+            </table>
+
+            <div class="list_result_options list_result_hidden">
+                <a class="viewrecord" href="/collection/Berkeley_Statistics:breiman.leo.bib/0125.09904">View record</a>
+            </div>
+
+        </div>
+        <div class="list_result_even">
+                    <div class="list_result_field"><a href="?q=Breiman, L." alt="search for Breiman, L." title="search for Breiman, L.">Breiman, L.</a></div>
+                    <div class="list_result_field"><a class="list_result_field_showall" href="" alt="show more info" title="show more info"><strong>A delicate law of the iterated logarithm for non-decreasing stable
+processes.</strong></a></div>
+                    <div class="list_result_field"><em>Ann. Math. Stat.</em></div>
+
+
+            <table class="list_result_hidden list_table">
+                <tr>
+                <td>doi</td><td><a href="http://dx.doi.org/10.1214/aoms/1177698014">10.1214/aoms/1177698014</a></td>
+                </tr>
+                <tr>
+                <td>language</td><td>English</td>
+                </tr>
+                <tr>
+                <td>title</td><td><a class="list_result_field_showall" href="" alt="show more info" title="show more info"><strong>A delicate law of the iterated logarithm for non-decreasing stable
+processes.</strong></a></td>
+                </tr>
+                <tr>
+                <td>journal</td><td><em>Ann. Math. Stat.</em></td>
+                </tr>
+                <tr>
+                <td>author</td><td><a href="?q=Breiman, L." alt="search for Breiman, L." title="search for Breiman, L.">Breiman, L.</a></td>
+                </tr>
+                <tr>
+                <td>collection</td><td><a href="/collection/Berkeley_Statistics:breiman.leo.bib" alt="go to collection - Berkeley_Statistics:breiman.leo.bib" title="go to collection - Berkeley_Statistics:breiman.leo.bib">Berkeley_Statistics:breiman.leo.bib</a></td>
+                </tr>
+                <tr>
+                <td>pages</td><td>1818 to 1824</td>
+                </tr>
+                <tr>
+                <td>volume</td><td>39</td>
+                </tr>
+                <tr>
+                <td>citekey</td><td>0192.55401</td>
+                </tr>
+                <tr>
+                <td>year</td><td>1969</td>
+                </tr>
+                <tr>
+                <td>keywords</td><td>probability theory</td>
+                </tr>
+                <tr>
+                <td>type</td><td>article</td>
+                </tr>
+                <tr>
+                <td>id</td><td>bc27ae22a6ac405d9ba0620be480aabe</td>
+                </tr>
+            </table>
+
+            <div class="list_result_options list_result_hidden">
+                <a class="viewrecord" href="/collection/Berkeley_Statistics:breiman.leo.bib/0192.55401">View record</a>
+            </div>
+
+        </div>
+</div>
+
+    
+
+    </div>
+
+    <div id="resultstrap">
+    The source of this collection is <a href="http://bibserver.berkeley.edu/tmp/berkeley_stat/breiman.leo.bib">http://bibserver.berkeley.edu/tmp/berkeley_stat/breiman.leo.bib</a>. This collection was last updated on 2011-09-16 19:49:20.513809. <br />If changes have been made to the source file since then, <a href="/upload?source=http://bibserver.berkeley.edu/tmp/berkeley_stat/breiman.leo.bib&collection=Berkeley_Statistics:breiman.leo.bib">refresh this collection</a>.</p>
+    </div>
+
+
+      </div> <!-- /content -->
+
+      <footer>
+        <div class="row">
+          <div class="span6">
+            <h4>About</h4>
+            <ul>
+              <li><a href="/content/howto">FAQ</a></li>
+              <li><a href="https://github.com/okfn/bibserver/issues">Feedback</a></li>
+              <li><a href="https://github.com/okfn/bibserver">Source Code</a></li>
+            </ul>
+          </div>
+          <div class="span5">
+            &nbsp;
+         </div>
+          <div class="span5">
+            <h4>Meta</h4>
+            <p>&copy; Open Knowlege Foundation 2011</p>
+            <p>Powered by <a href="http://bibserver.okfn.org">BibServer</a></p>
+          </div>
+        </div>
+      </footer>
+
+    </div> <!-- /container -->
+
+  </body>
+</html>
+
+

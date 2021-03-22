@@ -1,0 +1,1252 @@
+From siegel@cs.cornell.edu Sun Jan 14 15:30:26 1990
+Return-Path: <siegel@cs.cornell.edu>
+Received: from CU-ARPA.CS.CORNELL.EDU by jupiter with SMTP (5.61/25-eef)
+	id AA02972; Sun, 14 Jan 90 15:30:16 -0800
+Received: from LOKI.CS.CORNELL.EDU by cu-arpa.cs.cornell.edu (5.61+2/1.91d)
+	id AA20133; Sun, 14 Jan 90 19:04:34 -0500
+Received: from mimir.cs.cornell.edu by loki.cs.cornell.edu (4.0/I-1.91f)
+	id AA28679; Sun, 14 Jan 90 19:04:27 EST
+Date: Sun, 14 Jan 90 19:04:25 EST
+From: siegel@cs.cornell.edu (Alexander Siegel)
+Message-Id: <9001150004.AA10265@mimir.cs.cornell.edu>
+Received: by mimir.cs.cornell.edu (4.0/N-0.08)
+	id AA10265; Sun, 14 Jan 90 19:04:25 EST
+Newsgroups: comp.os.research
+Subject: Bibliography for Replicating Distributed File Systems
+Expires: 
+References: 
+Sender: siegel@cs.cornell.edu (Alexander Siegel)
+Reply-To: siegel@cs.cornell.edu (Alexander Siegel)
+Followup-To: 
+Distribution: comp
+Organization: Cornell Univ. CS Dept, Ithaca NY
+Keywords: 
+Apparently-To: darrell@jupiter.ucsc.edu
+Status: R
+
+Here is a bibliography that I generated for topics relating to
+distributed file systems with replication.  It is in no particular
+order (except for the first entry).  There are a lot of entries
+because there are many different aspects.  It is in bibtex format.
+Some articles which have been published within the past year have not
+been included because I do not know about them.  Some articles which
+are very old have not been included because they are obsolete.  Read
+and enjoy.
+
+                                   Alex Siegel
+                                   siegel@cs.cornell.edu
+
+
+@techreport{sbm:deceit,
+  author="Alex Siegel and Kenneth Birman and Keith Marzullo",
+  title="{D}eceit: {A} {F}lexible {D}istributed {F}ile {S}ystem",
+  institution="Department of Computer Science at Cornell University",
+  year=1989,
+  number="TR 89-1042",
+  address="Ithaca, NY",
+  month=nov
+}
+
+@inproceedings{do:logstruct,
+  author="Fred Douglis and John Ousterhout",
+  title="{L}og-{S}tructured {F}ile {S}ystems",
+  pages="124--129",
+  booktitle="COMPCON Spring '89, Digest of Papers",
+  year="1989",
+  month=feb,
+  organization="IEEE",
+  note="Order no. 1909"
+}
+
+@inproceedings{hpr:intprog,
+  author="Susan Horwitz and Jan Prins and Thomas Reps",
+  title="{I}ntegrating {N}on-{I}nterfering {V}ersions of {P}rograms",
+  pages="133--145",
+  booktitle="Fifteenth Annual ACM Symposium on Principles of
+Programming Languages",
+  year="1988",
+  month=jan,
+  organization="ACM",
+  note="Order no. 549880"
+}
+
+@inproceedings{lg:tickets,
+  author="Gerard LeLann",
+  title="{A}lgorithms for {D}istributed {D}ata {S}haring
+{S}ystems which use {T}ickets",
+  pages="259--272",
+  booktitle="Third Berkeley Workshop",
+  year=1978,
+  month=aug
+}
+
+@inproceedings{clp:repfil,
+  author="John L. Carroll and Darrell D. E. Long and Jehan-Francois
+Paris",
+  title="{B}lock-{L}evel {C}onsistency of {R}eplicated {F}iles",
+  pages="146--153",
+  booktitle="The 7th International Conference on
+Distributed Computing Systems",
+  year=1987,
+  month=sep,
+  organization="IEEE",
+  note="Order no. 801"
+}
+
+@inproceedings{na:effrep,
+  author="Jerre D. Noe and Agnes Andreassian",
+  title="{E}ffectiveness of {R}eplication in {D}istributed
+{C}omputer {N}etworks",
+  pages="508--513",
+  booktitle="The 7th International Conference on
+Distributed Computing Systems",
+  year=1987,
+  month=sep,
+  organization="IEEE",
+  note="Order no. 801"
+}
+
+@inproceedings{wo:prefix,
+  author="Brent Welch and John Ousterhout",
+  title="{P}refix {T}ables: {A} {S}imple {M}echanism for
+{L}ocating {F}iles in a {D}istributed {S}ystem",
+  pages="184--189",
+  booktitle="The 6th International Conference on
+Distributed Computing Systems",
+  year=1986,
+  month=may,
+  organization="IEEE",
+  note="Order no. 697"
+}
+
+@inproceedings{tmr:sparse,
+  author="Andrew S. Tanenbaum and Sape J. Mullender and Robbert van
+Renesse",
+  title="{U}sing {S}parse {C}apabilities in a {D}istributed
+{O}perating {S}ystem",
+  pages="558--563",
+  booktitle="The 6th International Conference on
+Distributed Computing Systems",
+  year=1986,
+  month=may,
+  organization="IEEE",
+  note="Order no. 697"
+}
+
+@inproceedings{rt:ghosts,
+  author="Robbert van Renesse and Andrew S. Tanenbaum",
+  title="{V}oting with {G}hosts",
+  pages="456--462",
+  booktitle="The 8th International Conference on
+Distributed Computing Systems",
+  year=1988,
+  month=jun,
+  organization="IEEE",
+  note="Order no. 865"
+}
+
+@inproceedings{bm:filecomp,
+  author="Daniel Barbara and Hector Garcia-Molina",
+  title="{E}xploiting {S}ymmetries for {L}ow-{C}ost {C}omparison
+of {F}ile {C}opies",
+  pages="471--479",
+  booktitle="The 8th International Conference on
+Distributed Computing Systems",
+  year=1988,
+  month=jun,
+  organization="IEEE",
+  note="Order no. 865"
+}
+
+@inproceedings{mh:atomrep,
+  author="Maurice Herlihy",
+  title="{C}omparing {H}ow {A}tomicity {M}echanisms {S}upport
+{R}eplication",
+  pages="102--110",
+  booktitle="Proceedings of the Fourth Annual ACM Symposium on
+Principles of Distributed Computing",
+  year=1985,
+  organization="ACM",
+  month=aug,
+  note="Order no. 536850"
+}
+
+@inproceedings{ll:disser,
+  author="Barbara Liskov and Rivka Ladin",
+  title="{H}ighly {A}vailable {D}istributed {S}ervices and
+{F}ault-{T}olerant {D}istributed {G}arbage {C}ollection",
+  pages="29--39",
+  booktitle="Proceedings of the Fifth Annual ACM Symposium on
+Principles of Distributed Computing",
+  year=1986,
+  organization="ACM",
+  month=aug,
+  note="Order no. 536860"
+}
+
+@inproceedings{rjf:forward,
+  author="Robert Joseph Fowler",
+  title="{T}he {C}omplexity of {U}sing {F}orwarding {A}ddresses for
+{D}ecentralized {O}bject {F}inding",
+  pages="108--120",
+  booktitle="Proceedings of the Fifth Annual ACM Symposium on
+Principles of Distributed Computing",
+  year=1986,
+  organization="ACM",
+  month=aug,
+  note="Order no. 536860"
+}
+
+@inproceedings{lh:memory,
+  author="Kai Li and Paul Hudak",
+  title="{M}emory {C}oherence in {S}hared {V}irtual {M}emory {S}ystems",
+  pages="229--239",
+  booktitle="Proceedings of the Fifth Annual ACM Symposium on
+Principles of Distributed Computing",
+  year=1986,
+  organization="ACM",
+  month=aug,
+  note="Order no. 536860"
+}
+
+@inproceedings{dghilssst:epidemic,
+  author="Alan Demers and Dan Greene and Carl Hauser and Wes
+Irish and John Larson and Scott Shenker and Howard Sturgis and Dan
+Swinehart and Doug Terry",
+  title="{E}pidemic {A}lgorithms for {R}eplicated {D}atabase
+{M}aintenance",
+  pages="1--12",
+  booktitle="Proceedings of the Sixth Annual ACM Symposium on
+Principles of Distributed Computing",
+  year=1987,
+  organization="ACM",
+  month=aug,
+  note="Order no. 536870"
+}
+
+@inproceedings{ls:swallow,
+  author="Liba Svobodova",
+  title="{A} {R}eliable {O}bject-{O}riented {D}ata {R}epository for a
+{D}istributed {C}omputer {S}ystem",
+  pages="47--58",
+  booktitle="Proceedings of the Eighth Symposium on Operating
+Systems Principles",
+  year=1981,
+  organization="ACM",
+  month=dec,
+  note="Order no. 534810"
+}
+
+@inproceedings{fo:felix,
+  author="Marek Fridrich and W. Older",
+  title="{T}he {FELIX} {F}ile {S}erver",
+  pages="37--44",
+  booktitle="Proceedings of the Eighth Symposium on Operating
+Systems Principles",
+  year=1981,
+  organization="ACM",
+  month=dec,
+  note="Order no. 534810"
+}
+
+@inproceedings{jm:compare,
+  author="James G. Mitchell and Jeremy Dion",
+  title="{A} {C}omparison of {T}wo {N}etwork-{B}ased {F}ile {S}ervers",
+  pages="45--46",
+  booktitle="Proceedings of the Eighth Symposium on Operating
+Systems Principles",
+  year=1981,
+  organization="ACM",
+  month=dec,
+  note="Order no. 534810"
+}
+
+@article{hmsc:qsilver,
+  author="Roger Haskin and Yoni Malachi and Wayne Sawdon and Gregory
+Chan",
+  title="{R}ecovery {M}anagement in {Q}uick{S}ilver",
+  pages="82--108",
+  journal="ACM Transactions on Computer Systems",
+  publisher="Association for Computer Machinery",
+  year=1988,
+  month=feb,
+  volume="6",
+  number="1"
+}
+
+@article{mschrs:andrew,
+  author="James H. Morris and Mahadev Satyanarayanan and Michael H.
+Conner and John H. Howard and David S. H. Rosenthal and F. Donelson
+Smith",
+  title="{A}ndrew: {A} {D}istributed {P}ersonal {C}omputing
+{E}nvironment",
+  pages="184--201",
+  journal="Communications of the ACM",
+  publisher="Association for Computer Machinery",
+  year=1986,
+  month=mar,
+  volume="29",
+  number="3"
+}
+
+@article{gns:cedar,
+  author="David K. Gifford and Roger M. Needham and Michael D.
+Schroeder",
+  title="{T}he {C}edar {F}ile {S}ystem",
+  pages="288--298",
+  journal="Communications of the ACM",
+  publisher="Association for Computer Machinery",
+  year=1988,
+  month=mar,
+  volume="31",
+  number="3"
+}
+
+@article{md:compare,
+  author="James G. Mitchell",
+  title="{A} {C}omparison of {T}wo {N}etwork-{B}ased {F}ile {S}ervers",
+  pages="233--245",
+  journal="Communications of the ACM",
+  publisher="Association for Computer Machinery",
+  year=1982,
+  month=apr,
+  volume="25",
+  number="4"
+}
+
+@inproceedings{sm:spritenfs,
+  author="V. Srinivasan and Jeffrey C. Mogul",
+  title="{S}pritely {NFS}: {E}xperiments with {C}ache-{C}onsistency
+{P}rotocols",
+  pages="45--57",
+  booktitle="Proceedings of the Twelfth ACM Symposium on
+Operating Systems Principles",
+  year=1989,
+  organization="ACM",
+  month=dec,
+  note="Order no. 534890"
+}
+
+@inproceedings{em:filenet,
+  author="David A. Edwards and Martin S. McKendry",
+  title="{E}xploiting {R}ead-{M}ostly {W}orkloads in {T}he {F}ile{N}et
+{F}ile {S}ystem",
+  pages="58--70",
+  booktitle="Proceedings of the Twelfth ACM Symposium on
+Operating Systems Principles",
+  year=1989,
+  organization="ACM",
+  month=dec,
+  note="Order no. 534890"
+}
+
+@inproceedings{gc:leases,
+  author="Cary G. Gray and David R. Cheriton",
+  title="{L}eases: {A}n {E}fficient {F}ault-{T}olerant {M}echanism for
+{D}istributed {F}ile {C}ache {C}onsistency",
+  pages="202--210",
+  booktitle="Proceedings of the Twelfth ACM Symposium on
+Operating Systems Principles",
+  year=1989,
+  organization="ACM",
+  month=dec,
+  note="Order no. 534890"
+}
+
+@inproceedings{bj:isis,
+  author="K. Birman and T. Joseph",
+  title="{E}xploiting {V}irtual {S}ynchrony in {D}istributed {S}ystems",
+  booktitle="Proceedings of the Eleventh ACM Symposium on
+Operating Systems Principles",
+  year=1987,
+  organization="ACM",
+  month=nov,
+  note="Order no. 534870"
+}
+
+@inproceedings{rh:cedar,
+  author="Robert Hagmann",
+  title="{R}eimplementing the {C}edar {F}ile {S}ystem {U}sing
+{L}ogging and {G}roup {C}ommit",
+  booktitle="Proceedings of the Eleventh ACM Symposium on
+Operating Systems Principles",
+  year=1987,
+  pages="155--162",
+  organization="ACM",
+  month=nov,
+  note="Order no. 534870"
+}
+
+@inproceedings{lshl:uids,
+  author="Paul J. Leach and Bernard L. Stumpf and James A.
+Hamilton and Paul H. Levine",
+  title="{UID}s as {I}nternal {N}ames in a {D}istributed {F}ile
+{S}ystem",
+  booktitle="Proceedings of the First Symposium on Principles of
+Distributed Computing",
+  year=1982,
+  pages="34--41",
+  organization="ACM",
+  month=aug
+}
+
+@inproceedings{ochkkt:refpat,
+  author="John K. Ousterhout and Herve Da Costa and David Harrison and
+John A. Kunze and Mike Kupfer and James G. Thompson",
+  title="{A} {T}race-{D}riven {A}nalysis of the {UNIX} 4.2 {BSD}
+{F}ile {S}ystem",
+  booktitle="Proceedings of the Tenth ACM Symposium on
+Operating Systems Principles",
+  year=1985,
+  pages="15--24",
+  organization="ACM",
+  month=dec,
+  note="Order no. 534850"
+}
+
+@inproceedings{shnssw:itc,
+  author="M. Satyanarayanan and John H. Howard and David A. Nicols and
+Robert N. Sidebotham and Alfred Z. Spector and Michael J. West",
+  title="{T}he {ITC} {D}istributed {F}ile {S}ystem: {P}rinciples and
+{D}esign",
+  pages="35--50",
+  booktitle="Proceedings of the Tenth ACM Symposium on
+Operating Systems Principles",
+  year=1985,
+  organization="ACM",
+  month=dec,
+  note="Order no. 534850"
+}  
+
+@inproceedings{db:crc,
+  author="Danco Davcev and Walter A. Burkhard",
+  title="{C}onsistency and {R}ecovery {C}ontrol for {R}eplicated
+{F}iles",
+  booktitle="Proceedings of the Tenth ACM Symposium on
+Operating Systems Principles",
+  year=1985,
+  pages="87--96",
+  organization="ACM",
+  month=dec,
+  note="Order no. 534850"
+}
+
+@inproceedings{sgn:cedar,
+  author="Michael D. Schroeder and David K. Gifford and Roger M.
+Needham",
+  title="{A} {C}aching {F}ile {S}ystem {F}or a {P}rogrammer's
+{W}orkstation",
+  booktitle="Proceedings of the Tenth ACM Symposium on
+Operating Systems Principles",
+  year=1985,
+  pages="25--34",
+  organization="ACM",
+  month=dec,
+  note="Order no. 534850"
+}
+
+@inproceedings{sm:amoeba,
+  author="Sape J. Mullender",
+  title="{A} {D}istributed {F}ile {S}ervice {B}ased on {O}ptimistic
+{C}oncurrency {C}ontrol",
+  booktitle="Proceedings of the Tenth ACM Symposium on
+Operating Systems Principles",
+  year=1985,
+  pages="51--62",
+  organization="ACM",
+  month=dec,
+  note="Order no. 534850"
+}
+
+@inproceedings{kmdw:jasmine,
+  author="Keith Marzullo and Douglas Wiebe",
+  title="{J}asmine: {A} {S}oftware {S}ystem {M}odelling {F}acility",
+  booktitle="Proceedings of the ACM SIGSOFT/SIGPLAN
+Software Engineering Symposium on Practical
+Softeware Development Environments",
+  year=1987,
+  month=jan
+}
+
+@techreport{cw:qsilver,
+  author="Luis Felipe Cabrera and Jim Wyllie",
+  title="{Q}uick{S}ilver {D}istributed {F}ile {S}ervices: {A}n
+{A}rchitecture for {H}orizontal {G}rowth",
+  institution="IBM Almaden Research Center",
+  year=1987,
+  type="Research Report",
+  number="RJ 5578 (56697)",
+  address="San Jose, CA (USA)",
+  month=apr
+}
+
+@inproceedings{cw:qsilver2,
+  author="Luis Felipe Cabrera and Jim Wyllie",
+  title="{Q}uick{S}ilver {D}istributed {F}ile {S}ervices: {A}n
+{A}rchitecture for {H}orizontal {G}rowth",
+  booktitle="1988 IEEE 2nd Conference On Computer Workstations",
+  year=1988,
+  pages="23--37",
+  organization="IEEE",
+  month=mar,
+  note="Order no. 810"
+}
+
+@inproceedings{rk:cooper,
+  author="Loretta Guarino Reid and Philip L. Karlton",
+  title="{A} {F}ile {S}ystem {S}upporting {C}ooperation between
+{P}rograms",
+  booktitle="Proceedings of the Ninth ACM Symposium on Operating
+Systems Principles",
+  year=1983,
+  pages="20--29",
+  organization="ACM",
+  month=oct,
+  note="Order no. 534830"
+}
+
+@inproceedings{wpekt:locus,
+  author="Bruce Walker and Gerald Popek and Robert English and
+Charles Kline and Greg Thiel",
+  title="{T}he {LOCUS} {D}istributed {O}perating {S}ystem",
+  booktitle="Proceedings of the Ninth ACM Symposium on Operating
+Systems Principles",
+  year=1983,
+  pages="49--70",
+  organization="ACM",
+  month=oct,
+  note="Order no. 534830"
+}
+
+@techreport{ss:multirpc,
+  author="M. Satyanarayanan and Ellen H. Siegel",
+  title="{P}arallel {C}ommunication in a {L}arge {D}istributed
+{E}nvironment",
+  institution="Department of Computer Science at Carnegie Mellon
+University",
+  year=1988,
+  month=mar,
+  number="CMU-CS-87-136A"
+}
+
+@techreport{ms:disfile,
+  author="M. Satyanarayanan",
+  title="{S}calable, {S}ecure and {H}ighly {A}vailable {F}ile {A}ccess in a
+{D}istributed {W}orkstation {E}nvironment",
+  institution="Department of Computer Science at Carnegie Mellon
+University",
+  year=1989,
+  month=oct
+}
+
+@techreport{cmu:coda,
+  author="M. Satyanarayanan and James J. Kistler and Puneet Kumar and
+Maria E. Okasaki and Ellen H. Siegel and David C. Steere",
+  title="{C}oda: {A} {H}ighly {A}vailable {F}ile {S}ystem for a
+{D}istributed {W}orkstation {E}nvironment",
+  institution="Department of Computer Science at Carnegie Mellon
+University",
+  year=1989,
+  month=nov,
+  number="CMU-CS-89-165"
+}
+
+@article{mt:caps,
+  author="Sape J. Mullender and Andrew S. Tanenbaum",
+  title="{P}rotection and {R}esource {C}ontrol in {D}istributed
+{O}perating {S}ystems",
+  pages="421--432",
+  journal="Computer Networks",
+  publisher="North-Holland",
+  year=1984,
+  month=oct,
+  volume="8",
+  number="5,6"
+}
+
+@article{crl:keykos,
+  author="Charles R. Landau",
+  title="{S}ecurity in a {S}ecure {C}apability-{B}ased {S}ystem",
+  pages="2--4",
+  journal="Operating Systems Review",
+  publisher="Association for Computer Machinery",
+  year=1989,
+  month=oct,
+  volume="23",
+  number="4"
+}
+
+@article{wgp:names,
+  author="Walter G. Piotrowski",
+  title="{A}re {F}ile {N}ames {E}nough?",
+  pages="26--27",
+  journal="Operating Systems Review",
+  publisher="Association for Computer Machinery",
+  year=1989,
+  month=oct,
+  volume="23",
+  number="4"
+}
+
+@article{od:logs,
+  author="John Ousterhout and Fred Douglis",
+  title="{B}eating the {I}/{O} {B}ottleneck: {A} {C}ase for
+{L}og-{S}tructured {F}ile {S}ystems",
+  pages="11--28",
+  journal="Operating Systems Review",
+  publisher="Association for Computer Machinery",
+  year=1989,
+  month=jan,
+  volume="23",
+  number="1"
+}
+
+@article{jd:cambridge,
+  author="Jeremy Dion",
+  title="{T}he {C}ambridge {F}ile {S}erver",
+  pages="26--35",
+  journal="Operating Systems Review",
+  publisher="Association for Computer Machinery",
+  year=1980,
+  month=oct,
+  volume="14",
+  number="4"
+}
+
+@article{lb:locate,
+  author="K. Lunn and K. H. Bennett",
+  title="{A}n {A}lgorithm for {R}esource {L}ocation in a
+{L}oosely {L}inked {D}istributed {C}omputer {S}ystem",
+  pages="16--20",
+  journal="Operating Systems Review",
+  publisher="Association for Computer Machinery",
+  year=1981,
+  month=apr,
+  volume="15",
+  number="2"
+}
+
+@article{tm:amoeba,
+  author="Andrew S. Tanenbaum and Sape Mullender",
+  title="{A}n {O}verview of the {A}moeba {D}istributed {O}perating
+{S}ystem",
+  pages="51--64",
+  journal="Operating Systems Review",
+  publisher="Association for Computer Machinery",
+  year=1981,
+  month=jul,
+  volume="15",
+  number="3"
+}
+
+@article{rn:capab,
+  author="Roger M. Needham",
+  title="{A}dding {C}apability {A}ccess to {C}onventional {F}ile
+{S}ervers", 
+  pages="3--4",
+  journal="Operating Systems Review",
+  publisher="Association for Computer Machinery",
+  year=1979,
+  month=jan,
+  volume="13",
+  number="1"
+}
+
+@article{smi:disfile,
+  author="H. Sturgis and J. Mitchell and J. Israel",
+  title="{I}ssues in the {D}esign and {U}se of a {D}istributed {F}ile
+{S}ystem",
+  pages="55--69",
+  journal="Operating Systems Review",
+  publisher="Association for Computer Machinery",
+  year=1980,
+  month=jul,
+  volume="14",
+  number="3"
+}
+
+@article{pb:detres,
+  author="Pearl Brereton",
+  title="{D}etection and {R}esolution of {I}nconsistencies {A}mong
+{D}istributed {R}eplication of {F}iles",
+  pages="10--15",
+  journal="Operating Systems Review",
+  publisher="Association for Computer Machinery",
+  year=1983,
+  month=jan,
+  volume="17",
+  number="1"
+}
+
+@article{dmn:identprot,
+  author="D. M. Nessett",
+  title="{I}dentifier {P}rotection in a {D}istributed {O}perating
+{S}ystem",
+  pages="26--31",
+  journal="Operating Systems Review",
+  publisher="Association for Computer Machinery",
+  year=1982,
+  month=jan,
+  volume="16",
+  number="1"
+}
+
+@article{mh:optcc,
+  author="Maurice Herlihy",
+  title="{O}ptimistic {C}oncurrency {C}ontrol for {A}bstract
+{D}ata {T}ypes", 
+  pages="33--44",
+  journal="Operating Systems Review",
+  publisher="Association for Computer Machinery",
+  year=1987,
+  month=apr,
+  volume="21",
+  number="2"
+}
+
+@article{leh:univdir,
+  author="Keith A. Lantz and Judy L. Edighoffer and Bruce L.
+Hitson",
+  title="{T}owards a {U}niversal {D}irectory {S}ervice",
+  pages="43--53",
+  journal="Operating Systems Review",
+  publisher="Association for Computer Machinery",
+  year=1986,
+  month=apr,
+  volume="20",
+  number="2"
+}
+
+@article{ah:survey,
+  author="Anna Hac",
+  title="{D}istributed {F}ile {S}ystems - {A} {S}urvey",
+  pages="15--18",
+  journal="Operating Systems Review",
+  publisher="Association for Computer Machinery",
+  year=1985,
+  month=jan,
+  volume="10",
+  number="1"
+}
+
+@article{ds:repdir,
+  author="Dean Daniels and Alfred Z. Spector",
+  title="{A}n {A}lgorithm for {R}eplicated {D}irectories",
+  pages="24--43",
+  journal="Operating Systems Review",
+  publisher="Association for Computer Machinery",
+  year=1986,
+  month=jan,
+  volume="20",
+  number="1"
+}
+
+@article{cm:globname,
+  author="David R. Cheriton and Timothy P. Mann",
+  title="{D}ecentralizing a {G}lobal {N}aming {S}ervice for {I}mproved
+{P}erformance and {F}ault {T}olerance",
+  pages="147--183",
+  journal="ACM Transactions on Computer Systems",
+  publisher="Association for Computer Machinery",
+  year=1989,
+  month=may,
+  volume="7",
+  number="4"
+}
+
+@article{kls:vaxcluster,
+  author="Nancy P. Kronenberg and Henry Levy and William D.
+Strecker",
+  title="{VAX}clusters: {A} {C}losely-{C}oupled {D}istributed {S}ystem",
+  pages="130--146",
+  journal="ACM Transactions on Computer Systems",
+  publisher="Association for Computer Machinery",
+  year=1986,
+  month=may,
+  volume="4",
+  number="2"
+}
+
+@article{lzcz:diskless,
+  author="Edward D. Lazowska and John Zahorjan and David R.
+Cheriton and Willy Zwaenepoel",
+  title="{F}ile {A}ccess {P}erformance of {D}iskless {W}orkstations",
+  pages="238--268",
+  journal="ACM Transactions on Computer Systems",
+  publisher="Association for Computer Machinery",
+  year=1986,
+  month=aug,
+  volume="4",
+  number="3"
+}
+
+@article{ms:security,
+  author="M. Satyanarayanan",
+  title="{I}ntegrating {S}ecurity in a {L}arge {D}istributed
+{S}ystem",
+  pages="247--280",
+  journal="ACM Transactions on Computer Systems",
+  publisher="Association for Computer Machinery",
+  year=1989,
+  month=aug,
+  volume="7",
+  number="3"
+}
+
+@article{bkt:alpine,
+  author="Mark R. Brown and Karen N. Kolling and Edward A.
+Taft",
+  title="{T}he {A}lpine {F}ile {S}ystem",
+  journal="ACM Transactions on Computer Systems",
+  publisher="Association for Computer Machinery",
+  year=1985,
+  month=nov,
+  pages="261--293",
+  volume="3",
+  number="4"
+}
+
+@article{hkmnssw:scaleperf,
+  author="John H. Howard and Michael L. Kazar and Sherri G. Menees and
+Davic A. Nichols and M. Satyanarayanan and Robert N Sidebotham
+and Michael J. West",
+  title="{S}cale and {P}erformance in a {D}istributed {F}ile
+{S}ystem",
+  pages="51--81",
+  journal="ACM Transactions of Computer Systems",
+  publisher="Association for Computing Machinery",
+  year=1988,
+  month=feb,
+  volume="6",
+  number="1"
+}
+
+@article{bj:relcom,
+  author="Kenneth Birman and Thomas Joseph",
+  title="{R}eliable {C}ommunication in the {P}resence of {F}ailures",
+  journal="ACM Transactions of Computer Systems",
+  publisher="Association for Computing Machinery",
+  year=1987,
+  month=feb,
+  volume="5",
+  number="1"
+}
+
+@article{jb:repdata,
+  author="Thomas A. Joseph and Kenneth P. Birman",
+  title="{L}ow {C}ost {M}anagement of {R}eplicated {D}ata in
+{F}ault-{T}olerant {D}istributed {S}ystems",
+  journal="ACM Transactions of Computer Systems",
+  publisher="Association for Computing Machinery",
+  year=1986,
+  month=feb,
+  volume="4",
+  number="1"
+}
+
+@article{nwo:sprite,
+  author="Michael N. Nelson and Brent B. Welch and John K. Ousterhout",
+  title="{C}aching in the {S}prite {N}etwork {F}ile {S}ystem",
+  journal="ACM Transactions of Computer Systems",
+  publisher="Association for Computing Machinery",
+  year=1988,
+  month=feb,
+  volume="6",
+  number="1"
+}
+
+@article{ashp:saguaro,
+  author="Gregory R. Andrews and Richard D. Schlichting and Roger Hayes
+and Titus D. M. Purdin",
+  title="{T}he {D}esign of the {S}aguaro {D}istributed
+{O}perating {S}ystem", 
+  journal="IEEE Transactions of Software Engineering",
+  publisher="IEEE",
+  year=1987,
+  month=jan,
+  volume="SE-13",
+  number="1",
+  pages="104--118"
+}
+
+@manual{isismanual,
+  title="{ISIS} - {A} {D}istributed {P}rogramming {E}nvironment --
+{U}ser's {G}uide and {R}eference {M}anual",
+  author="Kenneth P. Birman and Thomas A. Joseph and Kenneth P. Kane
+and Frank Schmuck",
+  organization="Cornell University Computer Science Department",
+  address="Ithaca, New York"
+}  
+
+@manual{vaxvms,
+  title="{VAX}/{VMS} - {I}ntroduction to {VAX}/{VMS}",
+  organization="Digital Equipment Corportion",
+  address="Maynard, Massachusetts",
+  edition="VAX/VMS Version 4.0",
+  month=sep,
+  year=1984,
+  note="Order No. AA-Y500A-TE"
+}
+
+@manual{sun:rpcprog,
+  title="{R}emote {P}rocedure {C}all {P}rogramming {G}uide",
+  organization="Sun Microsystems, Inc.",
+  year=1986,
+  month=feb,
+  address="Mountain View CA"
+}
+
+@manual{sun:rpcspec,
+  title="{R}emote {P}rocedure {C}all {P}rotocol {S}pecification",
+  organization="Sun Microsystems, Inc.",
+  year=1986,
+  month=feb,
+  address="Mountain View CA"
+}
+
+@manual{sun:nfsspec,
+  title="{N}etwork {F}ile {S}ystem {P}rotocol {S}pecification",
+  organization="Sun Microsystems, Inc.",
+  year=1986,
+  month=feb,
+  address="Mountain View CA"
+}
+
+@techreport{abc:augavail,
+  title="{A}ugmenting {A}vailability in {D}istributed {F}ile
+{S}ystems",
+  author="Rafael Alonso and Daniel Barbara and Luis L. Cova",
+  institution="Department of Computer Science at Princeton
+University",
+  year=1989,
+  month=oct,
+  number="CS-TR-234-89"
+}
+
+@techreport{cs:filepatt,
+  title="{F}ile {A}ccess {P}atterns",
+  author="Carl Staelin",
+  institution="Department of Computer Science at Princeton
+University",
+  year=1988,
+  month=sep,
+  number="CS-TR-179-88"
+}
+
+@techreport{ls:swallow2,
+  title="{M}anagement of {O}bject {H}istories in the {S}wallow
+{R}epository",
+  author="Liba Svobodova",
+  institution="Laboratory for Computer Science at Massachusetts
+Institute of Technology",
+  year=1980,
+  month=jul,
+  number="MIT/LCS/TR-243"
+}
+
+@techreport{mhs:echo,
+  title="{A}n {A}lgorithm for {D}ata {R}eplication",
+  author="Imothy Mann and Andy Hisgen and Garret Swart",
+  institution="Digital Equipment Corporation Systems Research
+Center",
+  year=1989,
+  month=jun,
+  number="46"
+}
+
+@techreport{satya:survey,
+  title="{A} {S}urvey of {D}istributed {F}ile {S}ystems",
+  author="M. Satyanarayanan",
+  institution="Department of Computer Science at Carnegie Mellon
+University",
+  year=1989,
+  month=feb,
+  number="CMU-CS-89-116"
+}
+
+@techreport{kghp:recovery,
+  title="{M}anagement of a {R}emote {B}ackup {C}opy for {D}isaster
+{R}ecovery",
+  author="Richard P. King and Hector Garcia-Molina and Nagui
+Halim and Christos A. Polyzois",
+  institution="Department of Computer Science at Princeton
+University",
+  year=1988,
+  month=dec,
+  number="CS-TR-198-88"
+}       
+
+@techreport{bcn:vsm,
+  title="{T}he Virtual {S}ystem {M}odel for {L}arge
+{D}istributed {O}perating {S}ystems",
+  author="B. Clifford Neuman",
+  institution="Department of Computer Science at University of
+Washington",
+  year=1989,
+  month=apr,
+  number="89-01-07"
+}
+
+@techreport{kmfs:rnfs,
+  title="{S}upplying {H}igh {A}vailability with a {S}tandard
+{N}etwork {F}ile {S}ystem", 
+  author="Keith Marzullo and Frank Schmuck",
+  institution="Department of Computer Science at
+Cornell University",
+  year=1987,
+  month=dec,
+  number="87-888"
+}
+
+@techreport{rf:refpat,
+  title="{S}hort-{T}erm {F}ile {R}eference {P}atterns in a {UNIX}
+{E}nvironment",
+  author="Rick Floyd",
+  year=1986,
+  month=mar,
+  institution="University of Rochester",
+  number=177
+}
+
+@techreport{rf:dirrefpat,
+  title="{D}irectory {R}eference {P}atterns in a {UNIX} {E}nvironment",
+  author="Rick Floyd",
+  year=1986,
+  month=aug,
+  institution="University of Rochester",
+  number=179
+}
+
+@inbook{sjm:isis,
+  title="{D}istributed {S}ystems",
+  editor="Sape J. Mullender",
+  chapter="13--14",
+  publisher="Addison-Wesley",
+  year=1989
+}
+
+@phdthesis{fbs:broad,
+  title="{T}he {U}se of {E}fficient {B}roadcast {P}rotocols in
+{A}synchronous {D}istributed {S}ystems",
+  author="Frank Bernhard Schmuck",
+  school="Cornell University",
+  year=1988,
+  month=aug
+}
+
+@inbook{gh:circtok,
+  title="{D}istributed {S}ystems - {A}rchitecture and
+{I}mplementation, {A}n {A}dvanced {C}ourse",
+  series="{L}ecture {N}otes in {C}omputer {S}cience",
+  volume=105,
+  author="Gerard LeLann",
+  chapter=12,
+  pages="278--282",
+  publisher="Springer-Verlag",
+  year=1981
+}
+
+@techreport{bcn:virtsys,
+  title="{W}orkstations and the {V}irtual {S}ystem {M}odel",
+  author="B. Clifford Neuman",
+  institution="Department of Computer Science and Engineering at
+University of Washington",
+  year="1989",
+  month=oct,
+  number="89-10-10"
+}
+
+@article{kthb:broad,
+  author="M. Frans Kaashoek and Andrew S. Tanenbaum and Susan Flynn
+Hummel and Henri E. Bal",
+  title="{A}n {E}fficient {R}eliable {B}roadcast {P}rotocol",
+  pages="5--19",
+  journal="Operating Systems Review",
+  publisher="Association for Computer Machinery",
+  year=1989,
+  month=oct,
+  volume="23",
+  number="4"
+}
+
+@inproceedings{tr:palatable,
+  title="{M}aking {D}istributed {S}ystems {P}alatable",
+  author="A. S. Tanenbaum and R. van Renesse",
+  booktitle="Proceedings of 2nd SIGOPS Workshop Making Distributed
+Systems Work",
+  month=sep,
+  year=1986
+}
+
+@inproceedings{obs:trellis,
+  author="Patrick O'Brien and Bruce Bullis and Craig Schaffert",
+  title="{P}ersistent and {S}hared {O}bjects in {T}rellis/{O}wl",
+  booktitle="Proceedings of the International Workshop on Object-Oriented
+database Systems",
+  pages="113--123",
+  year=1986,
+  Publisher="{IEEE} Computer Society Press",
+  address="Washington ({USA})",
+  month=sep
+}
+
+@InProceedings{scc:objfile,
+  author="S. C. Crawley",
+  title="{A}n {O}bject-{B}ased {F}ile {S}ystem for {L}arge-{S}cale
+{A}pplications",
+  booktitle="Software Engineering Environments",
+  year=1986,
+  editor="I. Somerville",
+  publisher="Peter Peregrinus Ltd.",
+  address="Lancaster University, England",
+  month=apr
+}
+
+@InProceedings{bwl:globnam,
+  author="Butler W. Lampson",
+  title="{D}esigning a {G}lobal {N}ame {S}ervice",
+  booktitle=podc5,
+  year=1986,
+  pages=10,
+  organization="ACM"
+}
+
+@TechReport{gess:hetenv,
+  author={K. Geihs and H. Eberle and B. Sch\"{o}ner and M. Seifert},
+  title="{D}istributed {O}bject {S}haring in {H}eterogeneous
+{E}nvironments",
+  institution="IBM European Networking Center",
+  year=1986,
+  number="43.8610",
+  address="Heidelberg, West Germany"
+}
+
+@InProceedings{vdg:distsec,
+  author="Virgil D. Gligor",
+  title="{D}istributed {S}ystem {S}ecurity",
+  booktitle=icdcs7,
+  year=1987,
+  publisher="{IEEE}",
+  address="Berlin (West) ({RFA})",
+  month=sep
+}
+
+@inproceedings{ja:distdiar,
+  title="{A} {D}istributed {D}iary {A}pplication",
+  author="D. Johansen and O. J. Anshus",
+  booktitle="Proc. of the IFIP TC 6 First Iberian Conf. on Data
+Communications",
+  editor="A. Cerveira",
+  address="Lisbon, Portugal",
+  month=may,
+  year=1987
+}
+
+@Article{hz:segood,
+  author="Mark F. Hornick and Stanley B. Zdonik",
+  title="{A} {S}hared, {S}egmented {M}emory {S}ystem for an
+{O}bject-{O}riented {D}atabase",
+  journal="ACM Transactions on Office Information Systems",
+  year=1987,
+  volume=5,
+  number=1,
+  pages="70--95",
+  month=jan
+}
+
+@Article{mh:conavail,
+  author="Maurice Herlihy",
+  title="{C}oncurrency {V}ersus {A}vailability: {A}tomicity {M}echanisms
+for {R}eplicated {D}ata",
+  journal="ACM Transactions on Computer Systems",
+  year=1987,
+  volume=5,
+  number=3,
+  pages="249--274",
+  month=aug
+}
+
+@TechReport{ms:scalinf,
+  author="M. Satyanarayanan",
+  title="{O}n the {I}nfluence of {S}cale in a {D}istributed {S}ystem",
+  institution="Department of Computer Science at Carnegie Mellon
+University",
+  year=1987,
+  number="CMU-CS-87-162",
+  address=pittsburgh,
+  month=mar
+}
+
+@InProceedings{fc:logfile,
+  author="Ross S. Finlayson and David R. Cheriton",
+  title="{L}og {F}iles: {A}n {E}xtended {F}ile {S}ervice
+{W}rite-{O}nce {S}torage",
+  booktitle="Proceedings of the Eleventh ACM Symposium on
+Operating Systems Principles",
+  year=1987,
+  pages="139--148",
+  organization="{ACM}",
+  note="Order no. 534870",
+  address="Austin, TX ({USA})",
+  month=nov
+}
+
+@inproceedings{rshtjjmhbfjmz,
+  title="{MANDIS}/{A}moeba:  {A} {W}idely {D}ispersed
+{O}bject-{O}riented {O}perating System",
+  author="R. van Renesse and J. M. van Staveren and J. Hall and M.
+Turnbull and A. A. Janssen and A. J. Jansen and S. J. Mullender and D.
+B. Holden and A. Bastable and T. Fallmyr and D. Johansen and K. S.
+Mullender and W. Zimmer",
+  booktitle="Proc. of the EUTECO 88 Conf.",
+  editor="R. Speth",
+  pages="823--831",
+  address="Vienna, Austria",
+  month=apr,
+  year=1988
+}
+
+@Article{jg:optfile,
+  author="Jason Gait",
+  title="{T}he {O}ptical {F}ile {C}abinet: {A} {R}andom-{A}ccess
+{F}ile {S}ystem for {W}rite-{O}nce {O}ptical {D}isks",
+  journal="Computer",
+  year=1988,
+  volume=21,
+  number=6,
+  pages="11--22",
+  month=jun
+}
+
+@InProceedings{ms:objoper,
+  author="Marc Shapiro",
+  title="{T}he {D}esign of a {D}istributed {O}bject-{O}riented
+{O}perating {S}ystem for {O}ffice {A}pplications",
+  booktitle="Proc.\ Esprit Technical Week 1988",
+  year=1988,
+  address="Brussels, Belgium",
+  month=nov
+}
+
+@inproceedings{rtw:highfile,
+  title="{T}he {D}esign of a {H}igh-{P}erformance {F}ile {S}erver",
+  author="R. van Renesse and A. S. Tanenbaum and A. Wilschut",
+  booktitle="Proc. of the 9th Int. Conf. on Distr. Computing Systems",
+  address="Newport Beach, CA ({USA})",
+  month=jun,
+  year=1989
+}
+
+@article{azs:repom,
+  author="A. Z. Spector",
+  title="{P}erforming {R}emote {O}perations {E}fficiently on a {L}ocal
+{C}omputer {N}etwork",
+  pages="246--260",
+  journal="Communications of the ACM",
+  publisher="Association for Computer Machinery",
+  year=1982,
+  month=apr,
+  volume="25",
+  number="4"
+}
+

@@ -1,0 +1,2763 @@
+% This file contains all publications from the WAM team.
+% 
+% Keep entries ordered according to the YEAR and MONTH fields, the most
+% recent entries at the top of the file.
+% Provide as many details as possible, and always a URL field pointing
+% at the full paper.
+
+@INPROCEEDINGS{Cazenave11b,
+   AUTHOR = {Fabien Cazenave and Vincent Quint and Cécile Roisin},
+   TITLE = {Timesheets.js: Tools for Web Multimedia},
+   BOOKTITLE = {Multimedia '11: Proceedings of the 19th ACM International
+                Conference on Multimedia},
+   PUBLISHER = {ACM},
+   LOCATION = {Scottsdale, AZ, USA},
+   MONTH = NOV,
+   YEAR = 2011,
+%   PAGES = {@@@--@@@},
+   URL2 = {http://wam.inrialpes.fr/publications/2011/ACM-MM-11.pdf},
+   URL = {http://hal.inria.fr/hal-00619396/},
+   x-proceedings = {yes},
+   x-international-audience = {yes},
+   x-pays = {USA},
+   ABSTRACT = {Timesheets.js is a JavaScript library for publishing
+    multimedia web documents that take advantage of the new features
+    of HTML5 and CSS3. The library allows web developers to extend
+    their skills to synchronized multimedia contents.
+    This technology has been experimented in a class where students
+    had to implement an XSLT transformation for converting OpenOffice
+    Impress presentations into web formats. The resulting slideshows
+    run in web browsers thanks to the timesheets.js library.}
+}
+@INPROCEEDINGS{Cazenave11a,
+   AUTHOR = {Fabien Cazenave and Vincent Quint and Cécile Roisin},
+   TITLE = {Timesheets.js: When SMIL Meets HTML5 and CSS3},
+   BOOKTITLE = {DocEng 2011: Proceedings of the Eleventh ACM Symposium
+                on Document Engineering},
+   PUBLISHER = {ACM},
+   LOCATION = {Mountain View, CA, USA},
+   MONTH = SEP,
+   YEAR = 2011,
+%   PAGES = {@@@--@@@},
+   URL = {http://wam.inrialpes.fr/publications/2011/DocEng2011.pdf},
+   URL2 = {http://hal.inria.fr/hal-00619382/},
+   x-proceedings = {yes},
+   x-international-audience = {yes},
+   x-pays = {USA},
+   ABSTRACT = {In this paper, we explore different ways to publish
+    multimedia documents on the web. We propose a solution that
+    takes advantage of the new multimedia features of web standards,
+    namely HTML5 and CSS3. To avoid the usual development of
+    complex scripts for handling timing, synchronization and user
+    interaction, we propose to complement HTML5 and CSS3 with
+    SMIL Timesheets. This is made possible by a Timesheets
+    scheduler that runs in the browser. Various applications
+    based on this solution illustrate the paper, ranging from
+    media annotations to web documentaries.}
+}
+@INPROCEEDINGS{Gesbert11a,
+   AUTHOR = {Nils Gesbert and Pierre Genevès and Nabil Layaïda},
+   TITLE = {Parametric Polymorphism and Semantic Subtyping:
+            the Logical Connection},
+   BOOKTITLE = {ICFP'11, Proceedings of the 2011 ACM SIGPLAN International
+                Conference on Functional Programming},
+%   PUBLISHER = {},
+%   PAGES = {@@@@},
+   LOCATION = {Tokyo, Japan},
+   MONTH = SEP,
+   YEAR = 2011,
+   URL = {http://wam.inrialpes.fr/publications/2011/icfp11.pdf},
+   URL2 = {http://hal.inria.fr/inria-00585686/},
+   ABSTRACT = {We consider a type algebra equipped with recursive, product,
+    function, intersection, union, and complement types together with type
+    variables and universal quantification over them. We define the
+    subtyping relation between such type expressions, and prove its
+    decidability. This solves an open problem that has recently attracted a
+    considerable research effort. The novelty, originality and
+    strength of our solution reside in introducing a logical modeling
+    for the semantic subtyping framework. We model semantic subtyping
+    in a tree logic and use a satisfiability-testing algorithm in order to
+    decide subtyping. We show how the subtyping relation can be decided
+    in EXPTIME. We report on practical experiments made with
+    a full implementation of the system. This provides a powerful
+    polymorphic type system aiming at maintaining full static type-safety of
+    functional programs that manipulate trees, even with higher-order
+    functions, which is particularly useful in the context of XML.}
+}
+@INPROCEEDINGS{Chekol11a,
+   AUTHOR = {Melisachew Wudage Chekol and Jérôme Euzenat and Pierre Genevès
+             and Nabil Layaïda},
+   TITLE = {{PSPARQL} Query Containment},
+   BOOKTITLE = {DBPL 2011, Proceedings of the 13th International Symposium
+                on Database Programming Languages},
+   LOCATION = {Seattle, WA, USA},
+   MONTH = AUG,
+   YEAR = 2011,
+   URL = {http://wam.inrialpes.fr/publications/2011/DBPL11.pdf},
+   URL2 = {http://www.cs.cornell.edu/conferences/dbpl2011/papers/dbpl11-chekol.pdf},
+   ABSTRACT = {Querying the semantic web is mainly done through SPARQL.
+    This language has been studied from different perspectives such
+    as optimization and extension. One of its extensions, PSPARQL
+    (Path SPARQL) provides queries with paths of arbitrary length.
+    We study the static analysis of queries written in this language,
+    in particular, containment of queries: determining whether,
+    for any graph, the answers to a query are contained in those of
+    another query. Our approach consists in encoding RDF graphs as
+    transition systems and queries as \mu-calculus formulas and then
+    reducing the containment problem to testing satisfiability in
+    the logic.}
+}
+@INPROCEEDINGS{Barcenas11b,
+   AUTHOR = {Everardo Bárcenas and Pierre Genevès and Nabil Layaïda and
+             Alan Schmitt},
+   TITLE = {Query reasoning on trees with types, interleaving and counting},
+   BOOKTITLE = {Proceedings of the 22nd International Joint Conference
+                on Artificial Intelligence IJCAI'2011},
+   PUBLISHER = {AAAI Press},
+   EDITOR = {Toby Walsh},
+   VOLUME = 2,
+   PAGES = {718--723},
+   LOCATION = {Barcelona, Spain},
+   MONTH = JUL,
+   YEAR = 2011,
+   URL = {http://hal.inria.fr/inria-00609556/},
+   URL2 = {http://wam.inrialpes.fr/publications/2011/IJCAI2011.pdf},
+   ABSTRACT = {A major challenge of query language design is the
+    combination of expressivity with effective static analyses such as
+    query containment. In the setting of XML, documents are seen as
+    finite trees, whose structure may additionally be constrained by
+    type constraints such as those described by an XML schema.
+    We consider the problem of query containment in the presence of
+    type constraints for a class of regular path queries extended with
+    counting and interleaving operators. The counting operator restricts
+    the number of occurrences of children nodes satisfying a given logical
+    property. The interleaving operator provides a succinct notation for
+    describing the absence of order between nodes satisfying a logical
+    property. We provide a logic-based framework supporting these
+    operators, which can be used to solve common query reasoning
+    problems such as satisfiability and containment of queries in
+    exponential time.}
+}
+@TECHREPORT{Roisin11a,
+   AUTHOR = {Cécile Roisin and Fabien Cazenave and Vincent Quint and
+             Ludovic Gaillard and Dominique Saint-Martin},
+   TITLE = {Enhancing XML Publishing Workflow for Web Multimedia},
+   INSTITUTION = {C2M},
+   TYPE = {Deliverable},
+   NUMBER = 1,
+   MONTH = JUL,
+   YEAR = 2011,
+   URL = {http://wam.inrialpes.fr/publications/2011/C2M-ResearchPaper2011.pdf},
+   ABSTRACT = {A challenge for the C2M project is to develop a document
+    workflow for authoring and producing web multimedia documents with
+    a special attention for the aesthetic quality of the final rendering.
+    In this paper we discuss the requirements for advanced multimedia
+    authoring services from a document engineering point of view.
+    Our approach consists in providing a post-editing service to allow
+    authors to adjust their multimedia presentation directly on the final
+    form of the document. The first step of the proposal is to provide a
+    web rendering en- gine based on the latest advances in web standards.
+    For that purpose, we have developed timesheets.js, a JavaScript library
+    for publishing multimedia web documents. It takes advan- tage of the new
+    features of the HTML5 and CSS3 web standards and enables synchronization
+    of multimedia contents. The second step consists in designing web-aware
+    authoring tools based on this library, thus providing authors with direct
+    editing services for producing high quality multimedia documents.}
+}
+@ARTICLE{Geneves11b,
+   AUTHOR = {Pierre Genevès and Nabil Layaïda and Vincent Quint},
+   TITLE = {Impact of {XML} Schema Evolution},
+   JOURNAL = {ACM Transactions on Internet Technology (TOIT)},
+   VOLUME = 11,
+   NUMBER = 1,
+   MONTH = JUL,
+   YEAR = 2011,
+   PAGES = {4:1--4:27},
+   URL2 = {http://wam.inrialpes.fr/publications/2011/TOIT2011.pdf},
+   URL = {http://doi.acm.org/10.1145/1993083.1993087},
+   DOI = {10.1145/1993083.1993087},
+   PUBLISHER = {ACM},
+   x-international-audience = {yes},
+   x-editorial-board = {yes},
+   ABSTRACT = {We consider the problem of XML Schema evolution.
+    In the ever-changing context of the web, XML schemas continuously
+    change in order to cope with the natural evolution of entities
+    they describe. Schema changes have important consequences.
+    First, existing documents valid with respect to the original schema
+    are no longer guaranteed to fulfill the constraints described by
+    the evolved schema. Second, the evolution also impacts programs
+    manipulating documents whose structure is described by the original
+    schema.
+    We propose a unifying framework for determining the effects of
+    XML Schema evolution both on the validity of documents and on queries.
+    The system is very powerful in analyzing various scenarios in which
+    forward/backward compatibility of schemas is broken, and in which
+    the result of a query may not be anymore what was expected.
+    Specifically, the system offers a predicate language which allows
+    one to formulate properties related to schema evolution. The system
+    then relies on exact reasoning techniques to perform a fine-grained
+    analysis. This yields either a formal proof of the property or a
+    counter-example that can be used for debugging purposes.
+    The system has been fully implemented and tested with real-world use
+    cases, in particular with the main standard document formats used on
+    the web, as defined by W3C. The system identifies precisely
+    compatibility relations between document formats. In case these relations
+    do not hold, the system can identify queries that must be reformulated
+    in order to produce the expected results across successive schema
+    versions.}
+}
+@INPROCEEDINGS{Geneves11a,
+   AUTHOR = {Pierre Genevès and Nabil Layaïda},
+   TITLE = {Inconsistent Path Detection for XML IDEs},
+   BOOKTITLE = {Proceedings of the 33rd International Conference on
+                Software Engineering, ICSE 2011},
+   PUBLISHER = {ACM},
+   LOCATION = {Honolulu, Hawaii},
+   MONTH = MAY,
+   YEAR = 2011,
+   PAGES = {983--985},
+   URL = {http://hal.inria.fr/inria-00609513/},
+   URL2 = {http://wam.inrialpes.fr/publications/2011/icse11final.pdf},
+   DOI = {http://doi.acm.org/10.1145/1985793.1985967},
+   x-proceedings = {yes},
+   x-international-audience = {yes},
+   ABSTRACT = {We present the first IDE augmented with static detection
+    of inconsistent paths for simplifying the development and debugging
+    of any application involving XPath expressions.}
+}
+@INPROCEEDINGS{Lemordant11a,
+   AUTHOR = {Jacques Lemordant},
+   TITLE = {Mixed Reality Browsers},
+   BOOKTITLE = {International workshop on AR Standards},
+   MONTH = FEB,
+   YEAR = 2011,
+   LOCATION = {Barcelona, Spain},
+   URL = {http://wam.inrialpes.fr/publications/2011/ARWorshopBarcelona2011.pdf},
+   URL2 = {http://www.perey.com/ARStandardsMeetingFeb2011.html},
+   ABSTRACT = {This paper focuses on Mixed Reality Browsers (MRB)
+    that merge real and virtual worlds somewhere along the virtuality
+    continuum which connects completely real environments to completely
+    virtual ones. We present the audio-visual MRB developed by the WAM
+    project-team of INRIA at Grenoble, which uses a RDF data format for
+    POIs whose URIs refer to content expressed in HTML5 and in a
+    declarartive data format for interactive audio.
+    }
+}
+@PHDTHESIS{Barcenas11a,
+   AUTHOR = {Everardo Bárcenas-Patiño},
+   TITLE = {Automated reasoning on trees with cardinality constraints},
+   TYPE = {PhD thesis},
+   SCHOOL = {Institut National Polytechnique de Grenoble},
+   MONTH = FEB,
+   YEAR = 2011,
+   URL = {http://tel.archives-ouvertes.fr/tel-00569058/},
+   ABSTRACT = {Arithmetical constraints are widely used in formal languages
+    like regular expressions, tree grammars and paths. In XML they are used
+    to impose bounds on the number of occurrences described by content models
+    of schema languages (XML Schema, RelaxNG). In query languages (XPath,
+    XQuery), they allow selecting nodes that have a bounded number of nodes
+    reachable by a given path expression. Counting types and paths are thus
+    natural extensions of their countless counterparts already regarded as
+    the core constructs in XML languages and type systems. One of the biggest
+    challenges in XML is to develop automated techniques for ensuring static-type
+    safety and optimization techniques. To this end, there is a need to solve
+    some basic reasoning tasks that involve constructions such as counting XML
+    schemas and XPath expressions. Every compiler of XML programs will have to
+    routinely solve problems such as type and path type- checking, for ensuring
+    at compile time that invalid documents can never arise as the output of XML
+    processing code. This thesis studies efficient reasoning frameworks able to
+    express counting constraints on tree structures. It was recently shown that
+    the \mu-calculus, when extended with counting constraints on immediate
+    successor nodes is undecid able over graphs. Here we show that, when
+    interpreted over finite trees, the logic with counting constraints is decidable
+    in single exponential time. Furthermore, this logic allows more general
+    counting operators. For example, the logic can pose numerical constraints on
+    number of ancestors or descendants. We also present linear translations of
+    counting XPath expressions and XML schemas into the logic.}
+}
+
+@INPROCEEDINGS{Roisin10a,
+   AUTHOR = {Jan Mikác and Cécile Roisin and Jean-Marc Wolff},
+   TITLE = {Instrumentation des interrogations orales Support multimédia
+            à l'évaluation et à la capitalisation des interrogations orales},
+   BOOKTITLE = {TICE2010 : 7ème Colloque Technologies de l'Information
+                et de la Communication pour l'Enseignement},
+   LOCATION = {Nancy, France},
+   MONTH = DEC,
+   YEAR = 2010,
+   URL = {http://wam.inrialpes.fr/publications/2010/TICE2010.pdf},
+   URL2 = {http://hal.inria.fr/inria-00540393/},
+   x-proceedings = {yes},
+   x-international-audience = {no},
+   ABSTRACT = {In this paper we propose an authoring service dedicated
+    to the support of annotating and sharing oral examinations.
+    Basically it allows: (1) authoring live text annotations while the
+    student oral presentation is recorded as an audio media; (2)
+    possibly editing the annotated audio for adding annotations and
+    adjusting their synchronization with the audio track; and (3)
+    generating a multimedia document in a standard format to enable
+    its publication on multimedia platforms. The paper describes the
+    results of the first experimentations of this tool.}
+}
+@INPROCEEDINGS{Quint10a,
+   AUTHOR = {Vincent Quint and Cécile Roisin and Stéphane Sire and
+             Christine Vanoirbeek},
+   TITLE = {From Templates to Schemas: Bridging the Gap Between Free
+            Editing and Safe Data Processing},
+   BOOKTITLE = {DocEng 2010: Proceedings of the Tenth ACM Symposium on
+                Document Engineering},
+   PUBLISHER = {ACM},
+   LOCATION = {Manchester, United Kingdom},
+   MONTH = SEP,
+   YEAR = 2010,
+   PAGES = {61--64},
+   ISBN = {978-1-4503-0231-9},
+   URL = {http://wam.inrialpes.fr/publications/2010/DocEng2010.pdf},
+   URL2 = {http://hal.inria.fr/inria-00522175/},
+   DOI = {http://doi.acm.org/10.1145/1860559.1860572},
+   x-proceedings = {yes},
+   x-international-audience = {yes},
+   x-pays = {CH},
+   ABSTRACT = {In this paper we present tools that provide an easy way
+    to edit XML content directly on the web, with the usual benefit of
+    valid XML content.  These tools make it possible to create content
+    targeted for lightweight web applications. Our approach uses
+    (1) the XTiger template language, (2) the AXEL Javascript library
+    for authoring structured XML content and (3) XSLT transformations
+    for generating XML schemas against which the XML content can be
+    validated. Template-driven editing allows any web user to easily
+    enter content while schemas make sure applications can safely
+    process this content.}
+}
+@INPROCEEDINGS{Lemordant10d,
+   AUTHOR = {Audrey Colbrant and Jacques Lemordant and Phuntsok Dorjee},
+   TITLE = {A Low-Cost Global Network for Data Collection and Query},
+   BOOKTITLE = {Proceedings of the 2nd Extreme Workshop on Communication, ExtremeCom 2010},
+   PUBLISHER = {ACM},
+   LOCATION = {Dharamsala, India},
+   MONTH = SEP,
+   YEAR = 2010,
+   URL = {http://wam.inrialpes.fr/publications/2010/ExtremeCom10.pdf},
+   x-proceedings = {yes},
+   x-international-audience = {yes},
+   x-pays = {IN},
+   ABSTRACT = {We present two complementary research ideas and a
+    prototype framework based on these ideas. The first idea is
+    that by using semantic URIs, Xquery and XML Data Models,
+    HTTP Responses with embedded URIs, it should be possible to
+    construct easily rich web services over SMS for data collection
+    and query. The second idea is that by using several mobile
+    SMS-Web gateways, we can build a low-cost global network with
+    these rich web services. Hospitals in India, including Delek
+    Hospital of Dharamsala, are using the DOTS protocol of the
+    World Health Organisation to fight tuberculosis in Tibetan
+    settlements located in India and Nepal. Our prototype framework
+    implements this protocol.}
+}
+@INPROCEEDINGS{Lemordant10c,
+   AUTHOR = {Audrey Colbrant and Yohan Lasorsa and Jacques Lemordant
+             and David Liodenot and Mathieu Razafimahazo},
+   TITLE = {Sound Objects for {SVG}},
+   BOOKTITLE = {Proceedings of SVG Open 2010},
+   LOCATION = {Paris, France},
+   MONTH = AUG,
+   YEAR = 2010,
+   URL = {http://wam.inrialpes.fr/publications/2010/SVGOpen2010.pdf},
+   URL2 = {http://hal.archives-ouvertes.fr/inria-00540356/},
+   NOTE = {https://www.svgopen.org/2010/papers/34-Sound_Objects_for_SVG/},
+   x-proceedings = {yes},
+   x-international-audience = {yes},
+   ABSTRACT = {A sound object can be defined as a time structure of audio
+    chunks whose duration is on the time scale of 100 ms to several seconds.
+    Sound objects have heterogeneous and time-varying properties. They are
+    the basic elements of any format for Interactive Audio (IA). We have
+    designed an XML language, A2ML, for Interactive Audio which offers,
+    concerning the sequencing of sounds, a level of capabilities similar
+    to that of iXMF, the interactive audio file format defined by the
+    Interactive Audio Special Interest Group (IASIG). A2ML uses SMIL
+    timing attributes to control the synchronization of sound objects and
+    supports 3D sound rendering, DSP and positional parameters's animation,
+    by embedding the SMIL animation module. Like in a traditional mixing
+    console, mix groups can be used to regroup multiple sound objects and
+    apply mix parameters to all of them at the same time. An API allows
+    external control and dynamic instantiation of sound objects.
+    As with graphics, a declarative language for interactive audio is much
+    more powerful than a node-graph based approach implemented using an
+    imperative language. The structured declarative model offers easier
+    reuse, transformability, accessibility, interoperability and authoring.
+    An XML declarative language for audio like A2ML could help to reach the
+    goal of the IXMF workgroup, i.e. build a system by which composers and
+    sound designers create an interactive soundtrack and audition it by
+    simulating target application control input while working in the
+    authoring environment.
+    In this paper, we will show how an XML language for interactive audio
+    can be used with SVG. After an introduction to the history of sound
+    objects, we will use the example of a computational character with a
+    simple orient behaviour to demonstrate the complementarity of SVG and
+    A2ML. The best way to use these two languages is to synchronize them
+    with a third one, a tag-value dispatching language. We will then
+    present a complex application for which the use of both SVG and A2ML
+    is natural, i.e. a navigation system for visually impaired people based
+    on OpenStreetMap.}
+}
+@INPROCEEDINGS{Lemordant10b,
+   AUTHOR = {Jacques Lemordant},
+   TITLE = {Basic Concepts in Augmented Reality Audio},
+   BOOKTITLE = {W3C Workshop: Augmented Reality on the Web},
+   MONTH = JUN,
+   YEAR = 2010,
+   LOCATION = {Barcelona, Spain},
+   URL = {http://www.w3.org/2010/06/w3car/basic_concepts_in_ar_audio.pdf},
+   URL2 = {http://www.w3.org/2010/06/w3car/},
+   ABSTRACT = {The basic difference between real and virtual sound environments
+    is that virtual sounds are originating from another environment or are
+    artificially created, whereas the real sounds are the natural existing
+    sounds in the user's own environment. Augmented Reality Audio combines
+    these aspects in a way where real and virtual sound scenes are mixed so
+    that virtual sounds are perceived as an extension or a complement to the
+    natural ones.}
+}
+@ARTICLE{Laborie10a,
+   AUTHOR = {Sébastien Laborie and Jérôme Euzenat and Nabil Layaïda},
+   TITLE = {Semantic Adaptation of Multimedia Documents},
+   JOURNAL = {Multimedia Tools and Applications (MTAP)},
+   PUBLISHER = {Springer Netherlands},
+   VOLUME = 55,
+   NUMBER = 3,
+   MONTH = JUN,
+   YEAR = 2010,
+   PAGES = {379-398},
+   URL = {http://www.springerlink.com/content/e67280138wj08013/},
+   URL2 = {http://hal.inria.fr/inria-00548833},
+   DOI = {http://dx.doi.org/10.1007/s11042-010-0552-9},
+   x-editorial-board = {yes},
+   x-international-audience = {yes},
+   ABSTRACT = {Multimedia documents have to be played on multiple device types.
+    Hence, usage and platform diversity requires document adaptation according to
+    execution contexts, not generally predictable at design time. 
+    In an earlier work, a semantic framework for multimedia document adaptation was
+    proposed. In this framework, a multimedia document is interpreted as a set of
+    potential executions corresponding to the author specification. 
+    To each target device corresponds a set of possible executions complying with
+    the device constraints. In this context, adapting requires to select an execution
+    that satisfies the target device constraints and which is as close as possible
+    from the initial composition. 
+    This theoretical adaptation framework does not specifically consider the main
+    multimedia document dimensions, i.e., temporal, spatial and hypermedia.  
+    In this paper, we propose a concrete application of this framework on standard
+    multimedia documents. For that purpose, we first define an abstract structure
+    that captures the spatio-temporal and hypermedia dimensions of multimedia documents,
+    and we develop an adaptation algorithm which transforms in a minimal way such a
+    structure according to device constraints. 
+    Then, we show how this can be used for adapting concrete multimedia documents
+    in SMIL through converting the documents in the abstract structure, using the
+    adaptation algorithm, and converting it back in SMIL. This can be used for other
+    document formats without modifying the adaptation algorithm.}
+}
+@INPROCEEDINGS{Geneves10b,
+   AUTHOR = {Pierre Genevès and Nabil Layaïda},
+   TITLE = {Eliminating Dead-Code from XQuery Programs},
+   BOOKTITLE = {Proceedings of the 32nd ACM/IEEE International Conference on Software Engineering, ICSE 2010},
+   PUBLISHER = {ACM},
+   LOCATION = {Cape Town, South Africa},
+   MONTH = MAY,
+   YEAR = 2010,
+   PAGES = {305--306},
+   URL = {http://wam.inrialpes.fr/publications/2010/ICSE10.pdf},
+   DOI = {http://doi.acm.org/10.1145/1810295.1810363},
+   ISBN = {978-1-60558-719-6},
+   x-proceedings = {yes},
+   x-international-audience = {yes},
+   ABSTRACT = {One of the challenges in web software development is to help
+    achieving a good level of quality in terms of code size and runtime
+    performance, for increasingly popular domain spe- cific languages
+    such as XQuery. We present an IDE equipped with static analysis
+    features for assisting the programmer. These features are capable
+    of identifying and eliminating dead code automatically. The tool is
+    based on newly devel- oped formal programming language verification
+    techniques, which are now mature enough to be introduced in the
+    process of software development.} 
+}
+@INPROCEEDINGS{Lemordant10a,
+   AUTHOR = {Jacques Lemordant and Yohan Lasorsa},
+   TITLE = {Augmented Reality Audio Editing},
+   BOOKTITLE = {128th AES Convention},
+   LOCATION = {London, UK},
+   MONTH = MAY,
+   YEAR = 2010,
+   PAGES = {paper 8143},
+   URL = {http://wam.inrialpes.fr/publications/2010/AES128.pdf},
+   URL2 = {http://hal.inria.fr/hal-00494239/},
+   URL3 = {http://www.aes.org/e-lib/browse.cfm?elib=15439},
+   x-proceedings = {yes},
+   x-international-audience = {yes},
+   ABSTRACT = {The concept of augmented reality audio (ARA) characterizes
+    techniques where a physically real sound and voice environment is
+    extended with virtual, geolocalized sound objects. We show that the
+    authoring of an ARA scene can be done through an iterative process
+    composed of two stages: in the first one the author has to move in
+    the rendering zone to apprehend the audio spatialization and the
+    chronology of the audio events and in the second one a textual
+    editing of the sequencing of the sound sources and DSP acoustics
+    parameters is done. This authoring process is based on the join use of
+    two XML languages, OpenStreetMap for maps and A2ML for Interactive
+    3D Audio. A2ML being a format for a cue-oriented interactive audio system,
+    requests for interactive audio services are done through TCDL, a Tag-based
+    Cue Dispatching language. This separation of modeling and audio rendering
+    is similar to what is done for the web of documents with HTML and
+    CSS style sheets.}
+}
+@INPROCEEDINGS{Layaida10a,
+   AUTHOR = {Nabil Layaïda and Pierre Genevès},
+   TITLE = {Debugging Standard Document Formats},
+   BOOKTITLE = {Proceedings of the 19th International Conference on World Wide Web (WWW 2010)},
+   EDITOR = {Michael Rappa and Paul Jones and Juliana Freire and Soumen Chakrabarti},
+   PUBLISHER = {ACM},
+   LOCATION = {Raleigh, NC, USA},
+   MONTH = APR,
+   YEAR = 2010,
+   PAGES = {1269--1272},
+   URL = {http://wam.inrialpes.fr/publications/2010/WWW2010.pdf},
+   URL2 = {http://hal.inria.fr/hal-00494245},
+   DOI = {http://doi.acm.org/10.1145/1772690.1772899},
+   ISBN = {978-1-60558-799-8},
+   x-proceedings = {yes},
+   x-international-audience = {yes},
+   ABSTRACT = {We present a tool for helping XML schema designers to obtain
+    a high quality level for their specifications. The tool allows one to
+    analyze relations between classes of XML documents and formally prove them.
+    For instance, the tool can be used to check forward and backward
+    compatibilities of recommendations. When such a relation does not hold,
+    the tool allows one to identify the reasons and reports detailed
+    counter-examples that exemplify the problem. For this purpose, the tool
+    relies on recent advances in logic-based automated theorem proving
+    techniques that allow for efficient reasoning on very large sets of XML
+    documents. We believe this tool can be of great value for standardization
+    bodies that define specifications using various XML type definition languages
+    (such as W3C specifications), and are concerned with quality assurance for
+    their normative recommendations.}
+}
+@TECHREPORT{Barcenas10a,
+   AUTHOR = {Everardo Bárcenas and Pierre Genevès and Nabil Layaïda and Alan Schmitt},
+   TITLE = {On the Count of Trees},
+   INSTITUTION = {INRIA},
+   TYPE = {{Research Report}},
+   NUMBER = 7251,
+   MONTH = AUG,
+   YEAR = 2010,
+   URL = {http://hal.archives-ouvertes.fr/inria-00473160/},
+   URL2 = {http://wam.inrialpes.fr/publications/2010/RR-7251.pdf},
+   ABSTRACT = {Regular tree grammars and regular path expressions constitute core
+    constructs widely used in programming languages and type systems. Nevertheless,
+    there has been little research so far on frameworks for reasoning about path
+    expressions where node cardinality constraints occur along a path in a tree.
+    We present a logic capable of expressing deep counting along paths which may
+    include arbitrary recursive forward and backward navigation. The counting
+    extensions can be seen as a generalization of graded modalities that count
+    immediate successor nodes. While the combination of graded modalities,
+    nominals, and inverse modalities yields undecidable logics over graphs,
+    we show that these features can be combined in a decidable tree logic whose
+    main features can be decided in exponential time. Our logic being closed
+    under negation, it may be used to decide typical problems on XPath queries
+    such as satisfiability, type checking with relation to regular types,
+    containment, or equivalence.}
+}
+@INPROCEEDINGS{Sire10a,
+   AUTHOR = {Stéphane Sire and Christine Vanoirbeek and Vincent Quint and Cécile Roisin},
+   TITLE = {Authoring XML all the Time, Everywhere and by Everyone},
+   BOOKTITLE = {Proceedings of XML Prague 2010},
+   PUBLISHER = {Institute for Theoretical Computer Science},
+   LOCATION = {Prague},
+   MONTH = MAR,
+   YEAR = 2010,
+   PAGES = {125-149},
+   URL = {http://wam.inrialpes.fr/publications/2010/XMLPrague10.pdf},
+   URL2 = {http://www.xmlprague.cz/2010/files/XMLPrague_2010_Proceedings.pdf},
+   x-proceedings = {yes},
+   x-international-audience = {yes},
+   x-pays = {CH},
+   ABSTRACT = {This article presents a framework for editing, publishing and
+    sharing XML content directly from within the browser. It comes in two parts:
+    XTiger XML and AXEL. XTiger XML is a document template specification
+    language for creating document models. AXEL is a client-side Javascript
+    library that turns the document template into a document editing application
+    running in the browser. This framework is targeted at non XML speaking end
+    users, since it preserves end users from XML syntax during editing.
+    Its current implementation proposes a pseudo-WYSIWYG user interface where
+    the document template provides a document-oriented editing metaphor,
+    or a more form-oriented metaphor, depending on the template.}
+}
+@INPROCEEDINGS{Geneves10a,
+   AUTHOR = {Pierre Genevès and Nabil Layaïda},
+   TITLE = {XML Reasoning Made Practical},
+   BOOKTITLE = {Proceedings of the 26th IEEE International Conference on Data Engineering, ICDE 2010},
+   PUBLISHER = {IEEE},
+   LOCATION = {Long Beach, CA, USA},
+   MONTH = MAR,
+   YEAR = 2010,
+   PAGES = {1169-1172},
+   ISBN = {978-1-4244-5444-0},
+   URL = {http://wam.inrialpes.fr/publications/2010/ICDE10demo.pdf},
+   URL2 = {http://dx.doi.org/10.1109/ICDE.2010.5447786},
+   x-proceedings = {yes},
+   x-international-audience = {yes},
+   ABSTRACT = {We present a tool for the static analysis of XPath queries
+    and XML Schemas. The tool introduces techniques used in the field of
+    verification (such as binary decision diagrams) in order to efficiently
+    solve XPath query satisfiability, containment, and equivalence, in the
+    presence of real-world XML Schemas. The tool can be used in query
+    optimizers, in order to prove soundness of query rewriting. It can also
+    be used in type-checkers and optimizing compilers that need to perform
+    all kinds of compile-time analyses involving XPath queries and XML tree
+    constraints.} 
+}
+
+@INPROCEEDINGS{Laborie09a,
+   AUTHOR = {Sébastien Laborie and Jérôme Euzenat and Nabil Layaïda},
+   TITLE = {Semantic Multimedia Document Adaptation with Functional Annotations},
+   BOOKTITLE = {Proceedings of the 4th International Workshop on Semantic
+                Media Adaptation and Personalization, SMAP'09},
+   EDITOR = {Phivos Mylonas and Manolis Wallace and Ioannis Anagnostopoulos},
+   PUBLISHER = {IEEE Computer Society},
+   LOCATION = {San Sebastián, Spain},
+   MONTH = DEC,
+   YEAR = 2009,
+   PAGES = {44--49},
+   URL = {http://wam.inrialpes.fr/publications/2009/SMAP09.pdf},
+   DOI = {http://doi.ieeecomputersociety.org/10.1109/SMAP.2009.19},
+   x-proceedings = {yes},
+   x-international-audience = {yes},
+   ABSTRACT = {The diversity of presentation contexts for multimedia
+    documents requires the adaptation of document specifications.
+    In an earlier work, we have proposed a semantic adaptation
+    framework for multimedia documents. This framework captures the
+    semantics of the document composition and transforms the relations
+    between multimedia objects according to adaptation constraints.
+    In this paper, we show that relying on document composition alone
+    for adaptation restricts the set of relevant candidate solutions
+    and may even divert the adaptation from the authors intent. Hence,
+    we propose to introduce functional annotations to guide the
+    adaptation process. Theses annotations allow to refine the role of
+    multimedia objects in the document. We show that SMIL documents
+    could embed functional annotations encoded in RDF. These multimedia
+    documents are then adapted thanks to an interactive adaptation tool.}
+}
+@INPROCEEDINGS{Lasorsa09a,
+   AUTHOR = {Yohan Lasorsa and Jacques Lemordant},
+   TITLE = {An Interactive Audio System for Mobiles},
+   BOOKTITLE = {127th AES Convention},
+   PUBLISHER = {Audio Engineering Society},
+   LOCATION = {New York, NY, USA},
+   MONTH = OCT,
+   YEAR = 2009,
+   URL = {http://wam.inrialpes.fr/publications/2009/aes_paper_final.pdf},
+   URL2 = {http://hal.inria.fr/inria-00425231/},
+   URL3 = {http://www.aes.org/e-lib/browse.cfm?elib=15087},
+   x-proceedings = {yes},
+   x-international-audience = {yes},
+   ABSTRACT = {This paper presents an XML format for embedded interactive
+     audio deriving from well-established formats like iXMF and SMIL.
+     We introduce in this format a new paradigm for audio elements and
+     animations synchronization, using a flexible event-driven system in
+     conjunction with graph description capabilities to replace audio
+     scripting. The concepts of this new format are explained through the
+     building of a virtual interactive jungle environment. Then we have
+     implemented a sound manager for J2ME smartphones and the iPhone.
+     Guidance applications for blind people based on this audio system are
+     being developed.}
+}
+@INPROCEEDINGS{Barcenas09b,
+   AUTHOR = {Everardo Bárcenas and Pierre Genevès and Nabil Layaïda},
+   TITLE = {On the Analysis of Queries with Counting Constraints},
+   BOOKTITLE = {DocEng'09: Proceedings of the Ninth ACM Symposium on
+                Document Engineering},
+   PUBLISHER = {ACM},
+   ISBN = {978-1-60558-575-8},
+   LOCATION = {Munich, Germany},
+   MONTH = SEP,
+   YEAR = 2009,
+   PAGES = {21--24},
+   URL = {http://wam.inrialpes.fr/publications/2009/DocEng09-Barcenas.pdf},
+   URL2 = {http://hal.inria.fr/inria-00422964/},
+   DOI = {http://doi.acm.org/10.1145/1600193.1600199},
+   x-proceedings = {yes},
+   x-international-audience = {yes},
+   x-pays = {MX},
+   ABSTRACT = {We study the analysis problem of XPath expressions with 
+     counting constraints. Such expressions are commonly used in document
+     transformations or programs in which they select portions of documents
+     subject to transformations. We explore how recent results on the
+     static analysis of navigational aspects of XPath can be extended to
+     counting constraints. The static analysis of this combined XPath
+     fragment allows to detect bugs in transformations and to perform
+     many kinds of optimizations of document transformations.
+     More precisely, we study how a logic for finite trees capable of
+     expressing upward and downward recursive navigation, can be equipped
+     with a counting operator along regular path expressions.}
+}
+@INPROCEEDINGS{Geneves09a,
+   AUTHOR = {Pierre Genevès and Nabil Layaïda and Vincent Quint},
+   TITLE = {Identifying Query Incompatibilities with Evolving {XML} Schemas},
+   BOOKTITLE = {ICFP'09, Proceedings of the 2009 ACM SIGPLAN International
+ Conference on Functional Programming},
+   LOCATION = {Edinburgh, UK},
+   PAGES = {221-230},
+   MONTH = AUG,
+   YEAR = 2009,
+   URL = {http://wam.inrialpes.fr/publications/2009/types-evolution.pdf},
+   URL2 = {http://hal.inria.fr/inria-00423058/},
+   DOI = {http://doi.acm.org/10.1145/1596550.1596583},
+   x-proceedings = {yes},
+   x-international-audience = {yes},
+   ABSTRACT = {During the life cycle of an XML application, both schemas 
+     and queries may change from one version to another. Schema evolutions
+     may affect query results and potentially the validity of produced data.
+     Nowadays, a challenge is to assess and accommodate the impact of these
+     changes in evolving XML applications. Such questions arise naturally
+     in XML static analyzers. These analyzers often rely on decision
+     procedures such as inclusion between XML schemas, query containment
+     and satisfiability. However, existing decision procedures cannot be
+     used directly in this context. The reason is that they are unable to
+     distinguish information related to the evolution from information
+     corresponding to bugs. This paper proposes a predicate language within
+     a logical framework that can be used to make this distinction. 
+     We present a system for monitoring the effect of schema evolutions on
+     the set of admissible documents and on the results of queries. The
+     system is very powerful in analyzing various scenarios where the result
+     of a query may not be anymore what was expected. Specifically, the
+     system is based on a set of predicates which allow a fine-grained
+     analysis for a wide range of forward and backward compatibility issues.
+     Moreover, the system can produce counterexamples and witness documents
+     which are useful for debugging purposes. The current implementation
+     has been tested with realistic use cases, where it allows identifying
+     queries that must be reformulated in order to produce the expected
+     results across successive schema versions.}
+}
+@ARTICLE{Guerraz09a,
+   AUTHOR = {Agnès Guerraz and Céline Loscos},
+   TITLE = {Analysis of Haptics Evolution from Web Search Engines' Data},
+   JOURNAL = {Journal of Multimedia (JMM)},
+   PUBLISHER = {Academy Publisher},
+   VOLUME = 4,
+   NUMBER = 4,
+   MONTH = AUG,
+   YEAR = 2009,
+   PAGES = {196-203},
+   URL = {http://www.academypublisher.com/jmm/vol04/no04/jmm0404196203.pdf},
+   x-editorial-board = {yes},
+   x-international-audience = {yes},
+   ABSTRACT = {This article proposes using search engine results
+    data such as the number of results containing relevant terms,
+    to measure the evolution of Haptics, the field devoted to the
+    science and technology of the sense of touch. Haptics is a 
+    complex discipline which is at the intersection of the knowledge
+    of several specialized fields like robotics, computer 
+    science, psychology, and mathematics. It can also appear 
+    as a new and emergent discipline due to the fact that many 
+    promising haptic interfaces, which allow innovative multi- 
+    modal applications in many fields, have become mature 
+    only recently. The study presented in this article uses data 
+    collected at different periods of time (in December 1999, 
+    January 2004, January 2005, November 2006 and April 
+    2007) on Web search engines from requests on three different 
+    terminologies: haptique, haptik and haptics, taken respectively
+    from French, German, and English languages. The 
+    evolution of Haptics is seemingly reflected by to the online 
+    frequency of these specific terms over time. This evolution 
+    has been measured by considering the Internet community through
+    search engines such as Google or Yahoo!.}
+}
+@INPROCEEDINGS{Roisin09,
+   AUTHOR = {Bernadette Charlier and Aida Boukottaya and Amaury Daele
+             and France Henri and Cécile Roisin and Annick Rossier-Morel},
+   TITLE = {Réifier et réutiliser les pratiques d'enseignement : 
+            développement participatif d'un scénario et de services 
+            pour les communautés de pratique},
+   BOOKTITLE = {EIAH 09},
+   EDITOR = {Elizabeth Delozanne and André Tricot and Pascal Leroux},
+   PUBLISHER = {INRP Lyon},
+   LOCATION = {Le Mans},
+   PAGES = {223-230},
+   MONTH = JUN,
+   YEAR = 2009,
+   ISBN = {978-2-7342-1149-5*Réf BT 066},
+   URL = {http://wam.inrialpes.fr/publications/2009/EIAH2009.pdf},
+   URL2 = {http://hal.inria.fr/inria-00548845/},
+   x-proceedings = {yes},
+   x-international-audience = {no},
+   x-pays = {CH,CA},
+   ABSTRACT = {Cet article décrit et évalue un scénario de réification
+    et de réutilisation de pratiques professionnelles ainsi que les
+    services interopérables supportant le scénario développés en appliquant
+    une méthode de design participatif. Après avoir présenté le contexte
+    de la recherche et décrit la méthode de design participatif appliquée
+    et ses principaux instruments, le scénario de réification, et les
+    services développés sont tout d'abord présentés et ensuite évalués dans
+    le cadre d'une communauté d'enseignant-e-s de l'enseignement supérieur.
+    En conclusion, des pistes de développement sont proposées tant au niveau
+    des supports aux apprentissages que des solutions technologiques. Enfin,
+    un retour critique est proposé sur la méthode de design participatif,
+    ses conditions de mise en oeuvre et ses résultats.}
+}
+@INPROCEEDINGS{Barcenas09a,
+   AUTHOR = {Everardo Bárcenas and Pierre Genevès and Nabil Layaïda},
+   TITLE = {Counting in Trees along Multidirectional Regular Paths},
+   BOOKTITLE = {PLAN-X'09, Proceedings of the ACM SIGPLAN Workshop
+     on Programming Language Techniques for XML},
+   LOCATION = {Savannah, GA, USA},
+   MONTH = JAN,
+   YEAR = 2009,
+   URL = {http://db.ucsd.edu/planx2009/papers.html},
+   URL2 = {http://hal.inria.fr/inria-00358797/en/},
+   x-proceedings = {yes},
+   x-international-audience = {yes},
+   x-pays = {MX},
+   ABSTRACT = {We propose a tree logic capable of expressing simple
+    cardinality constraints on the number of nodes selected by an
+    arbitrarily deep regular path with backward navigation. Specifically,
+    a sublogic of the alternation-free \mu-calculus with converse for
+    finite trees is extended with a counting operator in order to reason
+    on the cardinality of node sets. Also, we developed a bottom-up
+    tableau-based satisfiability-checking algorithm, which resulted to
+    have the same complexity than the logic without the counting
+    operator: a simple exponential in the size of a formula.}
+}
+
+@TECHREPORT{Geneves08c,
+   AUTHOR = {Pierre Genevès and Nabil Layaïda},
+   TITLE = {{XML} Reasoning Solver User Manual},
+   INSTITUTION = {INRIA},
+   TYPE = {{Research Report}},
+   NUMBER = 6726,
+   MONTH = NOV,
+   YEAR = 2008,
+   URL2 = {http://hal.inria.fr/inria-00339184/en},
+   ABSTRACT = {This manual provides documentation for using the
+    logical solver}
+}
+@TECHREPORT{Geneves08b,
+   AUTHOR = {Pierre Genevès and Nabil Layaïda and Vincent Quint},
+   TITLE = {Ensuring Query Compatibility with Evolving {XML} Schemas},
+   INSTITUTION = {INRIA},
+   TYPE = {{Research Report}},
+   NUMBER = 6711,
+   MONTH = NOV,
+   YEAR = 2008,
+   URL = {http://wam.inrialpes.fr/publications/2008/RR6711.pdf},
+   URL2 = {http://hal.inria.fr/inria-00336360/},
+   URL3 = {http://arxiv.org/abs/0811.4324},
+   ABSTRACT = {During the life cycle of an XML application, both schemas
+    and queries may change from one version to another. Schema
+    evolutions may affect query results and potentially the validity
+    of produced data. Nowadays, a challenge is to assess and accommodate
+    the impact of theses changes in rapidly evolving XML applications.
+    This article proposes a logical framework and tool for verifying
+    forward/backward compatibility issues involving schemas and queries.
+    First, it allows analyzing relations between schemas. Second, it
+    allows XML designers to identify queries that must be reformulated
+    in order to produce the expected results across successive schema
+    versions. Third, it allows examining more precisely the impact of
+    schema changes over queries, therefore facilitating their
+    reformulation.}
+}
+@TECHREPORT{Mikac08a,
+   AUTHOR = {Jan Mikác and Cécile Roisin},
+   TITLE = {Comment bâtir un cours multimédia avec LimSee3 ?},
+   INSTITUTION = {EPI},
+   TYPE = {{Article}},
+   MONTH = OCT,
+   YEAR = 2008,
+   URL = {http://wam.inrialpes.fr/publications/2008/LimSee3EPI.pdf},
+   URL2 = {http://www.epi.asso.fr/revue/articles/a0810a.htm},
+   x-pays = {CZ},
+   ABSTRACT = {Nous présentons le logiciel d'édition multimédia LimSee3 :
+     après une revue du paysage actuel des outils d'édition pour le multimédia
+     et de la place que LimSee3 y occupe, nous déroulons un exemple d'utilisation
+     détaillé dans le domaine de l'enseignement, en insistant notamment sur
+     l'utilisation des modèles de documents, la simplicité des gestes de base
+     et la possibilité d'édition plus poussée. Nous concluons en revenant sur
+     les points forts du logiciel par rapport aux outils existants.}
+}
+@INPROCEEDINGS{Roisin08a,
+   AUTHOR = {Jan Mikác and Cécile Roisin and Bao Le Duc},
+   TITLE = {An Export Architecture for a Multimedia Authoring Environment},
+   BOOKTITLE = {DocEng'08: Proceedings of the eigth ACM Symposium on
+                Document Engineering},
+   EDITOR = {D. Bulterman and F. Soares and M. Pimentel},
+   PUBLISHER = {ACM},
+   ISBN = {978-1-60558-081-4},
+   LOCATION = {Sao Paulo, Brazil},
+   MONTH = SEP,
+   YEAR = 2008,
+   PAGES = {28--31},
+   URL = {http://wam.inrialpes.fr/publications/2008/DocEng08.pdf},
+   URL2 = {http://hal.inria.fr/inria-00325692/},
+   DOI = {http://doi.acm.org/10.1145/1410140.1410147},
+   x-proceedings = {yes},
+   x-international-audience = {yes},
+   x-pays = {VN},
+   ABSTRACT = {In this paper, we propose an export architecture that
+    provides a clear  separation of  multimedia authoring services from 
+    publication services. We illustrate this architecture with the 
+    LimSee3 authoring tool and several standard publication formats: 
+    Timesheets, SMIL, and XHTML.}
+}
+@TECHREPORT{Geneves08a,
+   AUTHOR = {Pierre Genevès and Nabil Layaïda and Alan Schmitt},
+   TITLE = {Efficient Static Analysis of {XML} Paths and Types},
+   INSTITUTION = {INRIA},
+   TYPE = {{Research Report}},
+   NUMBER = 6590,
+   MONTH = JUL,
+   YEAR = 2008,
+   URL = {http://wam.inrialpes.fr/publications/2008/RR6590.pdf},
+   URL2 = {http://hal.inria.fr/inria-00305302/},
+   ABSTRACT = {We present an algorithm to solve XPath decision problems
+    under regular tree type constraints and show its use to statically
+    type-check XPath queries. To this end, we prove the decidability of
+    a logic with converse for finite ordered trees whose time complexity
+    is a simple exponential of the size of a formula. The logic corresponds
+    to the alternation free modal \mu-calculus without greatest fixpoint,
+    restricted to finite trees, and where formulas are cycle-free.
+    Our proof method is based on two auxiliary results. First, XML regular
+    tree types and XPath expressions have a linear translation to cycle-free
+    formulas. Second, the least and greatest fixpoints are equivalent for
+    finite trees, hence the logic is closed under negation. Building on
+    these results, we describe a practical, effective system for solving
+    the satisfiability of a formula. The system has been experimented with
+    some decision problems such as XPath emptiness, containment, overlap,
+    and coverage, with or without type constraints. The benefit of the
+    approach is that our system can be effectively used in static analyzers
+    for programming languages manipulating both XPath expressions and XML
+    type annotations (as input and output types).}
+}
+@INPROCEEDINGS{Laborie08a,
+    AUTHOR = {Sébastien Laborie and Jérôme Euzenat and Nabil Layaïda},
+    TITLE = {Adaptation spatio-temporelle et hypermédia de documents multimédia},
+    BOOKTITLE = {Atelier Représentation et Raisonnement sur le Temps et
+                 l'Espace (RTE)},
+    PUBLISHER = {Hermès},
+    LOCATION = {Montpellier (France)},
+    MONTH = JUN,
+    YEAR = {2008},
+    PAGES = {1-13},
+    URL = {http://www.inrialpes.fr/exmo/people/laborie/Papiers/laborie-RTE08.pdf},
+    URL2 = {http://hal.archives-ouvertes.fr/hal-00548857},
+    x-proceedings = {yes},
+    x-international-audience = {no},
+    ABSTRACT = {Currently, multimedia documents may have to be executed
+     on multiple devices such as mobile phones, PDAs, desktop computers,
+     set-top boxes, etc. Hence, usage and platform diversity requires document
+     adaptation according to execution contexts, sometimes unpredictable 
+     at design time. We propose to abstract from format specific details by
+     defining a structure which expresses a set of objects and the relations
+     between them. In order to capture the spatio-temporal and hypermedia
+     dimensions of the document, we point out in this paper that these 
+     objects are multimedia objects and hypermedia links, and that relations
+     between them are spatio-temporal. In this context, adapting amounts to
+     modify in a minimal way the document abstraction according to the target
+     device constraints. In order to show the applicability of our framework,
+     we implement a prototype which adapts SMIL documents.}
+}
+@PHDTHESIS{Laborie08b,
+   AUTHOR = {Sébastien Laborie},
+   TITLE = {Adaptation sémantique de documents multimédia},
+   TYPE = {Thèse de Doctorat},
+   SCHOOL = {Université Joseph Fourier, Grenoble},
+   MONTH = MAY,
+   YEAR = 2008,
+   URL = {http://tel.archives-ouvertes.fr/tel-00284531/},
+   ABSTRACT = {Un document multimédia marie les technologies de l'écrit, de
+    l'image et du son. Actuellement, les documents multimédia doivent pouvoir
+    être exécutés sur de nombreuses plates-formes (téléphones portables, PDA,
+    ordinateurs de bureau, lecteurs de salon...). Cette diversification des
+    utilisations et des supports nécessite l'adaptation des documents à leur
+    contexte d'exécution, parfois imprévisible au moment de la conception du document.
+    Pour s'affranchir des langages ou formats de description multimédia, nous
+    abstrayons les documents en une structure exprimant l'ensemble des relations
+    entre objets du document. Les relations entre objets sont d'ordre temporel,
+    spatial, hypermédia voire inter-dimensionnel, et peuvent être de nature
+    qualitative. Cette structure capture la sémantique des documents car elle
+    est capable de couvrir chacune de ses exécutions potentielles. Dans ce    contexte, adapter va consister à calculer un ensemble d'exécutions le plus
+    proche possible de ces exécutions potentielles qui satisfont les contraintes
+    d'adaptation imposées par une plate-forme cible. À cet effet, les relations
+    de la structure abstraite sont modifiées de sorte de satisfaire ces contraintes
+    d'adaptation. Nous montrons, pour chaque dimension du document, comment réaliser
+    ceci de manière réaliste.
+    Afin de montrer l'applicabilité d'une telle approche, nous la développons dans
+    un cadre adapté au standard SMIL pour lequel nous déclinons les adaptations
+    spatiales, temporelles, spatio-temporelles et hypermédia. Nous sommes amenés à
+    développer des techniques spécifiques pour les représentations spatiales et
+    temporelles efficaces. Nous explorons aussi des approches impliquant la suppression
+    d'objets.}
+}
+@ARTICLE{Geneves08d,
+   AUTHOR = {Pierre Genevès and Nabil Layaïda},
+   TITLE = {Static Analysis of {XML} Programs},
+   JOURNAL = {{ERCIM News}},
+   NUMBER = 72,
+   MONTH = JAN,
+   YEAR = 2008,
+   PAGES = {33-34},
+   x-editorial-board = {no},
+   URL = {http://ercim-news.ercim.org/content/view/326/536/},
+   ABSTRACT = {Static analysers for programs that manipulate Extensible Markup
+    Language (XML) data have been successfully designed and implemented based
+    on a new tree logic by the WAM (Web, Adaptation and Multimedia) research team,
+    a joint lab of INRIA and Laboratoire d'Informatique de Grenoble. This is
+    capable of handling XML Path Language (XPath) and XML types such as
+    Document Type Definitions (DTDs) and XML Schemas.}
+}
+
+@MASTERSTHESIS{Bao07,
+   AUTHOR = {Duc Bao Le},
+   TITLE = {Modèle d'édition de document multimédia},
+   SCHOOL = {Institut de la Francophonie pour l'Informatique, Hanoï},
+   TYPE = {Rapport de Master recherche},
+   PAGES = 66,
+   MONTH = OCT,
+   YEAR = 2007,
+   URL = {http://hal.inria.fr/inria-00194378},
+   ABSTRACT = {Les travaux de ce stage consistent à étudier les techniques
+    d'édition de document multimédia, le modèle d'édition de LimSee3, les
+    propositions et les expérimentations d'exportation de document LimSee3
+    vers les formats de présentation multimédia. Nous présentons les
+    différents modèles d'édition qui sont employés par les outils existants.
+    En plus, nous examinons d'exportation de document LimSee3 vers le format
+    de document multimédia comme SMIL et le format qui ne supporte pas
+    directement d'expression temporelle comme XHTML. En fait, le processus
+    d'exportation est complexe en raison de la diversité de format de
+    présentation de document multimédia. Nous proposons deux approches
+    d'exportation ; l'un utilise Java et l'autre utilise un format
+    intermédiaire avec les feuilles XSL. Le résultat est un cadre
+    d'application offert au service d'exportation et les exportateurs de
+    document LimSee3 vers de formats SMIL, XHTML+CSS+JavaScript, et un
+    ordonnanceur en JavaScript qui permet de rajouter les scénarios temporels
+    aux documents XHTML.}
+}
+@ARTICLE{Geneves06d,
+   AUTHOR = {Pierre Genevès and Nabil Layaïda},
+   TITLE = {Deciding {XPath} Containment with {MSO}},
+   JOURNAL = {Data and Knowledge Engineering (DKE)},
+   VOLUME = 63,
+   NUMBER = 1,
+   MONTH = OCT,
+   YEAR = 2007,
+   PAGES = {108-136},
+   URL = {http://hal.archives-ouvertes.fr/hal-00189134},
+   x-editorial-board = {yes},
+   x-international-audience = {yes},
+   ABSTRACT = {XPath is the standard language for addressing parts of an XML
+    document. We present a sound and complete decision procedure for
+    containment of XPath queries. The considered XPath fragment covers most
+    of the language features used in practice. Specifically, we show how XPath
+    queries can be translated into equivalent formulas in monadic second-order
+    logic. Using this translation, we construct an optimized logical
+    formulation of the containment problem, which is decided using tree
+    automata. When the containment relation does not hold between two XPath
+    expressions, a counter-example XML tree is generated. We provide practical
+    experiments that illustrate the efficiency of the decision procedure for
+    realistic scenarios.}
+}
+@INBOOK{Lemordant07b,
+   AUTHOR = {Jacques Lemordant and Agnès Guerraz},
+   CHAPTER = {Indeterminate Adaptive Digital Audio for Games on Mobiles},
+   TITLE = {From Pac-Man to Pop Music},
+   EDITOR = {Karen Collins},
+   PUBLISHER = {Ashgate},
+   YEAR = 2007,
+   URL = {http://hal.inria.fr/inria-00191124},
+   x-proceedings = {no},
+   x-international-audience = {yes},
+   ABSTRACT = {A mobile game is a video game played on a mobile phone.
+    The game market for mobiles is clearly regarded as a market with a
+    future, as the multiple investments carried out by the large world
+    editors on this segment testify. The mobiles are true platforms of
+    large and general public games: mobile games can be downloaded via
+    the mobile operator's radio network, WLAN, bluetooth or USB connection.
+    Mobiles phones give game developers a unique set of tools and behaviours
+    and with a little creativity, game developers can make some really
+    great games for this platform. The challenges posed by portable devices
+    are numerous, but the biggest complaint of many in the industry is the
+    lack of standards. It is necessary to adapt each game to the various
+    models of existing terminals, which do not offer the same features
+    (memory, processing power, keys...). Consequently, the number of
+    different versions of a game rises to several hundreds. As we will see,
+    Java Micro Edition (J2ME) attempts with some success to solve these
+    problems.}
+}
+@INPROCEEDINGS{Lemordant07a,
+   AUTHOR = {Jacques Lemordant and Agnès Guerraz},
+   TITLE = {Mobile Immersive Music},
+   BOOKTITLE = {Proceedings of the 2007 International Computer Music Conference, ICMC 07},
+   PAGES = {21-24},
+   PUBLISHER = {ICMA, San Francisco},
+   LOCATION = {Copenhagen},
+   MONTH = AUG,
+   YEAR = 2007,
+   URL = {http://hal.inria.fr/inria-00191121},
+   x-proceedings = {yes},
+   x-international-audience = {yes},
+   ABSTRACT = {Due to obvious portability constraints, mobile technology
+    excludes large electronic displays for visual immersion.
+    On the contrary, sound heard over headphones is
+    ideally suited for mobile applications. The use of stereo
+    headphones or stereo speakers on mobile devices enables
+    to take advantage of binaural technology which can provide
+    an immersive sound experience for a variety of applications
+    ranging from stereo widening of music (creating
+    an out of the head listening experience) to full 3-D positional
+    audio. Advances in audio are going to help bring in
+    richer multimedia, increase quality of mobile music and
+    help create more interactive and immersive audio applications.
+    Interaction with sound in 3D audio space is no
+    more limited to indoor environment [8]. In this paper,
+    we report on an architecture for multimedia applications
+    on mobile devices separating content creation (audio and
+    graphics) from content manipulation. We have developed
+    a markup format for interactive and spatialized audio on
+    mobiles which can be used an interface between the sound
+    designer and the application programmer. After presenting
+    an overview of the key concepts in designing a format
+    for interactive and spatialized audio and the methodology
+    used to build the corresponding sound API , we describe
+    its use in a mobile immersive music application for
+    Copenhagen Channels where interactivity with the music
+    is done through GPS waypoints.}
+}
+@INPROCEEDINGS{Quint07b,
+   AUTHOR = {Vincent Quint and Irène Vatton},
+   TITLE = {Editing with Style},
+   BOOKTITLE = {Proceedings of the 2007 ACM Symposium on Document Engineering, DocEng 2007},
+   EDITOR = {S. Simske},
+   PUBLISHER = {ACM Press},
+   LOCATION = {Winnipeg, Canada},
+   MONTH = AUG,
+   YEAR = 2007,
+   PAGES = {151--160},
+   URL = {http://wam.inrialpes.fr/publications/2007/DocEng2007/DocEng2007.html},
+   URL2 = {http://hal.inria.fr/inria-00175596},
+   x-proceedings = {yes},
+   x-international-audience = {yes},
+   ABSTRACT = {HTML has popularized the use of style sheets, and the advent
+   of XML has stressed the importance of style as a key area complementing
+   document structure and content. A number of tools are now available for
+   producing HTML and XML documents, but very few are addressing style
+   issues. In this paper we analyze the requirements for style manipulation
+   tools, based on the main features of the CSS language. We discuss
+   methods and techniques that meet these requirements and that can be used
+   to efficiently support web authors in style sheet manipulation.
+   The discussion is illustrated by the recent developments made in the
+   Amaya web authoring environment.}
+}
+@INPROCEEDINGS{Caillet07b,
+   AUTHOR = {Marc Caillet},
+   TITLE = {Un système expert d'aide à la classification taxonomique de
+      classes de descripteurs},
+   BOOKTITLE = {IC 2007},
+   LOCATION = {Grenoble, France},
+   MONTH = JUL,
+   YEAR = 2007,
+   URL = {http://hal.inria.fr/inria-00192765},
+   x-proceedings = {yes},
+   x-international-audience = {no},
+   ABSTRACT = {Dans le cadre de la valorisation du patrimoine audiovisuel,
+     nous nous intéressons à l'ingénierie d'applications multimédias qui
+     reposent sur des descripteurs de documents audiovisuels. Ces
+     descripteurs sont exprimés dans le langage de description objet FDL
+     qui permet, notamment, l'expression de types de données complexes,
+     définis sous la forme d'une aggrégation de classes de descripteurs,
+     temporellement contrainte par des relations de Allen enrichies de
+     cardinalités et de paramètres temporels. Comment alors, dans le cadre
+     d'un développement objet, définir le lien de spécialisation de classes
+     de descripteurs dont la définition contient de telles aggrégations ?
+     Cet article présente la structure de classification de FDL, ainsi que
+     son opérationnalisation au sein d'un système expert d'aide à la
+     classification de classes de descripteurs audiovisuels.}
+}
+@ARTICLE{Guerraz07,
+   AUTHOR = {Agnès Guerraz and Cécile Roisin and Jan Mikác and
+             Romain Deltour},
+   TITLE = {Multimedia Authoring for Communities of Teachers},
+   JOURNAL = {International Journal of Web-Based Learning and Teaching
+              Technologies},
+   VOLUME = 2,
+   NUMBER = 3,
+   MONTH = JUL,
+   YEAR = 2007,
+   PAGES = {1-18},
+   URL = {http://hal.inria.fr/inria-00189319},
+   x-editorial-board = {yes},
+   x-international-audience = {yes},
+   ABSTRACT = {One way of providing technological support for communities
+    of teachers is to help participants to produce, structure and share
+    information. As this information becomes more and more multimedia in
+    nature, the challenge is to build multimedia authoring and publishing
+    tools that meets requirements of the community. In this paper we analyze
+    these requirements and propose a multimedia authoring model and a generic
+    platform on which specific community-oriented authoring tools can be
+    realized. The main idea is to provide template-based authoring tools
+    while keeping rich composition capabilities and smooth adaptability.
+    It is based on a component-oriented approach integrating homogeneously
+    logical, time and spatial structures. Templates are defined as
+    constraints on these structures.}
+}
+@MASTERSTHESIS{BenMabrouk07,
+   AUTHOR = {Nebil Ben Mabrouk},
+   TITLE = {Décidabilité des requêtes {XPath} avec contraintes de comptage},
+   SCHOOL = {UJF, Grenoble},
+   TYPE = {Rapport de Master recherche},
+   MONTH = JUN,
+   YEAR = 2007,
+   URL = {http://wam.inrialpes.fr/publications/2007/Counting_XPath_Report.pdf},
+   ABSTRACT = {L'émergence du langage XML comme standard pour la structuration et
+    l'échange des données, a rendu nécessaire l'optimisation du langage XPath
+    utilisé pour rechercher et extraire les informations dans les arbres XML.
+    C'est dans ce contexte qu'intervient le problème d'analyse statique d'une
+    logique capable de supporter XPath, auquel se réduisent les problèmes
+    d'inclusion, d'équivalence, de jointure et de satisfaisabilité des
+    requêtes XPath. En fait, pouvoir décider ce type de problèmes en un temps
+    raisonnable permet d'aider à manipuler avec sûreté et efficacité les données
+    XML et peut contribuer à réduire considérablement l'évaluation des requêtes
+    XPath. Jusqu'à présent, les travaux menés par l'équipe WAM de l'INRIA ont
+    permis de résoudre ces problèmes pour un fragment bien précis du langage XPath.
+    Le but à long terme, est d'élargir progressivement le fragment étudié pour
+    couvrir la totalité du langage XPath. L'étape primordiale qui est traitée
+    dans ce mémoire est de considérer le problème de décidabilité pour
+    les requêtes XPath avec contraintes de comptage.}
+}
+@INPROCEEDINGS{Geneves07b,
+   AUTHOR = {Pierre Genevès and Nabil Layaïda and Alan Schmitt},
+   TITLE = {Efficient Static Analysis of {XML} Paths and Types},
+   BOOKTITLE = {PLDI '07: Proceedings of the 2007 ACM SIGPLAN conference on
+    Programming language design and implementation},
+   PUBLISHER = {ACM Press},
+   MONTH = JUN,
+   YEAR = 2007,
+   ISBN = {978-1-59593-633-2},
+   PAGES = {342--351},
+   LOCATION = {San Diego, California, USA},
+   DOI = {http://doi.acm.org/10.1145/1250734.1250773},
+   URL = {http://hal.archives-ouvertes.fr/hal-00189123},
+   x-proceedings = {yes},
+   x-international-audience = {yes},
+   ABSTRACT = {We present an algorithm to solve XPath decision problems
+    under regular tree type constraints and show its use to statically
+    typecheck XPath queries. To this end, we prove the decidability of a
+    logic with converse for finite ordered trees whose time complexity
+    is a simple exponential of the size of a formula. The logic corresponds
+    to the alternation free modal \mu-calculus without greatest
+    fixpoint, restricted to finite trees, and where formulas are cycle-free.
+    Our proof method is based on two auxiliary results. First, XML
+    regular tree types and XPath expressions have a linear translation
+    to cycle-free formulas. Second, the least and greatest fixpoints are
+    equivalent for finite trees, hence the logic is closed under negation.
+    Building on these results, we describe a practical, effective
+    system for solving the satisfiability of a formula. The system has
+    been experimented with some decision problems such as XPath
+    emptiness, containment, overlap, and coverage, with or without
+    type constraints. The benefit of the approach is that our system can
+    be effectively used in static analyzers for programming languages
+    manipulating both XPath expressions and XML type annotations
+    (as input and output types).}
+}
+@INPROCEEDINGS{Caillet07a,
+   AUTHOR = {Marc Caillet and Jean Carrive and Cécile Roisin and François Yvon},
+   TITLE = {Engineering Multimedia Applications on the basis of
+            Multi-Structured Descriptions of Audiovisual Contents},
+   BOOKTITLE = {Proceedings of the 2007 international workshop on Semantically
+                aware document processing and indexing,
+                ACM International Conference Proceedings Series; Vol. 259},
+   PUBLISHER = {ACM},
+   LOCATION = {Montpellier, France},
+   MONTH = MAY,
+   YEAR = 2007,
+   PAGES = {31-40},
+   URL = {http://hal.inria.fr/inria-00189340},
+   x-proceedings = {yes},
+   x-international-audience = {yes},
+   ABSTRACT = {We focus our interest on the engineering of multimedia
+     applications whose purpose is to exploit and make best use
+     of the audiovisual heritage by means of prospective exploration
+     of virtual access to audiovisual documents through
+     multi-structured descriptions of these. Multi-structured
+     descriptions are composed of multiple descriptors that are
+     expressed using the FDL (Feria Description Language) object
+     language whose expressive power is emphasized. FDL notably
+     provides a multimedia developer with operations on
+     descriptions and their inner descriptors, as well as temporal
+     aggregation data types. An experimental multimedia
+     application that makes extensive use of FDL concepts and
+     mechanisms is outlined. It explores the use of syncing between
+     the narrative structure of the text of a play and the
+     narrative structure of different broadcasted performances of
+     this play, at multiple granularity levels.}
+}
+@INPROCEEDINGS{Laborie07a,
+   AUTHOR = {Sébastien Laborie and Jérôme Euzenat and Nabil Layaïda},
+   TITLE = {Multimedia Document Summarization Based on a Semantic Adaptation
+            Framework},
+   BOOKTITLE = {Proceedings of the 2007 international workshop on Semantically
+                aware document processing and indexing,
+                ACM International Conference Proceeding Series; Vol. 259},
+   ISBN = {978-1-15159-668-4},
+   PUBLISHER = {ACM},
+   LOCATION = {Montpellier, France},
+   MONTH = MAY,
+   YEAR = 2007,
+   PAGES = {87-94},
+   URL = {http://hal.inria.fr/inria-00192895},
+   x-proceedings = {yes},
+   x-international-audience = {yes},
+   ABSTRACT = {The multiplication of presentation contexts (such as
+     mobile phones, PDAs) for multimedia documents requires the
+     adaptation of document specifications. In an earlier work,
+     a semantic framework for multimedia document adaptation
+     was proposed. This framework deals with the semantics
+     of the document composition by transforming the relations
+     between multimedia objects. However, it was lacking the
+     capability of suppressing multimedia objects. In this paper,
+     we extend the proposed adaptation with this capability.
+     Thanks to this extension, we present a method for summarizing
+     multimedia documents. Moreover, when multimedia objects are
+     removed, the resulted document satisfies some properties such
+     as presentation contiguity. To validate our framework, we adapt
+     standard multimedia documents such as SMIL documents.}
+}
+@INPROCEEDINGS{Quint07a,
+   AUTHOR = {Vincent Quint and Irène Vatton},
+   TITLE = {Structured Templates for Authoring Semantically Rich Documents},
+   BOOKTITLE = {Proceedings of the 2007 international workshop on Semantically
+                aware document processing and indexing,
+                ACM International Conference Proceeding Series; Vol. 259},
+   ISBN = {978-1-15159-668-4},
+   PUBLISHER = {ACM},
+   LOCATION = {Montpellier, France},
+   MONTH = MAY,
+   YEAR = 2007,
+   PAGES = {41-48},
+   URL = {http://hal.inria.fr/inria-00175582},
+   x-proceedings = {yes},
+   x-international-audience = {yes},
+   ABSTRACT = {Structured documents associate explicit semantics with
+     content, but authoring rigorously structured documents is a very
+     difficult task. We present a new approach to this issue that adds
+     schema-level information to the popular web formats. This makes
+     editing highly structured documents easier, while ensuring that
+     documents are valid. It is also an easy way to publish semantically
+     rich documents on the web. The impact of this approach on authoring
+     tools is discussed and its implementation in the Amaya editor is
+     briefly presented.}
+}
+@TECHREPORT{Guerraz07a,
+   AUTHOR = {Agnès Guerraz},
+   TITLE = {Towards automatic {XML} structure building for Web documents},
+   INSTITUTION = {INRIA},
+   TYPE = {{Research Report}},
+   NUMBER = 6035,
+   MONTH = FEB,
+   YEAR = 2007,
+   URL = {http://hal.inria.fr/inria-00133649},
+   ABSTRACT = {Web documents avalaible through the Internet are frequently
+     supplied simply as poorly-written HTML or as plain text. Indeed, almost
+     all of these Web documents are understandable only by humans, staying
+     unexploitable by softwares and computers. The power of Semantic Web
+     tools and XML technologies can only be deployed on documents having a
+     minimum of formalism in their structure. This paper relates to the
+     structuration process for Web documents that do not have a real structure
+     through markup languages such as XML or definition of grammars for
+     validing them. It deals with building of structure in documents when
+     existing structure is insuficient or inexistant. This subject is
+     closely related to the problems of automatic creation of XML schemas
+     or templates. This work lies concretely within the scope of XML documents
+     and their problems, related to the fact that their structure building and
+     set up is time consuming for the user. Being based on techniques of data
+     mining, information of structures is captured, clarifying and returning
+     the names and the characteristics of structure elements, in particular
+     their relationships, their constraints and their logical organization.
+     This paper proposes a process which makes it possible to calculate
+     automatically elements of structures (1) by applying methods of data
+     mining on documents, (2) by building components of structure automatically,
+     (3) by automatically proposing XML transformations on the final structured
+     document. Initially, this work will use all the range of schemas going
+     from XML schemas to templates.}
+}
+@INPROCEEDINGS{Geneves07a,
+   AUTHOR = {Pierre Genevès and Nabil Layaïda and Alan Schmitt},
+   TITLE = {{XPath} Typing Using a Modal Logic with Converse for Finite Trees},
+   BOOKTITLE = {PLAN-X 2007, Programming Languages Technologies for XML},
+   LOCATION = {Nice, France},
+   PAGES = {61-72},
+   MONTH = JAN,
+   YEAR = 2007,
+   URL = {http://www.plan-x-2007.org/plan-x-2007.pdf},
+   URL2 = {http://hal.archives-ouvertes.fr/hal-00189131},
+   x-proceedings = {yes},
+   x-international-audience = {yes},
+   ABSTRACT = {We present an algorithm to solve XPath decision problems under
+    regular tree type constraints and show its use to statically typecheck
+    XPath queries. To this end, we prove the decidability of a logic with
+    converse for finite ordered trees whose time complexity is a simple
+    exponential of the size of a formula. The logic corresponds 
+    to the alternation free modal \mu-calculus without greatest
+    fixpoint restricted to finite trees where formulas are cycle-free.
+    Our proof method is based on two auxiliary results. First, XML
+    regular tree types and XPath expressions have a linear translation
+    to cycle-free formulas. Second, the least and greatest fixpoints are
+    equivalent for finite trees, hence the logic is closed under negation.
+    With these proofs, we describe a practically effective system
+    for solving the satisfiability of a formula. The system has been
+    experimented with some decision problems such as XPath emptiness,
+    containment, overlap, and coverage, with or without type constraints.
+    The benefit of the approach is that our system can be effectively
+    used in static analyzers for programming languages manipulating
+    both XPath expressions and XML type annotations (as input
+    and output types).}
+}
+
+@PHDTHESIS{Geneves06c,
+   AUTHOR = {Pierre Genevès},
+   TITLE = {Logics for XML},
+   TYPE = {Thèse de Doctorat},
+   SCHOOL = {INPG, Grenoble},
+   MONTH = DEC,
+   YEAR = 2006,
+   URL = {http://wam.inrialpes.fr/publications/2006/geneves-phd.pdf},
+   URL2 = {http://tel.archives-ouvertes.fr/tel-00133591/},
+   ABSTRACT = {This thesis describes the theoretical and practical foundations
+    of a system for the static analysis of XML processing languages. The
+    system relies on a fixpoint temporal logic with converse, derived from
+    the \mu-calculus, where models are finite trees. This calculus is
+    expressive enough to capture regular tree types along with
+    multi-directional navigation in trees, while having a single exponential
+    time complexity. Specifically the decidability of the logic is proved
+    in time $2^{O(n)}$ where $n$ is the size of the input formula. Major XML
+    concepts are linearly translated into the logic: XPath navigation
+    and node selection semantics, and regular tree languages (which include
+    DTDs and XML Schemas). Based on these embeddings, several problems of
+    major importance in XML applications are reduced to satisfiability of the
+    logic. These problems include XPath containment, emptiness, equivalence,
+    overlap, coverage, in the presence or absence of regular tree type
+    constraints, and the static type-checking of an annotated query.
+    The focus is then given to a sound and complete algorithm for deciding the
+    logic, along with a detailed complexity analysis, and crucial
+    implementation techniques for building an effective solver. Practical
+    experiments using a full implementation of the system are presented.
+    The system appears to be efficient in practice for several realistic
+    scenarios. The main application of this work is a new class of static
+    analyzers for programming languages using both XPath expressions and XML
+    type annotations (input and output). Such analyzers allow to ensure at
+    compile-time valuable properties such as type-safety and optimizations,
+    for safer and more efficient XML processing.}
+}
+@INPROCEEDINGS{Laborie06a,
+   AUTHOR = {Sébastien Laborie and Jérôme Euzenat and Nabil Layaïda},
+   TITLE = {A Spatial Algebra for Multimedia Document Adaptation},
+   BOOKTITLE = {Proceedings of the 1st International Conference on Semantic and Digital Media Technologies (SAMT)},
+   LOCATION = {Athens, Greece},
+   MONTH = DEC,
+   YEAR = 2006,
+   URL = {http://hal.archives-ouvertes.fr/hal-00167160/},
+   x-proceedings = {yes},
+   x-international-audience = {yes},
+   ABSTRACT = {The multiplication of execution contexts for multimedia
+    documents requires the adaptation of document specifications. This paper
+    instantiates our previous semantic approach for multimedia document
+    adaptation to the spatial dimension of multimedia documents. Our goal is
+    to find a qualitative spatial representation that computes, in a reasonable
+    time, a set of adaptation solutions close to the initial document satisfying
+    a profile. The quality of an adaptation can be regarded in two respects:
+    expressiveness of adaptation solutions and computation speed. In this
+    context, we propose a new spatial representation sufficiently expressive
+    to adapt multimedia documents faster.}
+}
+@ARTICLE{Geneves06b,
+   AUTHOR = {Pierre Genevès and Nabil Layaïda},
+   TITLE = {A System for the Static Analysis of {XPath}},
+   JOURNAL = {ACM Transactions on Information Systems (TOIS)},
+   VOLUME = 24,
+   NUMBER = 4,
+   MONTH = OCT,
+   YEAR = 2006,
+   PAGES = {475-502},
+   URL = {http://hal.archives-ouvertes.fr/hal-00189137},
+   x-international-audience = {yes},
+   x-editorial-board = {yes},
+   ABSTRACT = {XPath is the standard language for navigating XML documents and
+    returning a set of matching nodes. We present a sound and complete decision
+    procedure for containment of XPath queries as well as other related XPath
+    decision problems such as satisfiability, equivalence, overlap and
+    coverage. The considered XPath fragment covers most of the language
+    features used in practice. Specifically, we propose a unifying logic for
+    XML, namely the alternation-free modal \mu-calculus with converse. We
+    show how to translate major XML concepts such as XPath and regular XML
+    types (including DTDs) into this logic. Based on these embeddings, we
+    show how XPath decision problems, in the presence or the absence of XML
+    types, can be solved using a decision procedure for \mu-calculus
+    satisfiability. We provide a complexity analysis together with practical
+    experiments of our system that illustrate the efficiency of the approach
+    for realistic scenarios.}
+}
+@INPROCEEDINGS{Deltour06a,
+   AUTHOR = {Romain Deltour and Agnès Guerraz and Cécile Roisin},
+   TITLE = {Multimedia Authoring for {CoPs}},
+   BOOKTITLE = {{TEL-CoPs'06}, 1st International Workshop on Building Technology Enhanced Learning solutions for Communities of Practice},
+   LOCATION = {Crete, Greece},
+   MONTH = OCT,
+   YEAR = 2006,
+   URL = {http://wam.inrialpes.fr/publications/2006/TelCops06DeltourGuerrazRoisin.pdf},
+   URL2 = {http://palette.cti.gr/workshops/telcops06.htm},
+   x-proceedings = {yes},
+   x-international-audience = {yes},
+   ABSTRACT = {One way of providing technological support for CoPs is to help
+    participants to produce, structure and share information. As this
+    information becomes more and more multimedia in nature, the challenge is
+    to build multimedia authoring and publishing tools that meets CoPs
+    requirements. In this paper we analyze these requirements and propose a
+    multimedia authoring model and a generic platform on which specific
+    CoPs-oriented authoring tools can be realized. The main idea is to
+    provide template-based authoring tools while keeping rich composition
+    capabilities and smooth adaptability. It is based on a component-oriented
+    approach integrating homogeneously logical, time and spatial structures.
+    Templates are defined as constraints on these structures.}
+}
+@INPROCEEDINGS{Deltour06,
+   AUTHOR = {Romain Deltour and Cécile Roisin},
+   TITLE = {The {LimSee3} Multimedia Authoring Model},
+   BOOKTITLE = {Proceedings of the 2006 ACM Symposium on Document Engineering, DocEng 2006},
+   EDITOR = {D. Brailsford},
+   PUBLISHER = {ACM Press},
+   LOCATION = {Amsterdam, The Netherlands},
+   MONTH = OCT,
+   YEAR = 2006,
+   PAGES = {173-175},
+   URL = {http://wam.inrialpes.fr/publications/2006/DocEng06-DeltourRoisin.pdf},
+   URL2 = {http://hal.inria.fr/inria-00189360/},
+   DOI = {http://doi.acm.org/10.1145/1166160.1166203},
+   x-proceedings = {yes},
+   x-international-audience = {yes},
+   ABSTRACT = {For most users, authoring multimedia documents remains a complex
+    task. One solution to deal with this problem is to provide template-based
+    authoring tools but with the drawback of limited functionality. In this
+    paper we propose a document model dedicated to the creation of authoring
+    tools using templates while keeping rich composition capabilities. It is
+    based on a component oriented approach integrating homogeneously logical,
+    time and spatial structures. Templates are defined as constraints on these
+    structures.}
+}
+@INPROCEEDINGS{Geneves06a,
+   AUTHOR = {Pierre Genevès and Nabil Layaïda},
+   TITLE = {Comparing {XML} Path Expressions},
+   BOOKTITLE = {Proceedings of the 2006 ACM Symposium on Document Engineering, DocEng 2006},
+   EDITOR = {D. Brailsford},
+   PUBLISHER = {ACM Press},
+   LOCATION = {Amsterdam, The Netherlands},
+   MONTH = OCT,
+   YEAR = 2006,
+   PAGES = {65-74},
+   URL = {http://wam.inrialpes.fr/publications/2006/CompXPathExp.pdf},
+   URL2 = {http://hal.inria.fr/inria-00423062/},
+   DOI = {http://doi.acm.org/10.1145/1166160.1166182},
+   x-proceedings = {yes},
+   x-international-audience = {yes},
+   ABSTRACT = {XPath is the standard declarative language for navigating XML
+    data and returning a set of matching nodes. In the context of XSLT/XQuery
+    analysis, query optimization, and XML type checking, XPath decision
+    problems arise naturally. They notably include XPath comparisons such as
+    equivalence (whether two queries always return the same result), and
+    containment (whether for any tree the result of a particular query is
+    included in the result of a second one). XPath decision problems have
+    attracted a lot of research attention, especially for studying the
+    computational complexity of various XPath fragments. However, what is
+    missing at present is the constructive use of an expressive logic which
+    would allow capturing these decision problems, while providing
+    practically effective decision procedures. In this paper, we propose a
+    logic-based framework for the static analysis of XPath. Specifically, we
+    propose the alternation free modal \mu-calculus with converse as the
+    appropriate logic for effectively solving XPath decision problems. We
+    present a translation of a large XPath fragment into \mu-calculus,
+    together with practical experiments on the containment using a
+    state-of-the-art EXPTIME decision procedure for \mu-calculus
+    satisfiability. These preliminary experiments shed light, for the first
+    time, on the cost of checking the containment in practice. We believe
+    they reveal encouraging results for further static analysis of XML
+    transformations.}
+}
+@INPROCEEDINGS{Campoy06a,
+   AUTHOR = {Francesc Campoy Flores and Vincent Quint and Irène Vatton},
+   TITLE = {Templates, Microformats and Structured Editing},
+   BOOKTITLE = {Proceedings of the 2006 ACM Symposium on Document Engineering, DocEng 2006},
+   EDITOR = {D. Brailsford},
+   PUBLISHER = {ACM Press},
+   LOCATION = {Amsterdam, The Netherlands},
+   MONTH = OCT,
+   YEAR = 2006,
+   PAGES = {188-197},
+   URL = {http://wam.inrialpes.fr/publications/2006/DocEng/DocEng2006.html},
+   URL2 = {http://hal.inria.fr/inria-00193958},
+   x-proceedings = {yes},
+   x-international-audience = {yes},
+   x-pays = {ES},
+   ABSTRACT = {Microformats and semantic XHTML add semantics to web pages while
+    taking advantage of the existing (X)HTML infrastructure. This approach
+    enables new applications that can be deployed smoothly on the web. But
+    there is currently no way to describe rigorously this type of markup and
+    authors of web pages have very little help for creating and encoding
+    semantic markup. A language that addresses these issues is presented in
+    this paper. Its role is to specify semantically rich XML languages in terms
+    of other XML languages, such as XHTML. The language is versatile enough to
+    represent templates that can capture the overall structure of large
+    documents as well as the fine details of a microformat. It is supported<
+    markup language, still fully compatible with XHTML.}
+}
+@MASTERSTHESIS{Campoy06,
+   AUTHOR = {Francesc Campoy Flores},
+   TITLE = {{XTiger} : Templates, Microformats et d'Autres (Petites) Choses},
+   SCHOOL = {UJF, Grenoble},
+   TYPE = {Rapport de {Master}},
+   MONTH = JUN,
+   YEAR = 2006,
+   URL = {http://wam.inrialpes.fr/publications/2006/CampoyFlores.pdf}
+}
+@TECHREPORT{Geneves06aa,
+   AUTHOR = {Pierre Genevès and Nabil Layaïda},
+   TITLE = {Mu-Calculus Based Resolution of XPath Decision Problems},
+   INSTITUTION = {INRIA},
+   TYPE = {{Research Report}},
+   NUMBER = 5868,
+   MONTH = MAR,
+   YEAR = 2006,
+   URL = {ftp://ftp.inria.fr/INRIA/publication/publi-pdf/RR/RR-5868.pdf},
+   ABSTRACT = {XPath is the standard declarative notation for navigating
+    XML data and returning a set of matching nodes. In the context of
+    XSLT/XQuery analysis, query optimization, and XML type checking, XPath
+    decision problems arise naturally. They notably include XPath containment
+    (whether or not for any tree the result of a particular query is included
+    in the result of a second one), and XPath satisfiability (whether or not
+    an expression yields a non-empty result), in the presence (or the absence)
+    of XML DTDs. In this paper, we propose a unifying logic for XML, namely
+    the alternation-free modal \mu-calculus with converse. We show how to
+    translate major XML concepts such as XPath and DTDs into this logic.
+    Based on these embeddings, we show how XPath decision problems can be
+    solved using a state-of-the-art EXPTIME decision procedure for \mu-calculus
+    satisfiability. We provide preliminary experiments which shed light, for
+    the first time, on the cost of solving XPath decision problems in practice.}
+}
+@TECHREPORT{Geneves06,
+   AUTHOR = {Pierre Genevès and Nabil Layaïda},
+   TITLE = {A Decision Procedure for {XPath} Containment},
+   INSTITUTION = {INRIA},
+   TYPE = {{Research Report}},
+   NUMBER = 5867,
+   MONTH = MAR,
+   YEAR = 2006,
+   URL = {ftp://ftp.inria.fr/INRIA/publication/publi-pdf/RR/RR-5867.pdf},
+   URL2 = {http://hal.inria.fr/inria-00070159/},
+   ABSTRACT = {XPath is the standard language for addressing parts of an XML
+    document. We present a sound and complete decision procedure for
+    containment of XPath queries. The considered XPath fragment covers
+    most of the language features used in practice. Specifically, we show
+    how XPath queries can be translated into equivalent formulas in monadic
+    second-order logic. Using this translation, we construct an optimized
+    logical formulation of the containment problem, which is decided using
+    tree automata. When the containment relation does not hold between two
+    XPath expressions, a counter-example XML tree is generated. We provide
+    a complexity analysis together with practical experiments that illustrate
+    the efficiency of the decision procedure for realistic scenarios.}
+}
+@INPROCEEDINGS{Laborie06,
+   AUTHOR = {Sébastien Laborie and Jérôme Euzenat and Nabil Layaïda},
+   TITLE = {Adaptation spatiale efficace de documents {SMIL}},
+   BOOKTITLE = {{RFIA} 2006},
+   LOCATION = {Tours, France},
+   MONTH = JAN,
+   YEAR = 2006,
+   URL = {http://wam.inrialpes.fr/publications/2006/rfia2006-Laborie.pdf},
+   URL2 = {http://hal.archives-ouvertes.fr/hal-00023822/},
+   ABSTRACT = {The multiplication of execution contexts for multimedia
+   x-proceedings = {yes},
+   x-international-audience = {no},
+    documents requires the adaptation of document specifications to the
+    particularities of the contexts. We proposed a semantic approach to
+    multimedia document adaptation which was temporally defined with regards
+    to the Allen algebra of relations. This paper extends this framework to 
+    the spatial dimension of SMIL documents. Our goal is to find a qualitative
+    spatial representation that computes a set of adaptation solutions close
+    to the initial document respecting the adaptation constraints. The quality
+    of an adaptation can be regarded on two respects : expressiveness of
+    adaptation solutions and computation speed. In this context, we
+    characterize the adaptation quality of existing spatial representations.
+    We show that these representations do not allow for optimal quality.
+    Thus, we propose a new spatial representation which is sufficiently
+    expressive to adapt SMIL documents faster.}
+}
+
+@ARTICLE{Layaida05b,
+   AUTHOR = {Nabil Layaïda and Tayeb Lemlouma and Vincent Quint},
+   TITLE = {{NAC}, une architecture pour l'adaptation multimédia sur le web},
+   JOURNAL = {Technique et Science Informatiques {(TSI)}},
+   YEAR = 2005,
+   VOLUME = 24,
+   NUMBER = 7,
+   PAGES = {789-813},
+   URL = {http://wam.inrialpes.fr/publications/2005/TSI-NAC.pdf},
+   URL2 = {http://hal.inria.fr/inria-00423067/},
+   x-editorial-board = {yes},
+   x-international-audience = {no},
+   ABSTRACT = {The Web is evolving towards richer contents and diverse media
+    that are accessed with different devices through multiple kinds of network.
+    This heterogeneous, mobile and changing environment requires that
+    multimedia information delivered by servers be adapted to the actual
+    conditions of use. For that purpose, a number of methods, languages,
+    formats and protocols are developed, especially by W3C. The NAC
+    architecture presented in this article was designed and implemented based
+    on these technologies, focusing on adaptation processing, on environment
+    description models, on negotiation protocols, and on content
+    transformations.}
+}
+@TECHREPORT{Bulterman05,
+   AUTHOR = {Dick Bulterman and Guido Grassel and Jack Jansen and
+    Antti Koivisto and Nabil Layaïda and Thierry Michel and Sjoerd Mullender
+    and Daniel Zucker},
+   TITLE = {Synchronized Multimedia Integration Language {(SMIL 2.1)}},
+   TYPE = {{W3C} Recommendation},
+   INSTITUTION = {World Wide Web Consortium},
+   MONTH = DEC,
+   YEAR = 2005,
+   URL = {http://www.w3.org/TR/SMIL2/},
+   ABSTRACT = {This document specifies the second version of the
+    Synchronized Multimedia Integration Language (SMIL, pronounced "smile").
+    SMIL 2.1 has the following design goals:
+    1) Define an XML-based language that allows authors to write interactive
+    multimedia presentations. Using SMIL, an author can describe the temporal
+    behaviour of a multimedia presentation, associate hyperlinks with media
+    objects and describe the layout of the presentation on a screen.
+    2) Allow reusing of SMIL syntax and semantics in other XML-based languages,
+    in particular those who need to represent timing and synchronization.
+    For example, SMIL components are used for integrating timing into XHTML
+    and into SVG.
+    3) Extend the functionalities contained in the SMIL 2.0 into new or
+    revised SMIL 2.1 modules.
+    4) Define new SMIL 2.1 Mobile Profiles incorporating features useful
+    within the mobile industry.}
+}
+@TECHREPORT{Layaida05a,
+   AUTHOR = {Nabil Layaïda},
+   TITLE = {{SMIL 2.1} Language Profile},
+   TYPE = {{W3C} Recommendation},
+   INSTITUTION = {World Wide Web Consortium},
+   MONTH = DEC,
+   YEAR = 2005,
+   URL = {http://www.w3.org/TR/SMIL2/smil21-profile.html},
+   ABSTRACT = {The SMIL 2.1 Language Profile describes the SMIL 2.1 modules
+   that are included in the SMIL 2.1 Language and details how these modules
+   are integrated. It contains support for all of the major SMIL 2.1 features
+   including animation, content control, layout, linking, media object,
+   meta-information, structure, timing and transition effects. It is
+   designed for Web clients that support direct playback from SMIL 2.1 markup.}
+}
+@TECHREPORT{Layaida05,
+   AUTHOR = {Nabil Layaïda},
+   TITLE = {{SMIL 2.1} Basic Profile and Scalability Framework},
+   TYPE = {{W3C} Recommendation},
+   INSTITUTION = {World Wide Web Consortium},
+   MONTH = DEC,
+   YEAR = 2005,
+   URL = {http://www.w3.org/TR/SMIL2/smil-basic.html},
+   ABSTRACT = {SMIL 2.1 provides a scalability framework, where a family of
+   scalable SMIL profiles can be defined using subsets of the SMIL 2.1
+   language profile. A SMIL document can be authored conforming to a
+   scalable SMIL profile such that it provides limited functionality on
+   a resource-constrained device while allowing richer capabilities on a
+   more capable device. SMIL 2.1 Basic (or SMIL Basic) is a profile that
+   meets the needs of resource-constrained devices such as minimum capability
+   mobile phones. The SMIL Basic profile provides the basis for defining
+   scalable SMIL profiles. SMIL Basic is SMIL host language conformant.
+   It consists of precisely those modules that are required for SMIL host
+   language conformance. This section defines the SMIL 2.1 Basic profile
+   and requirements for conforming SMIL Basic documents and SMIL Basic
+   user agents. More, it describes scalable SMIL profiles, guidelines
+   for defining them, and their conformance requirements.}
+}
+@INPROCEEDINGS{Lemlouma05,
+   AUTHOR = {Tayeb Lemlouma and Nabil Layaïda},
+   TITLE = {Content Interaction and Formatting for Mobile Devices},
+   BOOKTITLE = {Proceedings of the 2005 ACM Symposium on Document Engineering, DocEng 2005},
+   EDITOR = {P. King},
+   PUBLISHER = {ACM Press},
+   LOCATION = {Bristol, UK},
+   MONTH = NOV,
+   YEAR = 2005,
+   PAGES = {98-100},
+   URL = {http://wam.inrialpes.fr/publications/2005/DocEng05-Layaida.pdf},
+   URL2 = {http://hal.inria.fr/inria-00423312/},
+   DOI = {http://doi.acm.org/10.1145/1096601.1096627},
+   ABSTRACT = {In this paper we present a content adaptation system for mobile
+    devices. The system enables the presentation of multimedia content and
+    considers the problem of small screen display of mobile terminals. The
+    approach combines structural and media adaptation with the content
+    formatting and proposes a system that handles the user interaction and
+    the content navigation.}
+}
+@INPROCEEDINGS{Geneves05,
+   AUTHOR = {Pierre Genevès and Kristoffer Rose},
+   TITLE = {Compiling {XPath} for Streaming Access Policy},
+   BOOKTITLE = {Proceedings of the 2005 ACM Symposium on Document Engineering, DocEng 2005},
+   EDITOR = {P. King},
+   PUBLISHER = {ACM Press},
+   LOCATION = {Bristol, UK},
+   MONTH = NOV,
+   YEAR = 2005,
+   PAGES = {52-54},
+   URL = {http://wam.inrialpes.fr/publications/2005/DocEng05-Geneves.pdf},
+   URL2 = {http://hal.inria.fr/inria-00423319/},
+   DOI = {http://doi.acm.org/10.1145/1096601.1096617},
+   ABSTRACT = {We show how the full XPath language can be compiled into a
+    minimal subset suited for stream-based evaluation. Specifically, we show
+    how XPath normalization into a core language as proposed in the current W3C
+    Last Call draft of the XPath/XQuery Formal Semantics can be
+    extended such that both the context state and reverse axes can be
+    eliminated from the core XPath (and potentially XQuery) language. This
+    allows execution of (almost) full XPath on any of the emerging streaming
+    subsets.}
+}
+@INPROCEEDINGS{Quint05,
+   AUTHOR = {Vincent Quint and Irène Vatton},
+   TITLE = {Towards Active Web Clients},
+   BOOKTITLE = {Proceedings of the 2005 ACM Symposium on Document Engineering, DocEng 2005},
+   EDITOR = {P. King},
+   PUBLISHER = {ACM Press},
+   LOCATION = {Bristol, UK},
+   MONTH = NOV,
+   YEAR = 2005,
+   PAGES = {168-176},
+   URL = {http://wam.inrialpes.fr/publications/2005/DocEng05-Quint.pdf},
+   URL2 = {http://hal.inria.fr/inria-00423328/},
+   DOI = {http://doi.acm.org/10.1145/1096601.1096646},
+   ABSTRACT = {Recent developments of document technologies have strongly
+    impacted the evolution of Web clients over the last fifteen years, but all
+    Web clients have not taken the same advantage of this advance. In
+    particular, mainstream tools have put the emphasis on accessing existing
+    documents to the detriment of a more cooperative usage of the Web. However,
+    in the early days, Web users were able to go beyond browsing and to get
+    more actively involved. This paper presents the main features needed to
+    make Web clients more active and creative tools, by taking advantage of the
+    latest advances of document technology. These features are implemented in
+    Amaya, a user agent that supports several languages from the XML family
+    and integrates seamlessly such complementary functionalities as browsing,
+    editing, publishing, and annotating.}
+}
+@INPROCEEDINGS{Choumane05,
+   AUTHOR = {Ali Choumane and Hervé Blanchon and Cécile Roisin},
+   TITLE = {Integrating Translation Services within a Structured Editor},
+   BOOKTITLE = {Proceedings of the 2005 ACM Symposium on Document Engineering, DocEng 2005},
+   EDITOR = {P. King},
+   PUBLISHER = {ACM Press},
+   LOCATION = {Bristol, UK},
+   MONTH = NOV,
+   YEAR = 2005,
+   PAGES = {165-167},
+   URL = {http://wam.inrialpes.fr/publications/2005/DocEng05-Choumane.pdf},
+   URL2 = {http://hal.inria.fr/inria-00423333/},
+   DOI = {http://doi.acm.org/10.1145/1096601.1096644},
+   ABSTRACT = {Fully automatic machine translation cannot produce high quality
+    translation; Dialog-Based Machine Translation (DB-MT) is the only way to
+    provide authors with a means of translating documents in languages they
+    have not mastered, or do not even know. With such environment, the author
+    must help the system to understand the document by means of an
+    interactive disambiguation step. In this pa- per we study the
+    consequences of integrating the DBMT services within a structured
+    document editor (Amaya). The source document (named edited document)
+    needs a compan- ion document enriched with dierent data produced during
+    the interactive translation process (question trees, answers of the
+    author, translations). The edited document also needs to be enriched
+    (annotated) in order to enable access to the question trees. The enriched
+    edited document and the com- panion document have to be synchronized in
+    case the edited document is further updated.}
+}
+@INPROCEEDINGS{Caillet05a,
+   AUTHOR = {Marc Caillet and Jean Carrive and Vincent Brunie and Cécile Roisin},
+   TITLE = {{PACE:} an Experimental Web-Based Audiovisual Application using {FDL}},
+   BOOKTITLE = {Web Document Analysis 2005},
+   LOCATION = {Singapour},
+   MONTH = AUG,
+   YEAR = 2005,
+   URL = {http://wam.inrialpes.fr/publications/2005/CailletWDA05.pdf},
+   URL2 = {http://hal.inria.fr/inria-00423351/},
+   ABSTRACT = {This paper describes the PACE experimental multimedia
+    application that aims at providing automatic tools for web browsing of
+    television program collections; experimentations are currently in progress
+    with a fifty-four Le Grand Échiquier show collection. PACE has been built
+    with the FERIA framework and relies on multiple automatic analysis tools.
+    It is generic enough to easily adapt to other collections. Emphasis is
+    made on the new audiovisual documents description language FDL as it is
+    the core part of FERIA, with a particular attention paid on how it
+    operates in PACE.}
+}
+@ARTICLE{Deltour05,
+   AUTHOR = {Romain Deltour and Nabil Layaïda and Daniel Weck},
+   TITLE = {{LimSee2}: A Cross-Platform {SMIL} Authoring Tool},
+   JOURNAL = {{ERCIM News}},
+   NUMBER = 62,
+   MONTH = JUL,
+   YEAR = 2005,
+   x-editorial-board = {no},
+   URL = {http://wam.inrialpes.fr/publications/2005/LimSee2-ERCIM.html},
+   ABSTRACT = {LimSee2 is an open-source and cross-platform authoring tool
+    dedicated to the manipulation of time-based multimedia documents for the
+    Web. It relies on the SMIL standard of the World Wide Web
+    Consortium (W3C).}
+}
+@INPROCEEDINGS{Laborie05,
+   AUTHOR = {Sébastien Laborie and Jérôme Euzenat and Nabil Layaïda},
+   TITLE = {Adapter temporellement un document {SMIL}},
+   BOOKTITLE = {Atelier Connaissance et Documents Temporels, {AFIA} 2005},
+   MONTH = MAY,
+   YEAR = 2005,
+   PAGES = {47-58},
+   x-proceedings = {yes},
+   x-international-audience = {no},
+   URL = {http://wam.inrialpes.fr/publications/2005/afia2005CDT.pdf},
+   ABSTRACT = {Les récentes avancées technologiques permettent aux documents
+    multimédia d'être présentés sur de nombreuses plates-formes (ordinateurs de
+    bureau, PDA, téléphones portables. . .). Cette diversification des
+    supports a entraîné un besoin d'adaptation des documents à leur
+    contexte d'exécution. Une approche sémantique
+    d'adaptation de documents multimédia a été proposée et
+    temporellement définie à l'aide de l'algèbre
+    d'intervalles d'Allen. Cet article étend ces précédents
+    travaux en les appliquant au langage de spécification de documents
+    multimédia SMIL. Pour cela, des fonctions de traduction de SMIL vers
+    l'algèbre de Allen (et inversement) ont été définies. Celles-ci
+    préservent la proximité entre le document adapté et le document initial.}
+}
+@INPROCEEDINGS{Caillet05,
+   AUTHOR = {Marc Caillet and Jean Carrive and Cécile Roisin},
+   TITLE = {Description des documents audiovisuels: s'affranchir des limitations de {MPEG-7}},
+   BOOKTITLE = {MetSI/Inforsid},
+   MONTH = MAY,
+   YEAR = 2005,
+   x-proceedings = {yes},
+   x-international-audience = {no},
+   URL = {http://wam.inrialpes.fr/publications/2005/CailletInforsid2005-2.pdf},
+   ABSTRACT = {The National Institute of Audiovisual (INA) has to face the
+    consequences of audiovisual contents digitalization. Among those
+    consequences, new access modes to audiovisual content are defining a class
+    of new multimedia applications, focused on content description. This
+    article evaluates the standard multimedia description language MPEG-7 as
+    an applicant to fulfill our needs of expressiveness. Coming to the
+    conclusion that it's not fulfilling them all, we propose our own
+    language, FDL, as an alternative.}
+}
+
+@INPROCEEDINGS{Layaida04a,
+   AUTHOR = {Nabil Layaïda and Cécile Roisin},
+   TITLE = {Le temps dans les documents - Langage SMIL},
+   BOOKTITLE = {Document numériques -- Gestion de contenu},
+   PUBLISHER = {Techniques de l'Ingénieur},
+   ADDRESS = {249 rue de Crimée, 75925 Paris Cedex 19},
+   YEAR = 2004,
+   URL = {http://www.techniques-ingenieur.fr/book/h7228/le-temps-dans-les-documents.html},
+   ABSTRACT = {La production et l'accès de plus en plus aisé aux contenus
+    multimédias numériques suscitent naturellement l'envie de les intégrer pour
+    réaliser des « documents multimédias » dans lesquels le sens est apporté
+    non seulement par le contenu de chacun des éléments de la présentation mais
+    aussi par la synchronisation (spatiale et/ou temporelle) et les liens de
+    navigation entre ces éléments. Depuis plusieurs années, un effort
+    important de recherche et de standardisation de ces formats d'intégration
+    a été apporté (SMIL, MPEG4). Les éléments de contenu eux-mêmes font
+    l'objet de standard pour enrichir leur niveau de description (MPEG7).
+    Dans ce chapitre, nous présentons les concepts et les besoins liés à
+    l'introduction d'une dimension temporelle dans les documents
+    électroniques, ainsi que les solutions actuelles apportées à ce domaine :
+    outils existants, standards, prototypes de recherche.
+    Tirant parti des possibilités offertes par ces techniques, nous étudions
+    les besoins des utilisateurs à différents niveaux de la chaîne de
+    production des présentations et montrons comment les outils répondent à
+    ces attentes, en particulier en matière de pouvoir d'expression, de
+    réutilisation et de facilité d'édition.
+    Ce document est organisé en quatre grandes parties : une introduction
+    générale sur la notion de documents multimédia et des domaines
+    d'application concernés, l'étude des caractéristiques et des fonctions
+    souhaitées pour la spécification de documents multimédia, l'étude
+    détaillée du format standard SMIL et enfin la présentation de différents
+    outils de présentation et d'édition de documents multimédia.}
+}
+@BOOK{VionDury04,
+   EDITOR = {Jean-Yves Vion-Dury},
+   TITLE = {Proceedings of the 2004 ACM Symposium on Document Engineering},
+   PUBLISHER = {ACM Press},
+   ADDRESS = {New York, NY, USA},
+   MONTH = OCT,
+   YEAR = 2004
+}
+@INPROCEEDINGS{Geneves04d,
+   AUTHOR = {Pierre Genevès and Jean-Yves Vion-Dury},
+   TITLE = {Logic-Based {XPath} Optimization},
+   BOOKTITLE = {Proceedings of the 2004 ACM symposium on Document Engineering, DocEng 2004},
+   EDITOR = {J.-Y. Vion-Dury},
+   PUBLISHER = {ACM Press},
+   LOCATION = {Milwaukee, WI, USA},
+   ISBN = {1-58113-938-1},
+   PAGES = {211-219},
+   MONTH = OCT,
+   YEAR = 2004,
+   URL = {http://wam.inrialpes.fr/publications/2004/VionDuryGenevesDocEng2004.pdf},
+   URL2 = {http://hal.inria.fr/inria-00423355/},
+   DOI = {http://doi.acm.org/10.1145/1030397.1030437},
+   ABSTRACT = {XPath was introduced by the W3C as a standard language for
+    specifying node selection, matching conditions, and for computing values
+    from an XML document. XPath is now used in many XML standards such as XSLT
+    and the forthcoming XQuery database access language. Since efficient XML
+    content querying is crucial for the performance of almost all XML
+    processing architectures, a growing need for studying high performance
+    XPath-based querying has emerged. Our approach aims at optimizing XPath
+    performance through static analysis and syntactic transformation of XPath
+    expressions.}
+}
+@INPROCEEDINGS{Quint04a,
+   AUTHOR = {Vincent Quint and Irène Vatton},
+   TITLE = {Techniques for Authoring Complex {XML} Documents},
+   BOOKTITLE = {Proceedings of the 2004 ACM symposium on Document Engineering, DocEng 2004},
+   EDITOR = {J.-Y. Vion-Dury},
+   PUBLISHER = {ACM Press},
+   LOCATION = {Milwaukee, WI, USA},
+   ISBN = {1-58113-938-1},
+   PAGES = {115-123},
+   MONTH = OCT,
+   YEAR = 2004,
+   URL = {http://wam.inrialpes.fr/publications/2004/DocEng2004VQIV.pdf},
+   URL2 = {http://hal.inria.fr/inria-00423365/},
+   DOI = {http://doi.acm.org/10.1145/1030397.1030422},
+   ABSTRACT = {This paper reviews the main innovations of XML and considers
+    their impact on the editing techniques for structured documents. Namespaces
+    open the way to compound documents; well-formedness brings more freedom in
+    the editing task; CSS allows style to be associated easily with structured
+    documents. In addition to these innovative features, the wide deployment
+    of XML introduces structured documents in many new applications,
+    including applications where text is not the dominant content type. In
+    languages such as SVG or SMIL, for instance, XML is used to represent
+    vector graphics or multimedia presentations.
+    This is a challenging situation for authoring tools. Traditional methods
+    for editing structured documents are not sufficient to address the new
+    requirements. New techniques must be developed or adapted to allow more
+    users to efficiently create advanced XML documents. These techniques
+    include multiple views, semantic-driven editing, direct manipulation,
+    concurrent manipulation of style and structure, and integrated
+    multi-language editing. They have been implemented and experimented in
+    the Amaya editor and in some other tools.}
+}
+@INPROCEEDINGS{Roisin04a,
+   AUTHOR = {Cécile Roisin},
+   TITLE = {Adaptation aux différents modes de lecture},
+   BOOKTITLE = {Publier sur Internet, INRIA summer school},
+   MONTH = SEP,
+   YEAR = 2004,
+   PUBLISHER = {ADBS éditions},
+   ISSN = {1762-8288},
+   PAGES = {129-155},
+   URL = {http://wam.inrialpes.fr/publications/2004/coursInria2004.pdf},
+   ABSTRACT = {L'objectif de ce module est de présenter les formats et les
+    solutions qui permettent de publier des contenus structurés et adaptables
+    sur le web. Dans une première partie, nous nous attachons à décrire les
+    principes qui sous-tendent à la définition des formats de documents, puis
+    nous présentons plus précisément quelques formats standard, depuis les
+    formats des contenus de base (texte) jusqu'aux formats d'intégration
+    (XHTML, SMIL), en passant par des formats d'objets structurés (MATHML,
+    SVG).
+    Dans une deuxième partie, nous montrons dans quelle mesure ces formats
+    permettent ou non de définir des présentations indépendamment de leur
+    restitution physique qui dépend de type de terminal de lecture (écran,
+    papier, pda, téléphone). Nous appuyons notre étude des besoins à partir
+    des travaux standard sur l'accessibilité, l'internationalisation et le
+    device independence. Puis, nous décivons quelques techniques
+    d'adaptation à travers l'étude des possibilités offertes par les langages
+    XSLT et SMIL.}
+}
+@INPROCEEDINGs{Roisin04,
+   AUTHOR = {Cécile Roisin},
+   TITLE = {Outils pour la production de présentations hypermédias},
+   BOOKTITLE = {Les hypermédias : théorie et pratique},
+   CHAPTER = 7,
+   PUBLISHER = {Hermès},
+   MONTH = SEP,
+   YEAR = 2004,
+   URL = {http://wam.inrialpes.fr/publications/2004/hypermedia2004.pdf},
+   ABSTRACT = {Even if multimedia contents are widely used and standard
+    formats exist both for media items and presentation structures, there is
+    still a gap between user requirements and existing tools. In this chapter
+    we examine what are the user needs for specification, management and
+    editing of multimedia documents. We illustrate our discussion with the
+    SMIL language and its players and authoring tools.}
+}
+@INPROCEEDINGS{Geneves04c,
+   AUTHOR = {Pierre Genevès and Jean-Yves Vion-Dury},
+   TITLE = {{XPath} Formal Semantics and Beyond: a {Coq} based approach},
+   BOOKTITLE = {Proceedings of the 17th International Conference on Theorem Proving in Higher Order Logic: TPHOLs 2004},
+   EDITOR = {K. Slind},
+   PUBLISHER = {University of Utah},
+   PAGES = {181-198},
+   MONTH = AUG,
+   YEAR = 2004,
+   URL = {http://wam.inrialpes.fr/publications/2004/tphols2004.pdf},
+   URL2 = {http://hal.inria.fr/inria-00423372/},
+   ABSTRACT = {XPath was introduced as the standard language for addressing
+    parts of XML documents, and has been widely adopted by practioners and
+    theoreticaly studied. We aim at building a logical framework for formal
+    study and     analysis of XPath and have to face the combinatorial
+    complexity of formal proofs caused by XPath expressive power.
+    We chose the Coq proof assistant
+    and its powerful inductive constructions to rigorously investigate XPath
+    peculiarities. We focus in this paper on a basic modeling of XPath syntax
+    and semantics, and make two contributions. First, we propose a new formal
+    semantics, which is an interpretation of paths as first order logic
+    propositions that turned out to greatly simplify our formal proofs.
+    Second, we formally prove that this new interpretation is equivalent to
+    previously known XPath denotational semantics, opening perspectives for
+    more ambitious mathematical characterizations. We illustrate our Coq
+    based model through several examples and we develop a formal proof of a
+    simple yet significant XPath property that compares quite favorably to a
+    former informal proof.}
+}
+@INPROCEEDINGS{Geneves04b,
+   AUTHOR = {Pierre Genevès},
+   TITLE = {Improving Efficiency of {XPath}-Based {XML} Querying},
+   BOOKTITLE = {IFIP 18th World Computer Congress, Student Forum},
+   EDITOR = {M. Kaâniche},
+   PUBLISHER = {Kluwer Academic Publishers},
+   PAGES = {143-153},
+   MONTH = AUG,
+   YEAR = 2004,
+   URL = {http://wam.inrialpes.fr/publications/2004/toward-xpath-efficiency.pdf},
+   URL2 = {http://hal.inria.fr/inria-00423375/},
+   ABSTRACT = {XML is becoming the de facto standard for information exchange.
+    XML querying is a key component for structured information processing and
+    plays a central role in the next generation world wide web, information
+    management systems and databases. Applications relying on XML processing
+    notably depend on XPath, the standard language for adressing parts of XML
+    documents. Besides its fundamental functionality, reasons behind XPath
+    suc- cess include being widely accepted by programmers and well-suited
+    for formal treatments. With the growing volume of XML content and XML
+    processing applications, our research is oriented toward efficiency of
+    XML querying. Our approach relies on analysis and trans- formation of
+    XPath expressions for optimization. This note presents current open
+    issues with XPath, and introduces our preliminary results applied to
+    streaming XPath processing. Moreover, it describes our methodology, which
+    includes XPath modelisation using the Coq proof assistant, and future
+    directions envisioned toward high performance XML querying.}
+}
+@ARTICLE{Lux04,
+   AUTHOR = {Veronika Lux-Pogodalla and Jean-Yves Vion-Dury},
+   TITLE = {Réflexions sur la modélisation des documents},
+   JOURNAL = {Information - Interaction - Intelligence},
+   VOLUME = 4,
+   NUMBER = 1,
+   YEAR = 2004,
+   URL = {http://www.revue-i3.org/volume04/numero01/revue_i3_04_01_02.pdf},
+   x-editorial-board = {yes},
+   x-international-audience = {no},
+   ABSTRACT = {Today, we more than ever need useful abstractions in order to
+    reason on complex document transformations, to assert properties on
+    document manipulation systems, and to inspire perhaps revolutionary
+    approaches of document creation and processing. This paper sketches
+    perspectives and proposes markers toward inventing the next document
+    generation.}
+}
+@PHDTHESIS{Lemlouma04a,
+   AUTHOR = {Tayeb Lemlouma},
+   TITLE = {Architecture de Négociation et d'Adaptation de Services Multimédia dans des Environnements Hétérogènes},
+   TYPE = {Thèse de Doctorat},
+   SCHOOL = {INPG, Grenoble},
+   MONTH = JUN,
+   YEAR = 2004,
+   URL = {http://wam.inrialpes.fr/publications/2004/TheseLemlouma.pdf},
+   URL2 = {http://tel.archives-ouvertes.fr/tel-00006253/},
+   ABSTRACT = {In the last few years, new devices such as palm computers,
+    smart phones, pocket PCs became common components of the computing
+    infrastructure.
+    These devices allow multimedia information to be used on the Web at any
+    time and anywhere. At the same time, the content of the Web has known an
+    important revolution. Today, the Web includes continuous medias such as
+    video, audio and 3D animations. The content is created in several formats
+    with new functionalities. Usually, these formats are based on many
+    structural dimensions: logical, spatial, temporal and hypermedia.
+    In order to ensure universal access to Web content, with respect to the
+    constraints of the current environment, it is necessary to design new
+    systems that enable content delivery in different contexts. The objective
+    of our work is to resolve the problems related to content adaptation and
+    negotiation based on the limitations of the target devices and the
+    heterogeneous environment. We propose a flexible architecture called NAC
+    that includes different components for content negotiation and
+    adaptation, and ensures an efficient framework in which these components
+    cooperate and exchange negotiation-based information in order to reach
+    the objective of the universal access.
+    NAC allows several kinds of adaptations to be applied: structural
+    adaptation, semantic adaptation and media resources adaptation. These
+    adaptations satisfy different contexts of the clients. We also propose a
+    description model of the environment context: UPS, a negotiation protocol
+    and a rich collection of adaptation techniques. NAC concepts have
+    contributed in W3C standardization efforts, in particular in the CC/PP
+    framework and in work on Device Independence. This work includes
+    performance evaluations in order to show the usability of our system in a
+    practical framework.}
+}
+@INPROCEEDINGS{Quint04,
+   AUTHOR = {Vincent Quint and Irène Vatton},
+   TITLE = {Compound {XML} Documents in {Amaya}},
+   BOOKTITLE = {W3C Workshop on Web Applications and Compound Documents},
+   MONTH = JUN,
+   YEAR = 2004,
+   LOCATION = {San Jose, CA, USA},
+   URL = {http://www.w3.org/2004/04/webapps-cdf-ws/papers/CompDocAmaya.html},
+   URL2 = {http://www.w3.org/2004/04/webapps-cdf-ws/},
+   ABSTRACT = {Amaya is an authoring tool for editing compound XML documents.
+    We first briefly explain how several XML markup languages can be mixed in
+    a document created by Amaya. Then we discuss the various editing modes
+    available for handling this compound structure. In particular, the
+    concept of a view is introduced as well as its connection with editing.
+    This is followed by a short discussion of the role of CSS in complex
+    structures, and a conclusion summarizes the advantages offered by an
+    integrated environment.}
+}
+@INPROCEEDINGS{Geneves04a,
+   AUTHOR = {Pierre Genevès and Jean-Yves Vion-Dury},
+   TITLE = {Logic-Based {XPath} Optimization},
+   BOOKTITLE = {First International Workshop on High Performance XML Processing},
+   LOCATION = {New York, NY, USA},
+   MONTH = MAY,
+   YEAR = 2004,
+   URL = {http://wam.inrialpes.fr/publications/2004/LogicXPathOpt.pdf},
+   URL2 = {http://hal.inria.fr/inria-00423381/},
+   ABSTRACT = {XPath was introduced by the W3C as a standard language for
+    specifying node selection, matching conditions, and for computing values
+    from an XML document. XPath is now used in many XML standards such as XSLT
+    or the forthcoming XQuery database access language. Since efficient XML
+    content querying is crucial for the performance of almost all XML
+    processing architectures, a growing need for studying high performance
+    XPath-based querying has emerged. Our approach aims at optimizing XPath
+    performance through static analysis and syntactic transformation of XPath
+    expressions.}
+}
+@INPROCEEDINGS{Geneves04,
+   AUTHOR = {Pierre Genevès and Kristoffer Rose},
+   TITLE = {Compiling {XPath} into a State-less Forward-only Subset},
+   BOOKTITLE = {First International Workshop on High Performance XML Processing},
+   LOCATION = {New York, NY, USA},
+   MONTH = MAY,
+   YEAR = 2004,
+   URL = {http://wam.inrialpes.fr/publications/2004/GenevesRose.pdf},
+   URL2 = {http://hal.inria.fr/inria-00423382/},
+   ABSTRACT = {We show how the context state of XPath, accessed through the
+    position() and last() pseudo-functions, can be eliminated in most cases by
+    translating references to the context state with an equivalent
+    contextfree expression, and how this enables the use of context state in
+    combination with a subsequent forward-only transformation, allowing for
+    execution of (almost) full XPath on any of the emerging streaming
+    subsets. Specifically we show how the normalization into a core language
+    as proposed in the current W3C Last Call draft of the XPath/XQuery Formal
+    Semantics can be extended such that the context state and reverse axes
+    can be eliminated from the core XPath (and potentially XQuery) language.}
+}
+@INPROCEEDINGS{Layaida04,
+   AUTHOR = {Nabil Layaïda and Tayeb Lemlouma and Vincent Quint},
+   TITLE = {Adaptation et multimédia mobile sur le Web},
+   BOOKTITLE = {Conférence nationale sur le multimédia mobile, {Mcube 2004}},
+   LOCATION = {Montbéliard, France},
+   MONTH = MAR,
+   YEAR = 2004,
+   PAGES = {34-41},
+   URL = {http://wam.inrialpes.fr/publications/2004/Mcube2004.ps},
+   URL2 = {http://wam.inrialpes.fr/publications/2004/Mcube2004.html},
+   ABSTRACT = {The Web is evolving towards multimedia contents accessed through
+    various kinds of devices and very different networks. Multimedia
+    information must
+    be adapted to this mobile and changing environment. For this purpose, a
+    set of methods, languages, formats, and protocols are developed, mainly
+    by W3C. We have defined and implemented the NAC architecture grounded on
+    these technologies, focusing on the distribution of adaptation
+    processing, on the models and languages for environment description and
+    on content transformation.}
+}
+@TECHREPORT{Hanrahan04,
+   AUTHOR = {R. Hanrahan and R. Merrick},
+   NOTE = {Tayeb Lemlouma contributing author},
+   TITLE = {Authoring Techniques for Device Independence},
+   INSTITUTION = {World Wide Web Consortium},
+   TYPE = {Working Group Note},
+   MONTH = FEB,
+   YEAR = 2004,
+   URL = {http://www.w3.org/TR/di-atdi/},
+   ABSTRACT = {The document provides a summary of several techniques and best
+    practices that Web site authors and solution providers may employ when
+    creating and delivering content to a diverse set of access mechanisms.}
+}
+@INPROCEEDINGS{Lemlouma04,
+   AUTHOR = {Tayeb Lemlouma and Nabil Layaïda},
+   TITLE = {Context-Aware Adaptation for Mobile Devices},
+   BOOKTITLE = {{MDM2004} International Conference on Mobile Data Management},
+   LOCATION = {Berkeley, CA, USA},
+   MONTH = JAN,
+   YEAR = 2004,
+   PUBLISHER = {IEEE},
+   PAGES = {106-111},
+   URL = {http://wam.inrialpes.fr/publications/2004/Lemlouma_MDM2004.pdf},
+   URL2 = {http://hal.inria.fr/inria-00423390/},
+   ABSTRACT = {This paper discusses the problem of content adaptation for
+    mobile devices. The adaptation considers the context of the client and also
+    the environment where the client request is received. A device independent
+    model is defined and used in order to achieve automatic adaptation of the
+    content based on its semantic and the capabilities of the target device.
+    Our system includes a context description model and a client repository
+    and offers device contexts management and querying functions. The
+    proposed system uses the XQuery language to query the profiles and
+    delivers the results in the form of SOAP services.}
+}
+
+@BOOK{Roisin03a,
+   EDITOR = {Christine Vanoirbeek and Cécile Roisin and Ethan Munson},
+   TITLE = {Proceedings of the 2003 ACM Symposium on Document Engineering},
+   PUBLISHER = {ACM Press},
+   ADDRESS = {New York, NY, USA},
+   LOCATION = {Grenoble, France},
+   MONTH = NOV,
+   YEAR = 2003
+}
+@INPROCEEDINGS{Boulmaiz03a,
+   AUTHOR = {Fateh Boulmaiz and Cécile Roisin and Frédéric Bès},
+   TITLE = {Improving Formatting Documents by Coupling Formatting Systems},
+   BOOKTITLE = {Proceedings of the 2003 ACM Symposium on Document Engineering, DocEng2003},
+   PUBLISHER = {ACM Press},
+   PAGES = {92-94},
+   MONTH = NOV,
+   YEAR = 2003,
+   LOCATION = {Grenoble, France},
+   URL = {http://wam.inrialpes.fr/publications/2003/doceng/doceng03.pdf},
+   URL2 = {http://hal.inria.fr/inria-00423395/},
+   DOI = {http://doi.acm.org/10.1145/958220.958237},
+   ABSTRACT = {In this paper, we present a framework for coupling an existing
+    formatting
+    system such as SMIL or Madeus with a formatting control system called
+    XEF. This framework allows the coupling process to be performed at two
+    levels: 1) the language level, which is concerned with how to link the
+    control features of XEF and the elements of an existing formatting
+    system, and 2) the formatter level, which deals with the creation of a
+    new formatter by formatter composition.
+    The overall objective is to provide more powerful and flexible formatting
+    services to cover new needs such as adaptive and/or generated
+    presentations.}
+}
+@INPROCEEDINGS{VionDury03a,
+   AUTHOR = {Jean-Yves Vion-Dury},
+   TITLE = {{XPath} on Left and Right Sides of Rules: Toward Compact {XML} Tree Rewriting through Node Patterns},
+   BOOKTITLE = {Proceedings of the 2003 ACM Symposium on Document Engineering, DocEng2003},
+   PUBLISHER = {ACM Press},
+   PAGES = {19-25},
+   MONTH = NOV,
+   YEAR = 2003,
+   LOCATION = {Grenoble, France},
+   URL = {http://wam.inrialpes.fr/publications/2003/JYVD-DocEng2003.pdf},
+   URL2 = {http://hal.inria.fr/inria-00423398/},
+   DOI = {http://doi.acm.org/10.1145/958220.958225},
+   ABSTRACT = {XPath is a powerful and quite successful language able to
+    perform complex node selection in trees through compact specifications.
+    As such, it plays
+    a growing role in many areas ranging from schema specifications,
+    designation and transformation languages to XML query languages.
+    Moreover, researchers have proposed elegant and tractable formal
+    semantics, fostering various works on mathematical properties and
+    theoretical tools. We propose here a novel way to consider XPath, not
+    only for selecting nodes, but also for tree rewriting using rules. In the
+    rule semantics we explore, XPath expressions are used both on the left
+    and on the right side. We believe that this proposal opens new
+    perspectives toward building highly concise XML transformation languages
+    on widely accepted basis.}
+}
+@INPROCEEDINGS{Kober03,
+   AUTHOR = {Vincent Kober and Daniel Weck and Cécile Roisin},
+   TITLE = {Le langage {SMIL} au service des Sciences Humaines et Sociales},
+   BOOKTITLE = {JRES 2003},
+   PAGES = {341-353},
+   MONTH = NOV,
+   YEAR = 2003,
+   LOCATION = {Lille, France},
+   URL = {http://wam.inrialpes.fr/publications/2003/jres/jres2003-2.pdf},
+   ABSTRACT = {This article present the result of a collaboration between a
+    research team of INRIA which works in particular on the multimedia
+    presentation of synchronized documents and a team of historians having
+    needs in this domain. Without being an exhaustive study of a language, we
+    show through the needs expressed by the historians researchers, how the
+    use of technologies and the tools related to language SMIL (Synchronized
+    Multimedia Integration Language) meets the needs for implementation of
+    this type of presentation. This article also describes the principal
+    tools making it possible to write and play SMIL documents while insisting
+    on the authoring tool LimSee2 developed in WAM project.}
+}
+@INPROCEEDINGS{TranThuong03a,
+   AUTHOR = {Tien Tran-Thuong and Cécile Roisin},
+   TITLE = {Multimedia Modeling Using {MPEG-7} for Authoring Multimedia
+   Integration},
+   BOOKTITLE = {5th ACM SIGMM International Workshop on Multimedia Information Retrieval (ACM MIR'03)},
+   PUBLISHER = {ACM Press},
+   PAGES = {171-178},
+   MONTH = NOV,
+   YEAR = 2003,
+   LOCATION = {Berkeley, CA, USA},
+   URL = {http://wam.inrialpes.fr/publications/2003/ACMSigMM/Mir03_73_TranThuong.pdf},
+   URL2 = {http://hal.inria.fr/inria-00423406/},
+   DOI = {http://doi.acm.org/10.1145/973264.973292},
+   ABSTRACT = {In this paper, we describe an approach to audiovisual data
+    modeling for multimedia integration and synchronization. The approach
+    chosen consists in using description tools from Multimedia Description
+    Schemes of standard MPEG-7 to describe audiovisual contents and in
+    integrating these description models into a multimedia integration and
+    synchronization model close to SMIL. The resulting model provides relevant
+    specification tools for the fine integration of multimedia fragments into
+    multimedia presentations. An authoring environment illustrates the
+    authoring features that can be obtained thanks to these integrated models.}
+}
+@INPROCEEDINGS{Quint03,
+   AUTHOR = {Vincent Quint},
+   TITLE = {Hypermédia et technologies Web},
+   BOOKTITLE = {Hypertextes hypermédias, actes de {H2PTM'03}},
+   PUBLISHER = {Hermès Science},
+   PAGES = {381-390},
+   MONTH = SEP,
+   YEAR = 2003,
+   URL = {http://wam.inrialpes.fr/publications/2003/H2PTM03/H2PTM03.html},
+   ABSTRACT = {Since more than ten years the Web has turned hypertext and
+    multimedia into very popular technologies. More recent evolutions of the
+    Web, all related to XML, have broadened the field of hypermedia. These new
+    technologies provide information with a strong structure. They bring new
+    graphical possibilities on many kinds of devices. They allow new
+    applications to handle hypermedia documents. They make these documents
+    more dynamic and provide more sophisticated hypertext links. All these
+    evolutions are analyzed in this article.}
+}
+@INPROCEEDINGS{Euzenat03,
+   AUTHOR = {Jérôme Euzenat and Nabil Layaïda and Victor Dias},
+   TITLE = {A semantic framework for multimedia document adaptation},
+   BOOKTITLE = {Proceedings of the 18th International Joint Conference on Artificial Intelligence IJCAI'2003},
+   PUBLISHER = {Morgan Kauffman},
+   PAGES = {31-36},
+   MONTH = AUG,
+   YEAR = 2003,
+   URL = {http://wam.inrialpes.fr/publications/2003/ijcai2003/ijcai2003.pdf},
+   URL2 = {http://hal.inria.fr/inria-00423411/},
+   ABSTRACT = {With the proliferation of heterogeneous devices (desktop
+    computers, personal digital assistants, phones), multimedia documents must
+    be played under various constraints (small screens, low bandwidth). Taking
+    these constraints into account with current document models is impossible.
+    Hence, generic source documents must be transformed into documents
+    compatible with the target contexts. Currently, the design of
+    transformations is left to programmers. We propose here a semantic
+    framework, which accounts for multimedia document adaptation in very
+    general terms. A model of a multimedia document is a potential execution
+    of this document and a context defines a particular class of models. The
+    adaptation should then retain the source document models that belong to
+    the class defined by the context if such models exist. Otherwise, the
+    adaptation should produce a document whose models belong to this class
+    and are "close" to those of the source documents. We focus on the
+    temporal dimension of multimedia documents and show how adaptation can
+    take advantage of temporal reasoning techniques. Several metrics are
+    given for assessing the proximity of models.}
+}
+@INPROCEEDINGS{VionDury03,
+   AUTHOR = {Jean-Yves Vion-Dury and Nabil Layaïda},
+   TITLE = {Containment of {XPath} expressions: an Inference and Rewriting based approach},
+   BOOKTITLE = {Extreme Markup Languages},
+   PUBLISHER = {IDEAlliance},
+   LOCATION = {Montréal, Canada},
+   MONTH = AUG,
+   YEAR = 2003,
+   URL = {http://wam.inrialpes.fr/publications/2003/xtrem2003/xtrem2003.pdf},
+   URL2 = {http://hal.inria.fr/inria-00423413/},
+   ABSTRACT = {XPath is a simple query language for XML documents which allows
+    navigating in XML trees and returning a set of matching nodes. It is used
+    in XML Schema to define keys an in XLink and XPointer to reference
+    portions of documents. XPath is a fundamental part of XSLT and XQuery
+    languages as it allows to define matching expressions for patterns and
+    provides node selectors to filter elements in the transformations.
+    We propose to study the containment and equivalence of XPath expressions
+    using an inference system combined with a rewriting system. The inference
+    system allows to assert and prove properties on a class of expressions.
+    In order to keep the proof system compact, we propose a re-writing
+    architecture which allows to transform remaining expressions in a
+    disjunctive normal form compatible with this class. In contrast with
+    model based approaches, the inference and rewriting systems are applied
+    to the XPath language directly. We believe this will help understanding
+    the underlying issues of deciding containment on the language itself.}
+}
+@INPROCEEDINGS{Ronfard03,
+   AUTHOR = {Remi Ronfard and Tien Tran-Thuong},
+   TITLE = {A framework for aligning and indexing movies with their script},
+   BOOKTITLE = {Proceedings of IEEE International Conference on Multimedia and Expo (ICME)},
+   PUBLISHER = {IEEE Computer Society},
+   MONTH = JUL,
+   YEAR = 2003,
+   URL = {http://wam.inrialpes.fr/publications/2003/icme2003/icmeTien.pdf},
+   URL2 = {http://hal.inria.fr/inria-00423417/},
+   ABSTRACT = {A continuity script describes very carefully the content of a
+    movie shot by shot. This paper introduces a framework for extracting
+    structural units such as shots, scenes, actions and dialogs from the
+    script, and aligning them to the movie based on the longest matching
+    subsequence between them. We present experimental results and
+    applications of the framework with a full-length movie and discuss its
+    applicability to large-scale film repositories.}
+}
+@INPROCEEDINGS{Lemlouma03c,
+   AUTHOR = {Tayeb Lemlouma and Nabil Layaïda},
+   TITLE = {Encoding Multimedia Presentation for User Preferences and Limited Environments},
+   BOOKTITLE = {Proceedings of IEEE International Conference on Multimedia and Expo (ICME)},
+   PUBLISHER = {IEEE Computer Society},
+   PAGES = {165-168},
+   MONTH = JUL,
+   YEAR = 2003,
+   URL = {http://wam.inrialpes.fr/publications/2003/icme2003/ICME2003.pdf},
+   URL2 = {http://hal.inria.fr/inria-00423422/},
+   ABSTRACT = {This paper discusses a new approach of generating TV-like
+    multimedia presentations that are adapted to the target user preferences
+    and to limited devices. Three main points are discussed: 1) The encoding of
+    video presentations from a SMIL specification 2) The adaptation of the
+    video content based on the user preferences, and 3) The delivery of
+    adapted multimedia presentations. The used architecture includes a
+    content server, an adaptation proxy and a set of small devices in the
+    form of personal device assistants (PDA). These devices request the
+    content through a wireless network. In order to show how the system
+    behaves regarding the user preferences and capabilities, two negotiation
+    dimensions are considered: the user language and the memory capability of
+    the device. The first dimension is used to generate a content that can be
+    understood by the target user, e.g. a video with subtitles written in the
+    preferred language. The second dimension is chosen to solve the problem
+    of the system blocking that usually happens when limited devices access
+    rich multimedia presentations over the network.}
+}
+@ARTICLE{Layaida03,
+   AUTHOR = {N. Layaida and T. Lemlouma},
+   TITLE = {{NAC}: An Architecture for Multimedia Content Adaptation for Mobile Devices},
+   JOURNAL = {{ERCIM News}},
+   NUMBER = 54,
+   MONTH = JUL,
+   YEAR = 2003,
+   x-editorial-board = {no},
+   URL = {http://wam.inrialpes.fr/publications/2003/ercim-jully-2003/ERCIM-2003-WAM.pdf},
+   URL2 = {http://www.ercim.org/publication/Ercim_News/enw54/layaida.html},
+   ABSTRACT = {In the current web infrastructure, access to content is achieved
+    from a variety of terminals such as desktop PCs, smart phones, set top
+    boxes and personal digital assistants (PDAs). The different capabilities of
+    these terminals led to the development of a variety of parallel webs each
+    one accommodating a particular device feature. This situation poses a
+    serious problem to web designers and maintainers since every piece of
+    information needs to be authored for every type of terminal with the
+    associated protocols. Our research work in the WAM project at INRIA is an
+    attempt to unify web access to information with a more flexible and
+    negotiated approach.}
+}
+@INPROCEEDINGS{Lemlouma03b,
+   AUTHOR = {Tayeb Lemlouma and Nabil Layaïda},
+   TITLE = {Media Resources Adaptation for Limited Devices},
+   BOOKTITLE = {Proceedings of the 7th {ICCC/IFIP} International Conference on Electronic Publishing, {ELPUB} 2003},
+   PUBLISHER = {Universidade deo Minho},
+   ADDRESS = {Portugal},
+   PAGES = {209-218},
+   MONTH = JUN,
+   YEAR = 2003,
+   URL = {http://wam.inrialpes.fr/publications/2003/elpub2003/ELPUB2003.pdf},
+   URL2 = {http://hal.inria.fr/inria-00423425/},
+   ABSTRACT = {In this paper, we define a framework for media resources
+    manipulation in an adaptive content delivery system. We discuss the media
+    resources manipulation in an adaptation and negotiation architecture in
+    terms of binary relationship definition using a so-called "related
+    resources" approach, resources extraction, adaptation and delivery. We show
+    how different resources can be related by predefined semantic relationships
+    in order to help structural adaptation and content negotiation tasks. We
+    give a simple recursive algorithm to extract media resources form an
+    input tree structure. The media description is specified using an
+    extensible CC/PP profile. In order to show the benefits of our approach,
+    we give a practical application of media manipulation: an automatic
+    adaptation of XHTML documents for mobile phones. We propose also a
+    general mechanism for the content servers in order to deliver media
+    resources according to client constraints or profile. The influence of
+    media selection in the delivery of multimedia services is also described
+    using evaluation formulae and measured with some experimentations.}
+}
+@MASTERSTHESIS{Boulmaiz03,
+   AUTHOR = {Fateh Boulmaiz},
+   TITLE = {Couplage d'un langage de contrôle de formatage avec un système de formatage},
+   SCHOOL = {UJF, Grenoble},
+   TYPE = {Rapport de {DEA}},
+   MONTH = JUN,
+   YEAR = 2003,
+   URL = {http://wam.inrialpes.fr/publications/2003/deaBoulmaiz/rapportBoulmaiz.pdf},
+   ABSTRACT = {Le travail présenté dans ce rapport a pour objectif de
+    contribuer au domaine de la présentation de documents multimédia. Nous nous
+    intéressons tout particulièrement aux problèmes de conception des
+    formateurs XML. En considérant le problème de la composition des
+    formateurs, nous initialisons une nouvelle direction de recherche sur la
+    conception des formateurs XML par composition. La complexité croissante des
+    documents multimédia, la multiplication des environnements d'exécution et
+    la diversification des attentes des utilisateurs et des auteurs de ces
+    documents ont conduit a l'émergence de nombreux langages de présentation
+    et d'outils de formatage associés (CSS, SVG, SMIL, XSL-FO).
+    Malgré cette évolution vers des systèmes plus puissants et plus
+    performants, les langages comme leurs formateurs sont restés très
+    influencés par les méthodes de formatage de texte. Ils restent très
+    rigides dans leur fonctionnement et donnent peu de solutions face aux
+    nouveaux besoins actuels des documents multimédia. Depuis quelques temps,
+    la communauté de recherche tente de combler ce fossé et a proposé, parmi
+    d'autres, d'utiliser de nouvelles techniques à base de contraintes pour
+    permettre d'étendre l'expressivité des langages de présentation. Cette
+    approche offre une amélioration très intéressante du pouvoir d'expression
+    offert aux auteurs mais les formateurs associés deviennent de plus en
+    plus complexes et difficiles à mettre en oeuvre, et donc à étendre dans
+    le futur.
+    Dans ce stage, nous proposons une architecture logicielle pour un système
+    de présentation multimédia qui permet le couplage d'un langage de
+    présentation et des services de formatage associés avec des systèmes de
+    formatage existants de langage standard comme SMIL ou XSL-FO. Nous
+    voulons non seulement être capable d'intégrer ce langage dans les
+    langages existants mais également de proposer des services de formatage
+    visant à intégrer son traitement dans les formateurs existants. Dans ce
+    cas, le formateur est obtenu par composition (assemblage) des formateurs
+    des langages existants. Donc, Notre ambition est double : intégration des
+    langages et intégration des traitements. Le but est de permettre une
+    meilleure réutilisation des capacités de contrôle offertes par ces
+    langages ainsi que de leurs formateurs.}
+}
+@MASTERSTHESIS{Geneves03,
+   AUTHOR = {Pierre Genevès},
+   TITLE = {Langages de transformation incrémentaux},
+   SCHOOL = {UJF, Grenoble},
+   TYPE = {Rapport de {DEA}},
+   MONTH = JUN,
+   YEAR = 2003,
+   URL = {http://wam.inrialpes.fr/publications/2003/deaGeneves2003/rapportDeaGeneves.pdf},
+   ABSTRACT = {Recently, XML has brought a standard way to exchange structured
+    data between applications. XML transformation is currently considered as a
+    fundamental operation in the data processing sequence of structured data.
+    XML transformation focuses on producing a target XML document from a
+    source XML document with a different structure.
+    A few XML transformation languages have been proposed. These languages
+    were all created with a batch approach, where the full input document is
+    transformed at once. The main limit of this approach is that once a large
+    document has been transformed, when it is modified, a full transformation
+    must be performed again in order to get the new target document.
+    Another approach, called incremental transformation, consists in
+    reflecting the changes of the source document to the target document in
+    an optimal way, i.e. without performing again the full transformation
+    since it has already been done before for a similar source document. This
+    approach makes it possible to create dynamic applications based on the
+    update of the target document.
+    Incremental processing has been studied in many and various research
+    areas, mainly in order to do optimization. We make a synthesis of the
+    main methods successfully developed for incremental processing. This
+    study leads to conditions that make a transformation model suitable for
+    incremental transformation. We then propose a new transformation model
+    based on a rewriting system. Our model is well suited for incremental
+    processing of insertions of structured data in the source document.}
+}
+@INPROCEEDINGS{Roisin03,
+   AUTHOR = {Cécile Roisin and Vincent Kober and Vincent Quint and Pierre Genevès and Patrice Navarro},
+   TITLE = {Editing {SMIL} with Timelines},
+   BOOKTITLE = {Proceedings of the Synchronized Multimedia Integration Language European Conference},
+   MONTH = FEB,
+   YEAR = 2003,
+   URL = {http://wam.inrialpes.fr/publications/2003/smileurope_editingtimelines/EditingSMIL.pdf},
+   URL2 = {http://wam.inrialpes.fr/publications/2003/smileurope_editingtimelines/EditingSMIL.html},
+   ABSTRACT = {This paper presents a timeline approach to editing two of the
+    main components of SMIL: the time and synchronization model and the
+    animation model. This approach is illustrated with two prototypes: the
+    LimSee tool for editing SMIL time structures, and the SVG Animation
+    component included in the Amaya Web client. The timeline view is a faithful
+    representation of the temporal behavior of the document where the author
+    can perform all editing operations related to animation or
+    synchronization between media. The advantages of this authoring approach
+    are shown through editing session excerpts performed with LimSee and the
+    Amaya Animation module.}
+}
+@INPROCEEDINGS{Lemlouma03a,
+   AUTHOR = {Tayeb Lemlouma and Nabil Layaïda},
+   TITLE = {{SMIL} Content Adaptation for Embedded Devices},
+   BOOKTITLE = {Proceedings of the Synchronized Multimedia Integration Language European Conference},
+   MONTH = FEB,
+   YEAR = 2003,
+   URL = {http://wam.inrialpes.fr/publications/2003/smileurope_smilcontent/SMILEurope2003.pdf},
+   ABSTRACT = {In this paper, we propose a SMIL content adaptation framework
+    for embedded devices such as PDA, cellular phones, etc. This framework is
+    based on a three-pier organization of the SMIL content access which
+    allows decoupling two levels of performance: a wired network with
+    abundant resources such as bandwidth and processing power and, a wireless
+    network with variable bandwidth and limited resources. Clients are given
+    access to content from a variety of terminals with different
+    capabilities. In order to adapt the SMIL content to these devices, the
+    content access traverses an intermediate entity called adaptation proxy
+    where the adaptation occurs. An experimental implementation of this
+    framework shows how to achieve SMIL content adaptation using client
+    profiles descriptions, negotiation strategies, simple SMIL adaptation and
+    media transcoding.}
+}
+@PHDTHESIS{TranThuong03,
+   AUTHOR = {Tien Tran-Thuong},
+   TITLE = {Modélisation et traitement du contenu des médias pour l'édition et la présentation de documents multimédia},
+   TYPE = {Thèse de Doctorat},
+   SCHOOL = {INPG, Grenoble},
+   MONTH = FEB,
+   YEAR = 2003,
+   URL = {http://wam.inrialpes.fr/publications/2003/theseTien/TheseV8PDF.pdf},
+   ABSTRACT = {This work proposes a new way to edit/present easily multimedia
+    documents. It consists in modelling the contents of complex media (video,
+    audio) as a structure of sub-elements (moving objects, shots, scenes).
+    These internal media fragments can be associated with behaviors
+    (hyperlinks) or spatial/temporal relations with other objects of the
+    document. This enables richer multimedia presentations thanks to a finer
+    synchronization between media. The difficulty of this work is to insure
+    that this model remains consistent with the composition model of
+    multimedia documents and that it covers the needs of the authors for
+    multimedia fine-grained synchronization. The approach chosen consists in
+    using description tools from MPEG-7 to describe media contents and in
+    integrating these descriptions into an extension of the Madeus
+    constraint-based composition model.}
+}
+@INPROCEEDINGS{Lemlouma03,
+   AUTHOR = {Tayeb Lemlouma and Nabil Layaïda},
+   TITLE = {Adapted Content Delivery for Different Contexts},
+   BOOKTITLE = {Proc. International Symposium on Applications and the Internet {(SAINT 2003)}},
+   PUBLISHER = {IEEE Computer Society},
+   PAGES = {190-197},
+   MONTH = JAN,
+   YEAR = 2003,
+   URL = {http://wam.inrialpes.fr/publications/2003/saint2003_adaptedcontent/SAINT2003.pdf},
+   URL2 = {http://hal.inria.fr/inria-00423426/},
+   ABSTRACT = {In this paper, we present a framework which allows adapted
+    content delivery for different target contexts. This framework is based
+    on a Universal Profiling Schema UPS for describing the environment
+    characteristics and on an profile exchange protocol. In the server and
+    the proxy side, we give a strategy for matching the different constraints
+    (clients, servers, content, etc.) in order to find an agreement between
+    the server adaptation capabilities and the client preferences and
+    constraints. Usually such environments are subject to frequent changes.
+    To tackle this difficulty, we propose a dynamic adaptation approach based
+    on XSLT for structural transformation and resource aware transcoders for
+    the media adaptation.}
+}
+@PHDTHESIS{Pietriga02,
+   AUTHOR = {Emmanuel Pietriga},
+   TITLE = {Environnements et langages de programmation visuels pour le traitement de documents structurés},
+   TYPE = {Thèse de Doctorat},
+   SCHOOL = {INPG, Grenoble},
+   MONTH = NOV,
+   YEAR = 2002,
+   URL = {http://wam.inrialpes.fr/publications/2003/pietriga_these/these-pietriga-20021115.pdf},
+   ABSTRACT = {The adoption of XML in a wide variety of domains for the
+    representation of structured documents and data has made the processing of
+    World Wide Web documents easier, by offering generic solutions for parsing
+    and manipulating them. These operations are often achieved through document
+    structure and content transformations, and play a key role in the
+    document manipulation process. Most existing solutions for the
+    transformation of XML documents rely on a textual language, and even if
+    some tools offer a graphical user interface on top of languages such as
+    XSLT, transformations are still specified textually. The goal of this
+    work is to study the applicability of visual programming techniques with
+    respect to the visualization and transformation of XML documents. It has
+    led to the design of VXT (Visual XML Transformer), a visual programming
+    language for the specification of XML document transformations.}
+}

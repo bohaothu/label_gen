@@ -1,0 +1,1168 @@
+Return-Path: validgh!validgh.com!dgh@uunet.UU.NET
+Return-Path: <validgh!validgh.com!dgh@uunet.UU.NET>
+Received: from relay1.UU.NET by antares.mcs.anl.gov (4.1/SMI-GAR)
+	id AA23208; Fri, 21 Aug 92 11:17:51 CDT
+Received: from uunet.uu.net (via LOCALHOST.UU.NET) by relay1.UU.NET with SMTP 
+	(5.61/UUNET-internet-primary) id AA24461; Fri, 21 Aug 92 11:46:10 -0400
+Received: from validgh.UUCP by uunet.uu.net with UUCP/RMAIL
+	(queueing-rmail) id 114424.16162; Fri, 21 Aug 1992 11:44:24 EDT
+Received: by validgh.com (4.1/SMI-4.1)
+	id AA02919; Fri, 21 Aug 92 07:26:48 PDT
+Date: Fri, 21 Aug 92 07:26:48 PDT
+From: dgh@validgh.com (David G. Hough on validgh)
+Message-Id: <9208211426.AA02919@validgh.com>
+To: numeric-interest@validgh.com
+Subject: floating-point bibliography from comp.arch
+Status: O
+
+Article: 15689 of comp.arch
+From: S_JUFFA@iravcl.ira.uka.de (|S| Norbert Juffa)
+Newsgroups: comp.arch
+Subject: Bibliography for floating-point arithmetic
+Date: 21 Aug 92 11:00:36 GMT
+Organization: University of Karlsruhe (FRG) - Informatik Rechnerabt.
+
+This is a bibliography of material on floating point arithmetic that I
+came up with while doing research on a floating-point package of my own.
+I don't claim it to be anywhere near complete. The material listed is
+only what I myself possess. My main interest was in software based,
+binary floating point arithmetic on a microprocessor, so you won't find
+much material about the hardware used in floating point arithmetic (e.g.
+adders, carry propagation schemes, higher radix representation for multi-
+plication and division, etc.) in this list. There is also not to much on
+non-binary floating point arithmetic. For most fields covered in this
+bibliography, the important or historically relevant articles should be
+included. There is also some material on integer arithmetic in this list
+as some of the methods used with integer arithmetic contain interesting
+ideas that may be useful in the realization of a floating point arithmetic
+package. Also, depending on the type of microprocessor used, one may
+need to implement integer multiplication and division for use in the
+floating-point package, so articles about this topic are included as well.
+As I am German, there is a bit of material in German in this bibliography.
+All German umlauts are written in TeX format, that is "a, "o, "u, "s.
+
+Norbert Juffa
+Wielandtstr. 14
+7500 Karlsruhe 1
+Germany
+
+email: S_JUFFA@IRAVCL.IRA.UKA.DE
+
+
++++++++++++++++ Bibliography for floating point arithmetic ++++++++++++++++++++
+-------------------------------------------------------------------------------
+
+Books
+
+[Cav]  Cavanagh, J.F.: Digital Computer Arithmetic.
+       New York, NY: Wiley 1984
+[Cod]  Cody, W.J.; Waite, W.: Software Manual for the Elementary Functions.
+       Englewood Cliffs, NJ: Prentice Hall 1980
+[Fik]  Fike, C.T.: Computer Evaluation of Mathematical Functions.
+       Englewood Cliffs, NJ: Prentice Hall 1968
+[Flo]  Flores, I.: The Logic of Computer Arithmetic.
+       Englewood Cliffs, NJ: Prentice Hall 1963
+[Har]  Hart, J.F.; Cheney, E.W.; Lawson, C.L.; Maehly, H.J.; Mesztenyi, C.K.;
+       Rice, J.R.; Thacher, H.G.; Witzgall, C.: Computer Approximations.
+       New York, NY: Wiley 1968
+[Has]  Hastings, C.B.: Approximations for Digital Computers.
+       Princeton, NJ: Princeton University Press 1955
+[Hwa]  Hwang, K.: Computer Arithmetic.
+       New York, NY: Wiley 1979
+[Knu]  Knuth, D.E.: The Art of Computer Programming, 2nd Edition.
+       Vol. 2: Seminumerical Algorithms.
+       Reading, MA: Addison-Wesley 1981
+[Lam]  Lampe, B.; Jorke, G.; Wengel, N.: Arithmetische Algorithmen der
+       Mikrorechentechnik.
+       Berlin: Verlag Technik 1989
+[Luk1] Luke, Y.L.: Mathematical Functions and their Approximations.
+       New York, NY: Academic Press 1975
+[Luk2] Luke, Y.L.: Algorithms for the Computation of Mathematical Functions.
+       New York, NY: Academic Press 1977
+[Lyu]  Lyusternik, L.A.; Chervonenkis, O.A.; Yanpolski, A.R.:
+       Handbook for Computing Elementary Functions.
+       New York, NY: Pergamon Press 1965
+[Mor]  Morgan, D.: Numerical Methods.
+       San Mateo, CA: M&T 1992
+[Mos]  Moshier, S.L.B.: Methods and Programs for Mathematical Functions.
+       Chichester: Ellis Horwood 1989
+[Pla]  Plauger, P.J.: The Standard C Library.
+       Englewoods Cliff, NJ: Prentice Hall 1992
+[Pre]  Press, W.H.; Flannery, B.P.; Teukolsky, S.A.; Vetterling, W.T.:
+       Numerical Recipes in C.
+       Cambridge: Cambridge University Press 1988
+[Ric]  Rice, J.R.: The Approximation of Functions. Vol. 1, 2.
+       Reading, MA: Addison-Wesley 1964 (Vol. 1), 1969 (Vol. 2)
+[Sco]  Scott, N.R.: Computer Number Systems and Arithmetic.
+       Englewood Cliffs, NJ: Prentice Hall 1985
+[Sch]  Schmid, H.: Decimal Computation.
+       New York, NY: Wiley 1974
+[Spa]  Spaniol, O.: Arithmetik in Rechenanlagen.
+       Stuttgart: Teubner 1976
+[Ste]  Sterbenz, P.H.: Floating Point Computation.
+       Englewood Cliffs, NJ: Prentice Hall 1974
+[Swa]  Swartzlander, E.E. (ed.): Computer Arithmetic.
+       Stroudsburg, PA: Dowden, Hutchinson & Ross 1980
+
+
+Journal Publications, Conference Papers, Technical Reports,
+Ph.D. Dissertations, Book Contributions, etc.
+
+1.0 Choice of base, floating point formats
+
+[1]    Brown, W.S.; Richman, P.L.: The Choice of Base.
+       Communications of the ACM, Vol. 12, No. 10, October 1969, pp. 560-561
+[2]    Kreifelts, T,: Optimale Basiswahl f"ur eine Gleitkomma-Arithmetik.
+       Computing, Vol. 11, 1973, pp. 353-363
+[3]    Kuki, H.; Cody, W.J.: A Statistical Study of the Accuracy of Floating
+       Point Number Systems.
+       Communications of the ACM, Vol. 16, No. 4, April 1973, pp. 223-230
+[4]    Cody, W.J.: Static and Dynamic Numerical Characteristics of
+       Floating-Point Arithmetic.
+       IEEE Transactions on Computers, Vol. C-22, No. 6, June 1973, pp. 598-601
+[5]    Brent, R.P.: On the Precision Attainable with Various Floating-Point
+       Number Systems.
+       IEEE Transactions on Computers, Vol. C-22, No. 6, June 1973, pp. 601-607
+[6]    Kreifelts, T.: Optimale Basiswahl f"ur eine Gleitkomma-Arithmetik
+       (Berichtigung).
+       Computing, Vol. 14, 1975, pp. 313-314
+[7]    Liddiard, L.A.: Required Scientific Floating Point Arithmetic.
+       Proceedings of the 4th Symposium on Computer Arithmetic, Santa Monica,
+       CA, USA, 25-27 October 1978, pp. 56-62
+[8]    Hull, T.E.: Desirable Floating-Point Arithmetic and Elementary Functions
+       for Numerical Computation.
+       Proceedings of the 4th Symposium on Computer Arithmetic, Santa Monica,
+       CA, USA, 25-27 October 1978, pp. 63-69
+[9]    Agrawal, J.C.; Sehdev, P.S.: Comparison and Evaluation of Floating Point
+       Representations in IBM/370 and VAX-11/780.
+       Proceedings of the 4th Symposium on Empirical Foundations of Information
+       and Software Science, Atlanta, GA, USA, 22-24 October 1986, pp. 353-369
+[10]   Plauger, P.J.: Properties of floating-point arithmetic.
+       Computer Language, Vol. 5, No. 3, March 1988, pp. 17-22
+[11]   Johnstone, P.; Petry, F.E.: Higher Radix Floating Point Representations.
+       Proceedings of the 9th Symposium on Computer Arithmetic, Santa Monica,
+       CA, USA, 6-8 September 1989, pp. 128-135
+[12]   Ochs, T.: Numeric types, representations, and other fictions.
+       Computer Language, Vol. 8, No. 8, August 1991, pp. 93-101
+
+1.1 Precision and Rounding
+
+[13]   Goldberg, I.B.: 27 Bits Are Not Enough For 8-Digit Accuracy.
+       Communications of the ACM, Vol. 10, No. 2, February 1967, pp. 105-106
+[14]   Hamming, R.W.: On the Distribution of Numbers.
+       Bell System Technical Journal, Vol. 49, No.8,
+       October 1970, pp. 1609-1625
+[15]   Kaneko, T.; Liu, B.: On Local Roundoff Errors in Floating-Point
+       Arithmetic.
+       Journal of the Association for Computing Machinery, Vol. 20, No. 3,
+       July 1973, pp. 391-398
+[16]   Tsao, N.: On the Distribution of Significant Digits and Roundoff Errors.
+       Communications of the ACM, Vol. 17, No. 5, May 1974, pp. 269-271
+[17]   Goodman, R.; Feldstein, A.: Round-Off Error in Products.
+       Computing, Vol. 15, 1975, pp. 263-273
+[18]   Kuck, D.J.; Parker, D.S.; Sameh, A.H.: ROM-Rounding: A New Rounding
+       Scheme.
+       Proceedings of the 3rd Symposium on Computer Arithmetic, Dallas, TX,
+       USA, 19-20 October 1975, pp. 67-72
+[19]   Garner, H.L.: A Survey of Some Recent Contributions to Computer
+       Arithmetic.
+       IEEE Transactions on Computers, Vol. C-25, No. 12, December 1976,
+       pp. 1277-1282
+[20]   Goodman, R.; Feldstein, A.: Effect of Guard Digits and Normalization
+       Options on Floating Point Multiplication.
+       Computing, Vol. 18, No. 2, 1977, pp. 93-106
+[21]   Kent, J.G.: Highlights of a Study of Floating-Point Instructions.
+       IEEE Transactions on Computers, Vol. C-26, No. 7, July 1977, pp. 660-666
+[22]   Kuck, D.J.; Parker, D.S.; Sameh, A.H.: Analysis of Rounding Methods in
+       Floating-Point Arithmetic.
+       IEEE Transactions on Computers, Vol. C-26, No. 7, July 1977, pp. 643-650
+[23]   Bustoz, J.; Feldstein, A.; Goodman, R.; Linnainmaa, S.: Improved
+       Trailing Digits Estimates Applied to Optimal Computer Arithmetic.
+       Journal of the Association for Computing Machinery, Vol. 26, No. 4,
+       October 1979, pp. 716-730
+[24]   Henrich, C.J.: Floating-point arithmetic: can it be trusted?
+       Mini-Micro Systems, Vol. 13, No. 11, November 1980, pp. 143-151
+[25]   Miller, W.: A Remark on Gradual Underflow.
+       Computing, Vol. 27, No. 3, 1981, pp. 217-225
+[26]   Rump, S.M.: Computer und Rechengenauigkeit.
+       Elektronische Rechenanlagen, Vol. 24, No. 6, December 1982, pp. 268-277
+[27]   Schatte, P.: On Mantissa Distribution in Computing and Benford's Law.
+       Journal of Information Processing and Cybernetics, Vol. 24, No. 9, 1988,
+       pp. 443-455
+[28]   Santoro, M.R.; Bewick, G.; Horowitz, M.A.: Rounding Algorithms for IEEE
+       Multipliers.
+       Proceedings of the 9th Symposium on Computer Arithmetic, Santa Monica,
+       CA, USA, 6-8 September 1989, pp. 176-183
+[29]   Goodman, R.H.: Some Models of Relative Error in Products.
+       Applied Numerical Mathematics, Vol. 6, No. 3, March 1990, pp. 209-220
+[30]   Kalbasi, K.: Can you trust your computer?
+       IEEE Potentials, Vol. 9, No. 2, April 1990, pp. 15-18
+[31]   Yoshida, N.; Goto, E.; Ichikawa, S.: Pseudorandom Rounding for Truncated
+       Multipliers.
+       IEEE Transactions on Computers, Vol. 40, No. 9, September 1991,
+       pp. 1065-1067
+
+
+1.2 Determination of parameters of floating point arithmetic
+
+[32]   Malcolm, M.A.: Algorithms To Reveal Properties of Floating-Point
+       Arithmetic.
+       Communications of the ACM, Vol. 15, No. 11, November 1972, pp. 949-951
+[33]   Gentleman, M.W.; Marovich, S.B.: More on Algorithms that Reveal
+       Properties of Floating Point Arithmetic Units.
+       Communications of the ACM, Vol. 17, No. 5, May 1974, pp. 276-277
+[34]   Lastman, G.J.: Determination of Floating Point Characteristics for a
+       Personal Computer.
+       Proceedings 1983 International Electrical, Electronics Conference,
+       Vol. 2. Toronto, Ont., Canada, 26-28 September 1983, pp. 424-427
+[35]   Razaz, M.; Schonfelder, J.L.: Test Procedures for Measurement of
+       Floating-Point Characteristics of Computing Environments.
+       The Computer Journal, Vol. 31, No. 1, February 1988, pp. 12-16
+[36]   Cody, W.J.: Algorithm 665. MACHAR: A Subroutine to Dynamically
+       Determine Machine Parameters.
+       ACM Transactions on Mathematical Software, Vol. 14, No. 4,
+       December 1988, pp. 302-311
+
+
+1.3 IEEE standards for floating point arithmetic
+
+[37]   Coonen, J.; Kahan, W.; Palmer, J.; Pittman, T.; Stevenson, D.:
+       A Proposed Standard for Binary Floating Point Arithmetic; Draft 5.11.
+       SIGNUM Newsletter, Special Issue, October 1979, pp. 4-12
+[38]   Kahan, W.; Palmer, J.: On a Proposed Floating-Point Standard.
+       SIGNUM Newsletter, Special Issue, October 1979, pp. 13-21
+[39]   Fraley, B.; Walter, S.: Proposal to Eliminate Denormalized Numbers.
+       SIGNUM Newsletter, Special Issue, October 1979, pp. 22-23
+[40]   Payne, M.; Strecker, W.: Draft Proposal for a Binary Normalized
+       Floating Point Standard.
+       SIGNUM Newsletter, Special Issue, October 1979, pp. 24-28
+[41]   Cody, W.: Impact of The Proposed IEEE Floating Point Standard on
+       Numerical Software.
+       SIGNUM Newsletter, Special Issue, October 1979, pp. 29-30
+[42]   Feldman, S.I.: The Impact of the Proposed Standard for Floating Point
+       Arithmetic on Languages and Systems.
+       SIGNUM Newsletter, Special Issue, October 1979, pp. 31-32
+[43]   Stevenson, D.: IEEE Task 754: A Proposed Standard for Binary
+       Floating-Point Arithmetic; Draft 8.0.
+       Computer, Vol. 14, No. 3, March 1981, pp. 51-62
+[44]   Cody, W.J.; Coonen, J.T.; Gay, D.M.; Hanson, K.; Hough, D.;
+       Kahan, W.; Karpinski, R.; Palmer, J.; Ris, F.N.; Stevenson, D.:
+       A Proposed Radix- and Word-length-independent Standard for
+       Floating-point Arithmetic.
+       SIGNUM Newsletter, Vol. 20, No. 1, January 1985, pp. 37-51
+[45]   IEEE: IEEE Standard for Binary Floating-Point Arithmetic.
+       SIGPLAN Notices, Vol. 22, No. 2, 1985, pp. 9-25
+[46]   IEEE Standard for Binary Floating-Point Arithmetic.
+       ANSI/IEEE Std 754-1985.
+       New York, NY: Institute of Electrical and Electronics Engineers 1985
+[47]   IEEE Standard for Radix-Independent Floating-Point Arithmetic.
+       ANSI/IEEE Std 854-1987.
+       New York, NY: Institute of Electrical and Electronics Engineers 1987
+[48]   Advanced Micro Devices: IEEE floating-point format.
+       Microprocessors and Microsystems, Vol. 12, No. 1, January 1988,
+       pp. 13-23
+[49]   Cody, W.J: Algorithm XXX: Functions to Support the IEEE Standard for
+       Binary Floating-Point Arithmetic. Preprint MCS-P90-0789, Mathematics
+       and Computer Science Division, Argonne National Laboratory, July 1989
+
+
+1.4 Floating point arithmetic, general and implementation issues
+
+[50]   Kuki, H.: Mathematical Function Subprograms for Basic System
+       Libraries - Objectives, Constraints, and Trade-Off.
+       In: Rice, J.R. (ed.): Mathematical Software.
+       New York, NY: Academic Press 1971
+[51]   Aird, T.; Dodson, D.; Houstis, E.; Rice, J.: Statistics on the Use of
+       Mathematical Subroutines from a Computer Center Library.
+       SIGNUM Newsletter, Vol. 8, No. 4, October 1973, pp. 8-9
+[52]   Bohlender, G.: Floating-Point Computation of Functions with Maximum
+       Accuracy.
+       IEEE Transactions on Computers, Vol. C-26, No. 7, July 1977, pp. 621-632
+[53]   Hashizume, B.: Floating Point Arithmetic.
+       BYTE, Vol. 2, No. 11, November 1977, pp. 76-78, 180-188
+[54]   Andrews, M.: Influence of architecture on numerical algorithms.
+       Microprocessors and Microsystems, Vol. 2, No. 3, June 1978, pp. 130-137
+[55]   Boney, J.: Math in the Real World.
+       BYTE, Vol. 3, No. 9, September 1978, pp. 114-119
+[56]   Bohlender, G.: Genaue Berechnung mehrfacher Summen, Produkte und Wurzeln
+       von Gleitkommazahlen und allgemeine Arithmetik in h"oheren
+       Programmiersprachen. Dissertation, Universit"at Karlsruhe 1978
+[57]   Rauch, E.: Einige Aspekte der Auswahl und Realisierung numerischer
+       Verfahren in anwendungsorientierten Systemen.
+       In: Meinardus, G. (Hrsg.): Approximation in Theorie und Praxis.
+       Mannheim: Bibliographisches Institut 1979
+[58]   Reid, J.: Functions for Manipulating Floating-Point Numbers.
+       SIGNUM Newsletter, Vol. 14, No. 4, December 1979, pp. 11-13
+[59]   Gr"uner, K.: Allgemeine Rechnerarithmetik und deren Implementierung mit
+       optimaler Genauigkeit. Dissertation, Universit"at Karlsruhe 1979
+[60]   Coonen, J.T.: An Implementation Guide to a Proposed Standard for
+       Floating-Point Arithmetic.
+       Computer, Vol. 13, No. 1, January 1980, pp. 68-79
+[61]   Brown, W.S.; Feldman, S.I.: Environment Parameters and Basic Functions
+       for Floating-Point Computation.
+       ACM Transactions on Mathematical Software, Vol. 6, No. 4, December 1980,
+       pp. 510-523
+[62]   Wehringer, A.: Flie"skomma-Arithmetik.
+       Elektronikschau 1981, Heft 5, Seiten 34-36
+[63]   Bohlender, G.; Gr"uner, K.; Wolff von Gudenberg, J.: Realisierung einer
+       optimalen Arithmetik.
+       Elektronische Rechenanlagen, Vol. 24, No. 2, April 1982, pp. 68-72
+[64]   Kulisch, U.W.; Miranker, W.L.: The Arithmetic of the Digital Computer:
+       A New Approach.
+       SIAM Review, Vol. 28, No. 1, March 1986, pp. 1-40
+[65]   Rump, S.M.: Sichere Ergebnisse auf Rechenanlagen.
+       Informatik Spektrum, Vol. 9, No. 3, June 1986, pp. 174-183
+[66]   Grehan, R.: Floating-Point Without a Coprocessor.
+       BYTE, Vol. 13, No. 9, September 1988, pp. 313-319
+[67]   Grehan, R.: Floating-Point Without a Coprocessor, Part 2.
+       BYTE, Vol. 13, No. 10, October 1988, pp. 293-297
+[68]   Grehan, R.: Floating-Point Revisited.
+       BYTE, Vol. 14, No. 4, April 1989, pp. 311-318
+[69]   Ochs, T.: Floating-point theory and practice.
+       Computer Language, Vol. 6, No. 3, March 1989, pp. 67-81
+[70]   Dritz, K.W.: Rationale for the Proposed Standard for a Generic Package
+       of Elementary Functions for Ada.
+       Argonne National Laboratory, Mathematics and Computer Science Division
+       Report ANL-89/2 Rev. 1, October 1989
+[71]   Goldberg, D.: Computer Arithmetic.
+       In: Hennessy, J.L; Patterson, D.A: Computer Architecture - A
+       Quantitative Approach. San Mateo, CA: Morgan Kaufmann 1990
+[72]   Ochs, T.: A rotten foundation.
+       Computer Language, Vol. 8, No. 2, February 1991, pp. 103-107
+[73]   Ochs, T.: Son of rotten foundation: The sequel.
+       Computer Language, Vol. 8., No. 3, March 1991, pp. 85-91
+[74]   Goldberg, D.: What Every Computer Scientist Should Know About
+       Floating-Point Arithmetic.
+       ACM Computing Surveys, Vol. 23, No. 1, March 1991, pp. 5-48
+[75]   Wichmann, B.A.: A Note on the Use of Floating Point in Critical Systems.
+       The Computer Journal, Vol. 35, No. 1, February 1992, pp. 41-44
+
+
+1.5 Floating point packages and processors
+
+[76]   Wolff von Gudenberg, J.: Einbettung allgemeiner Rechnerarithmetik in
+       Pascal mittels eines Operatorkonzepts und Implementierung der
+       Standardfunktionen mit optimaler Genauigkeit.
+       Dissertation, Universit"at Karlsruhe 1980
+[77]   Grappel, R.; Hemenway, J.: Increase Z8000 power with floating-point
+       routines.
+       EDN, Vol. 25, No. 8, April 1980, pp. 179-185
+[78]   Cassola, R.L.: Floating Point Algorithm Design.
+       Computer Design, Vol. 21, No. 6, June 1982, pp. 107-114
+[79]   Vogt, R.; Waser, R.: Arithmetikroutinen f"ur die Me"sdatenverarbeitung.
+       Elektronik 1983, Heft 20, Seiten 85-92
+[80]   Sand, J.R.; Bumgarner, J.O.: Dysan IEEE P-754 Binary Floating Point
+       Architecture.
+       1983 Rochester Forth Conference, Rochester, NY, USA, 7-11 June 1983,
+       pp. 185-194
+[81]   Teufel, T.: Ein optimaler Gleitkommaprozessor.
+       Dissertation, Universit"at Karlsruhe 1984
+[82]   Rauchwerk, M.D.: A microprocessor-based fast floating point library.
+       Conference Proceedings of IEEE SOUTHEASTCON 84, Louisville, KY, USA,
+       8-11 April 1984, pp. 488-490
+[83]   Dietrich, D.; Fischer, R.: Floating-Point-Routinen, entwickelt f"ur
+       Mikrorechner.
+       Elektroniker (Schweiz) 1984, Heft 8, Seiten 49-54
+[84]   Look, H.W.: Compatible software and hardware impelentations permitted by
+       IEEE standards for binar floating-point arithmetic.
+       AFIPS Conference Proceedings of the 1984 NCC, Las Vegas, NV, USA,
+       9-12 July 1984, pp. 101-105
+[85]   Lohninger, H.: Gleitkommaarithmetik f"ur den 68000.
+       mc 1985, Heft 2, Seiten 58-64
+[86]   Gross, T.: Floating-Point Arithmetic on a Reduced-Instruction-Set
+       Processor.
+       Proceedings of the 7th Symposium on Computer Arithmetic, Urbana, IL,
+       USA, 4-6 June 1985, pp. 86-92
+[87]   Lorenz, E.: Aspekte der Implementierung eines Programmpaketes zur
+       schnellen und flexiblen Ausf"uhrung von arithmetischen Operationen mit
+       dem U880.
+       Nachrichtentechnik Elektronik, Vol. 35, No. 5, 1985, pp. 179-181
+[88]   Dutta, U.; Bhattacharya, D.; Sarma, A.D.: Implementation of Multibyte
+       Floating Point Arithmetic in 8-bit Microprocessor.
+       Mechanical Engineering Bulletin (India), Vol. 17, No. 3, September 1986,
+       pp. 104-113
+[89]   Himmer"oder, H.-J.; Toschke, R.M.:
+       c't-KAT-Ce. Ein 68000-Einplatinenrechner, Teil 3: REAL-Arithmetik.
+       c't 1987, Heft 1, Seiten 152-158
+[90]   Lange, E.: Implementation and Test of the ACRITH Facility in a
+       System /370.
+       IEEE Transactions on Computers, Vol. C-36, No. 9, September 1987,
+       pp. 1088-1096
+[91]   Davila, J.M.; Phillips, A.J.; Tabak, D.: Floating Point Arithmetic on
+       a RISC.
+       Microprocessing and Microprogramming, Vol. 23, No. 1-5,
+       March 1988, pp. 179-184
+[92]   V"olzke, H.: Flie"skomma-Arithmetik und IEEE-Spezifikationen.
+       Teil 1: Standards und Strukturen.
+       mc 1988, Heft 10, Seiten 123-129
+[93]   V"olzke, H.: Flie"skomma-Arithmetik und IEEE-Spezifikationen.
+       Teil 2: Entwurf eines Fliesskommapakets.
+       mc 1988, Heft 11, Seiten 78-95
+[94]   V"olzke, H.: Flie"skomma-Arithmetik und IEEE-Spezifikationen.
+       Teil 3: Die verwendeten Algorithmen.
+       mc 1988, Heft 12, Seiten 95-108
+[95]   V"olzke, H.: Flie"skomma-Arithmetik und IEEE-Spezifikationen.
+       Teil 4: Die Konvertierungsroutinen.
+       mc 1989, Heft 1, Seiten 66-73
+[96]   V"olzke, H.: Flie"skomma-Arithmetik und IEEE-Spezifikationen.
+       Teil 5: Ein- und Ausgabefunktionen.
+       mc 1989, Heft 2, Seiten 65-71
+
+
+1.6 Test of floating point routines
+
+[97]   Cody, W.J.: Performance testing of function subroutines.
+       AFIPS Conference Proceedings, Vol. 34, SJCC 1969, pp. 759-763
+[98]   Karpinski, R.: Paranoia: A Floating-Point Benchmark.
+       BYTE, Vol. 10, No. 2, February 1985, pp. 223-235
+[99]   Du Croz, J.: FPV - a Floating-Point Validation Package.
+       Software Quality Assurance, Reliability, and Testing. London, UK,
+       9-10 December 1986, pp. 47-55
+[100]  Tang, P.T.P.: Testing Computer Arithmetic by Elementary Number Theory.
+       Preprint MCS-P84-0889, Mathematics and Computer Science Division,
+       Argonne National Laboratory, August 1989
+[101]  Cody, W.J.; Stoltz, L.: The Use of Taylor Series to Test Accuracy of
+       Function Programs.
+       ACM Transactions on Mathematical Software, Vol. 17, No. 1,
+       March 1991, pp. 56-63
+[102]  Plauger, P.J.: Washing the watchers.
+       Computer Language, Vol. 8, No. 9, September 1991, pp. 23-32
+[103]  Nagal, T.: Performance evaluation of mathematical functions.
+       Supercomputer, Vol. 8, No. 8, November 1991, pp. 46-56
+
+
+2.0 Addition and Subtraction
+
+[104]   Sweeney, D.W.: An analysis of floating-point addition.
+       IBM Systems Journal, Vol. 4, No. 1, 1965, pp. 31-42
+[105]  Feldstein, A.; Goodman, R.: Loss of Significance in Floating Point
+       Subtraction and Addition.
+       IEEE Transactions on Computer, Vol. C-31, No. 4, April 1982, pp. 328-335
+
+
+2.1 Multiplication
+
+[106]  Heising, W.; Rabin, M.O.; Winograd, S.: Multiplication Method.
+       IBM Technical Disclosure Bulletin, Vol. 15, No. 4, September 1972,
+       pp. 1147-1148
+[107]  Sheue, A.E.: Two's-Complement Multiplication.
+       SIG Micro Newsletter, Vol. 10, No. 1, March 1979, pp. 21-23
+[108]  Ambikairajah, E.; Carey, M.J.: Technique for Performing Multiplication
+       on a 16-bit Microprocessor Using an Extension of Booth's Algorithm.
+       Electronics Letters, Vol. 16, No. 2, January 1980, pp. 53-54
+[109]  Wehringer, A.: Schnelle 16-bit-Multiplikation und Division.
+       Elektronikschau 1981, Heft 10, Seiten 36-37
+[110]  Schatte, P.: The Frequency of Postshifts in Floating-Point
+       Multiplication.
+       Elektronische Informationsverarbeitung und Kybernetik, Vol. 18, No. 9,
+       1982, pp. 523-526
+[111]  Goodrich, J.L.: Very efficient 8080 program multiplies and divides.
+       Electronics, Vol. 55, No. 4, February 1982, pp. 144-145
+[112]  Baxter, I.: Code replication speeds multiplication.
+       EDN, Vol. 28, No.4, February 1983, pp. 261-262
+[113]  Dyer, D.C.: Z80 routine performs 16-bit multiply.
+       EDN, Vol. 28, No. 5, March 1983, p. 144
+[114]  Coupe, B: Superefficient programs for 8080 and Z80 multiply.
+       Electronics, Vol. 56, No. 6, March 1983, pp. 142-143
+[115]  Iffrig, L.D.: Use less code for fast 8080 multiply.
+       EDN, Vol. 28, No. 13, June 1983, p. 293
+[116]  Robison, A.D.: Use Squares for Fast Multiplication.
+       EDN, Vol. 28, No. 21, October 1983, pp. 263+267
+[117]  Collis, B.: Macros speed 8080, Z80 multiplication.
+       EDN, Vol. 28, No. 24, November 1983, p. 225
+[118]  Lorenz, E; Sandau, R.: M"oglichkeiten der Implementierung
+       leistungsf"ahiger Multiplikationsprogramme in Mikrorechnersystemen.
+       Nachrichtentechnik Elektronik, Vol. 34, No. 8, 1984, pp. 288-290
+
+
+2.2 Division
+
+[119]  Pope, D.A.; Stein, M.L.: Multiple Precision Arithmetic.
+       Communications of the ACM, Vol. 3, No. 12, December 1960, pp. 652-654
+[120]  Cox, A.G.; Luther, H.A.: A Note on Multiple Precision Arithmetic.
+       Communications of the ACM, Vol. 4, 1961, p. 353
+[121]  Stein, M.L.: Divide-and-Correct Methods for Multiple Precision Division.
+       Communications of the ACM, Vol. 7, No. 8, August 1964, pp. 472-474
+[122]  Krishnamurthy, E.V.: On a Divide-and-Correct Method for Variable
+       Precision Division.
+       Communications of the ACM, Vol. 8, No. 3, March 1965, pp. 179-181
+[123]  Krishnamurthy, E.V.; Nandi, S.K.: On the Normalization Requirement of
+       Divisor in Divide-and-Correct Methods.
+       Communications of the ACM, Vol. 10, No. 12, December 1967, pp. 809-813
+[124]  Collins, G.E.; Musser, D.R.: Analysis of the Pope-Stein Division
+       Algorithm.
+       Information Processing Letters, Vol. 6, No. 5, October 1977, pp. 151-155
+[125]  Sanyal, S.: An algorithm for nonrestoring division.
+       Computer Design, Vol. 16, No. 5, May 1977, pp. 124-127
+[126]  Lemaire, C.A.; Svercek, J.C.: Improved Non-restoring Division.
+       IBM Technical Disclosure Bulletin, Vol. 23, No. 3, August 1980,
+       pp. 1149-1151
+[127]  Grappel, R.D.: 68000 routine divides 32-bit numbers.
+       EDN, Vol. 26, No. 5, March 1981, pp. 161-162
+[128]  Asai, H.: A Consideration of a Practical Implementation For a New
+       Convergence Division.
+       Information Processing Letters, Vol. 17, No. 5,
+       December 1983, pp. 273-281
+[129]  McGuire, D.W.: 8048 program computes 16-by-8-bit quotient.
+       Electronics, Vol. 56, No. 10, May 1983, pp. 152-153
+[130]  James, F.V.: An 8085 routine divides 32-bit unsigned numbers.
+       Electronics, Vol. 56, No. 22, November 1983, pp. 163-165
+[131]  Galand, C.: Fast Division.
+       IBM Technical Disclosure Bulletin, Vol. 26, No. 3B, August 1983,
+       pp. 1537-1539
+[132]  Mithani, D.; Iyer, S.: Algorithm speeds nonrestoring division in
+       uprogrammed systems.
+       EDN, February 1985, pp. 199-208
+[133]  Semba, I: An Algorithm for Division of Large Integers.
+       Journal of Information Processing, Vol. 9, No. 3, 1986, pp. 145-147
+[134]  Lorang, O.: Schnelle Division.
+       Elektronik 1986, Heft 22, Seiten 167-168
+[135]  Parker, A; Hamblen, J.O.: Optimal value for the Newton-Raphson division
+       algorithm.
+       Information Processing Letters, Vol. 42, No. 3, May 1992, pp. 141-144
+[136]  Ozawa, K.: A Fast O(n**2) Division Algorithm for Multiple-Precision
+       Floating-Point Numbers.
+       Journal of Information Processing, Vol. 14, No. 3, 1991, pp. 354-356
+
+
+3.0 Elementary functions, general
+
+[137]  Filippi, S.: Die Berechnung einiger elementarer transzendenter
+       Funktionen mit Hilfe des Richardson-Algorithmus.
+       Computing, Vol. 1, 1966, pp. 127-132
+[138]  Kogbetliantz, E.G.: Generation of Elementary Functions.
+       In: Ralston, A.; Wilf, H.S. (ed.): Mathematical Methods for Digital
+       Computers.
+       New York, NY: Wiley 1966
+[139]  Rothmaier, B.: Dokumentation der Standardfunktionen des Betriebssystems
+       Hydra X8. Interner Bericht Nr. 70/8 Institut f"ur Informatik.
+       Universit"at Karlsruhe 1970
+[140]  Rothmaier, B.: Die Berechnung der elementaren Funktionen mit beliebiger
+       Genauigkeit. Dissertation, Universit"at Karlsruhe 1971
+[141]  Cody, W.J.: Software for the Elementary Functions.
+       In: Rice, J.R. (ed.): Mathematical Software.
+       New York, NY: Academic Press 1971
+[142]  Frankowski, K.S.: A Realistic Model for Error Estimates in the
+       Evaluation of Elementary Functions.
+       Proceedings of the 4th Symposium on Computer Arithmetic, Santa Monica,
+       CA, USA, 25-27 October 1978, pp. 70-74
+[143]  Brent, R.P.: Unrestricted Algorithms for Elementary and Special
+       Functions.
+       Information Processing 80, Proceedings of the IFIP Congress 80, Tokyo,
+       Japan, 6-9 October 1980, pp. 613-619
+[144]  Jung, C.: Berechnung der reellen und reellintervallwertigen Standard-
+       funktionen mit maximaler Genauigkeit in einem hexadezimalen Gleit-
+       kommaformat.
+       Diplomarbeit, Institut f"ur Angewandte Mathematik, Universit"at
+       Karlsruhe, September 1983
+[145]  Nave, R.: Implementation of Transcendental Functions on a Numerics
+       Processor.
+       Microprocessing and Microprogramming, Vol. 11, No. 3-4,
+       March-April 1983, pp. 221-225
+[146]  Longo, S.A.: Calculating Functions using Ada.
+       Journal of Pascal, Ada & Modula-2, Vol. 3, No. 4, July-August 1984,
+       pp. 34-36
+[147]  Butterfield, J.: Math and Tables.
+       Compute, Vol. 6, No. 9, September 1984, pp. 134-135
+[148]  Wolff von Gudenberg, J.: Berechnung maximal genauer Standardfunktionen
+       mit einfacher Mantissenl"ange.
+       Elektronische Rechenanlagen, Vol. 26, No. 5, October 1984, pp. 230-238
+[149]  Borwein, J.M.; Borwein, P.B.: The Arithmetic-Geometric Mean and Fast
+       Computation of Elementary Functions.
+       SIAM Review, Vol. 26, No. 3, July 1984, pp. 351-366
+[150]  Gal, S.: Computing Elementary Functions: A New Approach for Achieving
+       High Accuracy and Good Performance.
+       In: Accurate Scientific Computations. Lecture Notes in Computer
+       Science 235
+       New York, NY: Springer 1985
+[151]  Agarwal, R.C.; Cooley, J.W.; Gustavson, F.G.; Shearer, J.B.;
+       Slishman, G.; Tuckerman, B.: New scalar and vector elementary functions
+       for the IBM System /370.
+       IBM Journal Research & Development, Vol. 30, No. 2, March 1986,
+       pp. 126-144
+[152]  Braune, K.: Hochgenaue Standardfunktionen f"ur reelle und komplexe
+       Punkte und Intervalle in beliebigen Gleitpunktrastern.
+       Dissertation, Universit"at Karlsruhe 1987.
+[153]  Thompson, P.: Implementing an Elementary Function Library.
+       SIGNUM Newsletter, Vol. 22, No. 2, April 1987, pp. 2-5
+[154]  Koopman, P.: Transcendental Functions.
+       Forth Dimensions, Vol. 9, No. 4, December 1987, pp. 21-22
+[155]  Markstein, P.W.: Computation of elementary functions on the IBM RISC
+       System/6000 processor.
+       IBM Journal Research & Development, Vol. 34, No. 1, January 1990,
+       pp. 111-119
+[156]  Koren, I.; Zinaty, O.: Evaluating Elementary Functions in a Numerical
+       Coprocessor Based on Rational Approximations.
+       IEEE Transactions on Computers, Vol. C-39, No. 8, August 1990,
+       pp. 1030-1037
+[157]  Dunham, C.B.: Feasibility of "Perfect" Function Evaluation.
+       SIGNUM Newsletter, Vol. 25, No. 4, October 1990, pp. 25-26
+[158]  Gal, S.; Bachelis, B.: An Accurate Elementary Mathematical Library for
+       the IEEE Floating Point Standard.
+       ACM Transactions on Mathematical Software, Vol. 17, No. 1,
+       March 1991, pp. 26-45
+[159]  Ziv, Abraham: Fast Evaluation of Elementary Mathematical Functions with
+       Correctly Rounded Last Bit.
+       ACM Transaction on Mathematical Software, Vol. 17, No. 3,
+       September 1991, pp. 410-423
+[160]  Chance, R.J.: The effect of processor architecture on an efficient
+       floating point table look-up algorithm.
+       Microprocessors and Microsystems, Vol. 15, No. 8,
+       October 1991, pp. 411-415
+[161]  Tang, P.T.P.: Table-Lookup Algorithms for Elementary Functions and Their
+       Error Analysis.
+       Proceedings of the 10th IEEE Symposium on Computer Arithmetic, Grenoble,
+       France, 26-28 June 1991, pp. 232-236
+
+
+3.1 Elementary functions, CORDIC and related algorithms
+
+[162]  Wensley, J.H.: A Class of Non-Analytical Iterative Processes.
+       The Computer Journal, Vol. 1, 1958, pp. 163-167
+[163]  Volder, J.E.: The CORDIC Trigonometric Computing Technique.
+       IRE Transactions on Electronic Computers, Vol. EC-8, No. 5,
+       September 1959, pp. 330-334
+[164]  Daggett, D.H.: Decimal-Binary Conversions in CORDIC.
+       IRE Transactions on Electronic Computers, Vol. EC-8, No. 5,
+       September 1959, pp. 335-339
+[165]  Cantor, D.; Estrin, G.; Turn, R.: Logarithmic and Exponential Function
+       Evaluation in a Variable Structure Digital Computer.
+       IRE Transactions on Electronic Computers, Vol. EC-11,
+       April 1962, pp. 155-164
+[166]  Meggitt, J.E.: Pseudo Division and Pseudo Multiplication Processes.
+       IBM Journal Research & Development, Vol. 6, No. 2, April 1962,
+       pp. 210-226
+[167]  Specker, W.H.: A Class of Algorithms for Ln x, Exp x, Sin x, Cos x,
+       Tan**-1 x, and Cot**-1 x.
+       IEEE Transactions on Electronic Computers, Vol. EC-14, No. 1,
+       February 1965, pp. 85-86
+[168]  Linhardt, R.J.; Miller, H.S.: Digit-by-Digit Transcendental-Function
+       Computation.
+       RCA Review, Vol. 30, June 1969, pp. 209-247
+[169]  Lugish, B.G. de: A Class of Algorithms for Automatic Evaluation of
+       Certain Elementary Function in a Binary Computer.
+       University of Illinois, Department of Computer Science Report No. 399,
+       June 1970
+[170]  Walther, J.S.: A unified algorithm for elementary functions.
+       AFIPS Conference Proceedings, Vol. 38, SJCC 1971, pp. 379-385
+[171]  Sarkar, B.P.; Krishnamurthy, E.V.: Economic Pseudodivision Processes for
+       Obtaining Square Root, Logarithm, and Arctan
+       IEEE Transactions on Computers, Vol. C-20, No. 12, December 1971,
+       pp. 1589-1593
+[172]  Chen, T.C.: Automatic Computation of Exponentials, Logarithms,
+       Ratios and Square Roots.
+       IBM Journal Research & Development, Vol. 16, No. 4, July 1972,
+       pp. 380-388
+[173]  Ercegovac, M.D.: Radix-16 Evaluation of Certain Elementary Functions.
+       IEEE Transactions on Computers, Vol. C-22, No. 6, June 1973, pp. 561-566
+[174]  Baker, P.W.: More Efficient Radix-2 Algorithms for Some
+       Elementary Functions.
+       IEEE Transactions on Computers, Vol. C-24, No. 11, November 1975,
+       pp. 1049-1054
+[175]  Andrews, M.; Mraz, T.: Unified elementary function generator.
+       Microprocessors and Microsystems, Vol. 2, No. 5,
+       October 1978, pp. 270-273
+[176]  Rodrigues, M.R.D.; Zurawski, J.H.P.; Gosling, J.B.: Hardware evaluation
+       of mathematical functions.
+       IEE Proceedings, Part E, Vol. 128, No. 4, July 1981, pp. 155-164
+[177]  V"olz, H.: CORDIC und "ahnliche Algorithmen der elementaren Funktionen
+       mit besonderer Eignung f"ur Mikrorechner.
+       Nachrichtentechnik Elektronik, Vol. 33, No. 12, 1983, pp. 506-510
+[178]  Naseem, A.; Fisher, P.D.: A Modified CORDIC Algorithm.
+       Proceedings 1984 IEEE International Conference on Computer Design: VLSI
+       in Computers. Port Chester, NY, USA, 8-11 October 1984, pp. 684-688
+[179]  Abruzzo, J.: Applicability of CORDIC Algorithm to Arithmetic Processing.
+       Conference Record 18th Asilomar Conference on Circuits, Systems, and
+       Computers. Pacific Grove, CA, USA, 5-7 November 1984, pp. 79-86
+[180]  Naseem, A.; Fisher, P.D.: The Modified CORDIC Algorithm.
+       Proceedings of the 7th Symposium on Computer Arithmetic, Urbana, IL,
+       USA, 4-6 June 1985, pp. 144-152
+[181]  Bittner, L.: Weiteres "uber Pseudo-Divisionsverfahren zur Berechnung der
+       Standardfunktionen und gewisser Nicht-Standardfunktionen.
+       Zeitschrift angewandte Mathematik und Mechanik, Vol. 65, No. 12, 1985,
+       pp. 605-612
+[182]  Vachss, R.: The Cordic Magnification Function.
+       IEEE Micro, Vol. 7, No. 5, October 1987, pp. 83-84
+[183]  Hu, Y.H.; Naganathan, S.: Angle Recoding Method for Efficient
+       Implementation of the CORDIC Algorithm.
+       1989 IEEE International Symposium on Circuits and Systems, Vol. 1,
+       Portland, OR, USA, 8-11 May 1989, pp. 175-178
+[184]  Ahmed, H.M.: Efficient Elementary Function Generation with Multipliers.
+       Proceedings of the 9th Symposium on Computer Arithmetic, Santa Monica,
+       CA, USA, 6-8 September 1989, pp. 52-59
+[185]  Jarvis, P.: Implementing Cordic Algorithms.
+       Dr. Dobb's Journal, Vol. 15, No. 10, October 1990, pp. 152-158
+[186]  Takagi, N.; Asada, T.; Yajima, S.: Redundant CORDIC Methods with a
+       Constant Scale Factor for Sine and Cosine Computation.
+       IEEE Transactions on Computers, Vol. C-40, No. 9, September 1991,
+       pp. 989-995
+[187]  Wesner, J.: Ein Tick schneller.
+       mc 1992, Heft 2, Seiten 80-86
+
+
+3.2 Elementary functions, function approximation
+
+[188]  Spielberg, K.: Efficient Continued Fraction Approximations To Elementary
+       Functions.
+       Mathematics of Computation, Vol. 15, 1961, pp. 409-417
+[189]  Spielberg, K.: Representation of Power Series in Terms of Polynomials,
+       Rational Approximations and Continued Fractions.
+       Journal of the Association for Computing Machinery, Vol. 8,
+       1961, pp. 613-627
+[190]  Phillips, G.M.: Estimate of the maximum error in best polynomial
+       approximations.
+       The Computer Journal, Vol. 11, 1968, pp. 110-111
+[191]  Mohn, K.; Roman, R.V.: An interactive polynomial approximation
+       algorithm.
+       The Computer Journal, Vol. 19, No. 1, pp. 74-78
+[192]  Derenzo, S.: Approximations for Hand Calculators Using Small Integer
+       Coefficients.
+       Mathematics of Computation, Vol. 31, No. 137, January 1977, pp. 214-225
+[193]  Ruckdeschel, F.: Functional Approximations.
+       BYTE, Vol. 3, No. 11, November 1978, pp. 34-46
+[194]  Moshier, S.L.: Computer Approximations.
+       BYTE, Vol. 11, No. 4, April 1986, pp. 161-178
+[195]  Trefethen, L.N.; Gutknecht, M.H.: Pad, Stable Pad, and Chebyshev-Pad
+       Approximation.
+       In: Mason, J.C.; Cox, M.G. (ed.): Algorithms for Approximation.
+       Oxford: Clarendon Press 1987
+[196]  Breuer, P.T.: A New Method for Real Rational Uniform Approximation.
+       In: Mason, J.C.; Cox, M.G. (ed.): Algorithms for Approximation.
+       Oxford: Clarendon Press 1987
+[197]  Dunham, C.: Applications of Best Approximation.
+       SIGNUM Newsletter, Vol. 26, No. 2, April 1991, pp. 2-10
+[198]  Plauger, P.J.: Approximating functions.
+       Computer Language, Vol. 8, No. 6, June 1991, pp. 17-25
+[199]  Plauger, P.J.: Economizing polynomials.
+       Computer Language, Vol. 8, No. 7, July 1991, pp. 21-27
+[200]  Ochs, T.: Numerics for the rest of us.
+       Computer Language, Vol. 8, No. 10, October 1991, pp. 113-127
+
+
+
+3.2.1 Polynomial evaluation
+
+[201]  Knuth, D.E.: Evaluation of Polynomials By Computer.
+       Communications of the ACM, Vol. 5, No. 12, December 1962, pp. 595-599
+[202]  Eisman, S.H.: Polynomial Evaluation Revisited.
+       Communications of the ACM, Vol. 6, No. 7, July 1963, 384-385
+[203]  Eve, J.: The Evaluation of Polynomials.
+       Numerische Mathematik, Vol. 6, 1964, pp. 17-21
+[204]  Fike, C.T.: Methods of Evaluating Polynomial Approximations in Function
+       Evaluation Routines.
+       Communications of the ACM, Vol. 10, No. 3, March 1967, pp. 175-178
+[205]  Reimer, M.: Auswertungsalgorithmen fast-optimaler numerischer
+       Stabilit"at f"ur Polynome.
+       Computing, Vol. 17, No. 4, 1977, pp. 289-296
+[206]  Kusterer, R.; Reimer, M.: Stable Evaluation of Polynomials in Time
+       log n.
+       Mathematics of Computation, Vol. 33, No. 147, July 1979, pp. 1019-1031
+[207]  Dunham, C.B.: Perturbation Analysis of Horner's Method for Nice Cases.
+       SIGNUM Newsletter, Vol. 24., No. 2-3, April 1989, pp. 8-9
+
+
+3.3 Square root, general
+
+[208]  Andrews, M.; McCormick, S.F.; Taylor, G.D.: Evaluation of Functions on
+       Microcomputers: Square Root.
+       Computers & Mathematics with Applications, Vol. 4,
+       No. 4, 1978, pp. 359-367
+[209]  Alt, H.: Square Rooting Is as Difficult as Multiplication.
+       Computing, Vol. 21, No. 3, 1979, pp. 221-232
+[210]  Andrews, M.: Mathematical Microprocessor Software: A {x Comparison.
+       IEEE Micro, Vol. 2, No. 3, May 1982, pp. 63-79
+[211]  Dietrich, D.: Verfahren zur L"osung von Quadratwurzeln f"ur
+       Mikrorechnerprozeduren.
+       Elektroniker (Schweiz) 1983, Heft 8, Seiten EL-1 - EL-6
+[212]  Moler, C.; Morrison, D.: Replacing Square Roots by Pythagorean Sums.
+       IBM Journal Research & Development, Vol. 27, No. 6, November 1983,
+       pp. 577-581
+[213]  Montuschi, P.; Mezzalama, M.: Survey of square rooting algorithms.
+       IEE Proceedings, Part E, Vol. 137, No. 1, January 1990, pp. 31-40
+
+
+3.3.1 Square root, bitoriented, iterative, and table methods of computation
+
+[214]  Lenaerts, E.H.: Automatic Square Rooting.
+       Electronic Engineering, Vol. 27, July 1955, pp. 287-289
+[215]  Bemer, R.W.: A Machine Method for Square-Root Computation.
+       Communications of the ACM, Vol. 1, No. 1, 1958, pp. 6-7
+[216]  Metze, G.: Minimal Square Rooting.
+       IEEE Transactions on Electronic Computers, Vol. EC-14, April 1965,
+       pp. 181-185
+[217]  Egbert, W.E.: Personal Calculator Algorithms I: Square Roots.
+       Hewlett-Packard Journal, Vol. 28, No. 9, May 1977, pp. 22-24
+[218]  Alexander, V.L.: Square Root Routine.
+       IBM Technical Disclosure Bulletin, Vol. 20, No. 3, August 1977, p. 1222
+[219]  Murphy, T.R.; Rickard, P.L.: Square-Root Procedure for Floating-Point
+       Numbers.
+       IBM Technical Disclosure Bulletin, Vol. 21, No. 2, July 1978, p. 785
+[220]  Waldecker, D.E.: Nonrestoring Square Root with Simplified Answer
+       Generation.
+       IBM Technical Disclosure Bulletin, Vol. 22, No. 11, April 1980,
+       pp. 4807-4808
+[221]  Peng, H.: Algorithms for extracting square roots and cube roots.
+       Proceedings of the 5th Symposium on Computer Arithmetic, Ann Arbor,
+       MI, USA, 18-19 May 1981, pp. 121-126
+[222]  Grote, H.: Code improves on a square-root routine.
+       EDN, Vol. 26, No. 11, May 1981, pp. 198-200
+[223]  Bice, P.K.: Algorithm adds square root to micro's arithmetic capability.
+       Electronic Design, Vol. 29, No. 11, May 1981, p. 146
+[224]  Kunz, W.: Quadratwurzel mit dem fP Z80.
+       Elektronik 1981, Heft 7, Seiten 109-110
+[225]  Rix, P.: Universeller Quadratwurzel-Algorithmus.
+       Elektronik 1982, Heft 23, Seiten 81-82
+[226]  Conover, B.; Gustafson. D.L.: An Algorithm for High Speed Square Roots.
+       1985 Region 5 IEEE Conference Digest. Lubbock, TX, USA, 13-15 March
+       1985, pp. 19-21
+[227]  Sreedharan, J.; Dhurkadas, A.: 8086 algorithm solves square roots.
+       EDN, Vol. 30, No. 7, April 1985, p. 272
+[228]  Enzmann, K.: Wurzelziehen durch sukzessive Approximation.
+       Elektronik 1985, Heft 18, Seite 92
+[229]  Majerski, S.: Square-Rooting Algorithms for High-Speed Digital Circuits.
+       IEEE Transactions on Computers, Vol. C-34, No. 8, August 1985,
+       pp. 724-733
+[230]  Grappel, R.D.: Square-root algorithm is fast and simple.
+       EDN, Vol. 31, No. 8, April 1986, pp. 248-248
+[231]  Campbell, R.A: NS32000 Square Roots.
+       Dr. Dobb's Journal, Vol. 11, No. 3, March 1986, pp. 122-123 + 106
+[232]  Wollenberg, R.; Milnikel, R.: Schnelles Radizierverfahren durch
+       Tabellenzugriff.
+       Elektronik 1986, Heft 6, Seiten 79-82
+[233]  Pfenninger, E.: Schneller Quadratwurzel-Algorithmus.
+       Elektronik 1986, Heft 22, Seiten 179-180
+[234]  B"ottner, H.: Quadratwurzel-Algorithmus.
+       mc 1987, Heft 5, Seite 58
+[235]  Johnson, K.C.: ALGORITHM 650: Efficient Square Root Implementation
+       on the 68000.
+       ACM Transactions on Mathematical Software, Vol. 13, No. 2,
+       June 1987, pp. 138-151
+[236]  Rolfe, T.J.: On a Fast Integer Square Root Algorithm.
+       SIGNUM Newsletter, Vol. 22, No.4, October 1987, pp. 6-11
+[237]  Barany, T.E.: Fast evaluation of integer roots in microcontroller
+       systems.
+       Microprocessor and Microsystems, Vol. 12, No. 6, July-August 1988,
+       pp. 341-344
+[238]  Milnikel, R.; Wollenberg, R.: Schnelles Radizierverfahren f"ur
+       Gleitkommazahlen im IEEE-Format.
+       Elektronik 1988, Heft 8, Seiten 114-122
+[239]  Peter, O.: Prozessor zieht Wurzeln.
+       c't 1990, Heft 1, Seiten 300-306
+[240]  Hashemian, R.: Square Rooting Algorithms for Integer and Floating-Point
+       Numbers.
+       IEEE Transactions on Computers, Vol. C-39, No. 8,
+       August 1990, pp. 1025-1029
+[241]  Hamza, K.M.; Abdul-Karim, M.A.H.: Microprocessor Based Direct Square
+       Root Extractor.
+       Modelling, Simulation & Control A, Vol. 34, No. 1, 1991, pp. 45-48
+
+
+3.3.2 Square root, Newton's method
+
+[242]  Gower, J.C.: A Note on an Iterative Method for Root Extraction.
+       The Computer Journal, Vol. 1, 1958, pp. 142-143
+[243]  Eve, J.: Starting approximation for the iterative calculation of square
+       roots.
+       The Computer Journal, Vol. 6, 1963, pp. 274-276
+[244]  Cody, W.J.: Double-Precision Square Root for The CDC-3600.
+       Communications of the ACM, Vol. 7, No. 12, December 1964, pp. 715-718
+[245]  Swarztrauber, P.N.: On the Double-Precision Square Root Routine (letter
+       to the editor).
+       Communications of the ACM, Vol. 8, No. 4, April 1965, p. 202
+[246]  King, R.: On the Double-Precision Square Root Routine (letter to the
+       editor).
+       Communications of the ACM, Vol. 8, No. 4, April 1965, p. 202
+[247]  James, W.; Jarratt, P.: The Generation of Square Roots on a Computer
+       with Rapid Multiplication compared with Division.
+       Mathematics of Computation, Vol. 19, 1965, pp. 497-500
+[248]  Fike, C.T.: Starting Approximations for Square Root Calculation on IBM
+       System/360.
+       Communications of the ACM, Vol. 9, No. 4, April 1966, pp. 297-299
+[249]  Moursund, D.G.: Optimal Starting Values for Newton-Raphson
+       Calculation of {x.
+       Communications of the ACM, Vol. 10, No. 7, July 1967, pp. 430-432
+[250]  Fike, C.T.: A Rational Approximation Optimal by Moursund's Criterion
+       (letter to the editor).
+       Communications of the ACM, Vol. 10, No. 11, November 1967, pp. 683-684
+[251]  Holzwarth, A.: Ein Verfahren zur Bestimmmung bester Tschebyscheff-
+       Approximationen der Quadratwurzelfunktion.
+       Computing, Vol. 4, 1969, pp. 168-177
+[252]  King, R.F.; Phillips, D.L.: The Logarithmic Error and Newton's Method
+       for the Square Root.
+       Communications of the ACM, Vol. 12, No. 2, February 1969, pp. 87-88
+[253]  Sterbenz, P.H.; Fike, C.T.: Optimal Starting Approximations for
+       Newton's Method.
+       Mathematics of Computation, Vol. 23, 1969, pp.313-318
+[254]  Wilson, M.W.: Optimal Starting Approximations for Generating
+       Square Root for Slow or No Divide.
+       Communications of the ACM, Vol. 13, No. 9, September 1970, pp. 559-560
+[255]  Rothmaier, B.: Die Berechnung der Quadratwurzel nebst Schranken auf
+       Dualmaschinen. Interner Bericht Nr. 70/17, Institut f"ur Informatik.
+       Universit"at Karlsruhe 1970.
+[256]  Ninomiya, I: Best Rational Starting Approximations and Improved Newton
+       Iteration for the Square Root.
+       Mathematics of Computation, Vol. 24, No. 110, April 1970, pp. 391-404
+[257]  Phillips, D.L.: Generalized Logarithmic Error and Newton's Method for
+       the mth Root.
+       Mathematics of Computation, Vol. 24, No. 110, April 1970, pp. 383-389
+[258]  Ramamoorthy, C.V.; Goodman, J.R.; Kim, K.H.: Some Properties of
+       Iterative Square-Rooting Methods Using High-Speed Multiplication.
+       IEEE Transactions on Computers, Vol. C-21, No. 8, August 1972,
+       pp. 837-847
+[259]  Pedersen, P.W.: Hvordan beregner man kvadratroden?
+       Elektronik (Denmark), No. 4, April 1980, pp. 18-21
+[260]  Meinardus, G.; Taylor, G.D.: Optimal Partitioning of Newton's Method for
+       Calculating Roots.
+       Mathematics of Computation, Vol. 35, No. 152, October 1980,
+       pp. 1221-1230
+[261]  Fredette, G.: 68000 routine extracts square roots.
+       EDN, Vol. 26, No. 16, August 1981, pp. 185-194
+[262]  Chamrad, V.: A Fast Floating-Point Square-Rooting Routine for the
+       8080/8085 Microprocessors.
+       Kybernetika, Vol. 19, No. 4, 1983, pp. 335-344
+[263]  Chen, S.G.; Hsieh, P.Y.: Fast Computation of the Nth Root.
+       Computers & Mathematics with Applications, Vol. 17, No. 10, 1989,
+       pp. 1423-1427
+[264]  Yeyios, A.K.: On two sequences of algorithms for approximating square
+       roots.
+       Journal of Computational and Applied Mathematics, Vol. 40,
+       No. 1, June 1992, pp. 63-72
+
+
+3.4 Sine and Cosine
+
+[265]  Kogbetliantz, E.G.: Computation of Sin N, Cos N, and Mth Root of N Using
+       an Electronic Computer.
+       IBM Journal Research & Development, Vol. 3, No. 2, April 1959,
+       pp. 147-152
+[266]  Steer, D.G.; Penstone, S.R.: Digital Hardware for Sine-Cosine Functions.
+       IEEE Transaction on Computers, Vol. C-26, No. 12, December 1977,
+       pp. 1283-1286
+[267]  Colquhoun, D.G.: A Fast Approximation to the Sine Function.
+       Software - Practice and Experience, Vol. 7, No. 2, March-April 1977,
+       pp. 227-229
+[268]  Egbert, W.E.: Personal Calculator Algorithms II: Trigonometric
+       Functions.
+       Hewlett-Packard Journal, Vol. 28, No. 10, June 1977, pp. 17-20
+[269]  Wang, J.Y.: The Evaluation of Periodic Functions with Large Input
+       Arguments.
+       SIGNUM Newsletter, Vol. 13, No. 4, December 1978, pp. 7-9
+[270]  Ganesan, K.; Augustine, A.: 8086 generates sines and cosines.
+       EDN, Vol. 26, No. 6, March 1981, pp. 186-188
+[271]  Sewell, B.T.: A Rapid Lookup Table Method for Trigonometric Functions.
+       Software - Practice and Experience, Vol. 12, No. 10,
+       October 1982, pp. 885-887
+[272]  Payne, M.H.; Hanek, R.N.: Radian Reduction for Trigonometric Functions.
+       SIGNUM Newsletter, Vol. 18, No. 1, January 1983, pp. 19-24
+[273]  Payne, M.H.; Hanek, R.N.: Degree Reduction for Trigonometric Functions.
+       SIGNUM Newsletter, Vol. 18, No. 2, April 1983, pp. 18-19
+[274]  Murray, J.T.: Sin/Cos Functions via Approximations Plus Error
+       Compensation.
+       IBM Technical Disclosure Bulletin, Vol. 26, No. 10A, March 1984,
+       pp. 4967-4968
+[275]  Helyer, R.: Sine and cosine calculations.
+       Microprocessors and Microsystems, Vol. 2, No. 5,
+       October 1985, p. 284
+[276]  Campbell, R.A.: In Search of a Sine.
+       Dr. Dobb's Journal, Vol. 11, No. 12, December 1986, pp. 30-32
+[277]  Obermaier, A.: Sin und cosin mit Integerarithmetik.
+       mc 1987, Heft 6, Seiten 108-112
+[278]  Juffa, N.: Schnelle Algorithmen f"ur Sin und Cos.
+       mc 1988, Heft 5, Seiten 105-107
+[279]  Tang, P.T.P.: Some Software Implementations of the Functions Sine and
+       Cosine. Report ANL-90/3. Argonne National Laboratory, April 1990
+[280]  Ochs, T.: This sine is also right!
+       Computer Language, Vol. 9, No. 1, January 1992, pp. 89-93
+
+
+3.5 Logarithm
+
+[281]  Bemer, R.W.: A Subroutine Method for Calculating Logarithms.
+       Communications of the ACM, Vol. 1, No. 5, May 1958, pp. 5-7
+[282]  Spielberg, K.: Polynomial and Continued-Fraction Approximations for
+       Logarithmic Functions.
+       Mathematics of Computation, Vol. 16, 1962, pp. 205-217
+[283]  Egbert, W.E.: Personal Calculator Algorithms IV: Logarithmic Functions.
+       Hewlett-Packard Journal, Vol. 29, No. 8, April 1978, pp. 29-32
+[284]  Horna, O.A.: Fast algorithms for the computation of binary logarithms.
+       COMSAT Technical Review, Vol. 10, No. 1, Spring 1980, pp. 91-101
+[285]  McCormick, S.F.; Taylor, G.D.; Pryor, D.V.: Evaluation of Functions on
+       Microcomputers: ln(x).
+       Computers & Mathematics with Applications, Vol. 8, No. 5, 1982,
+       pp. 389-392
+[286]  Sasaki, T.; Kanada, Y.: Practically Fast Multiple Precision Evaluation
+       of LOG (X).
+       Journal of Information Processing, Vol. 5, No. 4, 1982, pp. 247-250
+[287]  Maenner, R.: A Fast Integer Binary Logarithm of Large Arguments.
+       IEEE Micro, Vol. 7, No. 6, December 1987, pp. 41-45
+[288]  Tang, P.T.P: Table-Driven Implementation of the Logarithm Function in
+       IEEE Floating-Point Arithmetic.
+       ACM Transactions on Mathematical Software, Vol. 16, No. 4,
+       December 1990, pp. 378-400
+[289]  Kostopoulos, D.K.: An Algorithm for the Computation of Binary
+       Logarithms.
+       IEEE Transactions on Computers, Vol. 40, No. 11, November 1991,
+       pp. 1267-1270
+
+
+3.6 Exponential function
+
+[290]  Kogbetliantz, E.G.: Computation of e**n for -l<N<l Using an
+       Electronic Computer.
+       IBM Journal Research & Development, Vol. 1, No. 2, April 1957,
+       pp. 110-115
+[291]  Spielberg, K.: Computation of e**x with the use of large tables.
+       IBM Systems Journal, Vol. 5, No. 2, 1966, pp. 102-114
+[292]  Wrathall, C.; Chen, T.C.: Convergence Guarantee and Improvements for
+       a fast Hardware Exponential and Logarithm Evaluation Scheme.
+       Proceedings of the 4th Symposium on Computer Arithmetic, Santa Monica,
+       CA, USA, 25-27 October 1978, pp. 175-182
+[293]  Andrews, M; Jaeger, D.; McCormick, S.F.; Taylor, G.D.: Evaluation of
+       Functions on Microcomputers: exp(x).
+       Computers & Mathematics with Applications, Vol. 7, No. 6, 1981,
+       pp. 503-508
+[294]  Hantler, S.L.; Karp, A.H.: Exponential by Sequential Squaring.
+       IBM Technical Disclosure Bulletin, Vol. 25, No. 1, June 1982,
+       pp. 171-173
+[295]  Karp, A.H.: Exponential and Logarithm by Sequential Squaring.
+       IEEE Transactions on Computers, Vol. C-33, No. 5, May 1984, pp. 462-464
+[296]  Grappel, R.D.: Fast subroutine calculates exponentials.
+       EDN, Vol. 30, No. 10, May 1985, p. 231
+[297]  Tang, P.T.P.: Table-Driven Implementation of the Exponential
+       Function in IEEE Floating-Point Arithmetic.
+       ACM Transactions on Mathematical Software, Vol. 15, No. 2,
+       June 1989, pp. 144-157
+[298]  Tang, P.T.P.: Table-driven Implementation of the Expm1 Function in
+       IEEE Floating-Point Arithmetic.
+       Preprint MCS-P144-0390, Mathematics and Computer Science Division.
+       Argonne National Laboratory, March 1990
+[299]  Tang, P.T.P.: Table-Driven Implementation of the Expm1 Function In
+       IEEE Floating-Point Arithmetic.
+       ACM Transactions on Mathematical Software, Vol. 18, No. 2, June 1992,
+       pp. 211-222
+
+
+3.7 Arctangent
+
+[300]  Luke, Y.L.: On the Computation of log Z and arc tan Z.
+       Mathematical Tables and Other Aids to Computation, Vol. 11, 1957,
+       pp. 16-18
+[301]  Kogbetliantz, E.G.: Computation of Arctan N for -l<N<+l Using an
+       Electronic Computer.
+       IBM Journal Research & Development, Vol. 2, No. 1, January 1958,
+       pp. 43-53
+[302]  Perlin, I.E.; Garrett, J.R.: High Precision Calculation of Arcsin x,
+       Arccos x, and Arctan x.
+       Mathematics of Computation, Vol. 14, 1960, pp. 270-274
+
+
+3.8 Other transcendental functions
+
+[303]  Clark, N.W.; Cody, W.J.: Self-contained exponentation.
+       AFIPS Conference Proceedings, Vol. 35, FJCC 1969, pp. 701-706
+[304]  Clark, N.W.; Cody, W.J.; Kuki, H.: Self-Contained Power Routines.
+       In: Rice, J.R. (ed.): Mathematical Software.
+       New York, NY: Academic Press 1971
+[305]  Kogbetliantz, E.G.: Computation of Arcsin N for 0<N<1 Using an
+       Electronic Computer.
+       IBM Journal Research & Development, Vol. 2, No. 3, July 1958,
+       pp. 218-222
+[306]  Egbert, W.E.: Personal Calculator Algorithms III: Inverse
+       Trigonometric Functions.
+       Hewlett-Packard Journal, Vol. 29, No. 3, November 1977, pp. 22-23
+[307]  Morrison, D.R.: A Method for Computing Certain Inverse Functions.
+       Mathematical Tables and other Aids to Computation,
+       Vol. 10, 1965, pp. 202-208
+[308]  Clenshaw, C.W.; Miller, G.F.; Woodger, M.: Algorithms for Special
+       Functions I.
+       Numerische Mathematik, Vol. 4, 1963, pp. 403-419
+[309]  Miller, G.F.: Algorithms for Special Functions II.
+       Numerische Mathematik, Vol. 7, 1965, pp. 194-196
+[310]  Kr"amer, W.: Inverse Standardfunktionen f"ur reelle und komplexe
+       Intervallargumente mit a priori Fehlerabsch"atzungen f"ur beliebige
+       Datenformate.
+       Dissertation, Universit"at Karlsruhe 1987
+[311]  Preston, F.S.: A New Algorithm for the Tangent.
+       IEEE Transactions on Computers, Vol. C-27, No. 2, February 1978, p. 167
+[312]  Filho, A.M.S.; Schwachheim, G.: Algorithm 309: Gamma Function with
+       Arbitrary Precision.
+       Communications of the ACM, Vol. 10, No. 8, August 1967, pp. 511-512
+
+
+4.0 Binary-decimal conversion
+
+[313]  Matula, D.W.: In-and-Out Conversions.
+       Communications of the ACM, Vol. 11, No. 1, January 1968, pp. 47-50
+[314]  Loevenbruck, A.P.: Conversion of Number Representations.
+       IBM Technical Disclosure Bulletin, Vol. 15, No. 7, December 1972,
+       pp. 2148-2151
+[315]  Schreiber, F.A., Stefanelli, R.: Two Methods for Fast Binary-BCD
+       Conversion.
+       Proceedings of the 4th Symposium on Computer Arithmetic, Santa Monica,
+       CA, USA, 25-27 October 1978, pp. 200-207
+[316]  Havender, J.W.: Decimal-to-binary floating point number conversion
+       mechanism.
+       IBM Technical Disclosure Bulletin, Vol. 23, No. 2, July 1980,
+       pp. 706-708
+[317]  Havender, J.W.: Decimal-to-binary Number Conversion.
+       IBM Technical Disclosure Bulletin, Vol. 23, No. 3, August 1980,
+       pp. 1126-1127
+[318]  Griffiths, L.K.: Binary-to-Decimal Conversion.
+       IBM Technical Disclosure Bulletin, Vol. 24, No. 1A, June 1981,
+       pp. 237-238
+[319]  Murugesan, S.; Agrawal, V.K.: Algorithm converts fractions to BCD.
+       EDN, Vol. 28, No. 19, September 1983, pp. 245-246
+[320]  Agrawal, V.K.; Murugesan, S.: Algorithm converts BCD fractions to
+       binary.
+       EDN, Vol. 29, No. 13, June 1984, pp. 278-280
+[321]  Nowak, M.: Hex-BCD-Umwandlung.
+       mc 1986, Heft 10, Seite 68
+[322]  Henning, D.: Konvertierung bin"arer in dezimale Gleitkommazahlen f"ur
+       me"stechnische Anwendungen.
+       Radio Fernsehen Elekronik, Vol. 35, No. 11, 1986, pp. 731-733
+[323]  Clinger, W.D.: How to Read Floating Point Numbers Accurately.
+       Proceedings of ACM SIGPLAN '90 Conference on Programming Language Design
+       and Implementation. White Plains, NY, 20-22 June 1990, pp. 92-101
+[324]  Steele, G.L.; White, J.L.: How to Print Floating-Point Numbers
+       Accurately.
+       Proceedings of ACM SIGPLAN '90 Conference on Programming Language Design
+       and Implementation. White Plains, NY, 20-22 June 1990, pp. 112-123
+
+
+5.0 BCD arithmetic
+
+[325]  Franklin, J.W.: Zoned Decimal Arithmetic.
+       IBM Technical Disclosure Bulletin, Vol. 15, No. 7, December 1972,
+       pp. 2123-2124
+[326]  Schmid, H.: BCD logic II: BCD multiplication.
+       Electronic Design, Vol. 21, No. 14, July 1973, pp. 62-69
+[327]  Schmid, H.: BCD logic III: BCD division.
+       Electronic Design, Vol. 21, No. 15, July 1973, pp. 86-92
+[328]  Schmid, H.: BCD logic IV: BCD decimal-point location.
+       Electronic Design, Vol. 21, No. 16, August 1973, pp. 80-84
+[329]  Schmid, H.: BCD logic V: BCD square root.
+       Electronic Design, Vol. 21, No. 17, August 1973, pp. 62-69
+[330]  Schmid, H.: BCD logic VI: BCD logarithms and exponentials.
+       Electronic Design, Vol. 21, No. 18, September 1973, pp. 118-123
+[331]  Schmid, H.: BCD logic VII: BCD trig and hyperbolic functions.
+       Electronic Design, Vol. 21, No. 19, September 1973, pp. 68-73
+[332]  Chroust, G.: Method of Adding Decimal Numbers by Means of Binary
+       Arithmetic.
+       IBM Technical Disclosure Bulletin, Vol. 23, No. 10, March 1981,
+       pp. 4525-4526
+[333]  Bohannan, J.W.; Bradley, D.J.; Kummer, D.A.; Saenz, J.A.: Multiplication
+       Algorithm for Packed BCD Numbers.
+       IBM Technical Disclosure Bulletin, Vol. 25, No. 4, September 1982,
+       p. 2225
+[334]  Wingert, J.A.: Improved Table-assisted Addition and Multiplication
+       Methods.
+       IBM Technical Disclosure Bulletin, Vol. 25, No. 9, February 1983,
+       pp. 4742-4743
+[335]  Maric, I.; Cucancic, L.: On the Possibilities of the BCD Code
+       Application in the Floating-Point Arithmetic Algorithms.
+       International Journal of Mini and Microcomputers, Vol. 5, No. 2, 1983,
+       pp. 19-22
+[336]  Ahmad, M.: Implementable Decimal Arithmetic Algorithms for
+       Micro/Minicomputers.
+       Microprocessing and Microprogramming, Vol. 19, No. 2,
+       February 1987, pp. 119-128

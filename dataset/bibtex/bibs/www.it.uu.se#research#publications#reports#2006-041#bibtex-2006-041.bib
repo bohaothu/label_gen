@@ -1,0 +1,31 @@
+
+@TechReport{	  it:2006-041,
+  author	= {Markus Nord{\'e}n},
+  title		= {Performance Modelling for Parallel {PDE} Solvers on
+		  {NUMA}-Systems},
+  institution	= {Department of Information Technology, Uppsala University},
+  department	= {Division of Scientific Computing},
+  year		= {2006},
+  number	= {2006-041},
+  month		= aug,
+  abstract	= {A detailed model of the memory performance of a PDE solver
+		  running on a NUMA-system is set up. Due to the complexity
+		  of modern computers, such a detailed model inevitably is
+		  very complicated. Therefore, approximations are introduced
+		  that simplify the model and allows NUMA-systems and PDE
+		  solvers to be described conveniently.
+		  
+		  Using the simplified model, it is shown that PDE solvers
+		  using ordered local methods can be made very unsensitive to
+		  high NUMA-ratios, allowing them to scale well on virtually
+		  any NUMA-system.
+		  
+		  PDE solvers using unordered local methods, semiglobal
+		  methods or global methods are more sensitive to high
+		  NUMA-ratios and require special techniques in order to
+		  scale well beyond a single locality group.
+		  
+		  Nevertheless, the potential performance gain of improving
+		  the data distribution on a NUMA-system can be considerable
+		  for all kinds of PDE solvers studied. }
+}

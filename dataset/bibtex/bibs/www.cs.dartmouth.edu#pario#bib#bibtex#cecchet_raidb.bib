@@ -1,0 +1,37 @@
+@Article{cecchet:raidb,
+  author = {Emmanuel Cecchet and Julie Marguerite and Willy Zwaenepoel},
+  title = {Partial replication: Achieving scalability in redundant arrays of
+  inexpensive databases},
+  journal = {Lecture Notes in Computer Science},
+  booktitle = {7th International Conference on  Principles of Distributed
+  Systems (OPODIS 2003); December 10-13, 2003; MARTINIQUE},
+  editor = {Papatrianatafilou, M; Hunel, P},
+  year = {2004},
+  month = {July},
+  volume = {3144},
+  pages = {58--70},
+  publisher = {Springer-Verlag Heidelberg},
+  copyright = {(c)2004 Institute for Scientific Information, Inc.},
+  URL = {http://springerlink.metapress.com/link.asp?id=kay13m7clgg75utk},
+  keywords = {replication strategies, RAIDb, database, pario-bib},
+  abstract = {Clusters of workstations become more and more popular to power
+  data server applications such as large scale Web sites or e-Commerce
+  applications. There has been much research on scaling the front tiers (web
+  servers and application servers) using clusters, but databases usually remain
+  on large dedicated SMP machines. In this paper, we focus on the database tier
+  using clusters of commodity hardware. Our approach consists of studying
+  different replication strategies to achieve various degree of performance and
+  fault tolerance.  Redundant Array of Inexpensive Databases (RAIDb) is to
+  databases what RAID is to disks. In this paper, we focus on RAIDb-1 that
+  offers full replication and RAIDb-2 that introduces partial replication, in
+  which the user can define the degree of replication of each database table.
+   We present a Java implementation of RAIDb called Clustered JDBC or C-JDBC.
+  C-JDBC achieves both database performance scalability and high availability
+  at the middleware level without changing existing applications. We show,
+  using the TPC-W benchmark, that partial replication (RAIDb-2) can offer
+  better performance scalability (up to 25\%) than full replication by allowing
+  fine-grain control on replication. Distributing and restricting the
+  replication of frequently written tables to a small set of backends reduces
+  I/O usage and improves CPU utilization of each cluster node.}
+}
+

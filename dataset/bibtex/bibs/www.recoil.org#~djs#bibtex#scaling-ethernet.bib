@@ -1,0 +1,25 @@
+% Andy Myers, Eugene Ng, Hui Zhang, "Rethinking the Service Model: Scaling Ethernet to a Million Nodes" ACM SIGCOMM HotNets'04 
+@inproceedings{scaling-ethernet,
+  title = {Rethinking the Service Model: Scaling Ethernet to a Million Nodes},
+  author = { Andy Myers and Eugene Ng and Hui Zhang },
+   booktitle =    {ACM SIGCOMM HotNets},
+   year =         {2004},
+   month =        {},
+   address =      {},
+   abstract = {
+Ethernet has been a cornerstone networking technology for over 30 years.
+During this time, Ethernet has been extended from a shared-channel broadcast network to include support for sophisticated packet switching. Its plug-and-play setup, easy management, and self-configuration capability are the keys that make it compelling for enterprise applications. Looking ahead a enterprise networking requirements in the coming years, we examine the relevance and feasibility of scaling Ethernet to one million end systems. Unfortunately, Ethernet technologies today have neither the scalability nor the reliability needed to achieve this goal. We take the position that the fundamental problem lies in Ethernet's outdated service model that it inherited from the original broadcast network design. This paper presents arguments to support our position and proposes changing Ethernet's service model by eliminating broadcast and station location learning.
+},
+  pdf = {\url{http://100x100network.org/papers/myers-hotnets2004.pdf}},
+  dateread = {Sat May 21 23:03:45 BST 2005},
+  notes = {
+Ethernet networks are popular because they are easy to setup and maintain while the hardware is relatively simple (and therefore cheap) to make. Some ISPs are now offering ethernet VPNs rather than IP VPNs. Signs are that people want to make bigger ethernet networks. They note that only recently have large networks with flat address-spaces become feasible due to the increase of transistor density and hence memory capacity.
+<p>
+The paper considers what would happen if someone tried to add a million end-systems to ethernet as it currently stands. Outlines problems with the convergence of &quot;Rapid Spanning Tree Protocol&quot; (RSTP); RSTP is intended to converge within 3x worst case network delay but in certain configurations it will actually take many seconds, during which the network reverts to inefficient broadcast flooding (they built a simulator to investigate various cases). They argue that the availability of a broadcast primitive has encouraged other protocols to rely on it, causing problems as the network gets bigger. The availability of broadcast means that RSTP has to be very conservative, never allowing forwarding loops to form. By banning broadcast, this can be relaxed and faster protocols used, essential for telecomm-style restoration.
+<p>
+Two different approaches are considered: a &quot;thin control plane&quot; and a &quot;distributed control plane&quot;. The thin control plane has two aspects: a decision plane and a dissemination plane. The decision plane calculates all the forwarding tables while the dissemination plane talks to the decision plane, sending status information and receiving switch configurations. The distributed control plane has each local bridge offer a registration service in which a rebooting host places its MAC, IP and possibly other service info. The bridges synchronise this information globally. Broadcast protocols like ARP are modified to ask the local bridge where to send the traffic instead of broadcasting it.
+<p>
+They finish by describing simulation results which suggest they could use these techniques to allow a million node ethernets.
+},
+ bibtexurl={http://www.recoil.org/~djs/bibtex/scaling-ethernet.bib}
+}

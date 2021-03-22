@@ -1,0 +1,731 @@
+@PHDTHESIS{phd,
+  author =       {Marco Gavanelli},
+  title =        {Interactive Constraint Satisfaction Problems for Artificial Vision},
+  school =       {Department of Engineering},
+  year =         {2002},
+  type =         {{Ph.D.} Thesis},
+  address =      {University of Ferrara, Italy},
+  month =        {Jan} # " 22",
+  pdf = "http://www.ing.unife.it/docenti/MarcoGavanelli/Gavanelli_PhD_Thesis.pdf",
+  abstract = "Artificial Vision is an important field of Artificial
+Intelligence: the human brain is able to derive various types of
+information about the outer world from vision. However, the
+semantic interpretation of objects is a hard task for a computer.
+Constraints have been widely used for visual recognition, because
+they are able to describe very complex models and situations in a
+natural way.
+
+Constraint Logic Programming is a new paradigm of
+declarative programming languages that is able to deal
+declaratively and efficiently with problems described with
+constraints.
+
+In this thesis, we addressed problems that stem from Artificial
+Vision with constraints. We developed a 3D visual search system
+able to detect an object described with constraints in an image.
+We provide constraint models for dealing with the problems in
+Artificial Vision. We generalize the applied techniques to other
+important fields of Artificial Intelligence, developing new tools
+of Constraint Satisfaction and Optimization in  Constraint Logic
+Programming. In order to obtain {\em efficiency}, we propose a
+tight interaction between the Constraint Solver and the provider
+of visual features. We give a theoretical model, solving algorithm
+and a language extension.
+
+We model 3D objects with an object-centered model, based on visual
+information. From each viewpoint, only part of the visual features
+of a 3D object can be seen; we model objects by adding {\em
+invisible features} in the domains and select only the most
+informative assignments by means of a partial order.",
+}
+
+% Riviste Internazionali
+
+@ARTICLE{ICTP99-riv,
+  author =       "Marco Gavanelli and Evelina Lamma and Paola Mello and Michela Milano",
+  title =        "Constraint Satisfaction Problems: an interactive, agent-based approach",
+  journal =      "International Journal on Information Theories and Applications",
+  year =         "1999",
+  volume =       "6",
+  pages =        "15--23",
+}
+
+@ARTICLE{ENTCS-WOID99,
+  author =       "Marco Gavanelli and Michela Milano",
+  title =       "On the Need for a Different Backtracking Rule when Dealing with Late
+  Evaluation",
+  journal =      "Electronic Notes in Theoretical Computer Science",
+  year =         "1999",
+  volume =       "30",
+  number =       "2",
+  ps =
+  "http://www.elsevier.nl/cas/tree/store/tcs/free/entcs/store/tcs30/2/tcs30.2.003.ps",
+  publisher =    "Elsevier Science B.V.",
+  editor =       "M. Leuschel",
+  url =
+  "http://www.elsevier.nl/cas/tree/store/tcs/free/entcs/store/contents.htt?jrnl=tcs&sctn=entcs&mode=sub&vol=30&iss=2#30.2.003",
+}
+
+@ARTICLE{NGC2001,
+  author =       "Rita Cucchiara and Marco Gavanelli and Evelina Lamma and Paola Mello and Michela Milano and Massimo Piccardi",
+  title =        "From Eager to Lazy Constrained Data Acquisition: A General Framework",
+  journal =      "New Generation Computing",
+  year =         "2001",
+  volume =       "19",
+  number =       "4",
+  month =        "Aug",
+  pages =        {339--367},
+  keywords =     "Constraint Satisfaction, Domain Acquisition,
+                  Lazy Evaluation, Search Algorithms, Visual Search.",
+  issn = "0288-3635",
+  abstract =
+"Constraint Satisfaction Problems (CSPs) are an effective
+framework for modeling a variety of real life applications and
+many techniques have been proposed for solving them efficiently.
+CSPs are based on the assumption that all constrained data (values
+in variable domains) are available at the beginning of the
+computation. However, many non-toy problems derive their
+parameters from an external environment. Data retrieval can be a
+hard task, because data can come from a third-party system that
+has to convert information encoded with signals (derived from
+sensors) into symbolic information (exploitable by a CSP solver).
+Also, data can be provided by the user or have to be queried to a
+database.
+
+For this purpose, we introduce an extension of the widely used CSP model,
+called Interactive Constraint Satisfaction Problem (ICSP) model. The
+variable domain values can be acquired when needed during the resolution
+process by means of Interactive Constraints, which retrieve (possibly
+consistent) information. A general framework for constraint propagation
+algorithms is proposed which is parametric in the number of acquisitions
+performed at each step. Experimental results show the effectiveness of the
+proposed approach. Some applications which can benefit from the proposed
+solution are also discussed.",
+}
+
+% Congressi internazionali
+
+@InProceedings{PACLP99,
+  author =       "Rita Cucchiara and Marco Gavanelli and Evelina Lamma and
+                  Paola Mello and Michela Milano and Massimo Piccardi",
+  title =        "Extending {CLP}({FD}) with interactive Data Acquisition for {3D} Visual Object Recognition",
+  booktitle =    "Proceedings of the First International Conference on the Practical Application of
+                  Constraint Technologies and Logic Programming",
+  year =         "1999",
+  organization = "Practical Application Company",
+  pages =        "137--155",
+  address =      "London",
+  month =        apr # " 19--21",
+  abstract = "This paper addresses the 3D object recognition problem modelled as a
+Constraint Satisfaction Problem. In this setting, each object view can be
+modelled as a constraint graph where nodes are object parts and constraints
+are topological and geometrical relationships among them. By modelling the
+problem as a CSP, we can recognize an object when all constraints are
+satisfied by exploiting results from the CSP field. However, in classical
+CSPs variable domains have to be statically defined at the beginning of the
+constraint propagation process. Thus, not only feature acquisition should
+be completed before the constraint solving process starts, but all image
+features should be extracted even if not belonging to significant image
+parts. In visual applications, this requirement turns out to be inefficient
+since visual features acquisition is a very time consuming task.
+ We present an {\em Interactive
+Constraint Satisfaction} model for problems where variable domains may not
+be completely known at the beginning of the computation, and can be
+interactively acquired during the computational process only when needed (on demand).
+The constraint propagation
+process works on already known domain values and adds new constraints on
+unknown domain parts. These new constraints can be used to incrementally
+process new information without restarting the constraint propagation
+process from scratch each time new information is available. In addition,
+these constraints can guide the feature acquisition process, thus focussing
+attention on significant image parts.  We present the Interactive CSP model
+and a propagation algorithm for it. We propose an implementation of the
+framework in Constraint Logic Programming on Finite Domains,
+CLP(FD)."
+}
+
+@InProceedings{ICTP99,
+  author =       "Marco Gavanelli and Evelina Lamma and Paola Mello and Michela Milano",
+  title =        "Constraint Satisfaction Problems: an interactive, agent-based approach",
+  booktitle =    "Twenty-fourth International Conference on Information and Communication
+             technologies and Programming'99 - Information and Interaction - Proceedings",
+  year =         "1999",
+  pages =        "80--88",
+  organization = "Association for Development of the Information Society",
+  address =      "Plovdiv, Bulgaria",
+  month =        Jun # " 8--12",
+Abstract = "We propose an agent-based architecture, where the
+reasoning component is a constraint solver interacting with agents
+that extract data and retrieve knowledge on the problem. To this
+purpose the traditional CSP model has been extended in order to
+manage incomplete data. Not only the extended solver is able to
+start its computation while data extraction is in progress, but
+also can guide data acquisition thanks to the interactive
+constraints. We present three application examples which can
+benefit from the proposed approach.",
+}
+
+@InProceedings{IJCAI99,
+  author =       "Rita Cucchiara and Marco Gavanelli and Evelina Lamma and Paola Mello
+   and Michela Milano and Massimo Piccardi",
+  title =        "Constraint Propagation and Value Acquisition: why we should do it Interactively",
+  booktitle =    "Proceedings of the Sixteenth International Joint Conference on Artificial Intelligence",
+  year =         "1999",
+  month =        Jul # " 31 -- " # Aug # " 6",
+  address =      "Stockholm, Sweden",
+  pages =        "468--477",
+  editor =       "Thomas Dean",
+  publisher =    "Morgan Kaufmann",
+  isbn = "1-55860-613-0",
+  abstract = "In Constraint Satisfaction Problems (CSPs) values belonging to variable
+domains should be completely known before the constraint
+propagation process starts. In many applications, however, the
+acquisition of domain values is a computational expensive process
+or some domain values could not be available at the beginning of
+the computation. For this purpose, we introduce an Interactive
+Constraint Satisfaction Problem (ICSP) model as extension of the
+widely used CSP model. The variable domain values can be acquired
+when needed during the resolution process by means of Interactive
+Constraints, which retrieve (possibly consistent) information.
+Experimental results on randomly generated CSPs and for 3D object
+recognition show the effectiveness of the proposed approach.",
+}
+
+@InProceedings{AGP99,
+  author =       "Marco Gavanelli and Evelina Lamma and Paola Mello and Michela Milano",
+  title =        "Domains as First Class Objects in {CLP(FD)}",
+  booktitle =    "{APPIA}--{GULP}--{PRODE} '99 Joint Conference on Declarative Programming - Proceedings",
+  year =         "1999",
+  address =      "L'Aquila, Italy",
+  month =        Sep # " 6--9",
+  pages =        "411--424",
+  editor =       "M.C. Meo and M. Vilares Ferro",
+  abstract =
+"Constraint Logic Programming on Finite Domains (CLP(FD)) is an
+effective framework for dealing with Constraint Satisfaction
+Problems. However, in some cases the variable domains are not
+known at the beginning of the computation but result from some
+intermediate processing. Domains could be specified by means of
+constraints stating their properties, or asserted by a third-party
+system (which could also be the user), acquiring its knowledge
+from the outer world. For this reason, we extend a CLP(FD)
+framework with the concept of domains as first class objects. In
+the proposed extension, variables range over finite domains of
+objects, which are possibly not known at the beginning of the
+computation. Domains can be variables representing collections
+ranging on the powerset of the intended domain of discourse and
+being possibly subject to constraints. The resulting framework is
+a two sorted language. We define operations and constraints on the
+two sorts and a constraint linking the two. Finally, we show some
+examples and implementation details.", }
+
+@InProceedings{ICLP99,
+  author =       "Marco Gavanelli and Evelina Lamma and Paola Mello and Michela Milano",
+  title =        "Domains as First Class Objects in {CLP(FD)}",
+  booktitle =    "Proceedings of the International Conference on Logic Programming
+  ICLP'99",
+  year =         "1999",
+  address =      "Las Cruces, N.M.",
+  month =        Nov # " 29 -- " # Dec # " 4",
+  pages =       "608",
+  publisher = "MIT Press",
+  isbn = "0-262-54104-1",
+  editor = "Danny De Schreye",
+}
+
+@InProceedings{CP2001,
+  author =       "Marco Gavanelli",
+  title =        "Partially Ordered Constraint Optimization Problems",
+  booktitle =    "Principles and Practice of Constraint
+  Programming, 7th International Conference - CP 2001",
+  year =         "2001",
+  month =        Nov # " 26 -- " # Dec # " 1",
+  address =      "Paphos, Cyprus",
+  publisher =    "Springer Verlag",
+  editor = "Toby Walsh",
+  pages = 763,
+  series =       "Lecture Notes in Computer Science",
+  volume =       "2239",
+  isbn      = {3-540-42863-1},
+  ps = "http://www.math.unipd.it/~frossi/gavanelli.ps.gz",
+  abstract =
+"The Constraint Problems usually addressed fall into one of two
+models: the Constraint Satisfaction Problem (CSP)  and the
+Constraint Optimization Problem (COP). However, in many real-life
+applications, more functions should be optimized at the same time,
+and solutions are ranked by means of a Partial Order.
+
+Also, when dealing with Null values, the solution set is ranked
+through a Partial Order, and only the non dominated solutions are
+interesting for the user. For example, in 3D visual recognition,
+from any viewpoint there are always hidden features: assignments
+that are less expressive (that take more Null values than others)
+should be discarded.
+
+For these reasons, we propose the model of Partially-Ordered
+Constraint Optimization Problem and provide an algorithm for
+solving it, derived from the widely used Branch and Bound.", }
+
+@InProceedings{FroCoS2002,
+  author =       "Marco Gavanelli and Evelina Lamma and Paola Mello and Michela Milano",
+  title =        "Exploiting constraints for domain managing in {CLP(FD)}",
+  booktitle =    "4th International Workshop on Frontiers of Combining Systems - FroCoS'2002",
+  year =         "2002",
+  month =        Apr # " 8-10",
+  address =      "Santa Margherita Ligure, Italy",
+  publisher =    "Springer Verlag",
+  editor = "Alessandro Armando",
+  series =       "Lecture Notes in Artificial Intelligence",
+  volume =       "2309",
+  url = "http://www.mrg.dist.unige.it/conferences/frocos2002/",
+  pages =   {177-191},
+  abstract =
+"Constraint Logic Programming languages on Finite Domains CLP(FD)
+provide a  declarative framework for dealing with problems in
+Artificial Intelligence (AI). However, in many applications,
+domains are not known at the beginning of the computation and must
+be computed. The domain computation can be time-consuming, since
+elements can be retrieved through an expensive acquisition process
+from the outer world.
+
+In this paper, we introduce a CLP language that treats domains as
+first-class objects, and allows the definition of domains through
+constraints in a CLP(FD) environment. We define operations and
+properties on variables and domains.
+
+The language can be implemented on top of different CLP systems,
+exploiting thus different semantics for domains. We state the
+specifications that the employed system should provide, and we
+show that two different CLP systems (Conjunto and \{log\}) can be
+effectively used.", }
+
+@InProceedings{ecai2002,
+  author =       "Marco Gavanelli",
+  title =        "An Algorithm for Multi-Criteria Optimization in {CSPs}",
+  booktitle =    "ECAI 2002. Proceedings of the 15th European Conference on Artificial Intelligence",
+  year =         "2002",
+  month =        Jul # " 21-26",
+  address =      "Lyon, France",
+  publisher =    "IOS Press",
+  editor = "Frank van Harmelen",
+  url = "http://ecai2002.univ-lyon1.fr/",
+  pages = {136--140},
+  abstract =
+"Constraint Satisfaction and Optimization are important areas of
+Artificial Intelligence. However, in many real-life applications,
+more functions should be optimized at the same time; the user
+needs to be provided a set of solutions and a posteriori choose
+the most preferable.
+
+In this paper, we propose an algorithm for solving Multi-Criteria
+Optimization problems in this setting. The algorithm is complete,
+i.e., it finds all the non-dominated solutions, and does not make
+any assumption on the structure of the constraints nor on the type
+of the objective functions. It exploits Point Quad-Trees for the
+representation of the non-dominated frontier, in order to
+efficiently access the data. We describe the implementation and
+give experimental results showing that our algorithm outperforms
+widely used methods.", }
+
+@INPROCEEDINGS{CEEMAS03,
+  AUTHOR =       "Marco Alberti and Anna Ciampolini and
+    Marco Gavanelli and Evelina Lamma and Paola
+  Mello and Paolo Torroni",
+  TITLE =        "A Social {ACL} Semantics by Deontic Constraints",
+  BOOKTITLE =    "Multi-Agent Systems and Applications III. 3rd International Central and Eastern European Conference on Multi-Agent Systems
+ CEEMAS 2003",
+  YEAR =         "2003",
+  editor =       "Vladimir Marik and  J{\"o}rg M{\"u}ller and  Michal Pechoucek",
+  number =       "2691",
+  series =       "Lecture Notes in Artificial Intelligence",
+  pages =        "204--213",
+  address =      "Prague, Czech Republic",
+  month =        Jun # " 16-–18",
+  publisher =    "Springer Verlag",
+  abstract =     "In most proposals for multi-agent systems, an Agent Communication
+  Language (ACL) is the formalism designed to express knowledge
+  exchange among agents. However, a universally accepted standard for
+  ACLs is still missing. Among the different approaches to the
+  definition of ACL semantics, the social approach seems the
+  most appropriate to express semantics of communication in open
+  societies of autonomous and heterogeneous agents.
+
+  In this paper we propose a formalism (deontic constraints)
+  to express social ACL semantics, which can be grounded on a
+  computational logic framework, thus allowing automatic verification
+  of compliance by means of appropriate proof procedures. We also show
+  how several common communication performatives can be defined by
+  means of deontic constraints.",
+  url="http://gerstner.felk.cvut.cz/ceemas2003/",
+}
+
+
+@INPROCEEDINGS{DALT03,
+  AUTHOR =       "Marco Alberti and Marco Gavanelli and
+  Evelina Lamma and Paola Mello and Paolo Torroni",
+  TITLE =        "Modeling interactions using social integrity constraints: a resource sharing case study",
+  BOOKTITLE =    "Declarative Agent Languages and Technologies (DALT) - Proceedings",
+  YEAR =         "2003",
+  editor =       "Jo{\~a}o Alexandre Leite and Andrea Omicini and Leon Sterling and Paolo Torroni",
+  address =      "Melbourne, Australia",
+  month =        Jul # " 15",
+  publisher =    "Springer Verlag",
+  series =       "LNCS",
+  note =         "To appear",
+  abstract =     "This work is about interactions among computees of a
+society, using a computational logic-based approach. Computees are
+abstractions of the entities that populate global and open
+computing environments. The society defines the allowed
+interaction protocols, which on their turn are defined by means of
+social integrity constraints. Using social integrity
+constraints, it is possible to give a formal definition of
+concepts such as violation, fulfillment, and social expectation.
+This allows for the automatic verification of the social behaviour
+of computees. In order to explain the ideas, we adopt as a running
+example a resource exchange scenario.",
+  url = "http://centria.di.fct.unl.pt/~jleite/dalt03/index.htm",
+}
+
+% Riviste nazionali
+
+@ARTICLE{AIxIAnotizie,
+  author =       "Marco Gavanelli and Evelina Lamma and Paola Mello and Michela Milano",
+  title =        "Performance Measurement of Interactive {CSP} Search Algorithms",
+  journal =      "AI*IA Notizie",
+  year =         "2000",
+  volume =       "{XIII}",
+  number =       "1",
+  month = Mar,
+  pages =        "48--51",
+  url = "http://www.dsi.unifi.it/AIIA/indice2000.htm",
+}
+
+@ARTICLE{AIxIAnotizie2002,
+  author =       {Marco Gavanelli},
+  title =        {An Algorithm Computing the {Pareto} Frontier
+in Constraint Satisfaction Problems},
+  journal =      {AI*IA Notizie},
+  year =         {2002},
+  volume =       {{XV}},
+  number =       {2},
+  pages =        {15--23},
+  month =        Jun,
+  url = "http://www.dsi.unifi.it/AIIA/indice2002.htm",
+  abstract =
+"Real-life problems often exhibit a multi-criteria structure: user
+requirements are many and possibly conflicting. In combinatorial
+optimization, criteria are functions, ranging on the set of
+possible solutions.
+
+A widely used approach suggests to compute a weighted sum of the
+different criteria. Unluckily, deciding the weights beforehand is
+not always straightforward; moreover, the weighted sum approach
+often provides extreme solutions, while the user usually prefers
+balanced solutions.
+
+In this paper, we propose an algorithm to compute Pareto optimal
+solutions in Constraint Satisfaction Problems. A solution is
+Pareto optimal if it is not possible an improvement in one
+criterion without worsening other criteria. The algorithm is
+complete, and can provide the whole set of Pareto optimal
+solutions.
+
+Since the set of Pareto optimal solutions can be huge and the
+algorithm needs to access them efficiently, we propose to arrange
+them in a suitable data structure, namely Point Quad-Trees.
+Experimental results show the effectiveness of the proposed
+method.",
+}
+
+% National Conferences
+
+@InProceedings{AIIA99,
+  author =       "Rita Cucchiara and Marco Gavanelli and Andrea Prati and Massimo Piccardi",
+  title =        "Rule-based Reasoning on Visual Data for Urban Traffic Monitoring",
+  booktitle =    "Atti del Sesto congresso dell'Associazione Italiana per l'Intelligenza Artificiale",
+  year =         "1999",
+  address =      "Bologna, Italy",
+  month =        Sep # " 14--17",
+  pages =        "89--98",
+  abstract = "The paper describes a system for detecting vehicles in
+urban traffic scenes by means of rule-based reasoning on visual
+data. The strength of the proposed approach is its formal
+separation between low-level image processing modules (able for
+extracting visual data under various illumination conditions) and
+the high-level module, which provides a single framework for
+tracking vehicles in the scene. The image processing modules
+extract visual data from the scene, by spatio-temporal analysis
+during day-time, and by morphological analysis of headlights at
+night. The high-level module is designed as a forward chaining
+production rule system, working on symbolic data, i.e. vehicles
+and their attributes (area, pattern, direction...) and exploiting
+a set of heuristic rules tuned to urban traffic conditions. The
+synergy between the artificial intelligence techniques of the high
+level and the low-level image analysis techniques provides the
+system with flexibility and robustness.",
+}
+
+@INPROCEEDINGS{AIIA03,
+  AUTHOR =       "Marco Alberti and Marco Gavanelli and Evelina Lamma and Paola Mello and Paolo Torroni",
+  TITLE =        "An Abductive Interpretation for Open Societies",
+  BOOKTITLE =    "Atti dell'ottavo congresso dell'Associazione Italiana per l'Intelligenza Artificiale",
+  YEAR =         "2003",
+  series =       "Lecture Notes in Artificial Intelligence",
+  address =      "Pisa, Italy",
+  month =        sep # " 23-26",
+  publisher =    "Springer Verlag",
+  note =         "To appear",
+  url =          "http://www-aiia2003.di.unipi.it",
+  editor =       "A. Cappelli and F. Turini",
+  abstract = "The focus of this work is on the interactions among (possibly
+  heterogeneous) agents that form an open society, and on the
+  definition of a computational logic-based architecture for agent
+  interaction. We propose a model where the society defines the
+  allowed interaction protocols, which determine the ``socially''
+  allowed agent interaction patterns. The semantics of protocols can
+  be defined by means of social integrity constraints.  The main
+  advantages of this approach are in the design of societies of
+  agents, and in the possibility to detect undesirable behavior. In
+  the paper, we present the model for societies ruled by protocols
+  expressed as integrity constraints, and its declarative semantics. A
+  sketch of the operational counterpart is also given.",
+}
+
+% International Workshops with informal proceedings
+
+@InProceedings{ERCIM99,
+  author =       "Marco Gavanelli and Evelina Lamma and Paola Mello and Michela Milano",
+  title =        "Domains as First Class Objects in {CLP(FD)}",
+  booktitle =    "{ERCIM/COMPULOG} Workshop on Constraints",
+  year =         "1999",
+  address =      "Coral Beach Hotel, Paphos, Cyprus",
+  month =        Oct # " 25--27",
+  editor =       "K.R. Apt and A.C. Kakas and E. Monfroy and F. Rossi",
+}
+
+@InProceedings{WOID99,
+  author = "Marco Gavanelli and Michela Milano",
+  title = "On the Need for a Different Backtracking Rule when Dealing with Late
+  Evaluation",
+  booktitle = "ICLP'99 Workshop on Optimization and Implementation of Declarative Programming Languages",
+  year = "1999",
+  address =      "Las Cruces, N.M.",
+  editor =       "M. Leuschel",
+  month =        Nov # " 29 -- " # Dec # " 4",
+  abstract =
+
+"Constraint Satisfaction Problems (CSPs) represent a widely used
+framework for many real-life problems. Constraint Logic
+Programming (CLP) languages are an effective tool for modeling
+problems in terms of CSPs and solving them efficiently.
+
+Lazy domain evaluation is a solving technique that has proven
+effective for solving CSPs, allowing the minimization of the
+number of constraint checks. However, exploiting lazy domain
+evaluation in CLP is not very effective, mainly because of the
+chronological backtracking rule used in CLP. After each
+backtracking step, in fact, all the obtained results are lost,
+even if they had nothing to do with the culprit of the failure.
+The intelligent backtracking rule widely studied in the past does
+not solve the problem either.
+
+In this paper, we propose a backtracking rule useful for dealing
+efficiently and declaratively with lazy domain evaluation in CLP,
+and we show a simple implementation of a metainterpreter providing
+the depicted functionality.", }
+
+@INPROCEEDINGS{cp-ai-or02,
+  author =       {Marco Gavanelli},
+  title =        {An implementation of {Pareto} Optimality in {CLP(FD)}},
+  booktitle =    {CP-AI-OR - International Workshop on Integration of AI and OR
+                  techniques in Constraint Programming for Combinatorial
+                  Optimisation Problems},
+  year =         {2002},
+  editor =       {Narendra Jussien and Fran\c{c}ois Laburthe},
+  address =      {Le Croisic, France},
+  month =        mar # " 25 -- 27",
+  organization = {Ecole des Mines de Nantes},
+  pages = {49-64},
+  url = "http://cpaior.emn.fr:8000/",
+  ps =
+  "http://www.ing.unife.it/docenti/MarcoGavanelli/cp-ai-or02.ps.gz",
+  abstract = "The Constraint Problems usually addressed fall into one of two
+models: the Constraint Satisfaction Problem (CSP)  and the
+Constraint Optimization Problem (COP). However, in many real-life
+applications, more functions should be optimized at the same time,
+and solutions are ranked by means of a Partial Order.
+
+In problems where two or more functions should be optimized at the
+same time (Multi-Criteria Optimization, or Pareto optimality)
+the possible solutions of the CSP are ranked by
+means of a partial order.
+
+In this paper, we propose an algorithm for solving Pareto
+Optimality problems in CLP($FD$). The algorithm is complete and
+does not make any assumption on the structure of the constraints.
+It exploits Point Quad-Trees for the representation of the set of
+solutions, in order to access the data structure efficiently.",
+}
+
+@INPROCEEDINGS{FAMAS03,
+  AUTHOR =       "Marco Alberti and Anna Ciampolini and
+    Marco Gavanelli and Evelina Lamma and Paola
+  Mello and Paolo Torroni",
+  TITLE =        "Logic Based Semantics for an Agent Communication Language",
+  BOOKTITLE =    "FAMAS'03 - Formal Approaches to Multi-Agent Systems",
+  YEAR =         "2003",
+  editor =       "Barbara Dunin-K\c{e}plicz and Rineke Verbrugge",
+  address =      "Warsaw, Poland",
+  month =        apr # " 5 -- 13",
+  pages = {21--36},
+  abstract =     "Agent communication is one of the key issues in multi-agent systems.
+  Traditional interprocess communication formalisms are usually
+  considered insufficient for this purpose because of their lack of
+  expressiveness; thus, in most proposals for multi-agent
+  architectures, an Agent Communication Language (ACL) is designed to
+  provide for agent communication. However, a universally accepted
+  standard for ACLs is still missing. Agent communication in open
+  societies of heterogeneous agents poses requirements on ACLs
+  semantics (formal syntax and semantics, declarativeness,
+  verifiability, meaningfulness) which a social approach
+  seems to meet best.
+
+  In this paper we propose a logic-based social approach for ACL
+  semantics. We give a functional abstract model of societies and
+  agents. Then we propose a formalism (deontic constraints) to express
+  interaction protocols and give a social semantics to the behavior of
+  agents, focusing on communicative acts. Finally, we sketch a
+  prototypical implementation of deontic constraints exploiting the
+  Constraint Handling Rules language.",
+  url="http://www.ai.rug.nl/conf/famas/",
+  ps="http://www.lia.deis.unibo.it/research/TechReport/lia03001.ps",
+}
+
+@INPROCEEDINGS{LCMAS,
+  AUTHOR =       "Marco Alberti and Marco Gavanelli and Evelina Lamma and Paola Mello and Paolo Torroni",
+  TITLE =        "Specification and Verification of Agent Interactions using Social Integrity Constraints",
+  BOOKTITLE =    "LCMAS: Workshop on Logic and Communication in Multi-Agent Systems (satellite of ICALP 2003)",
+  YEAR =         "2003",
+  editor =       "Wiebe van der Hoek and Alessio Lomuscio and Erik de Vink and Mike Wooldridge",
+  address =      "Eindhoven, Netherlands",
+  month =        Jun # " 29",
+  url = "http://www.win.tue.nl/~evink/lcmas03.html",
+  abstract = "In this paper we propose a logic-based social approach for
+specification and verification of agent interaction. We firstly
+introduce integrity constraints about social acts (called Social
+Integrity Constraints) as a formalism to express interaction
+protocols and give a social semantics to the behavior of agents,
+focusing on communicative acts. Then, we discuss several possible
+kinds of verification of agent interaction, and we show how social
+integrity constraints can be used to verify some properties in
+this respect. We focus our interest on static verification of the
+compliance of agent specifications to interaction protocols, and
+on run-time verification, based on agents' observable behavior. We
+adopt as a running example the NetBill security transaction
+protocol for the selling and delivery of information goods.",
+}
+
+@INPROCEEDINGS{AGP2003,
+  AUTHOR =       "Marco Gavanelli and Evelina Lamma and Paola Mello and Michela Milano and Paolo Torroni",
+  TITLE =        "Interpreting Abduction in {CLP}",
+  BOOKTITLE =    "APPIA-GULP-PRODE  Joint Conference on Declarative Programming",
+  YEAR =         "2003",
+  editor =       "Luigi Palopoli",
+  address =      "Reggio Calabria, Italy",
+  month =        Sep # " 3 - 5",
+  organization = "Universit\`a Mediterranea di Reggio Calabria",
+  note =         "To Appear",
+  url =          "http://www.informatica.ing.unirc.it/agp03/",
+  pdf =          "http://www.ing.unife.it/docenti/MarcoGavanelli/papers/AGP03.pdf",
+}
+
+
+
+
+% Workshop e Convegni Nazionali con Revisione ed atti informali
+
+@InProceedings{IAPRVA98,
+  author =       "Rita Cucchiara and Marco Gavanelli and Evelina Lamma and Paola Mello and Michela Milano and Massimo Piccardi",
+  title =        "Object Recognition by Interactive Constraint Satisfaction",
+  booktitle =    "Proceedings of IAPRVA'98: Artificial Intelligence and
+                  Pattern Recognition Techniques for Computer Vision",
+  year =         "1998",
+  pages =        "53--58",
+  address =      "Ferrara, Italy",
+  month =        apr # " 6--7",
+  editor =       "Alberto Del~Bimbo and Paola Mello and Guido Tascini",
+  organization = "Associazione Italiana per l'Intelligenza Artificiale (AI*IA) and
+                  International Association for Pattern
+                  Recognition - Italian Chapter (IAPR-IC)",
+}
+
+@InProceedings{RCRA-Roma99,
+  author = "Marco Gavanelli and Evelina Lamma and Paola Mello and Michela Milano",
+  title = "Performance Measurement of Interactive {CSP} Search Algorithms",
+  booktitle = "Giornata di Lavoro RCRA su ``Analisi sperimentale di algoritmi per l'Intelligenza Artificiale''",
+  year =        "1999",
+  address =      "Rome, Italy",
+  month =        Dec # " 16",
+  ps = "http://www.dis.uniroma1.it/~rcra/roma99/papers/8.ps",
+  abstract =
+"The Constraint Satisfaction Problem (CSP) is a good framework for
+dealing with combinatorial problems, but it does not take into
+account the interactive acquisition of the problem parameters. For
+this reason, an extension of the CSP model, the Interactive CSP
+model \cite{IJCAI99}, has been proposed. Various ICSP solving
+algorithms have been discussed as well. In order to verify for
+which kind of problems the ICSP model is most promising, we
+performed a series of systematic tests. However, in order to
+evaluate the performance of an interactive CSP solving algorithm,
+classical parameters used by the CSP community (e.g., number of
+constraint checks, number of explored nodes, ...) are not good
+indicators, as they consider just the computational effort of the
+solver component. ICSP solving algorithms are capable of
+exploiting the interaction between subsystems, so more indicators
+have to be considered.
+
+In this work, we show how to esteem the efficiency of an ICSP
+solving algorithm, considering the computational effort of both
+the subsystems and the communication cost. We show that the total
+effort can be considered as a combination of four different
+counters that depend only on the given CSP problem. To obtain the
+total complexity, these counters have to be combined using some
+parameters that depend only on the solving architecture. We
+performed a series of tests recording these counters and here we
+show the corresponding results for two algorithms.",
+}
+
+% Altre pubblicazioni
+
+@ARTICLE{AIxIAnotizie2000,
+  author =       "Marco Gavanelli and Paolo Torroni",
+  title =        "{ISCL} 2000 International Summer School in Computational Logic",
+  journal =      "AI*IA Notizie",
+  year =         "2000",
+  volume =       "{XIII}",
+  number =       "4",
+  month =        Dec,
+  pages =        "64--65"
+}
+
+@ARTICLE{BNVKInewsletter2000,
+  author =       "Marco Gavanelli and Paolo Torroni",
+  title =        "International Summer School in Computational Logic",
+  journal =      "BNVKI Newsletter",
+  year =         "2000",
+  volume =       "17",
+  number =       "6",
+  month =        Dec,
+  pages =        "149"
+}
+
+@ARTICLE{ALPnewsletter2001,
+  author =       {Marco Gavanelli and Paolo Torroni},
+  title =        {{ISCL} 2000 International Summer School in Computational Logic},
+  journal =      {Logic Programming Newsletter},
+  year =         {2001},
+  volume =       {14},
+  number =       {1},
+  pages =        {7--8},
+  month =        {February},
+}

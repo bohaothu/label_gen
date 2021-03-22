@@ -1,0 +1,844 @@
+<HTML>
+<pre>
+
+@string{brics =	"{BRICS}"}
+@string{daimi =	"Department of Computer Science, University of Aarhus"}
+@string{iesd  =	"Department of Computer Science, Institute
+		  of Electronic Systems, Aalborg University"}
+@string{rs    =	"Research Series"}
+@string{ns    =	"Notes Series"}
+@string{ls    =	"Lecture Series"}
+@string{ds    =	"Dissertation Series"}
+
+@TechReport{BRICS-DS-01-10,
+  author =	 "Jensen, Mikkel T.",
+  title =	 "Robust and Flexible Scheduling with
+                  Evolutionary Computation", 
+  institution =	 brics,
+  year =	 2001,
+  type =	 ds,
+  number =	 "DS-01-10",
+  address =	 daimi,
+  month =	 nov,
+  note =	 "PhD thesis. xii+299~pp",
+  abstract =	 "Over the last ten years, there have been numerous applications of
+evolutionary algorithms to a variety of scheduling problems. Like most
+other research on heuristic scheduling, the primary aim of the
+research has been on deterministic formulations of the problems. This
+is in contrast to real world scheduling problems which are usually not
+deterministic. Usually at the time the schedule is made some
+information about the problem and processing environment is available,
+but this information is uncertain and likely to change during schedule
+execution. Changes frequently encountered in scheduling environments
+include machine breakdowns, uncertain processing times, workers
+getting sick, materials being delayed and the appearance of new jobs.
+These possible environmental changes mean that a schedule which was
+optimal for the information available at the time of scheduling can
+end up being highly suboptimal when it is implemented and subjected to
+the uncertainty of the real world. For this reason it is very
+important to find methods capable of creating \textit{robust}
+schedules (schedules expected to perform well after a minimal amount
+of modification when the environment changes) or \textit{flexible}
+schedules (schedules expected to perform well after some degree of
+modification when the environment changes).\bibpar
+
+This thesis presents two fundamentally different approaches for
+scheduling job shops facing machine breakdowns. The first method is
+called \textit{neighbourhood based robustness} and is based on an idea
+of minimising the cost of a neighbourhood of schedules. The scheduling
+algorithm attempts to find a small set of schedules with an acceptable
+level of performance. The approach is demonstrated to significantly
+improve the robustness and flexibility of the schedules while at the
+same time producing schedules with a low implementation cost if no
+breakdown occurs. The method is compared to a state of the art method
+for stochastic scheduling and concluded to have the same level of
+performance, but a wider area of applicability. The current
+implementation of the method is based on an evolutionary algorithm,
+but since the real contribution of the method is a new performance
+measure, other implementations could be based on tabu search,
+simulated annealing or other powerful ``blind'' optimisation
+heuristics.\bibpar
+
+The other method for stochastic scheduling uses the idea of
+coevolution to create schedules with a guaranteed worst case
+performance for a known set of scenarios. The method is demonstrated
+to improve worst case performance of the schedules when compared to
+ordinary scheduling; it substantially reduces program running times
+when compared to a more standard approach explicitly considering all
+scenarios. Schedules based on worst case performance measures often
+have suboptimal performance if no disruption happens, so the
+coevolutionary algorithm is combined with a multi-objective algorithm
+which optimises worst case performance as well as performance without
+disruptions.\bibpar
+
+The coevolutionary worst case algorithm is also combined with another
+algorithm to create schedules with a guaranteed level of \textit{worst
+deviation performance}. In worst deviation performance the objective
+is to minimise the highest possible performance difference from the
+schedule optimal for the scenario that actually takes place.
+Minimising this kind of performance measure involves solving a large
+number of related scheduling problems in one run, so a new
+evolutionary algorithm for this kind of problem is suggested.\bibpar
+
+Other contributions of the thesis include a new coevolutionary
+algorithm for minimax problems. The new algorithm is capable of
+solving problems with an asymmetric property that causes previously
+published algorithms to fail. Also, a new algorithm to solve the
+economic lot and delivery scheduling problem is presented. The new
+algorithm is guaranteed to solve the problem to optimality in
+polynomial time, something previously published algorithms have not
+been able to do",
+  linkhtmlabs =	 "",
+  linkps =	 "",
+  linkpdf =	 ""
+}
+
+
+@TechReport{BRICS-DS-01-9,
+  author =	 "Rodler, Flemming Friche",
+  title =	 "Compression with Fast Random Access",
+  institution =	 brics,
+  year =	 2001,
+  type =	 ds,
+  number =	 "DS-01-9",
+  address =	 daimi,
+  month =	 nov,
+  note =	 "PhD thesis. xiv+124~pp",
+  abstract =	 "
+The main topic of this dissertation is the development and use of
+methods for space efficient storage of data combined with fast
+retrieval. By fast retrieval we mean that a single data element can be
+randomly selected and decoded efficiently. In particular, the focus
+will be on compression of volumetric data with fast random access to
+individual voxels, decoded from the compressed data.\bibpar
+
+Volumetric data is finding widespread use in areas such as medical
+imaging, scientific visualization, simulations and fluid
+dynamics. Because of the size of modern volumes, using such data sets
+in uncompressed form is often only possible on computers with
+extensive amounts of memory. By designing compression methods for
+volumetric data that support fast random access this problem might be
+overcome. Since lossless compression of three-dimensional data only
+provides relatively small compression ratios, lossy techniques must be
+used. When designing compression methods with fast random access there
+is a choice between designing general schemes that will work for a
+wide range of applications or to tailor the compression algorithm to a
+specific application at hand. This dissertation we be concerned with
+designing general methods and we present two methods for volumetric
+compression with fast random access. The methods are compared to other
+existing schemes showing them to be quite competitive.\bibpar
+
+The first compression method that we present is suited for online
+compression. That is, the data can be compressed as it is downloaded
+utilizing only a small buffer. Inspired by video coding the volume is
+considered as a stack of slices. To remove redundancies between slices
+a simple ``motion estimation'' technique is used. Redundancies are
+further reduced by wavelet transforming each slice using a
+two-dimensional wavelet transform. Finally, the wavelet data is
+thresholded and the resulting sparse representation is quantized and
+encoded using a nested block indexing scheme, which allows for
+efficient retrieval of coefficients. While being only slightly slower
+than other existing schemes the method improves the compression ratio
+by about 50\%.\bibpar
+
+As a tool for constructing fast and efficient compression methods that
+support fast random access we introduce the concept of lossy
+dictionaries and show how to use it to achieve significant
+improvements in compressing volumetric data. The dictionary data
+structure is widely used in computer science as a tool for space
+efficient storage of sparse sets. The main performance parameters of
+dictionaries are space, lookup time and update time. In this
+dissertation we present a new and efficient dictionary scheme, based
+on hashing, called {\sc Cuckoo Hashing}. {\sc Cuckoo Hashing} achieves
+worst case constant lookup time, expected amortized constant update
+time and space usage of three words per element stored in the
+dictionary, i.e., the space usage is similar to that of binary search
+trees. Running extensive experiments we show {\sc Cuckoo Hashing} to
+be very competitive to the most commonly used dictionary
+methods. Since these methods have nontrivial worst case lookup time
+{\sc Cuckoo Hashing} is useful in time critical systems where such a
+guarantee is mandatory.\bibpar
+
+Even though, time efficient dictionaries with a reasonable space usage
+exist, the space usage of these are still too large to be of use in
+lossy compression. However, if the dictionary is allowed to store a
+slightly different set than intended, new and interesting
+possibilities originate. Very space efficient and fast data structures
+can be constructed by allowing the dictionary to discard some elements
+of the set (false negatives) and also allowing it to include elements
+not in the set (false positives). The lossy dictionary we present in
+this dissertation is a variant of {\sc Cuckoo Hashing} which results
+in fast lookup time. We show that our data structure is nearly optimal
+with respect to space usage. Experimentally, we find that the data
+structure has very good behavior with respect to keeping the most
+important elements of the set which is partially explained by
+theoretical considerations. Besides working well in compression our
+lossy dictionary data structure might find use in applications such as
+web cache sharing and differential files.\bibpar",
+abstract1 ="
+In the second volumetric compression method with fast random access
+that we present in this dissertation, we look at a completely
+different and rather unexploited way of encoding wavelet
+coefficients. In wavelet based compression it is common to store the
+coefficients of largest magnitude, letting all other coefficients be
+zero. However, the new method presented allows a slightly different
+set of coefficients to be stored. The foundation of the method is a
+three-dimensional wavelet transform of the volume and the lossy
+dictionary data structure that we introduce. Comparison to other
+previously suggested schemes in the literature, including the
+two-dimensional scheme mentioned above, shows an improvement of up to
+80\% in compression ratio while the time for accessing a random voxel
+is considerably reduced compared to the first method",
+  linkhtmlabs =	 "",
+  linkps =	 "",
+  linkpdf =	 ""
+}
+
+@TechReport{BRICS-DS-01-8,
+  author =	 "Damgaard, Niels",
+  title =	 "Using Theory to Make Better Tools",
+  institution =	 brics,
+  year =	 2001,
+  type =	 ds,
+  number =	 "DS-01-8",
+  address =	 daimi,
+  month =	 oct,
+  note =	 "PhD thesis",
+  abstract =	 "
+In this dissertation four tools based on theory will be presented. The
+tools fall in four quite different areas.\bibpar
+
+The first tool is an extension of parser generators, enabling them to
+handle side constraints along with grammars. The side constraints are
+specified in a first-order logic on parse trees. The constraints are
+compiled into equivalent tree automata, which result in good runtime
+performance of the generated checkers. The tool is based on language
+theory, automata theory and logic.\bibpar
+
+The second tool is a static checker of assembly code for
+interrupt-based microcontrollers. The tool gives lower and upper
+bounds on the stack height, checks an implicit type-system and
+calculates the worst-case delay from an interrupt fires until it is
+handled. The tool is based on the theory of data-flow analysis.\bibpar
+
+The third 'tool' is a security extension of a system ({\tt<bigwig>}) for
+making interactive web-services. The extension provides
+confidentiality, integrity and authenticity in the communication
+between the client and the server. Furthermore, some primitives are
+introduced to ease the programming of cryptological protocols, like
+digital voting and e-cash, in the {\tt<bigwig>} language. The extension
+uses the theory of cryptography.\bibpar
+
+The fourth tool is a black-box system for finding neural networks good
+at solving a given classification problem. Back-propagation is used to
+train the neural network, but the rest of the parameters are found by
+a distributed genetic-algorithm. The tool uses the theory of neural
+networks and genetic algorithms",
+  OPTlinkhtmlabs =	 "",
+  OPTlinkps =	 "",
+  OPTlinkpdf =	 ""
+}
+
+@TechReport{BRICS-DS-01-7,
+  author =	 "Nielsen, Lasse R.",
+  title =	 "A Study of Defunctionalization and
+                  Continuation-Passing Style",
+  institution =	 brics,
+  year =	 2001,
+  type =	 ds,
+  number =	 "DS-01-7",
+  address =	 daimi,
+  month =	 aug,
+  note =	 "PhD thesis. iv+280~pp",
+  abstract =	 "
+
+We show that defunctionalization and continuations unify a variety of
+independently developed concepts in programming languages.\bibpar
+
+Defunctionalization was introduced by Reynolds to solve a specific
+need---representing higher-order functions in a first-order
+definitional interpreter---but it is a general method for transforming
+programs from higher-order programs to first-order. We formalize this
+method and give it a partial proof of correctness. We use
+defunctionalization to connect independent first-order and
+higher-order specifications and proofs by, e.g., defunctionalizing
+continuations.\bibpar
+
+The canonical specification of a continuation-passing style (CPS)
+transformation introduces many administrative redexes. To show a
+simulation theorem, Plotkin used a so-called colon-translation to
+bypass administrative reductions and relate the reductions common to
+the transformed and the un-transformed program. This allowed him to
+make a proof by structural induction on the source program. We extend
+the colon-translation and Plotkin's proof to show simulation theorems
+for a higher-order CPS transformation, written in a two-level
+language, and for a selective CPS transformation, keeping parts of the
+source program in direct style.\bibpar
+
+Using, e.g., Plotkin's CPS transformation and then performing all
+possible administrative reductions gives a so-called two-pass CPS
+transformation. A one-pass CPS transformation gives the same result
+but without traversing the output. Several different one-pass CPS
+transformations exist, and we describe, evaluate, and compare three of
+these: (1) A higher-order CPS transformation {\`a} la Danvy and
+Filinski, (2) a syntactic-theory based CPS transformation derived from
+Sabry and Felleisen's CPS transformation, and (3) a look-ahead based
+CPS transformation which extends the colon-translation to a full
+one-pass CPS transformation and is new. This look-ahead based CPS
+transformation is not compositional, but it allows reasoning by
+structural induction, which we use to prove the correctness of a
+direct-style transformation.\bibpar
+
+Syntactic theories are a framework for specifying operational
+semantics that uses evaluation contexts to define a reduction
+relation. The two primary operations needed to implement syntactic
+theories are decomposing an expression into an evaluation context and
+a redex, and plugging an expression into an evaluation context to
+generate an expression. If implemented separately, these operations
+each take time proportional to the size of the evaluation context,
+which can cause a quadratic overhead on the processing of
+programs. However, in actual use of syntactic theories, the two
+operations mostly occur consecutively. We define a single function,
+`refocus', that combines these operations and that avoids unnecessary
+overhead, thereby deforesting the composition of plugging and
+decomposition. We prove the correctness of refocusing and we show how
+to automatically generate refocus functions from a syntactic theory
+with unique decomposition.\bibpar
+
+We connect defunctionalization and Church encoding. Church encoding
+represents data-structures as functions and defunctionalization
+represents functions as data-structures, and we show to which extent
+they are inverses of each other.\bibpar
+
+We use defunctionalization to connect a higher-order CPS
+transformation and a syntactic-theory based CPS
+transformation. Defunctionalizing the static continuations of the
+higher-order transformation gives exactly the evaluation contexts of
+the syntactic theory.\bibpar
+
+We combine CPS transformation and defunctionalization to automatically
+generate data structures implementing evaluation
+contexts.Defunctionalizing the continuations of a CPS-transformed
+reduction function yields the evaluation contexts and their plug
+function---corresponding to the traditional view of continuations as a
+representation of the context. Defunctionalizing the continuations of
+a CPS-transformed evaluation function yields the evaluation contexts
+and the refocus functions---corresponding to the traditional view of
+continuations as a representation of the remainder of the
+computation",
+  OPTlinkhtmlabs ="",
+  OPTlinkps =	 "",
+  OPTlinkpdf =	 ""
+}
+
+@TechReport{BRICS-DS-01-6,
+  author =	 "Grobauer, Bernd",
+  title =	 "Topics in Semantics-based Program Manipulation",
+  institution =	 brics,
+  year =	 2001,
+  type =	 ds,
+  number =	 "DS-01-6",
+  address =	 daimi,
+  month =	 aug,
+  note =	 "PhD thesis. ii+x+186~pp",
+  abstract =	 "
+Programming is at least as much about manipulating existing code as it
+is about writing new code. Existing code is {\em modified}, for
+example to make inefficient code run faster, or to accommodate for new
+features when reusing code; existing code is {\em analyzed}, for
+example to verify certain program properties, or to use the analysis
+information for code modifications. Semantics-based program
+manipulation addresses methods for program modifications and program
+analyses that are formally defined and therefore can be verified with
+respect to the programming-language semantics. This dissertation
+comprises four articles in the field of semantics-based techniques for
+program manipulation: three articles are about {\em partial
+evaluation}, a method for program specialization; the fourth article
+treats an approach to {\em automatic cost analysis}.\bibpar
+
+Partial evaluation optimizes programs by specializing them with
+respect to parts of their input that are already known: Computations
+that depend only on known input are carried out during partial
+evaluation, whereas computations that depend on unknown input give
+rise to residual code. For example, partially evaluating an
+interpreter with respect to a program written in the interpreted
+language yields code that carries out the computations described by
+that program; partial evaluation is used to remove interpretive
+overhead. In effect, the partial evaluator serves as a compiler from
+the interpreted language into the implementation language of the
+interpreter. Compilation by partial evaluation is known as the first
+{\em Futamura projection}. The second and third Futamura projection
+describe the use of partial evaluation for compiler generation and
+compiler-generator generation, respectively; both require the partial
+evaluator that is employed to be {\em self applicable}.\bibpar
+
+The first article in this dissertation describes how the second
+Futamura projection can be achieved for type-directed partial
+evaluation (TDPE), a relatively recent approach to partial evaluation:
+We derive an ML implementation of the second Futamura projection for
+TDPE. Due to the differences between `traditional', syntax-directed
+partial evaluation and TDPE, this derivation involves several
+conceptual and technical steps. These include a suitable formulation
+of the second Futamura projection and techniques for making TDPE
+amenable to self-application.\bibpar
+
+In the second article, compilation by partial evaluation plays a
+central role for giving a unified approach to goal-directed
+evaluation, a programming-language paradigm that is built on the
+notions of backtracking and of generating successive
+results. Formulating the semantics of a small goal-directed language
+as a {\em monadic} semantics---a generic approach to structuring
+denotational semantics---allows us to relate various possible
+semantics to each other both conceptually and formally. We thus are
+able to explain goal-directed evaluation using an intuitive list-based
+semantics, while using a continuation semantics for semantics-based
+compilation through partial evaluation. The resulting code is
+comparable to that produced by an optimized compiler described in the
+literature.\bibpar
+
+The third article revisits one of the success stories of partial
+evaluation, the generation of efficient string matchers from intuitive
+but inefficient implementations. The basic idea is that specializing a
+naive string matcher with respect to a pattern string should result in
+a matcher that searches a text for this pattern with running time
+independent of the pattern and linear in the length of the text. In
+order to succeed with basic partial-evaluation techniques, the naive
+matcher has to be modified in a non-trivial way, carrying out
+so-called {\em binding-time improvements}. We present a step-by-step
+derivation of a binding-time improved matcher consisting of one
+problem-dependent step followed by standard binding-time
+improvements. We also consider several variants of matchers that
+specialize well, amongst them the first such matcher presented in the
+literature, and we demonstrate how variants can be derived from each
+other systematically.\bibpar
+
+The fourth article is concerned with program analysis rather than
+program transformation. A challenging goal for program analysis is to
+extract information about time or space complexity from a program. In
+complexity analysis, one often establishes {\em cost recurrences} as
+an intermediate step, and this step requires an abstraction from data
+to data size. We use information contained in dependent types to
+achieve such an abstraction: Dependent ML (DML), a conservative
+extension of ML, provides dependent types that can be used to
+associate data with size information, thus describing a possible
+abstraction. We automatically extract cost recurrences from
+first-order DML programs, guiding the abstraction from data to data
+size with information contained in DML type derivations",
+  linkhtmlabs =	 "",
+  linkps =	 "",
+  linkpdf =	 ""
+}
+
+@TechReport{BRICS-DS-01-5,
+  author =	 "Damian, Daniel",
+  title =	 "On Static and Dynamic Control-Flow Information in
+                  Program Analysis and Transformation",
+  institution =	 brics,
+  year =	 2001,
+  type =	 ds,
+  number =	 "DS-01-5",
+  address =	 daimi,
+  month =	 aug,
+  note =	 "PhD thesis. xii+111~pp",
+  abstract =	 "
+This thesis addresses several aspects of static and dynamic
+control-flow information in programming languages, by investigating
+its interaction with program transformation and program
+sanalysis.\bibpar
+
+Control-flow information indicates for each point in a program the
+possible program points to be executed next.  Control-flow information
+in a program may be static, as when the syntax of the program directly
+determines which parts of the program may be executed
+next. Control-flow information may be dynamic, as when run-time values
+and inputs of the program are required to determine which parts of the
+program may be executed next. A control-flow analysis approximates the
+dynamic control-flow information with conservative static control-flow
+information.\bibpar
+
+We explore the impact of a continuation-passing-style (CPS)
+transformation on the result of a constraint-based control-flow
+analysis over Moggi's computational metalanguage. A CPS transformation
+makes control-flow explicitly available to the program by abstracting
+the remainder of the computation into a continuation. Moggi's
+computational metalanguage supports reasoning about higher-order
+programs in the presence of computational effects. We show that a
+non-duplicating CPS transformation does not alter the result of a
+monovariant constraint-based control-flow analysis.\bibpar
+
+Building on control-flow analysis, we show that traditional
+constraint-based binding-time analysis and traditional partial
+evaluation benefit from the effects of a CPS transformation, while the
+same CPS transformation does not affect continuation-based partial
+evaluation and its corresponding binding-time analysis. As an
+intermediate result, we show that reducing a program in the
+computational metalanguage to monadic normal form also improves
+binding times for traditional partial evaluation while it does not
+affect continuation-based partial evaluation.\bibpar
+
+In addition, we show that linear $\beta$-reductions have no effect on
+control-flow analysis. As a corollary, we solve a problem left open in
+Palsberg and Wand's CPS transformation of flow information. Furthermore,
+using Danvy and Nielsen's first-order, one-pass CPS transformation, we
+present a simpler CPS transformation of flow information with a simpler
+correctness proof.\bibpar
+
+We continue by exploring Shivers's time-stamps-based technique for
+approximating program analyses over programs with dynamic control flow.
+We formalize a time-stamps-based algorithm for approximating the least
+fixed point of a generic program analysis over higher-order programs,
+and we prove its correctness.\bibpar
+
+We conclude by investigating the translation of first-order structured
+programs into first-order unstructured programs.  We present a one-pass
+translation that integrates static control-flow information and that
+produces programs containing no chains of jumps, no unused labels, and
+no redundant labels",
+  linkhtmlabs =	 "",
+  linkps =	 "",
+  linkpdf =	 ""
+}
+
+@TechReport{BRICS-DS-01-4,
+  author =	 "Rhiger, Morten",
+  title =	 "Higher-Order Program Generation",
+  institution =	 brics,
+  year =	 2001,
+  type =	 ds,
+  number =	 "DS-01-4",
+  address =	 daimi,
+  month =	 aug,
+  note =	 "PhD thesis. xiv+144~pp",
+  abstract =	 "
+This dissertation addresses the challenges of embedding programming
+languages, specializing generic programs to specific parameters, and
+generating specialized instances of programs directly as executable
+code. Our main tools are higher-order programming techniques and
+automatic program generation. It is our thesis that they synergize
+well in the development of customizable software.\bibpar
+
+Recent research on domain-specific languages propose to embed them
+into existing general-purpose languages. Typed higher-order languages
+have proven especially useful as meta languages because they provide a
+rich infrastructure of higher-order functions, types, and
+modules. Furthermore, it has been observed that embedded programs can
+be restricted to those having simple types using a technique called
+``phantom types''. We prove, using an idealized higher-order language,
+that such an embedding is sound (i.e., when all object-language terms
+that can be embedded into the meta language are simply typed) and that
+it is complete (i.e., when all simply typed object-language terms can
+be embedded into the meta language). The soundness proof is shown by
+induction over meta-language terms using a Kripke logical
+relation. The completeness proof is shown by induction over
+object-language terms. Furthermore, we address the use of Haskell and
+Standard ML as meta-languages.\bibpar
+
+Normalization functions, as embodied in type-directed partial
+evaluation, map a simply-typed higher-order value into a
+representation of its long beta-eta normal form. However, being
+dynamically typed, the original Scheme implementation of type-directed
+partial evaluation does not restrict input values to be typed at
+all. Furthermore, neither the original Scheme implementation nor the
+original Haskell implementation guarantee that type-directed partial
+evaluation preserves types. We present three implementations of
+type-directed partial evaluation in Haskell culminating with a version
+that restricts the input to typed values and for which the proofs of
+type-preservation and normalization are automated.\bibpar
+
+Partial evaluation provides a solution to the disproportion between
+general programs that can be executed in several contexts and their
+specialized counterparts that can be executed efficiently. However,
+stand-alone partial evaluation is usually too costly when a program
+must be specialized at run time. We introduce a collection of
+byte-code combinators for OCaml, a dialect of ML, that provides
+run-time code generation for OCaml programs. We apply these byte-code
+combinators in semantics-directed compilation for an imperative
+language and in run-time specialization using type-directed partial
+evaluation.\bibpar
+
+Finally, we present an approach to compiling goal-directed programs,
+i.e., programs that backtrack and generate successive results: We
+first specify the semantics of a goal-directed language using a
+monadic semantics and a spectrum of monads. We then compile
+goal-directed programs by specializing their interpreter (i.e., by
+using the first Futamura projection), using type-directed partial
+evaluation. Through various back ends, including a run-time code
+generator, we generate ML code, C code, and OCaml byte code",
+  linkhtmlabs =	 "",
+  linkps =	 "",
+  linkpdf =	 ""
+}
+
+@TechReport{BRICS-DS-01-3,
+  author =	 "Hune, Thomas S.",
+  title =	 "Analyzing Real-Time Systems: Theory and Tools",
+  institution =	 brics,
+  year =	 2001,
+  type =	 ds,
+  number =	 "DS-01-3",
+  address =	 daimi,
+  month =	 mar,
+  note =	 "PhD thesis. xii+265~pp",
+  abstract =	 "The main topic of this dissertation is the development and use of
+methods for formal reasoning about the correctness of real-time
+systems, in particular methods and tools to handle new classes of
+problems. In real-time systems the correctness of the system does not
+only depend on the order in which actions take place, but also the
+timing of the actions. The formal reasoning presented here is based on
+(extensions of) the model of timed automata and tools supporting this
+model, mainly {\sc Uppaal}. Real-time systems are often part of safety
+critical systems e.g.\ control systems for planes, trains, or factories,
+though also everyday electronics as audio/video equipment and (mobile)
+phones are considered real-time systems. Often these systems are
+concurrent systems with a number of components interacting, and
+reasoning about such systems is notoriously difficult. However, since
+most of the systems are either safety critical or errors in the
+systems are costly, ensuring correctness is very important, and hence
+formal reasoning can play a role in increasing the reliability of
+real-time systems",
+  abstract1 =	 "\bibpar
+We present two classes of cost extended timed automata, where a cost
+is associated to an execution of the automaton. We show that
+calculating the minimum cost of reaching a location in the automaton,
+the minimum-cost reachability problem, is decidable for both
+classes. Since a number of optimization problems, e.g.\ scheduling
+problems in a natural way, can be modeled using cost extended timed
+automata, we can now solve these problems using extensions of timed
+model checkers. The state-space of the simpler class, {\em uniformly
+priced timed automata} (UPTA), which is a subclass of {\em linearly
+priced timed automata} (LPTA), can effectively be represented using a
+slightly modified version of the well known difference bounded matrix
+(DBM) data-structure for representing zones, used in most timed model
+checkers. Using an extension of the region construction, the
+minimum-cost reachability problem can also be solved for
+LPTAs. However, the standard way of using zones for representing the
+state-space cannot be used for LPTAs, since there is no way of
+capturing the cost of states. Based on the notion of facets, zones can
+be split into smaller zones which can be represented by extended DBMs
+in an effective way. Minimum-cost reachability for both UPTAs and
+LPTAs have been implemented in extensions of {\sc Uppaal}, and
+successfully tested on a number of case studies. In particular, part
+of the Sidmar steel production plant, which is a case study of the
+Esprit VHS project, has been studied. Schedulability, without
+considering cost and optimality, has also been addressed using
+standard timed automata and {\sc Uppaal}. In order to solve the
+schedulability problem in {\sc Uppaal}{} it proved crucial to add a
+number of {\em guides} to the model, in order to limit the search
+space. In the cost extended versions of {\sc Uppaal}, guiding in terms
+of changing the order in which states are searched has also been used,
+and shown to be effective both for finding solutions to optimization
+problems and in ordinary timed model checking",
+  abstract2 =	 "\bibpar
+The second extension of timed automata is parametric timed automata,
+where parameters can be used in expressions for guards and
+invariants. We consider the problem of synthesizing values for the
+parameters ensuring satisfiability of reachability properties. Since
+there are in most cases infinitely many values ensuring that a
+property is satisfied, the result is presented in terms of constraints
+for the parameters. We present a semi-decision procedure synthesizing
+the constraints. The problem of synthesizing constraints for the
+parameters has been show to be undecidable. To represent the
+state-space we extend the DBM data-structure to parametric DBMs,
+capable of representing zones were the bounds are given by expressions
+including parameters. The semi-decision procedure is implemented in
+{\sc Uppaal}{} and constraints ensuring correctness of a number of
+industrial protocols is synthesized.\bibpar
+
+Since (timed) reachability checking requires large amounts of
+resources in terms of memory and CPU time, we have studied the
+possibility of distributing the reachability checking to a network of
+computers. We have implemented a distributed version of {\sc Uppaal}{}
+and tested it on a number of the largest known case studies for {\sc
+Uppaal}. Not only did we achieve effective usage of all the connected
+computers (close to linear speedup in the number of computers) we also
+discovered that the breadth-first search order, which previously has
+been considered to be the best known, is not optimal.\bibpar
+
+We apply the general categorical framework of {\em open maps} to timed
+automata by presenting a category where the elements are timed
+automata, and a subcategory suitably for representing observations,
+timed words.  Following the framework, maps in the category can be
+seen as simulations, and two timed automata $\mathcal{A}$ and
+$\mathcal{B}$ are timed bisimilar if and only if there exists a timed
+automaton $\mathcal{C}$ and open maps $\mathcal{C} \rightarrow
+\mathcal{A}$ and $\mathcal{C} \rightarrow \mathcal{B}$. We show that
+this notion of timed bisimulation coincides with the know notion of
+timed bisimulation, and using the region construction show that the
+bisimulation is decidable.\bibpar
+
+Building timed automata models of systems can be an error prone and
+time consuming task. We address this problem by presenting a
+translation from a low level programming language used in the
+programmable LEGO$^{\ooalign{\hfil\raise.07ex\hbox{\scriptsize
+R}\hfil\cr\cr\mathhexbox20D}}$ RCX$^{\sf T\!M}$ brick to timed
+automata. Programs for the RCX$^{\sf T\!M}$ brick can consist of
+several tasks running concurrently. Therefore an important part of the
+model of the program is a model of the scheduler. The translation has
+been implemented and tested on a control program for a car.\bibpar
+
+Finally, we consider a kind of partial program synthesis for untimed
+systems. Given a safety specification written in monadic second order
+logic, we use the {\sf Mona} tool to derive an automaton accepting the
+language of the specification. The automaton is used to restrict the
+executions of a handwritten control program, ensuring that the safety
+requirements are met. To demonstrate the approach we consider a
+control program for a crane, written for the RCX$^{\sf T\!M}$
+brick. We also discuss more generally what should happen when there is
+a conflict between the actions of the control program and the
+specification",
+  linkhtmlabs =	 "",
+  linkps =	 "",
+  linkpdf =	 ""
+}
+
+@TechReport{BRICS-DS-01-2,
+  author =	 "Pagter, Jakob",
+  title =	 "Time-Space Trade-Offs",
+  institution =	 brics,
+  year =	 2001,
+  type =	 ds,
+  number =	 "DS-01-2",
+  address =	 daimi,
+  month =	 mar,
+  note =	 "PhD thesis. xii+83~pp",
+  abstract =	 "
+In this dissertation we investigate the complexity of the time-space
+trade-off for sorting, element distinctness, and similar problems. We
+contribute new results, techniques, tools, and definitions pertaining
+to time-space trade-offs for the RAM (Random Access Machine),
+including new tight upper bounds on the time-space trade-off for Sorting
+in a variety of RAM models and a strong time-space trade-off lower
+bound for a decision problem in the RAM (in fact the branching
+program) model. We thus contribute to the general understanding of a
+number of fundamental combinatorial problems.\bibpar
+
+Time and space are the two most fundamental resources studied in the
+areas of algorithms and computational complexity theory and it is
+clearly important to study how they are related. In 1966 Cobham
+founded the area of time-space trade-offs by formally proving the
+first time-space trade-off---for the language of palindromes, i.e., a
+formulae that relate time and space in the form of either an upper or
+a lower bound---in this case $T\mathbin{\cdot}S\in\Theta(n^2)$.  Over
+the last thirty five years the area of time-space trade-offs has
+developed significantly and now constitutes its own branch of
+algorithms and computational complexity.\bibpar
+
+The area of time-space trade-offs deals with both upper and lower
+bounds and both are interesting, theoretically as well as practically.
+The viewpoint of this dissertation is theoretical, but we believe that
+some of our results can find applications in practice as well.\bibpar
+
+The last four years has witnessed a number of significant
+breakthroughs on proving lower bounds for decision problems, including
+the first non-trivial lower bound on the unit-cost RAM. We generalize
+work of Ajtai and prove the quantitatively best known lower bound in
+this model, namely a $\Omega(n\lg n/\lg\lg n)$ bound on time for any
+RAM deciding the so-called Hamming distance problem in space $n^{1-\epsilon}$.\bibpar
+
+For non-decision problems, i.e., problems with multiple outputs, much
+stron\-ger results are known. For Sorting, a fundamental problem in
+computer science, Beame proved that for any RAM the time-space product
+satisfies $T\mathbin{\cdot}S\in\Omega(n^2)$. We prove that this bound
+is in fact tight (for most time functions), i.e., we show a
+$T\mathbin{\cdot}S\in O(n^2)$ upper bound for time between
+$O(n(\lg\lg n)^2)$ and (roughly) $O(n^2)$. If we allow
+randomization in the Las Vegas fashion the lower bound still holds,
+and in this case we can meet it down to $O(n\lg\lg n)$.\bibpar
+
+From a practical perspective hierarchical memory layout models are the
+most interesting. Such models are called external memory models, in
+contrast to the internal memory models discussed above. Despite the
+fact that space might be of great relevance when solving practical
+problems on real computers, no theoretical model capturing space (and
+time simultaneously) has been defined. We introduce such a model and
+use it to prove so-called IO-space trade-offs for Sorting.  Building on
+the abovementioned techniques for time-space efficient internal memory
+Sorting, we develop the first IO-space efficient external memory Sorting
+algorithms.  Further, we prove that these algorithms are optimal using
+a transformation result which allows us to deduce external memory
+lower bounds (on IO-space trade-offs) from already known internal
+memory lower bounds (such as that of Beame)",
+  OPTabstractfull =	 "",
+  OPTlinkhtmlabs =	 "",
+  OPTlinkps =	 "",
+  OPTlinkpdf =	 ""
+}
+
+@TechReport{BRICS-DS-01-1,
+  author =	 "Dziembowski, Stefan",
+  title =	 "Multiparty Computations ---
+                  Information-Theoretically Secure Against an Adaptive
+                  Adversary",
+  institution =	 brics,
+  year =	 2001,
+  type =	 ds,
+  number =	 "DS-01-1",
+  address =	 daimi,
+  month =	 jan,
+  note =	 "PhD thesis. 109~pp",
+  abstract =	 "
+In this thesis we study a problem of doing Verifiable Secret Sharing
+(VSS) and Multiparty Computations in a model where private channels
+between the players and a broadcast channel is available.  The
+adversary is active, adaptive and has an unbounded computing power.
+The thesis is based on two papers [1,2].\bibpar
+
+In [1] we assume that the adversary can corrupt any set from a given
+{\em adversary} structure.  In this setting we study a problem of
+doing efficient VSS and MPC given an access to a secret sharing scheme
+(SS).  For all adversary structures where VSS is possible at all, we
+show that, up to a polynomial time black-box reduction, the complexity
+of adaptively secure VSS is the same as that of ordinary secret
+sharing (SS), where security is only required against a passive,
+static adversary.  Previously, such a connection was only known for
+linear secret sharing and VSS schemes.\bibpar
+
+We then show an impossibility result indicating that a similar
+equivalence does not hold for Multiparty Computation (MPC): we show
+that even if protocols are given black-box access for free to an
+idealized secret sharing scheme secure for the access structure in
+question, it is not possible to handle all relevant access structures
+efficiently, not even if the adversary is passive and static.  In
+other words, general MPC can only be black-box reduced efficiently to
+secret sharing if extra properties of the secret sharing scheme used
+(such as linearity) are assumed.\bibpar
+
+The protocols of [2] assume that we work against a {\em threshold}
+adversary structure.  We propose new VSS and MPC protocols that are
+substantially more efficient than the ones previously known.\bibpar
+
+Another contribution of [2] is an attack against a Weak Secret Sharing
+Protocol (WSS) of [3].  The attack exploits the fact that the
+adversary is adaptive.  We present this attack here and discuss other
+problems caused by the adaptiveness.\bibpar
+
+All protocols in the thesis are formally specified and the proofs of
+their security are given.
+
+\begin{itemize}
+\item[\mbox{[1]}]
+    Ronald Cramer, Ivan Damg{\aa}rd, Stefan Dziembowski, Martin Hirt, and Tal
+    Rabin. Efficient multiparty computations with dishonest minority.
+    In Advances in Cryptology --- Eurocrypt '99, volume 1592 of
+    Lecture Notes in Computer Science, pages 311--326, 1999.
+
+\item[\mbox{[2]}]
+    Ronald Cramer, Ivan Damg{\aa}rd, and Stefan Dziembowski.
+    On the complexity of verifiable secret sharing and multiparty computation.
+    In Proceedings of the Thirty-Second Annual ACM Symposium on
+    Theory of Computing, pages 25--334, May 2000.
+
+\item[\mbox{[3]}]
+    Tal Rabin and Michael Ben-Or. Verifiable secret sharing and
+    multiparty protocols with honest majority (extended abstract). In
+    Proceedings of the Twenty First Annual ACM Symposium on Theory of
+    Computing, pages 73--85, Seattle, Washington, 15--17 May
+    1989.
+\end{itemize}",
+  OPTabstractfull ="",
+  OPTlinkhtmlabs ="",
+  OPTlinkps =	 "",
+  OPTlinkpdf =	 ""
+}
+</HTML>
+</pre>

@@ -1,0 +1,946 @@
+@inproceedings {INPROC-2010-81,
+   author = {Ralph Lange and Frank D{\"u}rr and Kurt Rothermel},
+   title = {{Indexing Source Descriptions based on Defined Classes}},
+   booktitle = {Proceedings of the 14th International Database Engineering and Applications Symposium (IDEAS '10). Montreal, QC, Canada. August 2010},
+   publisher = {ACM},
+   institution = {Universit{\"a}t Stuttgart : Sonderforschungsbereich SFB 627 (Nexus: Umgebungsmodelle f{\"u}r mobile kontextbezogene Systeme), Germany},
+   pages = {245--256},
+   type = {Konferenz-Beitrag},
+   month = {August},
+   year = {2010},
+   keywords = {heterogeneous information systems; source descriptions; indexing of source descriptions; defined classes; tree-based index structure},
+   language = {Englisch},
+   cr-category = {H.2.5 Heterogeneous Databases,
+                   H.3.3 Information Search and Retrieval},
+   ee = {ftp://ftp.informatik.uni-stuttgart.de/pub/library/ncstrl.ustuttgart_fi/INPROC-2010-81/INPROC-2010-81.pdf,
+      http://doi.acm.org/10.1145/1866480.1866514},
+   contact = {ralph.lange@ipvs.uni-stuttgart.de},
+   department = {Universit{\"a}t Stuttgart, Institut f{\"u}r Parallele und Verteilte Systeme, Verteilte Systeme},
+   abstract = {Scaling heterogeneous information systems (HIS) to thousands of sources poses
+      particular challenges to source discovery. It requires a powerful formalism for
+      describing the contents of the sources in a concise manner and for formulating
+      compatible queries as well as a suitable structure for indexing and retrieving
+      the source descriptions efficiently.
+      
+      We propose an extended logic-based description formalism for large-scale HIS
+      with structured sources and a shared ontology. The formalism refines existing
+      approaches that describe the sources by constraints on the attribute value
+      ranges in several ways: It allows for complex, nested descriptions based on
+      defined classes. It supports alternative descriptions to express that a source
+      may be discovered by different combinations of constraints. Finally, it allows
+      to adjust between positive matching, similar to keyword-based discovery, and
+      negative matching, as used in existing logic-based approaches.
+      
+      We further propose the SDC-Tree for indexing such source descriptions. To allow
+      for efficient discovery, the SDC-Tree features multidimensional indexing
+      capabilities for the different attributes and the IS-A hierarchy of the shared
+      ontology, but also incorporates the existence or absence of constraints. For
+      this purpose, it supports three different types of node split operations which
+      exploit the expressiveness of the description formalism. Therefore, we also
+      propose a generic split algorithm which can be used with arbitrary ontologies.},
+   url = {http://www2.informatik.uni-stuttgart.de/cgi-bin/NCSTRL/NCSTRL_view.pl?id=INPROC-2010-81&amp;engl=0}
+}
+
+@inproceedings {INPROC-2010-80,
+   author = {Hannes Wolf and Klaus Herrmann and Kurt Rothermel},
+   title = {{Robustness in Context-Aware Mobile Computing}},
+   booktitle = {IEEE International Conference on Wireless and Mobile Computing, Networking and Communications (WiMob'2010)},
+   address = {Niagara Falls, Canada},
+   publisher = {IEEE Communications Society},
+   institution = {Universit{\"a}t Stuttgart, Fakult{\"a}t Informatik, Elektrotechnik und Informationstechnik, Germany},
+   type = {Konferenz-Beitrag},
+   month = {Oktober},
+   year = {2010},
+   language = {Englisch},
+   cr-category = {H.4.1 Office Automation,
+                   I.5.1 Pattern Recognition Models},
+   department = {Universit{\"a}t Stuttgart, Institut f{\"u}r Parallele und Verteilte Systeme, Verteilte Systeme},
+   abstract = {High level context recognition and situation detection are an enabling
+      technologies for unobtrusive mobile computing systems. Significant progress has
+      been made in processing and managing context information, leading to
+      sophisticated frameworks, middlewares, and algorithms. Despite great
+      improvements, context aware systems still require a significantly increased
+      recognition accuracy for high-level context information on uncertain sensor
+      data to enable the robust execution of context-aware applications. Recently
+      Adaptable Pervasive Workflows (APF)s have been presented as innovative
+      programming paradigm for mobile context-aware applications. We propose a novel
+      Flow Context System (FlowCon) that builds upon APFs. FlowCon uses structural
+      information from the APF to increase accuracy of uncertain high-level context
+      information up to 49$\backslash$\%. This way we make an important step to enable robust
+      execution of mobile context-aware applications.},
+   url = {http://www2.informatik.uni-stuttgart.de/cgi-bin/NCSTRL/NCSTRL_view.pl?id=INPROC-2010-80&amp;engl=0}
+}
+
+@inproceedings {INPROC-2010-78,
+   author = {A. Bucchiarone and A. Marconi and M. Pistore and S. F{\"o}ll and K. Herrmann and C. Hiesinger and S. Marinovic},
+   title = {{An Overall Process for Self-Adaptive Pervasive Systems}},
+   booktitle = {Proceedings of the Second International Conference on Adaptive and Self-adaptive Systems and Applications : ADAPTIVE 2010 ; Lisbon, Portugal, November 21-26, 2010},
+   publisher = {Elsevier},
+   institution = {Universit{\"a}t Stuttgart, Fakult{\"a}t Informatik, Elektrotechnik und Informationstechnik, Germany},
+   pages = {1--6},
+   type = {Konferenz-Beitrag},
+   month = {November},
+   year = {2010},
+   language = {Deutsch},
+   cr-category = {D.2.9 Software Engineering Management,
+                   D.2.11 Software Engineering Software Architectures},
+   department = {Universit{\"a}t Stuttgart, Institut f{\"u}r Parallele und Verteilte Systeme, Verteilte Systeme},
+   abstract = {Self-adaptive pervasive systems often implement adaptation in a centralised
+      manner, where one component holds all the necessary knowledge to identify when
+      and how the system needs to adapt. In self-adaptive pervasive systems, composed
+      of autonomous components with different authorities (such as security,
+      distribution, etc.), this approach cannot be implemented as composing a
+      centralised knowledge is not feasible and it also obstructs the system's
+      ability to dynamically change its components. A simple alternative would be to
+      allow each component to adapt independently but this can quickly give rise to
+      conflicts, race conditions and oscillations between multiple independent
+      adaptations. To avoid these problems, we propose to coordinate individual
+      adaptations so that each component's adaptation goals are satisfied. Each
+      component proposes an adaptation which is reviewed by other components who may
+      propose their own adaptations that they may need to do. This continues until a
+      complete adaptation plan is agreed upon. In cases where certain individual
+      adaptations conflict with some components' goals, components are instructed to
+      seek alternative proposals. The Adaptation Manager component is in charge of
+      the negotiation process and it also has the authority to resolve certain
+      conflicts between adaptations. Our approach is evaluated in the context of
+      pervasive workflow systems where the failure probability and execution times
+      are assessed.},
+   url = {http://www2.informatik.uni-stuttgart.de/cgi-bin/NCSTRL/NCSTRL_view.pl?id=INPROC-2010-78&amp;engl=0}
+}
+
+@inproceedings {INPROC-2010-71,
+   author = {Bilal Hameed and Imran Ahmed Khan and Frank D{\"u}rr and Kurt Rothermel},
+   title = {{An RFID Based Consistency Management Framework for Production Monitoring In a Smart Real-Time Factory}},
+   booktitle = {Proceedings of 2010 Internet of Things Conference (To Appear).},
+   address = {Tokyo, Japan},
+   publisher = {IEEE},
+   institution = {Universit{\"a}t Stuttgart, Fakult{\"a}t Informatik, Elektrotechnik und Informationstechnik, Germany},
+   pages = {1--8},
+   type = {Konferenz-Beitrag},
+   month = {November},
+   year = {2010},
+   language = {Englisch},
+   cr-category = {C.2 Computer-Communication Networks,
+                   C.2.1 Network Architecture and Design},
+   department = {Universit{\"a}t Stuttgart, Institut f{\"u}r Parallele und Verteilte Systeme, Verteilte Systeme},
+   abstract = {The use of RFID devices for real-time production monitoring in modern factories
+      is impeded by the inherent unreliability of RFID devices. In this paper we
+      present a consistency stack that conceptually divides the different consistency
+      issues in production monitoring into separate layers. In addition to this we
+      have built a consistency management framework to ensure consistent real-time
+      production monitoring, using unreliable RFID devices. In detail, we deal with
+      the problem of detecting object sequences by a set of unreliable RFID readers
+      that are installed along production lines. We propose a probabilistic sequence
+      detection algorithm that assigns probabilities to objects detected by RFID
+      devices and provides probabilistic guarantees regarding the real-time sequences
+      of objects on the production lines.},
+   url = {http://www2.informatik.uni-stuttgart.de/cgi-bin/NCSTRL/NCSTRL_view.pl?id=INPROC-2010-71&amp;engl=0}
+}
+
+@inproceedings {INPROC-2010-69,
+   author = {Andreas Benzing and Boris Koldehofe and Marco V{\"o}lz and Kurt Rothermel},
+   title = {{Multilevel Predictions for the Aggregation of Data in Global Sensor Networks}},
+   booktitle = {Proceedings of the 14th IEEE/ACM International Symposium on Distributed Simulation and Real Time Applications},
+   publisher = {IEEE},
+   institution = {Universit{\"a}t Stuttgart, Fakult{\"a}t Informatik, Elektrotechnik und Informationstechnik, Germany},
+   pages = {169--178},
+   type = {Konferenz-Beitrag},
+   month = {Oktober},
+   year = {2010},
+   keywords = {Global Sensor Networks; Distributed Stream Processing; Predictors},
+   language = {Englisch},
+   cr-category = {C.2.4 Distributed Systems},
+   ee = {ftp://ftp.informatik.uni-stuttgart.de/pub/library/ncstrl.ustuttgart_fi/INPROC-2010-69/INPROC-2010-69.pdf,
+      http://ieeexplore.ieee.org/search/srchabstract.jsp?tp=&arnumber=5636734},
+   contact = {andreas.benzing@ipvs.uni-stuttgart.de},
+   department = {Universit{\"a}t Stuttgart, Institut f{\"u}r Parallele und Verteilte Systeme, Verteilte Systeme},
+   abstract = {Real-time simulations are one challenging application domain that is expected
+      to introduce high requirements to global sensor applications. Besides having
+      hard constraints on latency bounds at which data needs to be processed,
+      simulation applications will impose high requirements with respect to available
+      bandwidth. Predictors, originally introduced in the domain of wireless sensor
+      networks for energy saving, are one appealing solution to provide real-time
+      estimates and at the same time significantly reduce the data rates. While in
+      the setting of wireless sensor networks many prediction models have been
+      analyzed, their behavior and use is unclear when applied to distributed data
+      streams where aggregation results are typically processed over multilevel
+      hierarchies.
+      
+      In the context of weather simulations, we propose a distributed R-Tree-based
+      aggregation algorithm that allows for efficient reuse of aggregate queries. In
+      the setting of real temperature readings taken from weather stations during one
+      month, we study the trade-off between updates of the prediction model and the
+      precision of the predicted values. Our evaluations indicate that even in
+      situations where complex prediction models are expected to perform best, simple
+      prediction models give higher benefits with respect to saving bandwidth while
+      providing similar data accuracy.},
+   url = {http://www2.informatik.uni-stuttgart.de/cgi-bin/NCSTRL/NCSTRL_view.pl?id=INPROC-2010-69&amp;engl=0}
+}
+
+@inproceedings {INPROC-2010-65,
+   author = {Daniel Fischer and Klaus Herrmann and Kurt Rothermel},
+   title = {{GeSoMo - A General Social Mobility Model for Delay Tolerant Networks}},
+   booktitle = {Proceedings of the 7th IEEE International Conference on Mobile Ad-hoc and Sensor Systems (MASS '10)},
+   publisher = {IEEE},
+   institution = {Universit{\"a}t Stuttgart, Fakult{\"a}t Informatik, Elektrotechnik und Informationstechnik, Germany},
+   pages = {1--9},
+   type = {Konferenz-Beitrag},
+   month = {November},
+   year = {2010},
+   language = {Deutsch},
+   cr-category = {C.2.1 Network Architecture and Design,
+                   C.4 Performance of Systems,
+                   I.6.0 Simulation and Modeling General},
+   department = {Universit{\"a}t Stuttgart, Institut f{\"u}r Parallele und Verteilte Systeme, Verteilte Systeme},
+   abstract = {Simulation is a fundamental means for evaluating mobile applications based on
+      ad-hoc networks. This has led to the design of a large number of mobility
+      models for simulating realistic user movement under physical constraints
+      (obstacles, acceleration, inertia etc.). In recent years, the new breed of
+      social mobility models (SMMs) has risen. These SMMs model the $\backslash$emph{social
+      aspects of human mobility}, i.e. which users meet, when and how often. Such
+      information is indispensable for the simulation of a wide range of
+      socially-aware communication protocols mostly based on delay-tolerant networks,
+      including opportunistic ad-hoc routing and data dissemination systems. Each SMM
+      needs a model of the relations between a set of relevant people (called social
+      network model -- SNM) in order to simulate their mobility. Existing SMMs lack
+      flexibility since each of them is implicitly restricted to a specific,
+      simplifying SNM.
+      
+      We present GeSoMo, a new SMM that separates the core mobility model from the
+      structural description of the social network underlying the simulation. This
+      simple and elegant design principle gives GeSoMo generalizing power: Arbitrary
+      existing and future SNMs can be used without changing GeSoMo itself. Our
+      evaluation results show that GeSoMo produces simulations that are coherent with
+      a broad range of empirical data describing real-world human social behavior and
+      mobility.},
+   url = {http://www2.informatik.uni-stuttgart.de/cgi-bin/NCSTRL/NCSTRL_view.pl?id=INPROC-2010-65&amp;engl=0}
+}
+
+@inproceedings {INPROC-2010-63,
+   author = {Harald Weinschrott and Frank D{\"u}rr and Kurt Rothermel},
+   title = {{StreamShaper: Coordination Algorithms for Participatory Mobile Urban Sensing}},
+   booktitle = {Proceedings of the 7th IEEE International Conference on Mobile Ad-hoc and Sensor Systems (MASS'10)},
+   address = {San Francisco, CA, USA},
+   publisher = {IEEE},
+   institution = {Universit{\"a}t Stuttgart : Sonderforschungsbereich SFB 627 (Nexus: Umgebungsmodelle f{\"u}r mobile kontextbezogene Systeme), Germany},
+   pages = {1--10},
+   type = {Konferenz-Beitrag},
+   month = {November},
+   year = {2010},
+   language = {Englisch},
+   cr-category = {C.2 Computer-Communication Networks},
+   ee = {ftp://ftp.informatik.uni-stuttgart.de/pub/library/ncstrl.ustuttgart_fi/INPROC-2010-63/INPROC-2010-63.pdf},
+   department = {Universit{\"a}t Stuttgart, Institut f{\"u}r Parallele und Verteilte Systeme, Verteilte Systeme},
+   abstract = {In this paper we introduce mechanisms for automated mapping of urban areas that
+      provide a virtual sensor abstraction to the applications. We envision a
+      participatory system that exploits widely available devices as mobile phones to
+      cooperatively read environmental conditions as air quality or noise pollution,
+      and map these measurements to stationary virtual sensors. We propose spatial
+      and temporal coverage metrics for measuring the quality of acquired sensor data
+      that reflect the conditions of urban areas and the uncontrolled movement of
+      nodes. To achieve quality requirements and efficiency in terms of energy
+      consumption, this paper presents two algorithms for coordinating sensing. The
+      first is based on a central control instance, which assigns sensing tasks to
+      mobile nodes based on movement predictions. The second algorithm is based on
+      coordination of mobile nodes in an ad-hoc network. By extensive simulations, we
+      show that these algorithms achieve a high quality of readings, which is about
+      95\% of the maximum possible. Moreover, the algorithms achieve a very high
+      energy efficiency allowing for drastic savings compared to uncoordinated
+      sensing.},
+   url = {http://www2.informatik.uni-stuttgart.de/cgi-bin/NCSTRL/NCSTRL_view.pl?id=INPROC-2010-63&amp;engl=0}
+}
+
+@inproceedings {INPROC-2010-60,
+   author = {Faraz Memon and Frank D{\"u}rr and Kurt Rothermel},
+   title = {{Index Recommendation Tool for Optimized Information Discovery Over Distributed Hash Tables}},
+   booktitle = {(To appear) In Procs. of 35th International Conference on Local Computer Networks (LCN'10)},
+   address = {Dever, CO, USA},
+   publisher = {IEEE Computer Society},
+   institution = {Universit{\"a}t Stuttgart, Fakult{\"a}t Informatik, Elektrotechnik und Informationstechnik, Germany},
+   pages = {1--8},
+   type = {Konferenz-Beitrag},
+   month = {Oktober},
+   year = {2010},
+   language = {Englisch},
+   cr-category = {C.2.1 Network Architecture and Design,
+                   E.1 Data Structures,
+                   E.2 Data Storage Representations,
+                   H.3.1 Content Analysis and Indexing},
+   ee = {ftp://ftp.informatik.uni-stuttgart.de/pub/library/ncstrl.ustuttgart_fi/INPROC-2010-60/INPROC-2010-60.pdf},
+   department = {Universit{\"a}t Stuttgart, Institut f{\"u}r Parallele und Verteilte Systeme, Verteilte Systeme},
+   abstract = {Peer-to-peer (P2P) networks allow for efficient information discovery in
+      large-scale distributed systems. Although point queries are well supported by
+      current P2P systems -- in particular systems based on distributed hash tables
+      (DHTs) --, providing efficient support for more complex queries remains a
+      challenge. Our research focuses on the efficient support for multi-attribute
+      range (MAR) queries over DHT-based information discovery systems.
+      Traditionally, the support for MAR queries over DHTs has been provided either
+      by creating an individual index for each data attribute or by creating a single
+      index using the combination of all data attributes. In contrast to these
+      approaches, we propose to create a set of indices over selected attribute
+      combinations. In order to limit the overhead induced by index maintenance, the
+      total number of created indices has to be limited. Thus, the resulting problem
+      is to create a limited number of indices such that the overall system
+      performance is optimal for MAR queries. In this paper, we propose an index
+      recommendation tool that implements heuristic solutions to this NP-hard
+      problem. Our evaluations show that these heuristics lead to a close-to-optimal
+      system performance for MAR queries.},
+   url = {http://www2.informatik.uni-stuttgart.de/cgi-bin/NCSTRL/NCSTRL_view.pl?id=INPROC-2010-60&amp;engl=0}
+}
+
+@inproceedings {INPROC-2010-57,
+   author = {Stamatia Rizou and Frank D{\"u}rr and Kurt Rothermel},
+   title = {{Providing QoS Guarantees for Large-Scale Operator Networks}},
+   booktitle = {Proceedings of the 12th IEEE International Conference on High Performance Computing and Communications},
+   address = {Melbourne},
+   publisher = {IEEE Computer Society Press},
+   institution = {Universit{\"a}t Stuttgart : Sonderforschungsbereich SFB 627 (Nexus: Umgebungsmodelle f{\"u}r mobile kontextbezogene Systeme), Germany},
+   type = {Konferenz-Beitrag},
+   month = {September},
+   year = {2010},
+   language = {Englisch},
+   cr-category = {C.2.4 Distributed Systems},
+   ee = {ftp://ftp.informatik.uni-stuttgart.de/pub/library/ncstrl.ustuttgart_fi/INPROC-2010-57/INPROC-2010-57.pdf},
+   department = {Universit{\"a}t Stuttgart, Institut f{\"u}r Parallele und Verteilte Systeme, Verteilte Systeme},
+   abstract = {Application areas like global sensor networks and data stream processing
+      involve the on-line processing of large amounts of data in an overlay network
+      of operators on top of the Internet infrastructure. Trying to fulfill QoS
+      guarantees in such networks is a challenging task that should be realized under
+      the requirement for optimal usage of common resources in the network. Therefore
+      in this paper, we formalize a constrained optimization problem for the
+      placement of operators in an overlay network which strives for satisfying user
+      QoS constraints subject to latency, while minimizing the network load induced
+      by the deployment of the operators in the network. Since the initial problem is
+      NP-hard, we solve at a first step the problem in an intermediate continuous
+      latency space and then we map the continuous solution to its discrete variant.
+      Our evaluations provide an analysis about the inherent interdepedence between
+      the two metrics, network usage and latency, subject to this paper and
+      furthermore shows that our algorithm achieves a good balance between the user
+      requirements and the usage of the network resources.},
+   url = {http://www2.informatik.uni-stuttgart.de/cgi-bin/NCSTRL/NCSTRL_view.pl?id=INPROC-2010-57&amp;engl=0}
+}
+
+@inproceedings {INPROC-2010-56,
+   author = {Stamatia Rizou and Frank D{\"u}rr and Kurt Rothermel},
+   title = {{Solving the Multi-operator Placement Problem in Large-Scale Operator Networks}},
+   booktitle = {Proceedings of the 19th International Conference on Computer Communication Networks},
+   address = {Zurich},
+   publisher = {IEEE Communications Society},
+   institution = {Universit{\"a}t Stuttgart : Sonderforschungsbereich SFB 627 (Nexus: Umgebungsmodelle f{\"u}r mobile kontextbezogene Systeme), Germany},
+   type = {Konferenz-Beitrag},
+   month = {August},
+   year = {2010},
+   language = {Englisch},
+   cr-category = {C.2.4 Distributed Systems},
+   ee = {ftp://ftp.informatik.uni-stuttgart.de/pub/library/ncstrl.ustuttgart_fi/INPROC-2010-56/INPROC-2010-56.pdf},
+   department = {Universit{\"a}t Stuttgart, Institut f{\"u}r Parallele und Verteilte Systeme, Verteilte Systeme},
+   abstract = {Processing streams of data in an overlay network of operators distributed over
+      a wide-area network is a common idea shared by different applications such as
+      distributed event correlation systems and large-scale sensor networks. In order
+      to utilize network resources efficiently and allow for the parallel deployment
+      of a large number of large-scale operator networks, suitable placement
+      algorithms are vital that place operators on physical nodes. In this paper, we
+      present a distributed placement algorithm that minimizes the bandwidth-delay
+      product of data streams between operators of the network in order to reduce the
+      induced network load. Since the fundamental optimization problem is NP-hard, we
+      propose a heuristic solution. First, we calculate an optimal solution in an
+      intermediate continuous search space, called latency space. Subsequently the
+      continuous solution is mapped to the physical network. Our evaluations show
+      that this algorithm reduces the resulting network load significantly compared
+      to state of the art algorithms and achieves results close to the optimum.},
+   url = {http://www2.informatik.uni-stuttgart.de/cgi-bin/NCSTRL/NCSTRL_view.pl?id=INPROC-2010-56&amp;engl=0}
+}
+
+@inproceedings {INPROC-2010-46,
+   author = {Stefan F{\"o}ll and Klaus Herrmann and Christian Hiesinger},
+   title = {{Flow-Based Context Prediction}},
+   booktitle = {Proceedings of the 7th International Conference on Pervasive Services (ICPS 2010), Berlin, Germany, July 13-15, 2010},
+   publisher = {ACM},
+   institution = {Universit{\"a}t Stuttgart, Fakult{\"a}t Informatik, Elektrotechnik und Informationstechnik, Germany},
+   pages = {1--1},
+   type = {Konferenz-Beitrag},
+   month = {Juli},
+   year = {2010},
+   keywords = {Context prediction, Markov model, workflows, context awareness, probabilistic user behaviour},
+   language = {Englisch},
+   cr-category = {G.3 Probability and Statistics,
+                   I.2.6 Artificial Intelligence Learning},
+   contact = {stefan.foell@ipvs.uni-stuttgart.de},
+   department = {Universit{\"a}t Stuttgart, Institut f{\"u}r Parallele und Verteilte Systeme, Verteilte Systeme},
+   abstract = {Context prediction has been recognized as an enabler for proactive pervasive
+      services that anticipate future situations already ahead of time. Traditional
+      context predictors are limited by their agnostic view on the targeted
+      application domain when analysing context histories of past user behaviour.
+      Awareness about the processes in which an entity is involved can provide rich
+      information to foresee future context changes more accurately. We present an
+      approach for context prediction in pervasive environments that are
+      characterized by context-aware workflows. In order to benefit from the explicit
+      knowledge about human behaviour in these environments, we devise a context
+      predictor that learns the relationship of context changes with the flow of
+      activities performed by humans. This relationship is encoded as a probabilistic
+      state transition system that can be explored to determine the most likely paths
+      of future context occurrences. Our evaluation shows that our enhanced predictor
+      is able to extract patterns from context histories that are inaccessible to
+      history-only predictors and significantly improves the prediction accuracy.},
+   url = {http://www2.informatik.uni-stuttgart.de/cgi-bin/NCSTRL/NCSTRL_view.pl?id=INPROC-2010-46&amp;engl=0}
+}
+
+@inproceedings {INPROC-2010-43,
+   author = {Stamatia Rizou and Kai H{\"a}ussermann and Frank D{\"u}rr and Nazario Cipriani and Kurt Rothermel},
+   title = {{A system for distributed context reasoning.}},
+   booktitle = {Proceedings of ICAS’10: International Conference on Autonomous and Autonomic Systems},
+   publisher = {IEEE Computer Society Conference Publishing Services},
+   institution = {Universit{\"a}t Stuttgart : Sonderforschungsbereich SFB 627 (Nexus: Umgebungsmodelle f{\"u}r mobile kontextbezogene Systeme), Germany},
+   pages = {84--89},
+   type = {Konferenz-Beitrag},
+   month = {M{\"a}rz},
+   year = {2010},
+   isbn = {978-0-7695-3970-6},
+   language = {Englisch},
+   cr-category = {C.2.4 Distributed Systems},
+   department = {Universit{\"a}t Stuttgart, Institut f{\"u}r Parallele und Verteilte Systeme, Verteilte Systeme;
+                  Universit{\"a}t Stuttgart, Institut f{\"u}r Parallele und Verteilte Systeme, Anwendersoftware},
+   abstract = {Context aware systems use context information to adapt their behaviour
+      accordingly. In order to derive high level context information from low level
+      context, such as sensor values, context reasoning methods that correlate
+      observable context information, are necessary. Several context reasoning
+      mechanisms have been proposed in the literature. Usually these mechanisms are
+      centralized, leading to suboptimal utilization of network resources and poor
+      system performance in case of large-scale scenarios. Therefore to increase the
+      scalability of context reasoning systems the development of methods that
+      distribute the reasoning process is necessary. Existing distributed approaches
+      are method specific and do not provide a generic formalization for distributed
+      reasoning. In this paper we introduce a novel system which enables distributed
+      context reasoning in a generic way that is independent of the reasoning
+      algorithm.},
+   url = {http://www2.informatik.uni-stuttgart.de/cgi-bin/NCSTRL/NCSTRL_view.pl?id=INPROC-2010-43&amp;engl=0}
+}
+
+@inproceedings {INPROC-2010-38,
+   author = {Gerald G. Koch and M. Adnan Tariq and Boris Koldehofe and Kurt Rothermel},
+   title = {{Event processing for large-scale distributed games}},
+   booktitle = {Proceedings of the 4th International Conference on Distributed Event-Based Systems (DEBS'10)},
+   publisher = {ACM},
+   institution = {Universit{\"a}t Stuttgart, Fakult{\"a}t Informatik, Elektrotechnik und Informationstechnik, Germany},
+   type = {Konferenz-Beitrag},
+   month = {Juli},
+   year = {2010},
+   doi = {http://doi.acm.org/10.1145/1827418.1827440},
+   isbn = {978-1-60558-927-5},
+   keywords = {Cordies; SpoVNet; CEP},
+   language = {Englisch},
+   cr-category = {C.2.4 Distributed Systems},
+   ee = {ftp://ftp.informatik.uni-stuttgart.de/pub/library/ncstrl.ustuttgart_fi/INPROC-2010-38/INPROC-2010-38.pdf,
+      http://doi.acm.org/10.1145/1827418.1827440},
+   department = {Universit{\"a}t Stuttgart, Institut f{\"u}r Parallele und Verteilte Systeme, Verteilte Systeme},
+   abstract = {Novel peer-to-peer-based multiplayer online games are instantiated in an ad-hoc
+      manner without the support of dedicated infrastructure and maintain their state
+      in a distributed manner. Although their employed communication paradigms
+      provide efficient access to sections of distributed state, such communication
+      fails if the participants need to access large subsets of the application state
+      in order to detect high-level situations. We propose a demonstration that shows
+      how multiplayer online games can benefit from using publish/subscribe
+      communication and complex event processing alongside their traditional
+      communication paradigm.},
+   url = {http://www2.informatik.uni-stuttgart.de/cgi-bin/NCSTRL/NCSTRL_view.pl?id=INPROC-2010-38&amp;engl=0}
+}
+
+@inproceedings {INPROC-2010-32,
+   author = {Lars Geiger and Frank D{\"u}rr and Kurt Rothermel},
+   title = {{Aggregation of User Contexts in Context-based Communication}},
+   booktitle = {Proceedings of the 6th Euro-NF Conference on Next Generation Internet (NGI 2010)},
+   address = {Paris},
+   publisher = {IEEE Xplore},
+   institution = {Universit{\"a}t Stuttgart : Sonderforschungsbereich SFB 627 (Nexus: Umgebungsmodelle f{\"u}r mobile kontextbezogene Systeme), Germany},
+   pages = {1--8},
+   type = {Konferenz-Beitrag},
+   month = {Juni},
+   year = {2010},
+   language = {Englisch},
+   cr-category = {C.2.1 Network Architecture and Design,
+                   C.2.2 Network Protocols,
+                   C.2.4 Distributed Systems,
+                   C.2.6 Internetworking},
+   ee = {ftp://ftp.informatik.uni-stuttgart.de/pub/library/ncstrl.ustuttgart_fi/INPROC-2010-32/INPROC-2010-32.pdf,
+      http://dx.doi.org/10.1109/NGI.2010.5534466},
+   department = {Universit{\"a}t Stuttgart, Institut f{\"u}r Parallele und Verteilte Systeme, Verteilte Systeme},
+   abstract = {A context-based communication system enables the indirect addressing and
+      routing of messages according to the users' contexts. This provides, for
+      example, the means to send a message to all students on campus who attend a
+      certain class, with information about an upcoming exam. However, for a targeted
+      forwarding of messages towards users, the routers need information about the
+      context of connected users. Global knowledge, i.e., each router knowing about
+      every user, is not scalable, though, because of the necessary update messages
+      to keep this information up-to-date.
+      
+      To address this challenge, a router can aggregate similar contexts and only
+      provide such an aggregated view to neighboring routers. In this paper, we
+      present an approach to aggregate similar contexts, based on a similarity
+      measure for user contexts. The algorithm can be adjusted according to the
+      observed messages and user contexts in the system by specifying a similarity
+      threshold to determine when contexts are aggregated.
+      
+      The aggregation of user contexts improves the scalability of our approach by
+      significantly reducing the load of context updates by up to 30\%, depending on
+      the usage of the system. This improvement comes at the cost of a negligible
+      increase in false positive messages due to the loss of information used for
+      forwarding messages.},
+   url = {http://www2.informatik.uni-stuttgart.de/cgi-bin/NCSTRL/NCSTRL_view.pl?id=INPROC-2010-32&amp;engl=0}
+}
+
+@inproceedings {INPROC-2010-31,
+   author = {Muhammad Adnan Tariq and Gerald Georg Koch and Boris Koldehofe and Imran Khan and Kurt Rothermel},
+   title = {{Dynamic publish/subscribe to meet subscriber-defined delay and bandwidth constraints}},
+   booktitle = {The Sixteenth International Conference on Parallel Computing (Euro-Par 2010)},
+   publisher = {Springer},
+   institution = {Universit{\"a}t Stuttgart, Fakult{\"a}t Informatik, Elektrotechnik und Informationstechnik, Germany},
+   pages = {1--13},
+   type = {Konferenz-Beitrag},
+   month = {August},
+   year = {2010},
+   language = {Englisch},
+   cr-category = {C.2.4 Distributed Systems},
+   ee = {ftp://ftp.informatik.uni-stuttgart.de/pub/library/ncstrl.ustuttgart_fi/INPROC-2010-31/INPROC-2010-31.pdf},
+   department = {Universit{\"a}t Stuttgart, Institut f{\"u}r Parallele und Verteilte Systeme, Verteilte Systeme},
+   abstract = {Current distributed publish/subscribe systems assume that all participants have
+      similar QoS requirements and equally contribute to the system’s resources.
+      However, in many real-world applications, the message delay tolerance of
+      individual peers may differ widely. Disseminating messages according to
+      individual delay requirements not only allows for the satisfaction of
+      user-specific needs but also significantly improves the utilization of the
+      resources in a publish/subscribe system. In this paper, we propose a
+      peer-to-peer-based approach to satisfy the individual delay requirements of
+      subscribers in the presence of bandwidth constraints. Our approach allows
+      subscribers to dynamically adjust the granularity of their subscriptions
+      according to their bandwidth constraints and delay requirements. Subscribers
+      maintain the publish/subscribe overlay in a decentralized manner by
+      establishing connections to peers that provide messages meeting exactly their
+      subscription granularity and complying to their delay requirements. Evaluations
+      show that for practical workloads, the proposed system scales up to a large
+      number of subscribers and performs robustly in a very dynamic setting.},
+   url = {http://www2.informatik.uni-stuttgart.de/cgi-bin/NCSTRL/NCSTRL_view.pl?id=INPROC-2010-31&amp;engl=0}
+}
+
+@inproceedings {INPROC-2010-30,
+   author = {Andreas Grau and Klaus Herrmann and Kurt Rothermel},
+   title = {{NETplace: Efficient Runtime Minimization of Network Emulation Experiments}},
+   booktitle = {Proceeding of the International Symposium on Performance Evaluation of Computer and Telecommunication Systems (SPECTS'10) [Best Paper Award]},
+   address = {Ottawa, Canada},
+   publisher = {IEEE Communications Society},
+   institution = {Universit{\"a}t Stuttgart, Fakult{\"a}t Informatik, Elektrotechnik und Informationstechnik, Germany},
+   pages = {265--272},
+   type = {Konferenz-Beitrag},
+   month = {Juli},
+   year = {2010},
+   language = {Englisch},
+   cr-category = {C.2.4 Distributed Systems},
+   ee = {ftp://ftp.informatik.uni-stuttgart.de/pub/library/ncstrl.ustuttgart_fi/INPROC-2010-30/INPROC-2010-30.pdf,
+      http://www.ipvs.uni-stuttgart.de/abteilungen/vs/abteilung/mitarbeiter/andreas.grau_infos/spects10bestpaper.jpg,
+      http://ieeexplore.ieee.org/xpls/abs_all.jsp?arnumber=5589304},
+   department = {Universit{\"a}t Stuttgart, Institut f{\"u}r Parallele und Verteilte Systeme, Verteilte Systeme},
+   abstract = {Network emulation is an efficient method for evaluating distributed
+      applications and communication protocols by combining the benefits of real
+      world experiments and network simulation. The process of network emulation
+      involves execution of thousands of connected virtual nodes running the software
+      under test in a controlled environment. Along with the quality of the
+      experiment results, the runtime of network experiments strongly influences the
+      convenience of users and operators of emulation testbeds. The goal of this
+      paper is, therefore, to minimize the experiment runtime of network emulations.
+      
+      In order to achieve this goal, we make the following contributions in this
+      paper: First, we present a highly scalable emulation architecture to
+      efficiently support network emulation testbeds with multicore CPUs. Second, we
+      propose a detailed and generic cost model for the communication costs of
+      emulation testbeds. Third, we present an efficient placement strategy
+      (NETplace) to assign virtual nodes to physical nodes of the testbed while
+      minimizing the runtime of network experiments. Therefore, we combine graph
+      partitioning and greedy approaches. Our evaluations show that our placement
+      strategy outperforms existing methods by reducing the experiment runtime up to
+      64\%.},
+   url = {http://www2.informatik.uni-stuttgart.de/cgi-bin/NCSTRL/NCSTRL_view.pl?id=INPROC-2010-30&amp;engl=0}
+}
+
+@inproceedings {INPROC-2010-24,
+   author = {Muhammad Adnan Tariq and Boris Koldehofe and Ala Altaweel and Kurt Rothermel},
+   title = {{Providing basic security mechanisms in broker-less publish/subscribe systems}},
+   booktitle = {Proceedings of the 4th International Conference on Distributed Event-Based Systems (DEBS'10), 2010},
+   publisher = {ACM},
+   institution = {Universit{\"a}t Stuttgart, Fakult{\"a}t Informatik, Elektrotechnik und Informationstechnik, Germany},
+   pages = {1--12},
+   type = {Konferenz-Beitrag},
+   month = {Juli},
+   year = {2010},
+   language = {Englisch},
+   cr-category = {C.2.4 Distributed Systems},
+   ee = {ftp://ftp.informatik.uni-stuttgart.de/pub/library/ncstrl.ustuttgart_fi/INPROC-2010-24/INPROC-2010-24.pdf},
+   department = {Universit{\"a}t Stuttgart, Institut f{\"u}r Parallele und Verteilte Systeme, Verteilte Systeme},
+   abstract = {The provisioning of basic security mechanisms such as authentication and
+      confidentiality is highly challenging in a content-based publish/subscribe
+      system. Authentication of publishers and subscribers is difficult to achieve
+      due to the loose coupling of publishers and subscribers. Similarly,
+      confidentiality of events and subscriptions conflicts with contentbased
+      routing. In particular, content-based approaches in broker-less environments do
+      not address confidentiality at all. This paper presents a novel approach to
+      provide confidentiality and authentication in a broker-less content-based
+      publish-subscribe system. By adapting the pairing-based cryptography mechanisms
+      to the needs of publish/subscribe authentication of publisher and subscriber as
+      well as confidentiality of events is ensured. Furthermore, an algorithm to
+      cluster subscribers according to their subscriptions preserves a weak notion of
+      subscription confidentiality. Our approach provides fine grained key management
+      and the cost for encryption, decryption and routing is in the order of
+      subscribed attributes. Moreover, the simulation results verify that supporting
+      security is affordable with respect to the cost for overlay construction and
+      event dissemination latencies, thus preserving scalability of the system.},
+   url = {http://www2.informatik.uni-stuttgart.de/cgi-bin/NCSTRL/NCSTRL_view.pl?id=INPROC-2010-24&amp;engl=0}
+}
+
+@inproceedings {INPROC-2010-22,
+   author = {Bj{\"o}rn Schilling and Boris Koldehofe and Udo Pletat and Kurt Rothermel},
+   title = {{Distributed Heterogeneous Event Processing: Enhancing Scalability and Interoperability of CEP in an Industrial Context}},
+   booktitle = {Proceedings of the 4th ACM International Conference on Distributed Event-Based Systems (DEBS); Cambridge, United Kingdom, July 12-15, 2010},
+   publisher = {ACM},
+   institution = {Universit{\"a}t Stuttgart, Fakult{\"a}t Informatik, Elektrotechnik und Informationstechnik, Germany},
+   type = {Konferenz-Beitrag},
+   month = {Juli},
+   year = {2010},
+   isbn = {1827418.1827453},
+   language = {Deutsch},
+   cr-category = {C.2.1 Network Architecture and Design,
+                   C.2.4 Distributed Systems},
+   ee = {ftp://ftp.informatik.uni-stuttgart.de/pub/library/ncstrl.ustuttgart_fi/INPROC-2010-22/INPROC-2010-22.pdf,
+      http://portal.acm.org/citation.cfm?doid=1827418.1827453},
+   department = {Universit{\"a}t Stuttgart, Institut f{\"u}r Parallele und Verteilte Systeme, Verteilte Systeme},
+   abstract = {Although a significant amount of research has investigated the benefits of
+      distributed CEP in terms of scalability and extensibility, there is an ongoing
+      reluctance in deploying distributed CEP in an industrial context. In this paper
+      we present the DHEP system developed together with the IBM laboratory in
+      B{\"o}blingen. It addresses some of the key problems in increasing the acceptance
+      of distributed CEP, for example supporting interoperability between
+      heterogeneous event processing systems. We present the concepts behind the DHEP
+      system and show how those concepts help to achieve scalable and extensible
+      event processing in an industrial context. Moreover, we verify in an evaluation
+      study that the additional cost imposed by the DHEP system is moderate and
+      'affordable' for the benefits provided.},
+   url = {http://www2.informatik.uni-stuttgart.de/cgi-bin/NCSTRL/NCSTRL_view.pl?id=INPROC-2010-22&amp;engl=0}
+}
+
+@inproceedings {INPROC-2010-21,
+   author = {Gerald Georg Koch and Boris Koldehofe and Kurt Rothermel},
+   title = {{Cordies: Expressive event correlation in distributed systems}},
+   booktitle = {Proceedings of the 4th International Conference on Distributed Event-Based Systems (DEBS'10)},
+   publisher = {ACM},
+   institution = {Universit{\"a}t Stuttgart, Fakult{\"a}t Informatik, Elektrotechnik und Informationstechnik, Germany},
+   type = {Konferenz-Beitrag},
+   month = {Juli},
+   year = {2010},
+   isbn = {978-1-60558-927-5},
+   doi = {10.1145/1827418.1827424},
+   keywords = {Cordies; distributed complex event processing; restriction graph; correlation description},
+   language = {Englisch},
+   cr-category = {C.2.4 Distributed Systems},
+   ee = {ftp://ftp.informatik.uni-stuttgart.de/pub/library/ncstrl.ustuttgart_fi/INPROC-2010-21/INPROC-2010-21.pdf,
+      http://doi.acm.org/10.1145/1827418.1827424},
+   department = {Universit{\"a}t Stuttgart, Institut f{\"u}r Parallele und Verteilte Systeme, Verteilte Systeme},
+   abstract = {Complex Event Processing (CEP) is the method of choice for the observation of
+      system states and situations by means of events. A number of systems have been
+      introduced that provide CEP in selected environments. Some are restricted to
+      centralised systems, or to system with synchronous communication, or to a
+      limited space of event relations that are defined in advance. Many modern
+      systems, though, are inherently distributed and asynchronous, and require a
+      more powerful CEP. We present Cordies, a distributed system for the detection
+      of correlated events that is designed for the operation in large-scale,
+      heterogeneous networks and adapts dynamically to changing network conditions.
+      With its expressive language to describe event relations, it is suitable for
+      environments where neither the event space nor the situations of interest are
+      predefined but are constantly adapted.},
+   url = {http://www2.informatik.uni-stuttgart.de/cgi-bin/NCSTRL/NCSTRL_view.pl?id=INPROC-2010-21&amp;engl=0}
+}
+
+@inproceedings {INPROC-2010-18,
+   author = {Andreas Benzing and Boris Koldehofe and Kurt Rothermel},
+   title = {{Distributed Diagnostic Simulations for the Smart Grid}},
+   booktitle = {Accepted Poster at the 1st International Conference on Energy-Efficient Computing and Networking: E-Energy 2010},
+   publisher = {Online},
+   institution = {Universit{\"a}t Stuttgart, Fakult{\"a}t Informatik, Elektrotechnik und Informationstechnik, Germany},
+   pages = {1--3},
+   type = {Konferenz-Beitrag},
+   month = {April},
+   year = {2010},
+   keywords = {Diagnostic Simulation; Global Sensor Grid},
+   language = {Deutsch},
+   cr-category = {C.2.4 Distributed Systems},
+   ee = {ftp://ftp.informatik.uni-stuttgart.de/pub/library/ncstrl.ustuttgart_fi/INPROC-2010-18/INPROC-2010-18.pdf},
+   contact = {andreas.benzing@ipvs.uni-stuttgart.de},
+   department = {Universit{\"a}t Stuttgart, Institut f{\"u}r Parallele und Verteilte Systeme, Verteilte Systeme},
+   abstract = {Energy efficiency is usually achieved by reducing the energy consumption as far
+      as possible. With the growing amount of renewable energy sources, energy
+      efficient usage also has to consider what kind of and when power is consumed.
+      By matching the availability of electrical power with the current demands, the
+      amount of unused energy and therefore overall energy production can be reduced.
+      The so called smart grid aims to provide this matching with a broad deployment
+      of smart meters to acquire the current demand. However, current approaches to
+      the smart grid cannot handle the huge amount of sensors and energy sources
+      involved in a scalable way. Most data acquisition systems focus on the lookup
+      and reading of single sensors and therefore do not fit the requirements of a
+      large scale power grid simulation. We propose a Global Sensor Grid (GSG) which
+      provides consumers with data preprocessed to their needs instead of delivering
+      raw sensor data. With this decoupling from the actual sensors, multiple
+      consumers can benefit from improvements in data acquisition and avoidance of
+      the redundant processing of data by each consumer. By integrating so-called
+      diagnostic simulations into the GSG, gaps in sensor coverage can be filled with
+      higher precision than normal interpolation.},
+   url = {http://www2.informatik.uni-stuttgart.de/cgi-bin/NCSTRL/NCSTRL_view.pl?id=INPROC-2010-18&amp;engl=0}
+}
+
+@inproceedings {INPROC-2010-17,
+   author = {Frank D{\"u}rr and Harald Weinschrott and Kurt Rothermel},
+   title = {{Geocast Routing of Symbolically Addressed Messages in Wireless Mesh Networks}},
+   booktitle = {Proceedings of the 8th IEEE International Conference on Pervasive Computing and Communications Workshops (PerCom Workshops '10)},
+   address = {Mannheim, Germany},
+   publisher = {IEEE Computer Society},
+   institution = {Universit{\"a}t Stuttgart : Sonderforschungsbereich SFB 627 (Nexus: Umgebungsmodelle f{\"u}r mobile kontextbezogene Systeme), Germany},
+   pages = {552--557},
+   type = {Workshop-Beitrag},
+   month = {M{\"a}rz},
+   year = {2010},
+   language = {Englisch},
+   cr-category = {C.2.2 Network Protocols},
+   ee = {ftp://ftp.informatik.uni-stuttgart.de/pub/library/ncstrl.ustuttgart_fi/INPROC-2010-17/INPROC-2010-17.pdf,
+      http://dx.doi.org/10.1109/PERCOMW.2010.5470499},
+   department = {Universit{\"a}t Stuttgart, Institut f{\"u}r Parallele und Verteilte Systeme, Verteilte Systeme},
+   abstract = {Geocast protocols can be used to send messages to all receivers in a geographic
+      target area. In this paper we present geocast routing algorithms for Wireless
+      Mesh Networks that are tailored to symbolic addressing using symbolic location
+      names like floor or room numbers. Since in particular indoors no geometric
+      information is available, our algorithms use symbolic location models to derive
+      directional information for routing. Moreover, we show how to integrate
+      geometric and symbolic geographic routing algorithms into a hybrid routing
+      approach which is applicable to larger areas consisting of symbolically and
+      geometrically defined locations.},
+   url = {http://www2.informatik.uni-stuttgart.de/cgi-bin/NCSTRL/NCSTRL_view.pl?id=INPROC-2010-17&amp;engl=0}
+}
+
+@inproceedings {INPROC-2010-16,
+   author = {Harald Weinschrott and Frank D{\"u}rr and Kurt Rothermel},
+   title = {{Symbolic Routing for Location-based Services in Wireless Mesh Networks}},
+   booktitle = {Proceedings of the IEEE 24nd International Conference on Advanced Information Networking and Applications},
+   publisher = {IEEE Computer Society},
+   institution = {Universit{\"a}t Stuttgart : Sonderforschungsbereich SFB 627 (Nexus: Umgebungsmodelle f{\"u}r mobile kontextbezogene Systeme), Germany},
+   pages = {1--8},
+   type = {Konferenz-Beitrag},
+   month = {April},
+   year = {2010},
+   language = {Englisch},
+   cr-category = {C.2.2 Network Protocols},
+   ee = {ftp://ftp.informatik.uni-stuttgart.de/pub/library/ncstrl.ustuttgart_fi/INPROC-2010-16/INPROC-2010-16.pdf,
+      http://dx.doi.org/10.1109/AINA.2010.71},
+   department = {Universit{\"a}t Stuttgart, Institut f{\"u}r Parallele und Verteilte Systeme, Verteilte Systeme},
+   abstract = {Wireless Mesh Networks are cost-efficient medium-scale networks that have the
+      potential to serve as an infrastructure for advanced location-based services.
+      As a basis for these services we present a routing algorithm that allows to
+      address intuitive symbolic coordinates. This algorithm is based on a
+      proactively maintained geographic routing structure that mimics the structure
+      of a symbolic location model. Message forwarding is done greedily along short
+      paths defined by a symbolic location model and if this fails, through an
+      hierarchical overlay network built by selected mesh routers. We show how a
+      geocast communication mechanism that allows to send messages to all hosts
+      within a specific location can be implemented with this routing algorithm. In
+      extensive evaluations we show that a low proactive routing overhead allows to
+      achieve high message delivery rates even in case of mobility. Moreover, we show
+      that the paths achieved are only 25\% longer than the theoretic optimal paths
+      for a wide range of simulation settings.},
+   url = {http://www2.informatik.uni-stuttgart.de/cgi-bin/NCSTRL/NCSTRL_view.pl?id=INPROC-2010-16&amp;engl=0}
+}
+
+@inproceedings {INPROC-2010-15,
+   author = {Ralph Lange and Frank D{\"u}rr and Kurt Rothermel},
+   title = {{Efficient Tracking of Moving Objects using Generic Remote Trajectory Simplification (Demo Paper)}},
+   booktitle = {Proceedings of the 8th IEEE International Conference on Pervasive Computing and Communications Workshops (PerCom Workshops '10). Mannheim, Germany. March 2010},
+   publisher = {IEEE Computer Society},
+   institution = {Universit{\"a}t Stuttgart : Sonderforschungsbereich SFB 627 (Nexus: Umgebungsmodelle f{\"u}r mobile kontextbezogene Systeme), Germany},
+   pages = {829--831},
+   type = {Workshop-Beitrag},
+   month = {M{\"a}rz},
+   year = {2010},
+   keywords = {Remote trajectory simplification; tracking; dead reckoning; moving objects database; MOD; line simplification},
+   language = {Englisch},
+   cr-category = {H.2.8 Database Applications},
+   ee = {ftp://ftp.informatik.uni-stuttgart.de/pub/library/ncstrl.ustuttgart_fi/INPROC-2010-15/INPROC-2010-15.pdf,
+      http://dx.doi.org/10.1109/PERCOMW.2010.5470553},
+   contact = {ralph.lange@ipvs.uni-stuttgart.de},
+   department = {Universit{\"a}t Stuttgart, Institut f{\"u}r Parallele und Verteilte Systeme, Verteilte Systeme},
+   abstract = {Position information of moving objects plays a vital role in many pervasive
+      applications. Therefore, moving objects databases (MODs), which can manage
+      trajectory data of a number objects, are used in many pervasive systems. A
+      crucial problem with MODs is how to efficiently track a remote object's
+      trajectory in real-time, i.e. how to continuously report the sensed trajectory
+      data to the MOD with minimal effort. For this purpose, we present a
+      prototypical implementation of the Generic Remote Trajectory Simplification
+      (GRTS) protocol, which optimizes storage consumption, processing, and
+      communication costs. Our prototypical system includes a fully functional MOD as
+      well as map-based mobile applications for subnotebooks and smartphones to
+      illustrate the functioning of GRTS.},
+   url = {http://www2.informatik.uni-stuttgart.de/cgi-bin/NCSTRL/NCSTRL_view.pl?id=INPROC-2010-15&amp;engl=0}
+}
+
+@inproceedings {INPROC-2010-118,
+   author = {Frank D{\"u}rr and Marius Wernke and Pavel Skvortsov and Kurt Rothermel},
+   title = {{Towards a Position Sharing Approach for Location-based Services}},
+   booktitle = {Proceedings of the W3C Workshop on Privacy for Advanced Web APIs},
+   publisher = {Online},
+   institution = {Universit{\"a}t Stuttgart, Fakult{\"a}t Informatik, Elektrotechnik und Informationstechnik, Germany},
+   pages = {1--3},
+   type = {Workshop-Beitrag},
+   month = {Juli},
+   year = {2010},
+   language = {Englisch},
+   cr-category = {C.2.4 Distributed Systems,
+                   H.3.5 Online Information Services},
+   ee = {ftp://ftp.informatik.uni-stuttgart.de/pub/library/ncstrl.ustuttgart_fi/INPROC-2010-118/INPROC-2010-118.pdf,
+      http://www.w3.org/2010/api-privacy-ws/papers/privacy-ws-16.pdf},
+   department = {Universit{\"a}t Stuttgart, Institut f{\"u}r Parallele und Verteilte Systeme, Verteilte Systeme},
+   abstract = {In partially-trusted system environments like the WWW, the management of
+      private user positions is a great challenge. On the one hand, location-based
+      services of different partially-trusted providers have to be provided with
+      position information. On the other hand, location servers, which are
+      responsible for the management of user positions, might as well be operated by
+      only partially-trusted providers. Therefore, in order to protect his privacy, a
+      user might only want to store position information of limited precision on
+      location servers, and also provide location-based services with position
+      information of limited precision.
+      
+      In this position paper, we sketch a novel position sharing approach that
+      enables the user to tightly control the precision of position information
+      stored on servers and provided to location-based services. This approach is
+      based on the idea of distributing position information among a set of servers
+      of different providers such that a compromised server only reveals information
+      of strictly limited precision.},
+   url = {http://www2.informatik.uni-stuttgart.de/cgi-bin/NCSTRL/NCSTRL_view.pl?id=INPROC-2010-118&amp;engl=0}
+}
+
+@inproceedings {INPROC-2010-116,
+   author = {Faraz Memon and Daniel Tiebler and Frank D{\"u}rr and Kurt Rothermel},
+   title = {{Optimized Information Discovery using Self-adapting Indices over Distributed Hash Tables}},
+   booktitle = {Proceedings of 29th International Performance Computing and Communications Conference (IPCCC'10)},
+   address = {Albuquerque, New Mexico, USA},
+   publisher = {IEEE},
+   institution = {Universit{\"a}t Stuttgart, Fakult{\"a}t Informatik, Elektrotechnik und Informationstechnik, Germany},
+   pages = {1--9},
+   type = {Konferenz-Beitrag},
+   month = {Dezember},
+   year = {2010},
+   language = {Englisch},
+   cr-category = {C.2.1 Network Architecture and Design,
+                   E.1 Data Structures,
+                   E.2 Data Storage Representations,
+                   H.3.1 Content Analysis and Indexing},
+   ee = {ftp://ftp.informatik.uni-stuttgart.de/pub/library/ncstrl.ustuttgart_fi/INPROC-2010-116/INPROC-2010-116.pdf},
+   department = {Universit{\"a}t Stuttgart, Institut f{\"u}r Parallele und Verteilte Systeme, Verteilte Systeme},
+   abstract = {Distributed Hash Table (DHT)-based peer-to-peer information discovery systems
+      have emerged as highly scalable systems for information storage and discovery
+      in massively distributed networks. Originally DHTs supported only point
+      queries. However, recently they have been extended to support more complex
+      queries, such as multi-attribute range (MAR) queries. Generally, the support
+      for MAR queries over DHTs has been provided either by creating an individual
+      index for each data attribute or by creating a single index using the
+      combination of all data attributes. In contrast to these approaches, we propose
+      to create and modify indices using the attribute combinations that dynamically
+      appear in MAR queries in the system.
+      
+      In this paper, we present an adaptive information discovery system that adapts
+      the set of indices according to the dynamic set of MAR queries in the system.
+      The main contribution of this paper is a four-phase scalable index adaptation
+      process. Our evaluations show that the adaptive information discovery system
+      continuously optimizes the overall system performance for MAR queries.
+      Moreover, compared to a non-adaptive system, the adaptive information discovery
+      system shows several orders of magnitude improved performance.},
+   url = {http://www2.informatik.uni-stuttgart.de/cgi-bin/NCSTRL/NCSTRL_view.pl?id=INPROC-2010-116&amp;engl=0}
+}
+
+@inproceedings {INPROC-2010-06,
+   author = {Stephan Schuhmann and Klaus Herrmann and Kurt Rothermel},
+   title = {{Efficient Resource-Aware Hybrid Configuration of Distributed Pervasive Applications}},
+   booktitle = {Proceedings of the 8th International Conference on Pervasive Computing (Pervasive 2010); Helsinki, Finland, May 17-20, 2010},
+   publisher = {Springer-Verlag},
+   institution = {Universit{\"a}t Stuttgart, Fakult{\"a}t Informatik, Elektrotechnik und Informationstechnik, Germany},
+   series = {Lecture Notes in Computer Science},
+   volume = {6030},
+   pages = {373--390},
+   type = {Konferenz-Beitrag},
+   month = {Mai},
+   year = {2010},
+   keywords = {Adaptivity; Components; Distributed Application Configuration; Heterogeneous Environments; Middleware; Pervasive Applications},
+   language = {Englisch},
+   cr-category = {C.2.4 Distributed Systems},
+   ee = {ftp://ftp.informatik.uni-stuttgart.de/pub/library/ncstrl.ustuttgart_fi/INPROC-2010-06/INPROC-2010-06.pdf,
+      http://www.springerlink.com/content/x6607vl0w9753683/},
+   department = {Universit{\"a}t Stuttgart, Institut f{\"u}r Parallele und Verteilte Systeme, Verteilte Systeme},
+   abstract = {As the size and complexity of Pervasive Computing environments increases,
+      configuration and adaptation of distributed applications gains importance.
+      These tasks require automated system support, since users must not be
+      distracted by the (re-)composition of applications. In homogeneous ad hoc
+      scenarios, relying on decentralized configuration schemes is obviously
+      mandatory, while centralized approaches may help to reduce latencies in weakly
+      heterogeneous infrastructure-based environments. However, in case of strongly
+      heterogeneous pervasive environments including several resource-rich and
+      resource-weak devices, both approaches may lead to suboptimal results
+      concerning configuration latencies: While the resource-weak devices represent
+      bottlenecks for decentralized configuration, the centralized approach faces the
+      problem of not utilizing parallelism. Instead, a hybrid approach that involves
+      only the subset of resource-rich devices is capable of rendering configuration
+      and adaptation processes more efficiently. In this paper, we present such a
+      resource-aware hybrid scheme that effectively reduces the time required for
+      configuration processes. This is accomplished by a balanced-load clustering
+      scheme that exploits the computational power of resource-rich devices, while
+      avoiding bottlenecks in (re-)configurations. We present real-world evaluations
+      which confirm that our approach reduces configuration latencies in
+      heterogeneous environments by more than 30 \% compared to totally centralized
+      and totally decentralized approaches. This is an important step towards
+      seamless application configuration.},
+   url = {http://www2.informatik.uni-stuttgart.de/cgi-bin/NCSTRL/NCSTRL_view.pl?id=INPROC-2010-06&amp;engl=0}
+}
+
+@article {ART-2010-03,
+   author = {Sven Schulz and Wolfgang Blochinger and Mathias Poths},
+   title = {{Orbweb - A Network Substrate for Peer-to-Peer Grid Computing Platforms based on Open Standards}},
+   journal = {Journal of Grid Computing},
+   address = {Heidelberg},
+   publisher = {Springer-Verlag},
+   volume = {8},
+   number = {1},
+   pages = {77--107},
+   type = {Artikel in Zeitschrift},
+   month = {Juni},
+   year = {2010},
+   doi = {10.1007/s10723-009-9121-8},
+   language = {Englisch},
+   cr-category = {C.2.1 Network Architecture and Design,
+                   C.2.2 Network Protocols,
+                   C.2.4 Distributed Systems,
+                   C.2.6 Internetworking},
+   department = {Universit{\"a}t Stuttgart, Institut f{\"u}r Parallele und Verteilte Systeme, Verteilte Systeme},
+   abstract = {In this paper, we propose to use the open industrial-strength eXtensible
+      Messaging and Presence Protocol (XMPP) to build a network substrate for
+      Peer-to-Peer Grid computing called Orbweb. We describe how to employ XMPP to
+      tackle domain-specific challenges, including high scalability, support for
+      volatility, NAT/Firewall traversal, and protocol efficiency. Where XMPP fails
+      to meet these requirements, we contribute pertinent extensions. In particular,
+      we boost the scalability of XMPP by taking load of the XMPP servers through
+      dynamically negotiated direct Peer-to-Peer communication channels between XMPP
+      peers. We pave the way for scalable group membership management by substituting
+      the existing XMPP Multi-User Chat protocol for one that does not suffer from
+      limitations imposed by a everyone knows everyone visibility model and allows
+      for selecting a membership model that matches the requirements of a given
+      application. As efficient multicasting is an essential prerequisite for many
+      distributed algorithms and the centralized XMPP multicast is of limited
+      scalability, we adapt the well-known Bimodal Multicast protocol to work in a
+      highly volatile Peer-to-Peer Grid computing environment. Finally, we show how
+      to improve the protocol efficiency of XMPP by leveraging a standardized binary
+      encoding of the XML Information Set for XMPP packet transmission. To
+      substantiate the applicability of our approach and the effectiveness of our
+      extensions, we describe how some important higher-level services used in
+      Peer-to-Peer Grid Computing can be implemented on top of Orbweb and provide a
+      detailed experimental analysis.},
+   url = {http://www2.informatik.uni-stuttgart.de/cgi-bin/NCSTRL/NCSTRL_view.pl?id=ART-2010-03&amp;engl=0}
+}
+

@@ -1,0 +1,3316 @@
+
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>
+  tmetsch / rce_paper / source &mdash; Bitbucket
+</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="description" content="" />
+  <meta name="keywords" content="" />
+  <!--[if lt IE 9]>
+  <script src="https://dwz7u9t8u8usb.cloudfront.net/m/46c15ee9bc85/js/lib/html5.js"></script>
+  <![endif]-->
+
+  <script>
+    (function (window) {
+      // prevent stray occurrences of `console.log` from causing errors in IE
+      var console = window.console || (window.console = {});
+      console.log || (console.log = function () {});
+
+      var BB = window.BB || (window.BB = {});
+      BB.debug = false;
+      BB.cname = false;
+      BB.CANON_URL = 'https://bitbucket.org';
+      BB.MEDIA_URL = 'https://dwz7u9t8u8usb.cloudfront.net/m/46c15ee9bc85/';
+      BB.user || (BB.user = {});
+      BB.user.has = (function () {
+        var betaFeatures = [];
+        
+        return function (feature) {
+          return _.contains(betaFeatures, feature);
+        };
+      }());
+      BB.repo || (BB.repo = {});
+  
+  
+      BB.user.isAdmin = false
+      BB.repo.id = 10902;
+    
+    
+      BB.repo.slug = 'rce_paper';
+    
+    
+      BB.repo.owner = {
+        username: 'tmetsch'
+      };
+    
+      // Coerce `BB.repo` to a string to get
+      // "davidchambers/mango" or whatever.
+      BB.repo.toString = function () {
+        return this.owner.username + '/' + this.slug;
+      }
+    
+      BB.changeset = '116c5dbb0a53'
+    
+    
+  
+    }(this));
+  </script>
+
+  
+    <link rel="stylesheet" href="https://dwz7u9t8u8usb.cloudfront.net/m/46c15ee9bc85/bun/css/bundle.css"/>
+  
+
+  <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="Bitbucket" />
+  <link rel="icon" href="https://dwz7u9t8u8usb.cloudfront.net/m/46c15ee9bc85/img/logo_new.png" type="image/png" />
+  <link type="text/plain" rel="author" href="/humans.txt" />
+
+
+  
+    <script src="https://dwz7u9t8u8usb.cloudfront.net/m/46c15ee9bc85/bun/js/bundle.js"></script>
+  
+
+
+
+</head>
+
+<body class="">
+  <script type="text/javascript">
+    if (!RegExp(" AppleWebKit/").test(navigator.userAgent)) {
+    $('body').addClass('non-webkit');
+    }
+  </script>
+  <!--[if IE 8]>
+  <script>jQuery(document.body).addClass('ie8')</script>
+  <![endif]-->
+  <!--[if IE 9]>
+  <script>jQuery(document.body).addClass('ie9')</script>
+  <![endif]-->
+
+  <div id="wrapper">
+
+
+
+  <div id="header-wrap">
+    <div id="header">
+    <ul id="global-nav">
+      <li><a class="home" href="http://www.atlassian.com">Atlassian Home</a></li>
+      <li><a class="docs" href="http://confluence.atlassian.com/display/BITBUCKET">Documentation</a></li>
+      <li><a class="support" href="/support">Support</a></li>
+      <li><a class="blog" href="http://blog.bitbucket.org">Blog</a></li>
+      <li><a class="forums" href="http://groups.google.com/group/bitbucket-users">Forums</a></li>
+    </ul>
+    <a href="/" id="logo">Bitbucket by Atlassian</a>
+
+    <div id="main-nav" class="clearfix">
+    
+      <ul class="clearfix">
+        <li><a href="/features">Features</a></li>
+        <li><a href="/plans">Pricing &amp; signup</a></li>
+        <li><a href="/explore">Explore Bitbucket</a></li>
+        <li><a href="/account/signin/?next=/tmetsch/rce_paper/src/116c5dbb0a53/bibliography-sc-vk.bib">Log in</a></li>
+        
+
+<li class="search-box">
+  
+    <form action="/repo/all">
+      <input type="search" results="5" autosave="bitbucket-explore-search"
+             name="name" id="searchbox"
+             placeholder="Find a project" />
+  
+  </form>
+</li>
+
+      </ul>
+    
+    </div>
+    </div>
+  </div>
+
+    <div id="header-messages">
+  
+  
+    
+    
+    
+    
+  
+
+    
+   </div>
+
+
+
+    <div id="content">
+      <div id="unnamed">
+      
+  
+  
+
+
+
+
+
+  <script>
+    jQuery(function ($) {
+        var cookie = $.cookie,
+            cookieOptions, date,
+            $content = $('#content'),
+            $pane = $('#what-is-bitbucket'),
+            $hide = $pane.find('[href="#hide"]').css('display', 'block').hide();
+
+        date = new Date();
+        date.setTime(date.getTime() + 365 * 24 * 60 * 60 * 1000);
+        cookieOptions = { path: '/', expires: date };
+
+        if (cookie('toggle_status') == 'hide') $content.addClass('repo-desc-hidden');
+
+        $('#toggle-repo-content').click(function (event) {
+            event.preventDefault();
+            $content.toggleClass('repo-desc-hidden');
+            cookie('toggle_status', cookie('toggle_status') == 'show' ? 'hide' : 'show', cookieOptions);
+        });
+
+        if (!cookie('hide_intro_message')) $pane.show();
+
+        $hide.click(function (event) {
+            event.preventDefault();
+            cookie('hide_intro_message', true, cookieOptions);
+            $pane.slideUp('slow');
+        });
+
+        $pane.hover(
+            function () { $hide.fadeIn('fast'); },
+            function () { $hide.fadeOut('fast'); });
+
+      (function () {
+        // Update "recently-viewed-repos" cookie for
+        // the "repositories" drop-down.
+        var
+          id = BB.repo.id,
+          cookieName = 'recently-viewed-repos_' + BB.user.id,
+          rvr = cookie(cookieName),
+          ids = rvr? rvr.split(','): [],
+          idx = _.indexOf(ids, '' + id);
+
+        // Remove `id` from `ids` if present.
+        if (~idx) ids.splice(idx, 1);
+
+        cookie(
+          cookieName,
+          // Insert `id` as the first item, then call
+          // `join` on the resulting array to produce
+          // something like "114694,27542,89002,84570".
+          [id].concat(ids.slice(0, 4)).join(),
+          {path: '/', expires: 1e6} // "never" expires
+        );
+      }());
+    });
+  </script>
+
+
+
+  
+  
+  
+  
+  
+    <div id="what-is-bitbucket" class="new-to-bitbucket">
+      <h2>tmetsch <span id="slogan">is sharing code with you</span></h2>
+      <img src="https://secure.gravatar.com/avatar/027e89157412ebfa17847cdc50ff955f?d=identicon&s=32" alt="" class="avatar" />
+      <p>Bitbucket is a code hosting site. Unlimited public and private repositories. Free for small teams.</p>
+      <div class="primary-action-link signup"><a href="/account/signup/?utm_source=internal&utm_medium=banner&utm_campaign=what_is_bitbucket">Try Bitbucket free</a></div>
+      <a href="#hide" title="Don't show this again">Don't show this again</a>
+    </div>
+  
+
+
+<div id="tabs">
+  <ul class="tabs">
+    <li>
+      <a href="/tmetsch/rce_paper/overview">Overview</a>
+    </li>
+
+    <li>
+      <a href="/tmetsch/rce_paper/downloads">Downloads (<span id="downloads-count">0</span>)</a>
+    </li>
+
+    
+
+    <li>
+      <a href="/tmetsch/rce_paper/pull-requests">Pull requests (0)</a>
+    </li>
+
+    <li class="selected">
+      
+        <a href="/tmetsch/rce_paper/src">Source</a>
+      
+    </li>
+
+    <li>
+      <a href="/tmetsch/rce_paper/changesets">Commits</a>
+    </li>
+
+    
+
+    
+
+    
+
+    <li class="secondary">
+      <a href="/tmetsch/rce_paper/descendants">Forks/queues (0)</a>
+    </li>
+
+    <li class="secondary">
+      <a href="/tmetsch/rce_paper/zealots">Followers (<span id="followers-count">3</span>)</a>
+    </li>
+  </ul>
+</div>
+
+
+  <div class="repo-menu" id="repo-menu">
+    <ul id="repo-menu-links">
+    
+      <li>
+        <a href="/tmetsch/rce_paper/rss" class="rss" title="RSS feed for rce_paper">RSS</a>
+      </li>
+
+      <li><a href="/tmetsch/rce_paper/fork" class="fork">fork</a></li>
+      
+        
+          <li><a href="/tmetsch/rce_paper/hack" class="patch-queue">patch queue</a></li>
+        
+      
+      <li>
+        <a rel="nofollow" href="/tmetsch/rce_paper/follow" class="follow">follow</a>
+      </li>
+      
+          
+      
+      
+        <li class="get-source inertial-hover">
+          <a class="source">get source</a>
+          <ul class="downloads">
+            
+              
+              <li><a rel="nofollow" href="/tmetsch/rce_paper/get/116c5dbb0a53.zip">zip</a></li>
+              <li><a rel="nofollow" href="/tmetsch/rce_paper/get/116c5dbb0a53.tar.gz">gz</a></li>
+              <li><a rel="nofollow" href="/tmetsch/rce_paper/get/116c5dbb0a53.tar.bz2">bz2</a></li>
+            
+          </ul>
+        </li>
+      
+    </ul>
+
+  
+    <ul class="metadata">
+      
+      
+        <li class="branches inertial-hover">branches
+          <ul>
+            <li><a href="/tmetsch/rce_paper/src/baa6e05dd320">default</a>
+              
+              
+            </li>
+          </ul>
+        </li>
+      
+      
+      <li class="tags inertial-hover">tags
+        <ul>
+          <li><a href="/tmetsch/rce_paper/src/baa6e05dd320">tip</a>
+            
+            </li>
+          <li><a href="/tmetsch/rce_paper/src/8190de924e03">version send to Wiley</a>
+            
+            
+              <a rel="nofollow" class='menu-compare'
+                 href="/tmetsch/rce_paper/compare/..version send to Wiley"
+                 title="Show changes between version send to Wiley and the main branch.">compare</a>
+            </li>
+          <li><a href="/tmetsch/rce_paper/src/44cd35cc0f51">Draft version for native speaker review</a>
+            
+            
+              <a rel="nofollow" class='menu-compare'
+                 href="/tmetsch/rce_paper/compare/..Draft version for native speaker review"
+                 title="Show changes between Draft version for native speaker review and the main branch.">compare</a>
+            </li>
+          <li><a href="/tmetsch/rce_paper/src/846784f5b803">version ready for native reader review</a>
+            
+            
+              <a rel="nofollow" class='menu-compare'
+                 href="/tmetsch/rce_paper/compare/..version ready for native reader review"
+                 title="Show changes between version ready for native reader review and the main branch.">compare</a>
+            </li>
+          <li><a href="/tmetsch/rce_paper/src/0e229ce83511">first draft of the complete paper</a>
+            
+            
+              <a rel="nofollow" class='menu-compare'
+                 href="/tmetsch/rce_paper/compare/..first draft of the complete paper"
+                 title="Show changes between first draft of the complete paper and the main branch.">compare</a>
+            </li>
+          <li><a href="/tmetsch/rce_paper/src/17c725252f74">Concurrency and Computation journal</a>
+            
+            
+              <a rel="nofollow" class='menu-compare'
+                 href="/tmetsch/rce_paper/compare/..Concurrency and Computation journal"
+                 title="Show changes between Concurrency and Computation journal and the main branch.">compare</a>
+            </li>
+          <li><a href="/tmetsch/rce_paper/src/46d14f5f9239">second_shot</a>
+            
+            
+              <a rel="nofollow" class='menu-compare'
+                 href="/tmetsch/rce_paper/compare/..second_shot"
+                 title="Show changes between second_shot and the main branch.">compare</a>
+            </li>
+          <li><a href="/tmetsch/rce_paper/src/f8d489aa7174">first_shot</a>
+            
+            
+              <a rel="nofollow" class='menu-compare'
+                 href="/tmetsch/rce_paper/compare/..first_shot"
+                 title="Show changes between first_shot and the main branch.">compare</a>
+            </li>
+        </ul>
+      </li>
+     
+     
+    </ul>
+  
+</div>
+<div class="repo-menu" id="repo-desc">
+  
+    <ul id="repo-menu-links-mini">
+      <li><a rel="nofollow" class="compare-link"
+             href="/tmetsch/rce_paper/compare/../"
+             title="Show changes between rce_paper and "
+             ></a></li>
+      
+  
+
+      
+      <li>
+        <a href="/tmetsch/rce_paper/rss" class="rss" title="RSS feed for rce_paper"></a>
+      </li>
+
+      <li><a href="/tmetsch/rce_paper/fork" class="fork" title="Fork"></a></li>
+      
+        
+          <li><a href="/tmetsch/rce_paper/hack" class="patch-queue" title="Patch queue"></a></li>
+        
+      
+      <li>
+        <a rel="nofollow" href="/tmetsch/rce_paper/follow" class="follow">follow</a>
+      </li>
+      
+          
+      
+    
+      
+        <li>
+          <a class="source" title="Get source"></a>
+          <ul class="downloads">
+            
+              
+                <li><a rel="nofollow" href="/tmetsch/rce_paper/get/baa6e05dd320.zip">zip</a></li>
+                <li><a rel="nofollow" href="/tmetsch/rce_paper/get/baa6e05dd320.tar.gz">gz</a></li>
+                <li><a rel="nofollow" href="/tmetsch/rce_paper/get/baa6e05dd320.tar.bz2">bz2</a></li>
+              
+            
+          </ul>
+        </li>
+      
+    
+    </ul>
+
+    <h3 id="repo-heading">
+      <a class="owner-username" href="/tmetsch">tmetsch</a> /
+      <a class="repo-name" href="/tmetsch/rce_paper">rce_paper</a>
+    
+
+    
+    </h3>
+
+
+  <p class="repo-desc-description">Paper about the Reconfigurable Computing Environment for the Concurrency and Computation Journal. - <a href="http://www.rcenvironment.de" rel="nofollow">http://www.rcenvironment.de</a></p>
+
+
+  <div id="repo-desc-cloneinfo">Clone this repository (size: 3.0 MB):
+    <a href="https://bitbucket.org/tmetsch/rce_paper" class="https">HTTPS</a> /
+    <a href="ssh://hg@bitbucket.org/tmetsch/rce_paper" class="ssh">SSH</a>
+    <pre id="clone-url-https">hg clone https://bitbucket.org/tmetsch/rce_paper</pre>
+    <pre id="clone-url-ssh">hg clone ssh://hg@bitbucket.org/tmetsch/rce_paper</pre>
+    
+  </div>
+
+  <a href="#" id="toggle-repo-content"></a>
+
+  
+
+</div>
+
+
+
+
+      
+
+  <div id="source-path">
+    <h1>
+      <a href="/tmetsch/rce_paper/src">rce_paper</a> /
+
+  
+    
+      bibliography-sc-vk.bib
+    
+  
+
+    </h1>
+  </div>
+
+
+  
+  <div id="source-view">
+    <div class="header">
+      <ul class="metadata">
+        <li><code>116c5dbb0a53</code></li>
+        <li>1362 loc</li>
+        <li>50.6 KB</li>
+      </ul>
+      <ul class="source-view-links">
+        
+        <li><a id="embed-link" href="https://bitbucket.org/tmetsch/rce_paper/src/116c5dbb0a53/bibliography-sc-vk.bib?embed=t">embed</a></li>
+        
+        <li><a href="/tmetsch/rce_paper/history/bibliography-sc-vk.bib">history</a></li>
+        
+        <li><a href="/tmetsch/rce_paper/annotate/116c5dbb0a53/bibliography-sc-vk.bib">annotate</a></li>
+        
+        <li><a href="/tmetsch/rce_paper/raw/116c5dbb0a53/bibliography-sc-vk.bib">raw</a></li>
+        <li>
+          <form action="/tmetsch/rce_paper/diff/bibliography-sc-vk.bib" class="source-view-form">
+          
+            <input type="hidden" name="diff2" value="6864e8aca89a" />
+            <select name="diff1">
+            
+              
+                <option value="6864e8aca89a">6864e8aca89a</option>
+              
+            
+              
+                <option value="846784f5b803">846784f5b803</option>
+              
+            
+              
+                <option value="701de7c06cac">701de7c06cac</option>
+              
+            
+              
+                <option value="4973987b2726">4973987b2726</option>
+              
+            
+              
+                <option value="c6f1873d4cc8">c6f1873d4cc8</option>
+              
+            
+              
+                <option value="114f1d9b0f60">114f1d9b0f60</option>
+              
+            
+              
+                <option value="7f8ae26da823">7f8ae26da823</option>
+              
+            
+            </select>
+            <input type="submit" value="diff" />
+          
+          </form>
+        </li>
+      </ul>
+    </div>
+  
+    <div>
+    <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><a href="#cl-1">   1</a>
+<a href="#cl-2">   2</a>
+<a href="#cl-3">   3</a>
+<a href="#cl-4">   4</a>
+<a href="#cl-5">   5</a>
+<a href="#cl-6">   6</a>
+<a href="#cl-7">   7</a>
+<a href="#cl-8">   8</a>
+<a href="#cl-9">   9</a>
+<a href="#cl-10">  10</a>
+<a href="#cl-11">  11</a>
+<a href="#cl-12">  12</a>
+<a href="#cl-13">  13</a>
+<a href="#cl-14">  14</a>
+<a href="#cl-15">  15</a>
+<a href="#cl-16">  16</a>
+<a href="#cl-17">  17</a>
+<a href="#cl-18">  18</a>
+<a href="#cl-19">  19</a>
+<a href="#cl-20">  20</a>
+<a href="#cl-21">  21</a>
+<a href="#cl-22">  22</a>
+<a href="#cl-23">  23</a>
+<a href="#cl-24">  24</a>
+<a href="#cl-25">  25</a>
+<a href="#cl-26">  26</a>
+<a href="#cl-27">  27</a>
+<a href="#cl-28">  28</a>
+<a href="#cl-29">  29</a>
+<a href="#cl-30">  30</a>
+<a href="#cl-31">  31</a>
+<a href="#cl-32">  32</a>
+<a href="#cl-33">  33</a>
+<a href="#cl-34">  34</a>
+<a href="#cl-35">  35</a>
+<a href="#cl-36">  36</a>
+<a href="#cl-37">  37</a>
+<a href="#cl-38">  38</a>
+<a href="#cl-39">  39</a>
+<a href="#cl-40">  40</a>
+<a href="#cl-41">  41</a>
+<a href="#cl-42">  42</a>
+<a href="#cl-43">  43</a>
+<a href="#cl-44">  44</a>
+<a href="#cl-45">  45</a>
+<a href="#cl-46">  46</a>
+<a href="#cl-47">  47</a>
+<a href="#cl-48">  48</a>
+<a href="#cl-49">  49</a>
+<a href="#cl-50">  50</a>
+<a href="#cl-51">  51</a>
+<a href="#cl-52">  52</a>
+<a href="#cl-53">  53</a>
+<a href="#cl-54">  54</a>
+<a href="#cl-55">  55</a>
+<a href="#cl-56">  56</a>
+<a href="#cl-57">  57</a>
+<a href="#cl-58">  58</a>
+<a href="#cl-59">  59</a>
+<a href="#cl-60">  60</a>
+<a href="#cl-61">  61</a>
+<a href="#cl-62">  62</a>
+<a href="#cl-63">  63</a>
+<a href="#cl-64">  64</a>
+<a href="#cl-65">  65</a>
+<a href="#cl-66">  66</a>
+<a href="#cl-67">  67</a>
+<a href="#cl-68">  68</a>
+<a href="#cl-69">  69</a>
+<a href="#cl-70">  70</a>
+<a href="#cl-71">  71</a>
+<a href="#cl-72">  72</a>
+<a href="#cl-73">  73</a>
+<a href="#cl-74">  74</a>
+<a href="#cl-75">  75</a>
+<a href="#cl-76">  76</a>
+<a href="#cl-77">  77</a>
+<a href="#cl-78">  78</a>
+<a href="#cl-79">  79</a>
+<a href="#cl-80">  80</a>
+<a href="#cl-81">  81</a>
+<a href="#cl-82">  82</a>
+<a href="#cl-83">  83</a>
+<a href="#cl-84">  84</a>
+<a href="#cl-85">  85</a>
+<a href="#cl-86">  86</a>
+<a href="#cl-87">  87</a>
+<a href="#cl-88">  88</a>
+<a href="#cl-89">  89</a>
+<a href="#cl-90">  90</a>
+<a href="#cl-91">  91</a>
+<a href="#cl-92">  92</a>
+<a href="#cl-93">  93</a>
+<a href="#cl-94">  94</a>
+<a href="#cl-95">  95</a>
+<a href="#cl-96">  96</a>
+<a href="#cl-97">  97</a>
+<a href="#cl-98">  98</a>
+<a href="#cl-99">  99</a>
+<a href="#cl-100"> 100</a>
+<a href="#cl-101"> 101</a>
+<a href="#cl-102"> 102</a>
+<a href="#cl-103"> 103</a>
+<a href="#cl-104"> 104</a>
+<a href="#cl-105"> 105</a>
+<a href="#cl-106"> 106</a>
+<a href="#cl-107"> 107</a>
+<a href="#cl-108"> 108</a>
+<a href="#cl-109"> 109</a>
+<a href="#cl-110"> 110</a>
+<a href="#cl-111"> 111</a>
+<a href="#cl-112"> 112</a>
+<a href="#cl-113"> 113</a>
+<a href="#cl-114"> 114</a>
+<a href="#cl-115"> 115</a>
+<a href="#cl-116"> 116</a>
+<a href="#cl-117"> 117</a>
+<a href="#cl-118"> 118</a>
+<a href="#cl-119"> 119</a>
+<a href="#cl-120"> 120</a>
+<a href="#cl-121"> 121</a>
+<a href="#cl-122"> 122</a>
+<a href="#cl-123"> 123</a>
+<a href="#cl-124"> 124</a>
+<a href="#cl-125"> 125</a>
+<a href="#cl-126"> 126</a>
+<a href="#cl-127"> 127</a>
+<a href="#cl-128"> 128</a>
+<a href="#cl-129"> 129</a>
+<a href="#cl-130"> 130</a>
+<a href="#cl-131"> 131</a>
+<a href="#cl-132"> 132</a>
+<a href="#cl-133"> 133</a>
+<a href="#cl-134"> 134</a>
+<a href="#cl-135"> 135</a>
+<a href="#cl-136"> 136</a>
+<a href="#cl-137"> 137</a>
+<a href="#cl-138"> 138</a>
+<a href="#cl-139"> 139</a>
+<a href="#cl-140"> 140</a>
+<a href="#cl-141"> 141</a>
+<a href="#cl-142"> 142</a>
+<a href="#cl-143"> 143</a>
+<a href="#cl-144"> 144</a>
+<a href="#cl-145"> 145</a>
+<a href="#cl-146"> 146</a>
+<a href="#cl-147"> 147</a>
+<a href="#cl-148"> 148</a>
+<a href="#cl-149"> 149</a>
+<a href="#cl-150"> 150</a>
+<a href="#cl-151"> 151</a>
+<a href="#cl-152"> 152</a>
+<a href="#cl-153"> 153</a>
+<a href="#cl-154"> 154</a>
+<a href="#cl-155"> 155</a>
+<a href="#cl-156"> 156</a>
+<a href="#cl-157"> 157</a>
+<a href="#cl-158"> 158</a>
+<a href="#cl-159"> 159</a>
+<a href="#cl-160"> 160</a>
+<a href="#cl-161"> 161</a>
+<a href="#cl-162"> 162</a>
+<a href="#cl-163"> 163</a>
+<a href="#cl-164"> 164</a>
+<a href="#cl-165"> 165</a>
+<a href="#cl-166"> 166</a>
+<a href="#cl-167"> 167</a>
+<a href="#cl-168"> 168</a>
+<a href="#cl-169"> 169</a>
+<a href="#cl-170"> 170</a>
+<a href="#cl-171"> 171</a>
+<a href="#cl-172"> 172</a>
+<a href="#cl-173"> 173</a>
+<a href="#cl-174"> 174</a>
+<a href="#cl-175"> 175</a>
+<a href="#cl-176"> 176</a>
+<a href="#cl-177"> 177</a>
+<a href="#cl-178"> 178</a>
+<a href="#cl-179"> 179</a>
+<a href="#cl-180"> 180</a>
+<a href="#cl-181"> 181</a>
+<a href="#cl-182"> 182</a>
+<a href="#cl-183"> 183</a>
+<a href="#cl-184"> 184</a>
+<a href="#cl-185"> 185</a>
+<a href="#cl-186"> 186</a>
+<a href="#cl-187"> 187</a>
+<a href="#cl-188"> 188</a>
+<a href="#cl-189"> 189</a>
+<a href="#cl-190"> 190</a>
+<a href="#cl-191"> 191</a>
+<a href="#cl-192"> 192</a>
+<a href="#cl-193"> 193</a>
+<a href="#cl-194"> 194</a>
+<a href="#cl-195"> 195</a>
+<a href="#cl-196"> 196</a>
+<a href="#cl-197"> 197</a>
+<a href="#cl-198"> 198</a>
+<a href="#cl-199"> 199</a>
+<a href="#cl-200"> 200</a>
+<a href="#cl-201"> 201</a>
+<a href="#cl-202"> 202</a>
+<a href="#cl-203"> 203</a>
+<a href="#cl-204"> 204</a>
+<a href="#cl-205"> 205</a>
+<a href="#cl-206"> 206</a>
+<a href="#cl-207"> 207</a>
+<a href="#cl-208"> 208</a>
+<a href="#cl-209"> 209</a>
+<a href="#cl-210"> 210</a>
+<a href="#cl-211"> 211</a>
+<a href="#cl-212"> 212</a>
+<a href="#cl-213"> 213</a>
+<a href="#cl-214"> 214</a>
+<a href="#cl-215"> 215</a>
+<a href="#cl-216"> 216</a>
+<a href="#cl-217"> 217</a>
+<a href="#cl-218"> 218</a>
+<a href="#cl-219"> 219</a>
+<a href="#cl-220"> 220</a>
+<a href="#cl-221"> 221</a>
+<a href="#cl-222"> 222</a>
+<a href="#cl-223"> 223</a>
+<a href="#cl-224"> 224</a>
+<a href="#cl-225"> 225</a>
+<a href="#cl-226"> 226</a>
+<a href="#cl-227"> 227</a>
+<a href="#cl-228"> 228</a>
+<a href="#cl-229"> 229</a>
+<a href="#cl-230"> 230</a>
+<a href="#cl-231"> 231</a>
+<a href="#cl-232"> 232</a>
+<a href="#cl-233"> 233</a>
+<a href="#cl-234"> 234</a>
+<a href="#cl-235"> 235</a>
+<a href="#cl-236"> 236</a>
+<a href="#cl-237"> 237</a>
+<a href="#cl-238"> 238</a>
+<a href="#cl-239"> 239</a>
+<a href="#cl-240"> 240</a>
+<a href="#cl-241"> 241</a>
+<a href="#cl-242"> 242</a>
+<a href="#cl-243"> 243</a>
+<a href="#cl-244"> 244</a>
+<a href="#cl-245"> 245</a>
+<a href="#cl-246"> 246</a>
+<a href="#cl-247"> 247</a>
+<a href="#cl-248"> 248</a>
+<a href="#cl-249"> 249</a>
+<a href="#cl-250"> 250</a>
+<a href="#cl-251"> 251</a>
+<a href="#cl-252"> 252</a>
+<a href="#cl-253"> 253</a>
+<a href="#cl-254"> 254</a>
+<a href="#cl-255"> 255</a>
+<a href="#cl-256"> 256</a>
+<a href="#cl-257"> 257</a>
+<a href="#cl-258"> 258</a>
+<a href="#cl-259"> 259</a>
+<a href="#cl-260"> 260</a>
+<a href="#cl-261"> 261</a>
+<a href="#cl-262"> 262</a>
+<a href="#cl-263"> 263</a>
+<a href="#cl-264"> 264</a>
+<a href="#cl-265"> 265</a>
+<a href="#cl-266"> 266</a>
+<a href="#cl-267"> 267</a>
+<a href="#cl-268"> 268</a>
+<a href="#cl-269"> 269</a>
+<a href="#cl-270"> 270</a>
+<a href="#cl-271"> 271</a>
+<a href="#cl-272"> 272</a>
+<a href="#cl-273"> 273</a>
+<a href="#cl-274"> 274</a>
+<a href="#cl-275"> 275</a>
+<a href="#cl-276"> 276</a>
+<a href="#cl-277"> 277</a>
+<a href="#cl-278"> 278</a>
+<a href="#cl-279"> 279</a>
+<a href="#cl-280"> 280</a>
+<a href="#cl-281"> 281</a>
+<a href="#cl-282"> 282</a>
+<a href="#cl-283"> 283</a>
+<a href="#cl-284"> 284</a>
+<a href="#cl-285"> 285</a>
+<a href="#cl-286"> 286</a>
+<a href="#cl-287"> 287</a>
+<a href="#cl-288"> 288</a>
+<a href="#cl-289"> 289</a>
+<a href="#cl-290"> 290</a>
+<a href="#cl-291"> 291</a>
+<a href="#cl-292"> 292</a>
+<a href="#cl-293"> 293</a>
+<a href="#cl-294"> 294</a>
+<a href="#cl-295"> 295</a>
+<a href="#cl-296"> 296</a>
+<a href="#cl-297"> 297</a>
+<a href="#cl-298"> 298</a>
+<a href="#cl-299"> 299</a>
+<a href="#cl-300"> 300</a>
+<a href="#cl-301"> 301</a>
+<a href="#cl-302"> 302</a>
+<a href="#cl-303"> 303</a>
+<a href="#cl-304"> 304</a>
+<a href="#cl-305"> 305</a>
+<a href="#cl-306"> 306</a>
+<a href="#cl-307"> 307</a>
+<a href="#cl-308"> 308</a>
+<a href="#cl-309"> 309</a>
+<a href="#cl-310"> 310</a>
+<a href="#cl-311"> 311</a>
+<a href="#cl-312"> 312</a>
+<a href="#cl-313"> 313</a>
+<a href="#cl-314"> 314</a>
+<a href="#cl-315"> 315</a>
+<a href="#cl-316"> 316</a>
+<a href="#cl-317"> 317</a>
+<a href="#cl-318"> 318</a>
+<a href="#cl-319"> 319</a>
+<a href="#cl-320"> 320</a>
+<a href="#cl-321"> 321</a>
+<a href="#cl-322"> 322</a>
+<a href="#cl-323"> 323</a>
+<a href="#cl-324"> 324</a>
+<a href="#cl-325"> 325</a>
+<a href="#cl-326"> 326</a>
+<a href="#cl-327"> 327</a>
+<a href="#cl-328"> 328</a>
+<a href="#cl-329"> 329</a>
+<a href="#cl-330"> 330</a>
+<a href="#cl-331"> 331</a>
+<a href="#cl-332"> 332</a>
+<a href="#cl-333"> 333</a>
+<a href="#cl-334"> 334</a>
+<a href="#cl-335"> 335</a>
+<a href="#cl-336"> 336</a>
+<a href="#cl-337"> 337</a>
+<a href="#cl-338"> 338</a>
+<a href="#cl-339"> 339</a>
+<a href="#cl-340"> 340</a>
+<a href="#cl-341"> 341</a>
+<a href="#cl-342"> 342</a>
+<a href="#cl-343"> 343</a>
+<a href="#cl-344"> 344</a>
+<a href="#cl-345"> 345</a>
+<a href="#cl-346"> 346</a>
+<a href="#cl-347"> 347</a>
+<a href="#cl-348"> 348</a>
+<a href="#cl-349"> 349</a>
+<a href="#cl-350"> 350</a>
+<a href="#cl-351"> 351</a>
+<a href="#cl-352"> 352</a>
+<a href="#cl-353"> 353</a>
+<a href="#cl-354"> 354</a>
+<a href="#cl-355"> 355</a>
+<a href="#cl-356"> 356</a>
+<a href="#cl-357"> 357</a>
+<a href="#cl-358"> 358</a>
+<a href="#cl-359"> 359</a>
+<a href="#cl-360"> 360</a>
+<a href="#cl-361"> 361</a>
+<a href="#cl-362"> 362</a>
+<a href="#cl-363"> 363</a>
+<a href="#cl-364"> 364</a>
+<a href="#cl-365"> 365</a>
+<a href="#cl-366"> 366</a>
+<a href="#cl-367"> 367</a>
+<a href="#cl-368"> 368</a>
+<a href="#cl-369"> 369</a>
+<a href="#cl-370"> 370</a>
+<a href="#cl-371"> 371</a>
+<a href="#cl-372"> 372</a>
+<a href="#cl-373"> 373</a>
+<a href="#cl-374"> 374</a>
+<a href="#cl-375"> 375</a>
+<a href="#cl-376"> 376</a>
+<a href="#cl-377"> 377</a>
+<a href="#cl-378"> 378</a>
+<a href="#cl-379"> 379</a>
+<a href="#cl-380"> 380</a>
+<a href="#cl-381"> 381</a>
+<a href="#cl-382"> 382</a>
+<a href="#cl-383"> 383</a>
+<a href="#cl-384"> 384</a>
+<a href="#cl-385"> 385</a>
+<a href="#cl-386"> 386</a>
+<a href="#cl-387"> 387</a>
+<a href="#cl-388"> 388</a>
+<a href="#cl-389"> 389</a>
+<a href="#cl-390"> 390</a>
+<a href="#cl-391"> 391</a>
+<a href="#cl-392"> 392</a>
+<a href="#cl-393"> 393</a>
+<a href="#cl-394"> 394</a>
+<a href="#cl-395"> 395</a>
+<a href="#cl-396"> 396</a>
+<a href="#cl-397"> 397</a>
+<a href="#cl-398"> 398</a>
+<a href="#cl-399"> 399</a>
+<a href="#cl-400"> 400</a>
+<a href="#cl-401"> 401</a>
+<a href="#cl-402"> 402</a>
+<a href="#cl-403"> 403</a>
+<a href="#cl-404"> 404</a>
+<a href="#cl-405"> 405</a>
+<a href="#cl-406"> 406</a>
+<a href="#cl-407"> 407</a>
+<a href="#cl-408"> 408</a>
+<a href="#cl-409"> 409</a>
+<a href="#cl-410"> 410</a>
+<a href="#cl-411"> 411</a>
+<a href="#cl-412"> 412</a>
+<a href="#cl-413"> 413</a>
+<a href="#cl-414"> 414</a>
+<a href="#cl-415"> 415</a>
+<a href="#cl-416"> 416</a>
+<a href="#cl-417"> 417</a>
+<a href="#cl-418"> 418</a>
+<a href="#cl-419"> 419</a>
+<a href="#cl-420"> 420</a>
+<a href="#cl-421"> 421</a>
+<a href="#cl-422"> 422</a>
+<a href="#cl-423"> 423</a>
+<a href="#cl-424"> 424</a>
+<a href="#cl-425"> 425</a>
+<a href="#cl-426"> 426</a>
+<a href="#cl-427"> 427</a>
+<a href="#cl-428"> 428</a>
+<a href="#cl-429"> 429</a>
+<a href="#cl-430"> 430</a>
+<a href="#cl-431"> 431</a>
+<a href="#cl-432"> 432</a>
+<a href="#cl-433"> 433</a>
+<a href="#cl-434"> 434</a>
+<a href="#cl-435"> 435</a>
+<a href="#cl-436"> 436</a>
+<a href="#cl-437"> 437</a>
+<a href="#cl-438"> 438</a>
+<a href="#cl-439"> 439</a>
+<a href="#cl-440"> 440</a>
+<a href="#cl-441"> 441</a>
+<a href="#cl-442"> 442</a>
+<a href="#cl-443"> 443</a>
+<a href="#cl-444"> 444</a>
+<a href="#cl-445"> 445</a>
+<a href="#cl-446"> 446</a>
+<a href="#cl-447"> 447</a>
+<a href="#cl-448"> 448</a>
+<a href="#cl-449"> 449</a>
+<a href="#cl-450"> 450</a>
+<a href="#cl-451"> 451</a>
+<a href="#cl-452"> 452</a>
+<a href="#cl-453"> 453</a>
+<a href="#cl-454"> 454</a>
+<a href="#cl-455"> 455</a>
+<a href="#cl-456"> 456</a>
+<a href="#cl-457"> 457</a>
+<a href="#cl-458"> 458</a>
+<a href="#cl-459"> 459</a>
+<a href="#cl-460"> 460</a>
+<a href="#cl-461"> 461</a>
+<a href="#cl-462"> 462</a>
+<a href="#cl-463"> 463</a>
+<a href="#cl-464"> 464</a>
+<a href="#cl-465"> 465</a>
+<a href="#cl-466"> 466</a>
+<a href="#cl-467"> 467</a>
+<a href="#cl-468"> 468</a>
+<a href="#cl-469"> 469</a>
+<a href="#cl-470"> 470</a>
+<a href="#cl-471"> 471</a>
+<a href="#cl-472"> 472</a>
+<a href="#cl-473"> 473</a>
+<a href="#cl-474"> 474</a>
+<a href="#cl-475"> 475</a>
+<a href="#cl-476"> 476</a>
+<a href="#cl-477"> 477</a>
+<a href="#cl-478"> 478</a>
+<a href="#cl-479"> 479</a>
+<a href="#cl-480"> 480</a>
+<a href="#cl-481"> 481</a>
+<a href="#cl-482"> 482</a>
+<a href="#cl-483"> 483</a>
+<a href="#cl-484"> 484</a>
+<a href="#cl-485"> 485</a>
+<a href="#cl-486"> 486</a>
+<a href="#cl-487"> 487</a>
+<a href="#cl-488"> 488</a>
+<a href="#cl-489"> 489</a>
+<a href="#cl-490"> 490</a>
+<a href="#cl-491"> 491</a>
+<a href="#cl-492"> 492</a>
+<a href="#cl-493"> 493</a>
+<a href="#cl-494"> 494</a>
+<a href="#cl-495"> 495</a>
+<a href="#cl-496"> 496</a>
+<a href="#cl-497"> 497</a>
+<a href="#cl-498"> 498</a>
+<a href="#cl-499"> 499</a>
+<a href="#cl-500"> 500</a>
+<a href="#cl-501"> 501</a>
+<a href="#cl-502"> 502</a>
+<a href="#cl-503"> 503</a>
+<a href="#cl-504"> 504</a>
+<a href="#cl-505"> 505</a>
+<a href="#cl-506"> 506</a>
+<a href="#cl-507"> 507</a>
+<a href="#cl-508"> 508</a>
+<a href="#cl-509"> 509</a>
+<a href="#cl-510"> 510</a>
+<a href="#cl-511"> 511</a>
+<a href="#cl-512"> 512</a>
+<a href="#cl-513"> 513</a>
+<a href="#cl-514"> 514</a>
+<a href="#cl-515"> 515</a>
+<a href="#cl-516"> 516</a>
+<a href="#cl-517"> 517</a>
+<a href="#cl-518"> 518</a>
+<a href="#cl-519"> 519</a>
+<a href="#cl-520"> 520</a>
+<a href="#cl-521"> 521</a>
+<a href="#cl-522"> 522</a>
+<a href="#cl-523"> 523</a>
+<a href="#cl-524"> 524</a>
+<a href="#cl-525"> 525</a>
+<a href="#cl-526"> 526</a>
+<a href="#cl-527"> 527</a>
+<a href="#cl-528"> 528</a>
+<a href="#cl-529"> 529</a>
+<a href="#cl-530"> 530</a>
+<a href="#cl-531"> 531</a>
+<a href="#cl-532"> 532</a>
+<a href="#cl-533"> 533</a>
+<a href="#cl-534"> 534</a>
+<a href="#cl-535"> 535</a>
+<a href="#cl-536"> 536</a>
+<a href="#cl-537"> 537</a>
+<a href="#cl-538"> 538</a>
+<a href="#cl-539"> 539</a>
+<a href="#cl-540"> 540</a>
+<a href="#cl-541"> 541</a>
+<a href="#cl-542"> 542</a>
+<a href="#cl-543"> 543</a>
+<a href="#cl-544"> 544</a>
+<a href="#cl-545"> 545</a>
+<a href="#cl-546"> 546</a>
+<a href="#cl-547"> 547</a>
+<a href="#cl-548"> 548</a>
+<a href="#cl-549"> 549</a>
+<a href="#cl-550"> 550</a>
+<a href="#cl-551"> 551</a>
+<a href="#cl-552"> 552</a>
+<a href="#cl-553"> 553</a>
+<a href="#cl-554"> 554</a>
+<a href="#cl-555"> 555</a>
+<a href="#cl-556"> 556</a>
+<a href="#cl-557"> 557</a>
+<a href="#cl-558"> 558</a>
+<a href="#cl-559"> 559</a>
+<a href="#cl-560"> 560</a>
+<a href="#cl-561"> 561</a>
+<a href="#cl-562"> 562</a>
+<a href="#cl-563"> 563</a>
+<a href="#cl-564"> 564</a>
+<a href="#cl-565"> 565</a>
+<a href="#cl-566"> 566</a>
+<a href="#cl-567"> 567</a>
+<a href="#cl-568"> 568</a>
+<a href="#cl-569"> 569</a>
+<a href="#cl-570"> 570</a>
+<a href="#cl-571"> 571</a>
+<a href="#cl-572"> 572</a>
+<a href="#cl-573"> 573</a>
+<a href="#cl-574"> 574</a>
+<a href="#cl-575"> 575</a>
+<a href="#cl-576"> 576</a>
+<a href="#cl-577"> 577</a>
+<a href="#cl-578"> 578</a>
+<a href="#cl-579"> 579</a>
+<a href="#cl-580"> 580</a>
+<a href="#cl-581"> 581</a>
+<a href="#cl-582"> 582</a>
+<a href="#cl-583"> 583</a>
+<a href="#cl-584"> 584</a>
+<a href="#cl-585"> 585</a>
+<a href="#cl-586"> 586</a>
+<a href="#cl-587"> 587</a>
+<a href="#cl-588"> 588</a>
+<a href="#cl-589"> 589</a>
+<a href="#cl-590"> 590</a>
+<a href="#cl-591"> 591</a>
+<a href="#cl-592"> 592</a>
+<a href="#cl-593"> 593</a>
+<a href="#cl-594"> 594</a>
+<a href="#cl-595"> 595</a>
+<a href="#cl-596"> 596</a>
+<a href="#cl-597"> 597</a>
+<a href="#cl-598"> 598</a>
+<a href="#cl-599"> 599</a>
+<a href="#cl-600"> 600</a>
+<a href="#cl-601"> 601</a>
+<a href="#cl-602"> 602</a>
+<a href="#cl-603"> 603</a>
+<a href="#cl-604"> 604</a>
+<a href="#cl-605"> 605</a>
+<a href="#cl-606"> 606</a>
+<a href="#cl-607"> 607</a>
+<a href="#cl-608"> 608</a>
+<a href="#cl-609"> 609</a>
+<a href="#cl-610"> 610</a>
+<a href="#cl-611"> 611</a>
+<a href="#cl-612"> 612</a>
+<a href="#cl-613"> 613</a>
+<a href="#cl-614"> 614</a>
+<a href="#cl-615"> 615</a>
+<a href="#cl-616"> 616</a>
+<a href="#cl-617"> 617</a>
+<a href="#cl-618"> 618</a>
+<a href="#cl-619"> 619</a>
+<a href="#cl-620"> 620</a>
+<a href="#cl-621"> 621</a>
+<a href="#cl-622"> 622</a>
+<a href="#cl-623"> 623</a>
+<a href="#cl-624"> 624</a>
+<a href="#cl-625"> 625</a>
+<a href="#cl-626"> 626</a>
+<a href="#cl-627"> 627</a>
+<a href="#cl-628"> 628</a>
+<a href="#cl-629"> 629</a>
+<a href="#cl-630"> 630</a>
+<a href="#cl-631"> 631</a>
+<a href="#cl-632"> 632</a>
+<a href="#cl-633"> 633</a>
+<a href="#cl-634"> 634</a>
+<a href="#cl-635"> 635</a>
+<a href="#cl-636"> 636</a>
+<a href="#cl-637"> 637</a>
+<a href="#cl-638"> 638</a>
+<a href="#cl-639"> 639</a>
+<a href="#cl-640"> 640</a>
+<a href="#cl-641"> 641</a>
+<a href="#cl-642"> 642</a>
+<a href="#cl-643"> 643</a>
+<a href="#cl-644"> 644</a>
+<a href="#cl-645"> 645</a>
+<a href="#cl-646"> 646</a>
+<a href="#cl-647"> 647</a>
+<a href="#cl-648"> 648</a>
+<a href="#cl-649"> 649</a>
+<a href="#cl-650"> 650</a>
+<a href="#cl-651"> 651</a>
+<a href="#cl-652"> 652</a>
+<a href="#cl-653"> 653</a>
+<a href="#cl-654"> 654</a>
+<a href="#cl-655"> 655</a>
+<a href="#cl-656"> 656</a>
+<a href="#cl-657"> 657</a>
+<a href="#cl-658"> 658</a>
+<a href="#cl-659"> 659</a>
+<a href="#cl-660"> 660</a>
+<a href="#cl-661"> 661</a>
+<a href="#cl-662"> 662</a>
+<a href="#cl-663"> 663</a>
+<a href="#cl-664"> 664</a>
+<a href="#cl-665"> 665</a>
+<a href="#cl-666"> 666</a>
+<a href="#cl-667"> 667</a>
+<a href="#cl-668"> 668</a>
+<a href="#cl-669"> 669</a>
+<a href="#cl-670"> 670</a>
+<a href="#cl-671"> 671</a>
+<a href="#cl-672"> 672</a>
+<a href="#cl-673"> 673</a>
+<a href="#cl-674"> 674</a>
+<a href="#cl-675"> 675</a>
+<a href="#cl-676"> 676</a>
+<a href="#cl-677"> 677</a>
+<a href="#cl-678"> 678</a>
+<a href="#cl-679"> 679</a>
+<a href="#cl-680"> 680</a>
+<a href="#cl-681"> 681</a>
+<a href="#cl-682"> 682</a>
+<a href="#cl-683"> 683</a>
+<a href="#cl-684"> 684</a>
+<a href="#cl-685"> 685</a>
+<a href="#cl-686"> 686</a>
+<a href="#cl-687"> 687</a>
+<a href="#cl-688"> 688</a>
+<a href="#cl-689"> 689</a>
+<a href="#cl-690"> 690</a>
+<a href="#cl-691"> 691</a>
+<a href="#cl-692"> 692</a>
+<a href="#cl-693"> 693</a>
+<a href="#cl-694"> 694</a>
+<a href="#cl-695"> 695</a>
+<a href="#cl-696"> 696</a>
+<a href="#cl-697"> 697</a>
+<a href="#cl-698"> 698</a>
+<a href="#cl-699"> 699</a>
+<a href="#cl-700"> 700</a>
+<a href="#cl-701"> 701</a>
+<a href="#cl-702"> 702</a>
+<a href="#cl-703"> 703</a>
+<a href="#cl-704"> 704</a>
+<a href="#cl-705"> 705</a>
+<a href="#cl-706"> 706</a>
+<a href="#cl-707"> 707</a>
+<a href="#cl-708"> 708</a>
+<a href="#cl-709"> 709</a>
+<a href="#cl-710"> 710</a>
+<a href="#cl-711"> 711</a>
+<a href="#cl-712"> 712</a>
+<a href="#cl-713"> 713</a>
+<a href="#cl-714"> 714</a>
+<a href="#cl-715"> 715</a>
+<a href="#cl-716"> 716</a>
+<a href="#cl-717"> 717</a>
+<a href="#cl-718"> 718</a>
+<a href="#cl-719"> 719</a>
+<a href="#cl-720"> 720</a>
+<a href="#cl-721"> 721</a>
+<a href="#cl-722"> 722</a>
+<a href="#cl-723"> 723</a>
+<a href="#cl-724"> 724</a>
+<a href="#cl-725"> 725</a>
+<a href="#cl-726"> 726</a>
+<a href="#cl-727"> 727</a>
+<a href="#cl-728"> 728</a>
+<a href="#cl-729"> 729</a>
+<a href="#cl-730"> 730</a>
+<a href="#cl-731"> 731</a>
+<a href="#cl-732"> 732</a>
+<a href="#cl-733"> 733</a>
+<a href="#cl-734"> 734</a>
+<a href="#cl-735"> 735</a>
+<a href="#cl-736"> 736</a>
+<a href="#cl-737"> 737</a>
+<a href="#cl-738"> 738</a>
+<a href="#cl-739"> 739</a>
+<a href="#cl-740"> 740</a>
+<a href="#cl-741"> 741</a>
+<a href="#cl-742"> 742</a>
+<a href="#cl-743"> 743</a>
+<a href="#cl-744"> 744</a>
+<a href="#cl-745"> 745</a>
+<a href="#cl-746"> 746</a>
+<a href="#cl-747"> 747</a>
+<a href="#cl-748"> 748</a>
+<a href="#cl-749"> 749</a>
+<a href="#cl-750"> 750</a>
+<a href="#cl-751"> 751</a>
+<a href="#cl-752"> 752</a>
+<a href="#cl-753"> 753</a>
+<a href="#cl-754"> 754</a>
+<a href="#cl-755"> 755</a>
+<a href="#cl-756"> 756</a>
+<a href="#cl-757"> 757</a>
+<a href="#cl-758"> 758</a>
+<a href="#cl-759"> 759</a>
+<a href="#cl-760"> 760</a>
+<a href="#cl-761"> 761</a>
+<a href="#cl-762"> 762</a>
+<a href="#cl-763"> 763</a>
+<a href="#cl-764"> 764</a>
+<a href="#cl-765"> 765</a>
+<a href="#cl-766"> 766</a>
+<a href="#cl-767"> 767</a>
+<a href="#cl-768"> 768</a>
+<a href="#cl-769"> 769</a>
+<a href="#cl-770"> 770</a>
+<a href="#cl-771"> 771</a>
+<a href="#cl-772"> 772</a>
+<a href="#cl-773"> 773</a>
+<a href="#cl-774"> 774</a>
+<a href="#cl-775"> 775</a>
+<a href="#cl-776"> 776</a>
+<a href="#cl-777"> 777</a>
+<a href="#cl-778"> 778</a>
+<a href="#cl-779"> 779</a>
+<a href="#cl-780"> 780</a>
+<a href="#cl-781"> 781</a>
+<a href="#cl-782"> 782</a>
+<a href="#cl-783"> 783</a>
+<a href="#cl-784"> 784</a>
+<a href="#cl-785"> 785</a>
+<a href="#cl-786"> 786</a>
+<a href="#cl-787"> 787</a>
+<a href="#cl-788"> 788</a>
+<a href="#cl-789"> 789</a>
+<a href="#cl-790"> 790</a>
+<a href="#cl-791"> 791</a>
+<a href="#cl-792"> 792</a>
+<a href="#cl-793"> 793</a>
+<a href="#cl-794"> 794</a>
+<a href="#cl-795"> 795</a>
+<a href="#cl-796"> 796</a>
+<a href="#cl-797"> 797</a>
+<a href="#cl-798"> 798</a>
+<a href="#cl-799"> 799</a>
+<a href="#cl-800"> 800</a>
+<a href="#cl-801"> 801</a>
+<a href="#cl-802"> 802</a>
+<a href="#cl-803"> 803</a>
+<a href="#cl-804"> 804</a>
+<a href="#cl-805"> 805</a>
+<a href="#cl-806"> 806</a>
+<a href="#cl-807"> 807</a>
+<a href="#cl-808"> 808</a>
+<a href="#cl-809"> 809</a>
+<a href="#cl-810"> 810</a>
+<a href="#cl-811"> 811</a>
+<a href="#cl-812"> 812</a>
+<a href="#cl-813"> 813</a>
+<a href="#cl-814"> 814</a>
+<a href="#cl-815"> 815</a>
+<a href="#cl-816"> 816</a>
+<a href="#cl-817"> 817</a>
+<a href="#cl-818"> 818</a>
+<a href="#cl-819"> 819</a>
+<a href="#cl-820"> 820</a>
+<a href="#cl-821"> 821</a>
+<a href="#cl-822"> 822</a>
+<a href="#cl-823"> 823</a>
+<a href="#cl-824"> 824</a>
+<a href="#cl-825"> 825</a>
+<a href="#cl-826"> 826</a>
+<a href="#cl-827"> 827</a>
+<a href="#cl-828"> 828</a>
+<a href="#cl-829"> 829</a>
+<a href="#cl-830"> 830</a>
+<a href="#cl-831"> 831</a>
+<a href="#cl-832"> 832</a>
+<a href="#cl-833"> 833</a>
+<a href="#cl-834"> 834</a>
+<a href="#cl-835"> 835</a>
+<a href="#cl-836"> 836</a>
+<a href="#cl-837"> 837</a>
+<a href="#cl-838"> 838</a>
+<a href="#cl-839"> 839</a>
+<a href="#cl-840"> 840</a>
+<a href="#cl-841"> 841</a>
+<a href="#cl-842"> 842</a>
+<a href="#cl-843"> 843</a>
+<a href="#cl-844"> 844</a>
+<a href="#cl-845"> 845</a>
+<a href="#cl-846"> 846</a>
+<a href="#cl-847"> 847</a>
+<a href="#cl-848"> 848</a>
+<a href="#cl-849"> 849</a>
+<a href="#cl-850"> 850</a>
+<a href="#cl-851"> 851</a>
+<a href="#cl-852"> 852</a>
+<a href="#cl-853"> 853</a>
+<a href="#cl-854"> 854</a>
+<a href="#cl-855"> 855</a>
+<a href="#cl-856"> 856</a>
+<a href="#cl-857"> 857</a>
+<a href="#cl-858"> 858</a>
+<a href="#cl-859"> 859</a>
+<a href="#cl-860"> 860</a>
+<a href="#cl-861"> 861</a>
+<a href="#cl-862"> 862</a>
+<a href="#cl-863"> 863</a>
+<a href="#cl-864"> 864</a>
+<a href="#cl-865"> 865</a>
+<a href="#cl-866"> 866</a>
+<a href="#cl-867"> 867</a>
+<a href="#cl-868"> 868</a>
+<a href="#cl-869"> 869</a>
+<a href="#cl-870"> 870</a>
+<a href="#cl-871"> 871</a>
+<a href="#cl-872"> 872</a>
+<a href="#cl-873"> 873</a>
+<a href="#cl-874"> 874</a>
+<a href="#cl-875"> 875</a>
+<a href="#cl-876"> 876</a>
+<a href="#cl-877"> 877</a>
+<a href="#cl-878"> 878</a>
+<a href="#cl-879"> 879</a>
+<a href="#cl-880"> 880</a>
+<a href="#cl-881"> 881</a>
+<a href="#cl-882"> 882</a>
+<a href="#cl-883"> 883</a>
+<a href="#cl-884"> 884</a>
+<a href="#cl-885"> 885</a>
+<a href="#cl-886"> 886</a>
+<a href="#cl-887"> 887</a>
+<a href="#cl-888"> 888</a>
+<a href="#cl-889"> 889</a>
+<a href="#cl-890"> 890</a>
+<a href="#cl-891"> 891</a>
+<a href="#cl-892"> 892</a>
+<a href="#cl-893"> 893</a>
+<a href="#cl-894"> 894</a>
+<a href="#cl-895"> 895</a>
+<a href="#cl-896"> 896</a>
+<a href="#cl-897"> 897</a>
+<a href="#cl-898"> 898</a>
+<a href="#cl-899"> 899</a>
+<a href="#cl-900"> 900</a>
+<a href="#cl-901"> 901</a>
+<a href="#cl-902"> 902</a>
+<a href="#cl-903"> 903</a>
+<a href="#cl-904"> 904</a>
+<a href="#cl-905"> 905</a>
+<a href="#cl-906"> 906</a>
+<a href="#cl-907"> 907</a>
+<a href="#cl-908"> 908</a>
+<a href="#cl-909"> 909</a>
+<a href="#cl-910"> 910</a>
+<a href="#cl-911"> 911</a>
+<a href="#cl-912"> 912</a>
+<a href="#cl-913"> 913</a>
+<a href="#cl-914"> 914</a>
+<a href="#cl-915"> 915</a>
+<a href="#cl-916"> 916</a>
+<a href="#cl-917"> 917</a>
+<a href="#cl-918"> 918</a>
+<a href="#cl-919"> 919</a>
+<a href="#cl-920"> 920</a>
+<a href="#cl-921"> 921</a>
+<a href="#cl-922"> 922</a>
+<a href="#cl-923"> 923</a>
+<a href="#cl-924"> 924</a>
+<a href="#cl-925"> 925</a>
+<a href="#cl-926"> 926</a>
+<a href="#cl-927"> 927</a>
+<a href="#cl-928"> 928</a>
+<a href="#cl-929"> 929</a>
+<a href="#cl-930"> 930</a>
+<a href="#cl-931"> 931</a>
+<a href="#cl-932"> 932</a>
+<a href="#cl-933"> 933</a>
+<a href="#cl-934"> 934</a>
+<a href="#cl-935"> 935</a>
+<a href="#cl-936"> 936</a>
+<a href="#cl-937"> 937</a>
+<a href="#cl-938"> 938</a>
+<a href="#cl-939"> 939</a>
+<a href="#cl-940"> 940</a>
+<a href="#cl-941"> 941</a>
+<a href="#cl-942"> 942</a>
+<a href="#cl-943"> 943</a>
+<a href="#cl-944"> 944</a>
+<a href="#cl-945"> 945</a>
+<a href="#cl-946"> 946</a>
+<a href="#cl-947"> 947</a>
+<a href="#cl-948"> 948</a>
+<a href="#cl-949"> 949</a>
+<a href="#cl-950"> 950</a>
+<a href="#cl-951"> 951</a>
+<a href="#cl-952"> 952</a>
+<a href="#cl-953"> 953</a>
+<a href="#cl-954"> 954</a>
+<a href="#cl-955"> 955</a>
+<a href="#cl-956"> 956</a>
+<a href="#cl-957"> 957</a>
+<a href="#cl-958"> 958</a>
+<a href="#cl-959"> 959</a>
+<a href="#cl-960"> 960</a>
+<a href="#cl-961"> 961</a>
+<a href="#cl-962"> 962</a>
+<a href="#cl-963"> 963</a>
+<a href="#cl-964"> 964</a>
+<a href="#cl-965"> 965</a>
+<a href="#cl-966"> 966</a>
+<a href="#cl-967"> 967</a>
+<a href="#cl-968"> 968</a>
+<a href="#cl-969"> 969</a>
+<a href="#cl-970"> 970</a>
+<a href="#cl-971"> 971</a>
+<a href="#cl-972"> 972</a>
+<a href="#cl-973"> 973</a>
+<a href="#cl-974"> 974</a>
+<a href="#cl-975"> 975</a>
+<a href="#cl-976"> 976</a>
+<a href="#cl-977"> 977</a>
+<a href="#cl-978"> 978</a>
+<a href="#cl-979"> 979</a>
+<a href="#cl-980"> 980</a>
+<a href="#cl-981"> 981</a>
+<a href="#cl-982"> 982</a>
+<a href="#cl-983"> 983</a>
+<a href="#cl-984"> 984</a>
+<a href="#cl-985"> 985</a>
+<a href="#cl-986"> 986</a>
+<a href="#cl-987"> 987</a>
+<a href="#cl-988"> 988</a>
+<a href="#cl-989"> 989</a>
+<a href="#cl-990"> 990</a>
+<a href="#cl-991"> 991</a>
+<a href="#cl-992"> 992</a>
+<a href="#cl-993"> 993</a>
+<a href="#cl-994"> 994</a>
+<a href="#cl-995"> 995</a>
+<a href="#cl-996"> 996</a>
+<a href="#cl-997"> 997</a>
+<a href="#cl-998"> 998</a>
+<a href="#cl-999"> 999</a>
+<a href="#cl-1000">1000</a>
+<a href="#cl-1001">1001</a>
+<a href="#cl-1002">1002</a>
+<a href="#cl-1003">1003</a>
+<a href="#cl-1004">1004</a>
+<a href="#cl-1005">1005</a>
+<a href="#cl-1006">1006</a>
+<a href="#cl-1007">1007</a>
+<a href="#cl-1008">1008</a>
+<a href="#cl-1009">1009</a>
+<a href="#cl-1010">1010</a>
+<a href="#cl-1011">1011</a>
+<a href="#cl-1012">1012</a>
+<a href="#cl-1013">1013</a>
+<a href="#cl-1014">1014</a>
+<a href="#cl-1015">1015</a>
+<a href="#cl-1016">1016</a>
+<a href="#cl-1017">1017</a>
+<a href="#cl-1018">1018</a>
+<a href="#cl-1019">1019</a>
+<a href="#cl-1020">1020</a>
+<a href="#cl-1021">1021</a>
+<a href="#cl-1022">1022</a>
+<a href="#cl-1023">1023</a>
+<a href="#cl-1024">1024</a>
+<a href="#cl-1025">1025</a>
+<a href="#cl-1026">1026</a>
+<a href="#cl-1027">1027</a>
+<a href="#cl-1028">1028</a>
+<a href="#cl-1029">1029</a>
+<a href="#cl-1030">1030</a>
+<a href="#cl-1031">1031</a>
+<a href="#cl-1032">1032</a>
+<a href="#cl-1033">1033</a>
+<a href="#cl-1034">1034</a>
+<a href="#cl-1035">1035</a>
+<a href="#cl-1036">1036</a>
+<a href="#cl-1037">1037</a>
+<a href="#cl-1038">1038</a>
+<a href="#cl-1039">1039</a>
+<a href="#cl-1040">1040</a>
+<a href="#cl-1041">1041</a>
+<a href="#cl-1042">1042</a>
+<a href="#cl-1043">1043</a>
+<a href="#cl-1044">1044</a>
+<a href="#cl-1045">1045</a>
+<a href="#cl-1046">1046</a>
+<a href="#cl-1047">1047</a>
+<a href="#cl-1048">1048</a>
+<a href="#cl-1049">1049</a>
+<a href="#cl-1050">1050</a>
+<a href="#cl-1051">1051</a>
+<a href="#cl-1052">1052</a>
+<a href="#cl-1053">1053</a>
+<a href="#cl-1054">1054</a>
+<a href="#cl-1055">1055</a>
+<a href="#cl-1056">1056</a>
+<a href="#cl-1057">1057</a>
+<a href="#cl-1058">1058</a>
+<a href="#cl-1059">1059</a>
+<a href="#cl-1060">1060</a>
+<a href="#cl-1061">1061</a>
+<a href="#cl-1062">1062</a>
+<a href="#cl-1063">1063</a>
+<a href="#cl-1064">1064</a>
+<a href="#cl-1065">1065</a>
+<a href="#cl-1066">1066</a>
+<a href="#cl-1067">1067</a>
+<a href="#cl-1068">1068</a>
+<a href="#cl-1069">1069</a>
+<a href="#cl-1070">1070</a>
+<a href="#cl-1071">1071</a>
+<a href="#cl-1072">1072</a>
+<a href="#cl-1073">1073</a>
+<a href="#cl-1074">1074</a>
+<a href="#cl-1075">1075</a>
+<a href="#cl-1076">1076</a>
+<a href="#cl-1077">1077</a>
+<a href="#cl-1078">1078</a>
+<a href="#cl-1079">1079</a>
+<a href="#cl-1080">1080</a>
+<a href="#cl-1081">1081</a>
+<a href="#cl-1082">1082</a>
+<a href="#cl-1083">1083</a>
+<a href="#cl-1084">1084</a>
+<a href="#cl-1085">1085</a>
+<a href="#cl-1086">1086</a>
+<a href="#cl-1087">1087</a>
+<a href="#cl-1088">1088</a>
+<a href="#cl-1089">1089</a>
+<a href="#cl-1090">1090</a>
+<a href="#cl-1091">1091</a>
+<a href="#cl-1092">1092</a>
+<a href="#cl-1093">1093</a>
+<a href="#cl-1094">1094</a>
+<a href="#cl-1095">1095</a>
+<a href="#cl-1096">1096</a>
+<a href="#cl-1097">1097</a>
+<a href="#cl-1098">1098</a>
+<a href="#cl-1099">1099</a>
+<a href="#cl-1100">1100</a>
+<a href="#cl-1101">1101</a>
+<a href="#cl-1102">1102</a>
+<a href="#cl-1103">1103</a>
+<a href="#cl-1104">1104</a>
+<a href="#cl-1105">1105</a>
+<a href="#cl-1106">1106</a>
+<a href="#cl-1107">1107</a>
+<a href="#cl-1108">1108</a>
+<a href="#cl-1109">1109</a>
+<a href="#cl-1110">1110</a>
+<a href="#cl-1111">1111</a>
+<a href="#cl-1112">1112</a>
+<a href="#cl-1113">1113</a>
+<a href="#cl-1114">1114</a>
+<a href="#cl-1115">1115</a>
+<a href="#cl-1116">1116</a>
+<a href="#cl-1117">1117</a>
+<a href="#cl-1118">1118</a>
+<a href="#cl-1119">1119</a>
+<a href="#cl-1120">1120</a>
+<a href="#cl-1121">1121</a>
+<a href="#cl-1122">1122</a>
+<a href="#cl-1123">1123</a>
+<a href="#cl-1124">1124</a>
+<a href="#cl-1125">1125</a>
+<a href="#cl-1126">1126</a>
+<a href="#cl-1127">1127</a>
+<a href="#cl-1128">1128</a>
+<a href="#cl-1129">1129</a>
+<a href="#cl-1130">1130</a>
+<a href="#cl-1131">1131</a>
+<a href="#cl-1132">1132</a>
+<a href="#cl-1133">1133</a>
+<a href="#cl-1134">1134</a>
+<a href="#cl-1135">1135</a>
+<a href="#cl-1136">1136</a>
+<a href="#cl-1137">1137</a>
+<a href="#cl-1138">1138</a>
+<a href="#cl-1139">1139</a>
+<a href="#cl-1140">1140</a>
+<a href="#cl-1141">1141</a>
+<a href="#cl-1142">1142</a>
+<a href="#cl-1143">1143</a>
+<a href="#cl-1144">1144</a>
+<a href="#cl-1145">1145</a>
+<a href="#cl-1146">1146</a>
+<a href="#cl-1147">1147</a>
+<a href="#cl-1148">1148</a>
+<a href="#cl-1149">1149</a>
+<a href="#cl-1150">1150</a>
+<a href="#cl-1151">1151</a>
+<a href="#cl-1152">1152</a>
+<a href="#cl-1153">1153</a>
+<a href="#cl-1154">1154</a>
+<a href="#cl-1155">1155</a>
+<a href="#cl-1156">1156</a>
+<a href="#cl-1157">1157</a>
+<a href="#cl-1158">1158</a>
+<a href="#cl-1159">1159</a>
+<a href="#cl-1160">1160</a>
+<a href="#cl-1161">1161</a>
+<a href="#cl-1162">1162</a>
+<a href="#cl-1163">1163</a>
+<a href="#cl-1164">1164</a>
+<a href="#cl-1165">1165</a>
+<a href="#cl-1166">1166</a>
+<a href="#cl-1167">1167</a>
+<a href="#cl-1168">1168</a>
+<a href="#cl-1169">1169</a>
+<a href="#cl-1170">1170</a>
+<a href="#cl-1171">1171</a>
+<a href="#cl-1172">1172</a>
+<a href="#cl-1173">1173</a>
+<a href="#cl-1174">1174</a>
+<a href="#cl-1175">1175</a>
+<a href="#cl-1176">1176</a>
+<a href="#cl-1177">1177</a>
+<a href="#cl-1178">1178</a>
+<a href="#cl-1179">1179</a>
+<a href="#cl-1180">1180</a>
+<a href="#cl-1181">1181</a>
+<a href="#cl-1182">1182</a>
+<a href="#cl-1183">1183</a>
+<a href="#cl-1184">1184</a>
+<a href="#cl-1185">1185</a>
+<a href="#cl-1186">1186</a>
+<a href="#cl-1187">1187</a>
+<a href="#cl-1188">1188</a>
+<a href="#cl-1189">1189</a>
+<a href="#cl-1190">1190</a>
+<a href="#cl-1191">1191</a>
+<a href="#cl-1192">1192</a>
+<a href="#cl-1193">1193</a>
+<a href="#cl-1194">1194</a>
+<a href="#cl-1195">1195</a>
+<a href="#cl-1196">1196</a>
+<a href="#cl-1197">1197</a>
+<a href="#cl-1198">1198</a>
+<a href="#cl-1199">1199</a>
+<a href="#cl-1200">1200</a>
+<a href="#cl-1201">1201</a>
+<a href="#cl-1202">1202</a>
+<a href="#cl-1203">1203</a>
+<a href="#cl-1204">1204</a>
+<a href="#cl-1205">1205</a>
+<a href="#cl-1206">1206</a>
+<a href="#cl-1207">1207</a>
+<a href="#cl-1208">1208</a>
+<a href="#cl-1209">1209</a>
+<a href="#cl-1210">1210</a>
+<a href="#cl-1211">1211</a>
+<a href="#cl-1212">1212</a>
+<a href="#cl-1213">1213</a>
+<a href="#cl-1214">1214</a>
+<a href="#cl-1215">1215</a>
+<a href="#cl-1216">1216</a>
+<a href="#cl-1217">1217</a>
+<a href="#cl-1218">1218</a>
+<a href="#cl-1219">1219</a>
+<a href="#cl-1220">1220</a>
+<a href="#cl-1221">1221</a>
+<a href="#cl-1222">1222</a>
+<a href="#cl-1223">1223</a>
+<a href="#cl-1224">1224</a>
+<a href="#cl-1225">1225</a>
+<a href="#cl-1226">1226</a>
+<a href="#cl-1227">1227</a>
+<a href="#cl-1228">1228</a>
+<a href="#cl-1229">1229</a>
+<a href="#cl-1230">1230</a>
+<a href="#cl-1231">1231</a>
+<a href="#cl-1232">1232</a>
+<a href="#cl-1233">1233</a>
+<a href="#cl-1234">1234</a>
+<a href="#cl-1235">1235</a>
+<a href="#cl-1236">1236</a>
+<a href="#cl-1237">1237</a>
+<a href="#cl-1238">1238</a>
+<a href="#cl-1239">1239</a>
+<a href="#cl-1240">1240</a>
+<a href="#cl-1241">1241</a>
+<a href="#cl-1242">1242</a>
+<a href="#cl-1243">1243</a>
+<a href="#cl-1244">1244</a>
+<a href="#cl-1245">1245</a>
+<a href="#cl-1246">1246</a>
+<a href="#cl-1247">1247</a>
+<a href="#cl-1248">1248</a>
+<a href="#cl-1249">1249</a>
+<a href="#cl-1250">1250</a>
+<a href="#cl-1251">1251</a>
+<a href="#cl-1252">1252</a>
+<a href="#cl-1253">1253</a>
+<a href="#cl-1254">1254</a>
+<a href="#cl-1255">1255</a>
+<a href="#cl-1256">1256</a>
+<a href="#cl-1257">1257</a>
+<a href="#cl-1258">1258</a>
+<a href="#cl-1259">1259</a>
+<a href="#cl-1260">1260</a>
+<a href="#cl-1261">1261</a>
+<a href="#cl-1262">1262</a>
+<a href="#cl-1263">1263</a>
+<a href="#cl-1264">1264</a>
+<a href="#cl-1265">1265</a>
+<a href="#cl-1266">1266</a>
+<a href="#cl-1267">1267</a>
+<a href="#cl-1268">1268</a>
+<a href="#cl-1269">1269</a>
+<a href="#cl-1270">1270</a>
+<a href="#cl-1271">1271</a>
+<a href="#cl-1272">1272</a>
+<a href="#cl-1273">1273</a>
+<a href="#cl-1274">1274</a>
+<a href="#cl-1275">1275</a>
+<a href="#cl-1276">1276</a>
+<a href="#cl-1277">1277</a>
+<a href="#cl-1278">1278</a>
+<a href="#cl-1279">1279</a>
+<a href="#cl-1280">1280</a>
+<a href="#cl-1281">1281</a>
+<a href="#cl-1282">1282</a>
+<a href="#cl-1283">1283</a>
+<a href="#cl-1284">1284</a>
+<a href="#cl-1285">1285</a>
+<a href="#cl-1286">1286</a>
+<a href="#cl-1287">1287</a>
+<a href="#cl-1288">1288</a>
+<a href="#cl-1289">1289</a>
+<a href="#cl-1290">1290</a>
+<a href="#cl-1291">1291</a>
+<a href="#cl-1292">1292</a>
+<a href="#cl-1293">1293</a>
+<a href="#cl-1294">1294</a>
+<a href="#cl-1295">1295</a>
+<a href="#cl-1296">1296</a>
+<a href="#cl-1297">1297</a>
+<a href="#cl-1298">1298</a>
+<a href="#cl-1299">1299</a>
+<a href="#cl-1300">1300</a>
+<a href="#cl-1301">1301</a>
+<a href="#cl-1302">1302</a>
+<a href="#cl-1303">1303</a>
+<a href="#cl-1304">1304</a>
+<a href="#cl-1305">1305</a>
+<a href="#cl-1306">1306</a>
+<a href="#cl-1307">1307</a>
+<a href="#cl-1308">1308</a>
+<a href="#cl-1309">1309</a>
+<a href="#cl-1310">1310</a>
+<a href="#cl-1311">1311</a>
+<a href="#cl-1312">1312</a>
+<a href="#cl-1313">1313</a>
+<a href="#cl-1314">1314</a>
+<a href="#cl-1315">1315</a>
+<a href="#cl-1316">1316</a>
+<a href="#cl-1317">1317</a>
+<a href="#cl-1318">1318</a>
+<a href="#cl-1319">1319</a>
+<a href="#cl-1320">1320</a>
+<a href="#cl-1321">1321</a>
+<a href="#cl-1322">1322</a>
+<a href="#cl-1323">1323</a>
+<a href="#cl-1324">1324</a>
+<a href="#cl-1325">1325</a>
+<a href="#cl-1326">1326</a>
+<a href="#cl-1327">1327</a>
+<a href="#cl-1328">1328</a>
+<a href="#cl-1329">1329</a>
+<a href="#cl-1330">1330</a>
+<a href="#cl-1331">1331</a>
+<a href="#cl-1332">1332</a>
+<a href="#cl-1333">1333</a>
+<a href="#cl-1334">1334</a>
+<a href="#cl-1335">1335</a>
+<a href="#cl-1336">1336</a>
+<a href="#cl-1337">1337</a>
+<a href="#cl-1338">1338</a>
+<a href="#cl-1339">1339</a>
+<a href="#cl-1340">1340</a>
+<a href="#cl-1341">1341</a>
+<a href="#cl-1342">1342</a>
+<a href="#cl-1343">1343</a>
+<a href="#cl-1344">1344</a>
+<a href="#cl-1345">1345</a>
+<a href="#cl-1346">1346</a>
+<a href="#cl-1347">1347</a>
+<a href="#cl-1348">1348</a>
+<a href="#cl-1349">1349</a>
+<a href="#cl-1350">1350</a>
+<a href="#cl-1351">1351</a>
+<a href="#cl-1352">1352</a>
+<a href="#cl-1353">1353</a>
+<a href="#cl-1354">1354</a>
+<a href="#cl-1355">1355</a>
+<a href="#cl-1356">1356</a>
+<a href="#cl-1357">1357</a>
+<a href="#cl-1358">1358</a>
+<a href="#cl-1359">1359</a>
+<a href="#cl-1360">1360</a>
+<a href="#cl-1361">1361</a>
+</pre></div></td><td class="code"><div class="highlight"><pre><a name="cl-1"></a>% This file was created with JabRef 2.4.2.
+<a name="cl-2"></a>% Encoding: Cp1252
+<a name="cl-3"></a>
+<a name="cl-4"></a>@MISC{Metro,
+<a name="cl-5"></a>  author = {{java.net}},
+<a name="cl-6"></a>  title = {metro: Home},
+<a name="cl-7"></a>  howpublished = {\url{https://metro.dev.java.net}},
+<a name="cl-8"></a>  owner = {berg_hn},
+<a name="cl-9"></a>  timestamp = {2009.04.24},
+<a name="cl-10"></a>  url = {https://metro.dev.java.net}
+<a name="cl-11"></a>}
+<a name="cl-12"></a>
+<a name="cl-13"></a>@MISC{Derby-Website,
+<a name="cl-14"></a>  author = {{Apache Foundation}},
+<a name="cl-15"></a>  title = {Apache Derby Website},
+<a name="cl-16"></a>  howpublished = {\url{http://db.apache.org/derby/}},
+<a name="cl-17"></a>  owner = {tm226479},
+<a name="cl-18"></a>  timestamp = {2009.04.29},
+<a name="cl-19"></a>  url = {http://db.apache.org/derby/}
+<a name="cl-20"></a>}
+<a name="cl-21"></a>
+<a name="cl-22"></a>@MISC{BEinGRID-BE16-Website,
+<a name="cl-23"></a>  author = {{Atos Origin SAE}},
+<a name="cl-24"></a>  title = {BEinGRID - Business Experiment 16},
+<a name="cl-25"></a>  howpublished = {\url{http://www.beingrid.eu/be16.html}},
+<a name="cl-26"></a>  owner = {seid_do},
+<a name="cl-27"></a>  timestamp = {2009.05.17},
+<a name="cl-28"></a>  url = {http://www.beingrid.eu/be16.html}
+<a name="cl-29"></a>}
+<a name="cl-30"></a>
+<a name="cl-31"></a>@ARTICLE{Beazley03,
+<a name="cl-32"></a>  author = {David M. Beazley},
+<a name="cl-33"></a>  title = {Automated scientific software scripting with {SWIG}},
+<a name="cl-34"></a>  journal = {Future Generation Computer Systems},
+<a name="cl-35"></a>  year = {2003},
+<a name="cl-36"></a>  volume = {19},
+<a name="cl-37"></a>  pages = {599--609},
+<a name="cl-38"></a>  number = {5},
+<a name="cl-39"></a>  address = {Amsterdam, The Netherlands},
+<a name="cl-40"></a>  doi = {http://dx.doi.org/10.1016/S0167-739X(02)00171-1},
+<a name="cl-41"></a>  owner = {maas},
+<a name="cl-42"></a>  publisher = {Elsevier Science Publishers B. V.},
+<a name="cl-43"></a>  timestamp = {2009.04.17}
+<a name="cl-44"></a>}
+<a name="cl-45"></a>
+<a name="cl-46"></a>@BOOK{beck1996,
+<a name="cl-47"></a>  title = {Smalltalk Best Practise Patterns},
+<a name="cl-48"></a>  publisher = {Prentice Hall},
+<a name="cl-49"></a>  year = {1996},
+<a name="cl-50"></a>  author = {Kent Beck},
+<a name="cl-51"></a>  owner = {tm226479},
+<a name="cl-52"></a>  timestamp = {2009.06.05}
+<a name="cl-53"></a>}
+<a name="cl-54"></a>
+<a name="cl-55"></a>@INBOOK{BochnerGS08,
+<a name="cl-56"></a>  pages = {229--240},
+<a name="cl-57"></a>  title = {A Python Library for Provenance Recording and Querying},
+<a name="cl-58"></a>  publisher = {Springer},
+<a name="cl-59"></a>  year = {2009},
+<a name="cl-60"></a>  author = {Carsten Bochner and Roland Gude and Andreas Schreiber},
+<a name="cl-61"></a>  volume = {5272},
+<a name="cl-62"></a>  series = {Lecture Notes in Computer Science},
+<a name="cl-63"></a>  month = {11},
+<a name="cl-64"></a>  doi = {10.1007/978-3-540-89965-5_24},
+<a name="cl-65"></a>  owner = {maas},
+<a name="cl-66"></a>  timestamp = {2009.04.21}
+<a name="cl-67"></a>}
+<a name="cl-68"></a>
+<a name="cl-69"></a>@MISC{VisiBroker-Website,
+<a name="cl-70"></a>  author = {{Borland Software Corporation}},
+<a name="cl-71"></a>  title = {{Borland VisiBroker}},
+<a name="cl-72"></a>  howpublished = {\url{http://www.borland.com/de/products/visibroker}},
+<a name="cl-73"></a>  owner = {maas},
+<a name="cl-74"></a>  timestamp = {2009.04.23},
+<a name="cl-75"></a>  url = {http://www.borland.com/de/products/visibroker}
+<a name="cl-76"></a>}
+<a name="cl-77"></a>
+<a name="cl-78"></a>@MISC{SOAP11,
+<a name="cl-79"></a>  author = {Don Box and David Ehnebuske and Gopal Kakivaya and Andrew Layman
+<a name="cl-80"></a>        and Noah Mendelsohn and Henrik Frystyk Nielsen and Satish Thatte
+<a name="cl-81"></a>        and Dave Winer},
+<a name="cl-82"></a>  title = {Simple Object Access Protocol ({SOAP}) 1.1},
+<a name="cl-83"></a>  howpublished = {\url{http://www.w3.org/TR/2000/NOTE-SOAP-20000508/}},
+<a name="cl-84"></a>  owner = {berg_hn},
+<a name="cl-85"></a>  timestamp = {2009.04.23},
+<a name="cl-86"></a>  url = {http://www.w3.org/TR/2000/NOTE-SOAP-20000508/}
+<a name="cl-87"></a>}
+<a name="cl-88"></a>
+<a name="cl-89"></a>@MISC{JacORB-Website,
+<a name="cl-90"></a>  author = {Gerald Brose},
+<a name="cl-91"></a>  title = {{JacORB}},
+<a name="cl-92"></a>  howpublished = {\url{http://www.jacorb.org}},
+<a name="cl-93"></a>  owner = {maas},
+<a name="cl-94"></a>  timestamp = {2009.04.23},
+<a name="cl-95"></a>  url = {http://www.jacorb.org}
+<a name="cl-96"></a>}
+<a name="cl-97"></a>
+<a name="cl-98"></a>@BOOK{BroseVD01,
+<a name="cl-99"></a>  title = {Java Programming with {CORBA}: Advanced Techniques for Building Distributed
+<a name="cl-100"></a>        Applications},
+<a name="cl-101"></a>  publisher = {Wiley},
+<a name="cl-102"></a>  year = {2001},
+<a name="cl-103"></a>  author = {Gerald Brose and Andreas Vogel and Keith Duddy},
+<a name="cl-104"></a>  edition = {3rd},
+<a name="cl-105"></a>  abstract = {The leading guide for Java developers who build business applications
+<a name="cl-106"></a>        with CORBA
+<a name="cl-107"></a>        
+<a name="cl-108"></a>        Acknowledged experts present advanced techniques and real-world examples
+<a name="cl-109"></a>        for building both simple and complex programs using Java with CORBA.
+<a name="cl-110"></a>        The authors begin with a quick overview of CORBA, Java, object request
+<a name="cl-111"></a>        brokers (ORBs), and EJB components, then quickly move on to show
+<a name="cl-112"></a>        how to use them to build complete Java applications. This new volume
+<a name="cl-113"></a>        features in-depth code examples, as well as expanded coverage of
+<a name="cl-114"></a>        cutting-edge topics, including Portable Object Adaptor (POA), Remote
+<a name="cl-115"></a>        Method Invocation (RMI) over IIOP, and EJB.},
+<a name="cl-116"></a>  owner = {maas},
+<a name="cl-117"></a>  timestamp = {2009.04.23}
+<a name="cl-118"></a>}
+<a name="cl-119"></a>
+<a name="cl-120"></a>@BOOK{posa04,
+<a name="cl-121"></a>  title = {Pattern-Orientated Software Architecture - A Pattern Language for
+<a name="cl-122"></a>        Distributed Computing},
+<a name="cl-123"></a>  publisher = {John Wiley \&amp; Sons Inc},
+<a name="cl-124"></a>  year = {2007},
+<a name="cl-125"></a>  author = {Frank Buschmann and Kevlin Henney and Douglas C. Schmidt},
+<a name="cl-126"></a>  owner = {tm226479},
+<a name="cl-127"></a>  timestamp = {2009.06.03}
+<a name="cl-128"></a>}
+<a name="cl-129"></a>
+<a name="cl-130"></a>@MISC{WSDL,
+<a name="cl-131"></a>  author = {Erik Christensen and Francisco Curbera and Greg Meredith and Sanjiva
+<a name="cl-132"></a>        Weerawarana},
+<a name="cl-133"></a>  title = {Web Services Description Language ({WSDL}) 1.1},
+<a name="cl-134"></a>  howpublished = {\url{http://www.w3.org/TR/wsdl}},
+<a name="cl-135"></a>  owner = {berg_hn},
+<a name="cl-136"></a>  timestamp = {2009.04.23},
+<a name="cl-137"></a>  url = {http://www.w3.org/TR/wsdl}
+<a name="cl-138"></a>}
+<a name="cl-139"></a>
+<a name="cl-140"></a>@MISC{DVC,
+<a name="cl-141"></a>  author = {Ian Clatworthy},
+<a name="cl-142"></a>  title = {Distributed Version Control Systems; Why and How},
+<a name="cl-143"></a>  howpublished = {\url{http://ianclatworthy.files.wordpress.com/2007/10/dvcs-why-and-how3.pdf}},
+<a name="cl-144"></a>  owner = {tm226479},
+<a name="cl-145"></a>  timestamp = {2009.04.29},
+<a name="cl-146"></a>  url = {http://ianclatworthy.files.wordpress.com/2007/10/dvcs-why-and-how3.pdf}
+<a name="cl-147"></a>}
+<a name="cl-148"></a>
+<a name="cl-149"></a>@MISC{Fnorb-Website,
+<a name="cl-150"></a>  author = {{DSTC}},
+<a name="cl-151"></a>  title = {Fnorb},
+<a name="cl-152"></a>  howpublished = {\url{http://sourceforge.net/projects/fnorb}},
+<a name="cl-153"></a>  owner = {maas},
+<a name="cl-154"></a>  timestamp = {2009.04.17},
+<a name="cl-155"></a>  url = {http://sourceforge.net/projects/fnorb}
+<a name="cl-156"></a>}
+<a name="cl-157"></a>
+<a name="cl-158"></a>@ARTICLE{Dubois99,
+<a name="cl-159"></a>  author = {Paul F. Dubois},
+<a name="cl-160"></a>  title = {Ten good practices in scientific programming},
+<a name="cl-161"></a>  journal = {Computing in Science \&amp; Engineering},
+<a name="cl-162"></a>  year = {1999},
+<a name="cl-163"></a>  volume = {Jan/Feb},
+<a name="cl-164"></a>  pages = {7-11},
+<a name="cl-165"></a>  owner = {maas},
+<a name="cl-166"></a>  timestamp = {2007.10.20}
+<a name="cl-167"></a>}
+<a name="cl-168"></a>
+<a name="cl-169"></a>@MISC{WebDAV,
+<a name="cl-170"></a>  author = {L. Dusseault},
+<a name="cl-171"></a>  title = {{HTTP} Extensions for Web Distributed Authoring and Versioning ({WebDAV})},
+<a name="cl-172"></a>  howpublished = {RFC 4918},
+<a name="cl-173"></a>  month = {June},
+<a name="cl-174"></a>  year = {2007},
+<a name="cl-175"></a>  owner = {tm226479},
+<a name="cl-176"></a>  timestamp = {2009.04.29}
+<a name="cl-177"></a>}
+<a name="cl-178"></a>
+<a name="cl-179"></a>@MISC{Eclipse-Equinox,
+<a name="cl-180"></a>  author = {{Eclipse Alliance}},
+<a name="cl-181"></a>  title = {Eclipse Equinox Website},
+<a name="cl-182"></a>  howpublished = {\url{http://www.eclipse.org/equinox}},
+<a name="cl-183"></a>  owner = {tm226479},
+<a name="cl-184"></a>  timestamp = {2009.04.29},
+<a name="cl-185"></a>  url = {http://www.eclipse.org/equinox}
+<a name="cl-186"></a>}
+<a name="cl-187"></a>
+<a name="cl-188"></a>@MISC{Eclipse-Workbench,
+<a name="cl-189"></a>  author = {{Eclipse Alliance}},
+<a name="cl-190"></a>  title = {Workbench User Guide},
+<a name="cl-191"></a>  howpublished = {\url{http://help.eclipse.org/ganymede/index.jsp?nav=/0}},
+<a name="cl-192"></a>  owner = {tm226479},
+<a name="cl-193"></a>  timestamp = {2009.04.29},
+<a name="cl-194"></a>  url = {http://help.eclipse.org/ganymede/index.jsp?nav=/0}
+<a name="cl-195"></a>}
+<a name="cl-196"></a>
+<a name="cl-197"></a>@MISC{EclipseRCP,
+<a name="cl-198"></a>  author = {{Eclipse Alliance}},
+<a name="cl-199"></a>  title = {Rich Client Platform ({RCP}) Website},
+<a name="cl-200"></a>  howpublished = {\url{http://www.eclipse.org/home/categories/rcp.php}},
+<a name="cl-201"></a>  owner = {tm226479},
+<a name="cl-202"></a>  timestamp = {2009.04.29},
+<a name="cl-203"></a>  url = {http://www.eclipse.org/home/categories/rcp.php}
+<a name="cl-204"></a>}
+<a name="cl-205"></a>
+<a name="cl-206"></a>@TECHREPORT{Eclipse-Platform,
+<a name="cl-207"></a>  author = {{Eclipse Alliance}},
+<a name="cl-208"></a>  title = {Eclipse Platform Technical Overview},
+<a name="cl-209"></a>  institution = {Eclipse Alliance},
+<a name="cl-210"></a>  year = {2006},
+<a name="cl-211"></a>  owner = {tm226479},
+<a name="cl-212"></a>  timestamp = {2009.04.29},
+<a name="cl-213"></a>  url = {http://www.eclipse.org/articles/Whitepaper-Platform-3.1/eclipse-platform-whitepaper.html}
+<a name="cl-214"></a>}
+<a name="cl-215"></a>
+<a name="cl-216"></a>@MISC{Ferg07,
+<a name="cl-217"></a>  author = {Stephen Ferg},
+<a name="cl-218"></a>  title = {{Python} \&amp; {Java}: A Side-by-Side Comparison},
+<a name="cl-219"></a>  howpublished = {\url{http://www.ferg.org/projects/python_java_side-by-side.html}},
+<a name="cl-220"></a>  comment = {http://www.ferg.org/projects/python_java_side-by-side.html},
+<a name="cl-221"></a>  keywords = {Java, Python},
+<a name="cl-222"></a>  owner = {maas},
+<a name="cl-223"></a>  timestamp = {2009.04.16},
+<a name="cl-224"></a>  url = {http://www.ferg.org/projects/python_java_side-by-side.html}
+<a name="cl-225"></a>}
+<a name="cl-226"></a>
+<a name="cl-227"></a>@INPROCEEDINGS{FischerSS00,
+<a name="cl-228"></a>  author = {Jochen Fischer and Andreas Schreiber and Martin Strietzel},
+<a name="cl-229"></a>  title = {Script Wrapper for Software Integration Systems},
+<a name="cl-230"></a>  booktitle = {High-Performance Computing and Networking, 8th International Conference,
+<a name="cl-231"></a>        HPCN Europe 2000, Amsterdam, The Netherlands},
+<a name="cl-232"></a>  year = {2000},
+<a name="cl-233"></a>  editor = {Marian Bubak and Hamideh Afsarmanesh and Roy Williams and Louis O.
+<a name="cl-234"></a>        Hertzberger},
+<a name="cl-235"></a>  volume = {1823},
+<a name="cl-236"></a>  series = {Lecture Notes in Computer Science},
+<a name="cl-237"></a>  pages = {560-563},
+<a name="cl-238"></a>  address = {Berlin / Heidelberg},
+<a name="cl-239"></a>  publisher = {Springer},
+<a name="cl-240"></a>  owner = {maas},
+<a name="cl-241"></a>  timestamp = {2007.10.20},
+<a name="cl-242"></a>  url = {http://link.springer.de/link/service/series/0558/bibs/1823/18230560.htm}
+<a name="cl-243"></a>}
+<a name="cl-244"></a>
+<a name="cl-245"></a>@BOOK{FoordM09,
+<a name="cl-246"></a>  title = {IronPython in Action},
+<a name="cl-247"></a>  publisher = {Manning Publications Co.},
+<a name="cl-248"></a>  year = {2009},
+<a name="cl-249"></a>  author = {Michael J. Foord and Christian Muirhead},
+<a name="cl-250"></a>  keywords = {Python},
+<a name="cl-251"></a>  owner = {maas},
+<a name="cl-252"></a>  timestamp = {2009.04.17},
+<a name="cl-253"></a>  url = {http://www.manning.com/foord/}
+<a name="cl-254"></a>}
+<a name="cl-255"></a>
+<a name="cl-256"></a>@INPROCEEDINGS{ForkertKSSW01,
+<a name="cl-257"></a>  author = {Tomas Forkert and Hans-Peter Kersken and Andreas Schreiber and Martin
+<a name="cl-258"></a>        Strietzel and Klaus Wolf},
+<a name="cl-259"></a>  title = {The Distributed Engineering Framework {TENT}},
+<a name="cl-260"></a>  booktitle = {Vector and Parallel Processing -- VECPAR 2000: 4th International
+<a name="cl-261"></a>        Conference},
+<a name="cl-262"></a>  year = {2001},
+<a name="cl-263"></a>  editor = {Palma, J.M.L.M.; Dongarra, J.; Hern�ndez, V.},
+<a name="cl-264"></a>  volume = {1981},
+<a name="cl-265"></a>  series = {Lecture Notes in Computer Science},
+<a name="cl-266"></a>  pages = {38-46},
+<a name="cl-267"></a>  address = {Berlin / Heidelberg},
+<a name="cl-268"></a>  publisher = {Springer},
+<a name="cl-269"></a>  abstract = {The paper describes TENT, a component-based framework for the integration
+<a name="cl-270"></a>        of technical applications. TENT allows the engineer to design, automate,
+<a name="cl-271"></a>        control, and steer technical workflows interactively. The applications
+<a name="cl-272"></a>        are therefore encapsulated in order to build components which conform
+<a name="cl-273"></a>        to the TENT component architecture. The engineer can combine the
+<a name="cl-274"></a>        components to workflows in a graphical user interface. The framework
+<a name="cl-275"></a>        manages and controls a distributed workflow on arbitrary computing
+<a name="cl-276"></a>        resources within the network. Due to the utilization of CORBA, TENT
+<a name="cl-277"></a>        supports all state-of-the-art programming languages, operating systems,
+<a name="cl-278"></a>        and hardware architectures. It is designed to deal with parallel
+<a name="cl-279"></a>        and sequential programming paradigms, as well as with massive data
+<a name="cl-280"></a>        exchange. TENT is used for workflow integration in several projects,
+<a name="cl-281"></a>        for CFD workflows in turbine engine and aircraft design, in the modeling
+<a name="cl-282"></a>        of combustion chambers, and for virtual automobile prototyping.},
+<a name="cl-283"></a>  owner = {maas},
+<a name="cl-284"></a>  timestamp = {2007.12.22},
+<a name="cl-285"></a>  url = {http://springerlink.metapress.com/content/c17v1kra7m649raj/?p=8edfe88911f243749cd82bdf99b4e552&amp;pi=2}
+<a name="cl-286"></a>}
+<a name="cl-287"></a>
+<a name="cl-288"></a>@INPROCEEDINGS{ForkertKKS04,
+<a name="cl-289"></a>  author = {Tomas Forkert and Guy K. Kloss and Christian Krause and Andreas Schreiber},
+<a name="cl-290"></a>  title = {Techniques for Wrapping Scientific Applications to {CORBA} Components},
+<a name="cl-291"></a>  booktitle = {9th International Workshop on High-Level Programming Models and Supportive
+<a name="cl-292"></a>        Environments (HIPS 2004)},
+<a name="cl-293"></a>  year = {2004},
+<a name="cl-294"></a>  pages = {100-108},
+<a name="cl-295"></a>  publisher = {IEEE Computer Society},
+<a name="cl-296"></a>  abstract = {This paper presents wrapping techniques that we have developed in
+<a name="cl-297"></a>        order to integrate applications into the scientific workflow management
+<a name="cl-298"></a>        system TENT. These techniques take into account the varying degrees
+<a name="cl-299"></a>        of controllability found for each application and utilize various
+<a name="cl-300"></a>        kinds of communication mechanisms between application and the associated
+<a name="cl-301"></a>        wrapper. We will also give an outline of the principles of component
+<a name="cl-302"></a>        technology employed in the CORBA based TENT environment. In addition,
+<a name="cl-303"></a>        the means by which applications can be connected through their associated
+<a name="cl-304"></a>        wrappers and TENT components to form distributed workflows are presented.
+<a name="cl-305"></a>        It will be demonstrated how TENT provides the user with a homogeneous
+<a name="cl-306"></a>        perspective on scientific workflows running in a distributed environment
+<a name="cl-307"></a>        and how he is enabled to efficiently configure and control these
+<a name="cl-308"></a>        workflows by means of the TENT component model.},
+<a name="cl-309"></a>  doi = {10.1109/HIPS.2004.1299195},
+<a name="cl-310"></a>  keywords = {CORBA, integration, simulation},
+<a name="cl-311"></a>  owner = {maas},
+<a name="cl-312"></a>  timestamp = {2007.12.22},
+<a name="cl-313"></a>  url = {http://csdl.computer.org/comp/proceedings/hips/2004/2151/00/21510100abs.htm}
+<a name="cl-314"></a>}
+<a name="cl-315"></a>
+<a name="cl-316"></a>@ARTICLE{Foster06,
+<a name="cl-317"></a>  author = {Ian Foster},
+<a name="cl-318"></a>  title = {Globus Toolkit Version 4: Software for Service-Oriented Systems},
+<a name="cl-319"></a>  journal = {Lecture Notes in Computer Science},
+<a name="cl-320"></a>  year = {2006},
+<a name="cl-321"></a>  volume = {3779},
+<a name="cl-322"></a>  pages = {2-13},
+<a name="cl-323"></a>  abstract = {The Globus Toolkit (GT) has been developed since the late 1990s to
+<a name="cl-324"></a>        support the development of service-oriented distributed computing
+<a name="cl-325"></a>        applications and infrastructures. Core GT components address, within
+<a name="cl-326"></a>        a common framework, basic issues relating to security, resource access,
+<a name="cl-327"></a>        resource management, data movement, resource discovery, and so forth.
+<a name="cl-328"></a>        These components enable a broader �Globus ecosystem� of tools and
+<a name="cl-329"></a>        components that build on, or interoperate with, core GT functionality
+<a name="cl-330"></a>        to provide a wide range of useful application-level functions. These
+<a name="cl-331"></a>        tools have in turn been used to develop a wide range of both �Grid�
+<a name="cl-332"></a>        infrastructures and distributed applications. I summarize here the
+<a name="cl-333"></a>        principal characteristics of the latest release, the Web services-based
+<a name="cl-334"></a>        GT4, which provides significant improvements over previous releases
+<a name="cl-335"></a>        in terms of robustness, performance, usability, documentation, standards
+<a name="cl-336"></a>        compliance, and functionality.},
+<a name="cl-337"></a>  address = {Berlin / Heidelberg},
+<a name="cl-338"></a>  owner = {maas},
+<a name="cl-339"></a>  publisher = {Springer},
+<a name="cl-340"></a>  timestamp = {2008.01.01},
+<a name="cl-341"></a>  url = {http://www.springerlink.com/content/p75p28l430100041/?p=9a1c98f909bc47e080450b7d9c8cf33c\&amp;pi=1}
+<a name="cl-342"></a>}
+<a name="cl-343"></a>
+<a name="cl-344"></a>@BOOK{fowler2003,
+<a name="cl-345"></a>  title = {Patterns of Enterprise Application Architecture},
+<a name="cl-346"></a>  publisher = {Pearson Education},
+<a name="cl-347"></a>  year = {2003},
+<a name="cl-348"></a>  author = {Martin Fowler},
+<a name="cl-349"></a>  owner = {tm226479},
+<a name="cl-350"></a>  timestamp = {2009.06.05}
+<a name="cl-351"></a>}
+<a name="cl-352"></a>
+<a name="cl-353"></a>@MISC{PartnerGrid-Website,
+<a name="cl-354"></a>  author = {{Fraunhofer Institute for Industrial Engineering IAO}},
+<a name="cl-355"></a>  title = {D-Grid Project PartnerGrid},
+<a name="cl-356"></a>  howpublished = {\url{http://www.partnergrid.de}},
+<a name="cl-357"></a>  owner = {seid_do},
+<a name="cl-358"></a>  timestamp = {2009.05.17},
+<a name="cl-359"></a>  url = {http://www.partnergrid.de}
+<a name="cl-360"></a>}
+<a name="cl-361"></a>
+<a name="cl-362"></a>@BOOK{ghjv1995,
+<a name="cl-363"></a>  title = {Design Patterns: Elements of Reusable Object-Oriented Software},
+<a name="cl-364"></a>  publisher = {Addison-Wesley},
+<a name="cl-365"></a>  year = {2995},
+<a name="cl-366"></a>  author = {Erich Gamma and Richard Helm and Ralph Johnson and John Vlissides},
+<a name="cl-367"></a>  owner = {tm226479},
+<a name="cl-368"></a>  timestamp = {2009.06.05}
+<a name="cl-369"></a>}
+<a name="cl-370"></a>
+<a name="cl-371"></a>@INPROCEEDINGS{GazaixJL02,
+<a name="cl-372"></a>  author = {Michel Gazaix and A Jolles and M Lazareff},
+<a name="cl-373"></a>  title = {The {elsA} Object-Oriented Computational tool for industrials applications},
+<a name="cl-374"></a>  booktitle = {23rd Congress of ICAS, Toronto, Canada},
+<a name="cl-375"></a>  year = {2002},
+<a name="cl-376"></a>  abstract = {The development of the new generation elsA software package was initiated
+<a name="cl-377"></a>        in 1997 at ONERA. The aim is to group a very broad range of CFD capabilities
+<a name="cl-378"></a>        together in an inter-operable and evolving software package, designed
+<a name="cl-379"></a>        both as a tool to tackle industrial problems and as a platform for
+<a name="cl-380"></a>        further innovative CFD developments. To meet this challenge, the
+<a name="cl-381"></a>        project team has chosen an Object Oriented (OO) design method as
+<a name="cl-382"></a>        well as an OO implementation. The paper describes the main features
+<a name="cl-383"></a>        of the OO design, discuss some performance issues associated with
+<a name="cl-384"></a>        different codings of the kernel computational loops, presents an
+<a name="cl-385"></a>        overview of elsA transition modeling capability, and ends with several
+<a name="cl-386"></a>        application results dealing with external and internal aerodynamics
+<a name="cl-387"></a>        (missiles, re-entry vehicles, helicopters, turbomachinery). The broadness
+<a name="cl-388"></a>        of the examples given here, together with good CPU efficiency, clearly
+<a name="cl-389"></a>        demonstrates the benefits of a full OO approach.},
+<a name="cl-390"></a>  owner = {maas},
+<a name="cl-391"></a>  timestamp = {2007.10.20}
+<a name="cl-392"></a>}
+<a name="cl-393"></a>
+<a name="cl-394"></a>@INPROCEEDINGS{Gerhold05,
+<a name="cl-395"></a>  author = {Thomas Gerhold},
+<a name="cl-396"></a>  title = {Overview of the Hybrid {RANS} Code {TAU}},
+<a name="cl-397"></a>  booktitle = {MEGAFLOW -- Numerical Flow Simulation for Aircraft Design},
+<a name="cl-398"></a>  year = {2005},
+<a name="cl-399"></a>  volume = {89},
+<a name="cl-400"></a>  series = {Notes on Numerical Fluid Mechanics and Multidisciplinary Design},
+<a name="cl-401"></a>  pages = {81-92},
+<a name="cl-402"></a>  publisher = {Springer},
+<a name="cl-403"></a>  abstract = {A brief introduction is given which first describes the history of
+<a name="cl-404"></a>        frame in which the TAU code was developed before explaining the main
+<a name="cl-405"></a>        advantages which were the drivers for the selection of the approach.
+<a name="cl-406"></a>        In the following an algorithmic overview describes shortly the code
+<a name="cl-407"></a>        functionality before a section about the code design gives some more
+<a name="cl-408"></a>        insight about the implementation and its scripting capability.},
+<a name="cl-409"></a>  doi = {10.1007/3-540-32382-1},
+<a name="cl-410"></a>  owner = {maas},
+<a name="cl-411"></a>  timestamp = {2007.10.20},
+<a name="cl-412"></a>  url = {http://www.springerlink.com/content/p2837m62h4711528/?p=9ba40f719b784c7288596afb32af331e&amp;pi=4}
+<a name="cl-413"></a>}
+<a name="cl-414"></a>
+<a name="cl-415"></a>@MISC{AeroGrid-Website,
+<a name="cl-416"></a>  author = {{German Aerospace Center (DLR)}},
+<a name="cl-417"></a>  title = {{AeroGrid} Website},
+<a name="cl-418"></a>  howpublished = {\url{http://www.aero-grid.de}},
+<a name="cl-419"></a>  owner = {maas},
+<a name="cl-420"></a>  timestamp = {2007.10.20},
+<a name="cl-421"></a>  url = {http://www.aero-grid.de}
+<a name="cl-422"></a>}
+<a name="cl-423"></a>
+<a name="cl-424"></a>@MISC{DataFinder-Sourceforge,
+<a name="cl-425"></a>  author = {{German Aerospace Center (DLR)}},
+<a name="cl-426"></a>  title = {{DataFinder}},
+<a name="cl-427"></a>  howpublished = {\url{http://datafinder.sourceforge.net}},
+<a name="cl-428"></a>  owner = {maas},
+<a name="cl-429"></a>  timestamp = {2009.04.24},
+<a name="cl-430"></a>  url = {http://datafinder.sourceforge.net}
+<a name="cl-431"></a>}
+<a name="cl-432"></a>
+<a name="cl-433"></a>@MISC{UCAV-2010-Website,
+<a name="cl-434"></a>  author = {{German Aerospace Center (DLR)}},
+<a name="cl-435"></a>  title = {DLR Project UCAV-2010},
+<a name="cl-436"></a>  howpublished = {\url{http://www.dlr.de/sc/de/desktopdefault.aspx/tabid-5141/8654\_read-11626/}},
+<a name="cl-437"></a>  owner = {seid_do},
+<a name="cl-438"></a>  timestamp = {2009.05.17},
+<a name="cl-439"></a>  url = {http://www.dlr.de/sc/de/desktopdefault.aspx/tabid-5141/8654\_read-11626/}
+<a name="cl-440"></a>}
+<a name="cl-441"></a>
+<a name="cl-442"></a>@MISC{omniORB-Website,
+<a name="cl-443"></a>  author = {Duncan Grisby},
+<a name="cl-444"></a>  title = {{omniORB} -- Free High Performance {ORB}},
+<a name="cl-445"></a>  howpublished = {\url{http://omniorb.sourceforge.net}},
+<a name="cl-446"></a>  owner = {maas},
+<a name="cl-447"></a>  timestamp = {2009.04.23},
+<a name="cl-448"></a>  url = {http://omniorb.sourceforge.net/}
+<a name="cl-449"></a>}
+<a name="cl-450"></a>
+<a name="cl-451"></a>@INBOOK{GrothMM06,
+<a name="cl-452"></a>  pages = {278--286},
+<a name="cl-453"></a>  title = {Principles of High Quality Documentation for Provenance: A Philosophical
+<a name="cl-454"></a>        Discussion},
+<a name="cl-455"></a>  publisher = {Springer},
+<a name="cl-456"></a>  year = {2006},
+<a name="cl-457"></a>  author = {Paul Groth and Simon Miles and Steve Munroe},
+<a name="cl-458"></a>  volume = {4145},
+<a name="cl-459"></a>  series = {Lecture Notes in Computer Science},
+<a name="cl-460"></a>  address = {Berlin / Heidelberg},
+<a name="cl-461"></a>  month = {11},
+<a name="cl-462"></a>  abstract = {Computer technology enables the creation of detailed documentation
+<a name="cl-463"></a>        about the processes that create or affect entities (data, objects,
+<a name="cl-464"></a>        etc.). Such documentation of the past can be used to answer various
+<a name="cl-465"></a>        kinds of questions regarding the processes that led to the creation
+<a name="cl-466"></a>        or modification of a particular entity. The answer to such questions
+<a name="cl-467"></a>        are known as an entity�s provenance. In this paper, we derive a number
+<a name="cl-468"></a>        of principles for documenting the past, grounded in work from philosophy
+<a name="cl-469"></a>        and history, which allow for provenance questions to be answered
+<a name="cl-470"></a>        within a computational context. These principles lead us to argue
+<a name="cl-471"></a>        that an interaction-based model is particularly suited for representing
+<a name="cl-472"></a>        high quality documentation of the past.},
+<a name="cl-473"></a>  doi = {10.1007/11890850},
+<a name="cl-474"></a>  owner = {maas},
+<a name="cl-475"></a>  timestamp = {2009.04.26},
+<a name="cl-476"></a>  url = {http://www.springerlink.com/content/w63g434w160711vh/}
+<a name="cl-477"></a>}
+<a name="cl-478"></a>
+<a name="cl-479"></a>@MISC{SOAP12,
+<a name="cl-480"></a>  author = {Martin Gudgin and Marc Hadley and Noah Mendelsohn and Jean-Jacques
+<a name="cl-481"></a>        Moreau and Henrik Frystyk Nielsen and Anish Karmarkar and Yves Lafon},
+<a name="cl-482"></a>  title = {From {SOAP}/1.1 to {SOAP} Version 1.2 in 9 points},
+<a name="cl-483"></a>  howpublished = {\url{http://www.w3.org/2003/06/soap11-soap12.html}},
+<a name="cl-484"></a>  owner = {berg_hn},
+<a name="cl-485"></a>  timestamp = {2009.04.23},
+<a name="cl-486"></a>  url = {http://www.w3.org/2003/06/soap11-soap12.html}
+<a name="cl-487"></a>}
+<a name="cl-488"></a>
+<a name="cl-489"></a>@MISC{SOAPchanges,
+<a name="cl-490"></a>  author = {Hugo Haas},
+<a name="cl-491"></a>  title = {{SOAP} Version 1.2 Part 1: Messaging Framework (Second Edition)},
+<a name="cl-492"></a>  howpublished = {\url{http://www.w3.org/TR/soap12-part1/}},
+<a name="cl-493"></a>  owner = {berg_hn},
+<a name="cl-494"></a>  timestamp = {2009.04.23},
+<a name="cl-495"></a>  url = {http://www.w3.org/TR/soap12-part1/}
+<a name="cl-496"></a>}
+<a name="cl-497"></a>
+<a name="cl-498"></a>@ARTICLE{Jackson02,
+<a name="cl-499"></a>  author = {Keith R. Jackson},
+<a name="cl-500"></a>  title = {{pyGlobus}: a Python interface to the Globus Toolkit},
+<a name="cl-501"></a>  journal = {Concurrency and Computation: Practice and Experience},
+<a name="cl-502"></a>  year = {2002},
+<a name="cl-503"></a>  volume = {14},
+<a name="cl-504"></a>  pages = {1075-1083},
+<a name="cl-505"></a>  number = {13-15},
+<a name="cl-506"></a>  doi = {10.1002/cpe.683},
+<a name="cl-507"></a>  owner = {maas},
+<a name="cl-508"></a>  timestamp = {2008.03.13}
+<a name="cl-509"></a>}
+<a name="cl-510"></a>
+<a name="cl-511"></a>@MISC{JEPP-Website,
+<a name="cl-512"></a>  author = {Mike Johnson},
+<a name="cl-513"></a>  title = {{Jepp} -- {Java Embedded Python}},
+<a name="cl-514"></a>  howpublished = {\url{http://jepp.sourceforge.net}},
+<a name="cl-515"></a>  abstract = {Jepp embeds CPython in Java. It is safe to use in a heavily threaded
+<a name="cl-516"></a>        environment, it is quite fast and its stability is a main feature
+<a name="cl-517"></a>        and goal.},
+<a name="cl-518"></a>  keywords = {Python},
+<a name="cl-519"></a>  owner = {maas},
+<a name="cl-520"></a>  timestamp = {2009.04.17},
+<a name="cl-521"></a>  url = {http://jepp.sourceforge.net}
+<a name="cl-522"></a>}
+<a name="cl-523"></a>
+<a name="cl-524"></a>@MISC{IrmenDeJong,
+<a name="cl-525"></a>  author = {Irmen de Jong},
+<a name="cl-526"></a>  title = {Python compared to {Java}},
+<a name="cl-527"></a>  howpublished = {\url{http://www.razorvine.net/python/PythonComparedToJava}},
+<a name="cl-528"></a>  owner = {maas},
+<a name="cl-529"></a>  timestamp = {2009.04.16},
+<a name="cl-530"></a>  url = {http://www.razorvine.net/python/PythonComparedToJava}
+<a name="cl-531"></a>}
+<a name="cl-532"></a>
+<a name="cl-533"></a>@MISC{Pyro-Website,
+<a name="cl-534"></a>  author = {Irmen de Jong},
+<a name="cl-535"></a>  title = {{Pyro} -- {Python Remote Objects}},
+<a name="cl-536"></a>  howpublished = {\url{http://pyro.sourceforge.net}},
+<a name="cl-537"></a>  owner = {maas},
+<a name="cl-538"></a>  timestamp = {2009.04.20},
+<a name="cl-539"></a>  url = {http://pyro.sourceforge.net}
+<a name="cl-540"></a>}
+<a name="cl-541"></a>
+<a name="cl-542"></a>@INPROCEEDINGS{KerskenSSFAPWBGHK00,
+<a name="cl-543"></a>  author = {Hans-Peter Kersken and Andreas Schreiber and Martin Strietzel and
+<a name="cl-544"></a>        Michael Faden and Regine Ahrem and Peter Post and Klaus Wolf and
+<a name="cl-545"></a>        Armin Beckert and Thomas Gerholt and Ralf Heinrich and Edmund K�geler},
+<a name="cl-546"></a>  title = {AMANDA - A Distributed System for Aircraft Design},
+<a name="cl-547"></a>  booktitle = {Euro-Par 2000 - Parallel Processing: 6th International Euro-Par Conference},
+<a name="cl-548"></a>  year = {2000},
+<a name="cl-549"></a>  volume = {1900},
+<a name="cl-550"></a>  series = {Lecture Notes in Computer Science},
+<a name="cl-551"></a>  pages = {1315-1322},
+<a name="cl-552"></a>  address = {Berlin / Heidelberg},
+<a name="cl-553"></a>  publisher = {Springer},
+<a name="cl-554"></a>  abstract = {In the AMANDA project a component-based framework for the integration
+<a name="cl-555"></a>        of coupled technical applications, running distributed in a network,
+<a name="cl-556"></a>        is developed. It is designed to deal with parallel and sequential
+<a name="cl-557"></a>        programs and massive data exchange between the integrated programs.
+<a name="cl-558"></a>        Two pilot applications will be implemented to show the feasibility
+<a name="cl-559"></a>        of the chosen approach: a trimmed, freely flying, elastic airplane
+<a name="cl-560"></a>        and an air-cooled turbine. Beside using the integration systems,
+<a name="cl-561"></a>        the MpCCI1 library is used for the coupling of the codes, each simulating
+<a name="cl-562"></a>        single physical processes.},
+<a name="cl-563"></a>  keywords = {Component-based software, distributed computing, multidisciplinary
+<a name="cl-564"></a>        simulation},
+<a name="cl-565"></a>  owner = {maas},
+<a name="cl-566"></a>  timestamp = {2008.01.01},
+<a name="cl-567"></a>  url = {http://springerlink.metapress.com/content/86h5dwtu2qwcmqcl/?p=534c425a32c944a3bcceee8552b5a625&amp;pi=181}
+<a name="cl-568"></a>}
+<a name="cl-569"></a>
+<a name="cl-570"></a>@BOOK{Kiusalaas05,
+<a name="cl-571"></a>  title = {Numerical Methods in Engineering with Python},
+<a name="cl-572"></a>  publisher = {Cambridge University Press},
+<a name="cl-573"></a>  year = {2005},
+<a name="cl-574"></a>  author = {Jaan Kiusalaas},
+<a name="cl-575"></a>  keywords = {Python},
+<a name="cl-576"></a>  owner = {maas},
+<a name="cl-577"></a>  timestamp = {2009.04.17}
+<a name="cl-578"></a>}
+<a name="cl-579"></a>
+<a name="cl-580"></a>@INPROCEEDINGS{Kloss06,
+<a name="cl-581"></a>  author = {Guy K. Kloss},
+<a name="cl-582"></a>  title = {Workflow Automation and Optimization in Automotive Design},
+<a name="cl-583"></a>  booktitle = {13th European Concurrent Engineering Conference},
+<a name="cl-584"></a>  year = {2006},
+<a name="cl-585"></a>  pages = {127-131},
+<a name="cl-586"></a>  month = {April},
+<a name="cl-587"></a>  publisher = {EUROSIS Publication},
+<a name="cl-588"></a>  keywords = {Problem Solving Environments, Optimization, Simulation Integration
+<a name="cl-589"></a>        Framework, Distributed Environments, Grid Computing, Data Management},
+<a name="cl-590"></a>  owner = {maas},
+<a name="cl-591"></a>  timestamp = {2008.01.01}
+<a name="cl-592"></a>}
+<a name="cl-593"></a>
+<a name="cl-594"></a>@CONFERENCE{KlossS06,
+<a name="cl-595"></a>  author = {Guy Kristoffer Kloss and Andreas Schreiber},
+<a name="cl-596"></a>  title = {Provenance Implementation in a Scientific Simulation Environment},
+<a name="cl-597"></a>  booktitle = {International Provenance and Annotation Workshop, IPAW 2006},
+<a name="cl-598"></a>  year = {2006},
+<a name="cl-599"></a>  volume = {4145},
+<a name="cl-600"></a>  series = {Lecture Notes in Computer Science},
+<a name="cl-601"></a>  pages = {37-45},
+<a name="cl-602"></a>  address = {Berlin / Heidelberg},
+<a name="cl-603"></a>  month = {05},
+<a name="cl-604"></a>  publisher = {Springer},
+<a name="cl-605"></a>  abstract = {Many of today�s engineering applications for simulations are lacking
+<a name="cl-606"></a>        machanisms to trace the generation of results and the underlying
+<a name="cl-607"></a>        processes. Especially computations conducted in distribued computing
+<a name="cl-608"></a>        environments as Grids are lacking suitable means to keep track of
+<a name="cl-609"></a>        used resources. Trust of engineers in results produced within distribued
+<a name="cl-610"></a>        simulation environments is very limited without this information.
+<a name="cl-611"></a>        
+<a name="cl-612"></a>        This paper will demonstrate how trust and confidence in simulation
+<a name="cl-613"></a>        results could be achived for engineering applications. It will highlight
+<a name="cl-614"></a>        the backgrounds of the application, of provenance recording, the
+<a name="cl-615"></a>        mapping to the application, and finally the implementation of provenance
+<a name="cl-616"></a>        awareness for the application. Additionally it will present examples
+<a name="cl-617"></a>        of analyzing the information stored to be of further use to the engineer.},
+<a name="cl-618"></a>  doi = {10.1007/11890850_5},
+<a name="cl-619"></a>  keywords = {provenance},
+<a name="cl-620"></a>  owner = {maas},
+<a name="cl-621"></a>  timestamp = {2007.10.20},
+<a name="cl-622"></a>  url = {http://www.springerlink.com/content/x5p5161335820551/?p=a1aa1087d89f41d5bbe62fb333ec60c7&amp;pi=1}
+<a name="cl-623"></a>}
+<a name="cl-624"></a>
+<a name="cl-625"></a>@INBOOK{KundeBS08,
+<a name="cl-626"></a>  pages = {241--252},
+<a name="cl-627"></a>  title = {Requirements for a Provenance Visualization Component},
+<a name="cl-628"></a>  publisher = {Springer},
+<a name="cl-629"></a>  year = {2009},
+<a name="cl-630"></a>  author = {Markus Kunde and Henning Bergmeyer and Andreas Schreiber},
+<a name="cl-631"></a>  volume = {5272},
+<a name="cl-632"></a>  series = {Lecture Notes in Computer Science},
+<a name="cl-633"></a>  address = {Berlin / Heidelberg},
+<a name="cl-634"></a>  month = {11},
+<a name="cl-635"></a>  abstract = {The need for interpretation of provenance data increases with the
+<a name="cl-636"></a>        introduction of further provenance related IT-systems. The interpretation
+<a name="cl-637"></a>        of data only becomes intuitively with providing good and efficient
+<a name="cl-638"></a>        visualization possibilities. During the development of general provenance
+<a name="cl-639"></a>        visualization techniques, provenance users are classified into groups
+<a name="cl-640"></a>        regarding their view to provenance information. The end-user requirements
+<a name="cl-641"></a>        are evaluated on an abstract level to have a basis for research.
+<a name="cl-642"></a>        Different intentions of end-users regarding provenance are identified
+<a name="cl-643"></a>        and put into relationship with standard visualization types. Examples
+<a name="cl-644"></a>        for standard visualization types are given and a brief forecast to
+<a name="cl-645"></a>        future achievements is made.},
+<a name="cl-646"></a>  doi = {10.1007/978-3-540-89965-5_25},
+<a name="cl-647"></a>  journal = {Provenance and Annotation of Data and Processes},
+<a name="cl-648"></a>  keywords = {provenance},
+<a name="cl-649"></a>  owner = {maas},
+<a name="cl-650"></a>  timestamp = {2009.04.21},
+<a name="cl-651"></a>  url = {http://elib.dlr.de/56254}
+<a name="cl-652"></a>}
+<a name="cl-653"></a>
+<a name="cl-654"></a>@BOOK{Langtangen09,
+<a name="cl-655"></a>  title = {Python Scripting for Computational Science},
+<a name="cl-656"></a>  publisher = {Springer-Verlag},
+<a name="cl-657"></a>  year = {2009},
+<a name="cl-658"></a>  author = {Hans Petter Langtangen},
+<a name="cl-659"></a>  series = {Texts in Computational Science and Engineering},
+<a name="cl-660"></a>  edition = {3rd},
+<a name="cl-661"></a>  keywords = {Python},
+<a name="cl-662"></a>  owner = {maas},
+<a name="cl-663"></a>  timestamp = {2009.04.16}
+<a name="cl-664"></a>}
+<a name="cl-665"></a>
+<a name="cl-666"></a>@MISC{SPIRO-Website,
+<a name="cl-667"></a>  author = {David McNab},
+<a name="cl-668"></a>  title = {SPIRO -- Simple {Python} Interface to Remote Objects},
+<a name="cl-669"></a>  howpublished = {\url{http://www.freenet.org.nz/python/spiro}},
+<a name="cl-670"></a>  owner = {maas},
+<a name="cl-671"></a>  timestamp = {2009.04.20},
+<a name="cl-672"></a>  url = {http://www.freenet.org.nz/python/spiro/}
+<a name="cl-673"></a>}
+<a name="cl-674"></a>
+<a name="cl-675"></a>@MISC{JPype-Website,
+<a name="cl-676"></a>  author = {Steve Menard},
+<a name="cl-677"></a>  title = {{JPype} -- {Java} to {Python} integration},
+<a name="cl-678"></a>  howpublished = {\url{http://jpype.sourceforge.net}},
+<a name="cl-679"></a>  owner = {maas},
+<a name="cl-680"></a>  timestamp = {2009.04.17},
+<a name="cl-681"></a>  url = {http://jpype.sourceforge.net/}
+<a name="cl-682"></a>}
+<a name="cl-683"></a>
+<a name="cl-684"></a>@MISC{RCE-Website,
+<a name="cl-685"></a>  author = {Thijs Metsch},
+<a name="cl-686"></a>  title = {Reconfigurable Computing Environment Website},
+<a name="cl-687"></a>  howpublished = {\url{http://www.rcenvironment.de}},
+<a name="cl-688"></a>  owner = {tm226479},
+<a name="cl-689"></a>  timestamp = {2009.04.29},
+<a name="cl-690"></a>  url = {http://www.rcenvironment.de}
+<a name="cl-691"></a>}
+<a name="cl-692"></a>
+<a name="cl-693"></a>@ARTICLE{MoreauGMVIJMRSTV08,
+<a name="cl-694"></a>  author = {Luc Moreau and Paul Groth and Simon Miles and Javier Vazquez-Salceda
+<a name="cl-695"></a>        and John Ibbotson and Sheng Jiang and Steve Munroe and Omer Rana
+<a name="cl-696"></a>        and Andreas Schreiber and Victor Tan and Laszlo Varga},
+<a name="cl-697"></a>  title = {The provenance of electronic data},
+<a name="cl-698"></a>  journal = {Communications of the ACM},
+<a name="cl-699"></a>  year = {2008},
+<a name="cl-700"></a>  volume = {51},
+<a name="cl-701"></a>  pages = {52--58},
+<a name="cl-702"></a>  number = {4},
+<a name="cl-703"></a>  abstract = {In the study of fine art, provenance refers to the documented history
+<a name="cl-704"></a>        of some art object. Given that documented history, the object attains
+<a name="cl-705"></a>        an authority that allows scholars to appreciate its importance with
+<a name="cl-706"></a>        respect to other works, whereas, in the absence of such history,
+<a name="cl-707"></a>        the object may be treated with some skepticism. Our IT landscape
+<a name="cl-708"></a>        is evolving as illustrated by applications that are open, composed
+<a name="cl-709"></a>        dynamically, and that discover results and services on the fly. Against
+<a name="cl-710"></a>        this challenging background, it is crucial for users to be able to
+<a name="cl-711"></a>        have confidence in the results produced by such applications. If
+<a name="cl-712"></a>        the provenance of data produced by computer systems could be determined
+<a name="cl-713"></a>        as it can for some works of art, then users, in their daily applications,
+<a name="cl-714"></a>        would be able to interpret and judge the quality of data better.
+<a name="cl-715"></a>        We introduce a provenance lifecycle and advocate an open approach
+<a name="cl-716"></a>        based on two key principles to support a notion of provenance in
+<a name="cl-717"></a>        computer systems: documentation of execution and user-tailored provenance
+<a name="cl-718"></a>        queries.},
+<a name="cl-719"></a>  doi = {10.1145/1330311.1330323},
+<a name="cl-720"></a>  keywords = {provenance},
+<a name="cl-721"></a>  owner = {maas},
+<a name="cl-722"></a>  publisher = {ACM},
+<a name="cl-723"></a>  timestamp = {2009.04.21},
+<a name="cl-724"></a>  url = {http://elib.dlr.de/53871}
+<a name="cl-725"></a>}
+<a name="cl-726"></a>
+<a name="cl-727"></a>@INPROCEEDINGS{MunroeMMV06,
+<a name="cl-728"></a>  author = {Steve Munroe and Simon Miles and Luc Moreau and Javier V�zquez-Salceda},
+<a name="cl-729"></a>  title = {PrIMe: a software engineering methodology for developing provenance-aware
+<a name="cl-730"></a>        applications},
+<a name="cl-731"></a>  booktitle = {Proceedings of the 6th international workshop on Software engineering
+<a name="cl-732"></a>        and middleware},
+<a name="cl-733"></a>  year = {2006},
+<a name="cl-734"></a>  series = {Foundations of Software Engineering},
+<a name="cl-735"></a>  pages = {39-46},
+<a name="cl-736"></a>  publisher = {ACM},
+<a name="cl-737"></a>  abstract = {Provenance is a concept often used in the Art world to refer to the
+<a name="cl-738"></a>        documented history of an artifact, providing information about the
+<a name="cl-739"></a>        artifact&#39;s lineage and authenticity. Provenance-aware applications
+<a name="cl-740"></a>        similarly allow their users to have confidence about the data they
+<a name="cl-741"></a>        produce, and can enable users to make judgements relating to notions
+<a name="cl-742"></a>        of trust, accountability, validation, replication and compliance
+<a name="cl-743"></a>        of their data. PrIMe is a software engineering methodology for adapting
+<a name="cl-744"></a>        applications to enable them to interact with a provenance middleware
+<a name="cl-745"></a>        layer, thereby making them provenance-aware. Such applications allow
+<a name="cl-746"></a>        users to answer questions about provenance use cases, which are descriptions
+<a name="cl-747"></a>        of scenarios in which a user interacts with a system by performing
+<a name="cl-748"></a>        particular functions on that system. In order to illustrate how PrIMe
+<a name="cl-749"></a>        can make applications provenance-aware, an Organ Transplant Management
+<a name="cl-750"></a>        example application is used.},
+<a name="cl-751"></a>  file = {:http\://www.eecg.utoronto.ca/~czhang/sem/papers/paper4.pdf:PDF},
+<a name="cl-752"></a>  keywords = {Data provenance, Distributed applications},
+<a name="cl-753"></a>  owner = {maas},
+<a name="cl-754"></a>  timestamp = {2008.01.01},
+<a name="cl-755"></a>  url = {http://portal.acm.org/citation.cfm?id=1210525.1210535&amp;coll=GUIDE&amp;dl=GUIDE&amp;type=series&amp;idx=SERIES364&amp;part=series&amp;WantType=Proceedings&amp;title=SIGSOFT&amp;CFID=10883766&amp;CFTOKEN=87498174}
+<a name="cl-756"></a>}
+<a name="cl-757"></a>
+<a name="cl-758"></a>@TECHREPORT{MTG+06b,
+<a name="cl-759"></a>  author = {Steve Munroe and Victor Tan and Paul Groth and Sheng Jiang and Simon
+<a name="cl-760"></a>        Miles and Luc Moreau},
+<a name="cl-761"></a>  title = {The Provenance Standardisation Vision},
+<a name="cl-762"></a>  institution = {University of Southampton},
+<a name="cl-763"></a>  year = {2006},
+<a name="cl-764"></a>  month = {November},
+<a name="cl-765"></a>  abstract = {This document provides an overview of a model of provenance along
+<a name="cl-766"></a>        with a description of a family of detailed specification documents
+<a name="cl-767"></a>        that support the model. Important aspects of the model are specified
+<a name="cl-768"></a>        within these documents in a detailed and clear manner that provides
+<a name="cl-769"></a>        an unambiguous reference for developers.},
+<a name="cl-770"></a>  keywords = {provenance},
+<a name="cl-771"></a>  owner = {maas},
+<a name="cl-772"></a>  timestamp = {2007.10.20},
+<a name="cl-773"></a>  url = {http://eprints.ecs.soton.ac.uk/13201/}
+<a name="cl-774"></a>}
+<a name="cl-775"></a>
+<a name="cl-776"></a>@INPROCEEDINGS{vanNieuwpoortKB07,
+<a name="cl-777"></a>  author = {Rob V. van Nieuwpoort and Thilo Kielmann and Henri E. Bal},
+<a name="cl-778"></a>  title = {User-Friendly and Reliable Grid Computing Based on Imperfect Middleware},
+<a name="cl-779"></a>  booktitle = {{Proceedings of the ACM/IEEE Conference on Supercomputing (SC&#39;07)}},
+<a name="cl-780"></a>  year = {2007},
+<a name="cl-781"></a>  month = {11},
+<a name="cl-782"></a>  organization = {ACM/IEEE},
+<a name="cl-783"></a>  abstract = {Writing grid applications is hard. First, interfaces to existing grid
+<a name="cl-784"></a>        middleware often are too low-level for application programmers who
+<a name="cl-785"></a>        are domain experts rather than computer scientists. Second, grid
+<a name="cl-786"></a>        APIs tend to evolve too quickly for applications to follow. Third,
+<a name="cl-787"></a>        failures and configuration incompatibilities require applications
+<a name="cl-788"></a>        to use different solutions to the same problem, depending on the
+<a name="cl-789"></a>        actual sites in use.
+<a name="cl-790"></a>        
+<a name="cl-791"></a>        
+<a name="cl-792"></a>        This paper describes the Java Grid Application Toolkit (JavaGAT) that
+<a name="cl-793"></a>        provides a high-level, middleware-independent and siteindependent
+<a name="cl-794"></a>        interface to the grid. The JavaGAT uses nested exceptions and intelligent
+<a name="cl-795"></a>        dispatching of method invocations to handle errors and to automatically
+<a name="cl-796"></a>        select suitable grid middleware implementations for requested operations.
+<a name="cl-797"></a>        The JavaGAT�s adaptor writing framework simplifies the implementation
+<a name="cl-798"></a>        of interfaces to new middleware releases by combining nested exceptions
+<a name="cl-799"></a>        and intelligent dispatching with rich default functionality. The
+<a name="cl-800"></a>        many applications and middleware adaptors that have been provided
+<a name="cl-801"></a>        by thirdparty developers indicate the viability of our approach.},
+<a name="cl-802"></a>  keywords = {JavaGAT},
+<a name="cl-803"></a>  owner = {maas},
+<a name="cl-804"></a>  timestamp = {2009.04.23}
+<a name="cl-805"></a>}
+<a name="cl-806"></a>
+<a name="cl-807"></a>@MISC{Corba-Specification,
+<a name="cl-808"></a>  author = {{Object Management Group}},
+<a name="cl-809"></a>  title = {{OMG CORBA/IIOP} Specifications},
+<a name="cl-810"></a>  howpublished = {\url{http://www.omg.org/technology/documents/corba_spec_catalog.htm}},
+<a name="cl-811"></a>  owner = {maas},
+<a name="cl-812"></a>  timestamp = {2009.04.23},
+<a name="cl-813"></a>  url = {http://www.omg.org/technology/documents/corba_spec_catalog.htm}
+<a name="cl-814"></a>}
+<a name="cl-815"></a>
+<a name="cl-816"></a>@MISC{IDL-Mapping-Website,
+<a name="cl-817"></a>  author = {{Object Management Group}},
+<a name="cl-818"></a>  title = {{OMG IDL} / Language Mappings Specifications},
+<a name="cl-819"></a>  howpublished = {\url{http://www.omg.org/technology/documents/idl2x_spec_catalog.htm}},
+<a name="cl-820"></a>  owner = {maas},
+<a name="cl-821"></a>  timestamp = {2009.04.23},
+<a name="cl-822"></a>  url = {http://www.omg.org/technology/documents/idl2x_spec_catalog.htm}
+<a name="cl-823"></a>}
+<a name="cl-824"></a>
+<a name="cl-825"></a>@MISC{ObjectDomain-Website,
+<a name="cl-826"></a>  author = {{ObjectDomain Systems}},
+<a name="cl-827"></a>  title = {{ObjectDomain}},
+<a name="cl-828"></a>  howpublished = {\url{http://www.objectdomain.com}},
+<a name="cl-829"></a>  owner = {maas},
+<a name="cl-830"></a>  timestamp = {2009.04.20},
+<a name="cl-831"></a>  url = {http://www.objectdomain.com/}
+<a name="cl-832"></a>}
+<a name="cl-833"></a>
+<a name="cl-834"></a>@BOOK{OrfaliHE99,
+<a name="cl-835"></a>  title = {The Essential Client/Server Survival Guide},
+<a name="cl-836"></a>  publisher = {Wiley},
+<a name="cl-837"></a>  year = {1999},
+<a name="cl-838"></a>  author = {Robert Orfali and Dan Harkey and Jeri Edwards},
+<a name="cl-839"></a>  edition = {3rd},
+<a name="cl-840"></a>  keywords = {CORBA},
+<a name="cl-841"></a>  owner = {maas},
+<a name="cl-842"></a>  timestamp = {2009.04.23}
+<a name="cl-843"></a>}
+<a name="cl-844"></a>
+<a name="cl-845"></a>@MISC{Python,
+<a name="cl-846"></a>  author = {Python},
+<a name="cl-847"></a>  title = {Python Website},
+<a name="cl-848"></a>  howpublished = {\url{http://www.python.org}},
+<a name="cl-849"></a>  owner = {maas},
+<a name="cl-850"></a>  timestamp = {2009.04.17},
+<a name="cl-851"></a>  url = {http://www.python.org}
+<a name="cl-852"></a>}
+<a name="cl-853"></a>
+<a name="cl-854"></a>@MISC{qftest-Website,
+<a name="cl-855"></a>  author = {{Quality First Software GmbH}},
+<a name="cl-856"></a>  title = {{QF-Test}},
+<a name="cl-857"></a>  howpublished = {\url{http://www.qfs.de/en/qftest}},
+<a name="cl-858"></a>  owner = {maas},
+<a name="cl-859"></a>  timestamp = {2009.04.17},
+<a name="cl-860"></a>  url = {http://www.qfs.de/en/qftest}
+<a name="cl-861"></a>}
+<a name="cl-862"></a>
+<a name="cl-863"></a>@INPROCEEDINGS{RigoP06,
+<a name="cl-864"></a>  author = {Armin Rigo and Samuele Pedroni},
+<a name="cl-865"></a>  title = {{PyPy&#39;s} Approach to Virtual Machine Construction},
+<a name="cl-866"></a>  booktitle = {OOPSLA &#39;06: Companion to the 21st ACM SIGPLAN symposium on Object-oriented
+<a name="cl-867"></a>        programming systems, languages, and applications},
+<a name="cl-868"></a>  year = {2006},
+<a name="cl-869"></a>  pages = {944--953},
+<a name="cl-870"></a>  address = {New York, NY, USA},
+<a name="cl-871"></a>  publisher = {ACM},
+<a name="cl-872"></a>  abstract = {The PyPy project seeks to prove both on a research and a practical
+<a name="cl-873"></a>        level the feasibility of constructing a virtual machine (VM) for
+<a name="cl-874"></a>        a dynamic language in a dynamic language - in this case, Python.
+<a name="cl-875"></a>        The aim is to translate (i.e. compile) the VM to arbitrary target
+<a name="cl-876"></a>        environments, ranging in level from C/Posix to Smalltalk/Squeak via
+<a name="cl-877"></a>        Java and CLI/.NET, while still being of reasonable efficiency within
+<a name="cl-878"></a>        these environments.A key tool to achieve this goal is the systematic
+<a name="cl-879"></a>        reuse of the Python language as a system programming language at
+<a name="cl-880"></a>        various levels of our architecture and translation process. For each
+<a name="cl-881"></a>        level, we design a corresponding type system and apply a generic
+<a name="cl-882"></a>        type inference engine - for example, the garbage collector is written
+<a name="cl-883"></a>        in a style that manipulates simulated pointer and address objects,
+<a name="cl-884"></a>        and when translated to C these operations become C-level pointer
+<a name="cl-885"></a>        and address instructions.},
+<a name="cl-886"></a>  doi = {10.1145/1176617.1176753},
+<a name="cl-887"></a>  keywords = {Python, PyPy},
+<a name="cl-888"></a>  owner = {maas},
+<a name="cl-889"></a>  timestamp = {2009.04.17},
+<a name="cl-890"></a>  url = {http://portal.acm.org/citation.cfm?id=1176753}
+<a name="cl-891"></a>}
+<a name="cl-892"></a>
+<a name="cl-893"></a>@ARTICLE{Romberg02,
+<a name="cl-894"></a>  author = {Mathilde Romberg},
+<a name="cl-895"></a>  title = {The {UNICORE} Grid infrastructure},
+<a name="cl-896"></a>  journal = {Scientific Programming archive},
+<a name="cl-897"></a>  year = {2002},
+<a name="cl-898"></a>  volume = {10},
+<a name="cl-899"></a>  pages = {149-157},
+<a name="cl-900"></a>  owner = {tm226479},
+<a name="cl-901"></a>  timestamp = {2009.04.29}
+<a name="cl-902"></a>}
+<a name="cl-903"></a>
+<a name="cl-904"></a>@MISC{vanRossumPythonJava,
+<a name="cl-905"></a>  author = {Guido van Rossum},
+<a name="cl-906"></a>  title = {{Java} and {Python}: a perfect couple},
+<a name="cl-907"></a>  howpublished = {\url{http://www.developer.com/java/ent/article.php/604041}},
+<a name="cl-908"></a>  keywords = {Python, Java},
+<a name="cl-909"></a>  owner = {maas},
+<a name="cl-910"></a>  timestamp = {2009.04.17},
+<a name="cl-911"></a>  url = {http://www.developer.com/java/ent/article.php/604041}
+<a name="cl-912"></a>}
+<a name="cl-913"></a>
+<a name="cl-914"></a>@MISC{ZSI,
+<a name="cl-915"></a>  author = {Rich Salz},
+<a name="cl-916"></a>  title = {{ZSI}: The {Zolera SOAP} Infrastructure},
+<a name="cl-917"></a>  howpublished = {\url{http://pywebsvcs.sourceforge.net/zsi.html}},
+<a name="cl-918"></a>  owner = {berg_hn},
+<a name="cl-919"></a>  timestamp = {2009.04.23},
+<a name="cl-920"></a>  url = {http://pywebsvcs.sourceforge.net/zsi.html}
+<a name="cl-921"></a>}
+<a name="cl-922"></a>
+<a name="cl-923"></a>@MASTERSTHESIS{Schlauch06,
+<a name="cl-924"></a>  author = {Tobias Schlauch},
+<a name="cl-925"></a>  title = {Anbindung von Grid-Speichertechnologien an die Datenmanagement-Software
+<a name="cl-926"></a>        DataFinder},
+<a name="cl-927"></a>  school = {Leibniz Universit�t Hannover},
+<a name="cl-928"></a>  year = {2006},
+<a name="cl-929"></a>  month = {10},
+<a name="cl-930"></a>  owner = {maas},
+<a name="cl-931"></a>  timestamp = {2007.10.20}
+<a name="cl-932"></a>}
+<a name="cl-933"></a>
+<a name="cl-934"></a>@INPROCEEDINGS{SchlauchS07,
+<a name="cl-935"></a>  author = {Tobias Schlauch and Andreas Schreiber},
+<a name="cl-936"></a>  title = {DataFinder -� A Scientific Data Management Solution},
+<a name="cl-937"></a>  booktitle = {Ensuring the Long-Term Preservation and Value Adding to Scientific
+<a name="cl-938"></a>        and Technical Data, PV 2007, Oberpfaffenhofen, Germany},
+<a name="cl-939"></a>  year = {2007},
+<a name="cl-940"></a>  abstract = {The data management system DataFinder primarily targets the management
+<a name="cl-941"></a>        of scientific technical data. Data can be attached with individual
+<a name="cl-942"></a>        meta data that is based on a free-definable hierarchical data model
+<a name="cl-943"></a>        to achieve data structuring and ordering. Moreover, the system is
+<a name="cl-944"></a>        able to handle large amounts of data and can be easily integrated
+<a name="cl-945"></a>        in existing working environments.
+<a name="cl-946"></a>        
+<a name="cl-947"></a>        The purpose of this paper is to present the key concepts of the DataFinder
+<a name="cl-948"></a>        as well as current and future usage scenarios. In addition, the paper
+<a name="cl-949"></a>        shows the extension of the existing architecture to integrate the
+<a name="cl-950"></a>        Grid transport protocol GridFTP and the archiving system Tivoli Storage
+<a name="cl-951"></a>        Manager (TSM) which leads in a general Grid-enabled data management
+<a name="cl-952"></a>        application that is capable of handling distributed storage resources
+<a name="cl-953"></a>        and archives.},
+<a name="cl-954"></a>  owner = {maas},
+<a name="cl-955"></a>  timestamp = {2007.10.20},
+<a name="cl-956"></a>  url = {http://www.pv2007.dlr.de/}
+<a name="cl-957"></a>}
+<a name="cl-958"></a>
+<a name="cl-959"></a>@CONFERENCE{Schroedter08,
+<a name="cl-960"></a>  author = {Sandra Schr\&quot;{o}dter and Thomas Gosch},
+<a name="cl-961"></a>  title = {{SESIS} - Ship Design and Simulation System},
+<a name="cl-962"></a>  booktitle = {7th International Conference on Computer and IT Applications in the
+<a name="cl-963"></a>        Maritime Industries},
+<a name="cl-964"></a>  year = {2008},
+<a name="cl-965"></a>  pages = {163.174},
+<a name="cl-966"></a>  owner = {tm226479},
+<a name="cl-967"></a>  timestamp = {2009.04.29}
+<a name="cl-968"></a>}
+<a name="cl-969"></a>
+<a name="cl-970"></a>@INPROCEEDINGS{Schreiber04,
+<a name="cl-971"></a>  author = {Andreas Schreiber},
+<a name="cl-972"></a>  title = {Automatic Generation of Wrapper Code and Test Scripts for Problem
+<a name="cl-973"></a>        Solving Environments},
+<a name="cl-974"></a>  booktitle = {Applied Parallel Computing, State of the Art in Scientific Computing,
+<a name="cl-975"></a>        7th International Workshop, PARA 2004, Lyngby, Denmark},
+<a name="cl-976"></a>  year = {2006},
+<a name="cl-977"></a>  editor = {Jack Dongarra and Kaj Madsen and Jerzy Wasniewski},
+<a name="cl-978"></a>  volume = {3732},
+<a name="cl-979"></a>  series = {Lecture Notes in Computer Science},
+<a name="cl-980"></a>  pages = {680-689},
+<a name="cl-981"></a>  publisher = {Springer},
+<a name="cl-982"></a>  doi = {10.1007/11558958_82},
+<a name="cl-983"></a>  owner = {maas},
+<a name="cl-984"></a>  timestamp = {2007.10.20}
+<a name="cl-985"></a>}
+<a name="cl-986"></a>
+<a name="cl-987"></a>@ARTICLE{Schreiber02,
+<a name="cl-988"></a>  author = {Andreas Schreiber},
+<a name="cl-989"></a>  title = {The Integrated Simulation Environment {TENT}},
+<a name="cl-990"></a>  journal = {Concurrency and Computation: Practice and Experience},
+<a name="cl-991"></a>  year = {2002},
+<a name="cl-992"></a>  volume = {14},
+<a name="cl-993"></a>  pages = {1553-1568},
+<a name="cl-994"></a>  number = {13-15},
+<a name="cl-995"></a>  abstract = {This paper describes recent development efforts on the integrated
+<a name="cl-996"></a>        simulation environment TENT. TENT is a component-based software integration
+<a name="cl-997"></a>        and workflow management system using the capabilities of CORBA and
+<a name="cl-998"></a>        Java. It is used to integrate the applications required to form complex
+<a name="cl-999"></a>        workflows, which are typical of multidisciplinary simulations in
+<a name="cl-1000"></a>        engineering, in which different simulation codes have to be coupled.
+<a name="cl-1001"></a>        
+<a name="cl-1002"></a>        We present here our work in integrating TENT with the Globus Toolkit
+<a name="cl-1003"></a>        to create a Grid computing environment. The Java Commodity Grid Toolkit
+<a name="cl-1004"></a>        has been especially useful for this work.},
+<a name="cl-1005"></a>  doi = {10.1002/cpe.676},
+<a name="cl-1006"></a>  file = {PDFSTART:http\://www3.interscience.wiley.com/cgi-bin/fulltext/102522463/PDFSTART:PDF},
+<a name="cl-1007"></a>  keywords = {Grid computing, component-based software, problem solving environment,
+<a name="cl-1008"></a>        CORBA},
+<a name="cl-1009"></a>  owner = {maas},
+<a name="cl-1010"></a>  timestamp = {2007.10.14},
+<a name="cl-1011"></a>  url = {http://www3.interscience.wiley.com/cgi-bin/abstract/102522463/ABSTRACT}
+<a name="cl-1012"></a>}
+<a name="cl-1013"></a>
+<a name="cl-1014"></a>@ARTICLE{SchreiberMK05,
+<a name="cl-1015"></a>  author = {Andreas Schreiber and Thijs Metsch and Hans-Peter Kersken},
+<a name="cl-1016"></a>  title = {A problem solving environment for multidisciplinary coupled simulations
+<a name="cl-1017"></a>        in computational grids},
+<a name="cl-1018"></a>  journal = {Future Generation Computer Systems},
+<a name="cl-1019"></a>  year = {2005},
+<a name="cl-1020"></a>  volume = {21},
+<a name="cl-1021"></a>  pages = {942-952},
+<a name="cl-1022"></a>  number = {6},
+<a name="cl-1023"></a>  doi = {10.1016/j.future.2003.10.009},
+<a name="cl-1024"></a>  owner = {maas},
+<a name="cl-1025"></a>  timestamp = {2007.10.20}
+<a name="cl-1026"></a>}
+<a name="cl-1027"></a>
+<a name="cl-1028"></a>@INPROCEEDINGS{SchaeferMEG03,
+<a name="cl-1029"></a>  author = {Roger Sch�fer and Andreas Mack and Burkard Esser and Ali G�lhan},
+<a name="cl-1030"></a>  title = {Fluid-Structure Interaction on a generic Model of a Reentry Vehicle
+<a name="cl-1031"></a>        Nosecap},
+<a name="cl-1032"></a>  booktitle = {5th International Congress on Thermal Stresses, Blacksburg, Virginia},
+<a name="cl-1033"></a>  year = {2003},
+<a name="cl-1034"></a>  abstract = {The present investigation is aimed to improve the efficiency of the
+<a name="cl-1035"></a>        design of thermal protection systems (TPS) and hot structures of
+<a name="cl-1036"></a>        reentry vehicles. Radiation equilibrium simulations with an unstructured
+<a name="cl-1037"></a>        fluid solver (TAU) as well as coupled solutions with a structural
+<a name="cl-1038"></a>        finite element solver (ANSYS) taking into account thermal and thermomechanical
+<a name="cl-1039"></a>        coupling were performed and compared with experimental data of a
+<a name="cl-1040"></a>        generic model of a reentry vehicle nosecap region. Regarding the
+<a name="cl-1041"></a>        stagnation point temperature strong coupling effects due to the influence
+<a name="cl-1042"></a>        of the material properties was observed. Also the deformation of
+<a name="cl-1043"></a>        the structure induced by the temperature and the aerodynamic surface
+<a name="cl-1044"></a>        pressure was calculated. The results for temperature and deformation
+<a name="cl-1045"></a>        match well with experimental data. Finally, it was shown that the
+<a name="cl-1046"></a>        coupled fluid-structure simulation can contribute significantly to
+<a name="cl-1047"></a>        increase the efficiency of the design of TPS and hot structures of
+<a name="cl-1048"></a>        reentry vehicles.},
+<a name="cl-1049"></a>  owner = {maas},
+<a name="cl-1050"></a>  timestamp = {2007.10.20},
+<a name="cl-1051"></a>  url = {http://elib.dlr.de/15094/}
+<a name="cl-1052"></a>}
+<a name="cl-1053"></a>
+<a name="cl-1054"></a>@INPROCEEDINGS{SchuetteEMSMK03,
+<a name="cl-1055"></a>  author = {Andreas Sch�tte and Gunnar Einarsson and Aziz Madrane and Britta
+<a name="cl-1056"></a>        Sch�ning and Wulf M�nnich and Wolf Kr�ger},
+<a name="cl-1057"></a>  title = {Numerical Simulation of Manoeuvring Aircraft by Aerodynamic and Flight-Mechanic
+<a name="cl-1058"></a>        Coupling},
+<a name="cl-1059"></a>  booktitle = {RTO/AVT Symposium on Reduction of Military Vehicle Aquisition Time
+<a name="cl-1060"></a>        and Cost through Advanced Modeling and Virtual Product Simulation,
+<a name="cl-1061"></a>        Paris, RTO/NATO},
+<a name="cl-1062"></a>  year = {2003},
+<a name="cl-1063"></a>  volume = {89},
+<a name="cl-1064"></a>  series = {RTO MEETING PROCEEDINGS},
+<a name="cl-1065"></a>  organization = {NATO Research and Technology Organisation},
+<a name="cl-1066"></a>  owner = {maas},
+<a name="cl-1067"></a>  timestamp = {2007.10.20},
+<a name="cl-1068"></a>  url = {http://www.rta.nato.int/pubs/rdp.asp?RDP=RTO-MP-089}
+<a name="cl-1069"></a>}
+<a name="cl-1070"></a>
+<a name="cl-1071"></a>@INPROCEEDINGS{SchuetteERSMNAAHFS05,
+<a name="cl-1072"></a>  author = {Andreas Sch�tte and Gunnar Einarsson and Axel Raichle and Britta
+<a name="cl-1073"></a>        Sch�ning and Wulf M�nnich and Jens Neumann and J�rgen Arnold and
+<a name="cl-1074"></a>        Thomas Alrutz and J�rg Heinecke and Tomas Forkert and Holger Schumann},
+<a name="cl-1075"></a>  title = {Prediction of the Unsteady Behavior of Maneuvering Aircraft by CFD
+<a name="cl-1076"></a>        Aerodynamic, Flight-Mechanic and Aeroelastic Coupling},
+<a name="cl-1077"></a>  booktitle = {RTO/AVT Symposium on Flow-Induced Unsteady Loads and the Impact on
+<a name="cl-1078"></a>        Military Applications},
+<a name="cl-1079"></a>  year = {2005},
+<a name="cl-1080"></a>  volume = {123},
+<a name="cl-1081"></a>  series = {RTO MEETING PROCEEDINGS},
+<a name="cl-1082"></a>  organization = {NATO Research and Technology Organisation},
+<a name="cl-1083"></a>  abstract = {An overview about recent results of the DLR-Project SikMa-&quot;Simulation
+<a name="cl-1084"></a>        of Complex Maneuvers&quot; is presented. The objective of the SikMa-Project
+<a name="cl-1085"></a>        is to develop a numerical tool to simulate the unsteady aerodynamics
+<a name="cl-1086"></a>        of a free flying aeroelastic combat aircraft, by use of coupled aerodynamic,
+<a name="cl-1087"></a>        flight-mechanic and aeroelastic computations. To achieve this objective,
+<a name="cl-1088"></a>        the unstructured, time-accurate flow-solver TAU is coupled with a
+<a name="cl-1089"></a>        computational module solving the flight-mechanic equations of motion
+<a name="cl-1090"></a>        and a structural mechanics code determining the structural deformations.
+<a name="cl-1091"></a>        By use of an overlapping grid technique (chimera), simulations of
+<a name="cl-1092"></a>        a complex configuration with movable control-surfaces are possible.},
+<a name="cl-1093"></a>  owner = {maas},
+<a name="cl-1094"></a>  timestamp = {2008.01.09},
+<a name="cl-1095"></a>  url = {http://www.rta.nato.int/Pubs/RDP.asp?RDP=RTO-MP-AVT-123}
+<a name="cl-1096"></a>}
+<a name="cl-1097"></a>
+<a name="cl-1098"></a>@INPROCEEDINGS{SchuetteERSONAMF07,
+<a name="cl-1099"></a>  author = {Andreas Sch�tte and Gunnar Einarsson and Axel Raichle and Britta
+<a name="cl-1100"></a>        Sch�ning and Matthias Orlt and Jens Neumann and J�rgen Arnold and
+<a name="cl-1101"></a>        Wulf M�nnich and Tomas Forkert},
+<a name="cl-1102"></a>  title = {Numerical Simulation of Maneuvering Aircraft by Aerodynamic, Flight
+<a name="cl-1103"></a>        Mechanics and Structural Mechanics Coupling},
+<a name="cl-1104"></a>  booktitle = {45th AIAA Aerospace Sciences Meeting and Exhibit},
+<a name="cl-1105"></a>  year = {2007},
+<a name="cl-1106"></a>  volume = {AIAA 2007-1070},
+<a name="cl-1107"></a>  address = {Reno, Nevada},
+<a name="cl-1108"></a>  month = {January},
+<a name="cl-1109"></a>  publisher = {AIAA},
+<a name="cl-1110"></a>  abstract = {Selected results of the DLR Project SikMa-&quot;Simulation of Complex Maneuvers&quot;
+<a name="cl-1111"></a>        are presented. The objective of the SikMa Project is to develop and
+<a name="cl-1112"></a>        validate a numerical tool to simulate the unsteady aerodynamics of
+<a name="cl-1113"></a>        a free flying aeroelastic combat aircraft, by use of coupled aerodynamic,
+<a name="cl-1114"></a>        flight mechanics and aeroelastic computations. To achieve this objective,
+<a name="cl-1115"></a>        the unstructured, time-accurate flow-solver TAU is coupled with a
+<a name="cl-1116"></a>        computational module solving the flight mechanics equations of motion
+<a name="cl-1117"></a>        and a structural mechanics code determining the structural deformations.
+<a name="cl-1118"></a>        The numerical results are validated by experimental data. For this
+<a name="cl-1119"></a>        purpose several specific wind tunnel experiments with different wind
+<a name="cl-1120"></a>        tunnel models are carried out.},
+<a name="cl-1121"></a>  owner = {maas},
+<a name="cl-1122"></a>  timestamp = {2007.12.31}
+<a name="cl-1123"></a>}
+<a name="cl-1124"></a>
+<a name="cl-1125"></a>@INPROCEEDINGS{SchuetteESAMNH04,
+<a name="cl-1126"></a>  author = {Andreas Sch�tte and Gunnar Einarsson and Britta Sch�ning and Thomas
+<a name="cl-1127"></a>        Alrutz and Wulf M�nnich and Jens Neumann and J�rg Heinecke},
+<a name="cl-1128"></a>  title = {Numerical simulation of maneuvering combat aircraft},
+<a name="cl-1129"></a>  booktitle = {14th DGLR Symposium of STAB},
+<a name="cl-1130"></a>  year = {2004},
+<a name="cl-1131"></a>  series = {Notes on Numerical Fluid Mechanics and Multidisciplinary Design},
+<a name="cl-1132"></a>  publisher = {Springer-Verlag},
+<a name="cl-1133"></a>  abstract = {An overview about recent results of the DLR-Project SikMa-&quot;Simulation
+<a name="cl-1134"></a>        of Complex Maneuvers&quot; is presented. The objective of the SikMa-Project
+<a name="cl-1135"></a>        is to develop a numerical tool to simulate the unsteady aerodynamics
+<a name="cl-1136"></a>        of a free flying aeroelastic combat aircraft, by use of coupled aerodynamic,
+<a name="cl-1137"></a>        flight-mechanic and aeroelastic computations. To achieve this objective,
+<a name="cl-1138"></a>        the unstructured, time accurate flow-solver TAU is coupled with a
+<a name="cl-1139"></a>        computational module solving the flight-mechanic equations of motion
+<a name="cl-1140"></a>        and a structural mechanics code determining the structural deformations.
+<a name="cl-1141"></a>        By use of an overlapping grid technique (chimera), simulations of
+<a name="cl-1142"></a>        a complex configuration with movable control-surfaces are possible.},
+<a name="cl-1143"></a>  keywords = {Maneuver, time-accurate, coupling, SikMa, TAU, Chimera, CFD, Aeroelastic,
+<a name="cl-1144"></a>        Flight-Mechanics},
+<a name="cl-1145"></a>  owner = {maas},
+<a name="cl-1146"></a>  timestamp = {2007.10.20}
+<a name="cl-1147"></a>}
+<a name="cl-1148"></a>
+<a name="cl-1149"></a>@MISC{SESIS,
+<a name="cl-1150"></a>  author = {SESIS},
+<a name="cl-1151"></a>  title = {Schiffsentwurf- und Simulationssystem Website},
+<a name="cl-1152"></a>  howpublished = {\url{http://www.sesis.de}},
+<a name="cl-1153"></a>  owner = {tm226479},
+<a name="cl-1154"></a>  timestamp = {2009.04.29},
+<a name="cl-1155"></a>  url = {http://www.sesis.de}
+<a name="cl-1156"></a>}
+<a name="cl-1157"></a>
+<a name="cl-1158"></a>@MISC{Java,
+<a name="cl-1159"></a>  author = {{Sun Microsystems, Inc.}},
+<a name="cl-1160"></a>  title = {Java Website},
+<a name="cl-1161"></a>  howpublished = {\url{http://java.sun.com/}},
+<a name="cl-1162"></a>  owner = {maas},
+<a name="cl-1163"></a>  timestamp = {2009.04.17},
+<a name="cl-1164"></a>  url = {http://java.sun.com}
+<a name="cl-1165"></a>}
+<a name="cl-1166"></a>
+<a name="cl-1167"></a>@MISC{JAXB-Website,
+<a name="cl-1168"></a>  author = {{Sun Microsystems, Inc.}},
+<a name="cl-1169"></a>  title = {Java Architecture for {XML} Bindings Website},
+<a name="cl-1170"></a>  howpublished = {\url{http://java.sun.com/developer/technicalArticles/WebServices/jaxb/}},
+<a name="cl-1171"></a>  owner = {tm226479},
+<a name="cl-1172"></a>  timestamp = {2009.04.29},
+<a name="cl-1173"></a>  url = {http://java.sun.com/developer/technicalArticles/WebServices/jaxb/}
+<a name="cl-1174"></a>}
+<a name="cl-1175"></a>
+<a name="cl-1176"></a>@MISC{JNA-Website,
+<a name="cl-1177"></a>  author = {{Sun Microsystems, Inc.}},
+<a name="cl-1178"></a>  title = {Java Native Access ({JNA}) Website},
+<a name="cl-1179"></a>  howpublished = {\url{https://jna.dev.java.net/}},
+<a name="cl-1180"></a>  owner = {tm226479},
+<a name="cl-1181"></a>  timestamp = {2009.04.29},
+<a name="cl-1182"></a>  url = {https://jna.dev.java.net/}
+<a name="cl-1183"></a>}
+<a name="cl-1184"></a>
+<a name="cl-1185"></a>@MISC{JNI-Website,
+<a name="cl-1186"></a>  author = {{Sun Microsystems, Inc.}},
+<a name="cl-1187"></a>  title = {Java Native Interface ({JNI}) Specification},
+<a name="cl-1188"></a>  howpublished = {\url{http://java.sun.com/javase/6/docs/technotes/guides/jni/}},
+<a name="cl-1189"></a>  owner = {maas},
+<a name="cl-1190"></a>  timestamp = {2009.04.17},
+<a name="cl-1191"></a>  url = {http://java.sun.com/javase/6/docs/technotes/guides/jni/}
+<a name="cl-1192"></a>}
+<a name="cl-1193"></a>
+<a name="cl-1194"></a>@MISC{RMI-Website,
+<a name="cl-1195"></a>  author = {{Sun Microsystems, Inc.}},
+<a name="cl-1196"></a>  title = {Remote Method Invocation ({RMI}) Website},
+<a name="cl-1197"></a>  howpublished = {\url{http://java.sun.com/javase/technologies/core/basic/rmi/index.jsp}},
+<a name="cl-1198"></a>  owner = {tm226479},
+<a name="cl-1199"></a>  timestamp = {2009.04.29},
+<a name="cl-1200"></a>  url = {http://java.sun.com/javase/technologies/core/basic/rmi/index.jsp}
+<a name="cl-1201"></a>}
+<a name="cl-1202"></a>
+<a name="cl-1203"></a>@MISC{APACHEXMLRPC,
+<a name="cl-1204"></a>  author = {{The Apache Software Foundation}},
+<a name="cl-1205"></a>  title = {{Apache XML-RPC}},
+<a name="cl-1206"></a>  howpublished = {\url{http://ws.apache.org/xmlrpc/}},
+<a name="cl-1207"></a>  owner = {berg_hn},
+<a name="cl-1208"></a>  timestamp = {2009.04.23},
+<a name="cl-1209"></a>  url = {http://ws.apache.org/xmlrpc/}
+<a name="cl-1210"></a>}
+<a name="cl-1211"></a>
+<a name="cl-1212"></a>@MISC{Axis2,
+<a name="cl-1213"></a>  author = {{The Apache Software Foundation}},
+<a name="cl-1214"></a>  title = {Apache Axis2/Java - Next Generation Web Services},
+<a name="cl-1215"></a>  howpublished = {\url{http://ws.apache.org/axis2/}},
+<a name="cl-1216"></a>  owner = {berg_hn},
+<a name="cl-1217"></a>  timestamp = {2009.04.23},
+<a name="cl-1218"></a>  url = {http://ws.apache.org/axis2/}
+<a name="cl-1219"></a>}
+<a name="cl-1220"></a>
+<a name="cl-1221"></a>@MISC{CXF,
+<a name="cl-1222"></a>  author = {{The Apache Software Foundation}},
+<a name="cl-1223"></a>  title = {Apache CXF: An Open Source Service Framework},
+<a name="cl-1224"></a>  howpublished = {\url{http://cxf.apache.org/}},
+<a name="cl-1225"></a>  owner = {berg_hn},
+<a name="cl-1226"></a>  timestamp = {2009.04.23},
+<a name="cl-1227"></a>  url = {http://cxf.apache.org/}
+<a name="cl-1228"></a>}
+<a name="cl-1229"></a>
+<a name="cl-1230"></a>@MISC{JCC-Website,
+<a name="cl-1231"></a>  author = {{The Apache Software Foundation}},
+<a name="cl-1232"></a>  title = {JCC},
+<a name="cl-1233"></a>  howpublished = {\url{http://lucene.apache.org/pylucene/jcc}},
+<a name="cl-1234"></a>  owner = {maas},
+<a name="cl-1235"></a>  timestamp = {2009.04.17},
+<a name="cl-1236"></a>  url = {http://lucene.apache.org/pylucene/jcc}
+<a name="cl-1237"></a>}
+<a name="cl-1238"></a>
+<a name="cl-1239"></a>@MISC{PyLucene-Website,
+<a name="cl-1240"></a>  author = {{The Apache Software Foundation}},
+<a name="cl-1241"></a>  title = {{PyLucene}},
+<a name="cl-1242"></a>  howpublished = {\url{http://lucene.apache.org/pylucene}},
+<a name="cl-1243"></a>  owner = {maas},
+<a name="cl-1244"></a>  timestamp = {2009.04.17},
+<a name="cl-1245"></a>  url = {http://lucene.apache.org/pylucene/}
+<a name="cl-1246"></a>}
+<a name="cl-1247"></a>
+<a name="cl-1248"></a>@MISC{Jython-Website,
+<a name="cl-1249"></a>  author = {{The Jython Project}},
+<a name="cl-1250"></a>  title = {Jython Website},
+<a name="cl-1251"></a>  howpublished = {\url{http://www.jython.org}},
+<a name="cl-1252"></a>  abstract = {Jython is an implementation of the high-level, dynamic, object-oriented
+<a name="cl-1253"></a>        language Python written in 100% Pure Java, and seamlessly integrated
+<a name="cl-1254"></a>        with the Java platform. It thus allows you to run Python on any Java
+<a name="cl-1255"></a>        platform.},
+<a name="cl-1256"></a>  owner = {maas},
+<a name="cl-1257"></a>  timestamp = {2007.10.21},
+<a name="cl-1258"></a>  url = {http://www.jython.org}
+<a name="cl-1259"></a>}
+<a name="cl-1260"></a>
+<a name="cl-1261"></a>@MISC{Tiobe-Index-Website,
+<a name="cl-1262"></a>  author = {{TIOBE Software BV}},
+<a name="cl-1263"></a>  title = {{TIOBE} Programming Community Index},
+<a name="cl-1264"></a>  howpublished = {\url{http://www.tiobe.com/tiobe_index}},
+<a name="cl-1265"></a>  owner = {maas},
+<a name="cl-1266"></a>  timestamp = {2009.04.20},
+<a name="cl-1267"></a>  url = {http://www.tiobe.com/index.php/content/paperinfo/tpci}
+<a name="cl-1268"></a>}
+<a name="cl-1269"></a>
+<a name="cl-1270"></a>@MISC{XMLRPC,
+<a name="cl-1271"></a>  author = {Dave Winer},
+<a name="cl-1272"></a>  title = {{XML-RPC} Specification},
+<a name="cl-1273"></a>  howpublished = {\url{http://www.xmlrpc.com/spec}},
+<a name="cl-1274"></a>  owner = {berg_hn},
+<a name="cl-1275"></a>  timestamp = {2009.04.23},
+<a name="cl-1276"></a>  url = {http://www.xmlrpc.com/spec}
+<a name="cl-1277"></a>}
+<a name="cl-1278"></a>
+<a name="cl-1279"></a>@BOOK{FosterK03,
+<a name="cl-1280"></a>  title = {The Grid 2: Blueprint for a New Computing Infrastructure},
+<a name="cl-1281"></a>  publisher = {Morgan Kaufmann},
+<a name="cl-1282"></a>  year = {2003},
+<a name="cl-1283"></a>  editor = {Ian Foster and Carl Kesselman},
+<a name="cl-1284"></a>  pages = {748},
+<a name="cl-1285"></a>  edition = {2nd},
+<a name="cl-1286"></a>  owner = {maas},
+<a name="cl-1287"></a>  timestamp = {2008.01.01}
+<a name="cl-1288"></a>}
+<a name="cl-1289"></a>
+<a name="cl-1290"></a>@BOOK{beautiful_arch,
+<a name="cl-1291"></a>  title = {Beautiful Architecture - Leading Thinkers Reveal the Hidden Beauty
+<a name="cl-1292"></a>        in Software Design},
+<a name="cl-1293"></a>  publisher = {O&#39;Reilly},
+<a name="cl-1294"></a>  year = {2009},
+<a name="cl-1295"></a>  editor = {Diomidis Spinellis and Georgios Gousios},
+<a name="cl-1296"></a>  owner = {tm226479},
+<a name="cl-1297"></a>  timestamp = {2009.06.03}
+<a name="cl-1298"></a>}
+<a name="cl-1299"></a>
+<a name="cl-1300"></a>@STANDARD{BPEL-Specification,
+<a name="cl-1301"></a>  title = {Web Services Business Process Execution Language ({WS-BPEL})},
+<a name="cl-1302"></a>  organization = {OASIS},
+<a name="cl-1303"></a>  institution = {OASIS},
+<a name="cl-1304"></a>  howpublished = {\url{http://docs.oasis-open.org/wsbpel/2.0/OS/wsbpel-v2.0-OS.html}},
+<a name="cl-1305"></a>  revision = {Version 2.0},
+<a name="cl-1306"></a>  year = {2007},
+<a name="cl-1307"></a>  url = {http://docs.oasis-open.org/wsbpel/2.0/OS/wsbpel-v2.0-OS.html},
+<a name="cl-1308"></a>  owner = {tm226479},
+<a name="cl-1309"></a>  timestamp = {2009.04.29}
+<a name="cl-1310"></a>}
+<a name="cl-1311"></a>
+<a name="cl-1312"></a>@STANDARD{OSGi-Specification,
+<a name="cl-1313"></a>  title = {{OSGI} Service Platform Core Specification},
+<a name="cl-1314"></a>  organization = {OSGi Alliance},
+<a name="cl-1315"></a>  institution = {OSGi Alliance},
+<a name="cl-1316"></a>  howpublished = {\url{http://www.osgi.org}},
+<a name="cl-1317"></a>  revision = {Release 4, Version 4.1},
+<a name="cl-1318"></a>  month = {April},
+<a name="cl-1319"></a>  year = {2007},
+<a name="cl-1320"></a>  url = {http://www.osgi.org},
+<a name="cl-1321"></a>  owner = {tm226479},
+<a name="cl-1322"></a>  timestamp = {2009.04.29}
+<a name="cl-1323"></a>}
+<a name="cl-1324"></a>
+<a name="cl-1325"></a>@STANDARD{SOAP,
+<a name="cl-1326"></a>  title = {Simple Object Access Protocol ({SOAP}) Specifications},
+<a name="cl-1327"></a>  organization = {W3C},
+<a name="cl-1328"></a>  institution = {W3C},
+<a name="cl-1329"></a>  howpublished = {\url{http://www.w3.org/TR/soap/}},
+<a name="cl-1330"></a>  revision = {Version 1.2},
+<a name="cl-1331"></a>  month = {April},
+<a name="cl-1332"></a>  year = {2007},
+<a name="cl-1333"></a>  url = {http://www.w3.org/TR/soap/},
+<a name="cl-1334"></a>  owner = {tm226479},
+<a name="cl-1335"></a>  timestamp = {2009.04.29}
+<a name="cl-1336"></a>}
+<a name="cl-1337"></a>
+<a name="cl-1338"></a>@STANDARD{CORBA,
+<a name="cl-1339"></a>  title = {{OMG CORBA/IIOP} Specifications},
+<a name="cl-1340"></a>  organization = {{Object Management Group}},
+<a name="cl-1341"></a>  institution = {{Object Management Group}},
+<a name="cl-1342"></a>  howpublished = {\url{http://www.omg.org/docs/formal/04-03-12.pdf}},
+<a name="cl-1343"></a>  month = {March},
+<a name="cl-1344"></a>  year = {2004},
+<a name="cl-1345"></a>  url = {http://www.omg.org/docs/formal/04-03-12.pdf},
+<a name="cl-1346"></a>  owner = {tm226479},
+<a name="cl-1347"></a>  timestamp = {2009.04.29}
+<a name="cl-1348"></a>}
+<a name="cl-1349"></a>
+<a name="cl-1350"></a>@comment{jabref-meta: selector_publisher:ACM;Springer;}
+<a name="cl-1351"></a>
+<a name="cl-1352"></a>@comment{jabref-meta: selector_author:Achim Basermann;Anastasia Eifer;
+<a name="cl-1353"></a>Andreas Schreiber;Arne Bachmann;Christian Krause;Doreen Seider;Guy K. 
+<a name="cl-1354"></a>Kloss;Hans-Peter Kersken;Heinrich Wendel;Henning Bergmeyer;Jens R�hmko
+<a name="cl-1355"></a>rf;Klaus Wolf;Markus Kunde;Markus Litz;Martin Strietzel;Michael Meinel
+<a name="cl-1356"></a>;Roland Gude;Thijs Metsch;Tobias Schlauch;Tomas Forkert;}
+<a name="cl-1357"></a>
+<a name="cl-1358"></a>@comment{jabref-meta: selector_journal:}
+<a name="cl-1359"></a>
+<a name="cl-1360"></a>@comment{jabref-meta: selector_keywords:CORBA;grid computing;integrati
+<a name="cl-1361"></a>on;Java;provenance;Python;simulation;}
+</pre></div>
+</td></tr></table>
+    </div>
+  
+  </div>
+  
+
+
+
+      </div>
+    </div>
+
+  </div>
+
+  <div id="footer">
+    <ul id="footer-nav">
+      <li>Copyright © 2011 <a href="http://atlassian.com">Atlassian</a></li>
+      <li><a href="http://www.atlassian.com/hosted/terms.jsp">Terms of Service</a></li>
+      <li><a href="http://www.atlassian.com/about/privacy.jsp">Privacy</a></li>
+      <li><a href="//bitbucket.org/site/master/issues/new">Report a Bug to Bitbucket</a></li>
+      <li><a href="http://confluence.atlassian.com/x/IYBGDQ">API</a></li>
+      <li><a href="http://status.bitbucket.org/">Server Status</a></li>
+    </ul>
+    <ul id="social-nav">
+      <li class="blog"><a href="http://blog.bitbucket.org">Bitbucket Blog</a></li>
+      <li class="twitter"><a href="http://www.twitter.com/bitbucket">Twitter</a></li>
+    </ul>
+    <h5>We run</h5>
+    <ul id="technologies">
+      <li><a href="http://www.djangoproject.com/">Django 1.3.0</a></li>
+      <li><a href="//bitbucket.org/jespern/django-piston/">Piston 0.3dev</a></li>
+      <li><a href="http://www.selenic.com/mercurial/">Hg 1.8.2</a></li>
+      <li><a href="http://www.python.org">Python 2.7.2</a></li>
+      <li>r12427:b7404d13ceac | bitbucket03</li>
+    </ul>
+  </div>
+
+  <script src="https://dwz7u9t8u8usb.cloudfront.net/m/46c15ee9bc85/js/lib/global.js"></script>
+
+
+
+
+
+
+  <script>
+    BB.gaqPush(['_trackPageview']);
+  
+    BB.gaqPush(['atl._trackPageview']);
+
+    
+
+    
+
+    (function () {
+        var ga = document.createElement('script');
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        ga.setAttribute('async', 'true');
+        document.documentElement.firstChild.appendChild(ga);
+    }());
+  </script>
+
+</body>
+</html>

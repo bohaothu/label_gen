@@ -1,0 +1,2555 @@
+%%% ====================================================================
+%%%  BibTeX-file{
+%%%     author          = "David Hull",
+%%%     version         = "1.116",
+%%%     date            = "15 April 1998",
+%%%     time            = "12:00:23 CDT",
+%%%     filename        = "rtsl.bib",
+%%%     address         = "Department of Computer Science
+%%%                        University of Illinois at Urbana-Champaign
+%%%                        1304 W. Springfield Ave.
+%%%                        Urbana, IL 61801
+%%%                        USA",
+%%%     checksum        = "34424 2375 12830 100675",
+%%%     email           = "hull at pertsserver.cs.uiuc.edu (Internet)",
+%%%     codetable       = "ISO/ASCII",
+%%%     keywords        = "real-time systems",
+%%%     supported       = "yes",
+%%%     abstract        = "A bibliography of papers by the members of the
+%%%			   Real-Time Systems Laboratory at the University
+%%%			   of Illinois at Urbana-Champaign.",
+%%%     docstring       = "The checksum field above contains a CRC-16
+%%%                        checksum as the first value, followed by the
+%%%                        equivalent of the standard UNIX wc (word
+%%%                        count) utility output of lines, words, and
+%%%                        characters.  This is produced by Robert
+%%%                        Solovay's checksum utility.",
+%%%  }
+%%% ====================================================================
+
+@MastersThesis{Bartz92a,
+  author = 	 "Bartz, Christopher Thomas",
+  title = 	 "Periodic-Job Schedulers and Resource Access Control
+		  Protocols",
+  school = 	 "University of Illinois at Urbana-Champaign",
+  year = 	 1992,
+  x_address =	 "Urbana, Illinois",
+  month =	 oct,
+  note =	 "Available as Technical Report UIUCDCS-R-92-1774"
+}
+
+@InCollection{Bettati91a,
+  author = 	 {R. Bettati and D. Gillies and C. C. Han and
+		  K. J. Lin and C. L. Liu and J. W. S. Liu and W. K. Shih},
+  title = 	 {Recent Results in Real-Time Scheduling},
+  crossref =	 {vanTilborg91a},
+  chapter =	 4,
+  pages =	 {91-127},
+  citesrc =	 {dlh}
+}
+
+@PhdThesis{Bettati94a,
+  author = 	 "Bettati, Riccardo",
+  title = 	 "End-to-End Scheduling to Meet Deadlines in
+		  Distributed Systems",
+  school = 	 "University of Illinois at Urbana-Champaign",
+  year = 	 1994,
+  month =	 aug,
+  x_address =	 "Urbana, Illinois",
+  note =	 "Available as Technical Report UIUCDCS-R-94-1840",
+  postscript =	 "Bett94.ps.gz",
+  abstract =	 {In a distributed real-time system or
+ 		  communication network, tasks may need to be executed
+ 		  on more than one processor.  For time-critical
+ 		  tasks, the timing constraints are typically given as
+ 		  end-to-end release times and deadlines.  This thesis
+ 		  describes algorithms to schedule a class of systems
+ 		  where all the tasks execute on different processors
+ 		  in turn in the same order.  This end-to-end
+ 		  scheduling problem is known as the flow-shop
+ 		  problem.  We present several cases where the problem
+ 		  is tractable and evaluate two heuristic algorithms
+ 		  for the NP-hard general case.  We generalize the
+ 		  traditional flow-shop model in two directions.
+  		  First, we present two algorithms for scheduling flow
+ 		  shops where tasks can be serviced more than once by
+ 		  some processors.  Second, we describe a technique to
+ 		  schedule flow shops that consist of periodic tasks
+ 		  and to analyze their schedulability.  We generalize
+ 		  this technique and describe how it can be used to
+ 		  schedule distributed systems that cannot be modeled
+ 		  by flow shops.  We then describe how to combine
+ 		  local or global resource access protocols and
+ 		  end-to-end scheduling.  Finally, we show that by
+ 		  using end-to-end scheduling we can simplify resource
+ 		  access protocols and thus increase the utilization
+ 		  of resources.}
+}
+
+@PhdThesis{Cheong92a,
+  author = 	 "Cheong, Infan Kuok",
+  title = 	 "Scheduling Imprecise Hard Real-Time Jobs with
+		  Cumulative Error",
+  school = 	 "University of Illinois at Urbana-Champaign",
+  year = 	 1992,
+  x_address =	 "Urbana, Illinois",
+  month =	 jun,
+  note =	 "Available as Technical Report UIUCDCS-R-92-1758"
+}
+
+@PhdThesis{Chung89a,
+  author = 	 {Jen-Yao Chung},
+  title = 	 {Scheduling Hard Real-Time Jobs that Allow Imprecise Results},
+  school = 	 {University of Illinois at Urbana-Champaign},
+  year = 	 1989,
+  x_address =	 {Urbana, Illinois}
+}
+
+@article{Chung90a,
+  author =	"Jen-Yao Chung and Jane W. S. Liu and Kwei-Jay Lin",
+  title =	"Scheduling Periodic Jobs that Allow Imprecise Results",
+  journal =	"IEEE Transactions on Computers",
+  volume =	39,
+  number =	9,
+  pages =	"1156-1174",
+  month =	sep,
+  year =	1990
+}
+
+@InProceedings{Deng97a,
+  author = 	 {Z. Deng and J. W.-S. Liu and J. Sun},
+  title = 	 {A Scheme for Scheduling Hard Real-Time Applications
+                  in Open System Environment},
+  booktitle = 	 {Proceedings of the Ninth Euromicro Workshop on
+                  Real-Time Systems},
+  year =	 1997,
+  month =	 jun,
+  address =      {Toledo, Spain},
+  organization = {IEEE},
+  pages =	 {191-199},
+  postscript =	 {DeLi97b.ps},
+  abstract =	 {This paper focuses on the problem of providing
+                  run-time support to real-time applications and
+                  non-real-time applications in an open system.  It
+                  describes a two-level hierarchical priority-driven
+                  scheme for scheduling independently developed
+                  applications.  The scheme allows the developer of
+                  each real-time application to validate the
+                  schedulability of the application independently of
+                  other applications.  Once a real-time application is
+                  created and accepted by the open system, its
+                  schedlability is guaranteed regardless of the
+                  behaviors of other applications the execute
+                  concurrently in the system.}
+}
+
+@InProceedings{Deng97b,
+  author = 	 {Z. Deng and J. W.-S. Liu},
+  title = 	 {Scheduling Real-Time Applications in an Open Environment},
+  booktitle = 	 {Proceedings, Real-Time Systems Symposium},
+  year =	 1997,
+  organization = {IEEE},
+  address =	 {San Francisco, California},
+  month =	 dec,
+  pages =	 {308-319},
+  postscript =	 {DeLi97.ps},
+  abstract =	 {This paper focuses on the problem of providing
+                  run-time applications and non-real-time applications
+                  in an open system environment.  It extends the
+                  two-level hierarchical scheduling scheme in
+                  \cite{Deng96b} for scheduling independently
+                  developed applications.  The extended scheme removes
+                  the following two requirements of the scheme in
+                  \cite{Deng96b}: (1) real-time applications that are
+                  scheduled preemptively must consist solely of
+                  periodic tasks, and (2) applications must not share
+                  global resources (i.e., resources used by more than
+                  one applications).  Consequently, the extended
+                  scheme allows us to deal with a much broader range
+                  of real-time applications.}
+}
+
+@Article{Deng99,
+  author = 	 {Z. Deng and J. W.-S. Liu and L. Zhang and M. Seri and A. Frei},
+  title = 	 {An Open Environment for Real-Time Applications},
+  year =	 1999,
+  postscript =	 {DeL98.ps},
+  journal = 	 "Real-Time Systems Journal",
+  volume =	 16,
+  number =	 2,
+  month =	 may,
+  pages =	 "155-186",
+  abstract =     {This paper describes an open system architecture that 
+                  allows independently developed hard real-time applications
+                  to run together and supports their reconfiguration at 
+                  run-time. In the open system, each real-time application
+                  is executed by a server. At the lower level, the OS
+                  scheduler schedules all the servers on the EDF basis.
+                  At the upper level, the server scheduler of each server
+                  schedules the ready jobs of the application executed by
+                  the server according to the algorithm chosen for the
+                  application. The paper describes the two-level CPU
+                  scheduling scheme used by the open system and the design
+                  and implementation of a uniprocessor open system within
+                  the framework of the Windows NT operating system.
+                  The implementation consists of three key components: the
+                  two-level hierarchical kernel scheduler, common system
+                  service providers, and real-time application programming
+                  interface.}  
+}
+
+@InProceedings{Feng93a,
+  author = 	 "Feng, W. and Liu, J. W.-S.",
+  title = 	 "An Extended Imprecise Computation Model for
+		  Time-Constrained Speech Processing and Generation",
+  pages =	 "76-80",
+  booktitle =	 "Proceedings of the IEEE Workshop on Real-Time Applications",
+  year =	 1993,
+  xx_organization ="IEEE",
+  address =	 "New York, New York",
+  month =	 may,
+  postscript =	 "FeLi93.ps",
+  abstract =     {We describe a real-time speech application which
+ 		  simulates the human production of natural-language
+ 		  utterances in a two-person conversation.  Since
+ 		  generating such utterances is a complex and often
+ 		  time-consuming task, we examine the timing
+ 		  constraints and result-quality requirements of this
+ 		  application, as well as the dependencies between the
+ 		  timing constraints and result qualities of the tasks
+ 		  that generate utterances.  We then extend the
+ 		  imprecise computation model to capture these
+ 		  dependencies and discuss the general applicability
+ 		  of the extended model.}
+}
+
+@TechReport{Feng94a,
+  author = 	 "Feng, W. and Liu, J. W.-S.",
+  title = 	 "Algorithms for Scheduling Tasks with Input Error and
+		  End-to-End Deadlines",
+  institution =  "Department of Computer Science, University of
+		  Illinois at Urbana-Champaign",
+  year = 	 1994,
+  month =	 sep,
+  number =	 "UIUCDCS-R-94-1888",
+  x_address =	 "Urbana, Illinois",
+  postscript =	 "FeLi94.ps",
+  keywords =	 "imprecise computation, real-time applications,
+		  anytime algorithms, error propagation",
+  abstract =     {This paper describes heuristic algorithms for
+ 		  scheduling preemptive, imprecise, composite tasks
+ 		  with input error and end-to-end timing constraints.
+  		  Each composite task consists of a chain of component
+ 		  tasks, where each component task is made up of a
+ 		  mandatory part and an optional part.  Whenever a
+ 		  component task uses imprecise input, the mandatory
+ 		  and optional parts of the component task may be
+ 		  extended in order to compensate for input error.  We
+ 		  use a two-level scheduler.  At the high level, the
+ 		  scheduler schedules the composite tasks preemptively
+ 		  on one processor, according to an existing algorithm
+ 		  for scheduling simple imprecise tasks.  The result
+ 		  is the total amount of time budgeted to each
+ 		  composite task in order for all composite tasks to
+ 		  meet their end-to-end deadlines.  The low-level
+ 		  scheduler then distributes the time budgeted for
+ 		  each composite task across its component tasks so as
+ 		  to minimize the output error of each composite
+ 		  task.}
+}
+
+@InProceedings{Feng96a,
+  author = 	 "Feng, W. and Liu, J. W.-S.",
+  title = 	 "Performance of a Congestion Control Scheme on an
+		  {ATM} Switch",
+  booktitle =	 "Proceedings of the International Conference on Networks",
+  year =	 1996,
+  organization ="IASTED",
+  address =	 "Orlando, Florida",
+  month =	 jan,
+  postscript =	 "FeLi96a.ps",
+  abstract =     {B-ISDN provides communication services with different
+                  requirements, including real-time services such as voice
+                  and video.  In particular, real-time communication
+                  services must meet certain timing requirements:
+                  end-to-end delay and delay jitter.  When the
+                  network becomes congested, the end-to-end packet delay
+                  may exceed the maximum allowed value, and the delay jitter
+                  may be intolerable.  Fortunately, many real-time services
+                  can trade service quality for information timeliness; this
+                  tradeoff is the basis for applying the imprecise-computation
+                  technique to real-time communication services.}
+}
+
+@PhdThesis{Feng96c,
+  author = 	 {Wu{-}chun Feng},
+  title = 	 {Applications and Extensions of the Imprecise-Computation
+		  Model},
+  school = 	 {University of Illinois at Urbana-Champaign},
+  year = 	 1996,
+  x_address = 	 "Urbana, Illinois",
+  month =	 may,
+  postscript =	{Feng96.ps.gz},
+  abstract =	{Real-time systems have become increasingly important
+		 in a growing number of application domains such as
+		 telecommunication networks and multimedia.  The tasks
+		 in such a real-time system must produce logically
+		 correct results by their deadlines.  The correctness
+		 of such a system depends not only on the logical
+		 correctness of the results but also on the tasks
+		 completing by their deadlines.
+		 \par
+		 Many of today's real-time systems are built based on
+		 an estimate of the worst-case load level.  When the
+		 load level of a real-time system temporarily exceeds
+		 its assumed worst-case load level, a transient
+		 overload occurs; some deadlines may be missed; and
+		 the performance of the system degrades.  Under such
+		 an overload, the system must maintain an acceptable
+		 level of performance.  The imprecise-computation
+		 technique is a way to deal with transient overloads.
+		 The technique is motivated by the fact that one can
+		 often trade off precision for timeliness.  It
+		 prevents missed deadlines and provides graceful
+		 degradation during a transient overload.  We
+		 illustrate its applicability by implementing an ATM
+		 congestion-control scheme.  We also propose
+		 scheduling algorithms to handle real-time
+		 applications which contain tasks whose result quality
+		 is a function of both time and input quality.}
+}
+
+@Article{Feng97a,
+  author = 	 "W. Feng and J. W.-S. Liu",
+  title = 	 "Algorithms for Scheduling Real-Time Tasks with Input
+		  Error and End-to-End Deadlines",
+  journal = 	 "IEEE Transactions on Software Engineering",
+  year = 	 1997,
+  volume =	 23,
+  number =	 2,
+  month =	 feb,
+  pages =	 "93-106",
+  postscript =	 "FeLi97a.ps"
+}
+
+@PhdThesis{Gardner99,
+  author = 	 {M. K. Gardner},
+  title = 	 {Probabilistic Analysis and Scheduling of Critical Soft
+                  Real-Time Systems},
+  school = 	 {University of Illinois at Urbana-Champaign},
+  year = 	 1999,
+  month =	 sep,
+  postscript =	{Gardner99.ps.gz},
+  abstract =	{In addition to correctness requirements, a real-time system 
+                 must also meet its temporal constraints, often expressed 
+                 as deadlines. We call safety or mission critical real-time 
+                 systems which may miss some deadlines \emph{critical soft 
+                 real-time systems} to distinguish them from hard real-time 
+                 systems, where all deadlines must be met, and from soft 
+                 real-time systems which are not safety or mission critical. 
+                 The performance of a critical soft real-time system is 
+                 acceptable as long as the deadline miss rate is below 
+                 an application specific threshold.
+
+                 Architectural features of computer systems, such as caches 
+                 and branch prediction hardware, are designed to improve 
+                 average performance. Deterministic real-time design and 
+                 analysis approaches require that such features be disabled 
+                 to increase predictability. Alternatively, allowances must 
+                 be made for for their effects by designing for the worst case. 
+                 Either approach leads to a decrease in average performance. 
+                 Since critical soft real-time systems do not require that
+                 all deadlines be met, average performance can be improved 
+                 by adopting a probabilitistic approach. In order to allow 
+                 a trade-off between deadlines met and average performance, 
+                 we have developed a probabilistic analysis technique, 
+                 call Stochastic Time Demand Analysis, for determining 
+                 a lower bound on the rate at which deadlines are met in fixed 
+                 priority systems.
+
+                 Allowing a real-time system to miss some deadlines in exchange 
+                 for better average performance increases the possibility of 
+                 overload. While overload in real-time systems has been studied, 
+                 the emphasis has been on hard real-time systems in which 
+                 overload is an exception whose occurrence is to be minimized. 
+                 In contrast, critical soft real-time systems can be repeatedly 
+                 overloaded during normal operation. Therefore, we have 
+                 evaluated the performance of various real-time scheduling 
+                 algorithms for critical soft real-time systems, including
+                 two new classes of algorithms, on workloads with execution and
+                 inter-release time variations, both with and without 
+                 dependencies.}
+}
+
+@InProceedings{Gardner99a,
+  author = 	 "M. K. Gardner and J. W.S. Liu",
+  fullauthor =   "mark K. Gardner and Jane W.S. Liu",
+  title = 	 "Analysing Stochastic Fixed-Priority Real-Time Systems",
+  booktitle = 	 "Lecture Notes in Computer Science 1579",
+  editor =       "W. Rance Cleaveland",
+  month =        mar,
+  year =         1999,
+  organization = "Joint European Conferences on Theory and Practice of 
+                 Software",
+  publisher =    "Springer-Verlag",
+  pages =        "44--58",
+  postscript =   "GaLi99a.ps.gz",
+  abstract =     {Traditionally, real-time systems require that the deadlines 
+                  of all jobs be met. For many applications, however, this is 
+                  an overly stringent requirement. An occasional missed 
+                  deadline may cause decreased performance but is nevertheless
+                  acceptable. We present an analysis technique by which a 
+                  lower bound on the percentage of deadlines that a periodic
+                  task meets is determined and compare the lower bound with
+                  simulation results for an example system. We have implemented
+                  the technique in the PERTS real-time system prototyping
+                  environment.}
+}
+
+@InProceedings{GaLi:1999b,
+ author =         "M. K. Gardner and J. W.S. Liu",
+ title =          "Performance of Algorithms for Scheduling Real-Time Systems
+                   with Overrun and Overload",
+ booktitle =      "Proceedings of the Eleventh Euromicro Conference on 
+                   Real-Time Systems",
+ year =           1999,
+ month =          jun,
+ postscript =     "GaLi99b.ps.gz",
+ abstract =       {This paper compares the performance of three classes of
+                   scheduling algorithms for real-time systems in which jobs 
+                   may overrun their allocated processor time potentially 
+                   causing the system to be overloaded. The first class, 
+                   which contains classical priority scheduling algorithms 
+                   as exemplified by DM and EDF, provides a baseline. 
+                   The second class is the Overrun Server Method which 
+                   interrupts the execution of a job when it has used its 
+                   allocated processor times and schedules the remaining 
+                   portion as a request to an aperiodic server. The final 
+                   class is the Isolation Server Method which executes each 
+                   job as a request to an aperiodic server to which it has 
+                   been assigned. The performance of the Overrun Server and
+                   Isolation Server Methods are worse, in general, than the 
+                   performance of the baseline algorithms on independent 
+                   workloads. However, under the dependent workloads 
+                   considered, the performance of the Isolation Server Method,
+                   using a server per task scheduled according to EDF,
+                   was significantly better than the performance of classical 
+                   EDF.}
+}
+
+@MastersThesis{Gillies90a,
+  author = 	 "Donald William Gillies",
+  title = 	 "Greed in Resource Scheduling",
+  school = 	 "University of Illinois at Urbana-Champaign",
+  year = 	 1990,
+  xaddress = 	 "Urbana, Illinois",
+  xOPTmonth = 	 "@@",
+  xOPTnote = 	 "@@"
+}
+
+@Article{Gillies91a,
+  author = 	 "Gillies, Donald W. and Liu, Jane W.-S.",
+  title = 	 "Greed in Resource Scheduling",
+  journal =	 "Acta Informatica",
+  month =	 nov,
+  year =	 1991,
+  volume =	 28,
+  number =	 8,
+  pages =	 "755-775"
+}
+
+@PhdThesis{Gillies93a,
+  author = 	 "Donald William Gillies",
+  title = 	 "Algorithms to Schedule Tasks with AND/OR Precedence
+		  Constraints",
+  school = 	 "University of Illinois at Urbana-Champaign",
+  year = 	 1993,
+  x_address = 	 "Urbana, Illinois",
+  xOPTmonth = 	 "@@",
+  xOPTnote = 	 "@@",
+  postscript =	 "Gill93.ps.gz"
+}
+
+@InProceedings{Gillies93b,
+  author = 	 {Donald William Gillies},
+  title = 	 {A New Heuristic for {UET} and Pipeline Scheduling},
+  booktitle = 	 {Proceedings of the Sixth SIAM Conference on Parallel
+                  Processing for Scientific Computing},
+  volume =	 2,
+  year =	 1993,
+  xOPTorganization = {SIAM},
+  address =	 {Norfolk, Virginia},
+  month =	 mar,
+  pages =	 {983-991}
+}
+
+@Article{Gillies95a,
+  author = 	 {Donald W. Gillies and Jane W.-S. Liu},
+  title = 	 {Scheduling Tasks with {AND/OR} Precedence Constraints},
+  journal = 	 {SIAM Journal on Computing},
+  year = 	 1995,
+  volume =	 24,
+  number =	 4,
+  month =	 aug,
+  pages =	 {797-810},
+  postscript =	 "GiLi95.ps",
+  abstract =     {In traditional precedence-constrained scheduling a
+ 		  task is ready to execute when all its predecessors
+ 		  are complete.  We call such a task an AND task.  In
+ 		  this paper we allow certain tasks to be ready when
+ 		  just one of their predecessors is complete.  These
+ 		  tasks are known as OR tasks.  We analyze the
+ 		  complexity of two types of real-time AND/OR task
+ 		  scheduling problems.  In the first type of problem,
+ 		  all the predecessors of every OR task must
+ 		  eventually be completed, but in the second type of
+ 		  problem, some OR predecessors may be left
+ 		  unscheduled.  We show that most problems involving
+ 		  tasks with individual deadlines are NP-complete, and
+ 		  then present two priority-driven heuristic
+ 		  algorithms to minimize completion time on a
+ 		  multiprocessor.  These algorithms provide the same
+ 		  level of worst-case performance as some previous
+ 		  priority-driven algorithms for scheduling AND-only
+ 		  task systems.}
+}
+
+@TechReport{Ha93a,
+  author = 	 "Ha, Rhan and Liu, Jane W. S.",
+  title = 	 "Validating Timing Constraints in Multiprocessor and
+		  Distributed Real-Time Systems",
+  institution =  "Department of Computer Science, University of
+		  Illinois at Urbana-Champaign",
+  year = 	 1993,
+  month =	 oct,
+  number =	 "UIUCDCS-R-93-1833",
+  x_address =	 "Urbana, Illinois",
+  postscript =	 "HaLi93.ps",
+  abstract =     {Analytical and efficient validation methods to
+ 		  determine whether all jobs always complete by their
+ 		  deadlines are not yet available for systems using
+ 		  modern dynamic scheduling strategies.  Exhaustive
+ 		  methods are often infeasible or unreliable since the
+ 		  execution time and release time of each job may
+ 		  vary.  This report presents several worst-case
+ 		  bounds and efficient algorithms for determining how
+ 		  late the completion times of independent jobs with
+ 		  arbitrary release times can be in a dynamic
+ 		  multiprocessor or distributed system.  The special
+ 		  cases considered here are when the jobs are (1)
+ 		  preemptable and migratable, or (2) preemptable and
+ 		  nonmigratable, or (3) nonpreemptable.}
+}
+
+@InProceedings{Ha94a,
+  author = 	 "Ha, Rhan and Liu, Jane W. S.",
+  title = 	 "Validating Timing Constraints in Multiprocessor and
+		  Distributed Real-Time Systems",
+  booktitle =	 "Proceedings of the 14th IEEE International
+		  Conference on Distributed Computing Systems",
+  year =	 1994,
+  xx_organization ="IEEE",
+  month =	 jun,
+  postscript =	 "HaLi94a.ps",
+  abstract =     {In multiprocessor and distributed real-time systems,
+ 		  scheduling jobs dynamically on processors is likely
+ 		  to achieve better performance.  However, analytical
+ 		  and efficient validation methods to determine
+ 		  whether all the timing constraints are met do not
+ 		  exist for systems using modern dynamic scheduling
+ 		  strategies, and exhaustive simulation and testing
+ 		  are unreliable and expensive.  This paper describes
+ 		  several worst-case bounds and efficient algorithms
+ 		  for validating systems in which jobs have arbitrary
+ 		  timing constraints and variable execution times and
+ 		  are scheduled on processors dynamically in a
+ 		  priority-driven manner.  The special cases of the
+ 		  validation problem considered here are concerned
+ 		  with independent jobs that are (1) preemptable and
+ 		  migratable, or (2) preemptable and nonmigratable, or
+ 		  (3) nonpreemptable.}
+}
+
+@PhdThesis{Ha95a,
+  author = 	 "Rhan Ha",
+  title = 	 "Validating Timing Constraints in Multiprocessor and
+		  Distributed Systems",
+  school = 	 "University of Illinois at Urbana-Champaign",
+  year = 	 1995,
+  x_address =	 "Urbana, Illinois",
+  month =	 aug,
+  note =	 "Available as Technical Report UIUCDCS-R-95-1907",
+  abstract =	 {In multiprocessor and distributed real-time systems,
+ 		  scheduling jobs dynamically on processors is likely
+ 		  to achieve better performance.  However, analytical
+ 		  and efficient validation methods for determining
+ 		  whether all the timing constraints are met do not
+ 		  yet exist for systems using modern dynamic
+ 		  scheduling strategies, and exhaustive methods are
+ 		  often infeasible or unreliable since the execution
+ 		  time and release time of each job may vary.  In this
+ 		  thesis, we present solutions to the problem of how
+ 		  to validate systems in which jobs have arbitrary
+ 		  timing constraints and variable execution times and
+ 		  are scheduled on processors dynamically in a
+ 		  priority-driven manner.  We begin by considering the
+ 		  simplest case of this problem where jobs are
+ 		  independent and processors are identical.  We then
+ 		  generalize the validation problem to deal with the
+ 		  case where the processors are heterogeneous and the
+ 		  jobs are dependent.  For each case we present
+ 		  conditions under which the jobs execute in a
+ 		  predictable manner, i.e., the completion times of
+ 		  jobs are no later when the execution times of some
+ 		  jobs decrease.  We also present algorithms and
+ 		  bounds with which the latest completion times of all
+ 		  jobs can be bounded.}
+}
+
+@Unpublished{HaCh02,
+  author = 	 {R. Ha and H. Cha and J. W.S. Liu},
+  title = 	 {Validating Timing Constraints of Jobs with 
+                  Dependencies in Real-Time Distributed Systems},
+  note = 	 {to appear in The Computer Journal},
+}
+
+@Unpublished{HaCL02,
+  author = 	 {R. Ha and H. Cha and J. W.S. Liu},
+  title = 	 {Validating Real-Time Constraints in 
+  		Heterogeneous Multiprocessor and Distributed Systems},
+  note = 	 {to appear in Journal of System Integration},
+}
+
+@Unpublished{Hahn02,
+  author = 	 {J. Hahn and R. Ha and S. L. Min and J. W. S. Liu},
+  title = 	 {Analysis of Worst Case DMA Response Time in a 
+  		Fixed-Priority Bus Arbitration Protocol},
+  note = 	 {to appear in Real-Time Systems Journal},
+}
+
+
+
+@PhdThesis{Han92a,
+  author = 	 "Ching-Chih Han",
+  title = 	 "Scheduling Real-Time Computations with Temporal
+		  Distance and Separation Constraints and with
+		  Extended Deadlines",
+  school = 	 "University of Illinois at Urbana-Champaign",
+  year = 	 1992,
+  x_address =	 "Urbana, Illinois",
+  month =	 jun,
+  note =	 "Available as Technical Report UIUCDCS-R-92-1748"
+}
+
+@Article{Han95a,
+  author = 	 {Ching-Chih Han and Kwei-Jay Lin and Jane W.-S. Liu},
+  title = 	 {Scheduling Jobs with Temporal Distance Constraints},
+  journal = 	 {SIAM Journal on Computing},
+  year = 	 1995,
+  volume =	 24,
+  number =	 5,
+  month =	 oct,
+  pages =	 {1104-1121},
+  abstract =	 {The job scheduling problems for real-time jobs with
+		  temporal distance constraints (JSD) are
+		  presented. In JSD, the start times of two related
+		  jobs must be within a given distance. The general
+		  JSD problem is NP-hard. We define the multilevel
+		  unit-time JSD (MUJSD) problem for systems with rn
+		  chains of unit-time jobs in which neighboring jobs
+		  in each chain must be scheduled within c time
+		  units. We present an O(n(2))-time algorithm, where n
+		  is the total number of jobs in the system, and also
+		  an O(m(2)c(2))-time algorithm. Some other variations
+		  of the JSD problems are also investigated.}
+}
+
+@MastersThesis{Huang94b,
+  author = 	 "Huang, Tai-Yi",
+  title = 	 "Evaluation of Timing Analysis and Measurement Tools",
+  school = 	 "University of Illinois at Urbana-Champaign",
+  year = 	 1994,
+  x_address =	 "Urbana, Illinois"
+}
+
+@InProceedings{Huang95a,
+  author = 	 "Tai-Yi Huang and Jane W.-S. Liu",
+  title = 	 "Predicting the Worst-Case Execution Time of the
+		  Concurrent Execution of Instructions and
+		  Cycle-Stealing {DMA I/O} Operations",
+  pages =	 "1-6",
+  booktitle =	 "Proceedings of the SIGPLAN Workshop on Languages,
+		  Compilers, and Tools for Real-Time Systems",
+  year =	 1995,
+  organization = "ACM",
+  address =	 "La Jolla, California",
+  month =	 jun,
+  postscript =	 "HuaLi94.ps",
+  note =	 {Reprinted in \emph{ACM SIGPLAN Notices}, v30, n11,
+                  November 1995.},
+  abstract =     {This paper describes an efficient algorithm which
+                  gives a bound on the worst-case execution times of
+                  the concurrent execution of CPU instructions and
+                  cycle-stealing DMA I/O operations.  Simulations of
+                  several programs were conducted to evaluate this
+                  algorithm.  Compared with the traditional
+                  pessimistic approach, the bound on the worst-case
+                  execution time produced by the algorithm is
+                  significantly tighter.  For a sample program that
+                  multiplies two matrices with the I/O bus is fully
+                  utilized, our algorithm achieves a 39\% improvement
+                  in the accuracy of the prediction.}
+}
+
+@InProceedings{Huang96a,
+  author = 	 {Tai-Yi Huang and Jane W.-S. Liu and Jen-Yao Chung},
+  title = 	 {Allowing Cycle-Stealing Direct Memory Access {I/O}
+                  Concurrent with Hard-Real-Time Programs},
+  booktitle = 	 {Proceedings of the 1996 International Conference on
+                  Parallel and Distributed Systems},
+  year =	 1996,
+  organization = {IEEE},
+  address =	 {Tokyo, Japan},
+  month =	 jun,
+  pages =	 {422-429},
+  postscript =	 {HuaLiCh95.ps},
+  abstract =	 {Hard-real-time schedulability analysis is carried
+                  out based on the assumption that the worst-case
+                  execution time (WCET) of each task is known.
+                  Cycle-stealing Direct Memory Access (DMA) I/O steals
+                  bus cycles from an executing program and prolongs
+                  the execution time of the program.  Because of the
+                  difficulty in bounding the interference on the
+                  executing program, cycle-stealing DMA I/O is often
+                  disabled in hard-real-time systems.   This paper
+                  presents an analytical method for bounding the WCET
+                  of a program executing cuncurrently with
+                  cycle-stealing DMA I/O.  This is an extension of our
+                  previous work which bounded the WCET of a
+                  straight-line sequence of instructions when
+                  cycle-stealing operations are allowed.  We
+                  demonstrate the effectiveness of our method with
+                  experiments on several programs.}
+}
+
+@InProceedings{Huang96b,
+  author = 	 {Tai-Yi Huang and Jane W.-S. Liu and David Hull},
+  title = 	 {A Method for Bounding the Effect of {DMA} {I/O}
+                  Interference on Program Execution Time},
+  booktitle = 	 {Proceedings, Real-Time Systems Symposium},
+  year =	 1996,
+  organization = {IEEE},
+  address =	 {Washington, D. C.},
+  month =	 dec,
+  pages =	 {275-285},
+  postscript =	 {HuLH96.ps},
+  abstract =     {A DMA controller that operates in cycle-stealing
+		  mode transfers data by ``stealing'' bus cycles from
+		  an executing program.  This cycle stealing operation
+		  retards the progress of the executing program and
+		  extends its execution time.  In this paper we first
+		  present a method that bounds the worst-case
+		  execution time of a program executing concurrently
+		  with a cycle-stealing DMA I/O operation in the
+		  simple case where the execution time of each machine
+		  instruction is fixed.  We next extend this method to
+		  deal with the case of instruction-cache
+		  architectures.  We demonstrate the effectiveness of
+		  our methods by the results of simulations of several
+		  programs.}
+}
+
+@PhdThesis{Huang97a,
+  author = 	 {Tai-Yi Huang},
+  title = 	 {Worst-Case Timing Analysis of Concurrently Executing
+                  {DMA} {I/O} and Programs},
+  school = 	 {University of Illinois at Urbana-Champaign},
+  year = 	 1997,
+  x_address =	 {Urbana, Illinois},
+  month =	 apr,
+  note =	 {Available as Technical Report UIUCDCS-R-96-1739},
+  postscript =	 {Hua97.ps.gz},
+  abstract =	 {A hard-real-time system is required to process tasks
+            	  with timing constraints that must be met to ensure
+            	  the safety and correctness of the system.  The
+            	  analysis which determines the ability of a
+            	  particular system to meet its timing constraints
+            	  requires that the worst-case execution time (WCET)
+            	  of each task be known in advance.  The dynamic
+                  architectural features such as cache memory and
+                  instruction pipeline introduce variations in program
+                  execution times.  The interference of concurrently
+                  executing cycle-stealing DMA I/O operations further
+                  complicates the problem of determining the WCET of a
+                  program.  This dissertation presents methods for
+                  bounding the worst-case interference between an
+                  executing program and a cycle-stealing DMA I/O
+                  operation.  We first develop a method for bounding
+                  the WCET of a program executing concurrently with
+                  cycle-stealing DMA I/O\@.  Our method converts the
+                  problem of bounding the WCET to one of solving a
+                  integer linear programming problem.  We implement
+                  our method in a timing tool and conduct extensive
+                  experiments with the timing tool to demonstrate the
+                  merits of our method.
+
+		  A cycle-stealing DMA I/O task is allowed to proceed
+                  only when the CPU does not need the system bus.  As
+                  a result, the execution time of a cycle-stealing DMA
+                  I/O task is affected by a set of CPU tasks which
+                  execute concurrently with the I/O task.  We discuss
+                  the problem of bounding the WCET of a cycle-stealing
+                  DMA I/O task under a workload which consists of a
+                  set of independent CPU tasks.  Each CPU task has an
+                  arbitrary release time.  We use the dynamic
+                  programming technique to bound the WCET of the I/O task.}
+}
+
+@InProceedings{Hull93a,
+  author = 	 "Hull, David and Liu, Jane W. S.",
+  title = 	 "{ICS}: A System for Imprecise Computations",
+  pages =	 "371-374",
+  booktitle =	 "Proceedings, AIAA Computing in Aerospace 9",
+  year =	 1993,
+  xx_organization ="AIAA",
+  address =	 "San Diego, California",
+  month =	 oct,
+  postscript =	 "HuLi93.ps.gz",
+  abstract =	 {The imprecise computation technique was introduced
+		  as a way to handle transient overload and to enhance
+		  the fault-tolerance of real-time systems.  In a
+		  system based on this technique, each time-critical
+		  task is designed in such a way that it can produce a
+		  usable, approximate result in time whenever a
+		  failure or overload prevents it from producing the
+		  desired, precise result.  This paper describes an
+		  architecture that integrates the mechanism for the
+		  generation and use of approximate results with the
+		  traditional checkpointing mechanism.  It then
+		  describes a system we are currently developing that
+		  implements this architecture.}
+}
+
+@InProceedings{Hull95a,
+  author = 	 "D. Hull and W. Feng and J. W. S. Liu",
+  title = 	 "Enhancing the Performance and Dependability of Hard
+		  Real-Time Systems",
+  pages =	 "174-182",
+  booktitle =	 "IEEE Computer Performance and Dependability Symposium",
+  year =	 1995,
+  organization = "IEEE",
+  address =	 "Erlangen, Germany",
+  month =	 apr,
+  postscript =	 "HuFL95.ps",
+  abstract =     {The imprecise-computation technique was proposed as
+ 		  a way to handle transient overloads and enhance the
+ 		  dependability of real-time systems.  In a system
+ 		  based on this technique, each time-critical task
+ 		  produces an approximate but usable result whenever a
+ 		  failure or overload prevents the system from
+ 		  producing a precise result.  This approach makes
+ 		  meeting deadlines easier, increases the availability
+ 		  of data and services, reduces the need for
+ 		  error-recovery operations, and minimizes the costs
+ 		  in replication.  In this paper, we provide an
+ 		  overview of ways to implement and schedule imprecise
+ 		  computations.  We then describe the
+ 		  Imprecise-Computation Server (ICS) and how it is
+ 		  used to ensure real-time performance of
+ 		  time-critical applications.}
+}
+
+@Unpublished{Hull96a,
+  author = 	 {David Hull and Wu{-}chun Feng and Jane W. S. Liu},
+  title = 	 {Operating System Support for Imprecise Computation},
+  note = 	 {In \emph{Flexible Computation in Intelligent
+                  Systems: Results, Issues, and Opportunities},
+                  Cambridge, Massachusetts},
+  month =	 "9--11 " # nov,
+  year =	 1996,
+  postscript =	 {HuFL96.ps}
+}
+
+@InProceedings{Hull97a,
+  author = 	 {David Hull and Arjun Shankar and Klara Nahrstedt and
+                  Jane W.~S. Liu},
+  title = 	 {An End-To-End {QoS} Model and Management Architecture},
+  booktitle = 	 {Proceedings of IEEE Workshop on Middleware for
+                  Distributed Real-time Systems and Services},
+  year =	 1997,
+  address =	 {San Francisco, California},
+  month =	 dec,
+  pages =	 {82-89},
+  postscript =   {HuSNL97.ps},
+  abstract =	 {A quality-of-service (QoS) management framework for
+                  a complex distributed real-time system must be able
+                  to accommodate different dimensions and measures of
+                  quality, affect QoS tradeoffs across applications,
+                  and monitor and maintain the overall quality of the
+                  service produced by them as a whole.  This paper
+                  describes a QoS model and an end-to-end QoS
+                  management architecture designed to meet these
+                  objectives.}
+}
+
+@Unpublished{Hull98a,
+  author = 	 {David Hull and Mallikarjun Shankar and Wu{-}chun Feng
+                  and Jane W. S. Liu},
+  title = 	 {Applying Extended Imprecise Computation to {QoS}
+                  Management in Industrial Applications},
+  note = 	 {Submitted to \emph{Real-Time Technology and
+                  Applications Symposium}, June 1998},
+  postscript =	 {HuSFL98.ps.gz}
+}
+
+@Article{Kim94a,
+  author = 	 "Kim, T. and Liu, C. L. and Liu, J. W. S.",
+  title = 	 "A Scheduling Algorithm for Conditional Resource
+		  Sharing---A Hierarchical Reduction Approach",
+  journal =	 "IEEE Transactions on Computer-Aided Design",
+  year =	 1994,
+  volume =	 13,
+  number =	 4,
+  pages =	 "425-438",
+  month =	 apr
+}
+
+@InProceedings{Lin87a,
+  author =	"Lin, Kwei-Jay and Natarajan, Swaminathan and Liu, Jane W.-S.",
+  title =	"Imprecise Results: Utilizing Partial Computations in
+		 Real-Time Systems",
+  booktitle =	"Proceedings, Real-Time Systems Symposium",
+  organization = "IEEE",
+  month =	dec,
+  year =	1987,
+  address =	"San Jose, California"
+}
+
+@InProceedings{Lin87b,
+  author = 	 "Lin, Kwei-Jay and Natarajan, Swami and Liu, Jane
+		  W.-S. and Krauskopf, Tim",
+  title = 	 "Concord: A System of Imprecise Computations",
+  pages =	 "75-81",
+  booktitle =	 "Proceedings, Computer Software and Applications
+		  Conference",
+  organization = "IEEE",
+  month =	 oct,
+  year =	 1987,
+  address =	 "Tokyo, Japan"
+}
+
+@InProceedings{Liu87a,
+  author =	"Liu, J. W. S. and Lin, K. J. and Liu, C. L.",
+  title =	"A Position Paper for the {IEEE} 1987 Workshop on
+		 Real-Time Operating Systems",
+  booktitle = 	"Proceedings of the 1987 IEEE Workshop on Real-Time
+		 Operating Systems",
+  xx_organization = "IEEE",
+  address =	"Cambridge, Massachusetts",
+  month =	may,
+  year =	1987
+}
+
+@InProceedings{Liu87b,
+  author =	"Liu, Jane W. S. and Lin, Kwei-Jay and Natarajan, Swaminathan",
+  title =	"Scheduling Real-Time, Periodic Jobs Using Imprecise Results",
+  booktitle =	"Proceedings, Real-Time Systems Symposium",
+  organization = "IEEE",
+  pages =	"252-260",
+  month =	dec,
+  year =	1987,
+  address =	"San Jose, California"
+}
+
+@Article{Liu91,
+  author =	"Liu, Jane W. S. and Lin, Kwei-Jay and Shih, Wei-Kuan
+		 and Yu, Albert Chuang{-}shi and Chung, Jen-Yao and Zhao, Wei",
+  title =	"Algorithms for Scheduling Imprecise Computations",
+  journal =	"IEEE Computer",
+  pages =	"58-68",
+  month =	may,
+  year =	1991,
+  volume =	24,
+  number =	5
+}
+
+@InCollection{Liu91b,
+  author = 	 {J. W. S. Liu and K. J. Lin and W. K. Shih and
+		  A. C. Yu and J. Y. Chung and W. Zhao},
+  title = 	 {Algorithms for Scheduling Imprecise Computations},
+  crossref =	 {vanTilborg91a},
+  chapter =	 8,
+  pages =	 {203-249},
+  citesrc =	 {dlh}
+}
+
+@Article{Liu92,
+  author =	 "Liu, J. W. S. and Lin, K. J. and Liu, C. L. and Shih, W. K.",
+  title =	 "Imprecise Computations: A Means to Provide Scheduling
+		  Flexability and Enhance Dependability",
+  journal =	 "Readings on Real-Time Systems",
+  editor =	 "Krishna and Lee",
+  publisher =	 "IEEE Press",
+  year =	 1992
+}
+
+@InProceedings{Liu93a,
+  author = 	 "Liu, Jane W. S.",
+  title = 	 "Issues in Distributed Real-Time Systems",
+  booktitle =	 "Proceedings of the IDA Workshop on Large,
+		  Distributed, Parallel Architecture of Real-Time Systems",
+  year =	 1993,
+  organization = "IDA",
+  address =	 "Fairfax, Virginia",
+  month =	 mar,
+  postscript =	 "Liu93.ps",
+  abstract =     {This position paper first describes a view of
+ 		  distributed and parallel real-time systems.  It then
+ 		  suggests a hierarchical approach to scheduling and
+ 		  resource management and reasoning about the timing
+ 		  behavior of large distributed systems.}
+}
+
+@Article{Liu94a,
+  author = 	 "Liu, Jane W. S. and Shih, Wei-Kuan and Lin, Kwei-Jay
+		  and Bettati, Riccardo and Chung, Jen-Yao",
+  title = 	 "Imprecise Computations",
+  journal =	 "Proceedings of the IEEE",
+  year =	 1994,
+  volume =	 82,
+  number =	 1,
+  pages =	 "83-94",
+  month =	 jan
+}
+
+@InProceedings{Liu94b,
+  author = 	 "Liu, Jane W. S. and Ha, Rhan",
+  title = 	 "Efficient Methods for Validating Timing Constraints
+		  in Multiprocessor and Distributed Systems",
+  booktitle =	 "Proceedings of the 4th Systems Reengineering
+		  Technology Workshop",
+  year =	 1994,
+  month =	 feb,
+  postscript =	 "LiHa94a.ps",
+  abstract =     {This paper discusses the difficulties in validating
+ 		  timing constraints of dynamic multiprocessor and
+ 		  distributed systems.  Some worst-case bounds and
+ 		  efficient algorithms now exist for the special case
+ 		  where jobs are independent.  These results are
+ 		  summarized.}
+}
+
+@InCollection{Liu94c,
+  author = 	 "Liu, Jane W. S. and Lin, Kwei-Jay and Bettati,
+		  Riccardo and Hull, David and Yu, Albert",
+  title = 	 "Use of Imprecise Computation to Enhance
+		  Dependability of Real-Time Systems",
+  booktitle =	 "Foundations of Dependable Computing: Paradigms for
+		  Dependable Applications",
+  publisher =	 "Kluwer Academic Publishers",
+  year =	 1994,
+  editor =	 "Koob, Gary M. and Lau, Clifford G.",
+  chapter =	 "3.1",
+  pages =	 "157-182"
+}
+
+@InCollection{Liu94d,
+  author = 	 "Jane W. S. Liu and Rhan Ha",
+  title = 	 "Efficient Methods of Validating Timing Constraints",
+  booktitle =	 "Advances in Real-Time Systems",
+  publisher =	 "Prentice-Hall",
+  year =	 1995,
+  chapter =	 9,
+  pages =	 {196-220},
+  editor =	 "Sang H. Son",
+  citesrc =	 "lcs, jl, amazon",
+  postscript =   {LiHa94b.ps},
+  abstract =     {Analytical and efficient validation methods to
+ 		  determine whether all jobs always complete by their
+ 		  deadlines are not yet available for systems using
+ 		  modern dynamic scheduling strategies.  Exhaustive
+ 		  methods are often infeasible or unreliable since the
+ 		  execution time and release time of each job may
+ 		  vary.  This chapter presents several worst-case
+ 		  bounds and efficient algorithms for determining how
+ 		  late the completion times of independent jobs with
+ 		  arbitrary release times can be in a dynamic
+ 		  multiprocessor or distributed system when their
+ 		  release times and execution times may vary from one
+ 		  instance to another.  The special cases considered
+ 		  here are when the jobs are (1) preemptable and
+ 		  migratable, or (2) preemptable and nonmigratable, or
+ 		  (3) nonpreemptable.}
+}
+
+@InProceedings{Liu94e,
+  author = 	 "Liu, J. W. S. and Redondo, J. L. and Deng, Z. and
+		  Tia, T. S. and Bettati, R. and Silberman, A. and
+		  Storch, M. and Ha, R. and Shih, W. K.",
+  title = 	 "{PERTS}: A Prototyping Environment for Real-Time Systems",
+  pages =	 "184-188",
+  booktitle =	 "Proceedings of the 14th IEEE Real-Time Systems Symposium",
+  year =	 1993,
+  xx_organization ="IEEE",
+  address =	 "Raleigh-Durham, North Carolina",
+  month =	 dec
+}
+
+@TechReport{Liu94f,
+  author = 	 "Liu, J. W. S. and Redondo, J. L. and Deng, Z. and
+		  Tia, T. S. and Bettati, R. and Silberman, A. and
+		  Storch, M. and Ha, R. and Shih, W. K.",
+  title = 	 "{PERTS}: A Prototyping Environment for Real-Time Systems",
+  institution =  "Department of Computer Science, University of
+		  Illinois at Urbana-Champaaign",
+  year = 	 1993,
+  number =	 "UIUCDCS-R-93-1802",
+  x_address =	 "Urbana, Illinois",
+  month =	 may,
+  postscript =	 "LiRDTBSSHS93.ps",
+  abstract =     {PERTS is a prototyping environment for real-time
+ 		  systems.  It is being built incrementally and will
+ 		  contain schedulers and resource access protocols for
+ 		  time-critical applications, together with tools and
+ 		  a simulation environment for the analysis,
+ 		  validation, and evaluation of real-time systems
+ 		  built on the scheduling paradigms supported by these
+ 		  building blocks.  Specifically, PERTS is designed to
+ 		  support the evaluation of new design approaches,
+ 		  experimentation with alternative scheduling and
+ 		  resource management strategies, and the analysis and
+ 		  performance profiling of the resultant prototype
+ 		  real-time systems.  This paper first describes the
+ 		  underlying models of real-time systems supported by
+ 		  PERTS together with its intended use and
+ 		  capabilities.  A key component is the schedulability
+ 		  analyzer.  The basic version of this system supports
+ 		  the analysis and validation of real-time systems
+ 		  built on the framework of the periodic-task model.
+  		  This system of tools is now available.  Future
+ 		  enhancements of the schedulability analyzer for
+ 		  real-time systems that cannot be characterized by
+ 		  the periodic-task model will make use of several new
+ 		  schedulability conditions and performance bounds.}
+}
+
+@Article{Liu95a,
+  author = 	 {Jane W. S. Liu and Rhan Ha},
+  title = 	 {Methods for Validating Real-Time Constraints},
+  journal = 	 {The Journal of Systems and Software},
+  year = 	 1995,
+  volume =	 30,
+  number =	 {1-2},
+  month =	 jul # "-" # aug,
+  pages =	 {85-98},
+  postscript =	 "LiHa95.ps",
+  abstract =     {Exhaustive methods for determining whether all jobs
+ 		  complete by their deadlines in systems that use
+ 		  modern priority-driven scheduling strategies are
+ 		  often infeasible or unreliable since the execution
+ 		  time and release time of each job may vary.  This
+ 		  paper presents several worst-case bounds and
+ 		  efficient algorithms for determining how late the
+ 		  completion times of jobs can be in static and
+ 		  dynamic multiprocessor or distributed systems.}
+}
+
+@Article{Liu96a,
+  author = 	 {J. W. S. Liu and C. L. Liu and Z. Deng and T. S. Tia
+                  and J. Sun and M. Storch and D. Hull and
+                  J. L. Redondo and R. Bettati and A. Silberman},
+  title = 	 {{PERTS}: A Prototyping Environment for Real-Time Systems},
+  journal = 	 {International Journal of Software Engineering and
+                  Knowledge Engineering},
+  year = 	 1996,
+  volume =	 6,
+  number =	 2,
+  pages =	 {161-177},
+  abstract =	 {This paper describes PERTS, a prototyping
+                  environment for real-time systems.  PERTS provides a
+                  comprehensive set of design, validation, and
+                  simulation tools that are built on recent
+                  theoretical advances.  It also provides software
+                  modules that implement well-known and novel
+                  real-time scheduling algorithms, task and resource
+                  assignment algorithms, and resource access control
+                  protocols.  Together, the tools and software modules
+                  support the systematic and rigorous evaluation of
+                  new designs, experimentation with alternative
+                  scheduling and resource management strategies, and
+                  the evaluation and validation of the resultant
+                  real-time system.}
+}
+
+@Book{Liu00,
+  author = 	{Jane W. S. Liu },
+  title = 	 {Real-Time Systems},
+  booktitle = 	 {Real-Time Systems},
+  publisher = 	 {Prentice Hall},
+  year = 	 2000,
+}
+
+@InProceedings{LiuC95a,
+  author =	 "Changwen Liu and Jane W. S. Liu",
+  title =	 "Effects of Imprecise Computation in Time-Invariant
+		  Control Systems",
+  pages =	 "297-302",
+  booktitle =	 "Proceedings of the Twenty-Ninth Annual Conference on
+		  Information Sciences and Systems",
+  year =	 1995,
+  month =	 mar,
+  address =	 "Baltimore, Maryland",
+  postscript =	 "LiLi95.ps",
+  abstract =     {This paper describes an imprecise computation model
+ 		  for continuous and time-invariant systems in the
+ 		  presence of corrupted information.  The conditions
+ 		  under which the difference between the corrupted
+ 		  state and the precise state, called the tracking
+ 		  error, converges to zero or is less than $\epsilon$
+ 		  ($\epsilon > 0$) are determined.}
+}
+
+@PhdThesis{LiuC96a,
+  author = 	 {Changwen Liu},
+  title = 	 {Imprecise Computation in Real-Time Control Systems},
+  school = 	 {University of Illinois at Urbana-Champaign},
+  year = 	 1996,
+  x_address =	 {Urbana, Illinois},
+  note =	 {Available as Technical Report UIUCDCS-R-95-1905},
+  abstract =	 {The thesis is concerned with the behavior of
+		  corrupted real-time control systems and their
+		  corrupted trajectories. The difference between the
+		  corrupted trajectory and the precise trajectory is
+		  called the tracking error. We analyze the
+		  consequence of imprecise computation, caused by
+		  corrupted input and/or prematurely terminated output
+		  computation, on tracking errors for
+		  single-input-single-output and
+		  multiple-input-multiple-output time-invariant
+		  systems with deterministic errors as well as random
+		  errors. We establish the tracking error models and
+		  give upper bounds of the tracking errors. We find
+		  conditions under which the imprecise computation has
+		  certain desired convergence properties and show how
+		  to design control systems so that the systems have
+		  satisfactory performance.},
+}
+
+@InCollection{LiuCL94a,
+  author = 	 "C. L. Liu",
+  title = 	 "Fundamentals of Real-Time Scheduling (Extended
+		  Abstract)",
+  pages =	 "1-7",
+  booktitle =	 "Real Time Computing",
+  publisher =	 "Springer-Verlag",
+  year =	 1994,
+  editor =	 "Wolfgang A. Halang and Alexander D. Stoyenko",
+  citesrc =	 "dlh"
+}
+
+@MastersThesis{LopezMillan93a,
+  author = 	 {Victor Manuel Lopez-Millan},
+  title = 	 {A Congestion Control Scheme for a Real-Time Traffic
+		  Switching Element using the Imprecise Computations
+                  Technique},
+  school = 	 {University of Illinois at Urbana-Champaign},
+  year = 	 1993,
+  x_address =	 "Urbana, Illinois"
+}
+
+@InProceedings{LuC93a,
+  author = 	 "Lu, Chen and Liu, J. W. S.",
+  title = 	 "Process Migration in Homogeneous {UNIX} Environments",
+  pages =	 "16-23",
+  booktitle =	 "Proceedings ICPADS'93, 1993 International Conference
+		  on Parallel
+		  and Distributed Systems",
+  year =	 1993,
+  organization = "National Taiwan University",
+  address =	 "Taipei, Taiwan",
+  month =	 dec
+}
+
+@MastersThesis{Manzano93a,
+  author = 	 "Manzano, Pilar",
+  title = 	 "Imprecise-Computation Schedulers",
+  school = 	 "University of Illinois at Urbana-Champaign",
+  year = 	 1993,
+  x_address =	 "Urbana, Illinois",
+  month =	 feb,
+  note =	 "Available as Technical Report UIUCDCS-R-93-1795"
+}
+
+@Article{McKinley90a,
+  author = 	 {Phillip K. McKinley and Jane W. S. Liu},
+  title = 	 {Multicast Tree Construction in Bus-Based Networks},
+  journal = 	 {Communications of the ACM},
+  year = 	 1990,
+  volume =	 33,
+  number =	 1,
+  month =	 jan,
+  pages =	 {29-42}
+}
+
+@InProceedings{Millan94a,
+  author = 	 "Lopez-Millan, V. and Feng, W. and Liu, J. W.-S.",
+  title = 	 "Using the Imprecise-Computation Technique for
+		  Congestion Control on a Real-Time Traffic Switching Element",
+  booktitle =	 "Proceedings, International Conference on Parallel
+		  and Distributed Systems",
+  publisher =	 "IEEE",
+  year =	 1994,
+  address =	 "Taiwan",
+  month =	 dec,
+  postscript =	 "MiFL94.ps",
+  keywords =	 "high-speed networking, resource management,
+		  performance modeling and evaluation, ATM, multimedia
+		  systems",
+  abstract =     {The Broadband Integrated Services Digital Network
+ 		  ({\tt B-ISDN}) provides communication services
+ 		  with different requirements, including real-time
+ 		  services such as voice and video.  Real-time
+ 		  services are affected by the probabilistic behavior
+ 		  of such a network.  In particular, when the network
+ 		  becomes congested, the end-to-end packet delay may
+ 		  exceed the maximum allowed value.  Fortunately, many
+ 		  real-time services can trade service quality for
+ 		  information timeliness.  The imprecise computation
+ 		  technique, in combination with layered coding
+ 		  schemes, makes this tradeoff possible.}
+}
+
+@PhdThesis{Nakazato93a,
+  author = 	 "Nakazato, Hidenori",
+  title = 	 "Issues on Synchronizing and Scheduling Tasks in
+		  Real-Time Database Systems",
+  school = 	 "University of Illinois at Urbana-Champaign",
+  year = 	 1993,
+  x_address =	 "Urbana, Illinois",
+  month =	 jan,
+  note =	 "Available as Technical Report UIUCDCS-R-93-1786"
+}
+
+@Unpublished{Nakazato95a,
+  author = 	 "H. Nakazato and T. Kim and J. W. S. Liu",
+  title = 	 "A Scheduling Strategy for Tasks with Precedence and
+		  Conditional Execution",
+  note = 	 "To appear in {\em Transactions of Information
+		  Processing Society of Japan}"
+}
+
+@PhdThesis{Ng93a,
+  author = 	 "Joseph Kee-Yin Ng",
+  title = 	 "Performance of High-Speed Networks for Real-Time
+		  Applications",
+  school = 	 "University of Illinois at Urbana-Champaign",
+  year = 	 1993,
+  x_address =	 "Urbana, Illinois",
+  month =	 jun,
+  note =	 "Available as Technical Report UIUCDCS-R-93-1812",
+  abstract =	 {This thesis studies the performance of network
+ 		  medium-access protocols at high data transfer rates
+ 		  for real-time applications.  In a real-time network,
+ 		  on-time delivery of messages is essential. We can
+ 		  ensure the timely completion of tasks only when we
+ 		  can predict the message transmission delay over the
+ 		  network reasonably well. For a given data transfer
+ 		  rate, whether messages in a network can be delivered
+ 		  in time depends on the medium-access protocols. The
+ 		  goal of this study is to determine the limitations
+ 		  in the ability of the protocols to guarantee on-time
+ 		  delivery of messages for different types of
+ 		  real-time applications.  More specifically, we
+ 		  address the following two questions: 1) How well can
+ 		  traditional network medium-access protocols support
+ 		  real-time applications? and 2) How well do these
+ 		  protocols behave on a high-speed network?
+		  \par This thesis presents the results of a simulation
+ 		  study.  The medium-access protocols studied are two
+ 		  token-passing protocols (token bus and token ring),
+ 		  the slotted-ring protocol and the multiple-ring
+ 		  protocols.  The token-bus and token-ring protocols
+ 		  under our study are standards defined by the IEEE
+ 		  802.4 and 802.5 recommendations, respectively, as
+ 		  well as by the fiber distributed data interface
+ 		  (FDDI).  Besides the traditional performance
+ 		  measures, such as average message delay and
+ 		  throughput, our performance measures include the
+ 		  observed maximum message delay, number of messages
+ 		  missing their deadlines, and the variance in the
+ 		  message delay.  The workload for our experiments are
+ 		  based on typical real-time applications.  One
+ 		  workload set is patterned after a distributed
+ 		  acoustic system on board a submarine.  We also
+ 		  simulated two other real-time workload sets---the
+ 		  voice communication workload and the multi-media
+ 		  workload---to thoroughly investigate the performance
+ 		  of each of the network's medium-access
+ 		  protocols.
+		  \par Our simulation results indicate how well each
+ 		  network medium-access protocol supports real-time
+ 		  applications of different workload
+ 		  characteristics. By understanding the desirable
+ 		  network parameters and the characteristics of the
+ 		  real-time workload, we can make it easier to decide
+ 		  which network medium-access protocol to use to
+ 		  support a real-time application on a high-speed
+ 		  network.}
+}
+
+@InProceedings{Philp96a,
+  author = 	 {Ian R. Philp and Jane W.~S. Liu},
+  title = 	 {End-to-End Scheduling in Real-Time Packet Switched Networks},
+  booktitle = 	 {Proceedings, International Conference on Network Protocols},
+  year =	 1996,
+  address =	 {Columbus, Ohio},
+  month =	 oct,
+  pages =	 {23-30},
+  postscript =	 {PhLi95.ps},
+  abstract =	 {This paper presents a modified version of the
+ 		  weighted round robin (WRR) scheduling algorithm,
+ 		  called budgeted weighted round robin (BWRR), for
+ 		  scheduling the transmission of messages in a
+ 		  real-time packet switched network. The BWRR
+ 		  algorithm has a simple hardware implementation and
+ 		  admission test, and it does not require a global
+ 		  clock or any explicit flow control messages.  It can
+ 		  achieve high utilization of the network under most
+ 		  practical scenarios and reacts predictably under
+ 		  transient overloads.  In addition, with the BWRR
+ 		  algorithm, the necessary buffer space is predictable
+ 		  and can be fixed at system configuration time.}
+}
+
+
+@InProceedings{Philp96b,
+  author = 	 {Ian R. Philp and Jane W.~S. Liu},
+  title = 	 {{SS/TDMA} Scheduling of Real-Time Periodic Messages},
+  booktitle = 	 {Proceedings, 4th International Conference on
+                  Telecommunication Systems},
+  year =	 1996,
+  address =	 {Nashville, Tennessee},
+  month =	 mar,
+  pages =	 {244-251},
+  citesrc =	 {unverified},
+  postscript =	 {PhLi95b.ps},
+  abstract =     {This paper presents several efficient heuristic algorithms
+		  for scheduling real-time periodic messages in a
+		  satellite-switched time-division multiple
+		  access (SS/TDMA) system. Previous work in this area
+		  considers  messages with identical periods and solves
+		  the time-slot assignment (TSA) problem which finds
+		  conflict-free schedules while minimizing
+		  the transmission schedule length and the number of
+		  switching modes. We consider the multiple-period TSA
+		  (MP-TSA) problem in which real-time periodic messages
+		  have different periods and must be scheduled before
+		  their deadlines which are equal to their periods.
+		  We present simulation results which show the success
+		  rates of our algorithms in finding conflict-free schedules.}
+}
+
+@InProceedings{Philp96c,
+  author = 	 {Ian R. Philp and Klara Nahrstedt and Jane W.~S. Liu},
+  title = 	 {Scheduling and Buffer Management for Soft Real-Time
+                  {VBR} Traffic in Packet Switched Networks},
+  booktitle = 	 {Proceedings, 21st Conference on Local Computer Networks},
+  year =	 1996,
+  address =	 {Minneapolis, Minnesota},
+  month =	 oct,
+  pages =	 {143-152},
+  postscript = 	 {PhNaLi96.ps},
+  abstract =	 {This paper describes four packet scheduling
+                  algorithms and two packet dropping algorithms for
+                  transmitting soft real-time variable bit rate
+                  traffic in a packet switched network.  Simulation
+                  results show that the FCFS algorithm, which is
+                  equivalent to the earliest-deadline-first algorithm
+                  when all packets have equal relative deadlines,
+                  outperforms the timed token algorithm as well as two
+                  other guaranteed bandwidth algorithms.  For the
+                  packet dropping algorithms, we simulated the
+                  last-in-first-discard (LIFD) algorithm as well as a
+                  more complex $(1,k)$ packet dropping algorithm
+                  which, for each stream, tries to drop no more than 1
+                  packet in any sequence of $k$ packets.  We found
+                  that although the $(1,k)$ dropping algorithm does
+                  significantly reduce the failure rate, the same
+                  reduction in this failure rate can be achieved by
+                  slightly lowering the network utilization and using
+                  the LIFD algorithm.}
+}
+
+@Unpublished{Philp96d,
+  author = 	 {Ian R. Philp and Jane W.~S. Liu},
+  title = 	 {A Switch Scheduling Problem for Real-Time Periodic Messages},
+  note = 	 {Submitted to {\em Telecommunications Systems Journal}},
+  postscript =	 {PhLi96.ps},
+  abstract =	 {This paper presents several efficient heuristic
+                  algorithms for scheduling real-time periodic
+                  messages in a satellite-switched time-division
+                  multiple access (SS/TDMA) system.  Previous work in
+                  this area considers messages with identical periods
+                  and solves the time-slot assignment (TSA) problem
+                  which finds conflict-free schedules while minimizing
+                  the transmission schedule length and the number of
+                  switching modes.  We consider the multiple-period
+                  TSA (MP-TSA) problem in which real-time periodic
+                  message have different periods and must be scheduled
+                  before their deadlines, which are equal to their
+                  periods.  We present simulation results which show
+                  the success rates of our algorithms in finding
+                  conflict-free schedules.  We then relax the problem
+                  constraints by allowing a small number of buffers in
+                  the switch and by allowing message to slightly
+                  exceed their deadlines.}
+}
+
+@PhdThesis{Philp96e,
+  author = 	 {Ian Ramsay Philp},
+  title = 	 {Scheduling Real-Time Messages in Packet-Switched Networks},
+  school = 	 {University of Illinois at Urbana-Champaign},
+  year = 	 1996,
+  postscript =	 {Ph96.ps.Z}
+}
+
+@MastersThesis{Redondo93a,
+  author = 	 "Juan Luis Redondo",
+  title = 	 "Schedulability Analyzer Tool",
+  school = 	 "University of Illinois at Urbana-Champaign",
+  year = 	 1993,
+  month =	 feb,
+  note =	 "Available as Technical Report UIUCDCS-R-93-1791"
+}
+
+@InProceedings{Shankar99a,
+  author = 	 "Mallikarjun Shankar and Miguel DeMiguel and Jane W. S. Liu",
+  title = 	 "An End-to-End {QoS} Management Architecture",
+  postscript =	 "ShDeLi99.ps",
+  pages =	 "176-189",
+  booktitle =	 "Proceedings of IEEE Symposium on Real-Time Applications and Systems",
+  year =	 1999,
+  month =	 jun,
+  abstract =     {This paper describes a distributed quality of service (QoS)
+                 management architecture and middleware that accommodates and 
+                 manages different dimensions and measures of QoS. The middleware
+                 supports the specification, maintenance and adaptation of 
+                 end-to-end QoS (including temporal requirements) provided by the
+                 individual components in complex application systems. Using QoS 
+                 negotiation, the middleware determines the quality levels and
+                 resource allocations of the application components. We have
+                 implemented a prototype of the architecture to demonstrate its 
+                 practicality. We have also shown how protocol parameters are
+                 determined in our architecture and evaluated their performance
+                 implications through simulations.}
+}
+
+@Article{Shih89a,
+  author = 	 {Wei-Kuan Shih and Jane W. S. Liu and Jen-Yao Chung
+                  and Donald W. Gillies},
+  title = 	 {Scheduling Tasks with Ready Times and Deadlines to
+                  Minimize Average Error},
+  journal = 	 {Operating Systems Review},
+  year = 	 1989,
+  volume =	 23,
+  number =	 3,
+  month =	 jul,
+  pages =	 {14-28}
+}
+
+@Article{Shih91a,
+  author = 	 "Shih, Wei-Kuan and Liu, Jane W. S. and Chung, Jen-Yao",
+  title = 	 "Algorithms for Scheduling Imprecise Computations
+		  with Timing Constraints",
+  fulljournal =	 "SIAM Journal on Computing",
+  journal =	 sicomp,
+  year =	 1991,
+  volume =	 20,
+  number =	 3,
+  pages =	 "537-552",
+  month =	 jun
+}
+
+@InProceedings{Shih92a,
+  author = 	 "Shih, Wei-Kuan and Liu, Jane W. S.",
+  title = 	 "On-line Scheduling of Imprecise Computations to
+		  Minimize Error",
+  pages =	 "280-289",
+  booktitle =	 "Proceedings, Real-Time Systems Symposium",
+  year =	 1992,
+  organization = "IEEE",
+  month =	 dec,
+  address =	 "Phoenix, Arizona"
+}
+
+@PhdThesis{Shih92b,
+  author = 	 "Shih, Wei-Kuan",
+  title = 	 "Scheduling in Real-Time Systems to Ensure Graceful
+		  Degradation: The Imprecise-Computation and the
+		  Deferred-Deadline Approaches",
+  school = 	 "University of Illinois at Urbana-Champaign",
+  year = 	 1992,
+  x_address =	 "Urbana, Illinois",
+  month =	 dec,
+  note =	 "Available as Technical Report UIUCDCS-R-92-1765"
+}
+
+@Article{Shih93a,
+  author = 	 "Shih, Wei Kuan and Liu, J. W. S. and Liu, C. L.",
+  title = 	 "Modified Rate-Monotonic Algorithm for Scheduling
+		  Periodic Jobs with Deferred Deadlines",
+  journal =	 "IEEE Transactions on Software Engineering",
+  year =	 1993,
+  volume =	 19,
+  number =	 12,
+  pages =	 "1171-1179",
+  month =	 dec,
+  postscript =	 "ShLL94.ps",
+  abstract =     {The deadline of a request is the time instant at
+ 		  which its execution must complete.  The deadline of
+ 		  the request in any period of a job with deferred
+ 		  deadline is some time instant after the end of the
+ 		  period.  This paper describes a semi-static,
+ 		  priority-driven algorithm for scheduling periodic
+ 		  jobs with deferred deadlines: each job is assigned
+ 		  two priorities, the higher one for old requests and
+ 		  the lower one for the current request.  This
+ 		  algorithm is called the modified rate-monotonic
+ 		  algorithm and is based on the well-known
+ 		  rate-monotonic algorithm.  We show that the modified
+ 		  rate-monotonic algorithm is optimal when the
+ 		  deadline of every job is deferred by max(1, r-1)
+ 		  periods or more, where r is the ratio between the
+ 		  longest period and the shortest period.  When the
+ 		  deadline of each job is deferred by one period of
+ 		  the job, any set of n independent jobs whose total
+ 		  utilization is equal to or less than
+		  ${1 + n [2 sup (1/n) - 1]}/2$
+ 		  can be feasibly scheduled by this
+ 		  algorithm.  This bound approaches 0.845 when the
+ 		  number of jobs approaches infinity.}
+}
+
+@Article{Shih95a,
+  author = 	 "Wei-Kuan Shih and Jane W. S. Liu",
+  title = 	 "Algorithms for Scheduling Imprecise Computations
+		  with Timing Constraints to Minimize Maximum Error",
+  journal = 	 "IEEE Transactions on Computers",
+  year = 	 1995,
+  volume =	 44,
+  number =	 3,
+  pages = 	 "466-471",
+  month = 	 mar,
+  postscript =	 "ShLi95.ps",
+  abstract =     {We consider here the problem of scheduling tasks in
+ 		  the imprecise computation model to minimize the
+ 		  maximum error.  Given a task system and a schedule
+ 		  of it, the maximum error of the task system is equal
+ 		  to the error of the task that has the largest error
+ 		  when the task system is executed according to the
+ 		  schedule.  We describe two preemptive algorithms for
+ 		  scheduling on a processor n dependent tasks with
+ 		  rational ready times, deadlines, and processing
+ 		  times.  Each schedule found by our algorithms is an
+ 		  optimal schedule with the minimum total error, and
+ 		  according to this schedule the maximum error is
+ 		  minimized.}
+}
+
+@Article{Shih96a,
+  author = 	 {Wei-Kuan Shih and Jane W. S. Liu},
+  title = 	 {On-Line Scheduling of Imprecise Computations to
+                  Minimize Error},
+  journal = 	 {SIAM Journal on Computing},
+  year = 	 1996,
+  volume =	 25,
+  number =	 5,
+  month =	 oct,
+  pages =	 {1105-1121},
+  abstract =	 {This paper describes three algorithms for scheduling
+		  preemptive, imprecise tasks on a processor to
+		  minimize the total error.  Each imprecise tusk
+		  consists of a mandatory task followed by an optional
+		  task.  Some of the tasks are on-line; they arrive
+		  after the processor begins execution.  The
+		  algorithms assume that when each new on-line task
+		  arrives, its mandatory task and the portions of all
+		  the mandatory tasks yet to be completed at the time
+		  can be feasibly scheduled to complete by their
+		  deadlines.  The algorithms produce for such tasks
+		  feasible schedules whose total errors are
+                  as small as possible.  The three algorithms are
+                  designed for three types of task systems: (1) when
+                  every task is on-line and is ready upon its arrival,
+                  (2) when every on-line task is ready upon arrival
+                  but there are also off-line tasks with arbitrary
+                  ready times, and (3) when on-line tasks have
+                  arbitrary ready times.  Their running times are
+		  $O(n \log n)$, $O(n \log n)$, and $O(n \log^2 n)$,
+                  respectively.}
+}
+
+@MastersThesis{Silberman89a,
+  author = 	 {Ami Abraham Silberman},
+  title = 	 {{CPSS}: A Communications Protocol Specification System},
+  school = 	 {University of Illinois at Urbana-Champaign},
+  year = 	 1989,
+  x_address = 	 {Urbana, Illinois}
+}
+
+@PhdThesis{Silberman97a,
+  author = 	 {Ami Abraham Silberman},
+  title = 	 {RTM---Design and Implementation},
+  school = 	 {University of Illinois at Urbana-Champaign},
+  year = 	 1997,
+  x_address =	 {Urbana, Illinois},
+  note =	 "Available as Technical Report UIUCDCS-R-97-2040",
+  postscript =	 {Sil97a.ps.gz},
+  pdf =		 {Sil97a.pdf}
+}
+
+@PhdThesis{Song92a,
+  author = 	 "Song, Xiaohui",
+  title = 	 "Data Temporal Consistency in Hard Real-Time Systems",
+  school = 	 "University of Illinois at Urbana-Champaign",
+  year = 	 1992,
+  x_address =	 "Urbana, Illinois",
+  month =	 may,
+  note =	 "Available as Technical Report UIUCDCS-R-92-1753"
+}
+
+@InProceedings{Song93a,
+  author = 	 "Song, X. and Liu, J. W. S.",
+  title = 	 "Maintaining Temporal Consistency: Pessimistic
+		  vs. Optimistic Concurrency Control",
+  booktitle =	 "Proceedings of the IEEE Symposium on Computer-Aided
+		  Control System Design",
+  year =	 1992,
+  xx_organization ="IEEE",
+  address =	 "Napa, California",
+  month =	 mar,
+  postscript =	 "SoLi93.ps",
+  abstract =     {We study the performance of concurrency control
+ 		  algorithms in maintaining temporal consistency of
+ 		  shared data in hard real-time systems.  In our
+ 		  model, a hard real-time system consists of periodic
+ 		  tasks which are either write-only, read-only or
+ 		  update transactions.  Transactions may share
+ 		  data. Data objects are temporally inconsistent when
+ 		  their ages and dispersions are greater than the
+ 		  absolute and relative thresholds allowed by the
+ 		  application.  Real-time transactions must read
+ 		  temporally consistent data in order to produce
+ 		  correct results.  Based on this model, we have
+ 		  evaluated the performance of two well-known classes
+ 		  of concurrency control algorithms that handle
+ 		  multiversion data: the two-phase locking and the
+ 		  optimistic algorithms, as well as rate-monotonic and
+ 		  earliest-deadline-first scheduling algorithms.  The
+ 		  effects of using the priority inheritance protocol
+ 		  and stack-based protocols with lock-based
+ 		  concurrency control are also studied.}
+}
+
+@Article{Song95a,
+  author = 	 {Xiaohui (Carol) Song and Jane W. S. Liu},
+  title = 	 {Maintaining Temporal Consistency: Pessimistic vs
+                  Optimistic Concurrency Control},
+  journal = 	 {IEEE Transactions on Knowledge and Data Engineering},
+  year = 	 1995,
+  volume =	 7,
+  number =	 5,
+  month =	 oct,
+  pages =	 {786-796}
+}
+
+@InProceedings{Storch93a,
+  author = 	 "Storch, M. F. and Liu, J. W. S.",
+  title = 	 "Heuristic Algorithms for Periodic Job Assignment",
+  booktitle =	 "Proceedings of the Workshop on Parallel and
+		  Distributed Real-Time Systems",
+  year =	 1993,
+  address =	 "Newport Beach, California",
+  month =	 apr,
+  postscript =	 "StLi93.ps",
+  abstract =     {This paper is concerned with job assignment in
+ 		  distributed systems.  We model a distributed system
+ 		  as a set of identical processors, where any two
+ 		  processors may communicate without the help of any
+ 		  other processor.  The workload on the system is
+ 		  composed of a set of communicating periodic jobs,
+ 		  and each job may execute on any processor.  Given a
+ 		  set of jobs and the potential communication cost
+ 		  between each pair of jobs, we want to assign each
+ 		  job to some processor such that the total
+ 		  communication cost incurred by all jobs is
+ 		  minimized. The assignment must meet the restriction
+ 		  that the sum of the utilization factors of all jobs
+ 		  on any one processor is less than a maximum
+ 		  utilization factor which depends on the local
+ 		  scheduling algorithm used at each processor.  As
+ 		  secondary goals, we want to use a minimum number of
+ 		  processors and to minimize the maximum communication
+ 		  cost between any pair of processors.  Most
+ 		  formulations of the job assignment problem,
+ 		  including our periodic job assignment problem, are
+ 		  known to be NP-hard.  In this paper we present five
+ 		  heuristic algorithms that provide approximate
+ 		  solutions to the periodic job assignment problem.
+  		  Because it is difficult to analytically derive
+ 		  bounds on their performance, we use experimentation
+ 		  to determine the relative merits of these
+ 		  heuristics.}
+}
+@InProceedings{Storch94a,
+  author = 	 "Storch, Matthew F. and Liu, Jane W.-S.",
+  title = 	 "A Simulation Environment for Distributed Real-Time Systems",
+  booktitle =	 "Proceedings of the SCS Simulation Multiconference",
+  year =	 1994,
+  address =	 "La Jolla, California",
+  month =	 apr,
+  postscript =	 "StLi94a.ps",
+  abstract =     {Several aspects of real-time systems make an a
+ 		  priori schedulability analysis difficult or
+ 		  impossible.  In order to determine the timing
+ 		  properties of such systems, we often turn to
+ 		  simulation methods.  While simulation methods have
+ 		  been extensively studied, most simulators are
+ 		  designed around a single scheduling paradigm and do
+ 		  not focus on real-time issues.  This paper describes
+ 		  an object-oriented simulation environment called
+ 		  DRTSS, which allows its users to easily construct
+ 		  discrete-event simulators of multi-paradigm,
+ 		  distributed real-time systems.  A cornerstone of
+ 		  DRTSS is the ability to both simulate the execution
+ 		  of tasks for which no code is specified and to
+ 		  actually execute tasks for which code is available.
+  		  A key to DRTSS flexibility is the notion of DRTSS as
+ 		  a ``software backplane.''  The user will be able to
+ 		  add custom scheduling algorithms, resource access
+ 		  control protocols, and executable tasks to DRTSS
+ 		  using the software backplane protocol.  However,
+ 		  DRTSS will be supplied with many modern scheduling
+ 		  algorithms and resource access control protocols, so
+ 		  most users will not be required to implement these
+ 		  algorithms.}
+}
+@InProceedings{Storch94b,
+  author = 	 "Storch, Matthew F. and Liu, Jane W.-S.",
+  title = 	 "{DRTSS}: A Simulation Framework for Complex
+		  Real-Time Systems",
+  booktitle =	 "Proceedings of the Complex Systems Design and
+		  Synthesis Technology Workshop",
+  year =	 1994,
+  address =	 "Calverton, Maryland",
+  month =	 jul,
+  postscript =	 "StLi94b.ps",
+  abstract =     {Several aspects of real-time systems make an a
+ 		  priori schedulability analysis difficult or
+ 		  impossible.  In order to determine the timing
+ 		  properties of such systems, we often turn to
+ 		  simulation methods.  While simulation methods have
+ 		  been extensively studied, most simulators are
+ 		  designed around a single scheduling paradigm and do
+ 		  not focus on real-time issues.  This paper describes
+ 		  an object-oriented simulation environment called
+ 		  DRTSS, which allows its users to easily construct
+ 		  discrete-event simulators of multi-paradigm,
+ 		  distributed real-time systems.  A cornerstone of
+ 		  DRTSS is the ability to both simulate the execution
+ 		  of tasks for which no code is specified and to
+ 		  actually execute tasks for which code is available.
+  		  A key to DRTSS flexibility is the notion of DRTSS as
+ 		  a ``software backplane.''  The user will be able to
+ 		  add custom scheduling algorithms, resource access
+ 		  control protocols, and executable tasks to DRTSS
+ 		  using the software backplane protocol.  However,
+ 		  DRTSS will be supplied with many modern scheduling
+ 		  algorithms and resource access control protocols, so
+ 		  most users will not be required to implement these
+ 		  algorithms.}
+}
+
+@InProceedings{Storch96a,
+  author = 	 {Matthew F. Storch and Jane W.-S. Liu},
+  title = 	 {{DRTSS}: A Simulation Framework for Complex
+                  Real-Time Systems},
+  booktitle = 	 {Proceedings, Real-Time Technology and Applications
+                  Symposium},
+  x_editor =	 {Kevin Jeffay and Wei Zhao},
+  year =	 1996,
+  organization = {IEEE},
+  address =	 {Brookline, Massachusetts},
+  month =	 jun,
+  pages =	 {160-169},
+  postscript =	 {StLi96.ps},
+  abstract =	 {This paper describes a simulation framework called
+                  DRTSS, which allows its users to easily construct
+                  discrete-event simulators of complex,
+                  multi-paradigm, distributed real-time
+                  systems.  Preliminary, high-level system designs can
+                  be entered into DRTSS to gain initial insight into
+                  the timing feasibility of the system.  Later,
+                  detailed hierarchical designs can be evaluated and
+                  more detailed analysis can be undertaken.  DRTSS is
+                  a member of the PERTS family of timing-oriented
+                  prototyping and verification tools.  It complements
+                  the PERTS schedulability analyzer tool by dealing
+                  with complex real-time systems for which {\em a
+                  priori} schedulability analysis is difficult or
+                  impossible.}
+}
+
+@PhdThesis{Storch96b,
+  author = 	 {Matthew Francis Storch},
+  title = 	 {A Framework for the Simulation of Complex Real-Time Systems},
+  school = 	 {University of Illinois at Urbana-Champaign},
+  year = 	 1996,
+  x_address =	 {Urbana, Illinois},
+  month =	 nov,
+  postscript =	 {St96.ps.Z},
+  note =	 {Available as Technical Report UIUCDCS-R-96-1983},
+  abstract =	 {Simulation is often used in the analysis of complex
+                  computing systems.  The design and validation of
+                  complex real-time systems demands capabilities not
+                  found in existing simulation environments.  We
+                  categorize these capabilities into three major
+                  functional areas: search control, the execution
+                  engine, and output analysis.  Search control is an
+                  important topic often treated lightly in simulation
+                  environments for real-time systems.  The search
+                  controller chooses values for variable input
+                  parameters and launches simulations to determine the
+                  performance of the system under different sets of
+                  parameter values.  The search control framework
+                  presented in this thesis allows both conventional
+                  design search and also validation search; the latter
+                  is required for the deterministic validation of
+                  real-time systems.  Previous simulation
+                  environments did not make it easy to incorporate the
+                  wide variety of different scheduling paradigms and
+                  algorithms found in large, modern real-time
+                  systems.  The execution engine framework described
+                  in this thesis provides a simple, flexible
+                  architecture for incorporating complex schedulers
+                  that address one or more dimensions of scheduling.
+                  Furthermore, the execution engine framework allows a
+                  fully dynamic simulation where tasks migrate,
+                  schedulers are changed on-the-fly, etc.  The
+                  framework also allows hierarchical specification and
+                  execution of the systems being modeled, which
+                  facilitates both information hiding and hierarchical
+                  scheduling.  The framework thus allows an integrated
+                  approach to the analysis of complex real-time
+                  systems.  No simulation is useful, however, without
+                  the ability to easily extract useful high-level
+                  information from the voluminous set of low-level
+                  events which comprises the basic output of a
+                  discrete-event simulator.  Output analysis is
+                  usually given only cursory treatment in existing
+                  simulation environments for real-time systems.  The
+                  output analysis framework allows the specification
+                  of patterns of events which are detected in linear
+                  time as the simulation executes.  Statistics computed
+                  when patterns are matched are used for run-length
+                  control and to help direct the search.  Finally, a
+                  reference implementation of the framework has been
+                  created and used in a sample case study.  The
+                  reference implementation validates the architectural
+                  claims made for the framework, while its use in the
+                  case study validates the reference implementation itself.}
+}
+
+@InProceedings{Sun94a,
+  author = 	 "Sun, Jun and Bettati, Riccardo and Liu, Jane W.-S.",
+  title = 	 "An End-to-End Approach to Schedule Tasks with Shared
+		  Resources in Multiprocessor Systems",
+  booktitle =	 "Proceedings of the 11th IEEE Workshop on Real-Time
+		  Operating Systems and Software",
+  year =	 1994,
+  xx_organization ="IEEE",
+  address =	 "Seattle, Washington",
+  month =	 may,
+  postscript =	 "SuBL94.ps",
+  keywords =	 "end-to-end scheduling, resource contention,
+		  schedualability, priority-ceiling protocol,
+		  real-time systems, multiprocessor systems,
+		  distributed systems",
+  abstract =     {We propose an end-to-end approach to scheduling tasks
+		  that share resources in a multiprocessor or
+		  distributed system. According to this approach, each
+		  task is segmented into a chain of subtasks,
+		  depending on its resource accesses.  We describe
+		  several methods to assign a priority to each
+		  subtask.  We also describe three methods to bound
+		  the worst-case response time of each subtask.
+		  The schedulability of each task can be verified by
+		  comparing the worst-case response time with its relative
+		  deadline.}
+}
+
+@InProceedings{Sun95a,
+  author = 	 "Jun Sun and Jane W. S. Liu",
+  title = 	 "Bounding the End-to-End Response Time in
+		  Multiprocessor Real-Time Systems",
+  pages =	 "91-98",
+  booktitle =	 "Proceeding of Workshop on Parallel and Distributed
+		  Real-Time Systems",
+  year =	 1995,
+  xOPTorganization = "@@",
+  address =	 "Santa Barbara, California",
+  month =	 apr,
+  citesrc =	 "jl",
+  postscript =	 "SuLi95.ps",
+  keywords =	 "end-to-end scheduling, response time,
+		  schedualability, phase modification",
+  abstract =     {In a multiprocessor real-time system, a task may
+ 		  execute in turn on several processors before it
+ 		  completes.  The task may have different priorities
+ 		  on different processors and execute on some
+ 		  processors more than once.  Existing techniques for
+ 		  bounding the response times of such tasks are not
+ 		  effective.  In this paper, we present a method to
+ 		  compute tighter upper bounds on their response
+ 		  times.}
+}
+
+@InProceedings{Sun96a,
+  author =	 "Jun Sun and Jane Liu",
+  title =	 "Synchronization Protocols in Distributed Real-Time Systems",
+  booktitle =	 "The 16th International Conference on Distributed
+		  Computing Systems",
+  year =	 1996,
+  month =	 may,
+  address =	 "Hong Kong",
+  postscript =	 {SuLi96.ps},
+  abstract =	 {In many distributed real-time systems, the workload
+		  can be modeled as a set of periodic tasks, each of
+		  which consists of a chain of subtasks executing on
+		  different processors.  Synchronization protocols are
+		  used to govern the release of subtasks so that the
+		  precedence constraints among subtasks are satisfied
+		  and the schedulability of the resultant system is
+		  analyzable.  Tasks have different worst-case and
+		  average end-to-end response times when different
+		  protocols are used.  In this paper, we consider
+		  distributed real- time systems with independent,
+		  periodic tasks and fixed-priority scheduling
+		  algorithms.  We propose three synchronization
+		  protocols and conduct simulation to compare their
+		  performance with respect to the two timing aspects.}
+}
+
+@TechReport{Sun96b,
+  author = 	 {Jun Sun and Jane Liu},
+  title = 	 {Bounding the End-to-End Response Times of Tasks in a
+                  Distributed Real-Time System Using the Direct
+                  Synchronization Protocol},
+  institution =  {Department of Computer Science,
+		  University of Illinois at Urbana-Champaign},
+  year = 	 1996,
+  number =	 {UIUCDCS-R-96-1949},
+  x_address =	 {Urbana, Illinois},
+  month =	 jun,
+  postscript =	 {SuLi96a.ps},
+  abstract =	 {In a distributed real-time system, a task may
+                  consist of a chain of subtasks which execute on
+                  different processors.  In order to guarantee that
+                  all timing constraints are met in such a system, it
+                  is imperative to be able to determine the end-to-end
+                  response time for each task.  This report focuses on
+                  distributed systems where tasks are periodic and
+                  scheduled according to fixed priority scheduling
+                  algorithms.  Moreover, if a subtask has
+                  predecessors, every instance of the subtask is
+                  released as soon as the corresponding instance of
+                  the immediate predecessor subtask completes.  This
+                  report describes an algorithm that can be used to
+                  find upper bounds on the end-to-end response times
+                  of tasks in such a distributed real-time system.},
+}
+
+@InProceedings{Sun96c,
+  author = 	 {Jun Sun and Jane W. S. Liu},
+  title = 	 {Bounding Completion Times of Jobs with Arbitrary
+                  Release Times and Variable Execution Times},
+  booktitle = 	 {Proceedings, Real-Time Systems Symposium},
+  year =	 1996,
+  organization = {IEEE},
+  address =	 {Washington, D. C.},
+  month =	 dec,
+  pages =	 {2-12},
+  postscript =	 {SuLi96b.ps},
+  abstract =	 {In many real-time systems, the workload can be
+                  characterized as a set of jobs with linear
+                  precedence constraints among them.  Jobs often have
+                  variable execution times and arbitrary release
+                  times.  We describe here three algorithms that can
+                  be used to computer upper bounds on completion times
+                  of such jobs scheduled on a priority-driven basis.
+                  The algorithms have different performance and
+                  complexity.  Simulation was performed to compare
+                  their performance.}
+}
+
+@Unpublished{Sun96e,
+  author = 	 {Jun Sun and Jane Liu},
+  title = 	 {Synchronization Protocols in Distributed Real-Time Systems},
+  note = 	 {Submitted to \emph{IEEE Transactions on Parallel and
+         	  Distributed Computing}},
+  postscript =	 {SuLi96c.ps},
+  abstract =	 {In many distributed real-time systems, the workload can
+		  be modeled as a set of periodic tasks, each of which
+		  consists of a chain of subtasks executing on
+		  different processors.  Synchronization protocols are
+		  used to govern the release of subtasks so that the
+		  precedence constraints among subtasks are satisfied
+		  and the schedulability of the resultant system is
+		  analyzable.  When different protocols are used,
+		  tasks can have different worst-case and average
+		  end-to-end response times.  This paper focuses on
+		  distributed real-time systems that contain
+		  independent, periodic tasks scheduled by
+		  fixed-priority scheduling algorithms.  It describes
+		  three synchronization protocols together with
+		  algorithms to analyze the schedulability of the
+		  system when these protocols are used. Simulation was
+		  conducted to compare the performance of these
+		  protocols with respect to the worst-case and average
+		  case end-to-end response times.  The simulation
+		  experiment and the performance of the protocols are
+		  described.}
+}
+
+@Article{Sun97a,
+  author = 	 {Jun Sun and Mark K. Gardner and Jane W. S. Liu},
+  title = 	 {Bounding Completion Times of Jobs with Arbitrary
+                  Release Times, Variable Execution Times, and
+                  Resource Sharing},
+  journal = 	 {IEEE Transactions on Software Engineering},
+  year = 	 1997,
+  volume =	 23,
+  number =	 10,
+  month =	 oct,
+  pages =	 {603-615},
+  postscript =	 {SuGaLi97.ps.gz},
+  abstract =	 {The workload of many real-time systems can be
+                  characterized as a set of preemptible jobs with
+                  linear precedence constraints.  Typically their
+                  execution times are only known to lie within a range
+                  of values.  In addition jobs share resources and
+                  access to the resources must be synchronized to
+                  ensure the integrity of the system.  This paper is
+                  concerned with the schedulability of such jobs when
+                  scheduled on a priority-driven basis.  It describes
+                  three algorithms for computing upper bounds on the
+                  completion times of jobs that have arbitrary release
+                  times and priorities.  The first two are simple but
+                  do not yield sufficiently tight bounds, while the
+                  last one yields the tightest bounds but has the
+                  greatest complexity.}
+}
+
+@PhdThesis{Sun97b,
+  author = 	 {Jun Sun},
+  title = 	 {Fixed-Priority End-to-End Scheduling in Distributed
+                  Real-Time Systems},
+  school = 	 {University of Illinois at Urbana-Champaign},
+  year = 	 1997,
+  x_address =	 {Urbana, Illinois},
+  note =	 "Available as Technical Report UIUCDCS-R-97-1973",
+  postscript =	 {Sun97.ps.Z},
+  abstract =	 {In recent years more and more real-time applications
+                  run on multiprocessor or distributed systems.  In
+                  such systems, a task may execute sequentially on
+                  many different processors.  Such a task can be
+                  viewed as a linear chain of subtasks, each of which
+                  represents a segment of the task that executes on
+                  one of those processors.  The response time of the
+                  task is measured from the release of its first
+                  subtask to the completion of its last subtask and is
+                  called the end-to-end response time.  A task is
+                  schedulable if its end-to-end response time is never
+                  greater than the specified end-to-end relative
+                  deadline.
+		  \par This thesis deals with the problem
+                  of scheduling periodic tasks to meet their
+                  end-to-end deadlines.  Specifically, the thesis
+                  focuses on fixed-priority scheduling algorithms,
+                  where each subtask is assigned a fixed priority and
+                  is scheduled preemptively.  According to this
+                  approach, three related problems need to be solved.
+		  \par{\bf Priority Assignment : } How we
+		  assign the priorities to subtasks so that the system
+		  schedulability can be maximized.
+		  \par{\bf Execution Synchronization : } How we
+		  synchronize the releases of subtasks so that the
+		  precedence constraints among subtasks are satisfied,
+		  and the system schedulability is optimized.
+		  \par{\bf Schedulability Analysis : } Given a certain
+		  priority assignment and an execution synchronization
+		  method, how we compute the worst-case end-to-end
+		  response time of each task, so that we can verify
+		  the schedulability of the task and hence the
+		  schedulability of the system.
+		  \par As solutions to these three problems, the thesis
+                  describes five synchronization protocols, several
+                  deadline-based priority assignment methods, and
+                  corresponding schedulability analysis algorithms.
+                  These solutions form an integrated end-to-end
+                  scheduling framework for scheduling tasks with
+                  end-to-end deadlines and analyzing the
+                  schedulability of an end-to-end system.
+		  \par As an application of the framework, the thesis
+                  proposes an end-to-end scheduling based approach to
+                  the resource contention problem in distributed
+                  real-time systems.  Simulation results show that the
+                  end-to-end scheduling approach performs better in
+                  many cases than an existing approach, known as the
+                  Multiprocessor Priority Ceiling Protocol.  In the
+                  appendix, the thesis includes an in-depth discussion
+                  of sporadic server algorithms.}
+}
+
+@InProceedings{Tia94a,
+  author = 	 "Tia, T. S. and Liu, J. W. S.",
+  title = 	 "Task and Resource Assignment in Distributed
+		  Real-Time Systems",
+  booktitle =	 "Proceedings of the 2nd Workshop on Parallel and
+		  Distributed Real-Time Systems",
+  year =	 1994,
+  address =	 "Cancun, Mexico",
+  month =	 apr
+}
+
+@Unpublished{Tia94b,
+  author = 	 "Tia, Too-Seng and Liu, Jane W.-S.",
+  title = 	 "Assigning Real-Time Tasks and Resources to
+		  Distributed Systems",
+  note =	 "To appear in {\em International Journal of Mini and
+		  Microcomputers}",
+  xx_note =	 "An earlier version appeared in \cite{Tia94a}.",
+  postscript =	 "TiLi94a.ps",
+  abstract =	 {In this paper, we study the problem of simultaneously
+		  assigning real-time tasks and resources to a distributed
+		  system, taking into account the execution, communication
+		  and resource-contention costs.  We assume that
+		  multiprocessor priority-ceiling protocol is used to
+		  synchronize the access to shared resources, and each
+		  processor schedule the tasks assigned to it using the
+		  rate-monotonic scheduling algorithm.  The assignment
+		  is subject to the constraint that the tasks are
+		  schedulable after the assignment.  This problem is
+		  known to be computationally intractable.  We formulate
+		  the problem using an assignment graph and describe an
+		  efficient heuristic algorithm, which is based on
+		  clustering and graph-bisection, to find an assignment.
+		  Experimental results indicate that the assignment
+		  algorithm is effective.}
+}
+
+@TechReport{Tia94c,
+  author = 	 "Tia, Too-Seng and Liu, Jane W.-S. and Shankar, Mallikarjun",
+  title = 	 "Aperiodic Request Scheduling in Fixed-Priority
+		  Preemptive Scheduling",
+  institution =  "Department of Computer Science, University of
+		  Illinois at Urbana-Champaign",
+  year = 	 1994,
+  month =	 jul,
+  number =	 "UIUCDCS-R-94-1859",
+  x_address =	 "Urbana, Illinois",
+  postscript =	 "TiLS94a.ps",
+  abstract =     {In this report, we investigate the problem of
+ 		  scheduling aperiodic requests in systems where
+ 		  periodic tasks are scheduled on a fixed-priority,
+ 		  preemptive basis. First, we show that given any
+ 		  queueing discipline for the aperiodic requests, no
+ 		  scheduling algorithm can minimize the response time
+ 		  of every aperiodic request and guarantee that the
+ 		  deadlines of the periodic tasks are met when the
+ 		  periodic tasks are scheduled on fixed-priority,
+ 		  preemptive basis.  We then develop two algorithms:
+ 		  Algorithm L is locally optimal in that it minimizes
+ 		  the response time of the aperiodic request at the
+ 		  head of the aperiodic service queue. Algorithm G is
+ 		  globally optimal in that it completes the current
+ 		  backlog of work in the aperiodic service queue as
+ 		  early as possible. Algorithm G also tries to reduce
+ 		  the average response time of the aperiodic
+ 		  requests.}
+}
+
+@Unpublished{Tia94e,
+  author = 	 "Tia, Too-Seng and Liu, Jane W.-S. and Sun, Jun and
+		  Ha, Rhan",
+  title = 	 "A Linear-Time Optimal Acceptance Test for Scheduling
+		  of Hard Real-Time Tasks",
+  note =	 "Submitted to {\em IEEE Transactions on Software
+		  Engineering}",
+  postscript =	 "TiLS94c.ps",
+  abstract =     {This paper describes an optimal acceptance test for
+ 		  scheduling sporadic requests together with periodic
+ 		  tasks on an earliest-deadline-first basis.  The
+ 		  deadlines of periodic requests must be met. Sporadic
+ 		  requests are accepted only if their deadlines can
+ 		  also be met. The time complexity of our acceptance
+ 		  test is $O(n+m)$, where $n$ is the number of
+ 		  periodic tasks and $m$ is the number of sporadic
+ 		  requests that have previously been accepted but not
+ 		  completed.  The proposed algorithm is a significant
+ 		  improvement over previous algorithms which are
+ 		  pseudo-polynomial in time complexity, i.e., $O(N+m)$
+ 		  where $N$ is the number of periodic requests in a
+ 		  hyperperiod.}
+}
+
+@InProceedings{Tia95a,
+  author = 	 "Tia, T.-S. and Deng, Z. and Shankar, M. and Storch,
+		  M. and Sun, J. and Wu, L.-C. and Liu, J. W.-S.",
+  title = 	 "Probabilistic Performance Guarantee for Real-Time
+		  Tasks with Varying Computation Times",
+  pages =	 "164-173",
+  booktitle =	 "Proceedings, Real-Time Technology and Applications
+		  Symposium",
+  year =	 "1995",
+  organization = "IEEE",
+  month =	 may,
+  address =	 "Chicago, Illinois",
+  postscript =	 "TiDSSSWL95.ps",
+  abstract =     {This paper describes how the scheduling algorithms
+ 		  and schedulability analysis methods developed for
+ 		  periodic tasks can be extended to provide
+ 		  performance guarantees to semi-periodic tasks. Like
+ 		  periodic tasks, the requests in a semi-periodic task
+ 		  are released regularly. However, their computation
+ 		  times vary widely.  We focus on systems where the
+ 		  total maximum utilization of the tasks on each
+ 		  processor is larger than one. Hence according to the
+ 		  existing schedulability conditions for periodic
+ 		  tasks, we cannot guarantee that the semi-periodic
+ 		  tasks are schedulable, even though their total
+ 		  average utilization is very small.  We describe two
+ 		  methods of providing probabilistic schedulability
+ 		  guarantees to the semi-periodic tasks: The first
+ 		  method, called probabilistic time-demand analysis,
+ 		  is a modification of the exact schedulability test
+ 		  for periodic tasks.  The second method, called the
+ 		  transform-task method, transforms each task into a
+ 		  periodic task followed by a sporadic task.  The
+ 		  transform-task method can provide an absolute
+ 		  guarantee to requests with shorter computation times
+ 		  and a probabilistic guarantee to the longer
+ 		  requests.}
+}
+
+@PhdThesis{Tia95b,
+  author = 	 "Too-Seng Tia",
+  title = 	 "Utilizing Slack Time for Aperiodic and Sporadic
+		  Requests Scheduling in Real-Time Systems",
+  school = 	 "University of Illinois at Urbana-Champaign",
+  year = 	 1995,
+  x_address =	 "Urbana, Illinois",
+  month =	 apr,
+  note =	 "Available as Technical Report UIUCDCS-R-95-1906",
+  citesrc =	 "dlh",
+  abstract =	 {A real-time system typically has a mixture of
+ 		  periodic and aperiodic workload.  Requests in each
+ 		  periodic task have regular arrival times and hard
+ 		  deadlines.  Aperiodic requests, on the other hand,
+ 		  have random arrival times and may have hard or soft
+ 		  deadlines.  We called these aperiodic requests with
+ 		  hard deadlines sporadic requests and those with soft
+ 		  deadlines aperiodic requests.
+  		  \par This thesis extends two common approaches to
+ 		  scheduling periodic requests to address the problems
+ 		  of jointly scheduling periodic requests with
+ 		  aperiodic requests or sporadic requests.
+  		  Specifically, we present algorithms for scheduling
+ 		  aperiodic requests in dynamic-priority systems,
+ 		  sporadic requests in dynamic-priority systems, and
+ 		  aperiodic requests in fixed-priority systems.
+  		  \par Our algorithms are based on the concept of slack,
+ 		  which is the amount of processor time available to
+ 		  schedule the aperiodic or sporadic requests without
+ 		  causing any periodic requests to miss their
+ 		  deadlines. Two features that distinguish our
+ 		  algorithms from previous slack stealing algorithms
+ 		  proposed in the literature are (1) the efficient
+ 		  computation of slack, and (2) the optimal usage
+ 		  (i.e., when and how much to use) of the available
+ 		  slack to schedule the aperiodic or sporadic
+ 		  requests.  For aperiodic requests, our algorithms
+ 		  are optimal in that the aperiodic requests have the
+ 		  minimum possible response times.  For sporadic
+ 		  requests, they guarantee the deadlines of as many
+ 		  sporadic requests as possible.}
+}
+
+@Article{Tia96a,
+  author = 	 {Too-Seng Tia and Jane W.-S. Liu and Mallikarjun Shankar},
+  title = 	 {Algorithms and Optimality of Scheduling Soft
+                  Aperiodic Requests in Fixed-Priority Preemptive Systems},
+  journal = 	 {Real-Time Systems},
+  year = 	 1996,
+  volume =	 10,
+  number =	 1,
+  month =	 jan,
+  pages =	 {23-43},
+  postscript =	 "TiLS94b.ps",
+  abstract =     {In this paper, we investigate the problem of
+ 		  scheduling soft aperiodic requests in systems where
+ 		  periodic tasks are scheduled on a fixed-priority,
+ 		  preemptive basis. First, we show that given any
+ 		  queueing discipline for the aperiodic requests, no
+ 		  scheduling algorithm can minimize the response time
+ 		  of every aperiodic request and guarantee that the
+ 		  deadlines of the periodic tasks are met when the
+ 		  periodic tasks are scheduled on a fixed-priority,
+ 		  preemptive basis.  We then develop two algorithms:
+ 		  Algorithm L is locally optimal in that it minimizes
+ 		  the response time of the aperiodic request at the
+ 		  head of the aperiodic service queue. Algorithm G is
+ 		  globally optimal in that it completes the current
+ 		  backlog of work in the aperiodic service queue as
+ 		  early as possible.}
+}
+
+@InProceedings{Vrbsky88a,
+  author = 	 "Vrbsky, Susan V. and Lin, Kwei-Jay",
+  title = 	 "Recovering Imprecise Transactions with Real-Time
+		  Constraints",
+  pages =	 "185-193",
+  booktitle =	 "Proceedings, Seventh Symposium on Reliable
+		  Distributed Systems",
+  year =	 1988,
+  organization = "IEEE",
+  month =	 oct,
+  address =	 "Columbus, Ohio"
+}
+
+@TechReport{Vrbsky90a,
+  author = 	 "Vrbsky, S. V. and Liu, J. W. S. and Smith, K. P.",
+  title = 	 "An Object-Oriented Query Processor That Returns
+		  Monotonically Improving Approximate Answers",
+  institution =  "Department of Computer Science, University of
+		  Illinois at Urbana-Champaign",
+  year = 	 1990,
+  number =	 "UIUCDCS-R-90-1568",
+  x_address =	 "Urbana, Illinois"
+}
+
+@PhdThesis{Vrbsky93a,
+  author = 	 "Vrbsky, Susan Vlasta",
+  title = 	 "Approximate: A Query Processor that Produces
+		  Monotonically Improving Approximate Answers",
+  school = 	 "University of Illinois at Urbana-Champaign",
+  year = 	 1993,
+  x_address =	 "Urbana, Illinois",
+  month =	 jun,
+  note =	 "Available as Technical Report UIUCDCS-R-93-1816"
+}
+
+@Article{Vrbsky93b,
+  author = 	 {Susan V. Vrbsky and Jane W. S. Liu},
+  title = 	 {{APPROXIMATE}: A Query Processor that Produces
+		  Monotonically Improving Approximate Answers},
+  journal = 	 {IEEE Transactions on Knowledge and Data Engineering},
+  year = 	 1993,
+  volume =	 5,
+  number =	 6,
+  month =	 dec,
+  pages =	 {1056-1068},
+  abstract =	 {This paper describes APPROXIMATE, a query processor
+		  that makes approximate answers available if part of
+		  the database is unavailable or if there is not
+		  enough time to produce an exact answer. The
+		  processor implements approximate query processing -
+		  the accuracy of the approximate result produced
+		  improves monotonically with the amount of data
+		  retrieved to produce the result. The monotone query
+		  processing algorithm of APPROXIMATE works within a
+		  standard relational algebra framework. APPROXIMATE
+		  maintains semantic information for approximate query
+		  processing on an underlying level and can be
+		  implemented on a relational database system with
+		  little change to the relational architecture. We
+		  show how APPROXIMATE is implemented to make
+		  effective use of the semantic support and describe
+		  the additional overhead required by APPROXIMATE.}
+}
+
+@Article{Vrbsky94a,
+  author = 	 {Susan V. Vrbsky and Jane W. S. Liu},
+  title = 	 {Producing Approximate Answers to Set- and
+		  Single-Valued Queries},
+  journal = 	 {The Journal of Systems and Software},
+  year = 	 1994,
+  volume =	 27,
+  number =	 3,
+  month =	 dec,
+  pages =	 {243-251},
+  abstract =	 {APPROXIMATE is a query processor that makes
+		  approximate answers available if part of the data
+		  base is unavailable or there is not enough time to
+		  produce an exact answer. The accuracy of the
+		  approximate answers produced improves monotonically
+		  with the amount of data retrieved to produce the
+		  result. We describe the approximation semantics of
+		  APPROXIMATE that serves as the basis for meaningful
+		  approximations of both set- and single-valued
+		  queries. We show how APPROXIMATE is implemented to
+		  make effective use of semantic information, such as
+		  a distance function, to define and compare the
+		  accuracies bf approximate answers with the exact
+		  answer.}
+}
+
+@InProceedings{Yu91a,
+  author = 	 "Yu, Albert C. and Lin, Kwei-Jay",
+  title = 	 "Scheduling Parallelizable Imprecise Computations
+		  on Multiprocessors",
+  pages =	 "531-536",
+  booktitle =	 "Proceedings, the Fifth International Parallel
+		  Processing Symposium",
+  year =	 1991,
+  organization = "IEEE",
+  month =	 apr,
+  address =	 "Anaheim, California"
+}
+
+@PhdThesis{Yu92a,
+  author = 	 "Albert Chuang-Shi Yu",
+  title = 	 "Scheduling Parallel Real-Time Tasks That Allow
+		  Imprecise Results",
+  school = 	 "University of Illinois at Urbana-Champaign",
+  year = 	 1992,
+  x_address =	 "Urbana, Illinois",
+  month =	 mar,
+  note =	 "Available as Technical Report UIUCDCS-R-92-1738"
+}
+
+@Book{vanTilborg91a,
+  title = 	 {Foundations of Real-Time Computing: Scheduling and
+		  Resource Management},
+  booktitle = 	 {Foundations of Real-Time Computing: Scheduling and
+		  Resource Management},
+  publisher = 	 {Kluwer Academic Publishers},
+  address =	 {Norwell, Massachusetts},
+  year = 	 1991,
+  editor =	 {Andr\'e M. van Tilborg and Gary M. Koob},
+  citesrc =	 {dlh}
+}
+
+@InProceedings{Zhang99,
+  author =	 "L. Zhang and Z. Deng and I. Philp and J. W. S. Liu",
+  title =	 "A Hierarchical Scheme for Scheduling Messages in Open Real-Time Environment",
+  booktitle =	 "Proceedings of IEEE Symposium on Real-Time Systems",
+  year =	 1999,
+  month =	 Dec
+}
+
+
+%%% Local Variables:
+%%% version-control: t
+%%% kept-new-versions: 5
+%%% End:

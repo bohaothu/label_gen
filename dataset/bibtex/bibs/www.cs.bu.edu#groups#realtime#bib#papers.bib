@@ -1,0 +1,1514 @@
+@inproceedings{YoonBestavrosMatta:icc00,
+  author={Jaehee Yoon and Azer Bestavros and Ibrahim Matta},
+  title={{Adaptive Reliable Multicast}}, 
+  keywords={Network protocols, Reliable Multicast, Internet}, 
+  url={http://www.cs.bu.edu/fac/best/res/papers/icc00.ps},
+  booktitle={{Proceedings of ICC'2000: The IEEE International Conference
+       on Communications}}, 
+  year=2000,
+  month={June},
+  address={New Orleans}, 
+  abstract={We present a new reliable multicast protocol, called
+  ARM (for Adaptive Reliable Multicast).  Our protocol integrates
+  ARQ and FEC techniques.  The objectives of ARM are (1) reduce the
+  message overhead due to NACK requests, (2) reduce the amount of data
+  transmission, and (3) reduce the time it takes for all receivers to
+  receive the data intact (without loss).  During data transmission,
+  the sender periodically informs the receivers of the number of
+  packets that are yet to be transmitted.  Based on this information,
+  each receiver predicts whether this amount is enough to recover its
+  losses. Only if it is not enough, that the receiver requests the
+  sender to encode additional redundant packets.  Using ns 
+  simulations, we show the superiority of our hybrid ARQ-FEC protocol
+  over the well-known Scalable Reliable Multicast (SRM) protocol.}
+}
+
+@inproceedings{YoonBestavrosMatta:rtas00,
+  author={Jaehee Yoon and Azer Bestavros and Ibrahim Matta},
+  title={{SomeCast: A Paradigm for Real-Time Adaptive Reliable Multicast}}, 
+  keywords={Network protocols, Real-Time QoS on the Internet},
+  url={http://www.cs.bu.edu/fac/best/res/papers/rtas00.ps},
+  booktitle={{Proceedings of RTAS'2000: The IEEE Real-Time Technology and Applications Symposium}}, 
+  year=2000,
+  month={May},
+  address={Washington, DC}, 
+  abstract={SomeCast is a novel paradigm for the reliable multicast of
+    real-time data to a large set of receivers. SomeCast is
+    receiver-initiated and thus scalable in the number of receivers,
+    the diverse characteristics of paths between senders and
+    receivers, and the dynamic conditions of such paths. SomeCast
+    enables receivers to dynamically adjust the rate at which they
+    receive multicast information to enable the satisfaction of their
+    QoS constraints. This is done by enabling a receiver to join SOME
+    number of concurrent multiCAST sessions, whereby each session
+    delivers a portion of an encoding of the real-time data. By
+    adjusting the number of such sessions dynamically, client-specific
+    QoS constraints are met independently. The SomeCast paradigm can
+    be thought of as a generalization of the AnyCast and ManyCast
+    paradigms, which have been proposed in the literature to address
+    issues of scalability of UniCast and MultiCast environments,
+    respectively. In this paper we overview the SomeCast paradigm,
+    describe an instance of a SomeCast protocol, and present
+    simulation results that quantify the significant advantages gained
+    from adopting such a protocol.}
+}
+
+@inproceedings{AtlasBestavros:rtss99,
+  author={Alia Atlas and Azer Bestavros},
+  title={{Design and Implementation of Statistical Rate Monotonic Scheduling in KURT Linux}}, 
+  url={http://www.cs.bu.edu/fac/best/res/papers/rtss99.ps},
+  booktitle={{Proceedings of RTSS'99: The 19th IEEE Real-Time Systems
+		  Symposium}}, 
+  year=1999,
+  month={December}, 
+  address={Phoenix, AZ},
+  abstract={We present the design and implementation of Statistical
+    Rate Monotonic Scheduling (SRMS) on the KURT Linux Operating
+    System.  We overview the technical issues we had to address to
+    integrate SRMS into KURT Linux and present the API we have
+    developed for scheduling periodic real-time tasks using SRMS.  } 
+}
+
+@inproceedings{AtlasBestavros:ic3n99,
+  author={Alia Atlas and Azer Bestavros},
+  title={{Multiplexing VBR Traffic Flows with Guaranteed
+    Application-level QoS Using Statistical Rate Monotonic
+    Scheduling}},  
+  url={http://www.cs.bu.edu/fac/best/res/papers/ic3n99-a.ps},
+  booktitle={{Proceedings of IC3N'99: The 8th IEEE International
+  Conference on Computer Communications and Networks}},
+  year=1999,
+  month={October}, 
+  address={Boston, MA},
+  abstract={The data units transmitted by an application may vary in
+    size while being constant in rate, which results in a variable bit
+    rate (VBR) data flow.  That data flow requires QoS guarantees.
+    Statistical multiplexing is inadequate, because no guarantees can
+    be made and no firewall property exists between different
+    data flows. In this paper, we present a novel resource management
+    paradigm for the maintenance of application-level QoS for VBR
+    flows. Our paradigm is based on Statistical Rate Monotonic
+    Scheduling (SRMS), in which (1) each application generates its
+    variable-size data units at a fixed rate, (2) the partial delivery
+    of data units is of no value to the application, and (3) the QoS
+    guarantee extended to the application is the probability that an
+    arbitrary data unit will be successfully transmitted through the
+    network to/from the application.}
+}
+
+@inproceedings{BasuNarayananKeLittleBestavros:ic3n99,
+  author={P. Basu and A. Narayanan and W. Ke and T.D.C. Little and
+          A. Bestavros}, 
+  title={{Optimal Scheduling of Secondary Content for Aggregation in
+          Video-on-Demand Systems}}, 
+  url={http://www.cs.bu.edu/fac/best/res/papers/ic3n99-b.ps},
+  booktitle={{Proceedings of IC3N'99: The 8th IEEE International
+  Conference on Computer Communications and Networks}},
+  year=1999,
+  month={October}, 
+  address={Boston, MA},
+  abstract={Dynamic service aggregation techniques can exploit skewed
+    access popularity patterns to reduce the costs of building
+    interactive VoD systems. These schemes seek to cluster and merge
+    users into single streams by bridging the temporal skew between
+    them, thus improving server and network utilization. Rate
+    adaptation and secondary content insertion are two such
+    schemes. In this paper, we present and evaluate an optimal
+    scheduling algorithm for inserting secondary content in this
+    scenario. The algorithm runs in polynomial time, and is optimal
+    with respect to the total bandwidth usage over the merging
+    interval. We present constraints on content insertion which make
+    the overall QoS of the delivered stream acceptable, and show how
+    our algorithm can satisfy these constraints. We report simulation
+    results which quantify the excellent gains due to content
+    insertion. We discuss dynamic scenarios with user arrivals and
+    interactions, and show that content insertion reduces the channel
+    bandwidth requirement to almost half. We also discuss
+    differentiated service techniques, such as N-VoD and premium
+    no-advertisement service, and show how our algorithm can support
+    these as well.}
+}
+
+@inproceedings{BestavrosKim:spie99,
+  author={Azer Bestavros and Gitae Kim},
+  title={{Preserving Bandwidth Using A Lazy Packet Discard Policy in
+         ATM Networks}}, 
+  url={http://www.cs.bu.edu/fac/best/res/papers/spie99.ps},
+  booktitle={{Proceedings of SPIE'99 Performance and Control of
+              Network Systems III}}, 
+  year=1999,
+  month={September},
+  address={Boston, MA},
+
+  abstract={A number of recent studies have pointed out that TCP's
+    performance over ATM networks tends to suffer, especially under
+    congestion and switch buffer limitations.  Switch-level
+    enhancements and link-level flow control have been proposed to
+    improve TCP's performance in ATM networks.  Selective Cell Discard
+    (SCD) and Early Packet Discard (EPD) ensure that partial packets
+    are discarded from the network ``as early as possible'', thus
+    reducing wasted bandwidth. While such techniques improve the
+    achievable throughput, their effectiveness tends to degrade in
+    multi-hop networks. In this paper, we introduce Lazy Packet
+    Discard (LPD), an AAL-level enhancement that improves effective
+    throughput, reduces response time, and minimizes wasted bandwidth
+    for TCP/IP over ATM. In contrast to the SCD and EPD policies, LPD
+    delays as much as possible the removal from the network of cells
+    belonging to a partially communicated packet.  LPD preserves
+    network bandwidth by keeping such cells alive and by ensuring that
+    additional cells, obtained through Reed-Solomon block coding at
+    the sender's AAL, are eventually transmitted to salvage the packet
+    in question.  We outline the implementation of LPD and show the
+    performance advantage of TCP/LPD, compared to plain TCP and
+    TCP/EPD through analysis and simulations.}
+}
+
+@inproceedings{AtlasBestavros:rtss98,
+  author={Alia Atlas and Azer Bestavros},
+  title={{Statistical Rate Monotonic Scheduling}}, 
+  booktitle={{Proceedings of RTSS'98: The 18th IEEE Real-Time Systems
+		  Symposium}}, 
+  address={Madrid, Spain},
+  month={December},
+  year=1998,
+  url={http://www.cs.bu.edu/fac/best/res/papers/rtss98.ps},
+  abstract={Statistical Rate Monotonic Scheduling (SRMS) is a
+    generalization of the classical RMS results of Liu and Layland
+    \cite{ll:sched} for periodic tasks with highly variable execution
+    times and statistical QoS requirements.  The main tenet of SRMS is
+    that the variability in task resource requirements could be
+    smoothed through aggregation to yield guaranteed QoS. This
+    aggregation is done over time for a given task and across multiple
+    tasks for a given period of time. Similar to RMS, SRMS has two
+    components: a feasibility test and a scheduling algorithm. SRMS
+    feasibility test ensures that it is possible for a given periodic
+    task set to share a given resource without violating any of the
+    statistical QoS constraints imposed on each task in the set. The
+    SRMS scheduling algorithm consists of two parts: a job admission
+    controller and a scheduler. The SRMS scheduler is a simple,
+    preemptive, fixed-priority scheduler. The SRMS job admission
+    controller manages the QoS delivered to the various tasks through
+    admit/reject and priority assignment decisions. In particular, it
+    ensures the important property of task isolation, whereby tasks do
+    not infringe on each other.}
+}
+
+
+@inproceedings{BestavrosMatta:icnp97,
+   author={Azer Bestavros and Ibrahim Matta}, 
+   title={{Load Profiling for Efficient Route Selection in Multi-Class
+		  Networks}},  
+   booktitle = {Proceedings of IEEE ICNP'97: The
+		  International Conference on Network Protocols}, 
+   month={October},
+   address={Atlanta, GA},
+   year=1997,
+   url={http://www.cs.bu.edu/fac/best/res/papers/icnp97.ps},
+   abstract={High-speed networks, such as ATM networks, are expected
+   to support real-time Quality of Service (QoS) guarantees required
+   by many applications such as those that involve voice and video
+   communication.  To support such services, routing algorithms that
+   allow for the reservation of the needed bandwidth over a Virtual
+   Circuit (VC) have been proposed.  Commonly, these algorithms assign
+   VCs to routes using the least-loaded concept, and thus result in
+   balancing the load over the set of all candidate routes.  In this
+   paper, we show that for such reservation-based VC routing
+   algorithms---which allow for the exclusive use of a preset fraction
+   of a resource's bandwidth for an extended period of time---load
+   balancing is not desirable as it results in resource fragmentation,
+   which adversely affects the likelihood of accepting new VC
+   requests.  We present an on-line VC routing scheme that is based on
+   the concept of ``load profiling'', which allows a distribution of
+   ``available'' bandwidth across a set of candidate routes to match
+   the characteristics of incoming VC QoS requests.  We show the
+   effectiveness of our load-profiling approach when compared to
+   traditional load-balancing and load-packing VC routing schemes.} 
+}
+ 		  
+@inproceedings{Bestavros:rtdb97a,
+   author={Sue Nagy and Azer Bestavros}, 
+   title={{Concurrency Admission Control for Hard-Deadline Transactions in ACCORD}},
+   booktitle = {Proceedings of RTDB'97: The Second International
+		  Workshop on Real-Time Databases}, 
+   month={September}, 
+   address={Burlington, VT},
+   year=1997,
+   abstract={We propose and evaluate admission control mechanisms for
+     ACCORD, an Admission Control and Capacity Overload management
+     Real-time Database framework---an architecture and a transaction
+     model---for hard deadline RTDB systems.  The system architecture
+     consists of admission control and scheduling components which
+     provide early notification of failure to submitted transactions
+     that are deemed not valuable or incapable of completing on time.
+     In particular, our Concurrency Admission Control Manager (CACM)
+     ensures that transactions which are admitted do not overburden
+     the system by requiring a level of concurrency that is not
+     sustainable.  The transaction model consists of two components: a
+     primary task and a compensating task.  The execution
+     requirements of the primary task are not known a priori, whereas
+     those of the compensating task are known a priori. Upon the
+     submission of a transaction, the Admission Control Mechanisms are
+     employed to decide whether to admit or reject that
+     transaction. Once admitted, a transaction is guaranteed to {\em
+     finish} executing before its deadline. A transaction is
+     considered to have finished executing if exactly one of two
+     things occur: Either its primary task is completed (successful
+     commitment), or its compensating task is completed (safe
+     termination). Committed transactions bring a profit to the
+     system, whereas a terminated transaction brings no profit. The
+     goal of the admission control and scheduling protocols (e.g.,
+     concurrency control, I/O scheduling, memory management) employed
+     in the system is to maximize system profit. In that respect, we
+     describe a number of concurrency admission control strategies and
+     contrast (through simulations) their relative performance.}
+}
+
+@inproceedings{Bestavros:rtdb97b,
+   author={Sanjoy Baruah and Azer Bestavros}, 
+   title={{Real-Time Mutable Broadcast Disks}}, 
+   booktitle = {Proceedings of RTDB'97: The Second International
+		  Workshop on Real-Time Databases},  
+   month={September}, 
+   address={Burlington, VT},
+   year=1997
+}
+
+@inproceedings{bestavros:97o,
+ author={Azer Bestavros and Sue Nagy},
+ title={{Admission Control for Soft-Deadline Scheduling in ACCORD}},
+ booktitle = {Proceedings of RTAS'97: The IEEE Real-time Technology
+		  and Applications Symposium}, 
+ address = {Montreal, Canada}, 
+ month={June}, 
+ year=1997,
+ url={http://www.cs.bu.edu/fac/best/res/papers/rtas97b.ps}
+}		  
+
+@inproceedings{bestavros:97n,
+ author={Azer Bestavros and Gitae Kim}, 
+ title={{Exploiting Redundancy For Timeliness in TCP Boston}}, 
+ booktitle = {Proceedings of RTAS'97: The IEEE Real-time Technology
+		  and Applications Symposium}, 
+ address = {Montreal, Canada}, 
+ month={June}, 
+ year=1997,
+ url={http://www.cs.bu.edu/fac/best/res/papers/rtas97a.ps}
+}
+
+@inproceedings{bestavros:97i,
+ author={Azer Bestavros and Gitae Kim}, 
+ title={{Implementation and Performance Evaluation of TCP Boston}}, 
+ booktitle = {Proceedings of ICC'97: The IEEE International Conference
+       on Communications}, 
+ address = {Montreal, Canada}, 
+ month={June}, 
+ year=1997,
+ url={http://www.cs.bu.edu/fac/best/res/papers/icc97.ps}
+}
+
+@inproceedings{bestavros:97h,
+ author={Azer Bestavros}, 
+ title={{Load Profiling: A Methodology for
+         Scheduling Real-Time Tasks in a Distributed System}}, 
+ booktitle = {Proceedings of ICDCS'97: The IEEE International
+		  Conference on Distributed Computing Systems}, 
+ address = {Baltimore, Maryland}, 
+ month={May}, 
+ year=1997,
+ url={http://www.cs.bu.edu/fac/best/res/papers/icdcs97.ps},
+ abstract={
+    Traditionally, the goal of load management protocols for
+    distributed systems has been to ensure that nodes are equally
+    loaded.  In this paper, we show that for real-time systems, load
+    balancing is not desirable since it results in the available
+    bandwidth being distributed equally amongst all nodes---in effect
+    making all nodes in the system capable of offering almost the same
+    bandwidth (in cycles per second) to incoming tasks.  We show
+    that this ``one size fits all'' practice leads to a higher rate of
+    missed deadlines as incoming tasks may be denied service because
+    they require bandwidth that cannot be granted at any single
+    node---while plenty of fragmented bandwidth is collectively
+    available in the system.  We propose a new load-profiling strategy
+    that allows the nodes of a distributed system to be unequally
+    loaded so as to maximize the chances of finding a node that would
+    satisfy the computational needs of incoming real-time tasks.  The
+    performance of the proposed protocol is evaluated via simulation,
+    and is contrasted to other dynamic scheduling protocols for
+    real-time distributed systems.
+  }
+}
+
+@inproceedings{bestavros:97f,
+ author={Azer Bestavros and Gitae Kim}, 
+ title={{TCP Boston: A Fragmentation-tolerant TCP Protocol for ATM
+         Networks}},
+ booktitle = {Proceedings of Infocom'97: The IEEE International
+              Conference on Computer Communication}, 
+ address = {Kobe, Japan}, 
+ month={April}, 
+ year=1997,
+ url={http://www.cs.bu.edu/fac/best/res/papers/infocom97.ps},
+ abstract={
+    The popularity of TCP/IP coupled with the premise of high speed
+    communication using Asynchronous Transfer Mode (ATM) technology
+    have prompted the network research community to propose a number
+    of techniques to adapt TCP/IP to ATM network environments.  ATM
+    offers Available Bit Rate (ABR) and Unspecified Bit Rate (UBR)
+    services for best-effort traffic, such as conventional file
+    transfer.  However, recent studies have shown that TCP/IP, when
+    implemented using ABR or UBR, leads to serious performance
+    degradations, especially when the utilization of network resources
+    (such as switch buffers) is high. Proposed
+    techniques---switch-level enhancements, for example---that attempt
+    to patch up TCP/IP over ATMs have had limited success in
+    alleviating this problem.  The major reason for TCP/IP's poor
+    performance over ATMs has been consistently attributed to packet
+    fragmentation, which is the result of ATM's 53-byte cell-oriented
+    switching architecture.
+  
+    In this paper, we present a new transport protocol, TCP Boston,
+    that turns ATM's 53-byte cell-oriented switching architecture into
+    an advantage for TCP/IP.  At the core of TCP Boston is the
+    Adaptive Information Dispersal Algorithm (AIDA), an efficient
+    encoding technique that allows for dynamic redundancy control.
+    AIDA makes TCP/IP's performance less sensitive to cell losses,
+    thus ensuring a graceful degradation of TCP/IP's performance when
+    faced with congested resources.  In this paper, we introduce AIDA
+    and overview the main features of TCP Boston. We present detailed
+    simulation results that show the superiority of our protocol when
+    compared to other adaptations of TCP/IP over ATMs. In particular,
+    we show that TCP Boston improves TCP/IP's performance over ATMs
+    for both network-centric metrics (e.g., effective throughput) and
+    application-centric metrics (e.g., response time).
+  }
+}
+
+@inproceedings{bestavros:97j,
+ author={Sanjoy Baruah and Azer Bestavros}, 
+ title={{Pinwheel Scheduling for Fault-tolerant
+       Broadcast Disks in Real-time Database Systems}},
+ booktitle = {Proceedings of IEEE ICDE'97: The International
+		  Conference on Data Engineering}, 
+ address = {Birmingham, England}, 
+ month={April}, 
+ year=1997,
+ url={http://www.cs.bu.edu/fac/best/res/papers/icde97.ps}
+}
+
+@inproceedings{bestavros:96n,
+ author	= {Azer Bestavros and Sue Nagy},
+ title = {{Value-cognizant Admission Control for RTDB Systems}}, 
+ booktitle = {Proceedings of RTSS'96: The 16th IEEE Real-Time
+		  System Symposium}, 
+ address = {Washington, DC},
+ month={December},
+ year=1996,
+ url={http://www.cs.bu.edu/fac/best/res/papers/rtss96.ps}
+}
+  
+
+@inproceedings{bestavros:96u,
+ author={Sanjoy Baruah and Azer Bestavros}, 
+ title={{Timely and Fault-Tolerant Data Access from
+           Broadcast Disks:  A Pinwheel-Based Approach}},
+ booktitle = {Proceedings of DART'96: ACM CIKM Workshop on
+              Databases: Active \& Real-Time}, 
+ address = {Rockville, Maryland}, 
+ month={November}, 
+ year=1996,
+ url={http://www.cs.bu.edu/fac/best/res/papers/dart96.ps}
+}
+
+@inproceedings{bestavros:96m,
+ author	= {Azer Bestavros and Sue Nagy},
+ title = {{An Admission Control Paradigm for Value-cognizant Real-Time 
+		  Databases}},
+ booktitle = {Proceedings of AAAI'96: The Fall Symposium on Flexible
+		  Computation in Intelligent Systems}, 
+ address = {MIT, Cambridge, MA},
+ month={November},
+ year=1996,
+ url={http://www.cs.bu.edu/fac/best/res/papers/aaai96.ps}
+}
+
+@inproceedings{bestavros:96g,
+ author	= {Azer Bestavros}, 
+ title = {{AIDA}-based Real-Time Fault-Tolerant Broadcast Disks}, 
+ booktitle = {Proceedings of RTAS'96: The 1996 IEEE Real-Time
+		  Technology and Applications Symposium}, 
+ address = {Boston, Massachusetts}, 
+ month={May},
+ pages={},
+ year=1996,
+ url={http://www.cs.bu.edu/fac/best/res/papers/rtas96.ps}
+}
+
+@inproceedings{bestavros:96d,
+ author	= {Azer Bestavros and Sue Nagy},
+ title = {{Value-cognizant Admission Control Strategies for Real-Time
+     Database Management Systems}}, 
+ booktitle = {Proceedings of RTDB'96: The 1996 Workshop on Real-Time
+     Databases}, 
+ address = {Newport Beach, California},
+ month={March},
+ year=1996,
+ url={http://www.cs.bu.edu/fac/best/res/papers/rtdb96.ps}
+}
+
+@inproceedings{bestavros:95j, 
+  author={Azer Bestavros}, 
+  booktitle={OORTS'95: The 1995 IEEE Workshop on Object Oriented
+		  Real-Time Systems}, 
+  title={{Preserving the Causal and Structural Properties of Real-Time
+		  Systems using Object Oriented Specification in
+		  Cleopatra}},  
+  address={San Antonio, Texas}, 
+  month={October}, 
+  year=1995,
+  url={http://www.cs.bu.edu/fac/best/res/papers/oorts95.ps}
+}
+
+@inproceedings{bestavros:95m,
+  author={Azer Bestavros and Spyridon Braoudakis}, 
+  booktitle={Proceedings of VLDB'95: The International Conference on
+		  Very Large Databases}, 
+  title={{Value-cognizant Speculative Concurrency Control}}, 
+  address={Zurich, Switzerland}, 
+  month="September",
+  year=1995,
+  pages={122-133},
+  url={http://www.cs.bu.edu/fac/best/res/papers/vldb95.ps},
+  abstract={
+    We describe SCC-kS, a Speculative Concurrency Control (SCC)
+    algorithm that allows a DBMS to use efficiently the extra computing
+    resources available in the system to increase the likelihood of
+    timely commitment of transactions. Using SCC-kS, up to k 
+    shadow transactions execute speculatively on behalf of a given
+    uncommitted transaction so as to protect against the hazards of
+    blockages and restarts. SCC-kS allows the system to
+    scale the level of speculation that each transaction is allowed to
+    perform, thus providing a straightforward mechanism of trading
+    resources for timeliness. Also, we describe SCC-DC, a 
+    value-cognizant SCC protocol that utilizes deadline and 
+    criticalness information to improve timeliness through the
+    controlled deferment of transaction commitments.  We present
+    simulation results that quantify the performance gains of our
+    protocols compared to other widely used concurrency control
+    protocols for real-time databases.
+  }
+}
+
+@inproceedings{bestavros:94e,
+  author={Azer Bestavros and Spyridon Braoudakis}, 
+  title={{Timeliness via Speculation for Real-Time Databases}}, 
+  booktitle={Proceedings of RTSS'94: The 14th IEEE Real-Time
+		  System Symposium}, 
+  address="San Juan, Puerto Rico", 
+  month="December",
+  year=1994,
+  url={http://www.cs.bu.edu/fac/best/res/papers/rtss94.ps},
+  abstract={
+    Various concurrency control algorithms differ in the time when
+    conflicts are detected, and in the way they are
+    resolved. Pessimistic (PCC) protocols detect conflicts as soon as
+    they occur and resolve them using blocking. Optimistic (OCC)
+    protocols detect conflicts at transaction commit time and resolve
+    them using rollbacks. For real-time databases, blockages and
+    rollbacks are hazards that increase the likelihood of transactions
+    missing their deadlines. We propose a Speculative Concurrency
+    Control (SCC) technique that minimizes the impact of blockages and
+    rollbacks. SCC relies on added system resources to speculate on
+    potential serialization orders, ensuring that if such
+    serialization orders materialize, the hazards of blockages and
+    roll-backs are minimized. We present a number of SCC-based
+    algorithms that differ in the level of speculation they introduce,
+    and the amount of system resources (mainly memory) they require.
+    We show the performance gains (in terms of number of satisfied
+    timing constraints) to be expected when a representative SCC
+    algorithm (SCC-2S) is adopted.
+  }
+}
+
+@inproceedings{bestavros:94c,
+  author={Azer Bestavros}, 
+  title={{CLEOPATRA: Physically-Correct Specifications of
+		  Embedded Real-Time Programs}},  
+  booktitle={Proceedings of the ACM SIGPLAN Workshop on Language, Compiler and
+		  Tool Support for Real-Time Systems}, 
+  address="Orlando, FL", 
+  month="June",
+  year=1994,
+  url={http://www.cs.bu.edu/fac/best/res/papers/sigplan94.ps}
+}
+
+@inproceedings{bestavros:94d,
+  author={Azer Bestavros}, 
+  title={{An Ounce of Prevention is Worth a Pound of Cure: Towards
+		  Physically-Correct Specifications of Embedded
+		  Real-Time Systems}},  
+  booktitle={Proceedings of COMPASS'94: The Ninth Annual IEEE Conference on
+		  Computer Assurance}, 
+  address="Gaithersburg, MD", 
+  month="June",
+  year=1994,
+  url={http://www.cs.bu.edu/fac/best/res/papers/compass94.ps}
+}
+
+@inproceedings{bestavros:94b,
+  author={Azer Bestavros}, 
+  title={{Multi-version Speculative Concurrency Control with Delayed Commit}}, 
+  booktitle={Proceedings of the 1994 International Symposium on Computers
+		  and their Applications}, 
+  address="Long Beach, CA", 
+  month="March",
+  year=1994,
+  url={http://www.cs.bu.edu/fac/best/res/papers/isca94.ps}
+}
+
+@inproceedings{bestavros:93d,
+  author="Azer Bestavros",
+  title="{AIDA-based Communication for Distributed Real-Time Applications}", 
+  booktitle="Proceedings of the Second IEEE Network Management and
+             Control Workshop", 
+  address="Tarrytown, NY", 
+  month="September",
+  year=1993,
+  url={http://www.cs.bu.edu/fac/best/res/papers/nmc93.ps}
+}
+
+@inproceedings{bestavros:93e,
+  author="Azer Bestavros and Spyridon Braoudakis",
+  title="{SCC-nS: A family of Speculative Concurrency Control Algorithms for
+         Real-Time Databases}", 
+  booktitle="Proceedings of the Third International Workshop on
+             Responsive Computer Systems", 
+  address="Lincoln, NH", 
+  month="September",
+  year=1993,
+  url={http://www.cs.bu.edu/fac/best/res/papers/iwrcs93.ps}
+}
+
+@inproceedings{bestavros:93f,
+  author="Azer Bestavros and Dimitrios Spartiotis",
+  title="{Probabilistic Job Scheduling for Distributed Real-time 
+          Applications}",  
+  booktitle="Proceedings of the First IEEE Workshop on Real-Time
+             Applications", 
+  address="New York, NY", 
+  month="May",
+  year=1993,
+  pages={97-102},
+  url={http://www.cs.bu.edu/fac/best/res/papers/rtaw93.ps}
+}
+
+@inproceedings{bestavros:93c,
+  author="Azer Bestavros",
+  title="{AIDA: A Bandwidth Allocation Strategy for Distributed
+          Time-Critical Systems}", 
+  booktitle="Proceedings of the First IEEE IPPS Workshop on Parallel and
+             Distributed Real-Time Systems", 
+  address="Newport Beach, CA",
+  month="April",
+  year=1993,
+  url={http://www.cs.bu.edu/fac/best/res/papers/wpdrts93.ps}
+}
+
+@inproceedings{bestavros:92i,
+  author="Azer Bestavros", 
+  title="{On the Specification and Verification of Real-Time Systems: A
+          Position Statement}",
+  booktitle="IEEE RTOS'92: The 1992 IEEE Workshop on Real-Time
+             Operating System and Software",   
+  address="Pitsburgh, PA", 
+  month="May",
+  year=1992
+}
+
+@inproceedings{bestavros:91b,
+  author="Azer Bestavros", 
+  title="{Specification and verification or real-time embedded systems
+         using the {T}ime-constrained {R}eactive {A}utomata}", 
+  booktitle="Proceedings of RTSS'91: The 12th IEEE Real-time Systems
+             Symposium", 
+  address="San Antonio, Texas", 
+  pages="244-253", 
+  month="December",
+  year=1991,
+  url={http://www.cs.bu.edu/fac/best/res/papers/rtss91.ps}
+}
+
+@inproceedings{bestavros:91a,
+  author="Azer Bestavros", 
+  title="{Planning for embedded systems: A real-time prospective}",
+  booktitle="Proceedings of AIRTC-91: The 3rd IFAC Workshop on
+             Artificial Intelligence in Real Time Control",
+  address="Napa/Sonoma Region, CA",
+  month="September", 
+  year=1991,
+  url={http://www.cs.bu.edu/fac/best/res/papers/airtc91.ps}
+}
+
+@inproceedings{bestavros:90i,
+  author="Azer Bestavros", 
+  title="{SETH: A {VLSI} chip for the real-time information dispersal and
+         retrieval for security and fault-tolerance}", 
+  booktitle="Proceedings of ICPP'90, The 1990 International
+             Conference on Parallel Processing", 
+  address="Chicago, Illinois", 
+  month="August",
+  year=1990,
+  pages={457-464},
+  url={http://www.cs.bu.edu/fac/best/res/papers/icpp90.ps}
+}
+
+@inproceedings{bestavros:90c,
+  author="Azer Bestavros", 
+  title="{The IOTA: A model for Real-time Parallel Computation}",
+  booktitle="Proceedings of TAU'90: The 1990 ACM International
+             Workshop on Timing issues in the Specification and
+             Synthesis of Digital Systems",
+  address={Vancouver, Canada},
+  month="August", 
+  year=1990, 
+  url={http://www.cs.bu.edu/fac/best/res/papers/tau90.ps}
+}
+
+@inproceedings{bestavros:90b,
+  author="Azer Bestavros",
+  title="{IOTA-based real-time executable specification using ESPRIT}",
+  booktitle="Proceedings of the 10th Annual Rochester Forth Conference
+             on Embedded Systems",
+  address="Rochester, NY",
+  month="June",
+  year=1990,
+  pages={46-50}
+}
+
+@inproceedings{bestavros:90a, 
+  author="Azer Bestavros and James Clark and Nicola Ferrier", 
+  title="{Management of Sensori-Motor Activity in Mobile Robots}", 
+  booktitle="Proceedings of the 1990 IEEE International Conference on
+             Robotics \& Automation", 
+  address="Cincinati, Ohio", 
+  publisher="IEEE Computer Society Press",
+  month="May", 
+  year=1990 
+}
+
+
+
+@inproceedings{MattaBestavros:NSFwIT00,
+   author={Ibrahim Matta and Azer Bestavros},
+   title= {{QoS Controllers for the Internet}},
+   booktitle={{Proceedings of the NSF Workshop on Information Technology}},
+   address={Cairo, Egypt},
+   month={March}, 
+   year=2000,
+   keywords = {QoS Controllers, Internet},
+   url = "http://www.cs.bu.edu/faculty/matta/Papers/NSFwIT00.ps", 
+   abstract={In this position paper,
+we review basic control strategies that machines acting as {\em traffic
+controllers} could deploy in order to improve the management of Internet
+services.  Such traffic controllers are likely to spur the widespread
+emergence of advanced applications, which have (so far) been hindered by
+the inability of the networking infrastructure to deliver on the promise of
+Quality-of-Service (QoS).}
+}
+
+
+@Article{MattaGuo:JCN00,
+        author = "Ibrahim Matta and Liang Guo",
+        title = {{QDMR: An Efficient QoS Dependent Multicast Routing Algorithm}},
+        journal = "Journal of Communications and Networks  - Special Issue 
+                      on QoS in IP Networks",
+        month =     "June",
+        volume = 2,
+        number = 2,
+        year = 2000,
+        note = "Code available from 
+                   http://www.cs.bu.edu/fac/matta/software.html",
+        keywords= {Quality-of-Service networks; real-time multicast routing,
+                   constrained path optimization; simulation},
+        url = "http://www.cs.bu.edu/faculty/matta/Papers/jcn00.ps",
+        abstract = {Many distributed real-time applications,
+such as audio- and video-conferencing and
+collaborative systems,
+require multicast support from the underlying network. 
+Multicasting involves the delivery of messages 
+over a tree 
+rooted at the sender
+and whose paths lead to the various receivers.
+A major objective of the routing protocol
+is to build a tree with minimum cost.
+Finding such a tree is known to be computationally expensive,
+and many heuristics have been proposed to 
+efficiently find near-optimal trees.
+Moreover,
+some heuristics exist to efficiently find multicast trees 
+that are of low cost {\em and} 
+satisfy Quality-of-Service (QoS) (e.g.\ delay) delivery constraints 
+required by real-time applications.
+However,
+these heuristics are not fast enough for large-scale networks.
+In this paper,
+we present a fast algorithm, called QDMR,
+for generating delay-constrained low-cost multicast routing trees.
+A salient feature of QDMR is that
+it {\em dynamically} adjusts its low-cost tree construction policy
+based on how far the current on-tree node is from
+violating the QoS delay bound. 
+This QoS dependent (adaptive) tree construction,
+together with the capability to merge least-delay paths
+into the low-cost tree in case of stringent delay requirements,
+lead to the following properties:
+(1)~QDMR guarantees that a feasible multicast tree 
+(that satisfies the requested delay) will be found if such tree exists;
+(2)~this delay-bounded multicast tree is very rapidly generated; and
+(3)~the tree has low cost.
+Through analysis and extensive simulations,
+we confirm the premise of QDMR
+by comparing it to many existing multicast algorithms.
+}
+}
+
+
+
+@inproceedings{MattaGuo:icnp00,
+   author={Ibrahim Matta and Liang Guo},
+   title= {{Differentiated Predictive Fair Service for TCP Flows}},
+   booktitle={{Proceedings of ICNP'2000: The 8th IEEE International
+              Conference on Network Protocols}},
+   address={Osaka, Japan},
+   keywords={Differentiated service; TCP congestion control;
+             class-based isolation versus sharing; 
+             packet dropping (tail-drop, RED);
+             fairness; control theory; simulation}, 
+   month={October}, 
+   year=2000,
+   url = "http://www.cs.bu.edu/faculty/matta/Papers/icnp00.ps", 
+   abstract={}
+}
+
+
+
+@article{MattaBestavrosKrunz:ETT99,
+         author = "Ibrahim Matta and Azer Bestavros and Marwan Krunz",
+         title = {{Load Profiling Based Routing for 
+                       Guaranteed Bandwidth Flows}}, 
+         journal = "European Transactions on Telecommunications - 
+                    Special Issue on Architectures, Protocols and 
+                    Quality of Service for the Internet of the Future",
+         volume = 10,
+         number = 2,
+         month = "March/April",
+         year = 1999,
+         keywords = {Integrated services networks; QoS routing;
+                     virtual path based networks; admission control and routing 
+                     of multi-class guaranteed flows; load balancing, packing, 
+                     and profiling; real-time/on-line resource allocation; 
+                     performance evaluation},
+         url = "http://www.cs.bu.edu/faculty/matta/Papers/ett99.ps",
+         abstract = {To support the stringent Quality of Service (QoS) requirements
+of real-time ({\em e.g.} audio/video) applications in integrated services
+networks, several routing algorithms that allow for the reservation of the
+needed bandwidth over a Virtual Circuit (VC), 
+established on one of several candidate routes,
+have been proposed.  Traditionally, such routing is done using the
+least-loaded concept, and thus 
+results in balancing the load across the set of candidate routes.  
+In this paper,
+we propose the use of {\em load profiling} as an
+attractive alternative to load balancing for routing
+guaranteed bandwidth VCs (flows). 
+Load profiling techniques allow the distribution of
+``available'' bandwidth across a set of candidate routes to match the
+characteristics of incoming VC QoS requests. 
+We thoroughly characterize the performance of VC routing
+using load profiling and contrast it to routing using load balancing
+and load packing. We do so both analytically and via extensive
+simulations of multi-class traffic routing in Virtual Path (VP) based
+networks. 
+Our findings show that for routing guaranteed bandwidth
+flows in VP networks, load profiling is desirable as it reduces
+VP bandwidth fragmentation, which increases the likelihood of
+accepting new VC requests.  
+This fragmentation could be particularly harmful when
+the granularity of VC requests is large. Typically, this occurs when a
+common VC is established to carry the {\em aggregate} traffic flow of
+many high-bandwidth real-time sources.  For VP-based networks, our
+simulation results show that our load-profiling VC routing scheme
+performs better or as well as the traditional load-balancing VC
+routing in terms of revenue under both skewed and uniform workloads.
+Furthermore, load-profiling routing improves routing fairness by
+proactively increasing the chances of admitting high-bandwidth
+flows.}        
+}
+
+@inProceedings{GuoMatta:RTAS99,
+        author = "Liang Guo and Ibrahim Matta",
+        title = {{QDMR: An Efficient QoS Dependent Multicast Routing Algorithm}},
+        booktitle = "{Proceedings of the Fifth IEEE Real-Time Technology and
+		  Applications Symposium (RTAS~'99)}",
+        month =     "June",
+        year = 1999,
+        note = "Code available from http://www.cs.bu.edu/fac/matta/software.html",
+        keywords= {Quality-of-Service networks; real-time multicast routing,
+                   constrained path optimization; simulation},
+        url = "http://www.cs.bu.edu/faculty/matta/Papers/rtas99.ps",
+        abstract = {Many real-time applications,
+such as video conferencing,
+require the transmission of messages
+from a sender to multiple receivers subject
+to Quality-of-Service (QoS) delivery constraints (e.g.\ bounded delay). 
+This requires the underlying multicast protocol 
+to find a QoS-constrained minimum-cost communication path (tree). 
+However, finding such a tree is known to be computationally expensive.
+In this paper,
+we present a fast heuristic, called QDMR,
+for generating delay-constrained low-cost multicast routing trees.
+A salient feature of QDMR is that
+it dynamically adjusts its low-cost tree construction policy
+based on how far the current on-tree node is from
+violating the QoS delay bound.
+This QoS dependent (adaptive) tree construction,
+together with the capability to merge least-delay paths
+into the low-cost tree in case of stringent delay requirements,
+lead to the following properties:
+(1)~QDMR guarantees to find a feasible multicast tree
+if such tree exists;
+(2)~this delay-bounded multicast tree is very rapidly generated; and
+(3)~the tree has low cost.
+Through analysis and extensive simulations,
+we confirm the premise of QDMR
+by comparing it to many existing multicast algorithms.}
+}
+
+@inproceedings{GuoMatta:ICDCS99,
+   author    = {Liang Guo and Ibrahim Matta},
+   title     = {{Search Space Reduction in {QoS} Routing}},
+   booktitle = {Proceedings of the 19th International Conference on Distributed
+      Computing Systems (ICDCS~'99)},
+   year      = 1999,
+   month     = "June",
+   address   = {Austin, Texas},
+   keywords = {Quality-of-Service (QoS) Routing; Constrained Path Optimization;
+               Simulation},
+   url = "http://www.cs.bu.edu/faculty/matta/Papers/icdcs99.ps",
+   abstract = {To provide real-time service, 
+integrated networks require the underlying 
+routing algorithm to be able to find low-cost paths that 
+satisfy given 
+Quality of Service (QoS) constraints.
+The problem of 
+constrained shortest (least-cost) path routing is known to be NP-hard, and
+some heuristics have been proposed to find a near-optimal solution.
+However, these heuristics either impose relationships among
+the link metrics to reduce the complexity of the problem 
+which may limit the general applicability of the heuristic,
+or are too costly in terms of execution time to be 
+applicable to large networks. 
+In this paper, we focus on solving the
+{\it delay-constrained} minimum-cost path problem, and present a fast
+algorithm to find a near-optimal solution. 
+This algorithm, called
+DCCR (for Delay-Cost-Constrained Routing), 
+is a variant of the $k$-shortest path algorithm.
+DCCR uses a new adaptive path weight function 
+together with an additional constraint imposed on the path cost,
+to restrict the search space.
+Thus, DCCR can return a near-optimal solution in a very short time. 
+Furthermore,
+we use the method proposed by Blokh and Gutin \cite{BG95} to further reduce
+the search space by using a tighter bound on path cost.
+This makes our algorithm more accurate and even faster. 
+We call this improved algorithm SSR+DCCR (for Search Space Reduction+DCCR).
+Through extensive simulations, 
+we confirm that SSR+DCCR performs very well compared
+to the optimal but very expensive solution.}
+
+}
+
+@inproceedings{MattaGuo:ISCC99,
+        author = "Ibrahim Matta and Liang Guo",
+        title = {{On Routing Real-Time Multicast Connections}},
+        booktitle = "{Proceedings of the 
+                     Fourth IEEE Symposium on Computers and Communications
+                      (ISCC~'99)}",
+        month = "July",
+        year = 1999,
+        keywords = {Quality-of-Service networks; real-time multicast routing;
+                    load distribution; simulation},
+        url = "http://www.cs.bu.edu/faculty/matta/Papers/iscc99.ps",
+        abstract = {Many distributed real-time applications,
+such as audio- and video-conferencing, 
+require the network to construct a multicast path (tree)
+from a sender to multiple receivers.
+Furthermore,
+real-time applications have Quality-of-Service (QoS) 
+requirements ({\it e.g.}\ bandwidth).
+The objective of the routing protocol
+is to build a tree that is both 
+feasible ({\it i.e.} satisfies the requested QoS) 
+{\it and} least costly.
+The cost of a tree depends on the costs of its links.
+The cost of a link should reflect the effect of allocating 
+resources to the new connection
+on existing and future connections.
+Many studies have proposed multicast algorithms to
+construct low-cost QoS-constrained trees.
+However, these studies assume that {\it some} cost is given
+for each link, and they do not examine the effect of 
+the link cost function.
+In this paper,
+we examine the effect of various link cost functions 
+on the performance of two classes of multicast routing algorithms 
+under both uniform and skewed real-time workload.
+We also investigate the impact of inaccurate 
+network state information.
+Our simulation results show that
+when network state information is accurate (most up-to-date)
+at each router, the choice of the link cost function
+only has a negligible effect, if any, on the routing
+performance.
+More interestingly, we find that, a link
+cost function that is more sensitive to load
+performs better
+when link state information is relatively accurate,
+while
+when link state information is more stale, a link cost
+function that is less sensitive to load
+performs better. 
+This is more pronounced under higher load
+and when multicast groups are more dense.}
+}
+
+
+@inproceedings{Matta:essen99,
+   author={Ibrahim Matta},
+   title= {{On Network Resource Management for End-to-End QoS}},
+   booktitle={{Workshop on Wide Area Networks and High Performance Computing, 
+              Springer Verlag Lecture Notes in Control and 
+              Information Sciences}},
+   address={Essen, Germany},
+   pages = "199-218",
+   number= 249, 
+   year=1999,
+   keywords = {QoS architectures},
+   url = "http://www.cs.bu.edu/faculty/matta/Papers/essen99.ps", 
+   abstract= {This article examines issues and challenges in 
+building distributed Quality-of-Service (QoS) architectures. 
+We consider architectures that facilitate
+cooperation between the applications and the network so as to achieve the
+following tasks. Applications are allowed to express in their own language
+their QoS (performance and cost) requirements. These application-specific
+requirements are communicated to the network in a language the network
+understands. Resources are appropriately allocated within the network so as to
+satisfy these requirements in an efficient, scalable, and reliable
+manner. Furthermore, the applications and the network have to cooperate
+``actively'' (or continually) to be able to achieve these tasks under
+time-varying conditions.}
+}
+
+
+%%%%%%%%%%%%%%%%%% Matta's 1998 Papers %%%%%%%%%%%%%%%%%%
+
+@article{KrunzMattaZhao:JTelecomm98,
+        author = "Marwan Krunz and Wei Zhao and Ibrahim Matta",
+        title = {{Scheduling and Bandwidth Allocation for the
+		  Distribution of Archived Video in VOD Systems}},
+        journal = "Journal of Telecommunication Systems - Special
+		  Issue on Multimedia", 
+        volume = 9,
+        number = "3 and 4",
+        month = "September",
+        year = 1998,
+        keywords = {Bandwidth Allocation; MPEG; Video Scheduling;
+                    Video-On-Demand; Traffic Envelope},
+        url = "http://www.cs.bu.edu/faculty/matta/Papers/telecomm98.ps",
+        abstract = {}
+}
+
+@article{MattaShankar:ISDN98,
+  author =      "Ibrahim Matta and A.~Udaya Shankar",
+  title  =      {{Fast Time-Dependent Evaluation
+		of Integrated Services Networks}},
+  journal = "Computer Networks and ISDN Systems - Special Issue on 
+             Modeling of Wired and Wireless ATM",
+  year =        1998,
+  volume = 29,
+  number =      "17-18",
+  month =       "February",
+  pages = "1999-2020",
+  keywords = {Multi-Service Networks, Transient Performance,
+              Dynamic Flow Models, Queueing Models,
+              Resource Allocation Algorithms, Routing},
+  url = "http://www.cs.bu.edu/faculty/matta/Papers/isdn98.ps",
+  abstract = {We present a numerical-analytical method 
+to evaluate multi-service networks
+with adaptive 
+routing, scheduling and admission controls.
+We apply our method to 
+connection-oriented networks 
+supporting different types of real-time connections.
+The network dynamics is described by 
+difference equations
+which can be solved 
+for both transient and steady-state performances.
+Results indicate that 
+our method is computationally much cheaper than discrete-event simulation, 
+and yields accurate performance measures. 
+Connection routing algorithms are usually evaluated 
+individually in terms of steady-state performance measures.
+In this paper,
+we also use our time-dependent evaluation method to
+compare several connection routing schemes in terms of
+{\it instantaneous} measures.
+Our results show that
+a routing scheme which defines 
+the cost of a path as
+the sum of measured link utilizations
+yields more stable behavior and lower connection blocking probability
+over a wide range of workload parameters and network configurations
+than other traditional schemes.}
+}
+
+@inProceedings{MattaBestavros:INFOCOM98,
+        author = "Ibrahim Matta and Azer Bestavros",
+        title = {{A Load Profiling Approach to Routing Guaranteed Bandwidth
+                 Flows}},
+        booktitle = "{IEEE INFOCOM}",
+        month = "March",
+        year = 1998,
+        note = "Extended version in 
+         {\em European Transactions on Telecommunications - 
+         Special Issue on Architectures, Protocols and Quality of Service 
+         for the Internet of the Future}, March-April 1999",
+        keywords = {Integrated services networks; virtual path based
+                 networks; admission control and routing of multi-class guaranteed
+                 flows; load balancing, packing, and profiling; real-time/on-line
+                 resource allocation; performance evaluation},
+        url = "http://www.cs.bu.edu/faculty/matta/Papers/infocom98.ps",
+        abstract = {We study a new approach to
+routing multi-class traffic flows 
+with guaranteed bandwidth requirements.
+The approach is based on our recently proposed concept of
+{\em load profiling} \cite{Matta:ICNP97}.
+We thoroughly characterize routing performance 
+using load profiling and contrast it to routing using 
+load balancing and load packing. 
+We do so both analytically and via extensive
+simulations on Virtual Path (VP) based networks.
+Our findings confirm that
+load balancing is not desirable as it results in
+VP bandwidth fragmentation, which adversely affects the likelihood of
+accepting new flow requests.  This fragmentation is more pronounced when
+the granularity of the requests is large. 
+Our simulation results also show that 
+our load-profiling routing scheme
+performs better or as well as the traditional load-balancing
+routing in terms of revenue under both skewed and uniform workloads.
+Furthermore, load-profiling routing improves routing fairness by
+proactively increasing the chances of admitting high-bandwidth
+flows.}
+}
+
+@inProceedings{Matta:ATM98,
+        author = "Liang Guo and Ibrahim Matta",
+        title = {{On State Aggregation for Scalable QoS Routing}},
+        booktitle = "Proceedings of IEEE ATM '98 Workshop",
+        year = 1998,
+        keywords = {Multi-service networks; topology aggregation; hierarchical 
+                    routing; PNNI; Quality of Service (QoS)},
+        url = "http://www.cs.bu.edu/faculty/matta/Papers/ATM98.ps",
+        abstract = {State (topology) aggregation is the notion of reducing 
+nodal as well as link information to achieve scaling in a large network.
+In this paper, we compare the performance of three different 
+aggregation schemes,
+namely, the Simple-Node scheme, the Full-Mesh 
+scheme, and the Star scheme, which represent a given group of
+nodes by a single logical node, a complete graph between border
+nodes, and a star-like graph connecting all of the border nodes,
+respectively.  
+We obtain transient performance measures for
+multi-service networks using our recently developed
+Z-iteration method \cite{Z-iter:web}.
+We restrict the set of candidate paths to
+short length paths as this has been shown to be an
+effective way to enhance network performance. 
+Our simulation results indicate that under a uniformly distributed
+workload, the scheme that has more detailed topology information 
+performs much better, as common sense suggests. More
+interestingly, however, we found that as
+the workload becomes skewed,
+i.e., as it concentrates around few ``hot-spot'' nodes, 
+the Simple-Node scheme, which is considered to be
+the most inaccurate aggregation
+scheme, appears to perform at least as well as the Full-Mesh scheme, which
+on the contrary provides the most detailed information. 
+We attribute this result 
+to the conflicting goals of 
+network utilization efficiency and network load balancing,
+a conflict that arises when restricting the set of candidate paths.}
+}
+
+
+@inproceedings{MattaEltoweissyLieberherr:ICC98,
+        author = "Ibrahim Matta and Mohamed Eltoweissy and Karl Lieberherr",
+        title = {{From CSCW Applications to Multicast Routing:
+                 An Integrated QoS Architecture}},
+        booktitle = "{Proceedings of IEEE International Conference on
+        Communications (ICC'98)}",
+        month = "June",
+        year = 1998,
+        keywords = {Computer Supported Cooperative Work,
+                    multicast routing, quality-of-service,
+                    protocol architecture, aspect-oriented programming},
+        url = "http://www.cs.bu.edu/faculty/matta/Papers/icc98.ps",
+        abstract = {Computer Supported Cooperative Work (CSCW)
+has the potential of providing the 
+environment needed for groups of diverse users to cooperate to achieve their 
+common goals. This potential has been under-utilized. One major obstacle
+is the lack of cooperation between CSCW systems and the underlying network
+services to accommodate the dynamic behavior of CSCW groups.
+Multicast routing presents a strong case 
+where current network services are
+inadequate for the traffic generated in CSCW environments.
+In this paper, we demonstrate the need for CSCW-specific multicast routing and
+present an integrated QoS architecture where a router
+QoS manager, on behalf of a multicast routing manager,  negotiates with 
+host and CSCW-specific QoS managers for efficient resource utilization
+and guaranteed QoS delivery. The multicast routing manager switches
+between routing trees or algorithms as warranted by the changes in 
+the characteristics and requirements of the CSCW systems running at the hosts. 
+We discuss an aspect-oriented programming approach 
+to the efficient description and flexible implementation of 
+adaptive application and network protocol behavior.}
+}
+
+@inproceedings{MattaEltoweissy:RTAS98,
+        author = "Ibrahim Matta and Mohamed Eltoweissy",
+        title = {{A Scalable QoS Routing Architecture for Real-Time CSCW
+                 Applications}},
+        booktitle = "{Proceedings of the Fourth IEEE Real-Time Technology and
+		  Applications Symposium (RTAS'98)}",
+        month = "June",
+        year = 1998,
+        keywords = {Computer Supported Cooperative Work,
+                    multicast routing, quality-of-service,
+                    protocol architecture, aspect-oriented programming},
+        url = "http://www.cs.bu.edu/faculty/matta/Papers/rtas98.ps",
+        abstract = {Computer Supported Cooperative Work (CSCW) has the potential of
+providing the environment needed for groups of diverse users to
+cooperate in real-time to achieve their common goals.  This potential
+has been under-utilized due to the lack of cooperation between CSCW
+systems and the underlying network services to accommodate the dynamic
+behavior and varying Quality-of-Service (QoS) requirements of CSCW
+groups and the applications they use.  To satisfy such requirements, QoS
+multicast routing should be employed.  Unfortunately, current multicast
+services are inadequate for the traffic generated in CSCW environments.
+In this paper, we present a CSCW-specific routing architecture that
+supports QoS requirements and is both scalable and robust.  Scalability
+is needed to accommodate large number of multicast groups and highly
+dynamic group membership and behavior, while robustness provides
+reliability and stable performance for each group during adaptation and
+in presence of the other existing groups.
+In our architecture, a router QoS manager, on behalf of a multicast
+routing manager, negotiates with host and CSCW-specific QoS managers for
+efficient resource utilization and guaranteed QoS delivery. The
+multicast routing manager switches between routing trees and algorithms
+as warranted by the changes in the characteristics and requirements of
+the CSCW systems running at the hosts.  We present a class-based and a
+partial view-based method to scalability.  We also present a centralized
+and a distributed method to establishing a group's QoS multicast path
+while providing robustness.  In addition to prototyping our architecture
+and defining appropriate protocols and mappings between the various QoS
+and router managers, we are investigating the use of the Internet
+standard SNMP for information gathering.  This necessitates extending
+its management information bases (MIBs) to include group objects.}
+}
+
+
+
+
+@inProceedings{MattaKrunz:ICC97,
+        author = "Ibrahim Matta and Marwan Krunz",
+        title = {{Packing and Least-Loaded Based Routing
+                 in Multi-Rate Loss Networks}},
+        booktitle = "{Proceedings of IEEE ICC~'97}",
+        pages = "827-831",
+        year = 1997,
+        keywords = {Routing, admission control,
+                    resource allocation algorithms,
+                    multi-rate loss networks, simulation},
+        url = "http://www.cs.bu.edu/faculty/matta/Papers/icc97.ps",
+        abstract = {We examine various schemes for dynamically routing
+virtual circuits (VCs) in a multi-class network.
+A VC setup request may be rejected by admission control
+because resources are either unavailable or
+being reserved for future incoming VCs.
+We examine least-loaded based schemes,
+which attempt to balance the load among available routes.
+In addition,
+we examine packing based schemes,
+which attempt to reduce bandwidth fragmentation
+possibly at the expense of load balancing.
+Our simulation results show that
+under skewed workload,
+our packing based scheme outperforms 
+a traditional least-loaded based scheme
+in terms of revenue (or equivalently, network utilization).
+Under uniform workload,
+both schemes provide similar revenue.
+}
+}
+
+
+@inproceedings{MattaShankar:ICNP96,
+   author    = "Ibrahim Matta and A.~Udaya Shankar",
+   title     = {{Dynamic Routing of Real-Time Virtual Circuits}},
+   booktitle = {Proceedings of 
+                IEEE International Conference on Network Protocols '96},
+   year      = 1996,
+   month     = "October",
+   address   = "Columbus, Ohio",
+   url = "http://www.cs.bu.edu/faculty/matta/Papers/icnp96.ps",
+   abstract = {Future integrated services networks, 
+such as ATM networks,
+will support diverse services,
+including guaranteed real-time service
+required by many applications such as voice and video.
+To support such service,
+virtual circuit (VC) routing algorithms
+are often proposed.
+Typically, 
+the source maintains a view of the network,
+and uses this view to select a path to the destination.
+A request is then made
+to setup a real-time VC over this path
+through resource reservations.
+The request is blocked if the requested resources are not available.
+These VC routing algorithms are usually evaluated 
+individually in terms of steady-state performance measures.
+In this paper,
+we compare several VC routing schemes in terms of
+{\rm instantaneous} measures using 
+a recently developed time-dependent evaluation method. 
+Our results show that
+a routing scheme which defines 
+the cost of a path as
+the sum of measured link utilizations
+yields more stable behavior and lower VC blocking probability
+over a wide range of workload parameters and network configurations
+than other traditional schemes.}
+}
+
+
+
+@article{MattaShankar:jsac95,
+         author = "Ibrahim Matta and A.~Udaya Shankar",
+         title = {{Type-of-Service Routing in Datagram Delivery Systems}},
+         journal = "{IEEE Journal on 
+                Selected Areas in Communications~--~Special Issue on
+		  the Internet}",
+         volume = 13,
+         number = 8,
+         month = "October",
+         year = 1995,
+         url = "http://www.cs.bu.edu/faculty/matta/Papers/jsac95.ps",
+         abstract = {The Internet is expected to support various services,
+including best-effort services and guaranteed services.
+For best-effort services,
+we propose a new approach 
+to achieving type-of-service (TOS) classes
+with adaptive next-hop routing.
+We consider two TOS classes, namely,
+delay-sensitive and throughput-sensitive.
+As in routing protocols such as OSPF and integrated IS-IS,
+each node has a different next-hop for each destination and TOS class.
+Traditionally, a node has a single FCFS queue for each outgoing link,
+and the next-hops are computed using link measurements.
+In our approach, we attempt to isolate the two
+traffic classes by using for each outgoing link a separate FCFS queue
+for each TOS class; the link is shared cyclicly between its TOS queues.
+The next-hops for the delay-sensitive traffic adapts to link delays of that
+traffic.  The next-hops for the throughput-sensitive traffic adapts to
+overall link utilizations.
+We compare our approach with the traditional approach using 
+discrete-event simulation
+and Liapunov analysis (for stability of routes).
+Our approach offers lower
+end-to-end delay to the delay-sensitive traffic.  A related property is
+that the routes for the delay-sensitive traffic are more stable, 
+i.e.\ less oscillations.  
+An unexpected property is that the 
+overall end-to-end delay is lower,
+because the throughput-sensitive traffic moves away to under-utilized routes.}
+}
+
+@inproceedings{MattaShankar:sigmetrics95,
+         author = "Ibrahim Matta and A.~Udaya Shankar",
+         title = {{{\it Z}-Iteration: A Simple Method for Throughput
+                 Estimation in Time-Dependent Multi-Class Systems}},
+         booktitle = "Proceedings of ACM SIGMETRICS/PERFORMANCE~'95",
+         address = "Ottawa, Canada",
+         pages = "126-135",
+         month = "May",
+         year = 1995,
+         keywords = {Multi-class systems, transient performance,
+                     dynamic flow models, queueing models,
+                     simulation},
+         url = "http://www.cs.bu.edu/faculty/matta/Papers/sigmetrics95.ps",
+         note = "Revised version at 
+           http://www.cs.bu.edu/faculty/matta/Papers/sigmetrics95-rev.ps",
+         abstract = {Multiple-class multiple-resource (MCMR) systems,
+where each class of customers requires a particular set of resources,
+are common.
+These systems are often analyzed under steady-state conditions.
+We describe a simple method,
+referred to as {\mbox {\it Z-iteration}},
+to estimate both transient and steady-state performances
+of such systems.
+The method makes use of results and techniques available from
+queueing theory,
+network analysis,
+dynamic flow theory,
+and 
+numerical analysis.
+We show the generality of the {\it Z}-iteration
+by applying it to an ATM network,
+a parallel disk system,
+and
+a distributed batch system.
+Validations against discrete-event simulations
+show the accuracy and computational advantages
+of the {\mbox {\it Z-}iteration}.}
+
+}
+
+@inproceedings{AlaettinogluMattaShankar:icccn95,
+   author    = "Cengiz Alaettinoglu and Ibrahim Matta and A.~Udaya Shankar",
+   title     = {{A Scalable Virtual Circuit Routing Scheme 
+                 for {ATM} Networks}},
+   booktitle = {Proceedings of the International Conference on Computer
+        Communications and Networks~-~ICCCN~'95},
+   pages     = "630-637",
+   year      = 1995,
+   month     = "September",
+   address   = {Las Vegas, Nevada},
+   keywords  = {Virtual circuit routing, admission control, resource allocation,
+                real-time service, simulation},
+   url = "http://www.cs.bu.edu/faculty/matta/Papers/icccn95.ps",
+   abstract  = {We present a scalable VC routing protocol
+based on the recently proposed viewserver hierarchy.
+Each viewserver maintains a partial view of the network.
+By querying these viewservers,
+a source obtains a merged view that
+contains a path to the destination.
+The source then sends a setup request packet
+over this path to reserve resources.
+We use simulation to compare our protocol
+to a simple approach that
+maintains a full view of the network.
+In addition to the savings in storage,
+our protocol performs as well or better 
+in terms of VC carried load and blocking probability
+over a wide range of real-time workload.
+}
+}
+
+@inproceedings{MattaShankar:ICNP94,
+   author    = "Ibrahim Matta and A.~Udaya Shankar",
+   title     = {{An Iterative Approach to Comprehensive Performance Evaluation 
+		of Integrated Services Networks}},
+   booktitle = {Proceedings of 
+                IEEE International Conference on Network Protocols '94},
+   year      = 1994,
+   month     = "October",
+   address   = "Boston, Massachusetts",
+   keywords  = {Adaptive routing, link scheduling, simulation, stability analysis},
+   url = "http://www.cs.bu.edu/faculty/matta/Papers/icnp94.ps",
+   abstract  = {
+Future networks are expected to integrate diverse services.
+For this purpose, new algorithms and protocols have been proposed
+for link scheduling, admission control, and routing.
+The interaction between these three components is crucial to the
+performance of the network.  However, this interaction is difficult to
+model realistically using available techniques.
+In this paper, we present an {\rm iterative discrete-time approach} that yields a
+realistic model which takes into account this interaction.
+The model applies to connection-oriented networks with
+different types of real-time connections.
+It allows the investigation of various control schemes for 
+both transient and steady-state performances.
+Preliminary results indicate that our approach is computationally much
+cheaper than discrete-event simulation, and yields sufficiently accurate
+performance measures. 
+}
+}
+
+@inproceedings{MattaShankar:infocom94,
+        author = "Ibrahim Matta and A.~Udaya Shankar",
+        title = {{Type-of-Service Routing in Dynamic Datagram Networks}},
+        booktitle = "{Proceedings of IEEE INFOCOM}",
+        address = "Toronto, Ontario, Canada",
+        pages = "992-999",
+        month = "June",
+        year = 1994,
+        keywords = {Adaptive routing, link scheduling, simulation, 
+                    stability analysis},
+        url = "http://www.cs.bu.edu/faculty/matta/Papers/infocom94.ps",
+        abstract = {We propose a new approach to achieving type-of-service
+(TOS) with adaptive next-hop routing in wide-area networks such as the
+Internet.  We consider two traffic classes, namely delay-sensitive and
+throughput-sensitive.
+Our approach attempts to {\rm isolate} the two traffic classes by using
+two FCFS queues at each outgoing link, one for
+each TOS; the link is shared cyclicly between the two TOS queues.
+The
+next-hops for the delay-sensitive traffic adapts to link delays of that
+traffic.  The next-hops for the throughput-sensitive traffic adapts to
+overall link utilizations.
+We compare our approach with a traditional approach using 
+discrete-event simulation
+and Liapunov analysis (for stability of routes).
+Because of the isolation feature,
+the proposed approach offers lower
+end-to-end delays for both traffic classes.
+}
+}
+
+@inproceedings{MattaShankar:mascots94,
+        author = "Ibrahim Matta and A.~Udaya Shankar",
+        title = {{On the Interaction between Gateway Scheduling and Routing}},
+        booktitle = "Proceedings of the International Workshop on Modeling,
+		Analysis and Simulation of Computer and Telecommunications
+		Systems~-~{MASCOTS~'94}",
+        address = "Durham, North Carolina",
+        pages = "84-88",
+        month = "January",
+        year = 1994,
+        keywords = {Adaptive routing, link scheduling, simulation, 
+                    stability analysis},
+        url = "http://www.cs.bu.edu/faculty/matta/Papers/mascots94.ps",       
+        abstract = {Future computer networks are expected to provide different
+types of service. For this purpose,
+new algorithms and protocols have been proposed for
+{\it gateway scheduling}, {\it flow control}, and {\it routing}.
+The interaction between these three components is 
+crucial to the performance of the network.
+Existing work has studied only the interaction between scheduling and
+flow control,
+assuming static routing.
+In this paper, we investigate the interaction between scheduling and
+adaptive routing. 
+We view the network as a dynamical system.
+We apply the Liapunov direct method to derive stability conditions
+for the routes of different traffic classes.
+We show how with scheduling
+support for routing, 
+the routes of the traffic classes can be  {\it isolated}, thereby
+improving the overall network performance. }
+}
+
+
+

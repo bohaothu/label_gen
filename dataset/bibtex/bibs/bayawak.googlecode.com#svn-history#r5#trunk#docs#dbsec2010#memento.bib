@@ -1,0 +1,408 @@
+%% This BibTeX bibliography file was created using BibDesk.
+%% http://bibdesk.sourceforge.net/
+%% Created for Karthick Jayaraman at 2007-09-03 12:01:57 -0400 
+%% Saved with string encoding Western (ASCII) 
+
+%OWASP Top 10
+
+@misc{top10,
+author        = {Jeff Williams and Dave Wichers},
+title         = {{OWASP Top 10 2010 rc1}},
+howpublished  = {\url{http://www.owasp.org/images/0/0f/OWASP_T10_-_2010_rc1.pdf}}
+}
+
+% Approaches for implementing Memento
+@misc{apachefilters,
+author        = {Ryan Bloome},
+title         = {Writing Filters for {Apache 2.0}},
+howpublished  = {\url{http://onlamp.com/pub/a/apache/2001/08/23/apache_2.html}}
+}
+
+@misc{javafilters,
+author        = {Kief Morris},
+title         = {Writing {Servlet} Filters},
+howpublished  = {\url{http://javaboutique.internet.com/tutorials/Servlet_Filters/}}
+}
+
+@misc{phpfilters,
+author        = {Harish Kamath},
+title         = {Output Buffering With {PHP}},
+howpublished  = {\url{http://www.devshed.com/c/a/PHP/Output-Buffering-With-PHP/}}
+}
+
+% Same-origin policy
+@misc{sop,
+author        = {Jesse Ruderman},
+title         = {{The Same origin policy}},
+howpublished  = {\url{https://developer.mozilla.org/En/Same_origin_policy_for_JavaScript}}
+}
+
+@misc{ googlehandbook,
+    author = "Michal Zalevski",
+    title = {{Part1 - browsersec - Browser Security Handbook, part 2}},
+    year = "March 16, 2009",
+    howpublished={\url{http://code.google.com/p/browsersec/wiki/Part2}},
+}
+
+% HTTP RFC 2616
+@misc{rfc2616,
+  author="R. Fielding and J. Gettys and J. Mogul and H. Frystyk and L. Masinter and P. Leach and T. Berners-Lee",
+  title="{Hypertext Transfer Protocol -- HTTP/1.1}",
+  series="Request for Comments",
+  number="2616",
+  howpublished="RFC 2616 (Draft Standard)",
+  publisher="IETF",
+  organization="Internet Engineering Task Force",
+  year=1999,
+  month=June,
+  url="http://www.ietf.org/rfc/rfc2616.txt",
+}
+
+%Intrusion detection approaches
+
+@INPROCEEDINGS{xu04,
+    author = {Haizhi Xu and Wenliang Du and Steve J. Chapin},
+    title = {Context Sensitive Anomaly Monitoring of Process Control
+                  Flow To Detect Mimicry Attacks and Impossible Paths},
+    booktitle = {In Proceedings of the International Symposium on
+                  Recent Advances in Intrusion Detection (RAID},
+    year = {2004},
+    pages = {21--38},
+    publisher = {Springer}
+}
+
+@inproceedings{wagner01,
+ author = {Wagner, David and Dean, Drew},
+ title = {Intrusion Detection via Static Analysis},
+ booktitle = {SP '01: Proceedings of the 2001 IEEE Symposium on Security and Privacy},
+ year = {2001},
+ pages = {156},
+ publisher = {IEEE Computer Society},
+ address = {Washington, DC, USA},
+ }
+
+@inproceedings{guha09,
+ author = {Arjun Guha and Shriram Krishnamurthu and Trevor Jim},
+ title = {Using Static Analysis for Ajax Intrusion Detection},
+ booktitle = {WWW '09: Proceedings of the 16th international conference on World Wide Web (To Appear)},
+ year = {2009},
+ publisher = {ACM},
+ address = {New York, NY, USA},
+ }
+
+@inproceedings{valeur06,
+ author = {Fredrik Valeur and Giovanni Vigna and Christopher Kruegel and Engin Kirda},
+ title = {An anomaly-driven reverse proxy for web applications},
+ booktitle = {SAC '06: Proceedings of the 2006 ACM symposium on Applied computing},
+ year = {2006},
+ pages = {361--368},
+ location = {Dijon, France},
+ publisher = {ACM},
+ address = {New York, NY, USA}, 
+ }
+
+@inproceedings{kruegelanom1,
+ author = {Christopher Kruegel and Giovanni Vigna},
+ title = {Anomaly detection of web-based attacks},
+ booktitle = {CCS '03: Proceedings of the 10th ACM conference on Computer and communications security},
+ year = {2003},
+ pages = {251--261},
+ location = {Washington D.C., USA},
+ publisher = {ACM},
+ address = {New York, NY, USA},
+ annote = { This paper uses the same anomaly detection models used in Swaddler for creating models of normal HTTP requests, responses, and their attributes. Again, the paper is silent about how to create a good traffic to train the model. This is the key to reducing false positives. }
+ }
+
+@article{httpdfa,
+ author = {Kenneth L. Ingham and Anil Somayaji and John Burge and Stephanie Forrest},
+ title = {Learning DFA representations of HTTP for protecting web applications},
+ journal = {Computer Networks},
+ volume = {51},
+ number = {5},
+ year = {2007},
+ issn = {1389-1286},
+ publisher = {Elsevier North-Holland, Inc.},
+ annote = {This paper describes a anamoly detection technique that models HTTP requests and responses by creating
+           DFA representations for normal request and responses. They use some clever techniques for accomodating 
+           small but benign variations in the requests.
+          }          
+ }
+
+@InProceedings{raid07_swaddler,
+  author    = {Marco Cova and
+	       Davide Balzarotti and
+               Viktoria Felmetsger and
+               Giovanni Vigna},
+  title     = {{Swaddler: An Approach for the Anomaly-based Detection of State Violations in Web Applications}},
+  booktitle = {Proceedings of the 10th Internation Symposium on Recent Advances in Intrusion Detection (RAID)},
+  year      = 2007,
+  pages     = {63--86},
+  Annote    = { This paper describes a anomaly detection technique for
+                  detecting certain web attacks that create an
+                  anamolous state in the internal session
+                  variables. This work models the attribute length,
+                  character distribution, and presence or absence of
+                  attributes for each session variable. Also, the work
+                  identifies some invariants for combinations of
+                  session variables. The PHP intrepreter is
+                  instrumented to detect anomalies in session
+                  variables during execution. The anamoly detection
+                  has a significant overhead. There is a learning
+                  phase during which the system is trained on good
+                  traffic to create these models. Then, there is a
+                  detection phase during which anamolies in the
+                  session variables are detected. However, the paper
+                  is silent on how to create good traffic. }
+}
+
+% CFI Appproach
+@inproceedings{ligatti05,
+ author = {Abadi, Mart\'{\i}n and Budiu, Mihai and Erlingsson, \'{U}lfar and Ligatti, Jay},
+ title = {Control-flow integrity},
+ booktitle = {CCS '05: Proceedings of the 12th ACM conference on Computer and communications security},
+ year = {2005},
+ isbn = {1-59593-226-7},
+ pages = {340--353},
+ location = {Alexandria, VA, USA},
+ doi = {http://doi.acm.org/10.1145/1102120.1102165},
+ publisher = {ACM},
+ address = {New York, NY, USA},
+ }
+
+% CSRF
+@INPROCEEDINGS{mao09,
+ author = {Mao, Ziqing and Li, Ninghui and Molloy, Ian},
+ title = {Defeating Cross-Site Request Forgery Attacks with Browser-Enforced Authenticity Protection},
+ booktitle = {Financial Cryptography and Data Security, 13th International Conference, {FC} 2009, {B}arbados, {F}ebruary 23-26, 2009. Revised Selected Papers},
+ year = {2009},
+ isbn = {978-3-642-03548-7},
+ pages = {238--255},
+ doi = {http://dx.doi.org/10.1007/978-3-642-03549-4_15},
+ publisher = {Springer-Verlag},
+ address = {Berlin, Heidelberg},
+ }
+
+@INPROCEEDINGS{noforge,
+    author = {Nenad Jovanovic and Engin Kirda and Christopher Kruegel},
+    title = {Preventing Cross Site Request Forgery Attacks},
+    booktitle = {Proceedings of the Second IEEE Conference on Security and Privacy in Communications Networks (SecureComm)},
+    year = {2006},
+    pages = {1--10},
+}
+
+@inproceedings{requestrodeo,
+ author = {Martin Johns and Justus Winter},
+ title = {{RequestRodeo}: Client-side Protection Against Session Riding},
+ booktitle = {Proceedings of the OWASP Europe 2006 Conference, refereed papers
+	track, Report CW448},
+  year = {2006},
+  pages = {5 - 17},
+  month = {May},
+ }
+
+@InProceedings{ccscsrf, 
+author = {Adam Barth and Collin Jackson and John C. Mitchell}, 
+title = {Robust Defenses for Cross-Site Request Forgery}, 
+booktitle = {CCS '08: Proceedings of the 15th ACM conference on Computer and communications security},
+year = {2008},
+pages = {75--88},
+location = {Alexandria, Virginia, USA},
+publisher = {ACM},
+address = {New York, NY, USA},
+}
+
+@InProceedings{scap,
+title={Simple cross-site attack prevention},
+author={Kerschbaum, Florian},
+booktitle={SecureComm 2007: Third International Conference on Security and Privacy in Communications Networks and the Workshops 2007},
+year={2007},
+month={September},
+pages={464-472}, 
+}
+
+% XSS
+
+@inproceedings{bisht08,
+ author = {Bisht,, Prithvi and Venkatakrishnan,, V. N.},
+ title = {XSS-GUARD: Precise Dynamic Prevention of Cross-Site Scripting Attacks},
+ booktitle = {DIMVA '08: Proceedings of the 5th international conference on Detection of Intrusions and Malware, and Vulnerability Assessment},
+ year = {2008},
+ pages = {23--43},
+ location = {Paris, France},
+ publisher = {Springer-Verlag},
+ address = {Berlin, Heidelberg},
+ }
+
+@INPROCEEDINGS{nguyen05,
+    author = {Anh Nguyen-tuong and Salvatore Guarnieri and Doug Greene and Jeff Shirley and David Evans},
+    title = {Automatically hardening web applications using precise tainting},
+    booktitle = {In 20th IFIP International Information Security Conference},
+    pages = {372--382},
+    year = {2005}
+}
+
+@inproceedings{csse,
+	Author = {Tadeusz Pietraszek and Chris Vanden Berghe.},
+	Booktitle = {{RAID 05}: In Recent Advances in Intrusion Detection 2007},
+	Date-Added = {2007-09-01 18:58:35 -0400},
+	Date-Modified = {2007-09-01 19:22:40 -0400},
+	Title = {Defending against injection attacks through context-sensitive string evaluation}
+}
+
+@inproceedings{xu06,
+ author = {Wei Xu and Sandeep Bhatkar and R. Sekar},
+ title = {Taint-enhanced policy enforcement: a practical approach to defeat a wide range of attacks},
+ booktitle = {USENIX-SS'06: Proceedings of the 15th conference on USENIX Security Symposium},
+ year = {2006},
+ location = {Vancouver, B.C., Canada},
+ publisher = {USENIX Association},
+ address = {Berkeley, CA, USA}
+ }
+
+@inproceedings{noxes,
+ Author = {Engin Kirda and Christopher Kruegel and Giovanni Vigna and Nenad Jovanovic},
+ title = {Noxes: a client-side solution for mitigating cross-site scripting attacks},
+ booktitle = {SAC '06: Proceedings of the 2006 ACM symposium on Applied computing},
+ year = {2006},
+ pages = {330--337},
+ location = {Dijon, France},
+ publisher = {ACM},
+ address = {New York, NY, USA},
+}
+
+@inproceedings{vogt07,
+ Author = {P. Vogt and F. Nentwich and N. Jovanovic and E. Kirda and C. Kruegel and G. Vigna},
+ Booktitle = {In Proceeding of the Network and Distributed System Security Symposium ({NDSS’07})},
+ year = {2007},
+ Date-Added = {2007-09-01 19:25:25 -0400},
+ Date-Modified = {2007-09-01 19:26:02 -0400},
+ Title = {Cross-Site Scripting Prevention with Dynamic Data Tainting and Static Analysis},
+}
+
+@inproceedings{beep,
+ author = {Trevor Jim and Nikhil Swamy and Michael Hicks},
+ title = {Defeating script injection attacks with browser-enforced embedded policies},
+ booktitle = {WWW '07: Proceedings of the 16th international conference on World Wide Web},
+ year = {2007},
+ pages = {601--610},
+ location = {Banff, Alberta, Canada},
+ publisher = {ACM},
+ address = {New York, NY, USA},
+ }
+
+% Analysis methods for web applications
+@inproceedings{wang09,
+author    = {Wenhua Wang and Yu Lei and Sreedevi Sampath and Raghu
+                  Kacker and Rick Kuhn and James Lawrence},
+  title     = {A combinatorial approach to building navigation graphs for
+               dynamic web applications},
+  booktitle = {25th IEEE International Conference on Software
+                  Maintenance (ICSM 2009), September 20-26, 2009,
+                  Edmonton, Alberta, Canada},
+  year      = {2009},
+  publisher = {IEEE},
+ }
+
+@inproceedings{halfond09,
+ author = {Halfond, William G.J. and Anand, Saswat and Orso, Alessandro},
+ title = {Precise interface identification to improve testing and analysis of web applications},
+ booktitle = {ISSTA '09: Proceedings of the eighteenth international symposium on Software testing and analysis},
+ year = {2009},
+ pages = {285--296},
+ location = {Chicago, IL, USA},
+ publisher = {ACM},
+ address = {New York, NY, USA},
+ }
+
+@inproceedings{modelwebapp,
+author = { Huaikou Miao and Hongwei Zeng},
+title = {Model Checking-based Verification of Web Application},
+booktitle = {ICECCS '07: Proceedings of the 12th IEEE International Conference on Engineering Complex Computer Systems},
+year = {2007},
+pages = {47--55},
+publisher = {IEEE Computer Society},
+address = {Washington, DC, USA},
+}
+
+@article{webautomata,
+  title={Web Automata: A Behavioral Model of Web applications based on the MVC model},
+  author={Shoji Yuen and Keishi Kato and Daiju Kato and Kiyoshi Agusa},
+  journal={Information and Media Technologies},
+  volume={1},
+  number={1},
+  year={2006}
+}
+
+
+@INPROCEEDINGS{testingweb,
+    author = {Anneliese A. Andrews and Jeff Offutt and Roger T. Alexander},
+    title = {Testing web applications by modeling with fsms},
+    booktitle = {Software and Systems Modeling},
+    year = {2005},
+}
+
+% Applications used in evaluation
+@misc{phpbb,
+	Author = {phpBB Group},
+	Title = {phpBB},
+	howpublished = {\url{http://www.phpbb.com/}},
+	Urldate = {April 7, 2009},
+        Annote = {Opensource web bulletin board system.}
+	}
+@misc{punbb,
+	Author = {PunBB},
+	Title = {PunBB},
+	howpublished = {\url{http://punbb.informer.com/}},
+	Urldate = {April 7, 2009},
+        Annote = {Lightweight opensource web bulletin board system. }
+}
+
+
+@misc{oscommerce,
+	Author = {osCommerce},
+	howpublished = {\url{http://www.oscommerce.com/}},
+	Urldate = {April 7, 2009},
+        Annote = {Open Source online shop e-commerce application.}
+}
+
+@misc{webcalendar,
+	Author = {WebCalendar},
+	howpublished = {\url{http://sourceforge.net/projects/webcalendar/}},
+	Urldate = {April 7, 2009},
+        Annote = {Open Source calendar web application.}
+}
+
+@misc{scarf,
+	Author = {SCARF},
+	howpublished = {\url{http://scarf.sourceforge.net/}},
+	Urldate = {April 8, 2009},
+        Annote = {Conference and research forum.}
+}
+
+@misc{bookstore,
+	Author = {Bookstore},
+	howpublished = {\url{http://www.gotocode.com/apps.asp?app_id=3&/}},
+	Urldate = {April 8, 2009},
+        Annote = {Conference and research forum.}
+}
+
+@misc{events,
+	Author = {Events},
+	howpublished = {\url{http://www.gotocode.com/apps.asp?app_id=7&/}},
+	Urldate = {April 8, 2009},
+        Annote = {Conference and research forum.}
+}
+
+@misc{classifieds,
+	Author = {Classifieds},
+	howpublished = {\url{http://www.gotocode.com/apps.asp?app_id=5&/}},
+	Urldate = {April 8, 2009},
+        Annote = {Conference and research forum.}
+}
+
+@misc{employee,
+	Author = {Employee},
+	howpublished = {\url{http://www.gotocode.com/apps.asp?app_id=6&/}},
+	Urldate = {April 8, 2009},
+        Annote = {Conference and research forum.}
+}

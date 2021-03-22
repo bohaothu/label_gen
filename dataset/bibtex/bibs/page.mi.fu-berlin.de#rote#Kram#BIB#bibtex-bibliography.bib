@@ -1,0 +1,2411 @@
+@string{Optimization_Problems = {[EN:Optimization Problems:EN][DE:Optimierungsprobleme:DE]}}
+@string{TSP = {[EN:The Traveling Salesman Problem and Related Problems:EN][DE:Das Rundreiseproblem und verwandte Probleme:DE]}}
+@string{Algebraic_Approach_to_Graph_Problems = {[EN:The Algebraic Approach to Graph Problems:EN][DE:Der algebraischer Zugang zu Graphenproblemen:DE]}}
+@string{Convex_Approximation = {[EN:Convex Approximation:EN][DE:Konvexe Approximation:DE]}}
+@string{Computational_Geometry = {[EN:Computational Geometry:EN][DE:Rechnerische Geometrie:DE]}}
+@string{Geometric_Optimization_Problems = {[EN:Geometric Optimization Problems:EN][DE:Geometrische Optimierungsprobleme:DE]}}
+@string{Geometry = {[EN:Geometry:EN][DE:Geometrie:DE]}}
+@string{Parallel_Algorithms = {[EN:Parallel Algorithms:EN][DE:Parallele Algorithmen:DE]}}
+@string{Misc = {[EN:Miscellaneous:EN][DE:Sonstiges:DE]}}
+
+@comment{
+  \coauthor{ Franz Rendl }{ www.uni-klu.ac.at/users/rendl/ }
+  \coauthor{ Rainer E. Burkard }{ http://www.opt.math.tu-graz.ac.at/burkard/welcome.html }
+  \coauthor{ G{\"u}nther Ruhe }{ http://sern.ucalgary.ca/~ruhe/ }
+  \coauthor{ Richard Pollack }{ http://www.math.nyu.edu/faculty/pollack/ }
+  \coauthor{ Micha Sharir }{ http://www.math.tau.ac.il/~sharir/ }
+  \coauthor{ Otfried Schwarzkopf }{ http://www.cs.uu.nl/~otfried/ }
+  \coauthor{ Gerhard Woeginger }{ http://www.opt.math.tu-graz.ac.at/woe/ }
+  \coauthor{ Gerhard J. Woeginger }{ http://www.opt.math.tu-graz.ac.at/woe/ }
+  \coauthor{ Horst W. Hamacher }{ http://www.mathematik.uni-kl.de/~wwwwi/WWWWI/HOMEPAGES/hintro.html }
+  \coauthor{ Joseph S. B. Mitchell }{ http://www.ams.sunysb.edu/~jsbm/jsbm.html }
+  \coauthor{ Chee Yap }{ http://www.cs.nyu.edu/cs/faculty/yap/ }
+  \coauthor{ David Eppstein }{ http://www.ics.uci.edu/~eppstein/ }
+  \coauthor{ Mark Overmars }{ http://www.cs.ruu.nl/people/markov/ }
+  \coauthor{ Alon Efrat }{ http://graphics.stanford.EDU/~alon/ }
+  \coauthor{ Jack Snoeyink }{ www.cs.unc.edu/~snoeyink/ }
+  \coauthor{ Vladimir G. Deineko }{ http://users.wbs.ac.uk/group/ors/people/academic/deineko/ }
+  \coauthor{ Robert Franz Tichy }{ http://finanz.math.tu-graz.ac.at/~tichy/ }
+  \coauthor{ Oswin Aichholzer }{ http://www.cis.tu-graz.ac.at/igi/oaich/ }
+  \coauthor{ Eranda {\c C}ela }{ http://www.opt.math.tu-graz.ac.at/~cela/ }
+  \coauthor{ Mordecai J. Golin }{ http://www.cs.ust.hk/faculty/golin/ }
+  \coauthor{ Robert L. Scot Drysdale }{ http://www.cs.dartmouth.edu/~scot/ }
+  \coauthor{ Siu-Wing Cheng }{ http://www.cs.ust.hk/faculty/scheng/ }
+  \coauthor{ Naoki Katoh }{ http://is-mj.archi.kyoto-u.ac.jp/people-e.html }
+  \coauthor{ Imre B{\'a}r{\'a}ny }{ http://www.math-inst.hu/~barany/ }
+  \coauthor{ William Steiger }{ http://www.cs.rutgers.edu/~steiger/ }
+  \coauthor{ Cun-Hui Zhang }{ http://www.stat.rutgers.edu/people/faculty/zhang.html }
+  \coauthor{ Prosenjit Bose }{ http://www.scs.carleton.ca/~jit/ }
+  \coauthor{ Hazel Everett }{ http://www.loria.fr/~everett/ }
+  \coauthor{ S{\'a}ndor Fekete }{ http://mo.math.nat.tu-bs.de/~fekete/ }
+  \coauthor{ Michael E. Houle }{ http://www.cs.usyd.edu.au/~meh/ }
+  \coauthor{ Anna Lubiw }{ http://daisy.uwaterloo.ca/~alubiw/ }
+  \coauthor{ Henk Meijer }{ http://www.qucis.queensu.ca/home/henk/ }
+  \coauthor{ Kathleen Romanik }{ http://www.cfar.umd.edu/~romanik/kar.html }
+  \coauthor{ Tom Shermer }{ http://www.cs.sfu.ca/people/Faculty/Shermer/ }
+  \coauthor{ Sue Whitesides }{ http://www.cs.mcgill.ca/~sue/ }
+  \coauthor{ Jerrold R. Griggs }{ http://www.math.sc.edu/~griggs/ }
+  \coauthor{ Elmar Langetepe }{ http://web.informatik.uni-bonn.de/I/staff/langetepe.html }
+  \coauthor{ Martin Gavalec }{ http://www.uhk.cz/fim/eng/departments/kit/index.asp }
+  \coauthor{ Jens Schwaiger }{ http://www-ang.kfunigraz.ac.at/~schwaige/ }
+  \coauthor{ Tam{\'a}s Fleiner }{ http://www.cs.elte.hu/egres/design/generated/mp_fleiner.html }
+  \coauthor{ Dana Randall }{ http://www.math.gatech.edu/~randall/ }
+  \coauthor{ Konrad J. Swanepoel }{ http://maths.unisa.ac.za/~swanekj/ }
+  \coauthor{ Volker Kaibel }{ http://www.math.TU-Berlin.de/~kaibel/ }
+  \coauthor{ Francisco Santos }{ http://matsun1.matesco.unican.es/~santos/ }
+  \coauthor{ Friedrich Eisenbrand }{ http://www.mpi-sb.mpg.de/~eisen/ }
+  \coauthor{ Ileana Streinu }{ http://cs.smith.edu/~streinu/ }
+  \coauthor{ Robert Connelly }{ http://www.math.cornell.edu/~connelly/ }
+}
+
+@techreport{r-saapp-84
+,  author = {G{\"u}nter Rote}
+,  title = {A systolic array for the algebraic path problem (which includes the inverse of a matrix and shortest distances in a graph)}
+,  year = {1984}
+,  number = {Bericht 101}
+,  institution = {Rechenzentrum Graz}
+,  pages = {69 pages}
+,  publisher = {Rechenzentrum Graz}
+,  workarea = Algebraic_Approach_to_Graph_Problems
+}
+
+@mastersthesis{r-saaap-85m
+,  author = {G{\"u}nter Rote}
+,  title = {A systolic array algorithm for the algebraic path problem}
+,  year = {1985}
+,  month = feb
+,  school = {Technische Universit{\"a}t Graz, Institut f{\"u}r Mathematik}
+,  workarea = Parallel_Algorithms
+}
+
+@article{r-saaap-85
+,  author = {G{\"u}nter Rote}
+,  title = {A systolic array algorithm for the algebraic path problem (shortest paths; matrix inversion)}
+,  journal = {Computing}
+,  year = {1985}
+,  volume = {34}
+,  pages = {191--219}
+,  url = {http://page.mi.fu-berlin.de/rote/Papers/pdf/A+systolic+array+algorithm+for+the+algebraic+path+problem+(shortest+paths;+matrix+inversion).pdf}
+,  doi = {doi:10.1007/BF02253318}
+,  workarea = Parallel_Algorithms
+}
+
+@techreport{r-ssee-85
+,  author = {G{\"u}nter Rote}
+,  title = {The solution sets of extremal equations}
+,  year = {1985}
+,  number = {Bericht 104}
+,  institution = {Rechenzentrum Graz}
+,  pages = {58 pages}
+,  publisher = {Rechenzentrum Graz}
+,  url = {http://page.mi.fu-berlin.de/rote/Papers/pdf/The+solution+sets+of+extremal+equations.pdf}
+,  abstract = {The solution set of a system of equations where the + operation is replaced by max, has in general a unique maximum element but many minimal elements. The characterization of these mininal elements leads to a generalized set covering problem. The difference to the classical set covering problem is that, instead of taking a given set or not, one can select a set from a given chain of nested sets. We give several algorithms for enumerating the minimal solutions of the generalized set covering problem, all of them exponential in the worst case. When specialized to the set covering problem, the problem of enumerating the minimal solutions is also known as hypergraph dualization. 
+For the case of maxmin equations, we derive upper bounds on the number of solutions by using network flow techniques. We also disprove a conjecture of Czogala, Drewniak and Pedrycz (1982) that an $n\times n$ system of maxmin equations has less than $2^n$ minimal solutions. }
+,  workarea = Algebraic_Approach_to_Graph_Problems
+}
+
+@article{rr-mdtal-86
+,  author = {G{\"u}nter Rote and Franz Rendl}
+,  title = {Minimizing the density of terminal assignments in layout design}
+,  journal = {Operations Research Letters}
+,  year = {1986}
+,  volume = {5}
+,  pages = {111--118}
+,  doi = {doi:10.1016/0167-6377(86)90083-0}
+,  abstract = {We present a linear-time solution to the problem of assigning each of $n$ given entry terminals positioned at the upper row of a channel to one of $m$ given exit terminals positioned at the lower row, so as to minimize the density of the resulting channel routing problem.}
+,  workarea = Optimization_Problems
+}
+
+@inproceedings{r-cbhur-86
+,  author = {G{\"u}nter Rote}
+,  title = {On the connection between hexagonal and unidirectional rectangular systolic arrays}
+,  year = {1986}
+,  volume = {227}
+,  pages = {70--83}
+,  booktitle = {VLSI Algorithms and Architectures---Aegean Workshop on Computing. Loutraki, Greece, July 1986}
+,  editor = {F. Makedon and K. Mehlhorn and T. Papatheodorou and P. Spirakis}
+,  publisher = {Springer-Verlag}
+,  series = {Lecture Notes in Computer Science}
+,  doi = {doi:10.1007/3-540-16766-8_7}
+,  abstract = {We define a simple transformation between systolic algorithms with hexagonal and with rectangular processor arrays. Using this transformation we can establish a direct correspondence between two independently developed systolic arrays for solving the algebraic path problem (matrix inversion, shortest paths in a network, transitive closure of a relation). The two systolic arrays are a hexagonal one due to the author and a rectangular one due to Yves Robert and Denis Trystram, ``An orthogonal systolic array for the algebraic path problem'', Computing 39, 187--199. 
+Then we derive a new hexagonal array for solving a certain type of dynamic programming recursion that arises for example in context-free language recognition, in the construction of optimal binary search trees, or in the computation of an optimal sequence of multiplications for the evaluation of an associative product. A rectangular array for this problem is due to L. J. Guibas, H. T. Kung, and C. D. Thompson, ``Direct VLSI implementation of combinatorial algorithms'', Proc. CalTech Conference on VLSI. January 1979, pp.756--763. In general, the type of transformation used here allows arbitrary systolic arrays to be transformed into unidirectional ones, which are preferable from the points of view of fault tolerance, two-level pipelining, and algorithm partitioning.}
+,  workarea = Parallel_Algorithms
+}
+
+@inproceedings{r-psamn-86
+,  author = {G{\"u}nter Rote}
+,  title = {A parallel scheduling algorithm for minimizing the number of unscheduled jobs}
+,  year = {1986}
+,  pages = {99--108}
+,  booktitle = {Parallel Algorithms \& Architectures. Proceedings of the International Workshop on Parallel Algorithms and Architectures, Centre National de Rencontres Math{\'e}matiques, Luminy, France, April 14--18, 1986}
+,  editor = {M. Cosnard and Y. Robert and P. Quinton and M. Tchuente}
+,  publisher = {North-Holland}
+,  workarea = Parallel_Algorithms
+}
+
+@article{erw-tncst-89
+,  author = {Herbert Edelsbrunner and G{\"u}nter Rote and Emo Welzl}
+,  title = {Testing the necklace condition for shortest tours and optimal factors in the plane}
+,  journal = {Theoretical Computer Science}
+,  year = {1989}
+,  volume = {66}
+,  pages = {157--180}
+,  doi = {doi:10.1016/0304-3975(89)90133-3}
+,  workarea = TSP
+}
+
+@inproceedings{erw-tncst-87
+,  author = {Herbert Edelsbrunner and G{\"u}nter Rote and Emo Welzl}
+,  title = {Testing the necklace condition for shortest tours and optimal factors in the plane}
+,  year = {1987}
+,  volume = {267}
+,  pages = {364--375}
+,  booktitle = {Automata, Languages, and Programming. Proceedings of the 14th International Colloquium on Automata, Languages, and Programming (ICALP), Karlsruhe, Juli 1987}
+,  editor = {T. Ottmann}
+,  publisher = {Springer-Verlag}
+,  series = {Lecture Notes in Computer Science}
+,  doi = {doi:10.1007/3-540-18088-5_31}
+,  workarea = TSP
+}
+
+@article{r-nltsp-92
+,  author = {G{\"u}nter Rote}
+,  title = {The ${N}\!$-line traveling salesman problem}
+,  journal = {Networks}
+,  year = {1992}
+,  volume = {22}
+,  pages = {91--108}
+,  url = {http://page.mi.fu-berlin.de/rote/Papers/postscript/The+N-line+traveling+salesman+problem.ps}
+,  doi = {doi:10.1002/net.3230220106}
+,  workarea = TSP
+}
+
+@phdthesis{r-tscts-88
+,  author = {G{\"u}nter Rote}
+,  title = {Two solvable cases of the traveling salesman problem}
+,  year = {1988}
+,  month = may
+,  school = {Technische Universit{\"a}t Graz, Institut f{\"u}r Mathematik}
+,  url = {http://page.mi.fu-berlin.de/rote/Papers/postscript/Two+solvable+cases+of+the+traveling+salesman+problem.ps}
+,  workarea = TSP
+}
+
+@article{fbr-accab-89
+,  author = {Bernd Fruhwirth and Rainer E. Burkard and G{\"u}nter Rote}
+,  title = {Approximation of convex curves with application to the bicriterial minimum cost flow problem}
+,  journal = {European Journal of Operational Research}
+,  year = {1989}
+,  volume = {42}
+,  pages = {326--338}
+,  doi = {doi:10.1016/0377-2217(89)90443-8}
+,  abstract = {An approximation of an explicitly or implicitly given convex curve in the plane is given by two piecewise linear ``outer'' and ``inner'' curves. To compute these, three rules for choosing the supporting points are proposed and it is shown for two of them that the projective distance between inner and outer approximation decreases quadratically with the number of supporting points. These two rules are variations of the Sandwich algorithm. The third rule takes a more local approach. It is a compromise between the adaptive global strategy of the Sandwich algorithm and the usual local left-to-right parametric approach for computing the efficient point curve. 
+This method is applied to approximate the efficient point curve of the bicriteria minimum cost flow problem, which is a piecewise linear convex curve that may have an exponential number of breakpoints in the worst case. 
+It turns out that the left-to-right rule is better from a computational viewpoint, since is tries to avoid large changes in the parameters when solving successive minimum cost flow problems.}
+,  workarea = Convex_Approximation
+}
+
+@article{brrs-auzbk-89
+,  author = {Rainer E. Burkard and G{\"u}nter Rote and G{\"u}nther Ruhe and Norbert Sieber}
+,  title = {Algorithmische {Untersuchungen} zu bikriteriellen kostenminimalen {Fl{\"u}ssen} in {Netzwerken}}
+,  journal = {Wissenschaftliche Zeitschrift der Technischen Hochschule Leipzig}
+,  year = {1989}
+,  volume = {33}
+,  pages = {333--341}
+,  workarea = Convex_Approximation
+}
+
+@article{psr-cgcsp-89
+,  author = {Richard Pollack and Micha Sharir and G{\"u}nter Rote}
+,  title = {Computing the geodesic center of a simple polygon}
+,  journal = {Discrete and Computational Geometry}
+,  year = {1989}
+,  volume = {4}
+,  pages = {611--626}
+,  doi = {doi:10.1007/BF02187751}
+,  abstract = {The geodesic center of a simple polygon is a point inside the polygon which minimizes the maximum internal distance to any point in the polygon. We present an algorithm which calculates the geodesic center of a simple polygon with $n$ vertices in time $O(n \log n)$.}
+,  workarea = Geometric_Optimization_Problems
+}
+
+@inproceedings{sfrw-acfpr-90
+,  author = {Otfried Schwarzkopf and Ulrich Fuchs and G{\"u}nter Rote and Emo Welzl}
+,  title = {Approximation of convex figures by pairs of rectangles}
+,  year = {1990}
+,  volume = {415}
+,  pages = {240--249}
+,  booktitle = {Proceedings of the 7th Annual Symposium on Theoretical Aspects of Computer Science (STACS'90)}
+,  publisher = {Springer-Verlag}
+,  series = {Lecture Notes in Computer Science}
+,  doi = {doi:10.1007/3-540-52282-4_47}
+,  workarea = Geometric_Optimization_Problems
+}
+
+@article{sfrw-acfph-98
+,  author = {Otfried Schwarzkopf and Ulrich Fuchs and G{\"u}nter Rote and Emo Welzl}
+,  title = {Approximating a convex figure by a pair of homothetic rectangles}
+,  journal = {Computational Geometry, Theory and Applications}
+,  year = {1998}
+,  volume = {10}
+,  pages = {77--87}
+,  url = {http://page.mi.fu-berlin.de/rote/Papers/postscript/Approximation+of+convex+figures+by+pairs+of+rectangles.ps}
+,  doi = {doi:10.1016/S0925-7721(96)00019-3}
+,  workarea = Convex_Approximation
+}
+
+@article{r-ppg-90
+,  author = {G{\"u}nter Rote}
+,  title = {Path problems in graphs}
+,  journal = {Computing Supplementum}
+,  year = {1990}
+,  volume = {7}
+,  pages = {155--189}
+,  booktitle = {Computational Graph Theory}
+,  editor = {G. Tinhofer and E. Mayr and H. Noltemeier and M. Sys{\l{o}}}
+,  publisher = {Springer-Verlag}
+,  url = {http://page.mi.fu-berlin.de/rote/Papers/postscript/Path+problems+in+graphs.ps}
+,  abstract = {A large variety of problems in computer science can be viewed from a common viewpoint as instances of {\it algebraic\/} path problems. Among them are of course path problems in graphs such as the shortest path problem or problems of finding optimal paths with respect to more generally defined objective functions; but also graph problems whose formulations do not directly involve the concept of a path, such as finding all bridges and articulation points of a graph; Moreover, there are even problems which seemingly have nothing to do with graphs, such as the solution of systems of linear equations, partial differentiation, or the determination of the regular expression describing the language accepted by a finite automaton. We describe the relation among these problems and their common algebraic foundation. We survey algorithms for solving them: vertex elimination algorithms such as Gau\ss{}-Jordan elimination; and iterative algorithms such as the {\it classical\/} Jacobi and Gau\ss{}-Seidel iteration. }
+,  workarea = Algebraic_Approach_to_Graph_Problems
+}
+
+@article{bryy-spps-90
+,  author = {Rainer E. Burkard and G{\"u}nter Rote and En-Yu Yao and Zhong-Liang Yu}
+,  title = {Shortest polygonal paths in space}
+,  journal = {Computing}
+,  year = {1990}
+,  volume = {45}
+,  pages = {51--68}
+,  doi = {doi:10.1007/BF02250584}
+,  abstract = {For a polygonal path in the plane or in space, we want to find an inscribed path of shortest circumference. In the {\it open\/} case the path can have different start and end point, whereas in the {\it closed\/} case these two points must coincide. We show that finding such shortest paths can be reduced to finding a shortest path in a planar {\it channel\/}. This problem can be solved in linear time in the open as well in the closed case. Finally, we deal with constrained problems where the wanted path has to fulfill additional properties; in particular, if it has to pass straight through a further point, we show that the length of such a constrained polygonal path is a strictly convex function of some parameter angle, and we derive an algorithm for determining such constrained polygonal paths efficiently.}
+,  workarea = Geometric_Optimization_Problems
+}
+
+@article{crw-gc-91
+,  author = {Vasilis Capoyleas and G{\"u}nter Rote and Gerhard Woeginger}
+,  title = {Geometric clusterings}
+,  journal = {Journal of Algorithms}
+,  year = {1991}
+,  volume = {12}
+,  pages = {341--356}
+,  url = {http://page.mi.fu-berlin.de/rote/Papers/postscript/Geometric+clusterings.ps}
+,  doi = {doi:10.1016/0196-6774(91)90007-L}
+,  abstract = {A $k$-clustering of a given set of points in the plane is a partition of the points into $k$ subsets (``clusters''). For any fixed $k$, we can find a $k$-clustering which minimizes any monotone function of the diameters or the radii of the clusters in polynomial time. The algorithm is based on the fact that any two clusters in an optimal solution can be separated by a line.}
+,  workarea = Geometric_Optimization_Problems
+}
+
+@inproceedings{crw-gcea-90
+,  author = {Vasilis Capoyleas and G{\"u}nter Rote and Gerhard Woeginger}
+,  title = {Geometric clusterings (extended abstract)}
+,  year = {1990}
+,  pages = {28--31}
+,  booktitle = {Proceedings of the Second Canadian Conference on Computational Geometry, Ottawa}
+,  editor = {J. Urrutia}
+,  workarea = Geometric_Optimization_Problems
+}
+
+@article{bhr-saucf-91
+,  author = {Rainer E. Burkard and Horst W. Hamacher and G{\"u}nter Rote}
+,  title = {Sandwich approximation of univariate convex functions with an application to separable convex programming}
+,  journal = {Naval Research Logistics}
+,  year = {1991}
+,  volume = {38}
+,  pages = {911--924}
+,  workarea = Convex_Approximation
+}
+
+@inproceedings{hlr-frt-91
+,  author = {Paul Hilfinger and Eugene L. Lawler and G{\"u}nter Rote}
+,  title = {Flattening a rooted tree}
+,  year = {1991}
+,  pages = {335--340}
+,  booktitle = {Applied Geometry and Discrete Mathematics. The Victor Klee Festschrift}
+,  editor = {Peter Gritzmann and Bernd Sturmfels}
+,  publisher = {American Mathematical Society and Association for Computing Machinery}
+,  series = {DIMACS series in discrete mathematics and theoretical computer science}
+,  workarea = Optimization_Problems
+}
+
+@article{r-cmhdb-91
+,  author = {G{\"u}nter Rote}
+,  title = {Computing the minimum {Hausdorff} distance between two point sets on a line under translation}
+,  journal = {Information Processing Letters}
+,  year = {1991}
+,  volume = {38}
+,  pages = {123--127}
+,  url = {http://page.mi.fu-berlin.de/rote/Papers/postscript/Computing+the+minimum+Hausdorff+distance+between+two+point+sets+on+a+line+under+translation.ps}
+,  doi = {doi:10.1016/0020-0190(91)90233-8}
+,  abstract = {Given two sets of points on a line, we want to translate one of them so that their Hausdorff distance is minimized. (The Hausdorff distance between two sets the maximum of the distances from a point in any of the two sets to the nearest point in the other set.) We present an optimal $O(n\log n)$ algorithm for this problem.}
+,  workarea = Geometric_Optimization_Problems
+}
+
+@article{wrzw-cksck-91
+,  author = {Gerhard Woeginger and G{\"u}nter Rote and Binhai Zhu and Zhengyan Wang}
+,  title = {Counting $k$-subsets and convex $k$-gons in the plane}
+,  journal = {Information Processing Letters}
+,  year = {1991}
+,  volume = {38}
+,  pages = {149--151}
+,  doi = {doi:10.1016/0020-0190(91)90237-C}
+,  workarea = Geometric_Optimization_Problems
+}
+
+@article{rw-cckgp-92
+,  author = {G{\"u}nter Rote and Gerhard Woeginger}
+,  title = {Counting convex $k$-gons in planar point sets}
+,  journal = {Information Processing Letters}
+,  year = {1992}
+,  volume = {41}
+,  pages = {191--194}
+,  doi = {doi:10.1016/0020-0190(92)90178-X}
+,  workarea = Geometric_Optimization_Problems
+}
+
+@article{mrsw-ccppp-95
+,  author = {Joseph S. B. Mitchell and G{\"u}nter Rote and Gopalakrishnan Sundaram and Gerhard Woeginger}
+,  title = {Counting convex polygons in planar point sets}
+,  journal = {Information Processing Letters}
+,  year = {1995}
+,  volume = {56}
+,  pages = {45--49}
+,  url = {http://page.mi.fu-berlin.de/rote/Papers/postscript/Counting+convex+polygons+in+planar+point+sets.ps}
+,  doi = {doi:10.1016/0020-0190(95)00130-5}
+,  workarea = Geometric_Optimization_Problems
+}
+
+@article{irwy-spls-93
+,  author = {Christian Icking and G{\"u}nter Rote and Emo Welzl and Chee Yap}
+,  title = {Shortest paths for line segments}
+,  journal = {Algorithmica}
+,  year = {1993}
+,  volume = {10}
+,  pages = {182--200}
+,  doi = {doi:10.1007/BF01891839}
+,  abstract = {We study the problem of shortest paths for a line segment in the plane. As a measure of the distance traversed by a path, we take the average curve length of the orbits of prescribed points on the line segment. This problem is nontrivial even in free space (i. e., in the absence of obstacles). We characterize all shortest paths of the line segment moving in free space when we measure the average orbit length of the two endpoints. 
+This problem of optimal motion has been solved by Gurevich and also by Dubovitskij, who calls it Ulam's problem. Unlike previous solutions, our basic tool is Cauchy's surface-area formula. This new approach is relatively elementary, and yields new insights.}
+,  workarea = Geometric_Optimization_Problems
+}
+
+@article{rv-hdtmt-93
+,  author = {G{\"u}nter Rote and Andreas Vogel}
+,  title = {A heuristic for decomposing traffic matrices in {TDMA} satellite communication}
+,  journal = {ZOR---Methods and Models of Operations Research}
+,  year = {1993}
+,  volume = {38}
+,  pages = {281--307}
+,  doi = {doi:10.1007/BF01416610}
+,  abstract = {With the time-division multiple access (TDMA) technique in satellite communication the problem arises to decompose a given $n\times n$ traffic matrix into a weighted sum of a small number of permutation matrices such that the sum of the weights becomes minimal. There are polynomial algorithms when the number of permutation matrices in a decomposition is allowed to be as large as $n^2$. When the number of matrices is restricted to $n$, the problem is NP-hard. In this paper we propose a heuristic based on a scaling technique which for each number of allowed matrices in the range from $n$ to $n^2$ allows to give a performance guarantee with respect to the total weight of the solution. As a subroutine we use new heuristics methods for decomposing a matrix of small integers into as few matrices as possible without exceeding the lower bound on the total weight. Computational results indicate that the method might also be practical.}
+,  workarea = Optimization_Problems
+}
+
+@techreport{rv-hdtmt-90
+,  author = {G{\"u}nter Rote and Andreas Vogel}
+,  title = {A heuristic for decomposing traffic matrices in {TDMA} satellite communication}
+,  year = {1990}
+,  number = {Bericht 73}
+,  institution = {Technische Universit{\"a}t Graz}
+,  pages = {28 pages}
+,  workarea = Optimization_Problems
+}
+
+@article{r-ehfem-89
+,  author = {G{\"u}nter Rote}
+,  title = {Eine Heuristik f{\"u}r ein Matrizenzerlegungsproblem, das in der Telekommunikation via Satelliten auf\-tritt (Kurz\-fassung)}
+,  journal = {ZAMM --- Zeitschrift f{\"u}r angewandte Mathematik und Mechanik}
+,  year = {1989}
+,  volume = {69}
+,  pages = {T29--T31}
+,  doi = {doi:10.1002/zamm.19890690402}
+,  workarea = Optimization_Problems
+}
+
+@inproceedings{fmrwy-sioas-90
+,  author = {Rudolf Fleischer and Kurt Mehlhorn and G{\"u}nter Rote and Emo Welzl and Chee Yap}
+,  title = {On simultaneous inner and outer approximation of shapes}
+,  year = {1990}
+,  pages = {216--224}
+,  booktitle = {Proceedings of the Sixth Annual Symposium on Computational Geometry, Berkeley, California}
+,  publisher = {Association for Computing Machinery}
+,  doi = {doi:10.1145/98524.98572}
+,  workarea = Convex_Approximation
+}
+
+@article{fmrwy-sioas-92
+,  author = {Rudolf Fleischer and Kurt Mehlhorn and G{\"u}nter Rote and Emo Welzl and Chee Yap}
+,  title = {Simultaneous inner and outer approximation of shapes}
+,  journal = {Algorithmica}
+,  year = {1992}
+,  volume = {8}
+,  pages = {365--389}
+,  doi = {doi:10.1007/BF01758852}
+,  workarea = Convex_Approximation
+}
+
+@article{mrw-mlpop-92
+,  author = {Joseph S. B. Mitchell and G{\"u}nter Rote and Gerhard Woeginger}
+,  title = {Minimum-link paths among obstacles in the plane}
+,  journal = {Algorithmica}
+,  year = {1992}
+,  volume = {8}
+,  pages = {431--459}
+,  url = {http://page.mi.fu-berlin.de/rote/Papers/postscript/Minimum-link+paths+among+obstacles+in+the+plane.ps}
+,  doi = {doi:10.1007/BF01758855}
+,  abstract = {Given a set of nonintersecting polygonal obstacles in the plane, the link distance between two points $s$ and $t$ is the minimum number of edges required to form a polygonal path connecting $s$ to $t$ that avoids all obstacles. We present an algorithm that computes the link distance (and a corresponding minimum-link path) between two points in time $O(E \alpha (n) \log ^2 n)$ and space $O(E)$, where $n$ is the total number of edges of the obstacles, $E$ is the size of the visibility graph, and $\alpha (n)$ denotes the extremely slowly growing inverse of Ackermann's function. We show how to extend our method to allow computation of a tree (rooted at $s$) of minimum-link paths from $s$ to all obstacle vertices. This leads to a method of solving the query version of our problem (for query points $t$).}
+,  workarea = Geometric_Optimization_Problems
+}
+
+@inproceedings{mrw-mlpop-90
+,  author = {Joseph S. B. Mitchell and G{\"u}nter Rote and Gerhard Woeginger}
+,  title = {Minimum-link paths among obstacles in the plane (extended abstract)}
+,  year = {1990}
+,  pages = {63--72}
+,  booktitle = {Proceedings of the Sixth Annual Symposium on Computational Geometry, Berkeley, California}
+,  publisher = {Association for Computing Machinery}
+,  doi = {doi:10.1145/98524.98537}
+,  workarea = Geometric_Optimization_Problems
+}
+
+@article{r-crsaa-92
+,  author = {G{\"u}nter Rote}
+,  title = {The convergence rate of the {Sandwich} algorithm for approximating convex functions}
+,  journal = {Computing}
+,  year = {1992}
+,  volume = {48}
+,  pages = {337--361}
+,  url = {http://page.mi.fu-berlin.de/rote/Papers/postscript/The+convergence+rate+of+the+Sandwich+algorithm+for+approximating+convex+functions.ps}
+,  doi = {doi:10.1007/BF02238642}
+,  workarea = Convex_Approximation
+}
+
+@inproceedings{r-crsaa-90
+,  author = {G{\"u}nter Rote}
+,  title = {The convergence rate of the {Sandwich} algorithm for approximating convex figures in the plane (extended abstract)}
+,  year = {1990}
+,  pages = {287--290}
+,  booktitle = {Proceedings of the Second Canadian Conference on Computational Geometry, Ottawa}
+,  editor = {J. Urrutia}
+,  workarea = Convex_Approximation
+}
+
+@article{eorw-fmakg-92
+,  author = {David Eppstein and Mark Overmars and G{\"u}nter Rote and Gerhard Woeginger}
+,  title = {Finding minimum area $k$-gons}
+,  journal = {Discrete and Computational Geometry}
+,  year = {1992}
+,  volume = {7}
+,  pages = {45--58}
+,  doi = {doi:10.1007/BF02187823}
+,  workarea = Geometric_Optimization_Problems
+}
+
+@article{bfr-vrawa-95
+,  author = {Rainer E. Burkard and Bernd Fruhwirth and G{\"u}nter Rote}
+,  title = {Vehicle routing in an automated warehouse: analysis and optimization}
+,  journal = {Annals of Operations Research}
+,  year = {1995}
+,  volume = {57}
+,  pages = {29--44}
+,  url = {http://page.mi.fu-berlin.de/rote/Papers/postscript/Vehicle+routing+in+an+automated+warehouse:+analysis+and+optimization.ps}
+,  doi = {doi:10.1007/BF02099689}
+,  abstract = {This study concerns the design of an operating system for vehicles in an automated warehouse. The lay-out of the warehouse, and the number and properties of the vehicles are given. The objective is to maximize the throughput. Using a partial enumeration technique we simulate several alternatives for the control and interplay of the vehicles within a reasonable time horizon. A subproblem is solved by network flow techniques. The algorithm is implemented as part of an automatic control system, and it has lead to a satisfactory performance.}
+,  workarea = Optimization_Problems
+}
+
+@inproceedings{r-dchhd-92
+,  author = {G{\"u}nter Rote}
+,  title = {Degenerate convex hulls in high dimensions without extra storage (extended abstract)}
+,  year = {1992}
+,  pages = {26--32}
+,  booktitle = {Proceedings of the Eighth Annual Symposium on Computational Geometry, Berlin}
+,  publisher = {Association for Computing Machinery}
+,  url = {http://page.mi.fu-berlin.de/rote/Papers/postscript/Degenerate+convex+hulls+in+high+dimensions+without+extra+storage.ps}
+,  doi = {doi:10.1145/142675.142685}
+,  workarea = Computational_Geometry
+}
+
+@inproceedings{r-nmbph-92
+,  author = {G{\"u}nter Rote}
+,  title = {A new metric between polygons, and how to compute it (extended abstract)}
+,  year = {1992}
+,  volume = {623}
+,  pages = {404--415}
+,  booktitle = {Automata, Languages and Programming. Proceedings of the 19th International Colloquium on Automata, Languages, and Programming (ICALP 92), Wien}
+,  editor = {W. Kuich}
+,  publisher = {Springer-Verlag}
+,  series = {Lecture Notes in Computer Science}
+,  url = {http://page.mi.fu-berlin.de/rote/Papers/postscript/A+new+metric+between+polygons,+and+how+to+compute+it.ps}
+,  doi = {doi:10.1007/3-540-55719-9_92}
+,  workarea = Optimization_Problems
+}
+
+@article{r-ssc2-93
+,  author = {G{\"u}nter Rote}
+,  title = {Sequences with subword complexity $2n$}
+,  journal = {Journal of Number Theory}
+,  year = {1993}
+,  volume = {46}
+,  pages = {196--213}
+,  url = {http://page.mi.fu-berlin.de/rote/Papers/postscript/Sequences+with+subword+complexity+2n.ps}
+,  doi = {doi:10.1006/jnth.1994.1012}
+,  workarea = Misc
+}
+
+@article{ers-ufwsc-93
+,  author = {Alon Efrat and G{\"u}nter Rote and Micha Sharir}
+,  title = {On the union of fat wedges and separating a collection of segments by a line}
+,  journal = {Computational Geometry: Theory and Applications}
+,  year = {1993}
+,  volume = {3}
+,  pages = {277--288}
+,  doi = {doi:10.1016/0925-7721(93)90018-2}
+,  workarea = Computational_Geometry
+}
+
+@inproceedings{ers-ufwsc-93p
+,  author = {Alon Efrat and G{\"u}nter Rote and Micha Sharir}
+,  title = {On the union of fat wedges and separating a collection of segments by a line}
+,  year = {1993}
+,  pages = {115--120}
+,  booktitle = {Proceedings of the Fifth Canadian Conference on Computational Geometry, Waterloo}
+,  editor = {A. Lubiw and J. Urrutia}
+,  workarea = Computational_Geometry
+}
+
+@inproceedings{rss-mawsp-93
+,  author = {G{\"u}nter Rote and Christian Schwarz and Jack Snoeyink}
+,  title = {Maintaining the approximate width of a set of points in the plane (extended abstract)}
+,  year = {1993}
+,  pages = {258--263}
+,  booktitle = {Proceedings of the Fifth Canadian Conference on Computational Geometry, Waterloo}
+,  editor = {A. Lubiw and J. Urrutia}
+,  url = {http://page.mi.fu-berlin.de/rote/Papers/postscript/Maintaining+the+approximate+width+of+a+set+of+points+in+the+plane.ps}
+,  workarea = Computational_Geometry
+}
+
+@article{ddr-chlts-94
+,  author = {Vladimir G. Deineko and Ren{\'e} van Dal and G{\"u}nter Rote}
+,  title = {The convex-hull-and-line traveling salesman problem: A solvable case}
+,  journal = {Information Processing Letters}
+,  year = {1994}
+,  volume = {51}
+,  pages = {141--148}
+,  url = {http://page.mi.fu-berlin.de/rote/Papers/postscript/The+convex-hull-and-line+traveling+salesman+problem:+A+solvable+case.ps}
+,  doi = {doi:10.1016/0020-0190(94)00071-9}
+,  workarea = TSP
+}
+
+@article{r-cic-94
+,  author = {G{\"u}nter Rote}
+,  title = {Curves with increasing chords}
+,  journal = {Mathematical Proceedings of the Cambridge Philosophical Society}
+,  year = {1994}
+,  volume = {115}
+,  pages = {1--12}
+,  url = {http://page.mi.fu-berlin.de/rote/Papers/postscript/Curves+with+increasing+chords.ps}
+,  doi = {doi:10.1017/S0305004100071875}
+,  workarea = Geometry
+}
+
+@article{rt-sdapa-95
+,  author = {G{\"u}nter Rote and Robert Franz Tichy}
+,  title = {Spherical dispersion with an application to polygonal approximation of curves}
+,  journal = {Anzeiger der {\"{O}}sterreichischen Akademie der Wissenschaften, Mathematisch-naturwissenschaftliche Klasse, Abteilung II}
+,  year = {1995}
+,  volume = {132}
+,  pages = {3--10}
+,  url = {http://page.mi.fu-berlin.de/rote/Papers/postscript/Spherical+dispersion+with+an+application+to+polygonal+approximation+of+curves.ps}
+,  abstract = {We describe and analyze a procedure for the polygonal approximation of spatial curves using ``well-distributed'' points on the sphere. Here the {\it dispersion\/} of the point set with respect to spherical slices (intersections of two half-spheres) plays a role.}
+,  workarea = Geometry
+}
+
+@article{rt-qmcmd-96
+,  author = {G{\"u}nter Rote and Robert Franz Tichy}
+,  title = {{Quasi-Monte-Carlo} methods and the dispersion of point sequences}
+,  journal = {Mathematical and Computer Modelling}
+,  year = {1996}
+,  volume = {23}
+,  pages = {9--23}
+,  url = {http://page.mi.fu-berlin.de/rote/Papers/postscript/Quasi-Monte-Carlo+methods+and+the+dispersion+of+point+sequences.ps}
+,  doi = {doi:10.1016/0895-7177(96)00036-2}
+,  abstract = {Quasi-Monte-Carlo methods are well-known for solving different problems of numerical analysis such as integration, optimization, etc. The error estimates for global optimization depend on the dispersion of the point sequence with respect to balls. 
+In general, the dispersion of a point set with respect to various classes of range spaces, like balls, squares, triangles, axis-parallel and arbitrary rectangles, spherical caps and slices, is the area of the largest empty range, and it is a measure for the distribution of the points. The main purpose of our paper is to give a survey about this topic, including some folklore results. Furthermore, we prove several properties of the dispersion, generalizing investigations of Niederreiter and others concerning balls. For several well-known uniformly distributed point sets we estimate the dispersion with respect to triangles, and we also compare them computationally. For the dispersion with respect to spherical slices we mention an application to the polygonal approximation of curves in space.}
+,  workarea = Geometry
+}
+
+@inproceedings{hr-tcpp-93
+,  author = {Johannes Hagauer and G{\"u}nter Rote}
+,  title = {Three-clustering of points in the plane}
+,  year = {1993}
+,  volume = {726}
+,  pages = {192--199}
+,  booktitle = {Algorithms---ESA '93. Proc. First Annual European Symposium on Algorithms, Bad Honnef, Germany}
+,  editor = {Thomas Lengauer}
+,  publisher = {Springer-Verlag}
+,  series = {Lecture Notes in Computer Science}
+,  doi = {doi:10.1007/3-540-57273-2_55}
+,  workarea = Geometry
+}
+
+@article{hr-tcpp-97
+,  author = {Johannes Hagauer and G{\"u}nter Rote}
+,  title = {Three-clustering of points in the plane}
+,  journal = {Computational Geometry, Theory and Applications}
+,  year = {1997}
+,  volume = {8}
+,  pages = {87--95}
+,  url = {http://page.mi.fu-berlin.de/rote/Papers/postscript/Three-clustering+of+points+in+the+plane.ps}
+,  doi = {doi:10.1016/S0925-7721(96)00022-3}
+,  workarea = Geometric_Optimization_Problems
+}
+
+@article{ars-wigec-96
+,  author = {J{\'a}nos Acz{\'e}l and G{\"u}nter Rote and Jens Schwaiger}
+,  title = {Webs, iteration groups, and equivalent changes in probabilities}
+,  journal = {Quarterly of Applied Mathematics}
+,  year = {1996}
+,  volume = {54}
+,  pages = {475--499}
+,  url = {http://page.mi.fu-berlin.de/rote/Papers/postscript/Webs,+iteration+groups,+and+equivalent+changes+in+probabilities.ps}
+,  abstract = {Yew-Kwang Ng (Quart.\ Appl.\ Math. 49 (1991), 289--301) listed several ``reasonable properties'' for equivalent changes of probabilities and other proportions. He produced a family of functions satisfying all properties and asked whether there exist essentially different ones, conjecturing that the answer is negative. We show that the answer is positive, by constructing uncountably many families of functions satisfying all properties. We show also that there are no other solutions. Our method establishes connections with webs (nets) and iteration groups. This may be of interest both in itself and for applications.}
+,  workarea = Misc
+}
+
+@inproceedings{ars-wigec-94
+,  author = {J{\'a}nos Acz{\'e}l and G{\"u}nter Rote and Jens Schwaiger}
+,  title = {Webs, iteration groups, and equivalent changes in probabilities}
+,  year = {1994}
+,  volume = {323}
+,  pages = {1--20}
+,  booktitle = {VIII. Mathematikertreffen Zagreb-Graz}
+,  editor = {Detlef Gronau and Ludwig Reich}
+,  series = {Grazer Mathematische Berichte}
+,  workarea = Misc
+}
+
+@inproceedings{ars-ecpcm-94
+,  author = {J{\'a}nos Acz{\'e}l and G{\"u}nter Rote and Jens Schwaiger}
+,  title = {Equivalence of changes in proportions at crossroads of mathematical theories}
+,  year = {1994}
+,  pages = {569--570}
+,  booktitle = {Actes 5$^{\rm e}$ Conf\'{e}rence Internationale/Proc.\ Fifth International Conference IPMU, Traitement d'information et gestion d'incertitutes dans les syst{\`e}mes {\`a} base de connaissances/Information Processing and Management of Incertainty in Knowledge-Based Systems, Paris, 4--8 juillet/July, 1994, Cit\'{e} Internationale Universitaire}
+,  workarea = Misc
+}
+
+@incollection{ars-ecpcm-97
+,  author = {J{\'a}nos Acz{\'e}l and G{\"u}nter Rote and Jens Schwaiger}
+,  title = {Equivalence of changes in proportions at crossroads of mathematical theories}
+,  year = {1997}
+,  pages = {36--38}
+,  booktitle = {The Ordered Weighted Averaging Operators---Theory and Applications}
+,  editor = {Ronald R. Yager and Janusz Kacprzyk}
+,  publisher = {Elsevier}
+,  workarea = Misc
+}
+
+@article{r-fsvtd-97
+,  author = {G{\"u}nter Rote}
+,  title = {Finding a shortest vector in a two-dimensional lattice modulo $m$}
+,  journal = {Theoretical Computer Science}
+,  year = {1997}
+,  volume = {172}
+,  pages = {303--308}
+,  url = {http://page.mi.fu-berlin.de/rote/Papers/postscript/Finding+a+shortest+vector+in+a+two-dimensional+lattice+modulo+m.ps}
+,  doi = {doi:10.1016/S0304-3975(96)00185-5}
+,  workarea = Geometric_Optimization_Problems
+}
+
+@inproceedings{aar-msrp-94
+,  author = {Helmut Alt and Oswin Aichholzer and G{\"u}nter Rote}
+,  title = {Matching shapes with a reference point}
+,  year = {1994}
+,  pages = {85--92}
+,  booktitle = {Proceedings of the Tenth Annual Symposium on Computational Geometry, Stony Brook, New York}
+,  publisher = {Association for Computing Machinery}
+,  doi = {doi:10.1145/177424.177555}
+,  workarea = Geometric_Optimization_Problems
+}
+
+@article{aar-msrp-97
+,  author = {Oswin Aichholzer and Helmut Alt and G{\"u}nter Rote}
+,  title = {Matching shapes with a reference point}
+,  journal = {International Journal on Computational Geometry and Applications}
+,  year = {1997}
+,  volume = {7}
+,  pages = {349--363}
+,  url = {http://page.mi.fu-berlin.de/rote/Papers/postscript/Matching+shapes+with+a+reference+point.ps}
+,  doi = {doi:10.1142/S0218195997000211}
+,  abstract = {For two given point sets, we present a very simple (almost trivial) algorithm to translate one set so that the Hausdorff distance between the two sets is not larger than a constant factor times the minimum Hausdorff distance which can be achieved in this way. The algorithm just matches the so-called Steiner points of the two sets. The focus of our paper is the general study of reference points (like the Steiner point) and their properties with respect to shape matching. For more general transformations than just translations, our method eliminates several degrees of freedom from the problem and thus yields good matchings with improved time bounds.}
+,  workarea = Geometric_Optimization_Problems
+}
+
+@article{bcrw-qapma-98
+,  author = {Rainer E. Burkard and Eranda {\c C}ela and G{\"u}nter Rote and Gerhard J. Woeginger}
+,  title = {The quadratic assignment problem with a monotone Anti-{Monge} and a symmetric {Toeplitz} matrix: Easy and hard cases}
+,  journal = {Mathematical Programming}
+,  year = {1998}
+,  volume = {82}
+,  pages = {125--158}
+,  url = {http://page.mi.fu-berlin.de/rote/Papers/postscript/The+quadratic+assignment+problem+with+a+monotone+Anti-Monge+and+a+symmetric+Toeplitz+matrix:+Easy+and+hard+cases.ps}
+,  doi = {doi:10.1007/BF01585868}
+,  workarea = Geometric_Optimization_Problems
+}
+
+@inproceedings{bcrw-qapma-96
+,  author = {Rainer E. Burkard and Eranda {\c C}ela and G{\"u}nter Rote and Gerhard J. Woeginger}
+,  title = {The quadratic assignment problem with a monotone {Anti-Monge} and a symmetric {Toeplitz} matrix: Easy and hard cases}
+,  year = {1996}
+,  volume = {1084}
+,  pages = {204--218}
+,  booktitle = {Integer Programming and Combinatorial Optimization. Proceedings of the 5th International IPCO Conference, Vancouver, Canada}
+,  editor = {W. H. Cunningham and S. T. McCormick and M. Queyranne}
+,  publisher = {Springer-Verlag}
+,  series = {Lecture Notes in Computer Science}
+,  doi = {doi:10.1007/3-540-61310-2_16}
+,  abstract = {We investigate a restricted version of the Quadratic Assignment Problem (QAP), where one of the coefficient matrices is an Anti-Monge matrix with non-decreasing rows and columns and the other coefficient matrix is a symmetric Toeplitz matrix. This restricted version is called the Anti-Monge--Toeplitz QAP. There are three well-known combinatorial problems that can be modeled via the Anti-Monge--Toeplitz QAP: (P1) The ``Turbine Problem'', i. e., the assignment of given masses to the vertices of a regular polygon such that the distance of the center of gravity of the resulting system to the center of the polygon is minimized. (P2) The Traveling Salesman Problem on symmetric Monge distance matrices. (P3) The arrangement of data records with given access probabilities in a linear storage medium in order to minimize the average access time. 
+We identify conditions on the Toeplitz matrix that lead to a simple solution for the Anti-Monge--Toeplitz QAP: The optimal permutation can be given in advance without regarding the numerical values of the data. The resulting theorems generalize and unify several known results on problems (P1), (P2), and (P3). We also show that the Turbine Problem is NP-hard and consequently, that the Anti-Monge--Toeplitz QAP is NP-hard in general.}
+,  workarea = TSP
+}
+
+@article{gr-dpaco-98
+,  author = {Mordecai J. Golin and G{\"u}nter Rote}
+,  title = {A dynamic programming algorithm for constructing optimal prefix-free codes for unequal letter costs}
+,  journal = {IEEE Transactions on Information Theory}
+,  year = {1998}
+,  volume = {44}
+,  pages = {1770--1781}
+,  url = {http://page.mi.fu-berlin.de/rote/Papers/postscript/A+dynamic+programming+algorithm+for+constructing+optimal+prefix-free+codes+for+unequal+letter+costs.ps}
+,  doi = {doi:10.1109/18.705558}
+,  abstract = {We consider the problem of constructing minimum cost prefix-free codes when the encoding alphabet contains letters of unequal length. The complexity of this problem has been unclear for thirty years. The only algorithm known for its solution involves a reduction to integer linear programming, due to Karp (1961). 
+In this paper we introduce a dynamic programming solution to the problem. It optimally encodes $n$ words in $O(n^{C+2})$ time, if the costs of the letters are integers between 1 and $C$. While still leaving open the question of whether the general problem is solvable in polynomial time our algorithm seems to be the first one that runs in polynomial time for fixed letter costs. 
+Some numerical results are reported, including solutions using Karp's integer programming formulations, which was solved using AMPL and CPLEX. The AMPL model is included in the appendix and in the PostScript-file.}
+,  workarea = Optimization_Problems
+}
+
+@inproceedings{gr-dpaco-95
+,  author = {Mordecai J. Golin and G{\"u}nter Rote}
+,  title = {A dynamic programming algorithm for constructing optimal prefix-free codes for unequal letter costs}
+,  year = {1995}
+,  volume = {944}
+,  pages = {256--267}
+,  booktitle = {Automata, Languages and Programming. Proceedings of the 22nd International Colloquium on Automata, Languages, and Programming (ICALP 95), Szeged, Hungary}
+,  editor = {F. G{\'e}cseg}
+,  publisher = {Springer-Verlag}
+,  series = {Lecture Notes in Computer Science}
+,  doi = {doi:10.1007/3-540-60084-1_79}
+,  workarea = Optimization_Problems
+}
+
+@techreport{dra-sltgt-95
+,  author = {Robert L. Scot Drysdale and G{\"u}nter Rote and Oswin Aichholzer}
+,  title = {A simple linear time greedy triangulation algorithm for uniformly distributed points}
+,  year = {1995}
+,  month = feb
+,  number = {Bericht IIG-408}
+,  institution = {Technische Universit{\"a}t Graz, Institute f{"u}r Informationsverarbeitung}
+,  pages = {16 pages}
+,  url = {http://page.mi.fu-berlin.de/rote/Papers/postscript/A+simple+linear+time+greedy+triangulation+algorithm+for+uniformly+distributed+points.ps}
+,  workarea = Geometric_Optimization_Problems
+}
+
+@article{aacktrx-tin-96
+,  author = {Oswin Aichholzer and Franz Aurenhammer and Siu-Wing Cheng and Naoki Katoh and Michael Taschwer and G{\"u}nter Rote and Yin-Feng Xu}
+,  title = {Triangulations intersect nicely}
+,  journal = {Discrete and Computational Geometry}
+,  year = {1996}
+,  volume = {16}
+,  pages = {339--359}
+,  url = {http://page.mi.fu-berlin.de/rote/Papers/postscript/Triangulations+intersect+nicely.ps}
+,  doi = {doi:10.1007/BF02712872}
+,  workarea = Geometric_Optimization_Problems
+}
+
+@inproceedings{aart-tin-95
+,  author = {Oswin Aichholzer and Franz Aurenhammer and G{\"u}nter Rote and Michael Taschwer}
+,  title = {Triangulations intersect nicely}
+,  year = {1995}
+,  pages = {220--229}
+,  booktitle = {Proceedings of the Eleventh Annual Symposium on Computational Geometry, Vancouver}
+,  publisher = {Association for Computing Machinery}
+,  doi = {doi:10.1145/220279.220303}
+,  workarea = Geometric_Optimization_Problems
+}
+
+@article{ljrw-olqac-96
+,  author = {Marek Lassak and Janusz Januszewski and G{\"u}nter Rote and Gerhard Woeginger}
+,  title = {On-line $q$-adic covering by the method of the $n$-th segment and its application to on-line covering by cubes}
+,  journal = {Beitr{\"a}ge zur Algebra und Geometrie---Contributions to Algebra and Geometry}
+,  year = {1996}
+,  volume = {37}
+,  issue = {1}
+,  pages = {51--65}
+,  url = {http://page.mi.fu-berlin.de/rote/Papers/postscript/On-line+q-adic+covering+by+the+method+of+the+n-th+segment+and+its+application+to+on-line+covering+by+cubes.ps}
+,  workarea = Geometric_Optimization_Problems
+}
+
+@article{ljrw-sp74-96
+,  author = {Marek Lassak and Janusz Januszewski and G{\"u}nter Rote and Gerhard Woeginger}
+,  title = {Solution to problem 74}
+,  journal = {Mathematische Semesterberichte}
+,  year = {1996}
+,  volume = {43}
+,  pages = {94--100}
+,  url = {http://page.mi.fu-berlin.de/rote/Papers/postscript/Solution+to+problem+74.ps}
+,  workarea = Geometric_Optimization_Problems
+}
+
+@inproceedings{afrw-mcsrs-96
+,  author = {Helmut Alt and Ulrich Fuchs and G{\"u}nter Rote and Gerald Weber}
+,  title = {Matching convex shapes with respect to the symmetric difference}
+,  year = {1996}
+,  volume = {1136}
+,  pages = {320--333}
+,  booktitle = {Algorithms---ESA '96. Proc. Fourth Annual European Symposium on Algorithms, Barcelona}
+,  editor = {Josep D{\'\i{}}az and Mar{\'\i{}}a Serna}
+,  publisher = {Springer-Verlag}
+,  series = {Lecture Notes in Computer Science}
+,  doi = {doi:10.1007/3-540-61680-2_65}
+,  workarea = Geometric_Optimization_Problems
+}
+
+@article{afrw-mcsrs-98
+,  author = {Helmut Alt and Ulrich Fuchs and G{\"u}nter Rote and Gerald Weber}
+,  title = {Matching convex shapes with respect to the symmetric difference}
+,  journal = {Algorithmica}
+,  year = {1998}
+,  volume = {21}
+,  pages = {89--103}
+,  url = {http://page.mi.fu-berlin.de/rote/Papers/postscript/Matching+convex+shapes+with+respect+to+the+symmetric+difference.ps}
+,  doi = {doi:10.1007/PL00009210}
+,  abstract = {We consider the problem of moving one convex figure over another, minimizing the area of their symmetric difference. We show that if we just let the two centers of coincide, the resulting symmetric difference is within a factor of 11/3 of the optimum. This leads to efficient approximate matching algorithms for convex figures. }
+,  workarea = Geometric_Optimization_Problems
+}
+
+@techreport{rz-olejp-96
+,  author = {G{\"u}nter Rote and Guochuan Zhang}
+,  title = {Optimal logistics for expeditions---the jeep problem with complete refilling}
+,  year = {1996}
+,  month = jun
+,  number = {SFB-Bericht Nr.\ 71}
+,  institution = {Technische Universit{\"a}t Graz, Spezialforschungsbereich Optimierung und Kontrolle}
+,  pages = {34 pages}
+,  url = {http://page.mi.fu-berlin.de/rote/Papers/postscript/Optimal+logistics+for+expeditions+-+the+jeep+problem+with+complete+refilling.ps}
+,  abstract = {We consider a variant of the classical ``jeep problem'', whose origins date back more than 1000 years. We have $n$ cans of fuel on the edge of a desert and a jeep whose tank can hold the contents of one can. The jeep can carry one can in addition the fuel in its tank, and therefore it can establish depots in the desert for later use. When a can is opened, the fuel must immediately be filled into the jeep's tank. The goal is to find the farthest point in the desert which the jeep can reach. 
+We give a simple algorithm for the jeep which improves previous solutions of Derick Wood [1984] and Ute and Wilfried Brauer [1989], and we use a linear programming formulation to derive an upper bound which shows that our solution is optimal.}
+,  workarea = Optimization_Problems
+}
+
+@article{aarx-clgta-99
+,  author = {Oswin Aichholzer and Franz Aurenhammer and G{\"u}nter Rote and Yin-Feng Xu}
+,  title = {Constant-level greedy triangulations approximate the {MWT} well}
+,  journal = {Journal of Combinatorial Optimization}
+,  year = {1999}
+,  volume = {2}
+,  pages = {361--369}
+,  url = {http://page.mi.fu-berlin.de/rote/Papers/postscript/Constant-level+greedy+triangulations+approximate+the+MWT+well.ps}
+,  doi = {doi:10.1023/A:1009776619164}
+,  abstract = {The well-known greedy triangulation of a finite point set is obtained by looking at the edges in order of increasing length and inserting an edge if it does not cross previously inserted ones. Exploiting the concept of so-called {\it light\/} edges, we introduce a new way of defining the greedy triangulation. It does not rely on the length ordering of the edges. It decomposes the greedy triangulation into levels, and the number $k$ of levels allows us to bound the total edge length by $3\cdot 2^{k+1}$ times the minimum-weight triangulation of the point set. }
+,  workarea = Geometric_Optimization_Problems
+}
+
+@inproceedings{aarx-clgta-96
+,  author = {Oswin Aichholzer and Franz Aurenhammer and G{\"u}nter Rote and Yin-Feng Xu}
+,  title = {Constant-level greedy triangulations approximate the {MWT} well}
+,  year = {1996}
+,  volume = {2}
+,  pages = {309--318}
+,  booktitle = {Proceedings of the Second International Symposium on Operations Research and its Applications (ISORA'96)}
+,  editor = {Ding-Zhu Du and Xiang-Sun Zhang and Kan Cheng}
+,  publisher = {World Publishing Corporation}
+,  pubaddr = {Beijing}
+,  series = {Lecture Notes in Operations Research}
+,  workarea = Geometric_Optimization_Problems
+}
+
+@article{brsz-cltcc-00
+,  author = {Imre B{\'a}r{\'a}ny and G{\"u}nter Rote and William Steiger and Cun-Hui Zhang}
+,  title = {A central limit theorem for convex chains in the square}
+,  journal = {Discrete and Computational Geometry}
+,  year = {2000}
+,  volume = {23}
+,  pages = {35--50}
+,  url = {http://page.mi.fu-berlin.de/rote/Papers/postscript/A+central+limit+theorem+for+convex+chains+in+the+square.ps}
+,  doi = {doi:10.1007/PL00009490}
+,  workarea = Geometry
+}
+
+@article{befhlmrrswz-vrgtd-98
+,  author = {Prosenjit Bose and Hazel Everett and S{\'a}ndor Fekete and Michael E. Houle and Anna Lubiw and Henk Meijer and Kathleen Romanik and G{\"u}nter Rote and Tom Shermer and Sue Whitesides and Christian Zelle}
+,  title = {A visibility representation for graphs in three dimensions}
+,  journal = {Journal of Graph Algorithms and Applications}
+,  year = {1998}
+,  volume = {2}
+,  pages = {1--16}
+,  url = {http://page.mi.fu-berlin.de/rote/Papers/postscript/A+visibility+representation+for+graphs+in+three+dimensions.ps}
+,  workarea = Geometry
+}
+
+@inproceedings{gr-dsvgp-99
+,  author = {Jerrold R. Griggs and G{\"u}nter Rote}
+,  title = {On the distribution of sums of vectors in general position}
+,  year = {1999}
+,  pages = {139--142}
+,  booktitle = {Contemporary Trends in Discrete Mathematics}
+,  editor = {Ronald L. Graham and Jan Kratochv{\'\i{}}l and Jaroslav Ne{\v{s}}et{\v{r}}il and Fred S. Roberts}
+,  publisher = {American Mathematical Society}
+,  series = {DIMACS series in discrete mathematics and theoretical computer science}
+,  url = {http://page.mi.fu-berlin.de/rote/Papers/postscript/On+the+distribution+of+sums+of+vectors+in+general+position.ps}
+,  abstract = {An analog of the Littlewood-Offord problem that was posed by the first author is to find the maximum number of subset sums equal to the same vector over all ways of selecting $n$ vectors in $R^h$ in general position. This note reviews past progress and motivation for this problem, and presents a construction that gives a respectable new lower bound, $\Omega (2^n n^{1-{3h/2}})$, which compares for $h\ge 2$ to the previously known upper bound $O(2^n n^{-1-{h/2}})$.}
+,  workarea = Geometry
+}
+
+@inproceedings{aaiklr-gsac-98
+,  author = {Oswin Aichholzer and Franz Aurenhammer and Christian Icking and Rolf Klein and Elmar Langetepe and G{\"u}nter Rote}
+,  title = {Generalized self-approaching curves}
+,  year = {1998}
+,  volume = {1533}
+,  pages = {317--327}
+,  booktitle = {Algorithms and Computation---Ninth Annual International Symposium on Algorithms and Computation. Taejon, Korea}
+,  editor = {Kyung-Yong Chwa and Oscar H. Ibarra}
+,  publisher = {Springer-Verlag}
+,  series = {Lecture Notes in Computer Science}
+,  doi = {doi:10.1007/3-540-49381-6_34}
+,  workarea = Geometry
+}
+
+@article{aaiklr-gsac-01
+,  author = {Oswin Aichholzer and Franz Aurenhammer and Christian Icking and Rolf Klein and Elmar Langetepe and G{\"u}nter Rote}
+,  title = {Generalized self-approaching curves}
+,  journal = {Discrete Applied Mathematics}
+,  year = {2001}
+,  volume = {109}
+,  pages = {3--24}
+,  url = {http://page.mi.fu-berlin.de/rote/Papers/postscript/Generalized+self-approaching+curves.ps}
+,  doi = {doi:10.1016/S0166-218X(00)00233-X}
+,  abstract = {For an angle $\phi $ between 0 and $180^\circ $, we consider the class of oriented curves which are $\phi $-{self-approaching} in the following sense. For any point $a$ on the considered curve the rest of the curve is inside a wedge of angle $\phi $ at $a$. This is a direct generalization of {self-approaching curves} which are $90^\circ $-{self-approaching}. We prove a tight upper bound on the length of a $\phi $-self-approaching curve in terms of the distance between its endpoints. The upper bound only depends on the angle $\phi $. 
+This problem arises in the performance analysis of certain on-line navigation strategies.}
+,  workarea = Geometry
+}
+
+@article{rw-tclta-98
+,  author = {G{\"u}nter Rote and Gerhard J. Woeginger}
+,  title = {Time complexity and linear-time approximation of the ancient two machine flow shop}
+,  journal = {Journal of Scheduling}
+,  year = {1998}
+,  volume = {1}
+,  pages = {149--155}
+,  url = {http://page.mi.fu-berlin.de/rote/Papers/postscript/Time+complexity+and+linear-time+approximation+of+the+ancient+two+machine+flow+shop.ps}
+,  doi = {doi:10.1002/(SICI)1099-1425(1998100)1:3<149::AID-JOS10>3.0.CO;2-4}
+,  workarea = Optimization_Problems
+}
+
+@article{gr-rfmp-99
+,  author = {Martin Gavalec and G{\"u}nter Rote}
+,  title = {Reachability of fuzzy matrix period}
+,  journal = {Tatra Mountains Mathematical Publications}
+,  year = {1999}
+,  volume = {16}
+,  pages = {61--79}
+,  url = {http://page.mi.fu-berlin.de/rote/Papers/postscript/Reachability+of+fuzzy+matrix+period.ps}
+,  abstract = {Given an $n\times n$ matrix $A$, the problem is to decide whether there is an $n$-vector $x$ such that the sequence of matrix powers $A, A^2, A^3, \ldots $ has the same period length as the sequence $Ax, A^2x, A^3x, \ldots $ of iterates of $x$. In these matrix and matrix-vector multiplications, the usual operations + and * are replaced by max and min, respectively. 
+In general, this problem is NP-complete. Two conditions are described, which both together imply that it can be solved in $O(n^2)$ time. If only one of the conditions is satisfied, the problem remains NP-complete.}
+,  workarea = Algebraic_Approach_to_Graph_Problems
+}
+
+@article{bdlr-ocpt-01
+,  author = {Rainer E. Burkard and Helidon Dollani and Yixun Lin and G{\"u}nter Rote}
+,  title = {The obnoxious center problem on a tree}
+,  journal = {SIAM Journal on Discrete Mathematics}
+,  year = {2001}
+,  volume = {14}
+,  pages = {498--509}
+,  url = {http://page.mi.fu-berlin.de/rote/Papers/postscript/The+obnoxious+center+problem+on+a+tree.ps}
+,  doi = {doi:10.1137/S0895480198340967}
+,  abstract = {The obnoxious center problem in a graph $G$ asks for a location on an edge of the graph such that the minimum weighted distance from this point to a vertex of the graph is as large as possible. We derive algorithms with linear running time for the cases when $G$ is a path or a star, thus improving previous results of Tamir (1988). For subdivided stars we present an algorithm of running time $O(n\log n)$. For general trees, we improve an algorithm of Tamir by a factor of $\log n$. Moreover, we describe a linear algorithm for the unweighted center problem on an arbitrary tree with neutral and obnoxious vertices.}
+,  workarea = Optimization_Problems
+}
+
+@article{fkr-ubmnf-00
+,  author = {Tam{\'a}s Fleiner and Volker Kaibel and G{\"u}nter Rote}
+,  title = {Upper bounds on the maximal number of facets of 0/1-polytopes}
+,  journal = {European Journal of Combinatorics}
+,  year = {2000}
+,  volume = {21}
+,  pages = {121--130}
+,  url = {http://page.mi.fu-berlin.de/rote/Papers/postscript/Upper+bounds+on+the+maximal+number+of+facets+of+0-1-polytopes.ps}
+,  doi = {doi:10.1006/eujc.1999.0326}
+,  abstract = {We prove two upper bounds on the number of facets that a $d$-dimensional 0/1-polytope (a polytope whose vertices have coordinates 0 and 1) can have. The first one is $2(d-1)!+2(d-1)$, which is the best one currently known for small dimensions, while the second one, $O((d-2)!)$, is the best bound for large dimensions. 
+This question was posed by G\"unter Ziegler in his book ``Lectures on Polytopes'' (1995) (exercise 0.15). Our bounds improve the best previously known bound of $O(d!)$, which follows from a simple volume argument due to Imre B\'ar\'any. The known lower bounds are exponential, the current record being $3.6^d$ for large enough $d$. (Thomas Christof and Gerhard Reinelt 1997). They follow from explicit polytopes in low dimensions. (Since the paper was published, superexponential lower bounds were proved by B\'ar\'any and Por.) 
+We also prove bounds for the number of faces of lower dimensions, and for integral convex polytopes with coordinates between 0 and $k$.}
+,  workarea = Geometry
+}
+
+@article{rw-mntjs-98
+,  author = {G{\"u}nter Rote and Gerhard J. Woeginger}
+,  title = {Minimizing the number of tardy jobs on a single machine with batch setup times}
+,  journal = {Acta Cybernetica}
+,  year = {1998}
+,  volume = {13}
+,  pages = {423--429}
+,  url = {http://page.mi.fu-berlin.de/rote/Papers/postscript/Minimizing+the+number+of+tardy+jobs+on+a+single+machine+with+batch+setup+times.ps}
+,  workarea = Optimization_Problems
+}
+
+@inproceedings{r-dfadp-01
+,  author = {G{\"u}nter Rote}
+,  title = {Division-free algorithms for the determinant and the {Pfaffian:} algebraic and combinatorial approaches}
+,  year = {2001}
+,  volume = {2122}
+,  pages = {119--135}
+,  booktitle = {Computational Discrete Mathematics}
+,  editor = {Helmut Alt}
+,  publisher = {Springer-Verlag}
+,  series = {Lecture Notes in Computer Science}
+,  url = {http://page.mi.fu-berlin.de/rote/Papers/postscript/Division-free+algorithms+for+the+determinant+and+the+Pfaffian:+algebraic+and+combinatorial+approaches.ps}
+,  doi = {doi:10.1007/3-540-45506-X_9}
+,  workarea = Algebraic_Approach_to_Graph_Problems
+}
+
+@inproceedings{cdr-epcbu-00
+,  author = {Robert Connelly and Erik D. Demaine and G{\"u}nter Rote}
+,  title = {Every polygon can be untangled}
+,  year = {2000}
+,  pages = {62--65}
+,  booktitle = {Proceedings of the 16th European Workshop on Computational Geometry}
+,  pubaddr = {Ben-Gurion University of the Negev, Israel}
+,  workarea = Geometry
+}
+
+@inproceedings{cdr-spacp-00
+,  author = {Robert Connelly and Erik D. Demaine and G{\"u}nter Rote}
+,  title = {Straightening polygonal arcs and convexifying polygonal cycles}
+,  year = {2000}
+,  pages = {432--442}
+,  booktitle = {Proceedings of the 41st Annual Symposium on Foundations of Computer Science, Redondo Beach, California}
+,  publisher = {IEEE Computer Society Press}
+,  doi = {doi:10.1109/SFCS.2000.892131}
+,  workarea = Geometry
+}
+
+@article{cdr-spacp-03
+,  author = {Robert Connelly and Erik D. Demaine and G{\"u}nter Rote}
+,  title = {Straightening polygonal arcs and convexifying polygonal cycles}
+,  journal = {Discrete and Computational Geometry}
+,  year = {2003}
+,  volume = {30}
+,  pages = {205--239}
+,  doi = {doi:10.1007/s00454-003-0006-7}
+,  workarea = Geometry
+}
+
+@techreport{cdr-spacp-02
+,  author = {Robert Connelly and Erik D. Demaine and G{\"u}nter Rote}
+,  title = {Straightening polygonal arcs and convexifying polygonal cycles}
+,  year = {2002}
+,  month = feb
+,  number = {Bericht B 02-02}
+,  institution = {Freie Universit{\"a}t Berlin, Institut f\"ur Informatik}
+,  pages = {49 pages}
+,  url = {http://edocs.fu-berlin.de/docs/receive/FUDOCS_document_000000001941}
+,  workarea = Geometry
+}
+
+@inproceedings{er-frtqf-01
+,  author = {Friedrich Eisenbrand and G{\"u}nter Rote}
+,  title = {Fast reduction of ternary quadratic forms}
+,  year = {2001}
+,  volume = {2146}
+,  pages = {32--44}
+,  booktitle = {Cryptography and Lattices---International Conference, CaLC 2001}
+,  editor = {Joseph H. Silverman}
+,  publisher = {Springer-Verlag}
+,  series = {Lecture Notes in Computer Science}
+,  url = {http://page.mi.fu-berlin.de/rote/Papers/postscript/Fast+reduction+of+ternary+quadratic+forms.ps}
+,  doi = {doi:10.1007/3-540-44670-2_4}
+,  abstract = {We show that a positive definite integral ternary form can be reduced with $O(M(s) \log ^2 s)$ bit operations, where $s$ is the binary encoding length of the form and $M(s)$ is the bit-complexity of $s$-bit integer multiplication.  This result is achieved in two steps. First we prove that the the classical Gaussian algorithm for ternary form reduction, in the variant of Lagarias, has this worst case running time. Then we show that, given a ternary form which is reduced in the Gaussian sense, it takes only a constant number of arithmetic operations and a constant number of binary-form reductions to fully reduce the form.  Finally we describe how this algorithm can be generalized to higher dimensions. Lattice basis reduction and shortest vector computation in fixed dimension $d$ can be done with $O(M(s)\log ^{d-1} s)$ bit-operations. }
+,  workarea = Geometry
+}
+
+@inproceedings{er-f2vip-01
+,  author = {Friedrich Eisenbrand and G{\"u}nter Rote}
+,  title = {Fast 2-variable integer programming}
+,  year = {2001}
+,  volume = {2081}
+,  pages = {78--89}
+,  booktitle = {IPCO 2001---Proceedings of the 8th Conference on Integer Programming and Combinatorial Optimization, Utrecht}
+,  editor = {K. Aardal and B. Gerards}
+,  publisher = {Springer-Verlag}
+,  series = {Lecture Notes in Computer Science}
+,  url = {http://page.mi.fu-berlin.de/rote/Papers/postscript/Fast+2-variable+integer+programming.ps}
+,  doi = {doi:10.1007/3-540-45535-3_7}
+,  abstract = {We show that a 2-variable integer program defined by $m$ constraints involving coefficients with at most $s$ bits can be solved with $O(m + s\log m)$ arithmetic operations or with $O(m + \log m \log s) M(s)$ bit operations, where $M(s)$ is the time needed for $s$-bit integer multiplication. Thus, when the number of constraints is fixed, integer programming in two variables is not harder than greatest common divisor computation. Our algorithm avoids the binary search that is associated with the usual approach by letting the objective function slide into the polyhedron, until the lattice width of the truncated polyhedron equals the flatness constant from Khintchin's Flatness theorem. }
+,  workarea = Geometry
+}
+
+@article{brs-teapf-01
+,  author = {Peter Bra{\ss{}} and G{\"u}nter Rote and Konrad J. Swanepoel}
+,  title = {Triangles of extremal area or perimeter in a finite planar point set}
+,  journal = {Discrete and Computational Geometry}
+,  year = {2001}
+,  volume = {26}
+,  pages = {51--58}
+,  doi = {doi:10.1007/s00454-001-0010-6}
+,  abstract = {We show the following two results on a set of $n$ points in the plane, thus answering questions posed by Erd\H os and Purdy (1971): 1. The maximum number of triangles of maximum area (or of maximum perimeter) in a set of $n$ points in the plane is exactly $n$. 2. The maximum possible number of triangles of minimum positive area in a set of $n$ points in the plane is $\Theta (n^2)$.}
+,  workarea = Geometry
+}
+
+@inproceedings{rrss-ctptw-01
+,  author = {Dana Randall and G{\"u}nter Rote and Francisco Santos and Jack Snoeyink}
+,  title = {Counting triangulations and pseudo-triangulations of wheels}
+,  year = {2001}
+,  pages = {149--152}
+,  booktitle = {Proceedings of the 13th Canadian Conference on Computational Geometry, Waterloo}
+,  editor = {T. Biedl}
+,  url = {http://page.mi.fu-berlin.de/rote/Papers/postscript/Counting+triangulations+and+pseudo-triangulations+of+wheels.ps}
+,  workarea = Geometry
+}
+
+@incollection{rss-emppp-03
+,  author = {G{\"u}nter Rote and Francisco Santos and Ileana Streinu}
+,  title = {Expansive motions and the polytope of pointed pseudo-triangulations}
+,  year = {2003}
+,  volume = {25}
+,  pages = {699--736}
+,  booktitle = {Discrete and Computational Geometry---The Goodman-Pollack Festschrift}
+,  editor = {Boris Aronov and Saugata Basu and J\'anos Pach and Micha Sharir}
+,  publisher = {Springer Verlag}
+,  url = {http://page.mi.fu-berlin.de/rote/Papers/postscript/Expansive+motions+and+the+polytope+of+pointed+pseudo-triangulations.ps}
+,  eprint = {arXiv:math/0206027}
+,  abstract = {We introduce the polytope of pointed pseudo-triangulations of a point set in the plane, defined as the polytope of infinitesimal expansive motions of the points subject to certain constraints on the increase of their distances. Its $1$-skeleton is the graph whose vertices are the pointed pseudo-triangulations of the point set and whose edges are flips of interior pseudo-triangulation edges. 
+For points in convex position we obtain a new realization of the associahedron, i.e., a geometric representation of the set of triangulations of an $n$-gon, or of the set of binary trees on $n$ vertices, or of many other combinatorial objects that are counted by the Catalan numbers. By considering the $1$-dimensional version of the polytope of constrained expansive motions we obtain a second distinct realization of the associahedron as a perturbation of the positive cell in a Coxeter arrangement. 
+Our methods produce as a by-product a new proof that every simple polygon or polygonal arc in the plane has expansive motions, a key step in the proofs of the Carpenter's Rule Theorem by Connelly, Demaine and Rote (2000) and by Streinu (2000). }
+,  workarea = Geometry
+}
+
+@inproceedings{cdr-ilstl-02
+,  author = {Robert Connelly and Erik D. Demaine and G{\"u}nter Rote}
+,  title = {Infinitesimally locked self-touching linkages with applications to locked trees}
+,  year = {2002}
+,  volume = {304}
+,  pages = {287--311}
+,  booktitle = {Physical Knots: Knotting, Linking, and Folding Geometric Objects in $\mathbb {R}^3$.}
+,  editor = {Jorge Alberto Calvo and Kenneth C. Millett and Eric J. Rawdon}
+,  publisher = {American Mathematical Society}
+,  series = {Contemporary Mathematics}
+,  url = {http://page.mi.fu-berlin.de/rote/Papers/postscript/Infinitesimally+locked+self-touching+linkages+with+applications+to+locked+trees.ps}
+,  workarea = Geometry
+}
+
+@article{r-bthgn-97
+,  author = {G{\"u}nter Rote}
+,  title = {Binary trees having a given number of nodes with 0, 1, and 2 children}
+,  journal = {S\'eminaire Lotharingien de Combinatoire}
+,  year = {1997}
+,  volume = {B38b}
+,  pages = {6 pages}
+,  url = {http://www.emis.de/journals/SLC/wpapers/s38proding.html}
+,  abstract = {We give three combinatorial proofs for the number of binary trees having a given number of nodes with 0, 1, and 2 children. We extend these results to ordered trees with given distribution of nodes according to their numbers of children.}
+,  workarea = Geometry
+}
+
+@inproceedings{emrs-todm-02
+,  author = {Robert Els{\"a}sser and Burkhard Monien and G{\"u}nter Rote and Stefan Schamberger}
+,  title = {Toward optimal diffusion matrices}
+,  year = {2002}
+,  pages = {0067b, 8 pages}
+,  booktitle = {International Parallel and Distributed Processing Symposium. IPDPS 2002, Proceedings.}
+,  publisher = {IEEE Computer Society Press}
+,  url = {http://www.brics.dk/~alcomft/TR/ALCOMFT-TR-02-98.ps}
+,  doi = {doi:10.1109/IPDPS.2002.1015569}
+,  workarea = Optimization_Problems
+}
+
+@techreport{emrs-todm-02t
+,  author = {Robert Els{\"a}sser and Burkhard Monien and G{\"u}nter Rote and Stefan Schamberger}
+,  title = {Toward optimal diffusion matrices}
+,  year = {2002}
+,  month = may
+,  number = {Technical report ALCOMFT-TR-02-98}
+,  institution = {Universit{\"at} Paderborn}
+,  pages = {8 pages}
+,  url = {http://www.brics.dk/~alcomft/TR/ALCOMFT-TR-02-98.ps}
+,  workarea = Optimization_Problems
+}
+
+@inproceedings{ehkkrw-cse-02
+,  author = {Alon Efrat and Franz Hoffmann and Christian Knauer and Klaus Kriegel and G{\"u}nter Rote and Carola Wenk}
+,  title = {Covering shapes by ellipses}
+,  year = {2002}
+,  pages = {453--454}
+,  booktitle = {Proceedings of the 13th Annual ACM-SIAM Symposium on Discrete Algorithms (SODA), San Francisco}
+,  doi = {doi:10.1145/545381.545441}
+,  workarea = Computational_Geometry
+}
+
+@article{ehkkrw-ce-03
+,  author = {Alon Efrat and Franz Hoffmann and Christian Knauer and Klaus Kriegel and G{\"u}nter Rote and Carola Wenk}
+,  title = {Covering with ellipses}
+,  journal = {Algorithmica}
+,  year = {2003}
+,  volume = {38}
+,  pages = {145--160}
+,  doi = {doi:10.1007/s00453-003-1047-0}
+,  workarea = Computational_Geometry
+}
+
+@inproceedings{r-pphel-02
+,  author = {G{\"u}nter Rote}
+,  title = {Pseudotriangulations, polytopes, and how to expand linkages (invited talk)}
+,  year = {2002}
+,  pages = {133--134}
+,  booktitle = {Proceedings of the Eighteenth Annual Symposium on Computational Geometry, Barcelona}
+,  publisher = {Association for Computing Machinery}
+,  doi = {doi:10.1145/513400.513442}
+,  abstract = {This is an abstract of an invited talk in which I have surveyed some recent results about unfolding of linkages and connections to pseudotriangulations.}
+,  workarea = Computational_Geometry
+}
+
+@inproceedings{rwwx-cmp-03
+,  author = {G{\"u}nter Rote and Cao An Wang and Lusheng Wang and Yinfeng Xu}
+,  title = {On constrained minimum pseudotriangulations}
+,  year = {2003}
+,  volume = {2697}
+,  pages = {445--454}
+,  booktitle = {Computing and Combinatorics. Proceedings of the 9th Annual International Computing and Combinatorics Conference (COCOON 2003), Big Sky, Montana, USA, July 2003}
+,  editor = {Tandy Warnow and Binhai Zhu}
+,  publisher = {Springer-Verlag}
+,  series = {Lecture Notes in Computer Science}
+,  url = {http://page.mi.fu-berlin.de/rote/Papers/postscript/On+constrained+minimum+pseudotriangulations.ps}
+,  doi = {doi:10.1007/3-540-45071-8_45}
+,  abstract = {We present three combinatorial bounds: the ratio of the size of minimum pseudotriangulation of a point set $S$ and the size of minimal pseudotriangulation contained in a triangulation $T$ of $S$, the ratio of the size of the best minimal pseudotriangulation and the worst minimal pseudotriangulation both contained in a given triangulation $T$. We also present a linear-time algorithm for finding a minimal pseudotriangulation contained in a given triangulation, and we study the minimum pseudotriangulation containing a given set of non-crossing line segments. }
+,  workarea = Computational_Geometry
+}
+
+@inproceedings{aerw-mpm-03p
+,  author = {Helmut Alt and Alon Efrat and G{\"u}nter Rote and Carola Wenk}
+,  title = {Matching planar maps}
+,  year = {2003}
+,  pages = {589--598}
+,  booktitle = {Proceedings of the 14th Annual ACM-SIAM Symposium on Discrete Algorithms (SODA), Baltimore}
+,  workarea = Computational_Geometry
+}
+
+@article{aerw-mpm-03j
+,  author = {Helmut Alt and Alon Efrat and G{\"u}nter Rote and Carola Wenk}
+,  title = {Matching planar maps}
+,  journal = {Journal of Algorithms}
+,  year = {2003}
+,  volume = {49}
+,  pages = {262--283}
+,  url = {http://page.mi.fu-berlin.de/rote/Papers/postscript/Matching+planar+maps.ps}
+,  doi = {doi:10.1016/S0196-6774(03)00085-3}
+,  abstract = {We generalize the notion of the Fr\'echet distance from two curves to a curve and a graph and to two graphs, and we give efficient algorithms for computing the Fr\'echet distance in these cases.}
+,  workarea = Computational_Geometry
+}
+
+@inproceedings{waepr-fcmv-03
+,  author = {Carola Wenk and Helmut Alt and Alon Efrat and Lingeshwaran Palaniappan and G{\"u}nter Rote}
+,  title = {Finding a curve in a map (Video)}
+,  year = {2003}
+,  pages = {384--385}
+,  booktitle = {Proceedings of the Nineteenth Annual Symposium on Computational Geometry, San Diego}
+,  publisher = {Association for Computing Machinery}
+,  doi = {doi:10.1145/777792.777855}
+,  workarea = Computational_Geometry
+}
+
+@inproceedings{r-peitl-03
+,  author = {G{\"u}nter Rote}
+,  title = {Pursuit-evasion with imprecise target location}
+,  year = {2003}
+,  pages = {747--753}
+,  booktitle = {Proceedings of the 14th Annual ACM-SIAM Symposium on Discrete Algorithms (SODA), Baltimore}
+,  doi = {doi:10.1145/644108.644231}
+,  workarea = Geometry
+}
+
+@article{r-cbn-02
+,  author = {G{\"u}nter Rote}
+,  title = {Crossing the bridge at night}
+,  journal = {EATCS Bulletin}
+,  year = {2002}
+,  month = oct
+,  volume = {78}
+,  pages = {241--246}
+,  url = {http://page.mi.fu-berlin.de/rote/Papers/postscript/Crossing+the+bridge+at+night.ps}
+,  abstract = {We solve the general case of the bridge-crossing puzzle, where $n$ people with different walking speeds have to cross a bridge that can carry at most two people at a time. A flashlight is necessary to cross the bridge but they share only a single flashlight. 
+The solution is obtained through a graph-theoretic model. }
+,  workarea = Optimization_Problems
+}
+
+@inproceedings{acr-iccb-03
+,  author = {Nina Amenta and Sunghee Choi and G{\"u}nter Rote}
+,  title = {Incremental constructions con {BRIO}}
+,  year = {2003}
+,  pages = {211--219}
+,  booktitle = {Proceedings of the Nineteenth Annual Symposium on Computational Geometry, San Diego}
+,  publisher = {Association for Computing Machinery}
+,  url = {http://page.mi.fu-berlin.de/rote/Papers/postscript/Incremental+constructions+con+BRIO.ps}
+,  doi = {doi:10.1145/777792.777824}
+,  abstract = {Randomized incremental constructions are widely used in computational geometry, but they perform very badly on large data because of their inherently random memory access patterns. We define a {\it biased randomized insertion order\/} which removes enough randomness to significantly improve performance, but leaves enough randomness so that the algorithms remain theoretically optimal. 
+We also give a precise definition and analysis of ``realistic'' problem instances which are typical of data arising in practice and do not exhibit the theoretical worst-case behavior. }
+,  workarea = Computational_Geometry
+}
+
+@inproceedings{akrw-cu-03
+,  author = {Helmut Alt and Christian Knauer and G{\"u}nter Rote and Sue Whitesides}
+,  title = {The complexity of (un)folding}
+,  year = {2003}
+,  pages = {164--170}
+,  booktitle = {Proceedings of the Nineteenth Annual Symposium on Computational Geometry, San Diego}
+,  publisher = {Association for Computing Machinery}
+,  url = {http://page.mi.fu-berlin.de/rote/Papers/postscript/On+the+complexity+of+the+linkage+reconfiguration+problem.ps}
+,  doi = {doi:10.1145/777792.777818}
+,  workarea = Computational_Geometry
+}
+
+@incollection{akrw-clrp-04
+,  author = {Helmut Alt and Christian Knauer and G{\"u}nter Rote and Sue Whitesides}
+,  title = {On the complexity of the linkage reconfiguration problem}
+,  year = {2004}
+,  volume = {342}
+,  pages = {1--13}
+,  booktitle = {Towards a Theory of Geometric Graphs}
+,  editor = {J{\'a}nos Pach}
+,  publisher = {American Mathematical Society}
+,  series = {Contemporary Mathematics}
+,  url = {http://page.mi.fu-berlin.de/rote/Papers/postscript/On+the+complexity+of+the+linkage+reconfiguration+problem.ps}
+,  abstract = {We consider the problem of reconguring a linkage of rigid straight segments from a given start to a given target position with a continuous nonintersecting motion. The problem is nontrivial even for trees in two dimensions since it is known that not all congurations can be recongured to a straight position. We show that deciding recongurability for trees in two dimensions and for chains in three dimensions is PSPACE-complete.}
+,  workarea = Computational_Geometry
+}
+
+@inproceedings{horsssssw-pmrgp-03
+,  author = {Ruth Haas and David Orden and G{\"u}nter Rote and Francisco Santos and Brigitte Servatius and Herman Servatius and Diane Souvaine and Ileana Streinu and Walter Whiteley}
+,  title = {Planar minimally rigid graphs and pseudo-triangulations}
+,  year = {2003}
+,  pages = {154--163}
+,  booktitle = {Proceedings of the Nineteenth Annual Symposium on Computational Geometry, San Diego}
+,  publisher = {Association for Computing Machinery}
+,  doi = {doi:10.1145/777792.777817}
+,  workarea = Geometry
+}
+
+@article{horsssssw-pmrgp-05
+,  author = {Ruth Haas and David Orden and G{\"u}nter Rote and Francisco Santos and Brigitte Servatius and Herman Servatius and Diane Souvaine and Ileana Streinu and Walter Whiteley}
+,  title = {Planar minimally rigid graphs and pseudo-triangulations}
+,  journal = {Computational Geometry, Theory and Applications}
+,  year = {2005}
+,  volume = {31}
+,  pages = {31--61}
+,  url = {http://page.mi.fu-berlin.de/rote/Papers/pdf/Planar+minimally+rigid+graphs+and+pseudo-triangulations.pdf}
+,  eprint = {arXiv:math/0307347}
+,  doi = {doi:10.1016/j.comgeo.2004.07.003}
+,  abstract = {Pointed pseudo-triangulations are planar minimally rigid graphs embedded in the plane with {\it pointed\/} vertices (adjacent to an angle larger than $\pi $). In this paper we prove that the opposite statement is also true, namely that planar minimally rigid graphs always admit pointed embeddings, even under certain natural topological and combinatorial constraints. The proofs yield efficient embedding algorithms. They also provide the first algorithmically effective result on graph embeddings with oriented matroid constraints other than convexity of faces. These constraints are described by {\it combinatorial pseudo-triangulations\/}, first defined and studied in this paper. Also of interest are our two proof techniques, one based on Henneberg inductive constructions from combinatorial rigidity theory, the other on a generalization of Tutte's barycentric embeddings to directed graphs.}
+,  workarea = Geometry
+}
+
+@article{orsssw-ncfnc-04
+,  author = {David Orden and G{\"u}nter Rote and Francisco Santos and Brigitte Servatius and Herman Servatius and Walter Whiteley}
+,  title = {Non-crossing frameworks with non-crossing reciprocals}
+,  journal = {Discrete and Computational Geometry}
+,  year = {2004}
+,  volume = {32}
+,  pages = {567--600}
+,  url = {http://page.mi.fu-berlin.de/rote/Papers/postscript/Non-crossing+frameworks+with+non-crossing+reciprocals.ps}
+,  eprint = {arXiv:math/0309156}
+,  doi = {doi:10.1007/s00454-004-1139-x}
+,  abstract = {We study non-crossing frameworks in the plane for which the classical reciprocal on the dual graph is also non-crossing. We give a complete description of the self-stresses on non-crossing frameworks $G$ whose reciprocals are non-crossing, in terms of: the types of faces (only pseudo-triangles and pseudo-quadrangles are allowed); the sign patterns in the stress on $G$; and a geometric condition on the stress vectors at some of the vertices. 
+As in other recent papers where the interplay of non-crossingness and rigidity of straight-line plane graphs is studied, pseudo-triangulations show up as objects of special interest. For example, it is known that all planar Laman circuits can be embedded as a pseudo-triangulation with one non-pointed vertex. We show that for such pseudo-triangulation embeddings of planar Laman circuits which are sufficiently generic, the reciprocal is non-crossing and again a pseudo-triangulation embedding of a planar Laman circuit. For a singular (non-generic) pseudo-triangulation embedding of a planar Laman circuit, the reciprocal is still non-crossing and a pseudo-triangulation, but its underlying graph may not be a Laman circuit. Moreover, all the pseudo-triangulations which admit a non-crossing reciprocal arise as the reciprocals of such, possibly singular, stresses on pseudo-triangulation Laman circuits. 
+All self-stresses on a planar graph correspond to liftings to piece-wise linear surfaces in 3-space. We prove characteristic geometric properties of the lifts of such non-crossing reciprocal pairs.}
+,  workarea = Geometry
+}
+
+@inproceedings{arss-zppt-03
+,  author = {Oswin Aichholzer and G{\"u}nter Rote and Bettina Speckmann and Ileana Streinu}
+,  title = {The zigzag path of a pseudo-triangulation}
+,  year = {2003}
+,  volume = {2748}
+,  pages = {377--388}
+,  booktitle = {Algorithms and Data Structures. Proceedings of the 8th International Workshop on Algorithms and Data Structures (WADS 2003), Ottawa, July 2003}
+,  editor = {Frank Dehne and J\"org-R\"udiger Sack and Michiel Smid}
+,  publisher = {Springer-Verlag}
+,  series = {Lecture Notes in Computer Science}
+,  url = {http://page.mi.fu-berlin.de/rote/Papers/postscript/The+zigzag+path+of+a+pseudo-triangulation.ps}
+,  doi = {doi:978-3-540-40545-0}
+,  abstract = {The concept of a zigzag path of a pseudotriangulation is a tool that allows to solve counting and optimization problems for pseudottriangulations in a divide-and-conquer style. We present an algorithm that enumerates all zigzag paths of a given point set with respect to a given line in $O(n^2)$ time per path and $O(n^2)$ space.}
+,  workarea = Geometry
+}
+
+@article{cllr-soosc-05
+,  author = {Yi-Jen Chiang and Tobias Lenz and Xiang Lu and G{\"u}nter Rote}
+,  title = {Simple and optimal output-sensitive construction of contour trees using monotone paths}
+,  journal = {Computational Geometry, Theory and Applications}
+,  year = {2005}
+,  volume = {30}
+,  pages = {165--195}
+,  url = {http://page.mi.fu-berlin.de/rote/Papers/postscript/Simple+and+optimal+output-sensitive+construction+of+contour+trees+using+monotone+paths.ps}
+,  doi = {doi:10.1016/j.comgeo.2004.05.002}
+,  abstract = {Contour trees are used when high-dimensional data are preprocessed for efficient extraction of iso-contours for the purpose of visualization. So far, efficient algorithms for contour trees are based on processing the data in sorted order. We present a new algorithm that avoids sorting the whole data set, but sorts only the {component-critical points}. They form only a small fraction of the points, for typical data that arise in practice. The algorithm works in any dimension. In addition, we provide a comprehensive discussion of critical and regular points of piecewise linear functions of two and three variables.}
+,  workarea = Computational_Geometry
+}
+
+@inproceedings{r-cfdbp-04
+,  author = {G{\"u}nter Rote}
+,  title = {Computing the {Fr\'echet} distance between piecewise smooth curves}
+,  year = {2004}
+,  pages = {147--150}
+,  booktitle = {Abstracts of the 20th European Workshop on Computational Geometry}
+,  workarea = Computational_Geometry
+}
+
+@article{r-cfdbp-07
+,  author = {G{\"u}nter Rote}
+,  title = {Computing the {Fr\'echet} distance between piecewise smooth curves}
+,  journal = {Computational Geometry, Theory and Applications}
+,  year = {2007}
+,  volume = {37}
+,  pages = {162--174}
+,  url = {http://page.mi.fu-berlin.de/rote/Papers/postscript/Computing+the+Frechet+distance+between+piecewise+smooth+curves.ps}
+,  doi = {doi:10.1016/j.comgeo.2005.01.004}
+,  abstract = {We consider the Fr\'echet distance between two curves which are given as a sequence of $m+n$ curved pieces. If these pieces are sufficiently well-behaved, we can compute the Fr\'echet distance in $O(mn \log (mn))$ time. The decision version of the problem can be solved in $O(mn)$ time.}
+,  workarea = Computational_Geometry
+}
+
+@inproceedings{cdr-pegse-04
+,  author = {Sergio Cabello and Erik D. Demaine and G{\"u}nter Rote}
+,  title = {Planar embeddings of graphs with specified edge lengths}
+,  year = {2004}
+,  volume = {2912}
+,  pages = {283--294}
+,  booktitle = {Graph Drawing. GD 2003, Proceedings of the 11th International Symposium on Graph Drawing, Perugia, September 2003, Revised Papers}
+,  editor = {Giuseppe Liotta}
+,  publisher = {Springer-Verlag}
+,  series = {Lecture Notes in Computer Science}
+,  url = {http://page.mi.fu-berlin.de/rote/Papers/pdf/Planar+embeddings+of+graphs+with+specified+edge+lengths.pdf}
+,  doi = {doi:10.1007/b94919}
+,  workarea = Computational_Geometry
+}
+
+@article{cdr-pegse-07
+,  author = {Sergio Cabello and Erik D. Demaine and G{\"u}nter Rote}
+,  title = {Planar embeddings of graphs with specified edge lengths}
+,  journal = {Journal of Graph Algorithms and Applications}
+,  year = {2007}
+,  volume = {11}
+,  pages = {259--276}
+,  url = {http://page.mi.fu-berlin.de/rote/Papers/pdf/Planar+embeddings+of+graphs+with+specified+edge+lengths.pdf}
+,  abstract = {We consider the problem of finding a planar embedding of a planar graph with a prescribed Euclidean length on every edge. There has been substantial previous work on the problem without the planarity restrictions, which has close connections to rigidity theory, and where it is easy to see that the problem is NP-hard. In contrast, we show that the problem is tractable---indeed, solvable in linear time on a real RAM---for planar embeddings of planar 3-connected triangulations, even if the outer face is not a triangle. This result is essentially tight: the problem becomes NP-hard if we consider instead planar embeddings of planar 3-connected infinitesimally rigid graphs, a natural relaxation of triangulations in this context. }
+,  workarea = Geometry
+}
+
+@inproceedings{dr-fdsc-04
+,  author = {Adrian Dumitrescu and G{\"u}nter Rote}
+,  title = {On the {Fr\'echet} distance of a set of curves}
+,  year = {2004}
+,  pages = {162--165}
+,  booktitle = {Proceedings of the 16th Canadian Conference on Computational Geometry (CCCG'04), Montreal}
+,  url = {http://page.mi.fu-berlin.de/rote/Papers/postscript/On+the+Frechet+distance+of+a+set+of+curves.ps}
+,  abstract = {The Fr\'echet distance of two curves measures the resemblance of the curves and is known to have applications in shape comparison and recognition. We extend this notion to a set of curves and show how it can be computed and approximated.
+In particular, we show that the multiple Fr\'echet distance can be bounded in terms of pairwise Fr\'echet distances, and we provide an example which shows the tightness of this bound.}
+,  workarea = Computational_Geometry
+}
+
+@proceedings{mrk-p21as-05
+,  title = {Proceedings of the Twenty-First Annual Symposium on Computational Geometry ({SCG'05})}
+,  year = {2005}
+,  pages = {x+387 pages}
+,  editor = {Joe S. B. Mitchell and G{\"u}nter Rote and Lutz Kettner}
+,  publisher = {Association for Computing Machinery}
+,  workarea = Computational_Geometry
+}
+
+@inproceedings{dgr-ilbgd-05
+,  author = {Adrian Dumitrescu and Ansgar Gr\"une and G{\"u}nter Rote}
+,  title = {Improved lower bound on the geometric dilation of point sets}
+,  year = {2005}
+,  pages = {37--40}
+,  booktitle = {Abstracts of the 21st European Workshop on Computational Geometry}
+,  workarea = Geometry
+}
+
+@inproceedings{degkr-gdhc-05
+,  author = {Adrian Dumitrescu and Annette Ebbers-Baumann and Ansgar Gr\"une and Rolf Klein and G{\"u}nter Rote}
+,  title = {On geometric dilation and halving chords}
+,  year = {2005}
+,  volume = {3608}
+,  pages = {244--255}
+,  booktitle = {Proceedings of the Workshop on Algorithms and Data Structures (WADS 2005)}
+,  editor = {Alexandro L\'opez-Ortiz and Frank Dehne and J\"org-R\"udiger Sack}
+,  publisher = {Springer-Verlag}
+,  series = {Lecture Notes in Computer Science}
+,  url = {http://page.mi.fu-berlin.de/rote/Papers/pdf/On+geometric+dilation+and+halving+chords.pdf}
+,  doi = {doi:10.1007/11534273_22}
+,  workarea = Geometry
+}
+
+@article{degkr-gdccg-06
+,  author = {Adrian Dumitrescu and Annette Ebbers-Baumann and Ansgar Gr\"une and Rolf Klein and G{\"u}nter Rote}
+,  title = {On the geometric dilation of closed curves, graphs, and point sets}
+,  journal = {Computational Geometry, Theory and Applications}
+,  year = {2006}
+,  volume = {36}
+,  pages = {16--38}
+,  url = {http://page.mi.fu-berlin.de/rote/Papers/postscript/On+the+geometric+dilation+of+closed+curves,+graphs,+and+point+sets.ps}
+,  eprint = {arXiv:math/0407135}
+,  doi = {doi:10.1016/j.comgeo.2005.07.004}
+,  abstract = {The detour between two points $u$ and $v$ (on edges or vertices) of an embedded planar graph whose edges are curves is the ratio between the shortest path in in the graph between $u$ and $v$ and their Euclidean distance. The maximum detour over all pairs of points is called the geometric dilation. Ebbers-Baumann, Gr{\"u}ne and Klein have shown that every finite point set is contained in a planar graph whose geometric dilation is at most 1.678, and some point sets require graphs with dilation $\ge \pi /2 = 1.57\ldots $. We prove a stronger lower bound of $1.00000000001*\pi /2$ by relating graphs with small dilation to a problem of packing and covering the plane by circular disks.
+The proof relies on halving pairs, pairs of points dividing a given closed curve $C$ in two parts of equal length, and their minimum and maximum distances $h$ and $H$. Additionally, we analyze curves of constant halving distance ($h=H$), examine the relation of $h$ to other geometric quantities and geometric problems (like Ulam's floating body problem) and prove some new dilation bounds.}
+,  workarea = Geometry
+}
+
+@inproceedings{r-scdpg-05
+,  author = {G{\"u}nter Rote}
+,  title = {Strictly convex drawings of planar graphs}
+,  year = {2005}
+,  pages = {728--734}
+,  booktitle = {Proceedings of the 16th Annual ACM-SIAM Symposium on Discrete Algorithms (SODA), Vancouver}
+,  doi = {doi:10.1145/1070432.1070535}
+,  abstract = {Every three-connected planar graph with $n$ vertices has a drawing on an $O(n^{7/3})\times O(n^{7/3})$ grid in which all faces are strictly convex polygons. More generally, there is a drawing on an $O(n^2s^2) \times O(n^{5/2}/s)$ grid, for any choice of a parameter $1\le s \le \root 6 \of n$, as well as on an $O(n) \times O(n^3)$ grid.  These drawings are obtained by perturbing (not strictly) convex drawings, which are known to exist on $O(n)\times O(n)$ grids. The analysis of the perturbation leads to a number-theoretic question from the geometry of numbers whose solution would yield grid drawings on an $O(n^2)\times O(n^2)$ grid.}
+,  workarea = Geometry
+}
+
+@article{br-scdpg-06
+,  author = {Imre B{\'a}r{\'a}ny and G{\"u}nter Rote}
+,  title = {Strictly convex drawings of planar graphs}
+,  journal = {Documenta Mathematica}
+,  year = {2006}
+,  volume = {11}
+,  pages = {369--391}
+,  url = {http://www.mathematik.uni-bielefeld.de/documenta/vol-11/13.pdf}
+,  abstract = {Every three-connected planar graph with $n$ vertices has a drawing on an $O(n^2) \times O(n^2)$ grid in which all faces are strictly convex polygons. More generally, there is a drawing on an $O(nw) \times O(n^3/w)$ grid, for any choice of a parameter $w$ in the range $1\le w \le n$.  These drawings are obtained by perturbing (not strictly) convex drawings on $O(n) \times O(n)$ grids. Tighter bounds are obtained when the faces have fewer sides. In the proof, we derive an explicit lower bound on the number of primitive vectors in a triangle.}
+,  workarea = Geometry
+}
+
+@article{rs-takp-06
+,  author = {G{\"u}nter Rote and Andr\'e Schulz}
+,  title = {Threshold arrangements and the knapsack problem}
+,  journal = {Applied Mathematics Letters}
+,  year = {2006}
+,  volume = {19}
+,  pages = {108--112}
+,  url = {http://page.mi.fu-berlin.de/rote/Papers/postscript/Threshold+arrangements+and+the+knapsack+problem.ps}
+,  doi = {doi:10.1016/j.aml.2005.03.010}
+,  abstract = {We show that a combinatorial question which has been studied in connection with lower bounds for the knapsack problem by Brimkov and Dantchev (Applied Mathematics Letters, 2002) is related to threshold graphs, threshold arrangements, and other well-studied combinatorial objects, and we correct an error in the analysis given in that paper.}
+,  workarea = Geometry
+}
+
+@article{bmrr-cptc-06
+,  author = {Gill Barequet and Micha Moffie and Ares Rib\'o and G{\"u}nter Rote}
+,  title = {Counting polyominoes on twisted cylinders}
+,  journal = {INTEGERS: The Electronic Journal of Combinatorial Number Theory}
+,  year = {2006}
+,  month = sep
+,  volume = {6}
+,  number = {\#A22}
+,  pages = {37 pages}
+,  url = {http://page.mi.fu-berlin.de/rote/Papers/postscript/Counting+polyominoes+on+twisted+cylinders.ps}
+,  abstract = {Using numerical methods, we analyze the growth in the number of polyominoes on a twisted cylinder as the number of cells increases. These polyominoes are related to classical polyominoes (connected subsets of a square grid) that lie in the plane. We thus obtain an improved lower bound of 3.980137 on the growth rate of the number of polyominoes, which is also known as Klarner's constant. We use a dynamic programming approach. For storing information about partial polyominos, we make use of a bijection between ``states'' of our system and Motzkin paths. }
+,  workarea = Geometry
+}
+
+@article{bmrr-cptc-05
+,  author = {Gill Barequet and Micha Moffie and Ares Rib\'o and G{\"u}nter Rote}
+,  title = {Counting polyominoes on twisted cylinders}
+,  journal = {Discrete Mathematics and Theoretical Computer Science}
+,  year = {2005}
+,  volume = {AE}
+,  pages = {369--374}
+,  url = {http://page.mi.fu-berlin.de/rote/Papers/postscript/Counting+polyominoes+on+twisted+cylinders.ps}
+,  workarea = Geometry
+}
+
+@inproceedings{cddflmrr-lucps-06
+,  author = {Robert Connelly and Erik D. Demaine and Martin L. Demaine and S\'andor P. Fekete and Stefan Langerman and Joseph S. B. Mitchell and Ares Rib\'o and G{\"u}nter Rote}
+,  title = {Locked and unlocked chains of planar shapes}
+,  year = {2006}
+,  pages = {61--70}
+,  booktitle = {Proceedings of the 22nd Annual Symposium on Computational Geometry, Sedona}
+,  publisher = {Association for Computing Machinery}
+,  url = {http://page.mi.fu-berlin.de/rote/Papers/pdf/Locked+and+unlocked+chains+of+planar+shapes.pdf}
+,  eprint = {arXiv:cs/0604022}
+,  doi = {doi:10.1145/1137856.1137868}
+,  workarea = Geometry
+}
+
+@article{cddflmrr-lucps-07
+,  author = {Robert Connelly and Erik D. Demaine and Martin L. Demaine and S\'andor P. Fekete and Stefan Langerman and Joseph S. B. Mitchell and Ares Rib\'o and G{\"u}nter Rote}
+,  title = {Locked and unlocked chains of planar shapes}
+,  journal = {Discrete and Computational Geometry}
+,  year = {2007}
+,  month = may
+,  pages = {21 pages}
+,  url = {http://page.mi.fu-berlin.de/rote/Papers/pdf/Locked+and+unlocked+chains+of+planar+shapes.pdf}
+,  note = {submitted}
+,  abstract = {We extend linkage unfolding results from the well-studied case of polygonal linkages to the more general case of linkages of polygons. More precisely, we consider chains of nonoverlapping rigid planar shapes (Jordan regions) that are hinged together sequentially at rotatable joints. Our goal is to characterize the familes of planar shapes that admit locked chains, where some configurations cannot be reached by continuous reconfiguration without self-intersection, and which families of planar shapes guarantee universal foldability, where every chain is guaranteed to have a connected configuration space. Previously, only obtuse triangles were known to admit locked shapes, and only line segments were known to guarantee universal foldability. We show that a surprisingly general family of planar shapes, called slender adornments, guarantees universal foldability: roughly, the inward normal from any point on the shape's boundary should intersect the line segment connecting the two incident hinges. In constrast, we show that isosceles triangles with any desired apex angle less than 90 degrees admit locked chains, which is precisely the threshold beyond which the inward-normal property no longer holds.}
+,  workarea = Geometry
+}
+
+@inproceedings{rs-pdpts-05
+,  author = {G{\"u}nter Rote and Andr\'e Schulz}
+,  title = {A pointed {Delaunay} pseudo-triangulation of a simple polygon}
+,  year = {2005}
+,  pages = {77--80}
+,  booktitle = {Abstracts of the 21st European Workshop on Computational Geometry}
+,  url = {http://page.mi.fu-berlin.de/rote/Papers/pdf/A+pointed+Delaunay+pseudo-triangulation+of+a+simple+polygon.pdf}
+,  workarea = Computational_Geometry
+}
+
+@inproceedings{cgkr-mpsre-05w
+,  author = {Sergio Cabello and Panos Giannopoulos and Christian Knauer and G{\"u}nter Rote}
+,  title = {Matching point sets with respect to the earth mover's distance}
+,  year = {2005}
+,  pages = {57--60}
+,  booktitle = {Abstracts of the 21st European Workshop on Computational Geometry}
+,  url = {http://page.mi.fu-berlin.de/rote/Papers/pdf/Matching+point+sets+with+respect+to+the+earth+movers+distance.pdf}
+,  workarea = Geometric_Optimization_Problems
+}
+
+@inproceedings{cgkr-mpsre-05
+,  author = {Sergio Cabello and Panos Giannopoulos and Christian Knauer and G{\"u}nter Rote}
+,  title = {Matching point sets with respect to the earth mover's distance}
+,  year = {2005}
+,  volume = {3669}
+,  pages = {520--531}
+,  booktitle = {Algorithms---ESA 2005. Proc. Thirteenth Annual European Symposium on Algorithms, Palma de Mallorca}
+,  editor = {Gerth St\o lting Brodal and Stefano Leonardi}
+,  publisher = {Springer-Verlag}
+,  series = {Lecture Notes in Computer Science}
+,  url = {http://page.mi.fu-berlin.de/rote/Papers/pdf/Matching+point+sets+with+respect+to+the+earth+movers+distance.pdf}
+,  doi = {doi:10.1007/11561071_47}
+,  workarea = Geometric_Optimization_Problems
+}
+
+@article{cgkr-mpsre-08
+,  author = {Sergio Cabello and Panos Giannopoulos and Christian Knauer and G{\"u}nter Rote}
+,  title = {Matching point sets with respect to the {Earth Mover's Distance}}
+,  journal = {Computational Geometry, Theory and Applications}
+,  year = {2008}
+,  volume = {39}
+,  pages = {118--133}
+,  url = {http://page.mi.fu-berlin.de/rote/Papers/pdf/Matching+point+sets+with+respect+to+the+earth+movers+distance.pdf}
+,  doi = {doi:10.1016/j.comgeo.2006.10.001}
+,  abstract = {The Earth Mover's Distance (EMD) between two weighted point sets (point distributions) is a distance measure commonly used in computer vision for color-based image retrieval and shape matching. It measures the minimum amount of work needed to transform one set into the other one by weight transportation. We study the following shape matching problem: Given two weighted point sets $A$ and $B$ in the plane, compute a rigid motion of $A$ that minimizes its Earth Mover's Distance to $B$. No algorithm is known that computes an exact solution to this problem. We present simple FPTASs and polynomial-time $(2 + \varepsilon )$-approximation algorithms for the minimum Euclidean EMD between $A$ and $B$ under translations and rigid motions.}
+,  workarea = Geometric_Optimization_Problems
+}
+
+@article{rry-ubnst-09
+,  author = {Ares {Rib\'o Mor} and G{\"u}nter Rote and Xuerong Yong}
+,  title = {Upper bounds for the number of spanning trees of a planar graph}
+,  year = {2009}
+,  month = mar
+,  url = {http://page.mi.fu-berlin.de/rote/Papers/postscript/The+number+of+spanning+trees+in+a+planar+graph.ps}
+,  workarea = Geometric_Optimization_Problems
+}
+
+@inproceedings{r-nstpg-05
+,  author = {G{\"u}nter Rote}
+,  title = {The number of spanning trees in a planar graph}
+,  year = {2005}
+,  volume = {2}
+,  pages = {969--973}
+,  booktitle = {Oberwolfach Reports}
+,  publisher = {European Mathematical Society - Publishing House}
+,  url = {http://page.mi.fu-berlin.de/rote/Papers/postscript/The+number+of+spanning+trees+in+a+planar+graph.ps}
+,  abstract = {A planar graph with $n$ vertices has at most $5.333\ldots ^n$ spanning trees. If it has no triangle, it has at most $3.53^n$ spanning trees. If it ha no face cycle of length three or four it has at most $2.848^n$ spanning trees. These bounds are obtained with a probabilistic method. They are motivated by to the construction of 3-dimensional polytopes with a given combinatorial structure and with small integral vertex coordinates.}
+,  workarea = Combinatorics
+}
+
+@article{rr-lbmns-09
+,  author = {Ares {Rib\'o Mor} and G{\"u}nter Rote}
+,  title = {Lower bounds for the maximum number of spanning trees of a planar graph}
+,  year = {2009}
+,  month = mar
+,  abstract = {A planar graph with $n$ vertices can have as many as $5.029\ldots ^n$ spanning trees. If it has no triangle, it can still have $3.209^n$ spanning trees. If it has no triangle and quadrilateral face it can have as many as $2.561^n$ spanning trees. To get these bounds, we use the transfer matrix method and prove that periodic graphs with wrap-around edges, which can be embedded on a torus, have the same exponential growth rate as the corresponding planar graphs without wrap-around edges.}
+,  workarea = Combinatorics
+}
+
+@techreport{mr-mwtnh-08t
+,  author = {Wolfgang Mulzer and G{\"u}nter Rote}
+,  title = {Minimum-weight triangulation is {NP}-hard}
+,  year = {2008}
+,  month = feb
+,  number = {Technical report B-05-23-revised}
+,  institution = {Freie Universit{\"a}t Berlin, Institut f\"ur Informatik}
+,  pages = {45 pages}
+,  url = {http://page.mi.fu-berlin.de/rote/Papers/postscript/Minimum-weight+triangulation+is+NP-hard.ps}
+,  eprint = {arXiv:cs/0601002}
+,  workarea = Geometric_Optimization_Problems
+}
+
+@inproceedings{mr-mwtnh-06
+,  author = {Wolfgang Mulzer and G{\"u}nter Rote}
+,  title = {Minimum-weight triangulation is {NP}-hard}
+,  year = {2006}
+,  pages = {1--10}
+,  booktitle = {Proceedings of the 22nd Annual Symposium on Computational Geometry, Sedona}
+,  publisher = {Association for Computing Machinery}
+,  doi = {doi:10.1145/1137856.1137859}
+,  workarea = Geometric_Optimization_Problems
+}
+
+@article{mr-mwtnh-08
+,  author = {Wolfgang Mulzer and G{\"u}nter Rote}
+,  title = {Minimum-weight triangulation is {NP}-hard}
+,  journal = {Journal of the ACM}
+,  year = {2008}
+,  month = may
+,  volume = {55}
+,  issue = {2}
+,  pages = {Article 11, 29 pp.}
+,  url = {http://page.mi.fu-berlin.de/rote/Papers/postscript/Minimum-weight+triangulation+is+NP-hard.ps}
+,  doi = {doi:10.1145/1346330.1346336}
+,  abstract = {A triangulation of a planar point set is a maximal plane straight-line graph whose vertex set is the given set. In the {\it minimum-weight triangulation\/} (MWT) problem, we are looking for a triangulation of a given point set that minimizes the sum of the edge lengths. We prove that the decision version of this problem is NP-hard. We use a reduction from PLANAR-1-IN-3-SAT. The correct working of the gadgets is established with computer assistance, using dynamic programming on polygonal faces, as well as the $\beta $-skeleton heuristic to certify that certain edges belong to the minimum-weight triangulation. }
+,  workarea = Geometric_Optimization_Problems
+}
+
+@inproceedings{abkr-aod-06
+,  author = {Eyal Ackerman and Kevin Buchin and Christian Knauer and G{\"u}nter Rote}
+,  title = {Acyclic orientation of drawings}
+,  year = {2006}
+,  volume = {4059}
+,  pages = {266--277}
+,  booktitle = {Proceedings of the 10th Scandinavian Workshop on Algorithm Theory (SWAT)}
+,  editor = {Lars Arge and Rusins Freivalds}
+,  publisher = {Springer-Verlag}
+,  series = {Lecture Notes in Computer Science}
+,  doi = {doi:10.1007/11785293_26}
+,  workarea = Geometric_Optimization_Problems
+}
+
+@inproceedings{abkr-aod-06w
+,  author = {Eyal Ackerman and Kevin Buchin and Christian Knauer and G{\"u}nter Rote}
+,  title = {Acyclic orientation of drawings}
+,  year = {2006}
+,  pages = {207--210}
+,  booktitle = {Abstracts of the 22nd European Workshop on Computational Geometry}
+,  abstract = {Given a set of curves in the plane or a topological graph, we ask for an orientation of the curves or edges which induces an acyclic orientation on the corresponding planar map. Depending on the maximum number of crossings on a curve or an edge, we provide algorithms and hardness proofs for this problem.}
+,  workarea = Geometry
+}
+
+@inproceedings{r-plmt-06
+,  author = {G{\"u}nter Rote}
+,  title = {Piecewise linear {Morse} theory}
+,  year = {2006}
+,  volume = {3}
+,  pages = {696--698}
+,  booktitle = {Oberwolfach Reports}
+,  publisher = {European Mathematical Society - Publishing House}
+,  url = {http://page.mi.fu-berlin.de/rote/Papers/postscript/Piecewise+linear+Morse+theory.ps}
+,  abstract = {Classical Morse theory considers the topological changes of the level sets $M_{h} = \delimiter "4266308 \mskip \thinmuskip x\in M\mid f(x)=h\mskip \thinmuskip \delimiter "5267309 $ of a smooth function $f$ defined on a manifold $M$ as the height $h$ varies. At {\it critical points}, where the gradient of $f$ vanishes, the topology changes. These changes can be classified locally, and they can be related to global topological properties of $M$. Between critical values, the level sets vary smoothly. We prove that the same statement is true for {\it piecewise linear\/} functions in up to three variables: between critical values, all level sets are isotopic.}
+,  workarea = Geometry
+}
+
+@inproceedings{dkkr-bbopc-06w
+,  author = {Darko Dimitrov and Christian Knauer and Klaus Kriegel and G{\"u}nter Rote}
+,  title = {On the bounding boxes obtained by principal component analysis}
+,  year = {2006}
+,  pages = {193--196}
+,  booktitle = {Abstracts of the 22nd European Workshop on Computational Geometry}
+,  url = {http://page.mi.fu-berlin.de/rote/Papers/pdf/Upper+and+lower+bounds+on+the+quality+of+the+PCA+bounding+boxes.pdf}
+,  abstract = {Principle component analysis (PCA) is a commonly used to compute a bounding box of a point set in $\mathbb {R}^d$. In this paper we give bounds on the approximation factor of PCA bounding boxes of convex polygons in $\mathbb {R}^2$ (lower and upper bounds) and convex polyhedra in $\mathbb {R}^3$ (lower bound).}
+,  workarea = Geometry
+}
+
+@inproceedings{dkkr-ulbqp-07
+,  author = {Darko Dimitrov and Christian Knauer and Klaus Kriegel and G{\"u}nter Rote}
+,  title = {Upper and lower bounds on the quality of the {PCA} bounding boxes}
+,  year = {2007}
+,  pages = {185--192}
+,  booktitle = {WSCG'2007, Prof. 15th Int. Conf. in Central Europe on Computer Graphics, Visualization and Computer Vision}
+,  editor = {Jarek Rossignac and Vaclav Skala}
+,  url = {http://page.mi.fu-berlin.de/rote/Papers/pdf/Upper+and+lower+bounds+on+the+quality+of+the+PCA+bounding+boxes.pdf}
+,  abstract = {Principal component analysis (PCA) is commonly used to compute a bounding box of a point set in $\mathbb {R}^d$. The popularity of this heuristic lies in its speed, easy implementation and in the fact that usually, PCA bounding boxes approximate the minimum-volume bounding boxes quite well. In this paper we give a lower bound on the approximation factor of PCA bounding boxes of convex polytopes in arbitrary dimension, and an upper bound on the approximation factor of PCA bounding boxes of convex polygons in $\mathbb {R}^2$.}
+,  workarea = Geometry
+}
+
+@inproceedings{cr-ocg-07
+,  author = {Sergio Cabello and G{\"u}nter Rote}
+,  title = {Obnoxious centers in graphs}
+,  year = {2007}
+,  pages = {98--107}
+,  booktitle = {Proceedings of the 18th Annual ACM-SIAM Symposium on Discrete Algorithms (SODA), New Orleans}
+,  url = {http://page.mi.fu-berlin.de/rote/Papers/postscript/Obnoxious+centers+in+graphs.ps}
+,  doi = {doi:10.1145/1283383.1283395}
+,  abstract = {We consider the problem of finding obnoxious centers in graphs. For arbitrary graphs with $n$ vertices and $m$ edges, we give a randomized algorithm with $O(n\log ^2 n + m\log n)$ expected time. For planar graphs, we give algorithms with $O(n\log n)$ expected time and $O(n\log ^3 n)$ worst-case time. For graphs with bounded treewidth, we give an algorithm taking $O(n\log n)$ worst-case time. The algorithms make use of parametric search and several results for computing distances on graphs of bounded treewidth and planar graphs.}
+,  workarea = Optimization_Problems
+}
+
+@article{drs-aopcm-08
+,  author = {R. L. Scot Drysdale and G{\"u}nter Rote and Astrid Sturm}
+,  title = {Approximation of an open polygonal curve with a minimum number of circular arcs and biarcs}
+,  journal = {Computational Geometry, Theory and Applications}
+,  year = {2008}
+,  volume = {41}
+,  pages = {31--47}
+,  url = {http://page.mi.fu-berlin.de/rote/Papers/pdf/Approximation+of+an+open+polygonal+curve+with+a+minimum+number+of+circular+arcs+and+biarcs.pdf}
+,  doi = {doi:10.1016/j.comgeo.2007.10.009}
+,  abstract = {We present an algorithm for approximating a given open polygonal curve with a minimum number of circular arcs. In computer-aided manufacturing environments, the paths of cutting tools are usually described with circular arcs and straight line segments. Greedy algorithms for approximating a polygonal curve with curves of higher order can be found in the literature. Without theoretical bounds it is difficult to say anything about the quality of these algorithms. We present an algorithm which finds a series of circular arcs that approximate the polygonal curve while remaining within a given tolerance region. This series contains the minimum number of arcs of any such series. Our algorithm takes $ O (n^2 \log n)$ time for an original polygonal chain with $n$ vertices. 
+Using a similar approach, we design an algorithm with a runtime of $ O (n^2 \log n)$, for computing a tangent-continuous approximation with the minimum number of biarcs, for a sequence of points with given tangent directions.}
+,  workarea = Geometric_Optimization_Problems
+}
+
+@inproceedings{drs-aopcm-06
+,  author = {R. L. Scot Drysdale and G{\"u}nter Rote and Astrid Sturm}
+,  title = {Approximation of an open polygonal curve with a minimum number of circular arcs}
+,  year = {2006}
+,  pages = {25--28}
+,  booktitle = {Abstracts of the 22nd European Workshop on Computational Geometry}
+,  url = {http://page.mi.fu-berlin.de/rote/Papers/pdf/Approximation+of+an+open+polygonal+curve+with+a+minimum+number+of+circular+arcs.pdf}
+,  workarea = Geometric_Optimization_Problems
+}
+
+@inproceedings{rz-msnf-07
+,  author = {G{\"u}nter Rote and Martin Zachariasen}
+,  title = {Matrix scaling by network flow}
+,  year = {2007}
+,  pages = {848--854}
+,  booktitle = {Proceedings of the 18th Annual ACM-SIAM Symposium on Discrete Algorithms (SODA), New Orleans}
+,  url = {http://page.mi.fu-berlin.de/rote/Papers/postscript/Matrix+scaling+by+network+flow.ps}
+,  doi = {doi:10.1145/1283383.1283474}
+,  abstract = {A given nonnegative $n\times n$ matrix $A=(a_{ij})$ is to be scaled, by multiplying its rows and columns by unknown positive multipliers $\lambda _i$ and $\mu _j$, such that the resulting matrix $(a_{ij}\lambda _i\mu _j)$ has specified row and column sums $r_i$ and $s_j$. We give an algorithm that achieves the desired row and column sums with a maximum absolute error $\varepsilon $ in $O(n^4(\log n + \log \frac h\varepsilon ))$ steps, where $h$ is the overall total of the result matrix. Our algorithm is a scaling algorithm. It solves a sequence of more and more refined discretizations. The discretizations are minimum-cost network flow problems with convex piecewise linear costs. These discretizations are interesting in their own right because they arise in proportional elections.}
+,  workarea = Optimization_Problems
+}
+
+@incollection{bcmrv-ms-06
+,  author = {Jean-Daniel Boissonnat and David Cohen-Steiner and Bernard Mourrain and G{\"u}nter Rote and Gert Vegter}
+,  title = {Meshing of surfaces}
+,  year = {2006}
+,  chapter = {5}
+,  pages = {181--229}
+,  booktitle = {Effective Computational Geometry for Curves and Surfaces}
+,  editor = {Jean-Daniel Boissonnat and Monique Teillaud}
+,  publisher = {Springer-Verlag}
+,  series = {Mathematics and Visualization}
+,  url = {http://page.mi.fu-berlin.de/rote/Papers/postscript/Meshing+of+surfaces.ps}
+,  doi = {doi:10.1007/978-3-540-33259-6_5}
+,  abstract = {Meshing is the process of computing, for a given surface, a representation consisting of pieces of simple surface patches, like triangles. This survey discusses all currently known surface (and curve) meshing algorithms that come with correctness and quality guarantees.}
+,  workarea = Computational_Geometry
+}
+
+@incollection{rv-cti-06
+,  author = {G{\"u}nter Rote and Gert Vegter}
+,  title = {Computational topology: an introduction}
+,  year = {2006}
+,  chapter = {7}
+,  pages = {277--312}
+,  booktitle = {Effective Computational Geometry for Curves and Surfaces}
+,  editor = {Jean-Daniel Boissonnat and Monique Teillaud}
+,  publisher = {Springer-Verlag}
+,  series = {Mathematics and Visualization}
+,  url = {http://page.mi.fu-berlin.de/rote/Papers/postscript/Computational+topology:+an+introduction.ps}
+,  doi = {doi:10.1007/978-3-540-33259-6_7}
+,  abstract = {This is an introduction to combinatorial topology, with an emphasis on subjects that are of interest for computational geometry in two and three dimensions. It covers the notions of homotopy and isotopy, simplicial homology, Betti numbers, and basic results from Morse Theory.}
+,  workarea = Computational_Geometry
+}
+
+@incollection{rss-ptas-08
+,  author = {G{\"u}nter Rote and Francisco Santos and Ileana Streinu}
+,  title = {Pseudo-triangulations --- a survey}
+,  year = {2008}
+,  volume = {453}
+,  pages = {343--410}
+,  booktitle = {Surveys on Discrete and Computational Geometry---Twenty Years Later}
+,  editor = {Jacob E. Goodman and J\'anos Pach and Richard Pollack}
+,  publisher = {American Mathematical Society}
+,  series = {Contemporary Mathematics}
+,  url = {http://page.mi.fu-berlin.de/rote/Papers/postscript/Pseudo-triangulations+-+a+survey.ps}
+,  eprint = {arXiv:math/0612672}
+,  abstract = {A pseudo-triangle is a simple polygon with three convex vertices, and a pseudo-triangulation is a tiling of a planar region into pseudo-triangles. Pseudo-triangulations appear as data structures in computational geometry, as planar bar-and-joint frameworks in rigidity theory and as projections of locally convex surfaces. This survey of current literature includes combinatorial properties and counting of special classes, rigidity theoretical results, representations as polytopes, straight-line drawings from abstract versions called combinatorial pseudo-triangulations, algorithms and applications of pseudo-triangulations. }
+,  workarea = Computational_Geometry
+}
+
+@inproceedings{abkrt-wgpdh-07
+,  author = {Helmut Alt and Hans Bodlaender and Marc van Kreveld and G{\"u}nter Rote and Gerard Tel}
+,  title = {Wooden geometric puzzles: design and hardness proofs}
+,  year = {2007}
+,  volume = {4475}
+,  pages = {16--29}
+,  booktitle = {Proceedings of the fourth conference on Fun with Algorithms (FUN 2007)}
+,  editor = {Pilu Crescenzi and Giuseppe Prencipe and Geppino Pucci}
+,  publisher = {Springer-Verlag}
+,  series = {Lecture Notes in Computer Science}
+,  url = {http://page.mi.fu-berlin.de/rote/Papers/pdf/Wooden+geometric+puzzles:+design+and+hardness+proofs.pdf}
+,  doi = {doi:10.1007/978-3-540-72914-3_4}
+,  workarea = Computational_Geometry
+}
+
+@article{abkrt-wgpdh-09
+,  author = {Helmut Alt and Hans Bodlaender and Marc van Kreveld and G{\"u}nter Rote and Gerard Tel}
+,  title = {Wooden geometric puzzles: design and hardness proofs}
+,  journal = {Theory of Computing Systems}
+,  year = {2009}
+,  volume = {44}
+,  pages = {160--174}
+,  url = {http://page.mi.fu-berlin.de/rote/Papers/pdf/Wooden+geometric+puzzles:+design+and+hardness+proofs.pdf}
+,  doi = {doi:10.1007/s00224-008-9104-3}
+,  abstract = {We discuss some new geometric puzzles and the complexity of their extension to arbitrary sizes. For gate puzzles and two-layer puzzles we prove NP-completeness of solving them. Not only the solution of puzzles leads to interesting questions, but also puzzle design gives rise to interesting theoretical questions. This leads to the search for instances of partition that use only integers and are uniquely solvable. We show that instances of polynomial size exist with this property. This result also holds for partition into $k$ subsets with the same sum: We construct instances of $n$ integers with subset sum $O(n^{k+1})$, for fixed $k$.}
+,  workarea = Computational_Geometry
+}
+
+@inproceedings{bprsv-casp-07
+,  author = {Kevin Buchin and Simon Plantinga and G{\"u}nter Rote and Astrid Sturm and Gert Vegter}
+,  title = {Convex approximation by spherical patches}
+,  year = {2007}
+,  pages = {26--29}
+,  booktitle = {Abstracts of the 23rd European Workshop on Computational Geometry}
+,  workarea = Convex_Approximation
+}
+
+@inproceedings{bbkrw-hdiwd-07
+,  author = {Kevin Buchin and Maike Buchin and Christian Knauer and G{\"u}nter Rote and Carola Wenk}
+,  title = {How difficult is it to walk the dog?}
+,  year = {2007}
+,  pages = {170--173}
+,  booktitle = {Abstracts of the 23rd European Workshop on Computational Geometry}
+,  url = {http://page.mi.fu-berlin.de/rote/Papers/postscript/How+difficult+is+it+to+walk+the+dog.ps}
+,  abstract = {We study the complexity of computing the Fr\'echet distance (also called dog-leash distance) between two polygonal curves with a total number of $n$ vertices. For two polygonal curves in the plane we prove an $\Omega (n \log n)$ lower bound for the decision problem in the algebraic computation tree model allowing arithmetic operations and tests. Up to now only a $O(n^2)$ upper bound for the decision problem was known. 
+The lower bound extends to variants of the Fr\'echet distance such as the weak as well as the discrete Fr\'echet distance. For two polygonal curves in one dimension, we give a linear-time algorithm to compute their weak Fr\'echet distance.}
+,  workarea = Geometric_Optimization_Problems
+}
+
+@inproceedings{abkpr-tantm-07
+,  author = {Eyal Ackerman and Kevin Buchin and Christian Knauer and Rom Pinchasi and G{\"u}nter Rote}
+,  title = {There are not too many magic configurations}
+,  year = {2007}
+,  pages = {142--149}
+,  booktitle = {Proceedings of the 23rd Annual Symposium on Computational Geometry, Gyeongju, South Korea}
+,  publisher = {Association for Computing Machinery}
+,  url = {http://page.mi.fu-berlin.de/rote/Papers/postscript/There+are+not+too+many+magic+configurations.ps}
+,  doi = {doi:10.1145/1247069.1247098}
+,  workarea = Geometry
+}
+
+@article{abkpr-tantm-08
+,  author = {Eyal Ackerman and Kevin Buchin and Christian Knauer and Rom Pinchasi and G{\"u}nter Rote}
+,  title = {There are not too many magic configurations}
+,  journal = {Discrete and Computational Geometry}
+,  year = {2008}
+,  volume = {39}
+,  pages = {3--16}
+,  url = {http://page.mi.fu-berlin.de/rote/Papers/postscript/There+are+not+too+many+magic+configurations.ps}
+,  doi = {doi:10.1007/s00454-007-9023-0}
+,  workarea = Geometry
+}
+
+@incollection{abkpr-tantm-08b
+,  author = {Eyal Ackerman and Kevin Buchin and Christian Knauer and Rom Pinchasi and G{\"u}nter Rote}
+,  title = {There are not too many magic configurations}
+,  year = {2008}
+,  pages = {1--14}
+,  booktitle = {Twentieth Anniversary Volume---Discrete \& Computational Geometry}
+,  editor = {Jacob E. Goodman and J\'anos Pach and Richard Pollack}
+,  publisher = {Springer-Verlag}
+,  url = {http://page.mi.fu-berlin.de/rote/Papers/postscript/There+are+not+too+many+magic+configurations.ps}
+,  doi = {doi:10.1007/978-0-387-87363-3_1}
+,  abstract = {A finite planar point set $P$ is called a magic configuration if there is an assignment of positive weights to the points of $P$ such that, for every line $l$ determined by $P$, the sum of the weights of all points of $P$ on $l$ equals 1. We prove a conjecture of Murty from 1971 and show that a magic configuration consists either of points in general position, or all points are collinear, with the possible exception of one point, or they form a special configuration of 7 points.}
+,  workarea = Geometry
+}
+
+@inproceedings{rrs-e3psg-07
+,  author = {Ares {Rib\'o Mor} and G{\"u}nter Rote and Andr\'e Schulz}
+,  title = {Embedding 3-polytopes on a small grid}
+,  year = {2007}
+,  pages = {112--118}
+,  booktitle = {Proceedings of the 23rd Annual Symposium on Computational Geometry, Gyeongju, South Korea}
+,  publisher = {Association for Computing Machinery}
+,  url = {http://page.mi.fu-berlin.de/rote/Papers/pdf/Small+grid+embeddings+of+3-polytopes.pdf}
+,  doi = {doi:10.1145/1247069.1247086}
+,  workarea = Geometry
+}
+
+@article{rrs-sge3p-09
+,  author = {Ares {Rib\'o Mor} and G{\"u}nter Rote and Andr\'e Schulz}
+,  title = {Small grid embeddings of 3-polytopes}
+,  year = {2009}
+,  month = aug
+,  url = {http://page.mi.fu-berlin.de/rote/Papers/pdf/Small+grid+embeddings+of+3-polytopes.pdf}
+,  eprint = {arXiv:0908.0488}
+,  note = {submitted}
+,  abstract = {We present a constructive method for embedding a 3-connected planar graph with $n$ vertices as a 3-polytope with small integer coordinates. The embedding will need no coordinate greater than $O(2^{7.55n})=O(188^n)$. Finding a plane embedding which supports an equilibrium stress is the crucial part in the construction. We have to guarantee that the size of the coordinates and the stresses are small. This is achieved by extending Tutte's spring embedding method. }
+,  workarea = Geometry
+}
+
+@inproceedings{dkkr-nubqp-07
+,  author = {Darko Dimitrov and Christian Knauer and Klaus Kriegel and G{\"u}nter Rote}
+,  title = {New upper bounds on the quality of {PCA} bounding boxes in {$R^2$} and {$R^3$}}
+,  year = {2007}
+,  pages = {275--283}
+,  booktitle = {Proceedings of the 23rd Annual Symposium on Computational Geometry, Gyeongju, South Korea}
+,  publisher = {Association for Computing Machinery}
+,  url = {http://page.mi.fu-berlin.de/rote/Papers/pdf/Bounds+on+the+quality+of+the+PCA+bounding+boxes.pdf}
+,  doi = {doi:10.1145/1247069.1247119}
+,  workarea = Geometry
+}
+
+@inproceedings{dkkr-nubqp-07w
+,  author = {Darko Dimitrov and Christian Knauer and Klaus Kriegel and G{\"u}nter Rote}
+,  title = {New upper bounds on the quality of {PCA} bounding boxes in {$R^2$} and {$R^3$}}
+,  year = {2007}
+,  pages = {122--125}
+,  booktitle = {Abstracts of the 23rd European Workshop on Computational Geometry}
+,  url = {http://page.mi.fu-berlin.de/rote/Papers/pdf/Bounds+on+the+quality+of+the+PCA+bounding+boxes.pdf}
+,  workarea = Geometry
+}
+
+@article{dkkr-bqpbb-09
+,  author = {Darko Dimitrov and Christian Knauer and Klaus Kriegel and G{\"u}nter Rote}
+,  title = {Bounds on the quality of the {PCA} bounding boxes}
+,  journal = {Computational Geometry, Theory and Applications}
+,  year = {2009}
+,  volume = {42}
+,  pages = {772--789}
+,  url = {http://page.mi.fu-berlin.de/rote/Papers/pdf/Bounds+on+the+quality+of+the+PCA+bounding+boxes.pdf}
+,  doi = {doi:10.1016/j.comgeo.2008.02.007}
+,  abstract = {Principal component analysis (PCA) is commonly used to compute a bounding box of a point set in $\mathbb {R}^d$. The popularity of this heuristic lies in its speed, easy implementation and in the fact that usually, PCA bounding boxes approximate the minimum-volume bounding boxes quite well. 
+There are examples of discrete points sets in the plane showing that the worst case ratio tends to infinity. Thus, we consider PCA bounding boxes for continuous sets, especially for the convex hull of a point set. We contribute new upper bounds on the approximation factor of PCA bounding boxes of convex sets in $\mathbb {R}^2$ and $\mathbb {R}^3$.}
+,  workarea = Geometry
+}
+
+@inproceedings{arsv-pdpg-07
+,  author = {Oswin Aichholzer and G{\"u}nter Rote and Andr{\'e} Schulz and Birgit Vogtenhuber}
+,  title = {Pointed drawings of planar graphs}
+,  year = {2007}
+,  pages = {237--240}
+,  booktitle = {Proceedings of the 19th Canadian Conference on Computational Geometry, Ottawa}
+,  editor = {Prosenjit Bose}
+,  url = {http://page.mi.fu-berlin.de/rote/Papers/pdf/Pointed+drawings+of+planar+graphs.pdf}
+,  workarea = Geometry
+}
+
+@article{arsv-pdpg-08
+,  author = {Oswin Aichholzer and G{\"u}nter Rote and Andr{\'e} Schulz and Birgit Vogtenhuber}
+,  title = {Pointed drawings of planar graphs}
+,  journal = {Computational Geometry, Theory and Applications}
+,  year = {2008}
+,  month = mar
+,  url = {http://page.mi.fu-berlin.de/rote/Papers/pdf/Pointed+drawings+of+planar+graphs.pdf}
+,  note = {submitted}
+,  abstract = {We study the problem how to draw a planar graph such that every vertex is incident to an angle greater than $\pi $. In general a straight-line embedding can not guarantee this property. We present algorithms which construct such drawings with either tangent-continuous biarcs or quadratic B\'ezier curves (parabolic arcs), even if the positions of the vertices are predefined by a given plane straight-line embedding of the graph. Moreover, the graph can be embedded with circular arcs if the vertices can be placed arbitrarily.}
+,  workarea = Geometry
+}
+
+@article{pr-msacl-09
+,  author = {Rom Pinchasi and G{\"u}nter Rote}
+,  title = {On the maximum size of an anti-chain of linearly separable sets and convex pseudo-discs}
+,  journal = {Israel Journal of Mathematics}
+,  year = {2009}
+,  volume = {172}
+,  pages = {337--348}
+,  url = {http://page.mi.fu-berlin.de/rote/Papers/postscript/On+the+maximum+size+of+an+anti-chain+of+linearly+separable+sets+and+convex+pseudo-discs.ps}
+,  eprint = {arXiv:0707.0311}
+,  doi = {doi:10.1007/s11856-009-0076-z}
+,  abstract = {We show that the maximum cardinality of an anti-chain composed of intersections of a given set of $n$ points in the plane with half-planes is close to $n^2$. We approach this problem by establishing the equivalence with the problem of the maximum monotone path in an arrangement of $n$ lines. For a related problem on antichains in families of convex pseudo-discs we can establish the precise asymptotic bound: it is quadratic in $n$. The sets in such a family are characterized as intersections of a given set of $n$ points with convex sets, such that the difference between the convex hulls of any two sets is nonempty and connected.}
+,  workarea = Geometry
+}
+
+@inproceedings{cgkr-gcfpt-08
+,  author = {Sergio Cabello and Panos Giannopoulos and Christian Knauer and G{\"u}nter Rote}
+,  title = {Geometric clustering: fixed-parameter tractability and lower bounds with respect to the dimension}
+,  year = {2008}
+,  pages = {836--843}
+,  booktitle = {Proceedings of the 19th Annual ACM-SIAM Symposium on Discrete Algorithms (SODA), San Francisco}
+,  url = {http://page.mi.fu-berlin.de/rote/Papers/pdf/Geometric+clustering:+fixed-parameter+tractability+and+lower+bounds+with+respect+to+the+dimension.pdf}
+,  doi = {doi:10.1145/1347082.1347174}
+,  abstract = {We present an algorithm for finding the smallest side length for 3 axis-aligned cubes that cover a given $n$-point set in $d$ dimensions that runs in $O(n\log n)$ time for any fixed dimension $d$. This shows that the problem is fixed-parameter tractable when parameterized with $d$. On the other hand, using tools from parameterized complexity theory, we show that this is unlikely to be the case with the $k$-center problem in the Euclidean metric, for any $k>1$. In particular, we prove that deciding whether a given $d$-dimensional set of $n$ points can be covered by the union of 2 balls of given radius is W[1]-hard with respect to $d$, and thus not fixed-parameter tractable unless FPT=W[1].}
+,  workarea = Geometric_Optimization_Problems
+}
+
+@article{cgkmr-gcfpt-10
+,  author = {Sergio Cabello and Panos Giannopoulos and Christian Knauer and D\'aniel Marx and G{\"u}nter Rote}
+,  title = {Geometric clustering: fixed-parameter tractability and lower bounds with respect to the dimension}
+,  journal = {ACM Transactions on Algorithms}
+,  year = {2010}
+,  url = {http://page.mi.fu-berlin.de/rote/Papers/pdf/Geometric+clustering:+fixed-parameter+tractability+and+lower+bounds+with+respect+to+the+dimension.pdf}
+,  note = {to appear}
+,  abstract = {We present an algorithm for finding the smallest side length for 3 axis-aligned cubes that cover a given $n$-point set in $d$ dimensions in $O(6^ddn\log (dn))$ time. This shows that the problem is fixed-parameter tractable when parameterized with $d$. On the other hand, using tools from parameterized complexity theory, we show that this is unlikely to be the case for 4 cubes, and with the $k$-center problem in the Euclidean metric, for any $k>1$. In particular, we prove that deciding whether a given $d$-dimensional set of $n$ points can be covered by the union of 2 balls of given radius, or by 4 axis-aligned cubes of given side length, is W[1]-hard with respect to $d$, and thus not fixed-parameter tractable unless FPT=W[1].}
+,  workarea = Geometric_Optimization_Problems
+}
+
+@inproceedings{aahkprsv-spia-08
+,  author = {Oswin Aichholzer and Franz Aurenhammer and Thomas Hackl and Bernhard Kornberger and Simon Plantinga and G{\"u}nter Rote and Astrid Sturm and Gert Vegter}
+,  title = {Seed polytopes for incremental approximation}
+,  year = {2008}
+,  pages = {13--16}
+,  booktitle = {Abstracts of the 24th European Workshop on Computational Geometry}
+,  url = {http://page.mi.fu-berlin.de/rote/Papers/postscript/Recovering+structure+from+r-sampled+objects.ps}
+,  workarea = Geometric_Optimization_Problems
+}
+
+@article{aakprsv-rsrso-09
+,  author = {Oswin Aichholzer and Franz Aurenhammer and Bernhard Kornberger and Simon Plantinga and G{\"u}nter Rote and Astrid Sturm and Gert Vegter}
+,  title = {Recovering structure from $r$-sampled objects}
+,  journal = {Computer Graphics Forum}
+,  year = {2009}
+,  volume = {28}
+,  pages = {1349--1360}
+,  booktitle = {Eurographics Symposium on Geometry Processing}
+,  editor = {Marc Alexa and Michael Kazhdan}
+,  url = {http://page.mi.fu-berlin.de/rote/Papers/postscript/Recovering+structure+from+r-sampled+objects.ps}
+,  doi = {doi:10.1111/j.1467-8659.2009.01512.x}
+,  abstract = {For a surface $F$ in 3-space that is represented by a set $S$ of sample points, we construct a coarse approximating polytope $P$ that uses a subset of $S$ as its vertices and preserves the topology of $F$. In contrast to surface reconstruction we do not use all the sample points, but we try to use as few points as possible. Such a polytope $P$ is useful as a {\it seed polytope\/} for starting an incremental refinement procedure to generate better and better approximations of $F$ based on interpolating subdivision surfaces or e.g.\ B\'ezier patches. 
+Our algorithm starts from an {\it $r$-sample\/} $S$ of $F$. Based on $S$, a set of surface covering balls with maximal radii is calculated such that the topology is retained. From the weighted $\alpha $-shape of a proper subset of these highly overlapping surface balls we get the desired polytope. As there is a rather large range for the possible radii for the surface balls, the method can be used to construct triangular surfaces from point clouds in a scalable manner. We also briefly sketch how to combine parts of our algorithm with existing medial axis algorithms for balls, in order to compute stable medial axis approximations with scalable level of detail.}
+,  workarea = Geometric_Optimization_Problems
+}
+
+@inproceedings{krs-sipqs-08
+,  author = {Christian Knauer and G{\"u}nter Rote and Lena Schlipf}
+,  title = {Shortest inspection-path queries in simple polygons}
+,  year = {2008}
+,  pages = {153--156}
+,  booktitle = {Abstracts of the 24th European Workshop on Computational Geometry}
+,  url = {http://page.mi.fu-berlin.de/rote/Papers/pdf/Shortest+inspection-path+queries+in+simple+polygons.pdf}
+,  abstract = {We preprocess a simple polygon $P$ to quickly determine the shortest path from a fixed source point in $P$ to some point visible from a query point in $P$. For a polygon with $n$ vertices, our data structure answers these {\it inspection-path queries\/} in logarithmic time, has linear size, and can be computed in linear time. For shortest inspection paths to {\it two\/} query points, the queries can be answered in logarithmic time, using quadratic space and quadratic preprocessing time.}
+,  workarea = Computational_Geometry
+}
+
+@inproceedings{bcgllrssw-dhgn-09
+,  author = {Kevin Buchin and Sergio Cabello and Joachim Gudmundsson and Maarten L\"offler and Jun Luo and G{\"u}nter Rote and Rodrigo I. Silveira and Bettina Speckmann and Thomas Wolle}
+,  title = {Detecting hotspots in geographic networks}
+,  year = {2009}
+,  pages = {217--231}
+,  booktitle = {Proceedings of the 12th AGILE International Conference on Geographic Information Science, Hannover, Germany, June 2009}
+,  editor = {Monika Sester and Lars Bernard and Volker Paelke}
+,  publisher = {Springer-Verlag}
+,  series = {Lecture Notes in Geoinformation and Cartography}
+,  url = {http://page.mi.fu-berlin.de/rote/Papers/pdf/Finding+the+most+relevant+fragments+in+networks.pdf}
+,  doi = {doi:10.1007/978-3-642-00318-9_11}
+,  abstract = {We study a cluster-identification type problem on networks motivated by applications in geographical analysis. Given a network $N$ (a connected graph with positive edge lengths) together with a set of sites, which lie on the edges or vertices of $N$, we look for a connected subnetwork $F$ of $N$ of small total length that contains many sites. The edges of $F$ can form parts of the edges of $N$. 
+We consider different variants of this problem where $N$ is either a general graph or restricted to a tree, and the subnetwork $F$ that we are looking for is either a simple path, a path with self-intersections at vertices, or a tree. We give polynomial-time algorithms, NP-hardness and NP-completeness proofs, approximation algorithms, and also fixed-parameter tractable algorithms.}
+,  workarea = Geometric_Optimization_Problems
+}
+
+@article{bcgllrssw-fmrfn-09
+,  author = {Kevin Buchin and Sergio Cabello and Joachim Gudmundsson and Maarten L\"offler and Jun Luo and G{\"u}nter Rote and Rodrigo I. Silveira and Bettina Speckmann and Thomas Wolle}
+,  title = {Finding the most relevant fragments in networks}
+,  year = {2009}
+,  month = oct
+,  pages = {21 pages}
+,  url = {http://page.mi.fu-berlin.de/rote/Papers/pdf/Finding+the+most+relevant+fragments+in+networks.pdf}
+,  note = {submitted}
+,  abstract = {We study a point pattern detection problem on networks, motivated by applications in geographical analysis, such as crime hotspot detection. Given a network $N$ (a connected graph with positive edge lengths) together with a set of sites, which lie on the edges or vertices of $N$, we look for a connected subnetwork $F$ of $N$ of small total length that contains many sites. The edges of $F$ can form parts of the edges of $N$. 
+We consider different variants of this problem where $N$ is either a general graph or restricted to a tree, and the subnetwork $F$ that we are looking for is either a simple path, a path with self-intersections at vertices, or a tree. We give polynomial-time algorithms, NP-hardness and NP-completeness proofs, approximation algorithms, and also fixed-parameter tractable algorithms.}
+,  workarea = Geometric_Optimization_Problems
+}
+
+@techreport{r-cissm-08
+,  author = {G{\"u}nter Rote}
+,  title = {Curve intersection by the {Subdivision}-{Supercomposition} {Method}}
+,  year = {2008}
+,  month = may
+,  number = {ACS-TR-361503-01}
+,  institution = {Freie Universit{\"a}t Berlin, Institut f\"ur Informatik}
+,  pages = {12 pages}
+,  url = {http://page.mi.fu-berlin.de/rote/Papers/postscript/Curve+intersection+by+the+Subdivision-Supercomposition+Method.ps}
+,  abstract = {We present a subdivision algorithm for computing the intersection of spline curves. The complexity depends on geometric quantities that represent the hardness of the computation in a natural way, like the angle of the intersection. The main idea is the application of the super-composition technique, which considers unions of adjacent parameter intervals that are not siblings in the subdivision tree. This approach addresses the common difficulty of non-termination of the classical subdivision approach when the intersection coincides with a subdivision point, but it avoids the numerical overhead associated to alternative methods like a random shift of the parameter.}
+,  workarea = Computational_Geometry
+}
+
+@inproceedings{efir-pptmc-08
+,  author = {Dania El-Khechen and Thomas Fevens and John Iacono and G{\"u}nter Rote}
+,  title = {Partitioning a polygon into two mirror congruent pieces}
+,  year = {2008}
+,  pages = {131--134}
+,  booktitle = {Proceedings of the 20th Canadian Conference on Computational Geometry, Montr\'eal}
+,  url = {http://cccg.ca/proceedings/2008/paper32.pdf}
+,  workarea = Computational_Geometry
+}
+
+@inproceedings{gkrw-fptlb-09
+,  author = {Panos Giannopoulos and Christian Knauer and G{\"u}nter Rote and Daniel Werner}
+,  title = {Fixed-parameter tractability and lower bounds for stabbing problems}
+,  year = {2009}
+,  month = mar
+,  pages = {281--284}
+,  booktitle = {Abstracts of the 25th European Workshop on Computational Geometry (EuroCG'09)}
+,  url = {http://page.mi.fu-berlin.de/rote/Papers/postscript/Fixed-parameter+tractability+and+lower+bounds+for+stabbing+problems.ps}
+,  workarea = Computational_Geometry
+}
+
+@article{gkrw-fptlb-09a
+,  author = {Panos Giannopoulos and Christian Knauer and G{\"u}nter Rote and Daniel Werner}
+,  title = {Fixed-parameter tractability and lower bounds for stabbing problems}
+,  year = {2009}
+,  month = jun
+,  url = {http://page.mi.fu-berlin.de/rote/Papers/postscript/Fixed-parameter+tractability+and+lower+bounds+for+stabbing+problems.ps}
+,  eprint = {arXiv:0906.3896}
+,  note = {submitted}
+,  abstract = {We study the parameterized complexity of several stabbing problems. We show that the (decision) problem of stabbing a set of axis-parallel unit squares with $k$ axis-parallel lines is W[1]- hard with respect to $k$, and thus, not fixed-parameter tractable unless W[1]=FPT. When the lines can have arbitrary directions, it is even W[1]-hard for disjoint squares. For stabbing disjoint unit squares with axis-parallel lines, we show that the problem is fixed-parameter tractable by giving an algorithm that runs in $O(n \log n)$ time for every fixed $k$.}
+,  workarea = Computational_Geometry
+}
+
+@inproceedings{r-tapm-09
+,  author = {G{\"u}nter Rote}
+,  title = {Two applications of point matching}
+,  year = {2009}
+,  month = mar
+,  pages = {187--189}
+,  booktitle = {Abstracts of the 25th European Workshop on Computational Geometry (EuroCG'09)}
+,  url = {http://page.mi.fu-berlin.de/rote/Papers/pdf/Two+applications+of+point+matching.pdf}
+,  abstract = {The two following problems can be solved by a reduction to a minimum-weight bipartite matching problem: (a) Floodlight illumination: We are given $n$ infinite wedges (sectors, spotlights) that can cover the whole plane when placed at the origin. They are to be assigned to $n$ given locations (in arbitrary order, but without rotation) such that they still cover the whole plane. (b) Convex partition: Partition a convex $m$-gon into $m$ convex parts, each part containing one of the edges and a given number of points from a given point set inside the polygon.}
+,  workarea = Computational_Geometry
+}
+
+@article{bbr-fgrhd-09
+,  author = {Ronnie Barequet and Gill Barequet and G{\"u}nter Rote}
+,  title = {Formulae and growth rates of high-dimensional polycubes}
+,  journal = {Electronic Notes in Discrete Mathematics}
+,  year = {2009}
+,  volume = {34}
+,  pages = {459--463}
+,  editor = {Jaroslav Ne\v{s}et\v{r}il and Andr\'e Raspaud}
+,  url = {http://page.mi.fu-berlin.de/rote/Papers/pdf/Formulae+and+growth+rates+of+high-dimensional+polycubes.pdf}
+,  doi = {doi:10.1016/j.endm.2009.07.076}
+,  workarea = Computational_Geometry
+}
+
+@article{bbr-fgrhd-09a
+,  author = {Ronnie Barequet and Gill Barequet and G{\"u}nter Rote}
+,  title = {Formulae and growth rates of high-dimensional polycubes}
+,  journal = {Combinatorica}
+,  year = {2009}
+,  month = apr
+,  pages = {17 pages}
+,  url = {http://page.mi.fu-berlin.de/rote/Papers/pdf/Formulae+and+growth+rates+of+high-dimensional+polycubes.pdf}
+,  note = {submitted}
+,  abstract = {A $d$-dimensional polycube is a facet-connected set of cubes in $d$ dimensions. Fixed polycubes are considered distinct if they differ in their shape or orientation. A {\it proper\/} $d$-dimensional polycube spans all the $d$ dimensions, that is, the convex hull of the centers of its cubes is $d$-dimensional. In this paper we prove rigorously some (previously conjectured) closed formulae for fixed (proper and improper) polycubes, and show that the growth-rate limit of the number of polycubes in $d$ dimensions is $2ed-o(d)$. We conjecture that it is asymptotically equal to $(2d-3)e+O(1/d)$.}
+,  workarea = Combinatorics
+}
+
+@inproceedings{gkr-pcsgp-09
+,  author = {Panos Giannopoulos and Christian Knauer and G{\"u}nter Rote}
+,  title = {The parameterized complexity of some geometric problems in unbounded dimension}
+,  year = {2009}
+,  month = sep
+,  volume = {5917}
+,  pages = {198--209}
+,  booktitle = {Proc. 4th Int. Workshop on Parameterized and Exact Computation---IWPEC 2009}
+,  editor = {Jianer Chen and Fedor V. Fomin}
+,  publisher = {Springer-Verlag}
+,  series = {Lecture Notes in Computer Science}
+,  eprint = {arXiv:0906.3469}
+,  doi = {doi:10.1007/978-3-642-11269-0_16}
+,  abstract = {We study the parameterized complexity of the following fundamental geometric problems with respect to the dimension $d$: 
+(i) Given $n$ points in $d$, compute their minimum enclosing cylinder. (ii) Given two $n$-point sets in $d$ dimensions, decide whether they can be separated by two hyperplanes. (iii) Given a system of $n$ linear inequalities with $d$ variables, find a maximum-size feasible subsystem. 
+We show that the decision versions of all these problems are W[1]-hard when parameterized by the dimension $d$, and hence not solvable in $O(f(d)n^c)$ time, for any computable function $f$ and constant $c$ (unless FPT=W[1]). Our reductions also give an $n^{\Omega (d)}$-time lower bound (under the Exponential Time Hypothesis).}
+,  workarea = Computational_Geometry
+}
+
+@inproceedings{ahhprsv-pgpc-09
+,  author = {Oswin Aichholzer and Thomas Hackl and Michael Hoffmann and Alexander Pilz and G{\"u}nter Rote and Bettina Speckmann and Birgit Vogtenhuber}
+,  title = {Plane graphs with parity constraints}
+,  year = {2009}
+,  month = aug
+,  volume = {5664}
+,  pages = {13--24}
+,  booktitle = {Algorithms and Data Structures Symposium---WADS 2009}
+,  editor = {Frank Dehne and Ian Munro and J\"org-R\"udiger Sack and Roberto Tamassia}
+,  publisher = {Springer-Verlag}
+,  series = {Lecture Notes in Computer Science}
+,  url = {http://page.mi.fu-berlin.de/rote/Papers/pdf/Plane+graphs+with+parity+constraints.pdf}
+,  doi = {doi:10.1007/978-3-642-03367-4_2}
+,  abstract = {Let $S$ be a set of $n$ points in general position in the plane. For each point of $S$ we are given a parity constraint, telling whether it should be even or odd. We study how well such constraints can be satisfied by various classes of planar graphs on $S$. Specifically, we show that we can always find a plane tree, a two-connected outerplanar graph, or a pointed pseudotriangulation that satisfies all but at most three parity constraints. With triangulations, we can satisfy about 2/3 of all parity constraints. 
+For a polygon with holes, it is NP-complete to decide whether it has a triangulation that satisfies all parity constraints on the vertices.}
+,  workarea = Geometry
+}
+
+@inproceedings{rs-rlpis-09
+,  author = {G{\"u}nter Rote and Andr\'e Schulz}
+,  title = {Resolving loads with positive interior stresses}
+,  year = {2009}
+,  month = aug
+,  volume = {5664}
+,  pages = {530--541}
+,  booktitle = {Algorithms and Data Structures Symposium---WADS 2009}
+,  editor = {Frank Dehne and Ian Munro and J\"org-R\"udiger Sack and Roberto Tamassia}
+,  publisher = {Springer-Verlag}
+,  series = {Lecture Notes in Computer Science}
+,  url = {http://page.mi.fu-berlin.de/rote/Papers/pdf/Resolving+loads+with+positive+interior+stresses.pdf}
+,  doi = {doi:10.1007/978-3-642-03367-4_46}
+,  abstract = {We consider the pair $(p_i,f_i)$ as a force with two-dimensional direction vector $f_i$ applied at the point $p_i$ in the plane. For a given set of forces we ask for a non-crossing geometric graph on the points $p_i$ that has the following property: there exists a weight assignment to the edges of the graph, such that for every $p_i$ the sum of the weighted edges (seen as vectors) around $p_i$ yields $-f_i$. As additional constraint we restrict ourselves to weights that are non-negative on every edge that is not on the convex hull of the point set. We show that (under a generic assumption) for any reasonable set of forces there is exactly one pointed pseudo-triangulation that fulfils the desired properties. Our results will be obtained by linear programming duality over the PPT-polytope. For the case where the forces appear only at convex hull vertices we show that the pseudo-triangulation that resolves the load can be computed as weighted Delaunay triangulation. Our observations lead to a new characterization of pointed pseudo-triangulations, structures that have been proven to be extremely useful in the design and analysis of efficient geometric algorithms. 
+As an application, we discuss how to compute the maximal locally convex function for a polygon whose corners lie on its convex hull. Our studies are motivated by the construction of discrete Laplace-Beltrami operators. }
+,  workarea = Geometry
+}
+
+@article{ahorrss-fgdbp-09
+,  author = {Oswin Aichholzer and Thomas Hackl and Dav\'\i{}d Orden and Pedro Ramos and G{\"u}nter Rote and Andr\'e Schulz and Bettina Speckmann}
+,  title = {Flip graphs of degree-bounded (pseudo-)triangulations}
+,  year = {2009}
+,  month = mar
+,  url = {http://page.mi.fu-berlin.de/rote/Papers/postscript/Flip+graphs+of+bounded-degree+triangulations.ps}
+,  eprint = {arXiv:0903.2184}
+,  abstract = {We study flip graphs of (pseudo-)triangulations whose maximum vertex degree is bounded by a constant $k$. In particular, we consider triangulations of sets of $n$ points in convex position in the plane and prove that their flip graph is connected if and only if $k > 6$; the diameter of the flip graph is $O(n^2)$. We also show that for general point sets, flip graphs of pointed pseudo-triangulations can be disconnected for $k < 10$, and flip graphs of triangulations can be disconnected for any $k$.}
+,  workarea = Geometry
+}
+
+@article{ahorrss-fgbdt-09
+,  author = {Oswin Aichholzer and Thomas Hackl and Dav\'\i{}d Orden and Pedro Ramos and G{\"u}nter Rote and Andr\'e Schulz and Bettina Speckmann}
+,  title = {Flip graphs of bounded-degree triangulations}
+,  journal = {Electronic Notes in Discrete Mathematics}
+,  year = {2009}
+,  volume = {34}
+,  pages = {509--513}
+,  editor = {Jaroslav Ne\v{s}et\v{r}il and Andr\'e Raspaud}
+,  url = {http://page.mi.fu-berlin.de/rote/Papers/postscript/Flip+graphs+of+bounded-degree+triangulations.ps}
+,  doi = {doi:10.1016/j.endm.2009.07.084}
+,  workarea = Geometry
+}
+
+@inproceedings{ar-cwsag-09
+,  author = {Tetsuo Asano and G{\"u}nter Rote}
+,  title = {Constant-working-space algorithms for geometric problems}
+,  year = {2009}
+,  pages = {87--90}
+,  booktitle = {Proceedings of the 21st Annual Canadian Conference on Computational Geometry, Vancouver}
+,  url = {http://page.mi.fu-berlin.de/rote/Papers/pdf/Constant-working-space+algorithms+for+geometric+problems.pdf}
+,  abstract = {We present an algorithm for constructing the Delaunay triangulation of $n$ given points in the plane. It runs in $O(n^2)$ time using only constant working space (more precisely, $O(\log n)$ bits in total) with input data on a read-only array. We apply it to construct the Voronoi diagram in $O(n^2)$ time and Euclidean minimum spanning tree in $O(n^3)$ time in the same model.}
+,  workarea = Computational_Geometry
+}
+
+@inproceedings{dfrssz-ipsma-09
+,  author = {Erik D. Demaine and S\'andor P. Fekete and G{\"u}nter Rote and Nils Schweer and Daria Schymura and Mariano Zelke}
+,  title = {Integer point sets minimizing average pairwise $\ell _1$ distance: What is the optimal shape of a town?}
+,  year = {2009}
+,  pages = {145--148}
+,  booktitle = {Proceedings of the 21st Annual Canadian Conference on Computational Geometry, Vancouver}
+,  url = {http://page.mi.fu-berlin.de/rote/Papers/postscript/Integer+point+sets+minimizing+average+pairwise+l1+distance:+what+is+the+optimal+shape+of+a+town.ps}
+,  workarea = Computational_Geometry
+}
+
+@article{dfrssz-ipsma-09a
+,  author = {Erik D. Demaine and S\'andor P. Fekete and G{\"u}nter Rote and Nils Schweer and Daria Schymura and Mariano Zelke}
+,  title = {Integer point sets minimizing average pairwise {$L_1$} distance: What is the optimal shape of a town?}
+,  journal = {Computational Geometry, Theory and Applications}
+,  year = {2009}
+,  month = nov
+,  url = {http://page.mi.fu-berlin.de/rote/Papers/postscript/Integer+point+sets+minimizing+average+pairwise+l1+distance:+what+is+the+optimal+shape+of+a+town.ps}
+,  note = {submitted}
+,  abstract = {An {\it $n$-town}, for a natural number $n$, is a group of $n$ buildings, each occupying a distinct position on a 2-dimensional integer grid. If we measure the distance between two buildings along the axis-parallel street grid, then an $n$-town has optimal shape if the sum of all pairwise Manhattan distances is minimized. This problem has been studied for {\it cities}, i.e., the limiting case of very large $n$. The optimal shape can be described by a differential equation. No closed-form solution is known. We show that optimal $n$-towns can be computed in $O(n^{7.5})$ time. This is also practically useful, as it allows us to compute optimal solutions up to $n=80$. }
+,  workarea = Geometric_Optimization_Problems
+}
+
+@article{acgr-lpl-09
+,  author = {Boris Aronov and Otfried Cheong and Xavier Goaoc and G{\"u}nter Rote}
+,  title = {Lines pinning lines}
+,  year = {2009}
+,  month = dec
+,  url = {http://page.mi.fu-berlin.de/rote/Papers/pdf/Lines+pinning+lines.pdf}
+,  eprint = {arXiv:1002.3294}
+,  note = {submitted}
+,  abstract = {A line $g$ is a transversal to a family $F$ of convex polytopes in 3-dimensional space if it intersects every member of $F$. If, in addition, $g$ is an isolated point of the space of line transversals to $F$, we say that $F$ is a pinning of $g$. We show that any minimal pinning of a line by convex polytopes such that no face of a polytope is coplanar with the line has size at most eight. If, in addition, the polytopes are disjoint, then it has size at most six. We completely characterize configurations of disjoint polytopes that form minimal pinnings of a line.}
+,  workarea = Geometric_Optimization_Problems
+}
+
+@inproceedings{r-plspm-10
+,  author = {G{\"u}nter Rote}
+,  title = {Partial least-squares point matching under translations}
+,  year = {2010}
+,  month = mar
+,  pages = {3 pages}
+,  booktitle = {26th European Workshop on Computational Geometry (EuroCG'10)}
+,  url = {http://page.mi.fu-berlin.de/rote/Papers/pdf/Partial+least-squares+point+matching+under+translations.pdf}
+,  note = {to appear}
+,  abstract = {We consider the problem of translating a given {\it pattern set\/} $B$ of size $m$, and matching every point of $B$ to some point of a larger {\it ground set\/} $A$ of size $n$ in an injective way, minimizing the sum of the squared distances between matched points. We show that when $B$ can only be translated along a line, there can be at most $m(n-m)+1$ different matchings as $B$ moves along the line, and hence the optimal translation can be found in polynomial time.}
+,  workarea = Geometric_Optimization_Problems
+}
+

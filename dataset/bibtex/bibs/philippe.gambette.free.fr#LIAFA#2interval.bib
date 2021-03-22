@@ -1,0 +1,555 @@
+%BibTex by Philippe Gambette - 20071008 - http://philippe.gambette.free.fr/LIAFA/
+
+@String{C = {Combinatorica}}
+@String{CN = {Congress Numerantium}}
+@String{DCG = {Discrete and Computational Geometry}}
+@String{DM = {Discrete Mathematics}}
+@String{DAM = {Discrete Applied Mathematics}}
+@String{DMTCS = {Discrete Mathematics and Theoretical Computer Science}}
+@string{ICOMP = {Information and Computation}}
+@String{IPL = {Information Processing Letters}}
+@String{JACM = {Journal of the ACM (JACM)}}
+@String{JADM = {SIAM Journal on Algebraic and Discrete Methods}}
+@String{JCTB = {Journal of Combinatorial Theory Series B}}
+@String{JCAM = {Journal of Computational and Applied Mathematics}}
+@String{JDM = {SIAM Journal on Discrete Mathematics}}
+@String{JAM = {SIAM Journal on Applied Mathematics}}
+@String{JGT = {Journal of Graph Theory}}
+@String{JMAA = {SIAM Journal on Matrix Analysis and Applications}}
+@String{JOA = {Journal of Algorithms}}
+@String{JOC = {SIAM Journal on Computing}}
+@String{LNCS = {Lecture Notes in Computer Science}}
+@String{TCS = {Theoretical Computer Science}}
+
+== Generalities about 2-interval graphs ==
+
+@Book{Golumbic1980,
+  author    = {Martin C. Golumbic},
+  title     = {Algorithmic Graph Theory and Perfect Graphs},
+  publisher = {Academic Press},
+  year      = 1980
+}
+
+@Misc{Gyarfas2003,
+  author    = {Andr\'as Gy{\'a}rf{\'a}s},
+  title     = {Combinatorics of intervals, preliminary version},
+  journal   = {IMA Summer Workshop on Combinatorics and Its Applications},
+  year      = 2003,  
+  note      = {\url{http://www.math.gatech.edu/news/events/ima/newag.pdf}},
+  bibupdate = 20061211,  
+}
+
+@Misc{Karlsson2005,
+  author    = {Ragnar Karlsson},
+  title     = {A Survey of Split Intervals and Related Graphs},
+  year      = 2005,
+  note      = {\url{http://www.hi.is/~rkk1/SplitSurvey.pdf}}
+  bibupdate = 20061211,  
+}
+
+
+== Interval number ==
+
+ * Definition
+ 
+@misc{MCGuigan1977,
+  author   = {Robert McGuigan},
+  note      = {Presentation at NSF-CBMS Conference at Colby College},
+  year      = 1977,
+}
+
+ * NP-completeness:
+
+@Article{WestShmoys1984,
+  author    = {Douglas B. West and David B. Shmoys},
+  title     = {Recognizing graphs with fixed interval number is {NP}-complete},
+  journal   = DAM,
+  volume    = 8,
+  year      = 1984,
+  pages     = {295-305},
+}
+
+@article{GyarfasWest1995,
+   author    = {Andr\'as Gy{\'a}rf{\'a}s and Douglas B. West},
+   title     = {Multitrack Interval Graphs},
+   journal   = CG,
+   year      = 1995,
+   volume    = 109,
+   pages     = {109-116},
+   note      = {\url{http://www.math.uiuc.edu/\~west/pubs/tracks.ps}},
+   bibupdate = 20070207,
+   comment   = {NP-completeness of recognizing 2-union graphs/2-track graphs}
+}
+
+ * Other:
+
+@Article{GriggsWest1979,
+  author    = {Jerrold R. Griggs and Douglas B. West},
+  title     = {Extremal values of the interval number of a graph},
+  journal   = JADM,
+  pages     = {1-7},
+  volume    = 1,
+  year      = 1979,
+}
+
+@Article{Griggs1979,
+  author    = {Jerrold R. Griggs},
+  title     = {Extremal values of the interval number of a graph II},
+  journal   = DM,
+  pages     = {37-47},
+  volume    = 28,
+  year      = 1979,
+}
+
+@article{TrotterHarary1979,
+  author    = {William T. Trotter and Frank Harary},
+  title     = {On double and multiple interval graphs},
+  journal   = JGT,
+  volume    = 3,
+  pages     = {205-211},
+  year      = 1979,
+}
+
+@article{HararyKabell1980,
+  author    = {Frank Harary and Jerald Allan Kabell},
+  title     = {An Intuitive Approach to Interval Numbers of Graphs},
+  journal   = {Mathematics Magazine},
+  volume    = 53,
+  number    = 1,
+  pages     = {39-44},
+  year      = 1980,
+  note      = {\url{http://links.jstor.org/sici?sici=0025-570X%28198001%2953%3A1%3C39%3AAIATIN%3E2.0.CO%3B2-F}},
+  bibupdate = 20070530,   
+}
+
+@Article{Maas1983a,
+  author    = {Christoph Maas},
+  title     = {Some results about the interval number of a graph},
+  journal   = DAM,
+  pages     = {99-102},
+  volume    = 6,
+  year      = 1983,
+  note      = {},
+  bibupdate = 20071008,
+  comment   = {},
+}
+
+@Article{Maas1983b,
+  author    = {Christoph Maas},
+  title     = {Determining the interval number of a triangle-free graph},
+  journal   = {Computing},
+  pages     = {347-354},
+  volume    = 31,
+  number    = 4,
+  year      = 1983,
+  note      = {\url{http://dx.doi.org/10.1007/BF02251237}},
+  bibupdate = 20071008,
+  comment   = {},
+}
+
+@Article{Maas1984,
+  author    = {Christoph Maas},
+  title     = {A lower bound for the interval number of a graph},
+  journal   = JCAM,
+  pages     = {65-69},
+  volume    = 10,
+  number    = 1,
+  year      = 1984,
+  note      = {},
+  bibupdate = 20071008,
+  comment   = {},
+}
+
+@Article{ErdosWest1985,
+  author    = {Paul Erd\"os and Douglas B. West},
+  title     = {A note on interval number of a graph},
+  journal   = DM,
+  volume    = 55,
+  pages     = {129-133},
+  year      = 1985,
+  note      = {\url{http://dx.doi.org/10.1016/0012-365X(85)90041-X}}
+}
+
+@Article{Andreae1987,
+  author    = {Thomas Andreae},
+  title     = {On the Interval Number of a Triangulated Graph},
+  journal   = JGT,
+  pages     = {273-280},
+  volume    = 11,
+  number    = 3,
+  year      = 1987,
+  note      = {\url{http://dx.doi.org/10.1002/jgt.3190110303}},
+  bibupdate = 20071008,
+  comment   = {},
+}
+
+@Article{SVW1987,
+  author    = {Jeremy R. Spinrad and Gopalakrishnan Vijayan and Douglas B. West},
+  title     = {An improved edge bound on the interval number of a graph},
+  journal   = JGT,
+  pages     = {447-449},
+  volume    = 11,
+  number    = 3,
+  year      = 1987,
+  note      = {\url{http://dx.doi.org/10.1002/jgt.3190110318}},
+  bibupdate = 20071008,
+  comment   = {},
+}
+
+@article{Scheinerman1988,
+  author    = {Edward R. Scheinerman},
+  title     = {On the interval number of a chordal graph},
+  journal   = JGT,
+  volume    = 12,
+  number    = 3,
+  year      = 1988,
+  pages     = {311-316},
+  note      = {\url{10.1002/jgt.3190120303}},
+  bibupdate = 20071008,
+}
+
+@Article{West1989,
+  author    = {Douglas B. West},
+  title     = {A short proof of the degree bound for interval number},
+  journal   = DM,
+  volume    = 73,
+  number    = 3,
+  pages     = {309-310},
+  note      = {\url{http://dx.doi.org/10.1016/0012-365X(89)90276-8}}
+  year      = 1989,
+}
+
+@article{Scheinerman1990,
+  author    = {Edward R. Scheinerman},
+  title     = {On the interval number of random graphs},
+  journal   = DM,
+  volume    = 82,
+  number    = 1,
+  year      = 1990,
+  pages     = {105-109},
+  note      = {},
+}
+
+@Article{Pluhar1995,
+  author    = {Andr{\'a}s Pluh{\'a}r},
+  title     = {Remarks on the interval number of graphs},
+  journal   = {Acta Cybernetica},
+  pages     = {125-129},
+  volume    = 12,
+  year      = 1995,
+  note      = {\url{www.inf.u-szeged.hu/\~pluhar/interval.ps}},
+  bibupdate = 20070530,
+  comment   = {},
+}
+
+@Article{MadejWest1995,
+  author    = {Tom Madej and Douglas B. West},
+  title     = {Interval number of special posets and random posets},
+  journal   = DM,
+  pages     = {67-74},
+  volume    = 144,
+  number    = {1-3},
+  year      = 1995,
+  note      = {\url{www.math.uiuc.edu/\~west/pubs/posint2.ps}},
+  alturl    = {\url{http://dx.doi.org/10.1016/0012-365X(94)00287-S}},
+  bibupdate = 20071008,
+  comment   = {},
+}
+
+
+@InProceedings{ChangWest1996,
+  author    = {Yi-Wu Chang and Douglas B. West},
+  title     = {Interval Number and Boxicity of Directed Graphs},
+  journal   = {Proceedings of Eighth International Conference on Graph Theory},
+  year      = 1996,
+  note      = {\url{http://www.math.uiuc.edu/\~west/pubs/digint.pdf}},
+  bibupdate = 20061211, 
+}
+
+@Article{BaloghPluhar1999,
+  author    = {J{\'o}zsef Balogh and Andr{\'a}s Pluh{\'a}r},
+  title     = {A Sharp Edge Bound on the Interval Number of a Graph},
+  journal   = GT,
+  pages     = {153-159},
+  volume    = 32,
+  year      = 1999,
+  note      = {\url{http://www.inf.u-szeged.hu/\~pluhar/ngw.ps}},
+  bibupdate = 20070212,
+  comment   = {},
+}
+
+@Article{KostochkaWest1999,
+  author    = {Alexandr V. Kostochka and Douglas B. West},
+  title     = {Every Outerplanar Graph is the Union of Two Interval Graphs},
+  journal   = CN,
+  volume    = 139,
+  pages     = {5-8},
+  year      = 1999,
+  note      = {\url{http://www.math.uiuc.edu/\~west/pubs/trackout.pdf}},
+  bibupdate = 20061211, 
+  comment   = {
+  decomposition of the outerplanar graph through breadth first search into
+  vertex sets at distance odd or even from some root. The 2 sets,
+  unions of disjoint paths, are placed on different lines,
+  then the edges between the two sets are translated using the
+  remaining interval of the 2-intervals.  
+  },
+}
+
+@phdthesis{Chen1999,
+  author    = {Mingjang Chen},
+  title     = {Interval numbers and related topics},
+  year      = 1999,
+  school    = {Department of Applied Mathematics, National Chiao Tung University,
+               Hsinch, Taiwan},
+  comment   = {},
+}
+
+@Article{BaloghPluhar2002,
+  author    = {J{\'o}zsef Balogh and Andr{\'a}s Pluh{\'a}r},
+  title     = {The Interval Number of Dense Graphs},
+  journal   = DM,
+  pages     = {423-429},
+  volume    = 256,
+  year      = 2002,
+  note      = {\url{http://www.inf.u-szeged.hu/\~pluhar/dense2.ps}},
+  bibupdate = 20070212,
+  comment   = {},
+}
+
+@Article{BOP2004,
+  author    = {J{\'o}zsef Balogh and Pascal Ochem and Andr{\'a}s Pluh{\'a}r},
+  title     = {On the Interval Number of Special Graphs},
+  journal   = JGT,
+  pages     = {241-253},
+  volume    = 46,
+  year      = 2004,
+  note      = {\url{http://www.inf.u-szeged.hu/\~pluhar/ieven.ps}},
+  bibupdate = 20070212,
+  comment   = {},
+}
+
+@Article{CCW2004,
+  author    = {Mingjang Chen and Gerard J. Chang and Douglas B. West},
+  title     = {Interval numbers of powers of block graphs},
+  journal   = DM,
+  pages     = {423-429},
+  volume    = 275,
+  year      = 2004,
+  note      = {\url{http://www.cc.nctu.edu.tw/\~mjchen/Publish/PB-west-revised.pdf}}
+  alturl    = {\url{http://dx.doi.org/10.1016/S0012-365X(03)00098-0}},
+  bibupdate = 20070212,
+  comment   = {},
+}
+
+ * Total Interval Number:
+
+@Article{KratzkeWest1993,
+  author    = {Thomas M. Kratzke and Douglas B. West},
+  title     = {The total interval number of a graph I: Fundamental Classes},
+  journal   = DM,
+  volume    = 118,
+  pages     = {145-156},
+  year      = 1993,
+}
+
+@Article{KratzkeWest1996,
+  author    = {T.M. Kratzke and Douglas B. West},
+  title     = {The total interval number of a graph II: Trees and complexity},
+  journal   = JDM,
+  volume    = 9,
+  year      = 1996,
+  pages     = {339-348},
+  note      = {\url{http://www.math.uiuc.edu/\~west/pubs/titrees.pdf}},
+  bibupdate = 20061211,
+}
+
+@Article{KostochkaWest1997,
+  author    = {Alexandr V. Kostochka and Douglas B. West},
+  title     = {Total Interval Number for Graphs with Bounded Degree},
+  journal   = JGT,
+  pages     = {79-84},
+  volume    = 25,
+  year      = 1997,
+  note      = {\url{http://www.math.uiuc.edu/\~west/pubs/timax.pdf}},
+  bibupdate = 20061211, 
+  comment   = {
+  },
+}
+
+
+== Maximum Independent Set problem ==
+
+ * NP-completeness:
+ 
+@Article{BNR1996,
+  author    = {Vineet Bafna and Babu O. Narayanan and R. Ravi},
+  title     = {Nonoverlapping local alignments (weighted independent sets of axis-parallel
+               rectangles)},
+  journal   = DAM,
+  pages     = {41-54},
+  volume    = 71,
+  number    = 1,
+  year      = 1996,
+  note      = {\url{http://www.gsia.cmu.edu/afs/andrew/gsia/ravi/WWW/public/rectangle.ps}},
+  comment   = {
++ section 1: introduction
++ section 2: motivation: DNA align
++ section 3: Independent set of 2-union graphs is NP-complete by reduction of 3SAT
++ section 4: MIS & ((d+1)-claw)-free graphs : t-opt heuristic algo of greedy improvements
++ approximation ratio < d/2+epsilon, not better than d/2
++ MWIS : t-opt ratio < d-1+1/d, not better than d-1-epsilon
+  },
+}
+
+@phdthesis{Vialette2001,
+  author    = {St\'ephane Vialette},
+  title     = {Aspects algorithmiques de la pr\'ediction des structures secondaires d'ARN},
+  year      = 2001,
+  school    = {Universit{\'e} Paris 7},
+  note      = {\url{http://philippe.gambette.free.fr/LIAFA/Vialette2001.htm}}
+  comment   = {Chapter 6 : 2-intervals},
+}
+
+ * On variants of 2-interval graphs
+
+@InProceedings{BHNSS2002,
+  author    = {Reuven Bar-Yehuda and Magn{\'u}s M. Halld{\'o}rson and Joseph Naor
+               and Hadas Shachnai and Irina Shapira},
+  title     = {Scheduling Split Intervals},
+  booktitle = {Proceedings of the 13th Annual ACM-SIAM Symposium on
+               Discrete Algorithms (SODA'02)},
+  pages     = {732-741},
+  year      = 2002,
+  note      = {\url{http://www.cs.technion.ac.il/\~reuven/PS/BarHal04.ps}},
+  comment   = {
+section 1 : applications of des t-int graphs : transmission media data, linear ressource alloc
+of t-uni graphs : multiseq similarity
+MWIS APX-hard on (2,2)-union graphs  
+  }
+}
+
+@article{Vialette2004,
+  author    = {St{\'e}phane Vialette},
+  title     = {On the computational complexity of 2-interval pattern matching problems},
+  journal   = TCS,
+  volume    = 312,
+  number    = {2-3},
+  year      = 2004,
+  note      = {\url{http://dx.doi.org/10.1016/j.tcs.2003.08.010}}
+}
+
+@InProceedings{BFV2004,
+  author    = {Guillaume Blin and Guillaume Fertin and St\'ephane Vialette},
+  title     = {New results for the 2-interval pattern problem},
+  booktitle = {Proceedings of the $15^{th}$ Symposium on Combinatorial
+               Pattern Matching (CPM'04)},
+  year      = 2004,
+  note      = {\url{http://www.sciences.univ-nantes.fr/info/perso/permanents/fertin/PAPERS/Blin_Fertin_Vialette_CPM04.pdf}},
+  bibupdate = 20061211,
+}
+
+@PhdThesis{Blin2005,
+  author    = {Guillaume Blin},
+  title     = {Combinatoire et Bio-informatique : Comparaison de structures d'ARN
+              et calcul de distances interg{\'e}nomiques},
+  pages     = {77-99},
+  year      = 2005,
+  school    = {Universit{\'e} de Nantes},
+  note      = {\url{http://igm.univ-mlv.fr/\~gblin/web/images/phd_guillaume_blin.pdf}},
+  comment   = {
+chapitre 3.2 : Approximabilité de 2IP (pp44-49)
+chapitre 6, idem que bfv2004  
+  },
+  bibupdate = 20061211,
+}
+
+@inproceedings{CHLV2005,
+  author    = {Maxime Crochemore and Danny Hermelin and Gad M. Landau and St{\'e}phane Vialette},
+  title     = {Approximating the 2-Interval Pattern Problem},
+  booktitle = {Algorithms - ESA 2005, 13th Annual European Symposium},
+  series    = {Lecture Notes in Computer Science},
+  volume    = {3669},
+  year      = {2005},
+  pages     = {426-437},
+  note      = {\url{http://dx.doi.org/10.1007/11561071_39}},
+}
+
+
+== Clique problem ==
+
+Unknown on 2-interval graphs
+
+ * NP-complete on 3-interval graphs
+ 
+@InProceedings{BHLR2007,
+  author    = {Ayelet Butman and Danny Hermelin and Moshe Lewenstein and Dror Rawitz},
+  title     = {Optimization Problems in Multiple-Interval Graphs},
+  booktitle = {Proceedings of the 18th Annual ACM-SIAM Symposium on
+               Discrete Algorithms (SODA'07)},  
+  year      = 2007,
+  comment   = {
+To appear, SODA
+Many applications of t-interval graphs:
+ * MIS or MinVertCover for loss minimization,
+ * MinDomSet for employees monitoring other employees in a store,
+ * Clique for researcher who all need to speak together.
+(2-1/t)-approx for Minimum Vertex Cover for t-interval graphs
+t^2-approx for Minimum Dominating Set for t-interval graphs
+Maximum Clique NP-complete for 3-interval graphs : Max-2DNF-SAT reduction:
+  - one 3-interval for each litteral +xi and -xi:
+    - interval A : unitary
+    - intervals B & C : intersecting all other intervals B&C of litteral-3-intervals except -xi
+  - one 3-interval for each clause:
+    - intersecting every interval A of the +/-xi except the negation of litterals of the clause ->
+    an interval with 2 holes = a 3-interval.
+  -> a clique = all "valid" intervals and clauses
+(t^2-t+1)/2-approx for clique on t-interval graphs   
+  }
+}
+
+@article{GyarfasLehel1980,
+  author    = {Andr\'as Gy{\'a}rf{\'a}s and Jen\"o Lehel},
+  title     = {Covering and coloring problems for relatives of intervals},
+  journal   = DM,
+  pages     = {167-180},
+  volume    = 55,
+  year      = 1985,
+}
+
+
+== Transversal number ==
+
+@article{Kaiser1997,
+  author    = {Tom{\'a}s Kaiser},
+  title     = {Transversals of d-Intervals},
+  journal   = {Discrete and Computational Geometry},
+  volume    = 18,
+  number    = 2,
+  year      = 1997,
+  note      = {\url{http://dx.doi.org/10.1007/PL00009315}},
+  bibupdate = 20070207,
+}
+
+@article{Tardos1995,
+  author    = {G{\'a}bor Tardos},
+  title     = {Transversals of 2-intervals, a topological approach},
+  journal   = C,
+  volume    = 15,
+  number    = 1,
+  year      = 1995,
+  pages     = {123-134},
+  note      = {\url{http://www.renyi.hu/\~tardos/2int.ps}},
+}
+
+@inproceedings{Tardos1998,
+  author    = {G{\'a}bor Tardos},
+  title     = {Transversals of 2-intervals, comparing three approaches},
+  booktitle = {Proceedings of the Second European Congress of Mathematics}
+  series    = {Progress in Mathematics}
+  volume    = 169,
+  publisher = {Birkh{\"a}user},
+  year      = 1998,
+  pages     = {234-243},
+  note      = {\url{http://www.renyi.hu/\~tardos/ecm2.ps}},
+}

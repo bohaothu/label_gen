@@ -1,0 +1,177 @@
+
+@InProceedings{ParkesWalser96,
+  author =       "Andrew J. Parkes and Joachim P. Walser",
+  title =        "{Tuning Local Search for Satisfiability Testing}",
+  booktitle =    "Proceedings of the Thirteenth National Conference
+                 on Artificial Intelligence (AAAI-96)",
+  address =      "Portland, OR",
+  year =         "1996",
+  pages =        "356--362",
+  abstract =     "{Local search algorithms, particularly GSAT and WSAT, have
+                 attracted considerable recent attention, primarily because they are
+                 the best known approaches to several hard classes of satisfiability
+                 problems. However, replicating reported results has been difficult
+                 because the setting of certain key parameters is something of an art,
+                 and because details of the algorithms, not discussed in the published
+                 papers, can have a large impact on performance. In this paper we
+                 present an efficient probabilistic method for finding the optimal
+                 setting for a critical local search parameter, Maxflips, and discuss
+                 important details of two differing versions of WSAT. We then apply
+                 the optimization method to study performance of WSAT on satisfiable
+                 instances of Random 3SAT at the crossover point and present extensive
+                 experimental results over a wide range of problem sizes. We find that
+                 the results are well described by having the optimal value of maxflips
+                 scale as a simple power of the number of variables, $n$, and the
+                 average run time scale sub-exponentially (basically as $n^{\log(n)}$)
+                 over the range $n=25,\ldots,400$.}",
+  keywords =     "WSAT, local search, tuning parameters, random 3SAT",
+}
+
+@InProceedings{Parkes97,
+  author =       "Andrew J. Parkes",
+  title =        "{Clustering at the Phase Transition}",
+  booktitle =    "Proceedings of the Fourteenth National Conference
+                 on Artificial Intelligence (AAAI-97)",
+  address =      "Providence, RI",
+  year =         "1997",
+  pages =        "340--345",
+  abstract =     "Many problem ensembles exhibit a phase transition
+                 behavior that is associated with a large peak in the
+                 average search costs needed to solve the problem
+                 instances. However, this peak is not necessarily due to
+                 a lack of solutions: indeed the average number of
+                 solutions is typically exponentially large. Here we
+                 study this somewhat paradoxical situation within the
+                 context of the satisfiability transition in Random 3SAT.
+                 We find that a significant subclass of instances emerges
+                 as we cross the phase transition. These instances are
+                 characterized by having 85--95\% of their variables
+                 occurring in unary prime implicates (UPIs), with their
+                 remaining variables being subject to few constraints.
+                 Hence, despite the stochastic nature of the method used
+                 to generate these instances, their models are not
+                 randomly distributed. Instead, they all lie in a
+                 cluster that is exponentially large (but still admits a
+                 simple description). Studying the effect of on the
+                 local search algorithm shows that the single-cluster
+                 instances are much harder to solve and their appearance
+                 at the phase transition is related to the peak in search
+                 cost.",
+  keywords =     "random 3SAT, cluster, local search, WSAT",
+}
+
+@InProceedings{Ginsberg98:supermodels,
+  author = 	 {Matthew L. Ginsberg and Andrew J. Parkes and Amitabha Roy},
+  title = 	 "{Supermodels and Robustness}",
+  booktitle =    "Proceedings of the Fifteenth National Conference
+                 on Artificial Intelligence (AAAI-98)",
+  address =      "Madison, WI",
+  year =         "1998",
+  pages =        "334--339",
+  abstract =     "When search techniques are used to solve a practical problem, the
+                 solution produced is often brittle in the sense that small
+                 execution difficulties can have an arbitrarily large effect on
+                 the viability of the solution. The AI community has responded
+                 to this difficulty by investigating the development of ``robust
+                 problem solvers'' that are intended to be proof against this
+                 difficulty. We argue that robustness is best cast not as a
+                 property of the problem solver, but as a property of the
+                 solution. We introduce a new class of models for a logical
+                 theory, called supermodels, that captures this
+                 idea. Supermodels guarantee that the model in question is
+                 robust, and allow us to quantify the degree to which it is
+                 so. We investigate the theoretical properties of supermodels,
+                 showing that finding supermodels is typically of the same
+                 theoretical complexity as finding models. We provide a general
+                 way to modify a logical theory so that a model of the modified
+                 theory is a supermodel of the original. Experimentally, we show
+                 that the supermodel problem exhibits phase transition behavior
+                 similar to that found in other satisfiability work.",
+  keywords =     "constraint satisfaction, local repair",
+}
+
+@PhdThesis{Parkes99:thesis,
+  author = 	 {Andrew J.~Parkes},
+  title = 	 {Lifted Search Engines for Satisfiability},
+  school = 	 {University of Oregon},
+  year = 	 {1999},
+  month = 	 {June},
+  abstract =     "There are several powerful solvers for
+                  satisfiability (SAT), such as WSAT, Davis-Putnam,
+                  and RELSAT.  However, in practice, the SAT encodings
+                  often have so many clauses that we exceed physical
+                  memory resources on attempting to solve them.  This
+                  excessive size often arises because conversion to
+                  SAT, from a more natural encoding using
+                  quantifications over domains, requires expanding
+                  quantifiers.
+
+                  This suggests that we should ``lift'' successful SAT
+                  solvers. That is, adapt the solvers to use
+                  quantified clauses instead of ground clauses.
+                  However, it was generally believed that such lifted
+                  solvers would be impractical: Partially, because of
+                  the overhead of handling the predicates and
+                  quantifiers, and partially because lifting would not
+                  allow essential indexing and caching schemes.
+
+                  Here we show that, to the contrary, it is not only
+                  practical to handle quantified clauses directly, but
+                  that lifting can give exponential savings.  We do
+                  this by identifying certain tasks that are central
+                  to the implementation of a SAT solver. These tasks
+                  involve the extraction of information from the set
+                  of clauses (such as finding the set of unsatisfied
+                  clauses in the case of WSAT) and consume most of the
+                  running time.  We demonstrate that these tasks are
+                  NP-hard with respect to their relevant size
+                  measure. Hence, they are themselves search problems,
+                  and so we call them ``subsearch problems''.
+
+                  Ground SAT solvers effectively solve these subsearch
+                  problems by naive enumeration of the search space.
+                  In contrast, a lifted solver can solve them using
+                  intelligent search methods. Consequently, lifting a
+                  solver will generally allow an exponential reduction
+                  in the cost of subsearch and so increase the speed
+                  of the search engine itself.
+ 
+                  Experimental results are given for a lifted version
+                  of WSAT.  We only use very simple backtracking for
+                  the subsearch, but we still find that cost savings
+                  in the subsearch can more than offset the overheads
+                  from lifting.  The reduction in size of the formulas
+                  also allows us to solve problems that are too large
+                  for ground WSAT.
+
+                  In summary, a lifted SAT solver not only uses far
+                  less memory than a ground solver, but it can also
+                  run faster."
+  keywords =      {SAT, satisfiablity, search, WSAT},
+  annote =        {Available from http://www.cirl.uoregon.edu/parkes},
+}
+
+@InProceedings{GinsbergParkes:KR2000,
+  author = 	 {Matthew L.~Ginsberg and Andrew J.~Parkes },
+  title = 	 {Satisfiability Algorithms and Finite Quantification},
+  booktitle = 	 "Principles of Knowledge Representation and Reasoning:
+                  Proceedings of the Seventh International Conference (KR2000)",
+  pages = 	 {290--701},
+  year = 	 2000,
+  editor = 	 {A.G.~Cohn and F.~Giunchiglia and B.~Selman},
+  abstract =     "This paper makes three observations with regard to
+                  the application of algorithms such as WSAT and
+                  RELSAT to problems of practical interest.  First, we
+                  identify a specific calculation (``subsearch'') that
+                  is performed at each inference step by any existing
+                  satisfiability algorithm.  We then show that for
+                  realistic problems, the time spent on subsearch can
+                  be expected to dominate the computational cost of
+                  the algorithm.  Finally, we present a specific
+                  modification to the representation that exploits the
+                  structure of naturally occurring problems and leads
+                  to exponential reductions in the time needed for
+                  subsearch.",
+  publisher =    {Morgan Kaufmann},
+}
+

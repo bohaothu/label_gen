@@ -1,0 +1,205 @@
+@Article{cm09,
+  Author         = {Vincenzo Ciancia and Ugo Montanari},
+  Title          = {Symmetries, Local Names and Dynamic (De)-allocation of Names},
+  Journal        = {Information and Computation},
+  Volume         = {To appear},
+  Year           = 2009,
+  url            = {http://www.di.unipi.it/~ciancia/content/cm09.pdf},
+  abstract       = {The semantics of \emph{name-passing} calculi is often defined employing coalgebraic models over presheaf categories. This elegant theory lacks
+finiteness properties, hence it is not apt to implementation. Coalgebras
+over named sets, called \emph{history-dependent automata}, are better
+suited for the purpose due to locality of names. A theory of behavioural
+functors for named sets is still lacking: the semantics of each language
+has been given in an \emph{ad-hoc} way, and algorithms were implemented
+only for the $\pi$-calculus. Existence of the final coalgebra for
+the $\pi$-calculus was never proved. We introduce a language of \emph{accessible} functors to specify history-dependent automata in a modular way,
+leading to a clean formulation and a generalisation of previous results,
+and to the proof of existence of a final coalgebra in a wide range
+of cases.}
+}
+
+@InProceedings{cm08,
+  Author         = {Vincenzo Ciancia and Ugo Montanari},
+  Title          = {A Name Abstraction Functor for Named Sets},
+  BookTitle      = {9th Workshop on Coalgebraic Methods in Computer Science (CMCS 2008)}, 
+  Journal        = {Electronic Notes in Theoretical Computer Science},
+  Volume         = {203--5},
+  Pages          = {49-70},
+  ee             = {http://dx.doi.org/10.1016/j.entcs.2008.05.019},
+  year           = 2008,
+  url            = {http://www.di.unipi.it/~ciancia/content/cm08.pdf},
+  abstract       = {The problem of defining fully abstract operational
+                  models of name passing calculi has been given some
+                  elegant solutions, such as coalgebras over presheaf
+                  categories or over nominal sets. These formalisms
+                  fail to model garbage collection of unused names,
+                  hence they do not have nice properties with respects
+                  to finite state algorithms. The category of named
+                  sets, on the other hand, was designed for the
+                  purpose of supporting efficient algorithms to handle
+                  the semantics of name passing calculi. However the
+                  theory was developed in a rather \emph{ad-hoc}
+                  fashion (e.g. the existence of a final coalgebra was
+                  only proved in the finite case). In this work we
+                  introduce a name abstraction functor for named sets
+                  and show that it provides a simple and effective
+                  notion of garbage collection of unused names. Along
+                  the way, we survey a number of needed results on the
+                  category of permutation algebras, an
+                  algebra-theoretic definition of nominal sets. In
+                  particular we give a formalization of the adjunction
+                  between abstraction and concretion, an example
+                  illustrating a \emph{nominal syntax alike }handling
+                  of De Bruijn indexes, and an explicit functor to
+                  model the early semantics of the $\pi$-calculus in
+                  nominal sets.}
+}
+
+@InProceedings{cfgs08a,
+  Author         = {Vincenzo Ciancia and Gian Luigi Ferrari and Roberto
+                   Guanciale and Daniele Strollo},
+  Title          = {Checking Correctness of Transactional Behaviors},
+  BookTitle      = {28th IFIP WG6.1 International Conference on Formal Techniques for Networked and Distributed Systems (FORTE 2008)},
+  Volume         = {5048},
+  Series         = {Lecture Notes in Computer Science},
+  Pages          = {134-148},
+  Publisher      = {Springer},
+  ee             = {http://dx.doi.org/10.1007/978-3-540-68855-6_9},
+  isbn           = {978-3-540-68854-9},
+  year           = 2008,
+  url            = {http://www.di.unipi.it/~ciancia/content/cfgs08a.pdf},
+  abstract       = {The Signal Calculus is an asynchronous process
+                  calculus featuring multicast communication. It
+                  relies on explicit modeling of the communication
+                  structure of the network (communication flows), and
+                  on handling sessions, even multi-party. The calculus
+                  is strongly motivated by the practical needs of
+                  Service-Oriented Computing, and there exists a Java
+                  implementation, called JSCL, with a graphical
+                  modeling framework.  To the aim of adding to SC (and
+                  JSCL) a verification environment, in this work we
+                  introduce the abstract semantics of SC, based on
+                  bisimulation.  We show an example exploiting
+                  bisimilarity to prove the correctness of an SC model
+                  with respects to a transactional isolation
+                  requirement.}
+}
+
+@InProceedings{cfgs08c,
+  Author         = {Ciancia, Vincenzo and Ferrari, Gian Luigi and
+                   Guanciale, Roberto and Strollo, Daniele},
+  Title          = {Global {C}oordination {P}olicies for {S}ervices},
+  BookTitle      = {5th International Workshop on Formal Aspects of Component Software (FACS 2008)},
+  Journal        = {Electronic Notes in Theoretical Computer Science},  
+  volume         = {upcoming},
+  year           = 2008,
+  url            = {http://www.di.unipi.it/~ciancia/content/cfgs08c.pdf},
+  abstract       = {An important issue of the service oriented
+                  approach is the possibility to aggregate, through
+                  programmable coordination patterns, the activities
+                  involved by service interactions.  Two different
+                  approaches can be adopted to tackle service
+                  coordination: \emph{orchestration} and
+                  \emph{choreography}.  In this paper, we introduce a
+                  formal methodology purposed to handle coordination
+                  among services from the perspective of a global
+                  observer, in the spirit of choreography models. In
+                  particular, we address the problem of verifying
+                  compliance and consistency between the design of
+                  service interactions and the choreography
+                  constraints.}
+}
+
+
+@Article{bbcg08,
+  Author         = {Bonchi, Filippo and Buscemi, Marzia and Ciancia,
+                   Vincenzo and Gadducci, Fabio},
+  Title          = {A {C}ategory of {E}xplicit {F}usions},
+  Journal        = {Lecture Notes in Computer Science - P. Degano and R.
+                   De Nicola and J. Meseguer, editors - Festschrift for
+                   Ugo Montanari},
+  Volume         = {5065},
+  year           = 2008,
+  url            = {http://www.di.unipi.it/~ciancia/content/bbcg08.pdf},
+  abstract       = {Name passing calculi are nowadays an established
+                  field on its own.  Besides their practical
+                  relevance, they offered an intriguing challenge,
+                  since the standard operational, denotational and
+                  logical methods often proved inadequate to reason
+                  about these formalisms. A domain which has been
+                  successfully employed for languages with asymmetric
+                  communication, like the $\pi$-calculus, are presheaf
+                  categories based on (injective) relabelings, such as
+                  $Set^I$. Calculi with \emph{symmetric} binding, in
+                  the spirit of the \emph{fusion calculus}, pose new
+                  challenges. In this work, we examine the
+                  \emph{calculus of explicit fusions}, and propose to
+                  model its syntax and semantics using the presheaf
+                  category $Set^E$, where $E$ is the category of
+                  equivalence relations and equivalence preserving
+                  morphisms.}
+}
+
+@Article{cfpt08,
+  Author         = {Ciancia, Vincenzo and Ferrari, Gian Luigi and Pistore,
+                   Marco and Tuosto, Emilio},
+  Title          = {History {D}ependent {A}utomata for {S}ervice
+                   {C}ompatibility},
+  Journal        = {Lecture Notes in Computer Science - P. Degano and R.
+                   De Nicola and J. Meseguer, editors - Festschrift for
+                   Ugo Montanari},
+  Volume         = {5065},
+  year           = 2008,
+  url            = {http://www.di.unipi.it/~ciancia/content/cfpt08.pdf},
+  abstract       = { We use \emph{History Dependent Automata}
+                  as a syntax-indepentend formalism to check
+                  compatibility of services at binding time in
+                  \emph{Service-Oriented Computing}.  Informally
+                  speaking, service requests are modelled as pairs of
+                  HD-automata $< C_o,C_r >$; $C_r$ describes the
+                  (abstract) behaviour of the searched service and
+                  $C_o$ the (abstract) behaviour guaranteed by the
+                  invoker.  Symmetrically, service publication
+                  consists of a pair of HD-automata $< S_o,S_r >$ such
+                  that $S_o$ provides an (abstraction of) of the
+                  behaviour guaranteed by the service and $S_r$ yields
+                  the requirement imposed to invokers.  An invocation
+                  $< C_o,C_r >$ matches a published interface
+                  $< S_o,S_r >$ when $C_o$ simulates $S_r$ and
+                  $S_o$ simulates $C_r$.}
+}
+
+@InProceedings{cf07,
+  Author         = {Ciancia, Vincenzo and Ferrari, Gian Luigi},
+  Title          = {{Co-Algebraic Models for Quantitative Spatial Logics}},
+  BookTitle      = {Fifth Workshop on Quantitative Aspects of Programming Languages (QAPL 2007)},
+  Journal        = {Electronic Notes in Theoretical Computer Science},  
+  volume    = {190--3},
+  year      = {2007},
+  pages     = {43-58},
+  abstract       = {We introduce a class of coalgebraic models and a
+                   family of modal logics that support the specification
+                   of spatial properties of distributed applications. The
+                   evaluation of a formula yields a value in a suitable
+                   multi-valued algebraic structure, giving a measure of
+                   the satisfaction of a requirement, induced by the
+                   decomposition of a system into subsystems, meant as
+                   available resources. As semantic domain we consider
+                   certain algebraic structures, called c-semirings, that
+                   allow us to generalize boolean logics to the
+                   multi-valued case, while keeping a number of the axioms
+                   of boolean algebras. Under suitable conditions on the
+                   structure of c-semirings, we show that, even if our
+                   logical formalisms are equipped with spatial operators,
+                   the interpretation of formulas fully characterizes
+                   bisimilarity.},
+  url            = {http://www.di.unipi.it/~ciancia/content/cf07.pdf},
+}
+
+@PhdThesis{c08,
+  Author         = {Ciancia, Vincenzo},
+  Year           = 2008,
+  Title          = {Accessible {F}unctors and {F}inal {C}oalgebras for
+                   {N}amed {S}ets},
+  School         = {University of Pisa}
+}

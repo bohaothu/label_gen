@@ -1,0 +1,789 @@
+
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>
+  simonwallner / ssao_extras / source &mdash; Bitbucket
+</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="description" content="" />
+  <meta name="keywords" content="" />
+  <!--[if lt IE 9]>
+  <script src="https://dwz7u9t8u8usb.cloudfront.net/m/46c15ee9bc85/js/lib/html5.js"></script>
+  <![endif]-->
+
+  <script>
+    (function (window) {
+      // prevent stray occurrences of `console.log` from causing errors in IE
+      var console = window.console || (window.console = {});
+      console.log || (console.log = function () {});
+
+      var BB = window.BB || (window.BB = {});
+      BB.debug = false;
+      BB.cname = false;
+      BB.CANON_URL = 'https://bitbucket.org';
+      BB.MEDIA_URL = 'https://dwz7u9t8u8usb.cloudfront.net/m/46c15ee9bc85/';
+      BB.user || (BB.user = {});
+      BB.user.has = (function () {
+        var betaFeatures = [];
+        
+        return function (feature) {
+          return _.contains(betaFeatures, feature);
+        };
+      }());
+      BB.repo || (BB.repo = {});
+  
+  
+      BB.user.isAdmin = false
+      BB.repo.id = 68823;
+    
+    
+      BB.repo.slug = 'ssao_extras';
+    
+    
+      BB.repo.owner = {
+        username: 'simonwallner'
+      };
+    
+      // Coerce `BB.repo` to a string to get
+      // "davidchambers/mango" or whatever.
+      BB.repo.toString = function () {
+        return this.owner.username + '/' + this.slug;
+      }
+    
+      BB.changeset = 'fdcf44318521'
+    
+    
+  
+    }(this));
+  </script>
+
+  
+    <link rel="stylesheet" href="https://dwz7u9t8u8usb.cloudfront.net/m/46c15ee9bc85/bun/css/bundle.css"/>
+  
+
+  <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="Bitbucket" />
+  <link rel="icon" href="https://dwz7u9t8u8usb.cloudfront.net/m/46c15ee9bc85/img/logo_new.png" type="image/png" />
+  <link type="text/plain" rel="author" href="/humans.txt" />
+
+
+  
+    <script src="https://dwz7u9t8u8usb.cloudfront.net/m/46c15ee9bc85/bun/js/bundle.js"></script>
+  
+
+
+
+</head>
+
+<body class="">
+  <script type="text/javascript">
+    if (!RegExp(" AppleWebKit/").test(navigator.userAgent)) {
+    $('body').addClass('non-webkit');
+    }
+  </script>
+  <!--[if IE 8]>
+  <script>jQuery(document.body).addClass('ie8')</script>
+  <![endif]-->
+  <!--[if IE 9]>
+  <script>jQuery(document.body).addClass('ie9')</script>
+  <![endif]-->
+
+  <div id="wrapper">
+
+
+
+  <div id="header-wrap">
+    <div id="header">
+    <ul id="global-nav">
+      <li><a class="home" href="http://www.atlassian.com">Atlassian Home</a></li>
+      <li><a class="docs" href="http://confluence.atlassian.com/display/BITBUCKET">Documentation</a></li>
+      <li><a class="support" href="/support">Support</a></li>
+      <li><a class="blog" href="http://blog.bitbucket.org">Blog</a></li>
+      <li><a class="forums" href="http://groups.google.com/group/bitbucket-users">Forums</a></li>
+    </ul>
+    <a href="/" id="logo">Bitbucket by Atlassian</a>
+
+    <div id="main-nav" class="clearfix">
+    
+      <ul class="clearfix">
+        <li><a href="/features">Features</a></li>
+        <li><a href="/plans">Pricing &amp; signup</a></li>
+        <li><a href="/explore">Explore Bitbucket</a></li>
+        <li><a href="/account/signin/?next=/simonwallner/ssao_extras/src/fdcf44318521/results/bibliography.bib">Log in</a></li>
+        
+
+<li class="search-box">
+  
+    <form action="/repo/all">
+      <input type="search" results="5" autosave="bitbucket-explore-search"
+             name="name" id="searchbox"
+             placeholder="Find a project" />
+  
+  </form>
+</li>
+
+      </ul>
+    
+    </div>
+    </div>
+  </div>
+
+    <div id="header-messages">
+  
+  
+    
+    
+    
+    
+  
+
+    
+   </div>
+
+
+
+    <div id="content">
+      <div id="unnamed">
+      
+  
+  
+
+
+
+
+
+  <script>
+    jQuery(function ($) {
+        var cookie = $.cookie,
+            cookieOptions, date,
+            $content = $('#content'),
+            $pane = $('#what-is-bitbucket'),
+            $hide = $pane.find('[href="#hide"]').css('display', 'block').hide();
+
+        date = new Date();
+        date.setTime(date.getTime() + 365 * 24 * 60 * 60 * 1000);
+        cookieOptions = { path: '/', expires: date };
+
+        if (cookie('toggle_status') == 'hide') $content.addClass('repo-desc-hidden');
+
+        $('#toggle-repo-content').click(function (event) {
+            event.preventDefault();
+            $content.toggleClass('repo-desc-hidden');
+            cookie('toggle_status', cookie('toggle_status') == 'show' ? 'hide' : 'show', cookieOptions);
+        });
+
+        if (!cookie('hide_intro_message')) $pane.show();
+
+        $hide.click(function (event) {
+            event.preventDefault();
+            cookie('hide_intro_message', true, cookieOptions);
+            $pane.slideUp('slow');
+        });
+
+        $pane.hover(
+            function () { $hide.fadeIn('fast'); },
+            function () { $hide.fadeOut('fast'); });
+
+      (function () {
+        // Update "recently-viewed-repos" cookie for
+        // the "repositories" drop-down.
+        var
+          id = BB.repo.id,
+          cookieName = 'recently-viewed-repos_' + BB.user.id,
+          rvr = cookie(cookieName),
+          ids = rvr? rvr.split(','): [],
+          idx = _.indexOf(ids, '' + id);
+
+        // Remove `id` from `ids` if present.
+        if (~idx) ids.splice(idx, 1);
+
+        cookie(
+          cookieName,
+          // Insert `id` as the first item, then call
+          // `join` on the resulting array to produce
+          // something like "114694,27542,89002,84570".
+          [id].concat(ids.slice(0, 4)).join(),
+          {path: '/', expires: 1e6} // "never" expires
+        );
+      }());
+    });
+  </script>
+
+
+
+  
+  
+  
+  
+  
+    <div id="what-is-bitbucket" class="new-to-bitbucket">
+      <h2>Simon Wallner <span id="slogan">is sharing code with you</span></h2>
+      <img src="https://secure.gravatar.com/avatar/f8de2847dd65908c4d3f0d494b3d3552?d=identicon&s=32" alt="" class="avatar" />
+      <p>Bitbucket is a code hosting site. Unlimited public and private repositories. Free for small teams.</p>
+      <div class="primary-action-link signup"><a href="/account/signup/?utm_source=internal&utm_medium=banner&utm_campaign=what_is_bitbucket">Try Bitbucket free</a></div>
+      <a href="#hide" title="Don't show this again">Don't show this again</a>
+    </div>
+  
+
+
+<div id="tabs">
+  <ul class="tabs">
+    <li>
+      <a href="/simonwallner/ssao_extras/overview">Overview</a>
+    </li>
+
+    <li>
+      <a href="/simonwallner/ssao_extras/downloads">Downloads (<span id="downloads-count">0</span>)</a>
+    </li>
+
+    
+
+    <li>
+      <a href="/simonwallner/ssao_extras/pull-requests">Pull requests (0)</a>
+    </li>
+
+    <li class="selected">
+      
+        <a href="/simonwallner/ssao_extras/src">Source</a>
+      
+    </li>
+
+    <li>
+      <a href="/simonwallner/ssao_extras/changesets">Commits</a>
+    </li>
+
+    
+      
+        <li class="dropdown">
+          <a href="/simonwallner/ssao_extras/wiki">Wiki</a>
+        </li>
+      
+    
+
+    
+      
+        <li class="dropdown inertial-hover">
+          <a href="/simonwallner/ssao_extras/issues?status=new&amp;status=open">Issues (0) &raquo;</a>
+          <ul>
+            <li><a href="/simonwallner/ssao_extras/issues/new">Create new issue</a></li>
+            <li><a href="/simonwallner/ssao_extras/issues?status=new">New issues</a></li>
+            <li><a href="/simonwallner/ssao_extras/issues?status=new&amp;status=open">Open issues</a></li>
+            <li><a href="/simonwallner/ssao_extras/issues?status=duplicate&amp;status=invalid&amp;status=resolved&amp;status=wontfix">Closed issues</a></li>
+            
+            <li><a href="/simonwallner/ssao_extras/issues">All issues</a></li>
+            <li><a href="/simonwallner/ssao_extras/issues/query">Advanced query</a></li>
+          </ul>
+        </li>
+      
+    
+
+    
+
+    <li class="secondary">
+      <a href="/simonwallner/ssao_extras/descendants">Forks/queues (0)</a>
+    </li>
+
+    <li class="secondary">
+      <a href="/simonwallner/ssao_extras/zealots">Followers (<span id="followers-count">1</span>)</a>
+    </li>
+  </ul>
+</div>
+
+
+  <div class="repo-menu" id="repo-menu">
+    <ul id="repo-menu-links">
+    
+      <li>
+        <a href="/simonwallner/ssao_extras/rss" class="rss" title="RSS feed for ssao_extras">RSS</a>
+      </li>
+
+      <li><a href="/simonwallner/ssao_extras/fork" class="fork">fork</a></li>
+      
+        
+          <li><a href="/simonwallner/ssao_extras/hack" class="patch-queue">patch queue</a></li>
+        
+      
+      <li>
+        <a rel="nofollow" href="/simonwallner/ssao_extras/follow" class="follow">follow</a>
+      </li>
+      
+          
+      
+      
+        <li class="get-source inertial-hover">
+          <a class="source">get source</a>
+          <ul class="downloads">
+            
+              
+              <li><a rel="nofollow" href="/simonwallner/ssao_extras/get/fdcf44318521.zip">zip</a></li>
+              <li><a rel="nofollow" href="/simonwallner/ssao_extras/get/fdcf44318521.tar.gz">gz</a></li>
+              <li><a rel="nofollow" href="/simonwallner/ssao_extras/get/fdcf44318521.tar.bz2">bz2</a></li>
+            
+          </ul>
+        </li>
+      
+    </ul>
+
+  
+    <ul class="metadata">
+      
+      
+        <li class="branches inertial-hover">branches
+          <ul>
+            <li><a href="/simonwallner/ssao_extras/src/79cd62fedb78">default</a>
+              
+              
+            </li>
+          </ul>
+        </li>
+      
+      
+      <li class="tags inertial-hover">tags
+        <ul>
+          <li><a href="/simonwallner/ssao_extras/src/79cd62fedb78">tip</a>
+            
+            </li>
+          <li><a href="/simonwallner/ssao_extras/src/fdcf44318521">RC1</a>
+            
+            
+              <a rel="nofollow" class='menu-compare'
+                 href="/simonwallner/ssao_extras/compare/..RC1"
+                 title="Show changes between RC1 and the main branch.">compare</a>
+            </li>
+        </ul>
+      </li>
+     
+     
+    </ul>
+  
+</div>
+<div class="repo-menu" id="repo-desc">
+  
+    <ul id="repo-menu-links-mini">
+      <li><a rel="nofollow" class="compare-link"
+             href="/simonwallner/ssao_extras/compare/../"
+             title="Show changes between ssao_extras and "
+             ></a></li>
+      
+  
+
+      
+      <li>
+        <a href="/simonwallner/ssao_extras/rss" class="rss" title="RSS feed for ssao_extras"></a>
+      </li>
+
+      <li><a href="/simonwallner/ssao_extras/fork" class="fork" title="Fork"></a></li>
+      
+        
+          <li><a href="/simonwallner/ssao_extras/hack" class="patch-queue" title="Patch queue"></a></li>
+        
+      
+      <li>
+        <a rel="nofollow" href="/simonwallner/ssao_extras/follow" class="follow">follow</a>
+      </li>
+      
+          
+      
+    
+      
+        <li>
+          <a class="source" title="Get source"></a>
+          <ul class="downloads">
+            
+              
+                <li><a rel="nofollow" href="/simonwallner/ssao_extras/get/79cd62fedb78.zip">zip</a></li>
+                <li><a rel="nofollow" href="/simonwallner/ssao_extras/get/79cd62fedb78.tar.gz">gz</a></li>
+                <li><a rel="nofollow" href="/simonwallner/ssao_extras/get/79cd62fedb78.tar.bz2">bz2</a></li>
+              
+            
+          </ul>
+        </li>
+      
+    
+    </ul>
+
+    <h3 id="repo-heading">
+      <a class="owner-username" href="/simonwallner">simonwallner</a> /
+      <a class="repo-name" href="/simonwallner/ssao_extras">ssao_extras</a>
+    
+      <span><a href="http://simonwallner.at/">http://simonwallner.at/</a></span>
+    
+
+    
+    </h3>
+
+
+  <p class="repo-desc-description">additional files for the ssao samples...</p>
+
+
+  <div id="repo-desc-cloneinfo">Clone this repository (size: 11.8 MB):
+    <a href="https://bitbucket.org/simonwallner/ssao_extras" class="https">HTTPS</a> /
+    <a href="ssh://hg@bitbucket.org/simonwallner/ssao_extras" class="ssh">SSH</a>
+    <pre id="clone-url-https">hg clone https://bitbucket.org/simonwallner/ssao_extras</pre>
+    <pre id="clone-url-ssh">hg clone ssh://hg@bitbucket.org/simonwallner/ssao_extras</pre>
+    
+  </div>
+
+  <a href="#" id="toggle-repo-content"></a>
+
+  
+
+</div>
+
+
+
+
+      
+
+  <div id="source-path">
+    <h1>
+      <a href="/simonwallner/ssao_extras/src">ssao_extras</a> /
+
+  
+    
+      <a href="/simonwallner/ssao_extras/src/fdcf44318521/results/">results</a> /
+    
+  
+
+  
+    
+      bibliography.bib
+    
+  
+
+    </h1>
+  </div>
+
+
+  
+  <div id="source-view">
+    <div class="header">
+      <ul class="metadata">
+        <li><code>fdcf44318521</code></li>
+        <li>114 loc</li>
+        <li>13.9 KB</li>
+      </ul>
+      <ul class="source-view-links">
+        
+        <li><a id="embed-link" href="https://bitbucket.org/simonwallner/ssao_extras/src/fdcf44318521/results/bibliography.bib?embed=t">embed</a></li>
+        
+        <li><a href="/simonwallner/ssao_extras/history/results/bibliography.bib">history</a></li>
+        
+        <li><a href="/simonwallner/ssao_extras/annotate/fdcf44318521/results/bibliography.bib">annotate</a></li>
+        
+        <li><a href="/simonwallner/ssao_extras/raw/fdcf44318521/results/bibliography.bib">raw</a></li>
+        <li>
+          <form action="/simonwallner/ssao_extras/diff/results/bibliography.bib" class="source-view-form">
+          
+            <input type="hidden" name="diff2" value="b4229c57d080" />
+            <select name="diff1">
+            
+              
+                <option value="b4229c57d080">b4229c57d080</option>
+              
+            
+              
+                <option value="dc1c9abed21c">dc1c9abed21c</option>
+              
+            
+            </select>
+            <input type="submit" value="diff" />
+          
+          </form>
+        </li>
+      </ul>
+    </div>
+  
+    <div>
+    <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><a href="#cl-1">  1</a>
+<a href="#cl-2">  2</a>
+<a href="#cl-3">  3</a>
+<a href="#cl-4">  4</a>
+<a href="#cl-5">  5</a>
+<a href="#cl-6">  6</a>
+<a href="#cl-7">  7</a>
+<a href="#cl-8">  8</a>
+<a href="#cl-9">  9</a>
+<a href="#cl-10"> 10</a>
+<a href="#cl-11"> 11</a>
+<a href="#cl-12"> 12</a>
+<a href="#cl-13"> 13</a>
+<a href="#cl-14"> 14</a>
+<a href="#cl-15"> 15</a>
+<a href="#cl-16"> 16</a>
+<a href="#cl-17"> 17</a>
+<a href="#cl-18"> 18</a>
+<a href="#cl-19"> 19</a>
+<a href="#cl-20"> 20</a>
+<a href="#cl-21"> 21</a>
+<a href="#cl-22"> 22</a>
+<a href="#cl-23"> 23</a>
+<a href="#cl-24"> 24</a>
+<a href="#cl-25"> 25</a>
+<a href="#cl-26"> 26</a>
+<a href="#cl-27"> 27</a>
+<a href="#cl-28"> 28</a>
+<a href="#cl-29"> 29</a>
+<a href="#cl-30"> 30</a>
+<a href="#cl-31"> 31</a>
+<a href="#cl-32"> 32</a>
+<a href="#cl-33"> 33</a>
+<a href="#cl-34"> 34</a>
+<a href="#cl-35"> 35</a>
+<a href="#cl-36"> 36</a>
+<a href="#cl-37"> 37</a>
+<a href="#cl-38"> 38</a>
+<a href="#cl-39"> 39</a>
+<a href="#cl-40"> 40</a>
+<a href="#cl-41"> 41</a>
+<a href="#cl-42"> 42</a>
+<a href="#cl-43"> 43</a>
+<a href="#cl-44"> 44</a>
+<a href="#cl-45"> 45</a>
+<a href="#cl-46"> 46</a>
+<a href="#cl-47"> 47</a>
+<a href="#cl-48"> 48</a>
+<a href="#cl-49"> 49</a>
+<a href="#cl-50"> 50</a>
+<a href="#cl-51"> 51</a>
+<a href="#cl-52"> 52</a>
+<a href="#cl-53"> 53</a>
+<a href="#cl-54"> 54</a>
+<a href="#cl-55"> 55</a>
+<a href="#cl-56"> 56</a>
+<a href="#cl-57"> 57</a>
+<a href="#cl-58"> 58</a>
+<a href="#cl-59"> 59</a>
+<a href="#cl-60"> 60</a>
+<a href="#cl-61"> 61</a>
+<a href="#cl-62"> 62</a>
+<a href="#cl-63"> 63</a>
+<a href="#cl-64"> 64</a>
+<a href="#cl-65"> 65</a>
+<a href="#cl-66"> 66</a>
+<a href="#cl-67"> 67</a>
+<a href="#cl-68"> 68</a>
+<a href="#cl-69"> 69</a>
+<a href="#cl-70"> 70</a>
+<a href="#cl-71"> 71</a>
+<a href="#cl-72"> 72</a>
+<a href="#cl-73"> 73</a>
+<a href="#cl-74"> 74</a>
+<a href="#cl-75"> 75</a>
+<a href="#cl-76"> 76</a>
+<a href="#cl-77"> 77</a>
+<a href="#cl-78"> 78</a>
+<a href="#cl-79"> 79</a>
+<a href="#cl-80"> 80</a>
+<a href="#cl-81"> 81</a>
+<a href="#cl-82"> 82</a>
+<a href="#cl-83"> 83</a>
+<a href="#cl-84"> 84</a>
+<a href="#cl-85"> 85</a>
+<a href="#cl-86"> 86</a>
+<a href="#cl-87"> 87</a>
+<a href="#cl-88"> 88</a>
+<a href="#cl-89"> 89</a>
+<a href="#cl-90"> 90</a>
+<a href="#cl-91"> 91</a>
+<a href="#cl-92"> 92</a>
+<a href="#cl-93"> 93</a>
+<a href="#cl-94"> 94</a>
+<a href="#cl-95"> 95</a>
+<a href="#cl-96"> 96</a>
+<a href="#cl-97"> 97</a>
+<a href="#cl-98"> 98</a>
+<a href="#cl-99"> 99</a>
+<a href="#cl-100">100</a>
+<a href="#cl-101">101</a>
+<a href="#cl-102">102</a>
+<a href="#cl-103">103</a>
+<a href="#cl-104">104</a>
+<a href="#cl-105">105</a>
+<a href="#cl-106">106</a>
+<a href="#cl-107">107</a>
+<a href="#cl-108">108</a>
+<a href="#cl-109">109</a>
+<a href="#cl-110">110</a>
+<a href="#cl-111">111</a>
+<a href="#cl-112">112</a>
+<a href="#cl-113">113</a>
+<a href="#cl-114">114</a>
+</pre></div></td><td class="code"><div class="highlight"><pre><a name="cl-1"></a>%% This BibTeX bibliography file was created using BibDesk.
+<a name="cl-2"></a>%% http://bibdesk.sourceforge.net/
+<a name="cl-3"></a>
+<a name="cl-4"></a>
+<a name="cl-5"></a>%% Created for Simon Wallner at 2010-09-29 11:05:58 +0200 
+<a name="cl-6"></a>
+<a name="cl-7"></a>
+<a name="cl-8"></a>%% Saved with string encoding Unicode (UTF-8) 
+<a name="cl-9"></a>
+<a name="cl-10"></a>
+<a name="cl-11"></a>
+<a name="cl-12"></a>@article{Kajalin2009Screen,
+<a name="cl-13"></a>        Author = {V Kajalin},
+<a name="cl-14"></a>        Date-Added = {2010-05-03 10:32:19 +0200},
+<a name="cl-15"></a>        Date-Modified = {2010-09-29 11:03:50 +0200},
+<a name="cl-16"></a>        Journal = {in ShaderX7, W. Engel, Ed. Charles River Media, March},
+<a name="cl-17"></a>        Rating = {0},
+<a name="cl-18"></a>        Read = {Yes},
+<a name="cl-19"></a>        Title = {Screen space ambient occlusion},
+<a name="cl-20"></a>        Uri = {papers://17C36DC0-223C-4591-9A05-9C7953327675/Paper/p32},
+<a name="cl-21"></a>        Year = {2009}}
+<a name="cl-22"></a>
+<a name="cl-23"></a>@article{Fox2007Ambient,
+<a name="cl-24"></a>        Author = {M Fox and Compton},
+<a name="cl-25"></a>        Date-Added = {2010-09-08 16:53:05 +0200},
+<a name="cl-26"></a>        Date-Modified = {2010-09-29 11:03:50 +0200},
+<a name="cl-27"></a>        Journal = {http://www.shalinor.com/research.html},
+<a name="cl-28"></a>        Local-Url = {file://localhost/Users/Simon/Daten/Studium/Papers/2007/Fox/httpwww.shalinor.comresearch.html%202007%20FoxAmbient%20Occlusive%20Crease%20Shading.pdf},
+<a name="cl-29"></a>        Rating = {0},
+<a name="cl-30"></a>        Title = {Ambient Occlusive Crease Shading},
+<a name="cl-31"></a>        Uri = {papers://17C36DC0-223C-4591-9A05-9C7953327675/Paper/p2620},
+<a name="cl-32"></a>        Url = {http://www.shalinor.com/research.html},
+<a name="cl-33"></a>        Year = {2007},
+<a name="cl-34"></a>        Bdsk-File-1 = {YnBsaXN0MDDUAQIDBAUIJidUJHRvcFgkb2JqZWN0c1gkdmVyc2lvblkkYXJjaGl2ZXLRBgdUcm9vdIABqAkKFRYXGyIjVSRudWxs0wsMDQ4RFFpOUy5vYmplY3RzV05TLmtleXNWJGNsYXNzog8QgASABqISE4ACgAOAB1lhbGlhc0RhdGFccmVsYXRpdmVQYXRo0hgNGRpXTlMuZGF0YU8RAnQAAAAAAnQAAgAACU1hY2ludG9zaAAAAAAAAAAAAAAAAAAAAAAAAMiQa4BIKwAAACH+DR9odHRwd3d3LnNoYWxpbm9yLmNvbSMyMUZERTcucGRmAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIf3nyK1xAQAAAAAAAAAAAAUABAAACSAAAAAAAAAAAAAAAAAAAAADRm94AAAQAAgAAMiQT2AAAAARAAgAAMitVOEAAAABABwAIf4NAAjEowAIw/wACEFRAAdOKgAD/+8AAJGTAAIAU01hY2ludG9zaDpVc2VyczpTaW1vbjpEYXRlbjpTdHVkaXVtOlBhcGVyczoyMDA3OkZveDpodHRwd3d3LnNoYWxpbm9yLmNvbSMyMUZERTcucGRmAAAOAJ4ATgBoAHQAdABwAHcAdwB3AC4AcwBoAGEAbABpAG4AbwByAC4AYwBvAG0AcgBlAHMAZQBhAHIAYwBoAC4AaAB0AG0AbAAgADIAMAAwADcAIABGAG8AeABBAG0AYgBpAGUAbgB0ACAATwBjAGMAbAB1AHMAaQB2AGUAIABDAHIAZQBhAHMAZQAgAFMAaABhAGQAaQBuAGcALgBwAGQAZgAPABQACQBNAGEAYwBpAG4AdABvAHMAaAASAHhVc2Vycy9TaW1vbi9EYXRlbi9TdHVkaXVtL1BhcGVycy8yMDA3L0ZveC9odHRwd3d3LnNoYWxpbm9yLmNvbXJlc2VhcmNoLmh0bWwgMjAwNyBGb3hBbWJpZW50IE9jY2x1c2l2ZSBDcmVhc2UgU2hhZGluZy5wZGYAEwABLwAAFQACAAz//wAAgAXSHB0eH1gkY2xhc3Nlc1okY2xhc3NuYW1lox8gIV1OU011dGFibGVEYXRhVk5TRGF0YVhOU09iamVjdF8QbS4uLy4uLy4uLy4uLy4uL1BhcGVycy8yMDA3L0ZveC9odHRwd3d3LnNoYWxpbm9yLmNvbXJlc2VhcmNoLmh0bWwgMjAwNyBGb3hBbWJpZW50IE9jY2x1c2l2ZSBDcmVhc2UgU2hhZGluZy5wZGbSHB0kJaIlIVxOU0RpY3Rpb25hcnkSAAGGoF8QD05TS2V5ZWRBcmNoaXZlcgAIABEAFgAfACgAMgA1ADoAPABFAEsAUgBdAGUAbABvAHEAcwB2AHgAegB8AIYAkwCYAKADGAMaAx8DKAMzAzcDRQNMA1UDxQPKA80D2gPfAAAAAAAAAgEAAAAAAAAAKAAAAAAAAAAAAAAAAAAAA/E=},
+<a name="cl-35"></a>        Bdsk-Url-1 = {http://www.shalinor.com/research.html}}
+<a name="cl-36"></a>
+<a name="cl-37"></a>@article{Bavoil2009Image-Space,
+<a name="cl-38"></a>        Author = {Louis Bavoil and Miguel Sainz},
+<a name="cl-39"></a>        Date-Added = {2010-05-03 10:32:19 +0200},
+<a name="cl-40"></a>        Date-Modified = {2010-09-29 11:03:50 +0200},
+<a name="cl-41"></a>        Journal = {in ShaderX7, W. Engel, Ed. Charles River Media, March},
+<a name="cl-42"></a>        Rating = {0},
+<a name="cl-43"></a>        Read = {Yes},
+<a name="cl-44"></a>        Title = {Image-Space Horizon-Based Ambient Occlusion},
+<a name="cl-45"></a>        Uri = {papers://17C36DC0-223C-4591-9A05-9C7953327675/Paper/p48},
+<a name="cl-46"></a>        Year = {2009}}
+<a name="cl-47"></a>
+<a name="cl-48"></a>@article{Ritschel2009Approximating,
+<a name="cl-49"></a>        Abstract = {Physically plausible illumination at real-time framerates is often achieved using approximations. One popular example is ambient occlusion (AO), for which very simple and efficient implementations are used extensively in production. Recent methods approximate ...},
+<a name="cl-50"></a>        Author = {Tobias Ritschel and Thorsten Grosch and Hans-Peter Seidel},
+<a name="cl-51"></a>        Date-Added = {2010-05-03 09:27:01 +0200},
+<a name="cl-52"></a>        Date-Modified = {2010-09-29 11:03:50 +0200},
+<a name="cl-53"></a>        Journal = {I3D &#39;09: Proceedings of the 2009 symposium on Interactive 3D graphics and games},
+<a name="cl-54"></a>        Keywords = {global illumination, constant time, radiosity},
+<a name="cl-55"></a>        Local-Url = {file://localhost/Users/Simon/Daten/Studium/Papers/2009/Ritschel/I3D%20&#39;09%20Proceedings%20of%20the%202009%20symposium%20on%20Interactive%203D%20graphics%20and%20games%202009%20RitschelApproximating%20dynamic%20global%20illumination%20in.pdf},
+<a name="cl-56"></a>        Month = {Feb},
+<a name="cl-57"></a>        Pmid = {1507149.1507161},
+<a name="cl-58"></a>        Rating = {0},
+<a name="cl-59"></a>        Read = {Yes},
+<a name="cl-60"></a>        Title = {Approximating dynamic global illumination in image space},
+<a name="cl-61"></a>        Uri = {papers://17C36DC0-223C-4591-9A05-9C7953327675/Paper/p19},
+<a name="cl-62"></a>        Url = {http://portal.acm.org/citation.cfm?id=1507149.1507161},
+<a name="cl-63"></a>        Year = {2009},
+<a name="cl-64"></a>        Bdsk-File-1 = {YnBsaXN0MDDUAQIDBAUIJidUJHRvcFgkb2JqZWN0c1gkdmVyc2lvblkkYXJjaGl2ZXLRBgdUcm9vdIABqAkKFRYXGyIjVSRudWxs0wsMDQ4RFFpOUy5vYmplY3RzV05TLmtleXNWJGNsYXNzog8QgASABqISE4ACgAOAB1lhbGlhc0RhdGFccmVsYXRpdmVQYXRo0hgNGRpXTlMuZGF0YU8RAzwAAAAAAzwAAgAACU1hY2ludG9zaAAAAAAAAAAAAAAAAAAAAAAAAMiQa4BIKwAAAAjFJB9JM0QgJzA5IFByb2NlZWRpbmdzIG8jOEM1MjYucGRmAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACMUmxllKVAAAAAAAAAAAAAUABAAACSAAAAAAAAAAAAAAAAAAAAAIUml0c2NoZWwAEAAIAADIkE9gAAAAEQAIAADGWS40AAAAAQAcAAjFJAAIxQ4ACMP8AAhBUQAHTioAA//vAACRkwACAFhNYWNpbnRvc2g6VXNlcnM6U2ltb246RGF0ZW46U3R1ZGl1bTpQYXBlcnM6MjAwOTpSaXRzY2hlbDpJM0QgJzA5IFByb2NlZWRpbmdzIG8jOEM1MjYucGRmAA4BGgCMAEkAMwBEACAAJwAwADkAIABQAHIAbwBjAGUAZQBkAGkAbgBnAHMAIABvAGYAIAB0AGgAZQAgADIAMAAwADkAIABzAHkAbQBwAG8AcwBpAHUAbQAgAG8AbgAgAEkAbgB0AGUAcgBhAGMAdABpAHYAZQAgADMARAAgAGcAcgBhAHAAaABpAGMAcwAgAGEAbgBkACAAZwBhAG0AZQBzACAAMgAwADAAOQAgAFIAaQB0AHMAYwBoAGUAbABBAHAAcAByAG8AeABpAG0AYQB0AGkAbgBnACAAZAB5AG4AYQBtAGkAYwAgAGcAbABvAGIAYQBsACAAaQBsAGwAdQBtAGkAbgBhAHQAaQBvAG4AIABpAG4ALgBwAGQAZgAPABQACQBNAGEAYwBpAG4AdABvAHMAaAASALtVc2Vycy9TaW1vbi9EYXRlbi9TdHVkaXVtL1BhcGVycy8yMDA5L1JpdHNjaGVsL0kzRCAnMDkgUHJvY2VlZGluZ3Mgb2YgdGhlIDIwMDkgc3ltcG9zaXVtIG9uIEludGVyYWN0aXZlIDNEIGdyYXBoaWNzIGFuZCBnYW1lcyAyMDA5IFJpdHNjaGVsQXBwcm94aW1hdGluZyBkeW5hbWljIGdsb2JhbCBpbGx1bWluYXRpb24gaW4ucGRmAAATAAEvAAAVAAIADP//AACABdIcHR4fWCRjbGFzc2VzWiRjbGFzc25hbWWjHyAhXU5TTXV0YWJsZURhdGFWTlNEYXRhWE5TT2JqZWN0XxCwLi4vLi4vLi4vLi4vLi4vUGFwZXJzLzIwMDkvUml0c2NoZWwvSTNEICcwOSBQcm9jZWVkaW5ncyBvZiB0aGUgMjAwOSBzeW1wb3NpdW0gb24gSW50ZXJhY3RpdmUgM0QgZ3JhcGhpY3MgYW5kIGdhbWVzIDIwMDkgUml0c2NoZWxBcHByb3hpbWF0aW5nIGR5bmFtaWMgZ2xvYmFsIGlsbHVtaW5hdGlvbiBpbi5wZGbSHB0kJaIlIVxOU0RpY3Rpb25hcnkSAAGGoF8QD05TS2V5ZWRBcmNoaXZlcgAIABEAFgAfACgAMgA1ADoAPABFAEsAUgBdAGUAbABvAHEAcwB2AHgAegB8AIYAkwCYAKAD4APiA+cD8AP7A/8EDQQUBB0E0ATVBNgE5QTqAAAAAAAAAgEAAAAAAAAAKAAAAAAAAAAAAAAAAAAABPw=},
+<a name="cl-65"></a>        Bdsk-Url-1 = {http://portal.acm.org/citation.cfm?id=1507149.1507161}}
+<a name="cl-66"></a>
+<a name="cl-67"></a>@article{Szirmay-Kalos2010Volumetric,
+<a name="cl-68"></a>        Author = {L Szirmay-Kalos and T Umenhoffer and B Toth and L Szecsi and M Sbert},
+<a name="cl-69"></a>        Date-Added = {2010-09-10 11:30:29 +0200},
+<a name="cl-70"></a>        Date-Modified = {2010-09-29 11:03:50 +0200},
+<a name="cl-71"></a>        Local-Url = {file://localhost/Users/Simon/Daten/Studium/Papers/2010/Szirmay-Kalos/2010%20Szirmay-KalosVolumetric%20Ambient%20Occlusion.pdf},
+<a name="cl-72"></a>        Rating = {0},
+<a name="cl-73"></a>        Read = {Yes},
+<a name="cl-74"></a>        Title = {Volumetric Ambient Occlusion},
+<a name="cl-75"></a>        Uri = {papers://17C36DC0-223C-4591-9A05-9C7953327675/Paper/p2624},
+<a name="cl-76"></a>        Year = {2010},
+<a name="cl-77"></a>        Bdsk-File-1 = {YnBsaXN0MDDUAQIDBAUIJidUJHRvcFgkb2JqZWN0c1gkdmVyc2lvblkkYXJjaGl2ZXLRBgdUcm9vdIABqAkKFRYXGyIjVSRudWxs0wsMDQ4RFFpOUy5vYmplY3RzV05TLmtleXNWJGNsYXNzog8QgASABqISE4ACgAOAB1lhbGlhc0RhdGFccmVsYXRpdmVQYXRo0hgNGRpXTlMuZGF0YU8RAj4AAAAAAj4AAgAACU1hY2ludG9zaAAAAAAAAAAAAAAAAAAAAAAAAMiQa4BIKwAAACJdER8yMDEwIFN6aXJtYXktS2Fsb3NWbyMyMjVDRDQucGRmAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIlzUyK/H7QAAAAAAAAAAAAUABAAACSAAAAAAAAAAAAAAAAAAAAANU3ppcm1heS1LYWxvcwAAEAAIAADIkE9gAAAAEQAIAADIr6vNAAAAAQAcACJdEQAiSIgACMP8AAhBUQAHTioAA//vAACRkwACAF1NYWNpbnRvc2g6VXNlcnM6U2ltb246RGF0ZW46U3R1ZGl1bTpQYXBlcnM6MjAxMDpTemlybWF5LUthbG9zOjIwMTAgU3ppcm1heS1LYWxvc1ZvIzIyNUNENC5wZGYAAA4AZgAyADIAMAAxADAAIABTAHoAaQByAG0AYQB5AC0ASwBhAGwAbwBzAFYAbwBsAHUAbQBlAHQAcgBpAGMAIABBAG0AYgBpAGUAbgB0ACAATwBjAGMAbAB1AHMAaQBvAG4ALgBwAGQAZgAPABQACQBNAGEAYwBpAG4AdABvAHMAaAASAGZVc2Vycy9TaW1vbi9EYXRlbi9TdHVkaXVtL1BhcGVycy8yMDEwL1N6aXJtYXktS2Fsb3MvMjAxMCBTemlybWF5LUthbG9zVm9sdW1ldHJpYyBBbWJpZW50IE9jY2x1c2lvbi5wZGYAEwABLwAAFQACAAz//wAAgAXSHB0eH1gkY2xhc3Nlc1okY2xhc3NuYW1lox8gIV1OU011dGFibGVEYXRhVk5TRGF0YVhOU09iamVjdF8QWy4uLy4uLy4uLy4uLy4uL1BhcGVycy8yMDEwL1N6aXJtYXktS2Fsb3MvMjAxMCBTemlybWF5LUthbG9zVm9sdW1ldHJpYyBBbWJpZW50IE9jY2x1c2lvbi5wZGbSHB0kJaIlIVxOU0RpY3Rpb25hcnkSAAGGoF8QD05TS2V5ZWRBcmNoaXZlcgAIABEAFgAfACgAMgA1ADoAPABFAEsAUgBdAGUAbABvAHEAcwB2AHgAegB8AIYAkwCYAKAC4gLkAukC8gL9AwEDDwMWAx8DfQOCA4UDkgOXAAAAAAAAAgEAAAAAAAAAKAAAAAAAAAAAAAAAAAAAA6k=}}
+<a name="cl-78"></a>
+<a name="cl-79"></a>@article{Luft2006Image,
+<a name="cl-80"></a>        Abstract = {We present a simple and efficient method to enhance the perceptual quality of images that contain depth information. Similar to an unsharp mask, the difference between the original depth buffer content and a low-pass filtered copy is utilized to determine ...},
+<a name="cl-81"></a>        Author = {Thomas Luft and Carsten Colditz and Oliver Deussen},
+<a name="cl-82"></a>        Date-Added = {2010-05-03 09:26:58 +0200},
+<a name="cl-83"></a>        Date-Modified = {2010-09-29 11:03:50 +0200},
+<a name="cl-84"></a>        Journal = {SIGGRAPH &#39;06: SIGGRAPH 2006 Papers},
+<a name="cl-85"></a>        Keywords = {image enhancement, non-photorealistic rendering, artistic tone reproduction, complex scenes},
+<a name="cl-86"></a>        Local-Url = {file://localhost/Users/Simon/Daten/Studium/Papers/2006/Luft/SIGGRAPH%20&#39;06%20SIGGRAPH%202006%20Papers%202006%20LuftImage%20enhancement%20by%20unsharp%20masking.pdf},
+<a name="cl-87"></a>        Month = {Jul},
+<a name="cl-88"></a>        Pmid = {1179352.1142016},
+<a name="cl-89"></a>        Rating = {0},
+<a name="cl-90"></a>        Read = {Yes},
+<a name="cl-91"></a>        Title = {Image enhancement by unsharp masking the depth buffer},
+<a name="cl-92"></a>        Uri = {papers://17C36DC0-223C-4591-9A05-9C7953327675/Paper/p14},
+<a name="cl-93"></a>        Url = {http://portal.acm.org/citation.cfm?id=1179352.1142016},
+<a name="cl-94"></a>        Year = {2006},
+<a name="cl-95"></a>        Bdsk-File-1 = {YnBsaXN0MDDUAQIDBAUIJidUJHRvcFgkb2JqZWN0c1gkdmVyc2lvblkkYXJjaGl2ZXLRBgdUcm9vdIABqAkKFRYXGyIjVSRudWxs0wsMDQ4RFFpOUy5vYmplY3RzV05TLmtleXNWJGNsYXNzog8QgASABqISE4ACgAOAB1lhbGlhc0RhdGFccmVsYXRpdmVQYXRo0hgNGRpXTlMuZGF0YU8RAoQAAAAAAoQAAgAACU1hY2ludG9zaAAAAAAAAAAAAAAAAAAAAAAAAMiQa4BIKwAAAAjEkR9TSUdHUkFQSCAnMDYgU0lHR1JBUEgjOEM0OTMucGRmAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACMSTxllS5gAAAAAAAAAAAAUABAAACSAAAAAAAAAAAAAAAAAAAAAETHVmdAAQAAgAAMiQT2AAAAARAAgAAMZZNsYAAAABABwACMSRAAjEgwAIw/wACEFRAAdOKgAD/+8AAJGTAAIAVE1hY2ludG9zaDpVc2VyczpTaW1vbjpEYXRlbjpTdHVkaXVtOlBhcGVyczoyMDA2Okx1ZnQ6U0lHR1JBUEggJzA2IFNJR0dSQVBIIzhDNDkzLnBkZgAOAKgAUwBTAEkARwBHAFIAQQBQAEgAIAAnADAANgAgAFMASQBHAEcAUgBBAFAASAAgADIAMAAwADYAIABQAGEAcABlAHIAcwAgADIAMAAwADYAIABMAHUAZgB0AEkAbQBhAGcAZQAgAGUAbgBoAGEAbgBjAGUAbQBlAG4AdAAgAGIAeQAgAHUAbgBzAGgAYQByAHAAIABtAGEAcwBrAGkAbgBnAC4AcABkAGYADwAUAAkATQBhAGMAaQBuAHQAbwBzAGgAEgB+VXNlcnMvU2ltb24vRGF0ZW4vU3R1ZGl1bS9QYXBlcnMvMjAwNi9MdWZ0L1NJR0dSQVBIICcwNiBTSUdHUkFQSCAyMDA2IFBhcGVycyAyMDA2IEx1ZnRJbWFnZSBlbmhhbmNlbWVudCBieSB1bnNoYXJwIG1hc2tpbmcucGRmABMAAS8AABUAAgAM//8AAIAF0hwdHh9YJGNsYXNzZXNaJGNsYXNzbmFtZaMfICFdTlNNdXRhYmxlRGF0YVZOU0RhdGFYTlNPYmplY3RfEHMuLi8uLi8uLi8uLi8uLi9QYXBlcnMvMjAwNi9MdWZ0L1NJR0dSQVBIICcwNiBTSUdHUkFQSCAyMDA2IFBhcGVycyAyMDA2IEx1ZnRJbWFnZSBlbmhhbmNlbWVudCBieSB1bnNoYXJwIG1hc2tpbmcucGRm0hwdJCWiJSFcTlNEaWN0aW9uYXJ5EgABhqBfEA9OU0tleWVkQXJjaGl2ZXIACAARABYAHwAoADIANQA6ADwARQBLAFIAXQBlAGwAbwBxAHMAdgB4AHoAfACGAJMAmACgAygDKgMvAzgDQwNHA1UDXANlA9sD4APjA/AD9QAAAAAAAAIBAAAAAAAAACgAAAAAAAAAAAAAAAAAAAQH},
+<a name="cl-96"></a>        Bdsk-Url-1 = {http://portal.acm.org/citation.cfm?id=1179352.1142016}}
+<a name="cl-97"></a>
+<a name="cl-98"></a>@inproceedings{Tomasi1998Bilateral,
+<a name="cl-99"></a>        Abstract = {Bilateral filtering smooths images while preserving edges, by means of a nonlinear combination of nearby image values. The method is noniterative, local, and simple. It combines gray levels or colors based on both their geometric closeness and their photometric similarity, and prefers near values to distant values in both domain and range. In contrast with filters that operate on the three bands of a color image separately, a bilateral filter can enforce the perceptual metric underlying the CIE-Lab color space, and smooth colors and preserve edges in a way that is tuned to human perception. Also, in contrast with standard filtering, bilateral filtering produces no phantom colors along edges in color images, and reduces phantom colors where they appear in the original image},
+<a name="cl-100"></a>        Author = {C Tomasi and R Manduchi},
+<a name="cl-101"></a>        Date-Added = {2010-09-29 10:59:28 +0200},
+<a name="cl-102"></a>        Date-Modified = {2010-09-29 11:03:50 +0200},
+<a name="cl-103"></a>        Doi = {10.1109/ICCV.1998.710815},
+<a name="cl-104"></a>        Journal = {Computer Vision, 1998. Sixth International Conference on},
+<a name="cl-105"></a>        Keywords = {phantom colors, perceptual metric, color images, photometric similarity, gray images, colour vision, edges preservation, computer vision, bilateral filtering, geometric closeness, image processing},
+<a name="cl-106"></a>        Local-Url = {file://localhost/Users/Simon/Daten/Studium/Papers/1998/Tomasi/Computer%20Vision%201998.%20Sixth%20International%20Conference%20on%201998%20TomasiBilateral%20filtering%20for%20gray%20and.pdf},
+<a name="cl-107"></a>        Month = {Jan},
+<a name="cl-108"></a>        Pages = {839 --846},
+<a name="cl-109"></a>        Rating = {0},
+<a name="cl-110"></a>        Title = {Bilateral filtering for gray and color images},
+<a name="cl-111"></a>        Uri = {papers://17C36DC0-223C-4591-9A05-9C7953327675/Paper/p2944},
+<a name="cl-112"></a>        Year = {1998},
+<a name="cl-113"></a>        Bdsk-File-1 = {YnBsaXN0MDDUAQIDBAUIJidUJHRvcFgkb2JqZWN0c1gkdmVyc2lvblkkYXJjaGl2ZXLRBgdUcm9vdIABqAkKFRYXGyIjVSRudWxs0wsMDQ4RFFpOUy5vYmplY3RzV05TLmtleXNWJGNsYXNzog8QgASABqISE4ACgAOAB1lhbGlhc0RhdGFccmVsYXRpdmVQYXRo0hgNGRpXTlMuZGF0YU8RAsYAAAAAAsYAAgAACU1hY2ludG9zaAAAAAAAAAAAAAAAAAAAAAAAAMiQa4BIKwAAACa00h9Db21wdXRlciBWaXNpb24gMTk5OCMyNkI0QzUucGRmAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAJrTFyMjMowAAAAAAAAAAAAUABAAACSAAAAAAAAAAAAAAAAAAAAAGVG9tYXNpABAACAAAyJBPYAAAABEACAAAyMiwgwAAAAEAHAAmtNIACMQgAAjD/AAIQVEAB04qAAP/7wAAkZMAAgBWTWFjaW50b3NoOlVzZXJzOlNpbW9uOkRhdGVuOlN0dWRpdW06UGFwZXJzOjE5OTg6VG9tYXNpOkNvbXB1dGVyIFZpc2lvbiAxOTk4IzI2QjRDNS5wZGYADgDQAGcAQwBvAG0AcAB1AHQAZQByACAAVgBpAHMAaQBvAG4AIAAxADkAOQA4AC4AIABTAGkAeAB0AGgAIABJAG4AdABlAHIAbgBhAHQAaQBvAG4AYQBsACAAQwBvAG4AZgBlAHIAZQBuAGMAZQAgAG8AbgAgADEAOQA5ADgAIABUAG8AbQBhAHMAaQBCAGkAbABhAHQAZQByAGEAbAAgAGYAaQBsAHQAZQByAGkAbgBnACAAZgBvAHIAIABnAHIAYQB5ACAAYQBuAGQALgBwAGQAZgAPABQACQBNAGEAYwBpAG4AdABvAHMAaAASAJRVc2Vycy9TaW1vbi9EYXRlbi9TdHVkaXVtL1BhcGVycy8xOTk4L1RvbWFzaS9Db21wdXRlciBWaXNpb24gMTk5OC4gU2l4dGggSW50ZXJuYXRpb25hbCBDb25mZXJlbmNlIG9uIDE5OTggVG9tYXNpQmlsYXRlcmFsIGZpbHRlcmluZyBmb3IgZ3JheSBhbmQucGRmABMAAS8AABUAAgAM//8AAIAF0hwdHh9YJGNsYXNzZXNaJGNsYXNzbmFtZaMfICFdTlNNdXRhYmxlRGF0YVZOU0RhdGFYTlNPYmplY3RfEIkuLi8uLi8uLi8uLi8uLi9QYXBlcnMvMTk5OC9Ub21hc2kvQ29tcHV0ZXIgVmlzaW9uIDE5OTguIFNpeHRoIEludGVybmF0aW9uYWwgQ29uZmVyZW5jZSBvbiAxOTk4IFRvbWFzaUJpbGF0ZXJhbCBmaWx0ZXJpbmcgZm9yIGdyYXkgYW5kLnBkZtIcHSQloiUhXE5TRGljdGlvbmFyeRIAAYagXxAPTlNLZXllZEFyY2hpdmVyAAgAEQAWAB8AKAAyADUAOgA8AEUASwBSAF0AZQBsAG8AcQBzAHYAeAB6AHwAhgCTAJgAoANqA2wDcQN6A4UDiQOXA54DpwQzBDgEOwRIBE0AAAAAAAACAQAAAAAAAAAoAAAAAAAAAAAAAAAAAAAEXw==},
+<a name="cl-114"></a>        Bdsk-Url-1 = {http://dx.doi.org/10.1109/ICCV.1998.710815}}
+</pre></div>
+</td></tr></table>
+    </div>
+  
+  </div>
+  
+
+
+
+      </div>
+    </div>
+
+  </div>
+
+  <div id="footer">
+    <ul id="footer-nav">
+      <li>Copyright © 2011 <a href="http://atlassian.com">Atlassian</a></li>
+      <li><a href="http://www.atlassian.com/hosted/terms.jsp">Terms of Service</a></li>
+      <li><a href="http://www.atlassian.com/about/privacy.jsp">Privacy</a></li>
+      <li><a href="//bitbucket.org/site/master/issues/new">Report a Bug to Bitbucket</a></li>
+      <li><a href="http://confluence.atlassian.com/x/IYBGDQ">API</a></li>
+      <li><a href="http://status.bitbucket.org/">Server Status</a></li>
+    </ul>
+    <ul id="social-nav">
+      <li class="blog"><a href="http://blog.bitbucket.org">Bitbucket Blog</a></li>
+      <li class="twitter"><a href="http://www.twitter.com/bitbucket">Twitter</a></li>
+    </ul>
+    <h5>We run</h5>
+    <ul id="technologies">
+      <li><a href="http://www.djangoproject.com/">Django 1.3.0</a></li>
+      <li><a href="//bitbucket.org/jespern/django-piston/">Piston 0.3dev</a></li>
+      <li><a href="http://www.selenic.com/mercurial/">Hg 1.8.2</a></li>
+      <li><a href="http://www.python.org">Python 2.7.2</a></li>
+      <li>r12427:b7404d13ceac | bitbucket02</li>
+    </ul>
+  </div>
+
+  <script src="https://dwz7u9t8u8usb.cloudfront.net/m/46c15ee9bc85/js/lib/global.js"></script>
+
+
+
+
+
+
+  <script>
+    BB.gaqPush(['_trackPageview']);
+  
+    BB.gaqPush(['atl._trackPageview']);
+
+    
+
+    
+
+    (function () {
+        var ga = document.createElement('script');
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        ga.setAttribute('async', 'true');
+        document.documentElement.firstChild.appendChild(ga);
+    }());
+  </script>
+
+</body>
+</html>

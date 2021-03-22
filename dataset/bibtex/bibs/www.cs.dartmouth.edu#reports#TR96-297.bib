@@ -1,0 +1,996 @@
+Please retain this header.  This bibliography accompanies 
+
+                     Applications of Parallel I/O
+                              David Kotz
+
+                          Dartmouth College
+                    Department of Computer Science
+                    Technical Report PCS-TR96-297
+                              Release 1
+
+                           October 14, 1996
+
+@InProceedings{acharya:tuning,
+  author = {Anurag Acharya and Mustafa Uysal and Robert Bennett and Assaf
+  Mendelson and Michael Beynon and Jeffrey K. Hollingsworth and Joel Saltz and
+  Alan Sussman},
+  title = {Tuning the Performance of {I/O} Intensive Parallel Applications},
+  booktitle = {Fourth Workshop on Input/Output in Parallel and Distributed
+  Systems},
+  year = {1996},
+  month = {May},
+  pages = {15--27},
+  address = {Philadelphia},
+  keyword = {parallel I/O, filesystem workload, parallel application, pario
+  bib},
+  abstract = {Getting good I/O performance from parallel programs is a critical
+  problem for many application domains. In this paper, we report our experience
+  tuning the I/O performance of four application programs from the areas of
+  satellite-data processing and linear algebra. After tuning, three of the four
+  applications achieve application-level I/O rates of over 100 MB/s on 16
+  processors. The total volume of I/O required by the programs ranged from
+  about 75 MB to over 200 GB. We report the lessons learned in achieving high
+  I/O performance from these applications, including the need for code
+  restructuring, local disks on every node and knowledge of future I/O
+  requests. We also report our experience on achieving high performance on
+  peer-to-peer configurations. Finally, we comment on the necessity of complex
+  I/O interfaces like collective I/O and strided requests to achieve high
+  performance.}
+}
+
+@InProceedings{ap:workload,
+  author = {Apratim Purakayastha and Carla Schlatter Ellis and David Kotz and
+  Nils Nieuwejaar and Michael Best},
+  title = {Characterizing Parallel File-Access Patterns on a Large-Scale
+  Multiprocessor},
+  booktitle = {Proceedings of the Ninth International Parallel Processing
+  Symposium},
+  year = {1995},
+  month = {April},
+  pages = {165--172},
+  URL = {ftp://ftp.cs.dartmouth.edu/pub/kotz/papers/ap:workload.ps.Z},
+  keyword = {parallel I/O, file access pattern, multiprocessor file system,
+  file system workload, dfk, pario bib},
+  abstract = {High-performance parallel file systems are needed to satisfy
+  tremendous I/O requirements of parallel scientific applications. The design
+  of such high-performance parallel file systems depends on a comprehensive
+  understanding of the expected workload, but so far there have been very few
+  usage studies of multiprocessor file systems. This paper is part of the
+  CHARISMA project, which intends to fill this void by measuring real
+  file-system workloads on various production parallel machines. In particular,
+  here we present results from the CM-5 at the National Center for
+  Supercomputing Applications. Our results are unique because we collect
+  information about nearly every individual I/O request from the mix of jobs
+  running on the machine. Analysis of the traces leads to various
+  recommendations for parallel file-system design.},
+  comment = {See also ap:workload-tr, kotz:workload, kotz:workload-tr,
+  nieuwejaar:strided.}
+}
+
+@TechReport{ap:workload-tr,
+  author = {Apratim Purakayastha and Carla Schlatter Ellis and David Kotz and
+  Nils Nieuwejaar and Michael Best},
+  title = {Characterizing Parallel File-Access Patterns on a Large-Scale
+  Multiprocessor},
+  year = {1994},
+  month = {October},
+  number = {CS-1994-33},
+  institution = {Dept. of Computer Science, Duke University},
+  URL = {ftp://cs.duke.edu/pub/dist/techreport/1994/1994-33.ps.Z},
+  keyword = {parallel I/O, file access pattern, multiprocessor file system,
+  file system workload, dfk, pario bib},
+  abstract = {Rapid increases in the computational speeds of multiprocessors
+  have not been matched by corresponding performance enhancements in the I/O
+  subsystem. To satisfy the large and growing I/O requirements of some parallel
+  scientific applications, we need parallel file systems that can provide
+  high-bandwidth and high-volume data transfer between the I/O subsystem and
+  thousands of processors. \par Design of such high-performance parallel file
+  systems depends on a thorough grasp of the expected workload. So far there
+  have been no comprehensive usage studies of multiprocessor file systems. Our
+  CHARISMA project intends to fill this void. The first results from our study
+  involve an iPSC/860 at NASA Ames. This paper presents results from a
+  different platform, the CM-5 at the National Center for Supercomputing
+  Applications. The CHARISMA studies are unique because we collect information
+  about every individual read and write request and about the entire mix of
+  applications running on the machines. \par The results of our trace analysis
+  lead to recommendations for parallel file system design. First, the file
+  system should support efficient concurrent access to many files, and I/O
+  requests from many jobs under varying load condit ions. Second, it must
+  efficiently manage large files kept open for long periods. Third, it should
+  expect to see small requests, predominantly sequential access patterns,
+  application-wide synchronous access, no concurrent file-sharing between jobs,
+  appreciable byte and block sharing between processes within jobs, and strong
+  interprocess locality. Finally, the trace data suggest that node-level write
+  caches and collective I/O request interfaces may be useful in certain
+  environments.},
+  comment = {See also kotz:workload, kotz:workload-tr, nieuwejaar:strided.}
+}
+
+@TechReport{arendt:genome,
+  author = {James W. Arendt},
+  title = {Parallel Genome Sequence Comparison Using a Concurrent File System},
+  year = {1991},
+  number = {UIUCDCS-R-91-1674},
+  institution = {University of Illinois at Urbana-Champaign},
+  keyword = {parallel file system, parallel I/O, Intel iPSC/2, pario bib},
+  comment = {Studies the performance of Intel CFS. Uses an application that
+  reads in a huge file of records, each a genome sequence, and compares each
+  sequence against a given sequence. Looks at cache performance, message
+  latency, cost of prefetches and directory reads, and throughput. He tries
+  one-disk, one-proc transfer rates. Because of contention with the directory
+  server on one of the two I/O nodes, it was faster to put all of the file on
+  the other I/O node. Striping is good for multiple readers. Best access
+  pattern was interleaved, not segmented or separate files, because it avoided
+  disk seeks. Perhaps the files are stored contiguously? Can get good speedup
+  by reading the sequences in big integral record sizes, from CFS, using a
+  load-balancing scheduled by the host. Contention for directory blocks --
+  through single-node directory server.}
+}
+
+@InCollection{baylor:workload-book,
+  author = {Sandra Johnson Baylor and C. Eric Wu},
+  title = {Parallel {I/O} Workload Characteristics Using {Vesta}},
+  booktitle = {Input/Output in Parallel and Distributed Computer Systems},
+  chapter = {7},
+  editor = {Ravi Jain and John Werth and James C. Browne},
+  year = {1996},
+  series = {The Kluwer International Series in Engineering and Computer
+  Science},
+  volume = {362},
+  pages = {167--185},
+  publisher = {Kluwer Academic Publishers},
+  URL =
+  {gopher://gopher.wkap.nl:70/00gopher_root1%3A%5Bbook.comp.9400%5D9400745.txt%
+},
+  keyword = {parallel I/O, file access pattern, workload characterization, file
+  system workload, pario bib},
+  abstract = {To develop optimal parallel I/O subsystems, one must have a
+  thorough understanding of the workload characteristics of parallel I/O and
+  its exploitation of the associated parallel file system. Presented are the
+  results of a study conducted to analyze the parallel I/O workloads of several
+  applications on a parallel processor using the Vesta parallel file system.
+  Traces of the applications are obtained to collect system events,
+  communication events, and parallel I/O events. The traces are then analyzed
+  to determine workload characteristics. The results show I/O request rates on
+  the order of hundreds of requests per second, a large majority of requests
+  are for small amounts of data (less than 1500 bytes), a few requests are for
+  large amounts of data (on the order of megabytes), significant file sharing
+  among processes within a job, and strong temporal, traditional spatial, and
+  interprocess spatial locality.},
+  comment = {Part of a whole book on parallel I/O; see iopads-book and
+  baylor:workload.}
+}
+
+@InProceedings{bell:physics,
+  author = {Jean L. Bell},
+  title = {A Specialized Data Management System for Parallel Execution of
+  Particle Physics Codes},
+  booktitle = {Proceedings of the ACM SIGMOD International Conference on
+  Management of Data},
+  year = {1988},
+  pages = {277--285},
+  keyword = {file access pattern, disk prefetch, file system, pario bib},
+  comment = {A specialized database system for particle physics codes. Valuable
+  for its description of access patterns and subsequent file access
+  requirements. Particle-in-cell codes iterate over timesteps, updating the
+  position of each particle, and then the characteristics of each cell in the
+  grid. Particles may move from cell to cell. Particle update needs itself and
+  nearby gridcell data. The whole dataset is too big for memory, and each
+  timestep must be stored on disk for later analysis anyway. Regular file
+  systems are inadequate: specialized DBMS is more appropriate. Characteristics
+  needed by their application class: multidimensional access (by particle type
+  or by location, \ie, multiple views of the data), coordination between grid
+  and particle data, coordination between processors, coordinated access to
+  meta-data, inverted files, horizontal clustering, large blocking of data,
+  asynchronous I/O, array data, complicated joins, and prefetching according to
+  user-prespecified order. Note that many of these things can be provided by a
+  file system, but that most are hard to come by in typical file systems, if
+  not impossible. Many of these features are generalizable to other
+  applications.}
+}
+
+@InProceedings{bjorstad:structure,
+  author = {P. E. Bj{\o}rstad and J. Cook},
+  title = {Large Scale Structural Analysis On Massively Parallel Computers},
+  booktitle = {Linear Algebra for Large Scale and Real-Time Applications},
+  year = {1993},
+  pages = {3--11},
+  publisher = {Kluwer Academic Publishers},
+  note = {ftp from ftp.ii.uib.no in \verb+pub/tech_reports/mpp_sestra.ps.Z+.},
+  URL = {file://ftp.ii.uib.no/pub/tech_reports/mpp_sestra.ps.Z},
+  keyword = {parallel I/O, file access pattern, pario bib},
+  comment = {A substantial part of this structural-analysis application was
+  involved in I/O, moving substructures in and out of RAM. The Maspar IO-RAM
+  helped a lot, nearly halving the time required. On the Cray, the SSD had an
+  even bigger impact, perhaps 7--12 times faster. Their main conclusion is that
+  caching helped. Most likely this was due to its double-buffering, since they
+  structured the code to read/compute/write in large ``superblocks''.}
+}
+
+@InProceedings{clark:molecular,
+  author = {Terry W. Clark and L. Ridgway Scott and Stanislaw Wlodek and J.
+  Andrew McCammon},
+  title = {{I/O} Limitations in Parallel Molecular Dynamics},
+  booktitle = {Proceedings of Supercomputing '95},
+  year = {1995},
+  URL = {http://www.supercomp.org/sc95/proceedings/524_TCLA/SC95.HTM},
+  keyword = {parallel I/O application, molecular dynamics, pario bib},
+  abstract = {We discuss data production rates and their impact on the
+  performance of scientific applications using parallel computers. On one hand,
+  too high rates of data production can be overwhelming, exceeding logistical
+  capacities for transfer, storage and analysis. On the other hand, the rate
+  limiting step in a computationally-based study should be the human-guided
+  analysis, not the calculation. We present performance data for a biomolecular
+  simulation of the enzyme, acetylcholinesterase, which uses the parallel
+  molecular dynamics program EulerGROMOS. The actual production rates are
+  compared against a typical time frame for results analysis where we show that
+  the rate limiting step is the simulation, and that to overcome this will
+  require improved output rates.},
+  comment = {Note proceedings only on CD-ROM or WWW.}
+}
+
+@InProceedings{crandall:iochar,
+  author = {Phyllis E. Crandall and Ruth A. Aydt and Andrew A. Chien and Daniel
+  A. Reed},
+  title = {Input/Output Characteristics of Scalable Parallel Applications},
+  booktitle = {Proceedings of Supercomputing '95},
+  year = {1995},
+  month = {December},
+  URL = {http://www.supercomp.org/sc95/proceedings/613_DREE/SC95.HTM},
+  keyword = {file access pattern, file system workload, workload
+  characterization, parallel I/O, pario bib},
+  abstract = {Rapid increases in computing and communication performance are
+  exacerbating the long-standing problem of performance-limited input/output.
+  Indeed, for many otherwise scalable parallel applications, input/output is
+  emerging as a major performance bottleneck. The design of scalable
+  input/output systems depends critically on the input/output requirements and
+  access patterns for this emerging class of large-scale parallel applications.
+  However, hard data on the behavior of such applications is only now becoming
+  available. In this paper, we describe the input/output requirements of three
+  scalable parallel applications (electron scattering, terrain rendering, and
+  quantum chemistry) on the Intel Paragon XP/S. As part of an ongoing parallel
+  input/output characterization effort, we used instrumented versions of the
+  application codes to capture and analyze input/output volume, request size
+  distributions, and temporal request structure. Because complete traces of
+  individual application input/output requests were captured, in-depth,
+  off-line analyses were possible. In addition, we conducted informal
+  interviews of the application developers to understand the relation between
+  the codes' current and desired input/output structure. The results of our
+  studies show a wide variety of temporal and spatial access patterns,
+  including highly read-intensive and write-intensive phases, extremely large
+  and extremely small request sizes, and both sequential and highly irregular
+  access patterns. We conclude with a discussion of the broad spectrum of
+  access patterns and their profound implications for parallel file caching and
+  prefetching schemes.},
+  comment = {They use the Pablo instrumentation and analysis tools to
+  instrument three scalable applications that use heavy I/O: electron
+  scattering, terrain rendering, and quantum chemistry. They look at the volume
+  of data moved, the timing of I/O, and the periodic nature of I/O. They do a
+  little bit with the access patterns of data within each file. They found a
+  HUGE variation in request sizes, amount of I/O, number of files, and so
+  forth. Their primary conclusion is thus that file systems should be adaptable
+  to different access patterns, preferably under control of the application.
+  Note proceedings only available on CD-ROM or WWW.}
+}
+
+@InProceedings{cypher:require,
+  author = {R. Cypher and A. Ho and S. Konstantinidou and P. Messina},
+  title = {Architectural Requirements of Parallel Scientific Applications with
+  Explicit Communication},
+  booktitle = {Proceedings of the 20th Annual International Symposium on
+  Computer Architecture},
+  year = {1993},
+  pages = {2--13},
+  keyword = {workload characterization, scientific computing, parallel
+  programming, message passing, pario bib},
+  comment = {Some mention of I/O, though only in a limited way. Average
+  1207B/MFlop. Some of the applications do I/O throughout their run
+  (2400B/MFlop avg), while others only do I/O at the beginning or end
+  (14B/MFlop avg). But I/O is bursty, so larger bandwidths are suggested. The
+  applications are parallel programs running on Intel Delta, nCUBE/1, nCUBE/2,
+  and are in C, FORTRAN, or both.}
+}
+
+@Article{delrosario:prospects,
+  author = {Juan Miguel {del Rosario} and Alok Choudhary},
+  title = {High Performance {I/O} for Parallel Computers: Problems and
+  Prospects},
+  journal = {IEEE Computer},
+  year = {1994},
+  month = {March},
+  volume = {27},
+  number = {3},
+  pages = {59--68},
+  keyword = {parallel I/O, survey, pario bib},
+  comment = {Nice summary of grand-challenge and other applications, and their
+  I/O needs. Points out the need for quantitative studies of workloads.
+  Comments on architectures, eg, the advent of per-node disk devices. OS
+  problems include communication latency, data decomposition, interface,
+  prefetching and caching, and checkpointing. Runtime system and compilers are
+  important, particularly in reference to data-mapping and re-mapping (see
+  delrosario:two-phase). Persistent object stores and networking are mentioned
+  briefly.}
+}
+
+@InProceedings{diegert:backprop,
+  author = {Carl Diegert},
+  title = {Out-of-core Backpropagation},
+  booktitle = {International Joint Conference on Neural Networks},
+  year = {1990},
+  volume = {2},
+  pages = {97--103},
+  keyword = {parallel I/O, neural network, pario bib},
+  comment = {An application that reads large files, sequentially, on CM2 with
+  DataVault.}
+}
+
+@InProceedings{fallah-adl:data,
+  author = {Hassan Fallah-Adl and Joseph J\'aJ\'a and Shunlin Liang and Yoram
+  J. Kaufman and John Townshend},
+  title = {Efficient Algorithms for Atmospheric Correction of Remotely Sensed
+  Data},
+  booktitle = {Proceedings of Supercomputing '95},
+  year = {1995},
+  URL = {http://www.supercomp.org/sc95/proceedings/511_HFAD/SC95.HTM},
+  keyword = {remote sensing, parallel I/O application, pario bib},
+  abstract = {Remotely sensed imagery has been used for developing and
+  validating various studies regarding land cover dynamics. However, the large
+  amounts of imagery collected by the satellites are largely contaminated by
+  the effects of atmospheric particles. The objective of atmospheric correction
+  is to retrieve the surface reflectance from remotely sensed imagery by
+  removing the atmospheric effects. We introduce a number of computational
+  techniques that lead to a substantial speedup of an atmospheric correction
+  algorithm based on using look-up tables. Excluding I/O time, the previous
+  known implementation processes one pixel at a time and requires about 2.63
+  seconds per pixel on a SPARC-10 machine, while our implementation is based on
+  processing the whole image and takes about 4-20 microseconds per pixel on the
+  same machine. We also develop a parallel version of our algorithm that is
+  scalable in terms of both computation and I/O. Experimental results obtained
+  show that a Thematic Mapper (TM) image (36 MB per band, 5 bands need to be
+  corrected) can be handled in less than 4.3 minutes on a 32-node CM-5 machine,
+  including I/O time.},
+  comment = {Note proceedings only on CD-ROM or WWW.}
+}
+
+@InProceedings{galbreath:applio,
+  author = {N. Galbreath and W. Gropp and D. Levine},
+  title = {Applications-Driven Parallel {I/O}},
+  booktitle = {Proceedings of Supercomputing '93},
+  year = {1993},
+  pages = {462--471},
+  keyword = {parallel I/O, pario bib},
+  comment = {They give a useful overview of the I/O requirements of many
+  applications codes, in terms of input, output, scratch files, debugging, and
+  checkpointing. They also describe their architecture-independent I/O
+  interface that provides calls to read and write entire arrays, with some
+  flexibility in the format and distribution of the array. Curious centralized
+  control method. Limited performance evaluation. They're trying to keep the
+  I/O media, file layout, and I/O architecture transparent to the user.
+  Implementation decides which processors actually do read/write. Data
+  formatted or unformatted; file sequential or parallel; can specify
+  distributed arrays with ghost points. Runs on lots of platforms; will also be
+  implementing on IBM SP-1 with disk per node, 128 nodes. Their package is
+  freely available via ftp. Future: buffer-size experiments, unstructured data,
+  use parallel file internally and then seqeuentialize on close.}
+}
+
+@Article{hack:ncar,
+  author = {James J. Hack and James M. Rosinski and David L. Williamson and
+  Byron A. Boville and John E. Truesdale},
+  title = {Computational design of the {NCAR} community climate model},
+  journal = {Parallel Computing},
+  year = {1995},
+  volume = {21},
+  pages = {1545--1569},
+  keyword = {parallel computing, scientific computing, weather prediction,
+  global climate model, parallel I/O, pario bib},
+  comment = {There is some discussion of I/O issues. This weather code does
+  some out-of-core work, to communicate data between time steps. They also dump
+  a 'history' file every simulated day, and periodic checkpoint files. They are
+  flexible about the layout of the history file, assuming postprocessing will
+  clean it up. The I/O is not too much trouble on the Cray C90, where they get
+  350 MBps to the SSD for the out-of-core data. The history I/O is no problem.
+  On distributed-memory machines with no SSD, out-of-core was impractical and
+  the history file was only written once per simulated month. 'The most
+  significant weakness in the distributed-memory implementation is the
+  treatment of I/O, [due to] file system maturity....' See hammond:atmosphere
+  and jones:skyhi in the same issue.}
+}
+
+@Article{hammond:atmosphere,
+  author = {Steven W. Hammond and Richard D. Loft and John M. Dennis and
+  Rochard K. Sato},
+  title = {Implementation and performance issues of a massively parallel
+  atmospheric model},
+  journal = {Parallel Computing},
+  year = {1995},
+  volume = {21},
+  pages = {1593--1619},
+  keyword = {parallel computing, scientific computing, weather prediction,
+  global climate model, parallel I/O, pario bib},
+  comment = {They discuss a weather code that runs on the CM-5. The code writes
+  a history file, dumping some data every timestep, and periodically a restart
+  file. They found that CM-5 Fortran met their needs, although required huge
+  buffers to get much scalability. They want to see a single, shared
+  file-system image from all processors, have the file format be independent of
+  processor count, use portable conventional interface, and have throughput
+  scale with the number of computation processors. See also hack:ncar and
+  jones:skyhi in the same issue.}
+}
+
+@Article{johnson:wave,
+  author = {Olin G. Johnson},
+  title = {Three-dimensional Wave Equation Computations on Vector Computers},
+  journal = {Proceedings of the IEEE},
+  year = {1984},
+  month = {January},
+  volume = {72},
+  number = {1},
+  pages = {90--95},
+  keyword = {computational physics, parallel I/O, pario bib},
+  comment = {Old paper on the need for large memory and fast paging and I/O in
+  out-of-core solutions to 3-d seismic modeling. They used 4-way parallel I/O
+  to support their job. Needed to transfer a 3-d matrix in and out of memory by
+  rows, columns, and vertical columns. Stored in block-structured form to
+  improve locality on the disk.}
+}
+
+@Article{jones:skyhi,
+  author = {Philip W. Jones and Christopher L. Kerr and Richard S. Hemler},
+  title = {Practical considerations in development of a parallel {SKYHI}
+  general circulation model},
+  journal = {Parallel Computing},
+  year = {1995},
+  volume = {21},
+  pages = {1677--1694},
+  keyword = {parallel computing, scientific computing, weather prediction,
+  global climate model, parallel I/O, pario bib},
+  comment = {They talk about a weather code. There's a bit about the parallel
+  I/O issues. They periodically write a restart file, and they write out
+  several types of data files. They write out the data in any order, with a
+  little mini-header in each chunk that describes the chunk. I/O was not a
+  significant percentage of their run time on either the CM5 or C90. See
+  hammond:atmosphere and hack:ncar in the same issue.}
+}
+
+@TechReport{karpovich:bottleneck,
+  author = {John F. Karpovich and Andrew S. Grimshaw and James C. French},
+  title = {Breaking the {I/O} Bottleneck at the {National Radio Astronomy
+  Observatory (NRAO)}},
+  year = {1993},
+  month = {August},
+  number = {CS-94-37},
+  institution = {University of Virginia},
+  URL = {ftp://uvacs.cs.virginia.edu/pub/techreports/CS-94-37.ps.Z},
+  keyword = {scientific database, parallel I/O, pario bib},
+  comment = {See also karpovich:case-study. That is a subset of this paper.}
+}
+
+@InProceedings{karpovich:case-study,
+  author = {John F. Karpovich and James C. French and Andrew S. Grimshaw},
+  title = {High Performance Access to Radio Astronomy Data: A Case Study},
+  booktitle = {Proceedings of the 7th International Working Conference on
+  Scientific and Statistical Database Management},
+  year = {1994},
+  month = {September},
+  note = {Also available as Univ. of Virginia TR CS-94-25},
+  URL = {ftp://uvacs.cs.virginia.edu/pub/techreports/CS-94-25.ps.Z},
+  keyword = {scientific database, parallel I/O, pario bib},
+  comment = {Apparently a subset of karpovich:bottleneck. They store a sparse,
+  multidimensional data set (radio astronomy data) as a set of tagged data
+  values, ie, as a set of tuples, each with several keys and a data value. They
+  use a PLOP format to partition each dimension into slices, so that each
+  intersection of the slices forms a bucket. They decide on the splits based on
+  a preliminary statistical survey of the data. Bucket overflow is handled by
+  chaining. Then, they evaluate various kinds of queries, ie, multidimensional
+  range queries, for their performance. In this workload queries (reads) are
+  much more common than updates (writes).}
+}
+
+@Misc{kotz:iobib,
+  author = {David Kotz},
+  title = {{BibTeX} bibliography file: {Parallel I/O}},
+  year = {1996},
+  month = {May},
+  howpublished = {Available for ftp from cs.dartmouth.edu in {\tt
+  pub/pario/pario.bib}, and on the WWW at {\tt
+  http://www.cs.dartmouth.edu/cs\_archive/pario/bib.html}},
+  note = {Eighth Edition},
+  URL = {http://www.cs.dartmouth.edu/cs_archive/pario/bib.html},
+  keyword = {parallel I/O, multiprocessor file system, dfk, pario bib},
+  comment = {A bibliography of 479 references on parallel I/O and
+  multiprocessor file systems issues. Posted to comp.parallel,
+  comp.os.research, and archived for ftp on ftp.cse.ucsc.edu in pub/bib/io.bib,
+  and on cs.dartmouth.edu in pub/pario/pario.bib. As of the fifth edition, it
+  is available on the WWW in HTML format.}
+}
+
+@Article{kotz:jworkload,
+  author = {David Kotz and Nils Nieuwejaar},
+  title = {File-System Workload on a Scientific Multiprocessor},
+  journal = {IEEE Parallel and Distributed Technology},
+  year = {1995},
+  month = {Spring},
+  pages = {51--60},
+  keyword = {parallel file system, file access pattern, multiprocessor file
+  system workload, parallel I/O, pario bib, dfk},
+  comment = {See also longer version as kotz:workload-tr.}
+}
+
+@InProceedings{kotz:workload,
+  author = {David Kotz and Nils Nieuwejaar},
+  title = {Dynamic File-Access Characteristics of a Production Parallel
+  Scientific Workload},
+  booktitle = {Proceedings of Supercomputing '94},
+  year = {1994},
+  month = {November},
+  pages = {640--649},
+  URL = {ftp://ftp.cs.dartmouth.edu/pub/kotz/papers/kotz:workload.ps.Z},
+  keyword = {parallel file system, file access pattern, multiprocessor file
+  system workload, parallel I/O, pario bib, dfk},
+  abstract = {Multiprocessors have permitted astounding increases in
+  computational performance, but many cannot meet the intense I/O requirements
+  of some scientific applications. An important component of any solution to
+  this I/O bottleneck is a parallel file system that can provide high-bandwidth
+  access to tremendous amounts of data {\em in parallel\/} to hundreds or
+  thousands of processors. \par Most successful systems are based on a solid
+  understanding of the characteristics of the expected workload, but until now
+  there have been no comprehensive workload characterizations of multiprocessor
+  file systems. We began the CHARISMA project in an attempt to fill that gap.
+  We instrumented the common node library on the iPSC/860 at NASA Ames to
+  record all file-related activity over a two-week period. Our instrumentation
+  is different from previous efforts in that it collects information about
+  every read and write request and about the {\em mix\/} of jobs running in the
+  machine (rather than from selected applications). \par The trace analysis in
+  this paper leads to many recommendations for designers of multiprocessor file
+  systems. First, the file system should support simultaneous access to many
+  different files by many jobs. Second, it should expect to see many small
+  requests, predominantly sequential and regular access patterns (although of a
+  different form than in uniprocessors), little or no concurrent file-sharing
+  between jobs, significant byte- and block-sharing between processes within
+  jobs, and strong interprocess locality. Third, our trace-driven simulations
+  showed that these characteristics led to great success in caching, both at
+  the compute nodes and at the I/O~nodes. Finally, we recommend supporting
+  strided I/O requests in the file-system interface, to reduce overhead and
+  allow more performance optimization by the file system.},
+  comment = {Cite kotz:jworkload.}
+}
+
+@TechReport{kotz:workload-tr,
+  author = {David Kotz and Nils Nieuwejaar},
+  title = {Dynamic File-Access Characteristics of a Production Parallel
+  Scientific Workload},
+  year = {1994},
+  month = {April},
+  number = {PCS-TR94-211},
+  institution = {Dept. of Math and Computer Science, Dartmouth College},
+  note = {Revised May 11, 1994},
+  URL = {http://www.cs.dartmouth.edu/reports/abstracts/PCS-TR94-211.html},
+  keyword = {parallel file system, file access pattern, multiprocessor file
+  system workload, parallel I/O, pario bib, dfk},
+  abstract = {Multiprocessors have permitted astounding increases in
+  computational performance, but many cannot meet the intense I/O requirements
+  of some scientific applications. An important component of any solution to
+  this I/O bottleneck is a parallel file system that can provide high-bandwidth
+  access to tremendous amounts of data {\em in parallel\/} to hundreds or
+  thousands of processors. \par Most successful systems are based on a solid
+  understanding of the characteristics of the expected workload, but until now
+  there have been no comprehensive workload characterizations of multiprocessor
+  file systems. We began the CHARISMA project in an attempt to fill that gap.
+  We instrumented the common node library on the iPSC/860 at NASA Ames to
+  record all file-related activity over a two-week period. Our instrumentation
+  is different from previous efforts in that it collects information about
+  every read and write request and about the {\em mix\/} of jobs running in the
+  machine (rather than from selected applications). \par The trace analysis in
+  this paper leads to many recommendations for designers of multiprocessor file
+  systems. First, the file system should support simultaneous access to many
+  different files by many jobs. Second, it should expect to see many small
+  requests, predominantly sequential and regular access patterns (although of a
+  different form than in uniprocessors), little or no concurrent file-sharing
+  between jobs, significant byte- and block-sharing between processes within
+  jobs, and strong interprocess locality. Third, our trace-driven simulations
+  showed that these characteristics led to great success in caching, both at
+  the compute nodes and at the I/O~nodes. Finally, we recommend supporting
+  strided I/O requests in the file-system interface, to reduce overhead and
+  allow more performance optimization by the file system.},
+  comment = {Cite kotz:jworkload.}
+}
+
+@InProceedings{miller:radar,
+  author = {Craig Miller and David G. Payne and Thanh N. Phung and Herb Siegel
+  and Roy Williams},
+  title = {Parallel Processing of Spaceborne Imaging Radar Data},
+  booktitle = {Proceedings of Supercomputing '95},
+  year = {1995},
+  URL = {http://www.supercomp.org/sc95/proceedings/012_PAYN/SC95.HTM},
+  keyword = {parallel I/O, pario bib},
+  abstract = {We discuss the results of a collaborative project on parallel
+  processing of Synthetic Aperture Radar (SAR) data, carried out between the
+  NASA/Jet Propulsion Laboratory (JPL), the California Institute of Technology
+  (Caltech) and Intel Scalable Systems Division (SSD). Through this
+  collaborative effort, we have successfully parallelized the most
+  compute-intensive SAR correlator phase of the Spaceborne Shuttle Imaging
+  Radar-C/X-Band SAR (SIR-C/X-SAR) code, for the Intel Paragon. We describe the
+  data decomposition, the scalable high-performance I/O model, and the
+  node-level optimizations which enable us to obtain efficient processing
+  throughput. In particular, we point out an interesting double level of
+  parallelization arising in the data decomposition which increases
+  substantially our ability to support ``high volume'' SAR. Results are
+  presented from this code running in parallel on the Intel Paragon. A
+  representative set of SAR data, of size 800 Megabytes, which was collected by
+  the SIR-C/X-SAR instrument aboard NASA's Space Shuttle in 15 seconds, is
+  processed in 55 seconds on the Concurrent Supercomputing Consortium's Paragon
+  XP/S 35+. This compares well with a time of 12 minutes for the current
+  SIR-C/X-SAR processing system at JPL. For the first time, a commercial system
+  can process SIR-C/X-SAR data at a rate which is approaching the rate at which
+  the SIR-C/X-SAR instrument can collect the data. This work has successfully
+  demonstrated the viability of the Intel Paragon supercomputer for processing
+  ``high volume'' Synthetic Aperture Radar data in near real-time.},
+  comment = {Available only on CD-ROM and WWW.}
+}
+
+@TechReport{moore:ocean,
+  author = {Jason A. Moore},
+  title = {Parallel {I/O} Requirements of Four Oceanography Applications},
+  year = {1995},
+  month = {January},
+  number = {95-80-1},
+  institution = {Oregon State University},
+  URL = {http://www.cs.orst.edu/~moorej/ocean.ps.Z},
+  keyword = {data parallel, file system workload, parallel I/O, pario bib},
+  abstract = {Brief descriptions of the I/O requirements for four production
+  oceanography programs running at Oregon State University are presented. The
+  applications all rely exclusively on array-oriented, sequential file
+  operations. Persistent files are used for checkpointing and movie making,
+  while temporary files are used to store out-of-core data.},
+  comment = {See moore:detection, moore:stream. Only three pages.}
+}
+
+@Article{nieuwejaar:workload,
+  author = {Nils Nieuwejaar and David Kotz and Apratim Purakayastha and Carla
+  Schlatter Ellis and Michael Best},
+  title = {File-Access Characteristics of Parallel Scientific Workloads},
+  journal = {IEEE Transactions on Parallel and Distributed Systems},
+  year = {1996},
+  month = {October},
+  volume = {7},
+  number = {10},
+  pages = {1075--1089},
+  URL = {http://www.computer.org/pubs/tpds/abs96.htm#1075td1096},
+  keyword = {verify pages, parallel I/O, file system workload, workload
+  characterization, file access pattern, multiprocessor file system, dfk, pario
+  bib},
+  abstract = {Phenomenal improvements in the computational performance of
+  multiprocessors have not been matched by comparable gains in I/O system
+  performance. This imbalance has resulted in I/O becoming a significant
+  bottleneck for many scientific applications. One key to overcoming this
+  bottleneck is improving the performance of multiprocessor file systems. \par
+  The design of a high-performance multiprocessor file system requires a
+  comprehensive understanding of the expected workload. Unfortunately, until
+  recently, no general workload studies of multiprocessor file systems have
+  been conducted. The goal of the CHARISMA project was to remedy this problem
+  by characterizing the behavior of several production workloads, on different
+  machines, at the level of individual reads and writes. The first set of
+  results from the CHARISMA project describe the workloads observed on an Intel
+  iPSC/860 and a Thinking Machines CM-5. This paper is intended to compare and
+  contrast these two workloads for an understanding of their essential
+  similarities and differences, isolating common trends and platform-dependent
+  variances. Using this comparison, we are able to gain more insight into the
+  general principles that should guide multiprocessor file-system design.},
+  comment = {See also nieuwejaar:workload-tr (very similar), kotz:workload,
+  kotz:workload, nieuwejaar:strided, ap:workload.}
+}
+
+@TechReport{nieuwejaar:workload-tr,
+  author = {Nils Nieuwejaar and David Kotz and Apratim Purakayastha and Carla
+  Schlatter Ellis and Michael Best},
+  title = {File-Access Characteristics of Parallel Scientific Workloads},
+  year = {1995},
+  month = {August},
+  number = {PCS-TR95-263},
+  institution = {Dept. of Computer Science, Dartmouth College},
+  note = {To appear in IEEE TPDS},
+  URL = {ftp://ftp.cs.dartmouth.edu/pub/kotz/papers/nieuwejaar:workload.ps.Z},
+  keyword = {parallel I/O, file system workload, workload characterization,
+  file access pattern, multiprocessor file system, dfk, pario bib},
+  abstract = {Phenomenal improvements in the computational performance of
+  multiprocessors have not been matched by comparable gains in I/O system
+  performance. This imbalance has resulted in I/O becoming a significant
+  bottleneck for many scientific applications. One key to overcoming this
+  bottleneck is improving the performance of parallel file systems. \par The
+  design of a high-performance parallel file system requires a comprehensive
+  understanding of the expected workload. Unfortunately, until recently, no
+  general workload studies of parallel file systems have been conducted. The
+  goal of the CHARISMA project was to remedy this problem by characterizing the
+  behavior of several production workloads, on different machines, at the level
+  of individual reads and writes. The first set of results from the CHARISMA
+  project describe the workloads observed on an Intel iPSC/860 and a Thinking
+  Machines CM-5. This paper is intended to compare and contrast these two
+  workloads for an understanding of their essential similarities and
+  differences, isolating common trends and platform-dependent variances. Using
+  this comparison, we are able to gain more insight into the general principles
+  that should guide parallel file-system design.},
+  comment = {See also kotz:workload, kotz:workload, nieuwejaar:strided,
+  ap:workload.}
+}
+
+@TechReport{ober:seismic,
+  author = {Curtis Ober and Ron Oldfield and John VanDyke and David Womble},
+  title = {Seismic Imaging on Massively Parallel Computers},
+  year = {1996},
+  month = {April},
+  number = {SAND96-1112},
+  institution = {Sandia National Laboratories},
+  URL = {ftp://ftp.cs.sandia.gov/pub/papers/dewombl/seismic_imaging_mpp.ps.Z},
+  keyword = {multiprocessor application, scientific computing, seismic data
+  processing, parallel I/O, pario bib},
+  abstract = {Fast, accurate imaging of complex, oil-bearing geologies, such as
+  overthrusts and salt domes, is the key to reducing the costs of domestic oil
+  and gas exploration. Geophysicists say that the known oil reserves in the
+  Gulf of Mexico could be significantly increased if accurate seismic imaging
+  beneath salt domes was possible. A range of techniques exist for imaging
+  these regions, but the highly accurate techniques involve the solution of the
+  wave equation and are characterized by large data sets and large
+  computational demands. Massively parallel computers can provide the
+  computational power for these highly accurate imaging techniques. \par A
+  brief introduction to seismic processing will be presented, and the
+  implementation of a seismic-imaging code for distributed memory computers
+  will be discussed. The portable code, Salvo, performs a wave-equation-based,
+  3-D, prestack, depth imaging and currently runs on the Intel Paragon, the
+  Cray T3D and SGI Challenge series. It uses MPI for portability, and has
+  sustained 22 Mflops/sec/proc (compiled FORTRAN) on the Intel Paragon.},
+  comment = {2 pages about their I/O scheme, mostly regarding a calculation of
+  the optimal balance between compute nodes and I/O nodes to achieve perfect
+  overlap.}
+}
+
+@TechReport{poole:sio-survey,
+  author = {James T. Poole},
+  title = {Preliminary Survey of {I/O} Intensive Applications},
+  year = {1994},
+  number = {CCSF-38},
+  institution = {Scalable I/O Initiative},
+  address = {Caltech Concurrent Supercomputing Facilities, Caltech},
+  URL = {http://www.ccsf.caltech.edu/SIO/SIO_apps.ps},
+  keyword = {parallel I/O, pario bib, multiprocessor file system, file access
+  pattern, checkpoint},
+  comment = {Goal is to collect a set of representative applications from
+  biology, chemistry, earth science, engineering, graphics, and physics, use
+  performance-monitoring tools to analyze them, create templates and benchmarks
+  that represent them, and then later to evaluate the performance of new I/O
+  tools created by rest of the SIO initiative. Seem to be four categories of
+  I/O needs: input, output, checkpoint, and virtual memory (``out-of-core''
+  scratch space). Not all types are significant in all applications. (Two
+  groups mention databases and the need to perform computationally complex
+  queries.) Large input is typically raw data (seismic soundings, astronomical
+  observations, satellite remote sensing, weather information). Sometimes there
+  are real-time constraints. Output is often periodic, \eg, the state of the
+  system every few timesteps; typically the volume would increase along with
+  I/O capacity and bandwidth. Checkpointing is a common request; preferably
+  allowing application to choose what and when to checkpoint, and definitely
+  including the state of files. Many kinds of out-of-core: 1) temp files
+  between passes (often written and read sequentially), 2) regular patterns
+  like FFT, matrix transpose, solvers, and single-pass read/compute/write, 3)
+  random access, \eg, to precomputed tables of integrals. Distinct differences
+  in the ways people choose to divide data into files; sometimes all in one
+  huge file, sometimes many ``small'' files (\eg, one per processor, one per
+  timestep, one per region, \etc). Important: overlap of computation and I/O,
+  independent access by individual processors. Not always important: ordering
+  of records read or written by different processors, exposing the I/O model to
+  the application writer. Units of I/O seem to be either (sub)matrices (1--5
+  dimensions) or items in a collection of objects (100--10000 bytes each). Data
+  sets varied up to 1~TB; bandwidth needs varied up to 1~GB/s. See also
+  bagrodia:sio-character, choudhary:sio-language, bershad:sio-os.}
+}
+
+@InProceedings{reddy:perfectio,
+  author = {A. L. Narasimha Reddy and Prithviraj Banerjee},
+  title = {A Study of {I/O} Behavior of {Perfect} Benchmarks on a
+  Multiprocessor},
+  booktitle = {Proceedings of the 17th Annual International Symposium on
+  Computer Architecture},
+  year = {1990},
+  pages = {312--321},
+  keyword = {parallel I/O, file access pattern, workload, multiprocessor file
+  system, benchmark, pario bib},
+  comment = {Using five applications from the Perfect benchmark suite, they
+  studied both implicit (paging) and explicit (file) I/O activity. They found
+  that the paging activity was relatively small and that sequential access to
+  VM was common. All access to files was sequential, though this may be due to
+  the programmer's belief that the file system is sequential. Buffered I/O
+  would help to make transfers bigger and more efficient, but there wasn't
+  enough rereferencing to make caching useful.}
+}
+
+@InProceedings{rodriguez:nnt,
+  author = {Bernardo Rodriguez and Leslie Hart and Tom Henderson},
+  title = {Programming Regular Grid-Based Weather Simulation Models for
+  Portable and Fast Execution},
+  booktitle = {Proceedings of the 1995 International Conference on Parallel
+  Processing},
+  year = {1995},
+  month = {August},
+  pages = {III:51--59},
+  keyword = {weather simulation, scientific application, parallel I/O, pario
+  bib},
+  comment = {Related to hart:grid.}
+}
+
+@Misc{ryan:cfs,
+  author = {Steve Ryan},
+  title = {{CFS} workload demonstration code},
+  year = {1991},
+  month = {July},
+  howpublished = {WWW
+  ftp://ftp.cs.dartmouth.edu/pub/pario/examples/CFS3D.tar.Z},
+  note = {A simple program demonstrating CFS usage for ARC3D-like
+  applications},
+  URL = {ftp://ftp.cs.dartmouth.edu/pub/pario/examples/CFS3D.tar.Z},
+  keyword = {parallel I/O workload, file access pattern, Intel, pario bib},
+  comment = {A sample code that tries to behave like a parallel ARC3D in terms
+  of its output. It writes two files, one containing three three-dimensional
+  matrices X, Y, and Z, and the other containing the four-dimensional matrix Q.
+  The matrices are spread over all the nodes, and each file is written in
+  parallel by the processors. See also ryan:navier.}
+}
+
+@InProceedings{ryan:navier,
+  author = {J. S. Ryan and S. K. Weeratunga},
+  title = {Parallel Computation of {3-D Navier-Stokes} Flowfields for
+  Supersonic Vehicles},
+  booktitle = {31st Aerospace Sciences Meeting and Exhibit},
+  year = {1993},
+  address = {Reno, NV},
+  note = {AIAA Paper 93-0064},
+  URL = {http://www.nas.nasa.gov/HPCC/Pubs/ryan/AIAA93-0064.html},
+  keyword = {parallel application, CFD, parallel I/O, pario bib},
+  comment = {This paper goes with the ryan:cfs code example. Describes their
+  parallel implementation of the ARC3D code on the iPSC/860. A section of the
+  paper considers I/O, which is to write out a large multidimensional matrix at
+  each timestep. They found that it was actually faster to write to separate
+  files because of congestion in the I/O nodes was hurting performance. They
+  never got more than 2 MB/s, even so, on a system that should obtain 7-10 MB/s
+  peak.}
+}
+
+@InProceedings{smirni:evolutionary,
+  author = {Evgenia Smirni and Ruth A. Aydt and Andrew A. Chien and Daniel A.
+  Reed},
+  title = {{I/O} Requirements of Scientific Applications: An Evolutionary
+  View},
+  booktitle = {Proceedings of the Fifth IEEE International Symposium on High
+  Performance Distributed Computing},
+  year = {1996},
+  pages = {49--59},
+  URL = {http://www-pablo.cs.uiuc.edu/People/esmirni/docs/IOhpdc96.ps.Z},
+  keyword = {I/O, workload characterization, scientific computing, parallel
+  I/O, pario bib},
+  comment = {They study two applications over several versions, using Pablo to
+  capture the I/O activity. They thus watch as application developers improve
+  the applications use of I/O modes and request sizes. Both applications move
+  through three phases: initialization, computation (with out-of-core I/O or
+  checkpointing I/O), and output. They found it necessary to tune the I/O
+  request sizes to match the parameters of the I/O system. In the initial
+  versions, the code used small read and write requests, which were (according
+  to the developers) the "easiest and most natural implementation for their
+  I/O." They restructured the I/O to make bigger requests, which better matched
+  the capabilities of Intel PFS. They conclude that asynchronous and collective
+  operations are imperative. They would like to see a file system that can
+  adapt dynamically to adjust its policies to the apparent access patterns.
+  Automatic request aggregation of some kind seems like a good idea; of course,
+  that is one feature of a buffer cache.}
+}
+
+@TechReport{thakur:astrophysics,
+  author = {Rajeev Thakur and Ewing Lusk and William Gropp},
+  title = {{I/O} Characterization of a Portable Astrophysics Application on the
+  {IBM SP} and {Intel Paragon}},
+  year = {1995},
+  month = {August},
+  number = {MCS-P534-0895},
+  institution = {Argonne National Laboratory},
+  note = {Revised October 1995},
+  URL = {http://www.mcs.anl.gov/home/thakur/astro.ps},
+  keyword = {file access pattern, workload characterization, parallel I/O,
+  pario bib},
+  abstract = {Many large-scale applications on parallel machines are
+  bottlenecked by the I/O performance rather than the CPU or communication
+  performance of the system. To improve the I/O performance, it is first
+  necessary for system designers to understand the I/O requirements of various
+  applications. This paper presents the results of a study of the I/O
+  characteristics and performance of a real, I/O-intensive, portable, parallel
+  application in astrophysics, on two different parallel machines---the IBM SP
+  and the Intel Paragon. We instrumented the source code to record all I/O
+  activity, and analyzed the resulting trace files. Our results show that, for
+  this application, the I/O consists of fairly large writes, and writing data
+  to files is faster on the Paragon, whereas opening and closing files are
+  faster on the SP. We also discuss how the I/O performance of this application
+  could be improved; particularly, we believe that this application would
+  benefit from using collective I/O.},
+  comment = {Adds another data point to the collection of parallel scientific
+  applications whose I/O has been characterized, a collection started in
+  earnest by crandall:iochar. It's a pretty straightforward application; it
+  just writes its matrices every few timesteps. The application writes whole
+  matrices; the OS sees request sizes that are more a factor of the Chameleon
+  library than of the application. Most of the I/O itself is not implemented in
+  parallel, because they used UniTree on the SP, and because the Chameleon
+  library sequentializes this kind of I/O through one node. Other numbers from
+  the paper don't add much insight into the workload. Revised slightly in
+  October 1995; the abstract represents that revision.}
+}
+
+@InProceedings{thakur:evaluation,
+  author = {Rajeev Thakur and William Gropp and Ewing Lusk},
+  title = {An Experimental Evaluation of the Parallel {I/O} Systems of the
+  {IBM~SP} and {Intel Paragon} Using a Production Application},
+  booktitle = {Proceedings of the Third International Conference of the
+  Austrian Center for Parallel Computation (ACPC)},
+  year = {1996},
+  month = {September},
+  series = {Lecture Notes in Computer Science},
+  volume = {1127},
+  pages = {24--35},
+  publisher = {Springer-Verlag},
+  URL = {http://www.mcs.anl.gov/home/thakur/io-eval.ps},
+  keyword = {parallel I/O, multiprocessor file system, workload
+  characterization, pario bib},
+  abstract = {We present the results of an experimental evaluation of the
+  parallel I/O systems of the IBM SP and Intel Paragon using a real
+  three-dimensional parallel application code. This application, developed by
+  scientists at the University of Chicago, simulates the gravitational collapse
+  of self-gravitating gaseous clouds. It performs parallel I/O by using library
+  routines that we developed and optimized separately for the SP and Paragon.
+  The I/O routines perform two-phase I/O and use the parallel file systems
+  PIOFS on the SP and PFS on the Paragon. We studied the I/O performance for
+  two different sizes of the application. In the small case, we found that I/O
+  was much faster on the SP. In the large case, open, close, and read
+  operations were only slightly faster, and seeks were significantly faster, on
+  the SP; whereas, writes were slightly faster on the Paragon. The
+  communication required within our I/O routines was faster on the Paragon in
+  both cases. The highest read bandwidth obtained was 48\,Mbytes/sec., and the
+  highest write bandwidth obtained was 31.6\,Mbytes/sec., both on the SP.},
+  comment = {See thakur:evaluation-tr.}
+}
+
+@TechReport{thakur:evaluation-tr,
+  author = {Rajeev Thakur and William Gropp and Ewing Lusk},
+  title = {An Experimental Evaluation of the Parallel {I/O} Systems of the
+  {IBM~SP} and {Intel Paragon} Using a Production Application},
+  year = {1996},
+  month = {February},
+  number = {MCS-P569--0296},
+  institution = {Argonne National Laboratory},
+  keyword = {parallel I/O, multiprocessor file system, pario bib},
+  abstract = {This paper presents the results of an experimental evaluation of
+  the parallel I/O systems of the IBM SP and Intel Paragon. For the evaluation,
+  we used a full, three-dimensional application code that is in production use
+  for studying the nonlinear evolution of Jeans instability in self-gravitating
+  gaseous clouds. The application performs I/O by using library routines that
+  we developed and optimized separately for parallel I/O on the SP and Paragon.
+  The I/O routines perform two-phase I/O and use the PIOFS file system on the
+  SP and PFS on the Paragon. We studied the I/O performance for two different
+  sizes of the application. We found that for the small case, I/O was faster on
+  the SP, whereas for the large case, I/O took almost the same time on both
+  systems. Communication required for I/O was faster on the Paragon in both
+  cases. The highest read bandwidth obtained was 48 Mbytes/sec. and the highest
+  write bandwidth obtained was 31.6 Mbytes/sec., both on the SP.},
+  comment = {See thakur:evaluation. This version no longer on the web.}
+}
+
+@Article{woodward:scivi,
+  author = {Paul R. Woodward},
+  title = {Interactive Scientific Visualization of Fluid Flow},
+  journal = {IEEE Computer},
+  year = {1993},
+  month = {October},
+  volume = {26},
+  number = {10},
+  pages = {13--25},
+  keyword = {parallel I/O architecture, scientific visualization, pario bib},
+  comment = {This paper is interesting for its impressive usage of RAIDs and
+  parallel networks to support scientific visualization. In particular, the
+  proposed Gigawall (a 10-foot by 6-foot gigapixel-per-second display) is run
+  by 24 SGI processors and 32 9-disk RAIDs, connected to an MPP of some kind
+  through an ATM switch. 512 GBytes of storage, playable at 450 MBytes per
+  second, for 19 minutes of animation.}
+}

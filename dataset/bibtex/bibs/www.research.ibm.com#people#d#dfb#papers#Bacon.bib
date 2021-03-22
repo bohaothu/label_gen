@@ -1,0 +1,1082 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Bacon.bib
+%
+% Publications by David F. Bacon
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%                                    THESES
+
+@phdthesis{Bacon97PhD,
+  author = "David Francis Bacon",
+  title = "Fast and Effective Optimization of Statically Typed Object-Oriented
+    Languages",
+  year = 1997,
+  month = Dec,
+  note = "Report No. UCB/CSD-98-1017",
+  school = "Computer Science Division, University of California, Berkeley",
+  abstract="
+    In this dissertation, we show how a relatively simple and extremely fast
+    interprocedural optimization algorithm can be used to optimize many of the
+    expensive features of statically typed, object-oriented languages --- in
+    particular, C++ and Java.
+
+    We present a new program analysis algorithm, Rapid Type Analysis, and show
+    that it is fast both in theory and in practice, and significantly
+    out-performs other ``fast'' algorithms for virtual function call
+    resolution.
+
+    We present optimization algorithms for the resolution of virtual function
+    calls, conversion of virtual inheritance to direct inheritance, elimination
+    of dynamic casts and dynamic type checks, and removal of object
+    synchronization.  These algorithms are all presented within a common
+    framework that allows them to be driven by the information collected by
+    Rapid Type Analysis, or by some other type analysis algorithm.
+
+    Collectively, the optimizations in this dissertation free the programmer
+    from having to sacrifice modularity and extensibility for performance.
+    Instead, the programmer can freely make use of the most powerful features
+    of object-oriented programming, since the optimizer will remove unnecessary
+    extensibility from the program."
+}
+
+@mastersthesis{Bacon95MS,
+  author = "David Francis Bacon",
+  title = "Fallacies of the Multiprocessor Approach to Achieving Large-Scale 
+     Computing Capabilities: A Case Study",
+  year = 1995,
+  month = Dec,
+  school = "Computer Science Division, University of California, Berkeley",
+  abstract = "
+    The hype accompanying the headlong rush towards massively parallel
+    supercomputing has been accompanied by numerous ``real world'' studies
+    showing how real applications can be dramatically sped up on machines with
+    thousands of processors achieving hundreds of gigaflops.  We worked for a
+    year with a group of astrophysicists to vectorize and parallelize their
+    X-ray pulsar simulation with the understanding that in return for their
+    investment of time we would give them an improved version of the code that
+    they could maintain and develop independently.  We found that current
+    optimizing compiler technology is greatly limited in its effectiveness by
+    the narrow scope across which optimizations can usually be performed.  We
+    also found that when an application is ``scaled up'' to fit on a massively
+    parallel machine, the axis along which it is scaled may not be appropriate
+    to the requirements of the users.  This leads us to an interesting
+    generalization of Amdahl's Law, and a better understanding of application
+    scalability."
+}
+
+
+%                                     BOOK
+
+@book{Hermes,
+  author="Robert E. Strom and David F. Bacon and Arthur Goldberg and
+    Andy Lowry and Daniel Yellin and Shaula Alexander Yemini",
+  title="Hermes: A Language for Distributed Computing",
+  publisher="Prentice-Hall",
+  address="Englewood Cliffs, New Jersey",
+  series="Series in Innovative Technology",
+  year=1991,
+  note="ISBN 0-13-389537-8"
+}
+
+
+
+%                            REFEREED PUBLICATIONS
+
+@unpublished{Vechev06Parametric,
+  author = "Martin T. Vechev and Eran Yahav and David F. Bacon",
+  title = "Parametric Generation of Concurrent Collection Algorithms",
+  year = 2005,
+  month = Jul,
+  note = "Submitted for publication",
+}
+
+@inproceedings{Bacon05High,
+  author = "David F. Bacon and Perry Cheng and David Grove and Michael Hind and
+    V. T. Rajan and Eran Yahav and Matthias Hauswirth and Christoph M. Kirsch 
+    and Daniel Spoonhower and Martin T. Vechev",
+  title = "High-level Real-time Programming in {Java}",
+  booktitle="Proceedings of the Fifth ACM International Conference on Embedded Software",
+  month=Sep,
+  year = 2005,
+  address="Jersey City, New Jersey",
+  note = "Invited paper",
+}
+
+% volume = "(to appear)",
+@inproceedings{Vechev05Derivation,
+  author = "Martin T. Vechev and David F. Bacon and Perry Cheng and David Grove",
+  title = "Derivation and Evaluation of Concurrent Collectors",
+  booktitle = "Proceedings of the Nineteenth European Conference on
+    Object-Oriented Programming",
+  editor = "Andrew Black",
+  year = 2005,
+  month = Jul,
+  address = "Glasgow, Scotland",
+  series = "Lecture Notes in Computer Science",
+  publisher = "Springer-Verlag",
+}
+
+@inproceedings{Bacon05Syncopation,
+  author = "David F. Bacon and Perry Cheng and David Grove and Martin T. Vechev",
+  title = "Syncopation: Generational Real-time Garbage Collection in the {Metronome}",
+  pages = "183--192",
+  booktitle = "Proceedings of the Conference on Languages, Compilers, and Tools for Embedded Systems",
+  year = 2005,
+  month = Jun,
+  address = "Chicago, Illinois",
+  xjournal = "SIGPLAN Notices",
+  xvolume = 40,
+  xnumber = 7,
+  xmonth = Jun,
+}
+
+@inproceedings{Bacon04Virtualized,
+  author = "David F. Bacon",
+  title = "The Virtualized Virtual Machine",
+  booktitle = "Third International Workshop on Language Runtimes",
+  address = "Vancouver, British Columbia",
+  month = Oct,
+  year = 2004,
+}
+
+@inproceedings{Bacon04Braids,
+  author = "David F. Bacon and Xiaowei Shen",
+  title = "Braids and Fibers: Language Constructs with Architectural Support for Adaptive Response to Memory Latencies",
+  booktitle = "First Watson Conference on Interaction between Architecture, Circuits, and Compilers",
+  address = "Yorktown Heights, New York",
+  month = Oct,
+  year = 2004,
+}
+
+@inproceedings{Paz04OnTheFly,
+  author = "Harel Paz and David F. Bacon and Elliot K. Kolodner and Erez Petrank and V. T. Rajan",
+  title = "Efficient On-the-Fly Cycle Collection",
+  pages = "156--171",
+  booktitle = "Fourteenth International Conference on Compiler Construction",
+  year = 2005,
+  month = Apr,
+  address = "Edinburgh, Scotland",
+  editor = "Ras Bodik",
+  series = "Lecture Notes in Computer Science",
+  volume = "3443",
+}
+
+@inproceedings{Bacon04Unified,
+  author = "David F. Bacon and Perry Cheng and V. T. Rajan",
+  title = "A Unified Theory of Garbage Collection",
+  pages = "50--68",  
+  booktitle="Proceedings of the ACM Conference on Object-Oriented Systems, Languages, and 
+    Applications",
+  month=Oct,
+  year = 2004,
+  address="Vancouver, British Columbia",
+  xjournal = "SIGPLAN Notices",
+  xvolume = 39,
+  xnumber = 10,
+}
+
+
+@inproceedings{Vechev04Write,
+  author = "Martin T. Vechev and David F. Bacon",
+  title = "Write Barrier Elision for Concurrent Garbage Collectors",
+  pages = "13--24",
+  booktitle = "Proceedings of the 2004 International Symposium on Memory Management",
+  year = 2004,
+  month = Oct,
+  address="Vancouver, British Columbia",
+}
+
+@inproceedings{Soman04Dynamic,
+  author = "Sunil Soman and Chandra Krintz and David F. Bacon",
+  title = "Dynamic Selection of Application-Specific Garbage Collectors",
+  pages = "49--60",
+  booktitle = "Proceedings of the 2004 International Symposium on Memory Management",
+  year = 2004,
+  month = Oct,
+  address="Vancouver, British Columbia",
+}
+
+@inproceedings{Bacon04Garbage,
+  author = "David F. Bacon and Perry Cheng and David Grove",
+  title = "Garbage Collection for Embedded Systems",
+  pages = "125--136",
+  booktitle="Proceedings of the Fourth ACM International Conference on Embedded Software",
+  month=Sep,
+  year = 2004,
+  address="Pisa, Italy",
+}
+
+@inproceedings{Bacon04Retrospective,
+  author = "David F. Bacon and Ravi Konuru and Chet Murthy and Mauricio Serrano",
+  title = "Retrospective: Thin Locks",
+  booktitle = "Twenty Years of the ACM SIGPLAN Conference on Programming Language
+    Design and Implementation (1979--1999): A Selection",
+  editor = "Kathryn S. McKinley",
+  xjournal = "SIGPLAN Notices",
+  xvolume = 39,
+  xnumber = 4,
+  month = Apr,
+  year = 2004,
+  abstract = "NONE",
+}
+
+@inproceedings{Bacon03Metronome,
+  author = "David F. Bacon and Perry Cheng and V. T. Rajan",
+  title = "The {Metronome}: A Simpler Approach to Garbage Collection in Real-time Systems",
+  pages = "466--478",
+  booktitle = "Proceedings of the {OTM} Workshops: Workshop on {Java} Technologies for Real-Time and Embedded Systems",
+  address = "Catania, Sicily",
+  month = Nov,
+  year = 2003,
+  editor = "R. Meersman and Z. Tari",
+  series = "Lecture Notes in Computer Science",
+  volume = 2889,
+  publisher = "Springer-Verlag",
+  abstract = "
+With the wide-spread adoption of Java, there is significant interest in using
+the language for programming real-time systems.  
+The community has generally viewed a truly real-time garbage collector as being
+impossible to build, and has instead focused its efforts on adding manual
+memory management mechanisms to Java.  Unfortunately, these mechanisms are an
+awkward fit for the language: they introduce significant run-time overhead,
+introduce run-time memory access exceptions, and greatly complicate the
+development of library code.
+In recent work we have shown that it is possible to build a real-time collector
+for Java with highly regular CPU utilization and greatly reduced memory
+footprint.  The system currently achieves 6 ms pause times with 50\% CPU
+utilization (MMU) and virtually no ``tail'' in the distribution.
+We show how this work can be incorporated into a general real-time framework,
+and extended to systems with higher task frequencies.  We argue that the community
+should focus more effort on such a simple, orthogonal solution that is true to
+the spirit of the Java language.",
+}
+
+@inproceedings{Corwin03ModJava,
+  author = "John Corwin and David F. Bacon and David Grove and Chet Murthy",
+  title = "{ModJava}: A Rational Module System for {Java} and its Applications",
+  booktitle="Proceedings of the ACM Conference on Object-Oriented Systems, Languages, and 
+    Applications",
+  pages = {241--254},
+  doi = {http://doi.acm.org/10.1145/949305.949326},
+  month=Oct,
+  year = 2003,
+  address="Anaheim, California",
+  xjournal="SIGPLAN Notices",
+  xvolume=38,
+  xnumber=11,
+  xmonth=Nov,
+  isbn = {1-58113-712-5},
+}
+
+
+@inproceedings{Bacon03Controlling,
+  author = "David F. Bacon and Perry Cheng and V. T. Rajan",
+  title = "Controlling Fragmentation and Space Consumption in the {Metronome}, a Real-time Garbage Collector for {Java}",
+  booktitle = "Proceedings of the Conference on Languages, Compilers, and Tools for Embedded Systems",
+  pages = {81--92},
+  doi = {http://doi.acm.org/10.1145/780731.780744},
+  year = 2003,
+  month = Jun,
+  address = "San Diego, California",
+  xjournal = "SIGPLAN Notices",
+  xvolume = {38},
+  xnumber = {7},
+  issn = {0362-1340},
+  abstract = "
+    Now that the use of garbage collection in languages like Java is becoming
+    widely accepted due to the safety and software engineering benefits it
+    provides, there is significant interest in applying garbage collection to
+    hard real-time systems.
+    Past approaches have generally suffered from one of two major flaws: either
+    they were not provably real-time, or they imposed large space overheads to
+    meet the real-time bounds.
+    Our previous work~\cite{Bacon03Realtime} presented a mostly non-copying
+    real-time collector with worst-case pause times of 12 milliseconds while
+    maintaining consistent mutator CPU utilization rates of 45\% with only 1.6--2.5
+    times the maximum heap space required by the application, which is comparable
+    with space requirements for stop-the-world collectors.
+    However, that algorithm assumed a constant collection rate and ignored
+    program-dependent characteristics.  This paper refines that model by taking
+    into account program properties such as pointer density, average object size,
+    and locality of object size.  This allows us to bound both the time for
+    collection and consequently the space overhead required much more tightly.  We
+    show experimentally that most parameters usually are not subject to large
+    variation, indicating that a small number of parameters will be sufficient to
+    predict the time and space requirements accurately.
+    Our previous work also did not present the details of our approach to avoiding
+    and undoing fragmentation.  In this paper we present a more detailed analysis
+    of fragmentation than in previous work, and show how our collector is able to
+    bound fragmentation to acceptable limits.",
+}
+
+@inproceedings{Bacon03Realtime,
+  author = "David F. Bacon and Perry Cheng and V. T. Rajan",
+  title = "A Real-time Garbage Collector with Low Overhead and 
+    Consistent Utilization",
+  pages = "285--298",
+  booktitle = "Proceedings of the 30th Annual ACM SIGPLAN-SIGACT
+    Symposium on Principles of Programming Languages",
+  address = "New Orleans, Louisiana",
+  month = Jan,
+  year = 2003, 
+  xjournal = "SIGPLAN Notices",
+  xvolume = 38,
+  xnumber = 1,
+  abstract = "
+    Now that the use of garbage collected languages like Java is becoming
+    widely accepted due to the safety and software engineering benefits, there
+    is significant interest in applying garbage collection to hard real-time
+    systems.
+    Past approaches have generally suffered from one of two major flaws: either
+    they were not provably real-time, or they required very large space
+    overheads to meet the real-time bounds.
+    We present a mostly non-moving, dynamically defragmenting collector that
+    overcomes both of these limitations: by avoiding copying in most cases,
+    space requirements are kept low; and by fully incrementalizing the
+    collector we are able to meet real-time bounds.
+    We have implemented our algorithm in the Jikes RVM and show that we are
+    able to obtain mutator utilization rates of 45\% with only twice the actual
+    space required by the application, a factor of 4 improvement in utilization
+    over the best previously published results."
+}
+
+@inproceedings{Bacon02Space,
+  author = "David F. Bacon and Stephen J. Fink and David Grove",
+  title = "Space- and Time-Efficient Implementation of the {Java} Object Model",
+  pages = "111--132",
+  booktitle = "Proceedings of the Sixteenth European Conference on
+    Object-Oriented Programming",
+  editor = "Boris Magnusson",
+  year = 2002,
+  month = Jun,
+  address = "M\'alaga, Spain",
+  series = "Lecture Notes in Computer Science",
+  volume = 2374,
+  publisher = "Springer-Verlag",
+  abstract = "While many object-oriented languages impose space overhead of 
+    only one word per object to support features like virtual method dispatch,
+    Java's richer functionality has led to implementations that require two or
+    three header words per object.  This space overhead increases memory usage
+    and attendant garbage collection costs, reduces cache locality, and
+    constrains programmers who might naturally solve a problem by using large
+    numbers of small objects.  In this paper, we show that with careful
+    engineering, a high performance virtual machine can instantiate most Java
+    objects with only a single-word object header.  The single header word
+    provides fast access to the virtual method table, allowing for quick method
+    invocation.  The implementation represents other per-object data (lock
+    state, hash code, and garbage collection flags) using heuristic compression
+    techniques.  The heuristic retains two-word headers, containing thin lock
+    state, only for objects that have {\sf synchronized} methods.  We describe
+    the implementation of various object models in the Jikes Research Virtual
+    Machine, by introducing a pluggable object model abstraction into the
+    virtual machine implementation.  We compare the original Jikes RVM object
+    model with three different object models with single-word headers.
+    Experimental results show that the object header compression techniques
+    give an average space savings of roughly 12\%.  Compared to the original
+    Jikes RVM object model, the compressed space-encodings result in
+    application speedups ranging from $-1.2\%$ to $+2.0\%$.  Performance on
+    synthetic micro-benchmarks ranges from $+18\%$, due to benefits from
+    reduced object size, to $-12\%$, on a stress test of virtual method
+    invocation."
+}
+
+@article{Bacon03Kava,
+  author = "David F. Bacon",
+  title = "Kava: A {Java} Dialect with a Uniform Object Model for Lightweight 
+    Classes",
+  journal = "Concurrency---Practice and Experience",
+  year = 2003,
+  month = Mar # "--" # Apr,
+  volume = 15,
+  number = "3--5",
+  pages = "185--206",
+  doi = "10.1002/cpe.653",
+  abstract = "Journal version of the Java Grande paper"
+}
+
+% LNCS 2624: January 2003
+@inproceedings{Attanasio01Comparative,
+  author = "Clement R. Attanasio and David F. Bacon and Anthony Cocchi and
+    Stephen Smith",
+  title = "A Comparative Evaluation of Parallel Garbage Collectors",
+  booktitle = "Proceedings of the Fourteenth Annual Workshop on 
+      Languages and Compilers for Parallel Computing",
+  address = "Cumberland Falls, Kentucky",
+  year = 2001,
+  month = Aug,
+  series = "Lecture Notes in Computer Science",
+  volume = 2624,
+  editor = "H. G. Dietz",
+  pages = "177--192",
+  publisher = "Springer-Verlag",
+  abstract = "While uniprocessor garbage collection is relatively well 
+    understood, experience with collectors for large multiprocessor servers is
+    limited and it is unknown which techniques best scale with large memories
+    and large numbers of processors.  In order to explore these issues we
+    designed a modular garbage collection framework in the IBM Jalape\~no Java
+    virtual machine and implemented five different parallel garbage collectors:
+    non-generational and generational versions of mark-and-sweep and semi-space
+    copying collectors, as well as a hybrid of the two.  We describe the
+    optimizations necessary to achieve good performance across all of the
+    collectors, including load balancing, fast synchronization, and
+    inter-processor sharing of free lists.  We then quantitatively compare the
+    different collectors to find their asymptotic performance both with respect
+    to how fast they can run applications as well as how little memory they can
+    run them in.  All of our collectors scale linearly up to sixteen
+    processors.  The least memory is usually required by the hybrid mark-sweep
+    collector that uses a copying collector for its nursery, although sometimes
+    the non-generational mark-sweep collector requires less memory.  The
+    fastest execution is more application-dependent.  Our only application with
+    a large working set performed best using the mark-sweep collector; with one
+    exception, the rest of the applications ran fastest with one of the
+    generational collectors."
+}
+
+
+@inproceedings{Bacon01Java,
+  author = "David F. Bacon and Clement R. Attanasio and Han B. Lee and 
+    V. T. Rajan and Stephen Smith",
+  title = "Java without the Coffee Breaks: A Nonintrusive Multiprocessor
+    Garbage Collector",
+  pages = "92--103",
+  booktitle = "Proceedings of the ACM SIGPLAN Conference on Programming
+    Language Design and Implementation",
+  year = 2001,
+  month = Jun,
+  xjournal="SIGPLAN Notices",
+  xvolume=36,
+  xnumber=6,
+  address = "Snowbird, Utah",
+  abstract = "
+    The deployment of Java as a concurrent programming language has created a
+    critical need for high-performance, concurrent, and incremental
+    multiprocessor garbage collection.  We present the {\em Recycler}, a fully
+    concurrent pure reference counting garbage collector that we have
+    implemented in the Jalape\~no Java virtual machine running on shared memory
+    multiprocessors.
+    While a variety of multiprocessor collectors have been proposed and some
+    have been implemented, experimental data is limited and there is little
+    quantitative basis for comparison between different algorithms.  We present
+    measurements of the Recycler and compare it against a non-concurrent but
+    parallel load-balancing mark-and-sweep collector (that we also implemented
+    in Jalape\~no), and evaluate the classical tradeoff between response time
+    and throughput.
+    When processor or memory resources are limited, the Recycler runs at about
+    90\% of the speed of the mark-and-sweep collector.  However, with an extra
+    processor to run collection and with a moderate amount of memory headroom,
+    the Recycler is able to operate without ever blocking the mutators and
+    achieves a maximum measured mutator delay of only 6 milliseconds for our
+    benchmarks.  End-to-end execution time is usually increased only slightly,
+    but is sometimes substantially better or worse, presumably due to locality
+    effects."
+}
+
+
+@inproceedings{Bacon01Concurrent,
+  author="David F. Bacon and V. T. Rajan",
+  title="Concurrent Cycle Collection in Reference Counted Systems",
+  pages="207--235",
+  booktitle = "Proceedings of the Fifteenth European Conference on
+    Object-Oriented Programming",
+  year = 2001,
+  month = Jun,
+  address = "Budapest, Hungary",
+  series = "Lecture Notes in Computer Science",
+  editor = "J\orgen Lindskov Knudsen",
+  volume = 2072,
+  publisher = "Springer-Verlag",
+  abstract = "
+    Automatic storage reclamation via reference counting has important
+    advantages, but has always suffered from a major weakness due to its
+    inability to reclaim cyclic data structures.
+    We describe a novel cycle collection algorithm that is both {\em
+    concurrent} --- it is capable of collecting garbage even in the presence of
+    concurrent mutation --- and {\em localized} --- it never needs to perform a
+    global search of the entire data space.  We describe our algorithm in
+    detail and present a proof of correctness.
+    We have implemented our algorithm in the Jalape\~no Java virtual machine as
+    part of the Recycler, a concurrent multiprocessor reference counting
+    garbage collector.  We present measurements showing that the Recycler
+    achieves maximum mutator pause times of only 6 milliseconds over a set of
+    eight benchmarks, while maintaining end-to-end computation speed
+    competitive with a parallel mark-and-sweep collector."
+}
+
+@inproceedings{Bacon01Kava,
+  author = "David F. Bacon",
+  title = "Kava: A {Java} Dialect with a Uniform Object Model for Lightweight 
+    Classes",
+  booktitle = "Proceedings of the Joint ACM Java Grande/ISCOPE Conference",
+  year = 2001,
+  month = Jun,
+  pages = "68--77",
+  address = "Stanford, California",
+  publisher = "ACM Press, New York, New York",
+  abstract = " 
+    Object-oriented programming languages have always distinguished between
+    ``primitive'' and ``user-defined'' data types, and in the case of languages
+    like C++ and Java, the primitives are not even treated as objects, further
+    fragmenting the programming model.
+    The distinction is particularly problematic when a particular programming
+    community requires primitive-level support for a new data type, as for {\sf
+    complex}, intervals, fixed-pointed numbers, and so on.
+    We present Kava, a backward-compatible version of Java that solves the
+    problem of programmable lightweight objects in a much more aggressive and
+    uniform manner than previous proposals.  In Kava, there are no primitive
+    types; instead, object-oriented programming is provided down to the level
+    of single bits, and types such as {\sf int} can be explicitly programmed
+    within the language.
+    While the language maintains a uniform object reference semantics,
+    efficiency is obtained by making heavy use of {\em semantic expansion}.
+    We describe Kava as a dialect of the Java language, show how it can be used
+    to define various primitive types, describe how it can be translated into
+    Java, and compare it to other approaches to lightweight objects."
+}
+
+@inproceedings{Bacon00Guava,
+  author="David F. Bacon and Robert E. Strom and Ashis Tarafdar",
+  title="Guava: A Dialect of {Java} without Data Races",
+  pages="382--400",
+  booktitle="Proceedings of the ACM Conference on Object-Oriented Systems, Languages, and 
+    Applications",
+  year=2000,
+  month=Oct,
+  address="Minneapolis, Minnesota",
+  xjournal="SIGPLAN Notices",
+  xvolume=35,
+  xnumber=10,
+  abstract=" 
+    We introduce Guava, a dialect of Java whose rules statically guarantee that
+    parallel threads access shared data only through synchronized methods.  Our
+    dialect distinguishes three categories of classes: (1) monitors, which may
+    be referenced from multiple threads, but whose methods are accessed
+    serially; (2) values, which cannot be referenced and therefore are never
+    shared; and (3) objects, which can have multiple references but only from
+    within one thread, and therefore do not need to be synchronized.  Guava
+    circumvents the problems associated with today's Java memory model, which
+    must define behavior when concurrent threads access shared memory without
+    synchronization.
+    We present an overview of the syntax and the semantic rules of Guava.  We
+    discuss how implementations of Guava can exploit these rules to re-enable
+    compiler optimizations inhibited by standard Java.  We discuss how
+    compilers for certain multiprocessor architectures can automatically
+    generate certain programming idioms, such as double-check reads, as
+    optimizations of serialized monitors."
+}
+
+@inproceedings{Bacon98Thin,
+  title="Thin Locks: Featherweight Synchronization for {Java}",
+  author="David F. Bacon and Ravi Konuru and Chet Murthy and Mauricio Serrano",
+  pages="258--268",
+  booktitle="Proceedings of the SIGPLAN Conference on Programming Language 
+    Design and Implementation", 
+  year=1998,
+  month=Jun,
+  address="Montreal, Canada",
+  xjournal="SIGPLAN Notices",
+  xvolume=33,
+  xnumber=6,
+  note="Also appears in {\it Twenty Years of the ACM SIGPLAN Conference on Programming Language
+    Design and Implementation (1979--1999): A Selection. SIGPLAN Notices 39, 4.}",
+  abstract="
+    Language-supported synchronization is a source of serious performance
+    problems in many Java programs.  Even single-threaded applications may
+    spend up to half their time performing useless synchronization due to the
+    thread-safe nature of the Java libraries.  We solve this performance
+    problem with a new algorithm that allows lock and unlock operations to be
+    performed with only a few machine instructions in the most common cases.
+    Our locks only require a partial word per object, and were implemented
+    without increasing object size.  We present measurements from our
+    implementation in the JDK 1.1.2 for AIX, demonstrating speedups of up to a
+    factor of 5 in micro-benchmarks and up to a factor of 1.7 in real
+    programs."
+}
+
+@inproceedings{Bacon96Fast,
+  title="Fast static analysis of {C}++ virtual function calls",
+  author="D. F. Bacon and P. F. Sweeney",
+  affiliation="IBM Thomas J. Watson Res. Center, Yorktown Heights, New York",
+  pages="324--341",
+  booktitle = "Proceedings of the ACM Conference on Object Oriented
+    Programming Systems, Languages, and Applications",
+  year=1996,
+  month=Oct,
+  address="San Jose, California",
+  xjournal="SIGPLAN Notices",
+  xvolume="31",
+  xnumber="10",
+  abstract="
+    Virtual functions make code easier for programmers to reuse but also make
+    it harder for compilers to analyze. We investigate the ability of three
+    static analysis algorithms to improve C++ programs by resolving virtual
+    function calls, thereby reducing compiled code size and reducing program
+    complexity so as to improve both human and automated program understanding
+    and analysis. In measurements of seven programs of significant size (5000
+    to 20000 lines of code each) we found that on average the most precise of
+    the three algorithms resolved 71\% of the virtual function calls and
+    reduced compiled code size by 25\%. This algorithm is very fast: it
+    analyzes 3300 source lines per second on an 80 MHz PowerPC 601. Because of
+    its accuracy and speed, this algorithm is an excellent candidate for
+    inclusion in production C++ compilers."
+}
+
+@article{Bacon94Compiler,
+  author="David F. Bacon and Susan L. Graham and Oliver J. Sharp",
+  title="Compiler Transformations for High-Performance Computing",
+  affiliation="Div. of Comput. Sci., California Univ., Berkeley, California",
+  journal=ACMCS,
+  volume="26",
+  number="4",
+  pages="345-420",
+  year=1994,
+  month=Dec,
+  abstract="
+    In the last three decades, a large number of compiler transformations for
+    optimizing programs have been implemented. Most optimizations for
+    uniprocessors reduce the number of instructions executed by the program
+    using transformations based on the analysis of scalar quantities and
+    data-flow techniques. In contrast, optimizations for high-performance
+    superscalar, vector and parallel processors maximize parallelism and memory
+    locality with transformations that rely on tracking the properties of
+    arrays using loop dependence analysis.  This survey is a comprehensive
+    overview of the important high-level program restructuring techniques for
+    imperative languages such as C and Fortran. Transformations for both
+    sequential and various types of parallel architectures are covered in
+    depth. We describe the purpose of each transformation, explain how to
+    determine if it is legal, and give an example of its
+    application. Programmers wishing to enhance the performance of their code
+    can use this survey to improve their understanding of the optimizations
+    that compilers can perform, or as a reference for techniques to be applied
+    manually. Students can obtain an overview of optimizing compiler
+    technology. Compiler writers can use this survey as a reference for most of
+    the important optimizations developed to date, and as a bibliographic
+    reference for the details of each optimization. Readers are expected to be
+    familiar with modern computer architecture and basic program compilation
+    techniques."
+}
+
+@inproceedings{Bacon94Framework,
+  author="David F. Bacon and Jyh-Herng Chow and {Dz-ching} R. Ju and 
+    Kalyan Muthukumar and Vivek Sarkar",
+  title="A Compiler Framework for Restructuring Data Declarations 
+    to Enhance Cache and {TLB} Effectiveness",
+  pages="270-282",
+  booktitle="Proceedings of {CASCON} '94",
+  editor="J. Botsford and A. Gawman and M. Gentleman and E. Kidd and K.
+    Lyons and J. Slonim",
+  year=1994,
+  month=Oct,
+  address="Toronto, Ontario",
+  publisher="Nat. Res. Council Canada, Ottawa, Ontario",
+  dfbid=335,
+  abstract="
+    It has been observed that memory access performance can be improved by
+    restructuring data declarations, using simple transformations such as array
+    dimension padding and inter-array padding (array alignment) to reduce the
+    number of misses in the cache and TLB (translation lookaside buffer).
+    These transformations can be applied to both static and dynamic array
+    variables.  In this paper, we provide a padding algorithm for selecting
+    appropriate padding amounts, which takes into account various cache and TLB
+    effects collectively within a single framework.  In addition to reducing
+    the number of misses, we identify the importance of reducing the impact of
+    {\it cache miss jamming} by spreading cache misses more uniformly across
+    loop iterations.
+ 
+    We translate undesirable cache and TLB behaviors into a set of constraints
+    on padding amounts and propose a heuristic algorithm of polynomial time
+    complexity to find the padding amounts to satisfy these constraints.  The
+    goal of the padding algorithm is to select padding amounts so that there
+    are {\it no set conflicts} and {\it no offset conflicts} in the cache and
+    TLB, for a given loop. In practice, this algorithm can efficiently find
+    small padding amounts to satisfy these constraints."
+}
+
+@inproceedings{Bacon91Optimistic,
+  author="David F. Bacon and Robert E. Strom",
+  title="Optimistic Parallelization of Communicating Sequential Processes",
+  pages="155--166",
+  booktitle = "Proceedings of the Third ACM Symposium on Principles
+    and Practice of Parallel Programming",
+  year = "1991",
+  month = APR,
+  address = "Williamsburg, Virginia",
+  xjournal = "SIGPLAN Notices",
+  xvolume = 26,
+  xnumber = 7,
+  xmonth = jul,
+  abstract = "
+    We present a transparent program transformation which converts a sequential
+    execution of $S_1;S_2$ by a process in a multiprocess environment into an
+    optimistic parallel execution of $S_1$ and $S_2$.
+
+    Such a transformation is valuable in the case where $S_1$ and $S_2$ cannot
+    be parallelized by static analysis either because $S_2$ reads a value from
+    $S_1$ or because $S_1$ and $S_2$ each interact with an external process.
+    The optimistic transformation works under a weaker set of conditions: (1)
+    if the value $S_2$ reads from $S_1$ can usually, but not always, be
+    correctly guessed ahead of time, and (2) if $S_1$ and $S_2$ interact with
+    an external process, conflicts which violate the ordering of $S_1$ and
+    $S_2$ are possible but rare.  Practical applications of this approach
+    include executing the likely outcome of a test in parallel with making the
+    test, and converting sequences of calls into streams of asynchronous sends.
+
+    We analyze the problem using the framework of {\em guarded computations},
+    in which each computation is tagged with the set of guesses on which it
+    depends.  We present an algorithm for managing communications, thread
+    creation, committing, and aborting in the transformed program.  We contrast
+    our approach with related work."
+}
+
+@inproceedings{Bacon91Hardware,
+  author="David F. Bacon and Seth Copen Goldstein",
+  title="Hardware-Assisted Replay of Multiprocessor Programs",
+  pages="194--206",
+  booktitle = "Proceedings of the ACM/ONR Workshop on Parallel and Distributed
+    Debugging",
+  year = 1991,
+  month = MAY,
+  address = "Santa Cruz, California",
+  xjournal = "SIGPLAN Notices",
+  xvolume = 26,
+  xnumber = 12,
+  xmonth = DEC,
+  abstract = "
+    Shared-memory parallel programs can be highly non-deterministic due to the
+    unpredictable order in which shared references are satisfied.  However,
+    deterministic execution is extremely important for debugging and can also
+    be used for fault-tolerance and other replay-based algorithms.  We present
+    a hardware/software design that allows the order of memory references in a
+    parallel program to be logged efficiently by recording a subset of the
+    cache traffic between memory and the CPU's.  This log can then be used
+    along with hardware and software control to replay execution.
+
+    Simulation of several parallel programs shows that our device records no
+    more than 1.17 MB/second for an application exhibiting fine-grained sharing
+    behavior on a 16-way multiprocessor consisting of 12 MIP CPU's.  In
+    addition, no probe effect or performance degradation is introduced.  This
+    represents several orders of magnitude improvement in both performance and
+    log size over purely software-based methods proposed previously."
+}
+
+@inproceedings{Bacon91File,
+  author="David F. Bacon",
+  title="File System Measurements and their Application to the 
+    Design of Efficient Operation Logging Algorithms",
+  pages="21-30",
+  booktitle="Proceedings of the Tenth Symposium on Reliable 
+    Distributed Systems",
+  year=1991,
+  month=Sep,
+  address="Pisa, Italy",
+  publisher="IEEE Computer Society Press, Los Alamitos, California",
+  pagecount="viii+228",
+  sponsor="IEEE",
+  sponsor="A.I.C.A.",
+  sponsor="IFIP WG10.4",
+  sponsor="Ist. Elaborazione Inf. CNR-Pisa",
+  sponsor="Univ. Bologna",
+  sponsor="Univ. Pisa",
+  abstract="
+    We consider file system operation in a transparently fault-tolerant system
+    that uses checkpointing and message logging.  Logging messages to disk is
+    one of the primary performance costs of such systems.
+
+    We have measured the file system operations performed on large timesharing
+    systems running Unix in terms of the level of concurrency (number of
+    consecutive operations by the same process) and the read ratio (number of
+    operations that do not change the state of the file system).  By performing
+    much of the data analysis on-line within a modified Unix kernel, we were
+    able to collect statistics over a long period of time with a substantial
+    variation in system load.
+
+    Using this data, we demonstrate that a technique we call {\em null
+    logging}\/ can reduce the number of messages logged to disk by a factor of
+    10 to 25, depending on the workload.  This reduces the overhead of the
+    fault-tolerance mechanism and also allows a large fraction of file system
+    operations to commit instantaneously."
+}
+
+
+@inproceedings{Auerbach92High,
+  title="High-Level Language Support for Programming Distributed Systems",
+  author="Joshua S. Auerbach and David F. Bacon and 
+    Arthur Goldberg and German S. Goldszmidt and Ajei S. Gopal and 
+    Mark T. Kennedy and 
+    Andrew R. Lowry and James R. and W. Silverman and Robert E. Strom and
+    Daniel M. Yellin and Shaula Yemini",
+  pages="320-330",
+  booktitle="Proceedings of the International Conference on 
+    Computer Languages",
+  year=1992,
+  month=apr,
+  address="Oakland, California",
+  pagecount="x+341",
+  sponsor="IEEE",
+  publisher="IEEE Computer Society Press, Los Alamitos, California",
+  abstract="A strategy for simplifying the programming of heterogeneous
+    distributed systems is presented. The approach used is based on
+    integrating a high-level distributed programming model, the process
+    model, directly into programming languages. Distributed applications
+    written in such languages are portable across different environments,
+    are shorter, and are simpler to develop than similar applications
+    developed using conventional approaches. The process model is discussed,
+    and Hermes and Concert/C, two languages that implement this model, are
+    described. Hermes is a secure, representation-independent language
+    designed explicitly around the process model. Concert/C is the C
+    language augmented with a small set of extensions to support the process
+    model while allowing reuse of existing C code. Hermes has been
+    prototyped: an implementation of Concert/C is in development."
+}
+
+@article{Dupuy90NEST,
+  title="{NEST}: A Network Simulation and Prototyping Testbed",
+  author="Alexander Dupuy and Jed Schwartz and Yechiam Yemini and 
+    David F. Bacon",
+  journal=CACM,
+  pages="63--74",
+  volume=33,
+  number=10,
+  month=Oct,
+  year=1990
+}
+
+@inproceedings{Bacon88NEST,
+  title="{NEST}: A Network Simulation and Prototyping Testbed",
+  author="David F. Bacon and Alexander Dupuy and Jed Schwartz and 
+    Yechiam Yemini",
+  pages="71--77",
+  booktitle="Proceedings of the Winter {USENIX} Technical Conference",
+  year=1988,
+  month=Feb,
+  address="Dallas, Texas",
+  publisher="Usenix Association, Berkeley, California",
+  abstract="
+    This paper describes NEST, a testbed which provides a simulated network
+    environment for developing and analyzing distributed systems and
+    algorithms.  Nest has a number of interesting features, including a
+    transparent implementation of lightweight processes under UNIX, and a
+    distributed monitoring facility with a graphical user interface."
+}
+
+@inproceedings{Dupuy89NEST,
+  title="{NEST}: A Network Simulation and Prototyping Testbed",
+  author="Alexander Dupuy and Jed Schwartz and Yechiam Yemini and 
+    David F. Bacon",
+  pages="1058-1064",
+  booktitle="Proceedings of the Winter Simulation Conference",
+  year=1989,
+  month=dec,
+  address="Washington, D.C.",
+  editor="A. MacNair and K. J. Musselman and P. Heidelberger",
+  publisher="SCS, San Diego, California"
+}
+
+@inproceedings{Bacon90Transparent,
+  author="David F. Bacon",
+  title="Transparent Recovery in Distributed Systems",
+  pages="91-94",
+  booktitle="Position Papers from the Fourth {ACM} {SIGOPS} {European}
+    Workshop: Fault Tolerance Support in Distributed Systems",
+  year=1990,
+  month=sep,
+  address="Bologna, Italy",
+  xjournal="SIGOPS Operating Systems Review",
+  xvolume=25,
+  xnumber=2,
+  xmonth=apr,
+  xyear=1991
+}
+
+@inproceedings{Bacon90Portable,
+  author="David F. Bacon and Andy Lowry",
+  title="A Portable Run-Time System for the {Hermes} Distributed Programming
+    Language",
+  pages="39--49",
+  booktitle="Proceedings of the Summer {USENIX} Technical Conference",
+  year=1990,
+  month=jun,
+  address="Anaheim, California",
+  publisher="Usenix Association, Berkeley, California"
+}
+
+@inproceedings{Goldberg90Transparent,
+  author="Arthur P. Goldberg and Ajei Gopal and Kong Li and 
+    Robert E. Strom and David F. Bacon",
+  title="Transparent Recovery of {Mach} Applications",
+  pages="169-183",
+  booktitle="Proceedings of the {USENIX} {Mach} Workshop",
+  year=1990,
+  month=oct,
+  address="Burlington, Vermont",
+  publisher="Usenix Association, Berkeley, California",
+  note="Also available as {IBM} Research Report RC 16242"
+}
+
+@inproceedings{Strom88Volatile,
+  author="Robert E. Strom and David F. Bacon and Shaula Alexander Yemini",
+  title="Volatile Logging in n-Fault-Tolerant Distributed Systems",
+  pages="44--49",
+  booktitle="The Eighteenth Annual International Symposium on
+    Fault-Tolerant Computing: Digest of Papers",
+  publisher="IEEE Computer Society Press, Washington, D.C.",
+  year=1988,
+  month=jun,
+  address="Tokyo, Japan"
+}
+
+
+@inproceedings{Strom88Recoverable,
+  author="Robert E. Strom and Shaula Alexander Yemini and David F. Bacon",
+  title="A Recoverable Object Store",
+  pages="215-221",
+  booktitle="Proceedings of the Twenty-First Annual 
+    Hawaii International Conference on System Sciences",
+  volume="II",
+  address="Kailua-Kona, Hawaii",
+  month=Jan,
+  year=1988,
+  editor="Bruce Shriver",
+  publisher="IEEE Computer Society Press, Washington, D.C."
+}
+
+
+@inproceedings{Strom87Toward,
+  author="Robert E. Strom and Shaula Alexander Yemini and David F. Bacon",
+  title="Toward Self-Recovering Operating Systems",
+  booktitle="The International Conference on 
+    Parallel Processing and Applications",
+  publisher="North-Holland",
+  pages="475-483",
+  address="L'Aquila, Italy",
+  month=Sep,
+  year=1987
+}
+
+
+%                               MAGAZINE ARTICLES
+
+@article{Sharp94Measure,
+  author="Oliver Sharp and David F. Bacon",
+  title="Measure for Measure",
+  journal="BYTE",
+  volume=19,
+  number=10,
+  year=1994,
+  month=Oct,
+  dfbid=338
+}
+
+@article{Bacon94Cache,
+  author="David F. Bacon",
+  title="Cache Advantage",
+  journal="BYTE",
+  volume=19,
+  number=8,
+  year=1994,
+  month=Aug,
+  pages="79--86",
+  dfbid=337
+}
+
+
+%                 TECHNICAL REPORTS AND UNPUBLISHED PAPERS
+
+
+techreport{Bacon97Featherweight,
+  title=Featherweight Monitors with Bacon Bits",
+  author="David F. Bacon",
+  year=1997,
+  month=Jun,
+  institution="IBM T.J. Watson Research Center",
+  number="RC XXXXX"
+}
+
+@techreport{Bacon93Compiler,
+  author="David F. Bacon and Susan L. Graham and Oliver J. Sharp",
+  title="Compiler Transformations for High-Performance Computing",
+  institution="Computer Science Division, University of California, Berkeley",
+  number="UCB/CSD-93-781",
+  year=1993,
+  month=NOV,
+  dfbid=336
+}
+
+@techreport{Bacon91Hardware_TR,
+  author="David F. Bacon and Seth Copen Goldstein",
+  title="Hardware-Assisted Replay of Multiprocessor Programs",
+  institution="Computer Science Division, University of California, Berkeley",
+  year=1991,
+  number="UCB/CSD-91-624"
+}
+
+@techreport{Auerbach91High,
+  title="High-Level Language Support for Programming Distributed Systems",
+  author="Joshua S. Auerbach and David F. Bacon and 
+    Arthur Goldberg and German S. Goldszmidt and Mark T. Kennedy and 
+    Andrew R. Lowry and James R. and W. Silverman and Robert E. Strom and
+    Daniel M. Yellin and Shaula Yemini",
+  institution="IBM T.J. Watson Research Center",
+  number="RC 16441",
+  year=1991,
+  month=Jan
+}
+
+@techreport{Strom87Linguistic,
+  author="Robert E. Strom and Shaula Alexander Yemini and David F. Bacon",
+  title="A Linguistic Treatment of Programs as Typed Objects",
+  institution="IBM T.J. Watson Research Center",
+  year=1987,
+  number="RC 13325"
+}  
+
+@techreport{Bacon89Implementing,
+  author="David F. Bacon and Robert E. Strom",
+  title="Implementing the {Hermes} Process Model",
+  year=1989,
+  institution="IBM T.J. Watson Research Center",
+  month=Mar,
+  number="RC 14518"
+}
+
+% note = "Version 0.8alpha",
+@techreport{Strom92Hermes,
+  author = "Robert E. Strom and David F. Bacon and Arthur P. Goldberg 
+    and Andy Lowry and Bill Silvermann and Daniel Yellin and Jim Russell
+    and Shaula Yemini",
+  title = "Hermes: Unix User's Guide",
+  institution ="IBM T.J. Watson Research Center",
+  month = Mar,
+  year = 1992
+}
+
+@inproceedings{Strom87Programs,
+  author="Robert E. Strom and Shaula Alexander Yemini and David F. Bacon",
+  title="Programs as Objects",
+  booktitle="IBM Programming Language Technology ITL",
+  organization="IBM Interdivisional Technical Liaison",
+  publisher="IBM Coporation",
+  year="1987",
+  month=Feb,
+  editor="H. N. Cooper",
+  pages="187--195"
+}
+
+@techreport{Strom87Volatile_TR,
+  author="Robert E. Strom and David F. Bacon and Shaula Alexander Yemini",
+  title="Volatile Logging in n-Fault-Tolerant Distributed Systems",
+  institution="IBM T.J. Watson Research Center",
+  year="1987",
+  number="RC 13373"
+}
+
+@techreport{Yemini87Improving,
+  author="Shaula Alexander Yemini and Robert E. Strom and David F. Bacon",
+  title="Improving Distributed Protocols by Decoupling Recovery from 
+    Concurrency Control",
+  institution="IBM T.J. Watson Research Center",
+  year="1987",
+  number="RC 13326"
+}

@@ -1,0 +1,2942 @@
+@COMMENT{ ==================================================================== }
+@COMMENT{   This version of atomic.bib was generated on Tue, Jul 14, 1998      }
+@COMMENT{ ==================================================================== }
+
+@COMMENT{ ==================================================================== }
+@COMMENT{           BibTeX database file, for use with LaTeX/BibTeX            }
+@COMMENT{ ==================================================================== }
+@COMMENT{ database : Atomic shared variables & asynchronous communication      }
+@COMMENT{ e-mail   : igclark(at)iee.org                                        }
+@COMMENT{ URL      : http://www.iangclark.net/                                 }
+@COMMENT{ ==================================================================== }
+@COMMENT{ author   : Ian G. Clark                                              }
+@COMMENT{ address  : School of Electrical, Electronic & Computer Engineering   }
+@COMMENT{            Merz Court                                                }
+@COMMENT{            Newcastle University                                      }
+@COMMENT{            Newcastle-upon-Tyne. NE1 7RU. England.                    }
+@COMMENT{ ==================================================================== }
+
+@COMMENT{ Note K/M/N = K writers, M readers and N bits }
+
+@PREAMBLE{"\newcommand{\noopsort}[1]{}"}
+
+@COMMENT{ ==================================================================== }
+@COMMENT{                        Predefined journals                           }
+@COMMENT{ ==================================================================== }
+
+@STRING{acmosr=	"ACM Operating System Review"}
+@STRING{apls = "ACM Transactions on Programming Langauges and Systems"}
+@STRING{cacm = "Communications of the ACM"}
+@STRING{dc   = "Distributed Computing"}
+@STRING{eatcs= "Bull. EATCS. European Association for Theoretical Computer Science - Springer (since ~1987)"}
+@STRING{el   = "Electronics Letters"}
+@STRING{fac  = "Formal Aspects of Computing"}
+@STRING{fmsd = "Formal Methods in System Design"}
+@STRING{ieepcds = "IEE Proceedings, Circuits, Devices and Systems"}
+@STRING{ieepte  = "IEE Proceedings, Part E, Computers and Digital Techniques"}
+@STRING{ieeedt  = "IEEE Design \& Test of Computers"}
+@STRING{ieeejssc= "IEEE Journal of Solid-State Circuits"}
+@STRING{ieeeproc= "Proceedings of the IEEE"}
+@STRING{ieeetc  = "IEEE Transactions on Computers"}
+@STRING{ieeetcad= "IEEE Transactions on Computer-Aided Design"}
+@STRING{ieeetec = "IEEE Transactions on Electronic Computers"}
+@STRING{ieeetpds= "IEEE Transactions on Parallel and Distributed Systems"}
+@STRING{ieeetsp = "IEEE Transactions on Signal Processing"}
+@STRING{ieeevlsi= "IEEE Transactions on VLSI Systems"}
+@STRING{integration= "Integration, the VLSI journal"}
+@STRING{ije  = "Int. Journal Electronics"}
+@STRING{ipl  = "Information Processing Letters"}
+@STRING{jacm = "Journal of the ACM"}
+@STRING{jetta= "Journal of Electronic Testing: Theory and Applications"}
+@STRING{jcss = "Journal of Computer and System Sciences"}
+@STRING{tcca = "IEEE Technical Committee on Computer Architecture Newsletter"}
+@STRING{tcs  = "Theoretical Computer Science"} 
+@STRING{vlsisp= "Journal of VLSI Signal Processing"}
+
+@COMMENT{ ==================================================================== }
+@COMMENT{                       Predefined publishers                          }
+@COMMENT{ ==================================================================== }
+
+@STRING{ap   = "Academic Press"}
+@STRING{aw   = "Addison-Wesley"} 
+@STRING{csp  = "Computer Science Press"}
+@STRING{cwi  = "CWI - Centrum voor Wiskunde en Informatica, Amsterdam"}
+@STRING{esp  = "Elsevier Science Publishers"}
+@STRING{icsp = "IEEE Computer Society Press"}
+@STRING{ieee = "IEEE Press"}
+@STRING{ios  = "IOS Press"}
+@STRING{kap  = "Kluwer Academic Publishers"}
+@STRING{mit  = "MIT Press"}
+@STRING{ph   = "Prentice-Hall"}
+@STRING{springer= "Springer-Verlag"}
+@STRING{wiley= "John Wiley \& Sons"}
+
+@COMMENT{ ==================================================================== }
+@COMMENT{                       Predefined series                              }
+@COMMENT{ ==================================================================== }
+
+@STRING{caltech= "California Institute of Technology"}
+@STRING{csn  = "Computing Science Notes"}
+@STRING{eut  = "Dept. of Math. and C.S., Eindhoven Univ. of Technology"}
+@STRING{git  = "Georgia Institute of Technology, Atlanta"}
+@STRING{ifip = "IFIP Transactions"}
+@STRING{lncs = "Lecture Notes in Computer Science"}
+@STRING{mctracts= "Mathematical Centre Tracts"}
+@STRING{southbank= "School of Computing, Information Systems and
+  Mathematics, South Bank University, London"}
+@STRING{su   = "Stanford University"}
+@STRING{uta  = "University of Texas at Austin"}
+@STRING{wic  = "Workshops in Computing"}
+
+@COMMENT{ ==================================================================== }
+@COMMENT{               Predefined conference proceedings                      }
+@COMMENT{ ==================================================================== }
+
+@STRING{alp   =	"Proc. International Colloquium on Automata, Languages, and Programming"}
+@STRING{arvlsi= "Advanced Research in VLSI"}
+@STRING{async = "Proc. International Symposium on Advanced Research in
+                 Asynchronous Circuits and Systems"}
+@STRING{adm   = "Asynchronous Design Methodologies"}
+@STRING{cav   = "Proc. International Workshop on Computer Aided Verification"}
+@STRING{dac   = "Proc. ACM/IEEE Design Automation Conference"}
+@STRING{dcc   = "Designing Correct Circuits"}
+@STRING{edac  = "Proc. European Conference on Design Automation (EDAC)"}
+@STRING{edtc  = "Proc. European Design and Test Conference"}
+@STRING{eurodac="Proc. European Design Automation Conference (EURO-DAC)"}
+@STRING{esscirc="Proc. European Solid-State Circuits Conference (ESSCIRC)"},
+@STRING{fsttcs=	"Proc. conf. on Foundations of Software Technology and Theoretical computer science"}
+@STRING{hicss = "Proc. Hawaii International Conf. System Sciences"}
+@STRING{iccad = "Proc. International Conf. Computer-Aided Design (ICCAD)"}
+@STRING{iccd  = "Proc. International Conf. Computer Design (ICCD)"}
+@STRING{icpp  = "Proc. International Conference on Parallel Processing"}
+@STRING{ifcs  = "Proc. IEEE Symposium on Foundations of Computer Science"}
+@STRING{iscas = "Proc. International Symposium on Circuits and Systems"}
+@STRING{ishls = "Proc. International Symposium on High-Level Synthesis"}
+@STRING{isscc = "International Solid State Circuits Conference"}
+@STRING{itc   = "Proc. International Test Conference"}
+@STRING{iwls  = "Proc. International Workshop on Logic Synthesis"}
+@STRING{midwest="Proceedings of the Midwest Symposium on Circuits and Systems"}
+@STRING{paa   = "Proc. Annual ACM symposium on Parallel Architectures and Algorithms"}
+@STRING{patmos= "PATMOS"}
+@STRING{podc  = "Proc. Annual (ACM) symposium on Principles of Distributed Computing"}
+@STRING{prorisc="Proc. of the {IEEE/ProRISC} Symposium on Circuits,
+                 Systems and Signal Processing"}
+@STRING{ssat  = "Annual Symposium on Switching and Automata Theory"}
+@STRING{vts   = "Proc. IEEE VLSI Test Symposium"}
+@STRING{woda  =	"Proc. International workshop on Distributed Algorithms"}
+@STRING{wodc  = "Proc. International Workshop on Distributed Computing"}
+
+@STRING{ta = "(To appear)"}
+
+@COMMENT{ ==================================================================== }
+@COMMENT{                        Template of entries                           }
+@COMMENT{ ==================================================================== }
+@COMMENT{                                                                      }
+@COMMENT{ ARTICLE{author, title, journal, year. [volume, number, pages, month, }
+@COMMENT{               note]}                                                 }
+@COMMENT{ BOOK{author/editor, title, publisher, year. [volume/number,          }
+@COMMENT{               series, address, edition, month, note]}                }
+@COMMENT{ BOOKLET{title. [author, howpublished, address, month, year, note]}   }
+@COMMENT{ INBOOK{author/editor, title, chapter, and/or pages, publisher, year. }
+@COMMENT{        [volume/number, series, type, address, edition, month, note]} }
+@COMMENT{ INCOLLECTION{author, title, booktitle, publisher, year. [editor,     }
+@COMMENT{               volume/number, series, type, chapter, pages, address,  }
+@COMMENT{               edition, month, note]}                                 }
+@COMMENT{ INPROCEEDINGS{author, title,booktitle, year. [editor, volume/number, }
+@COMMENT{        series, pages, address, month, organization, publisher, note]}}
+@COMMENT{ MANUAL{title. [author, organization, address, edition, month, year,  }
+@COMMENT{               note]}                                                 }
+@COMMENT{ MASTERSTHESIS{author, title, school, year. [type, address, month,    }
+@COMMENT{               note]}                                                 }
+@COMMENT{ MISC{ [author, title, howpublished, month, year, note]}              }
+@COMMENT{ PHDTHESIS{author, title, school, year. [type, address, month, note]} }
+@COMMENT{ PROCEEDINGS{title, year. [editor, volume, number, series, address,   }
+@COMMENT{               month, organization, publisher, note]}                 }
+@COMMENT{ TECHREPORT{author, title, institution, year. [type, number, address, }
+@COMMENT{               month, note]}                                          }
+@COMMENT{ UNPUBLISHED{author, title, note. [month, year]}                      }
+@COMMENT{ ==================================================================== }
+@COMMENT{                        End of Template                               }
+@COMMENT{ ==================================================================== }
+
+@COMMENT{ ==================================================================== }
+@COMMENT{                        Body of database                              }
+@COMMENT{ ==================================================================== }
+
+@MISC{Patent-2-039-102,
+        title        = "Asynchronous Buffer",
+        howpublished = "European patent",
+        month        = "October",
+        year         = 1979,
+        note         = "Patent No. 2-039-102"}
+
+@ARTICLE{Abraham94,
+	author  = "U. Abraham and M. Magidor",
+	title   = "On the mutual exclusion problem - a quest for minimal solutions",
+	journal = tcs,
+	year    = 1994,
+	volume  = 129,
+	number  = 1,
+	pages   = "1--38",
+	note    = ""}
+
+@ARTICLE{Abraham95,
+	author  = "U. Abraham",
+	title   = "On interprocess communication and the implementation of multi-writer atomic registers",
+	journal = tcs,
+	year    = 1995,
+	volume  = 149,
+	number  = 2,
+	pages   = "257--298",
+	note    = ""}
+
+@INPROCEEDINGS{Afek92,
+	author       = "Y. Afek and E. Gafni and J. Tromp and P.M.B. Vitanyi",
+	title        = "Wait-Free test and set",
+	booktitle    = "",
+	year         = 1992,
+	volume       = 647,
+	series       = lncs,
+	pages        = "85--94",
+	note         = ""}
+
+@ARTICLE{Afek93,
+	author  = "Y. Afek and H. Attiya and D. Dolev and E. Gafni and M. Merritt and N. Shavit",
+	title   = "Atomic snapshots of shared memory",
+	journal = jacm,
+	year    = 1993,
+	volume  = 40,
+	number  = 4,
+	pages   = "873--890",
+	note    = ""}
+
+@INPROCEEDINGS{Afek93b,
+	author       = "Y. Afek and M. Meritt and G. Taubenfeld",
+	title        = "Benign failure models for shared memory",
+	booktitle    = "",
+	year         = 1993,
+	volume       = 725,
+	series       = lncs,
+	pages        = "69--83",
+	note         = ""}
+
+@ARTICLE{Afek95,
+	author  = "Y. Afek  and D.S. Greenburg and M. Merrit and G. Taubenfeld",
+	title   = "Computing with faulty shared objects",
+	journal = jacm,
+	year    = 1995,
+	volume  = 42,
+	number  = 6,
+	pages   = "1231--1274",
+	note    = ""}
+
+@INPROCEEDINGS{Aguilar91,
+	author       = "O.R. Aguilar and A.K. Datta and S. Ghosh",
+	title        = "Sharing memory in asynchronous message passing systems",
+	booktitle    = "",
+	year         = 1991,
+	volume       = 519,
+	series       = lncs,
+	pages        = "129--140",
+	note         = ""}
+
+@INPROCEEDINGS{Ahamad92,
+	author       = "M. Ahamad and J.E. Burns and P.W. Hutto and G. Neiger",
+	title        = "Causal memory",
+	booktitle    = "",
+	year         = 1992,
+	volume       = 579,
+	series       = lncs,
+	pages        = "9--30",
+	note         = ""}
+
+@MASTERSTHESIS{Anand91,
+	author  = "S. Anand",
+	title   = "Integrating distributed mutual exclusion with distributed shared memory",
+	school  = "Arizona State University",
+	year    = 1991,
+	note    = ""}
+
+@TECHREPORT{Anderson86,
+	author= "J. Anderson and A. Singh and M. Gouda",
+	title= "The Elusive Atomic Register",
+	institute= uta,
+	number= "TR.86.29",
+	year= 1986,
+	note	=""}
+	@COMMENT "1/1/N - 1/M/N & 1/M/1. Claimed 1st multireader solution (2 -M), exponential solution"
+
+@ARTICLE{Anderson88,
+	author  = "J.H. Anderson and M.G. Gouda",
+	title   = "Atomic semantics of nonatomic programs",
+	journal = ipl,
+	year    = 1988,
+	volume  = 28,
+	number  = 2,
+	pages   = "99--103",
+	note    = ""}
+
+@TECHREPORT{Anderson89,
+	author= "J. Anderson",
+	title= "Multiple-Writer Composite Registers",
+	institute= uta,
+	number= "TR.89.26",
+	year= 1989,
+	month= "September"}
+
+@INPROCEEDINGS{Anderson90a,
+	author= "J. Anderson",
+	title= "Composite Registers",
+	booktitle= podc,
+	year= 1990,
+	pages= "15--30",
+	number = "9th annual."}
+
+@PHDTHESIS{Anderson90b,
+	author= "J. Anderson",
+	title= "Atomicity of Concurrent Programs", 
+	school= uta, 
+	year= 1990}
+
+@TECHREPORT{Anderson90c,
+	author      = "J.H. Anderson",
+	title       = "A criterion for atomicity",
+	institution = uta,
+	year        = 1990,
+	number      = "TR-90-24",
+	note        = ""}
+
+@ARTICLE{Anderson92,
+	author= "J.H. Anderson and M.G. Gouda",
+	title= "A Criterion for Atomicity",
+	journal= fac,
+	year= 1992,
+	number= 4,
+	pages= "273--298",
+	note= ""}
+
+@ARTICLE{Anderson92b,
+	author  = "J.H. Anderson and B. Groseij",
+	title   = "Beyond atomic registers - bounded wait-free implementations of nontrivial objects",
+	journal = "Science of Computer Programming",
+	year    = 1992,
+	volume  = 19,
+	number  = 3,
+	pages   = "197--237",
+	note    = ""}
+
+@INPROCEEDINGS{Anderson92c,
+	author       = "J.H. Anderson and B. Groseij",
+	title        = "Pseudo read-modify-write operations - bounded wait-free implementations",
+	booktitle    = "",
+	year         = 1992,
+	volume       = 579,
+	series       = lncs,
+	pages        = "52--70",
+	note         = ""}
+
+@INPROCEEDINGS{Anderson92d,
+	author       = "J.H. Anderson and J.H. Yang and M.G. Gouda",
+	title        = "The granularity of waiting",
+	booktitle    = "",
+	year         = 1992,
+	volume       = 647,
+	series       = lncs,
+	pages        = "313--328",
+	note         = ""}
+
+@ARTICLE{Anderson93,
+	author= "J.H. Anderson",
+	title= "Composite Registers",
+	journal= dc,
+	year= 1993,
+	volume = 6,
+	number= 3,
+	pages= "141--154"}
+
+@INPROCEEDINGS{Anderson93b,
+	author       = "J.H. Anderson and M. Moir",
+	title        = "Towards a necessary and sufficient condition for wait-free synchronization",
+	booktitle    = "",
+	year         = 1993,
+	volume       = 725,
+	series       = lncs,
+	pages        = "39--53",
+	note         = ""}
+
+@ARTICLE{Anderson93c,
+	author  = "J.H. Anderson",
+	title   = "A fine grainded solution to the mutual exclusion problem",
+	journal = "Acta Informatica",
+	year    = 1993,
+	volume  = 30,
+	number  = 3,
+	pages   = "249--265",
+	note    = ""}
+
+@ARTICLE{Anderson94,
+	author  = "J.H. Anderson",
+	title   = "Multi-writer composite registers",
+	journal = dc,
+	year    = 1994,
+	volume  = 7,
+	number  = 4,
+	pages   = "175--195",
+	note    = ""}
+
+@ARTICLE{Anderson96,
+	author  = "J.H. Anderson and J.H. Yang",
+	title   = "Time contention trade-offs for multiprocessor synchronization",
+	journal = "Information and Computation",
+	year    = 1996,
+	volume  = 124,
+	number  = 1,
+	pages   = "68--84",
+	note    = ""}
+
+@ARTICLE{Anderson97,
+	author  = "J.H. Anderson and S. Ramamurthy and K. Jeffay",
+	title   = "Real-time computing with lock-free shared objects",
+	journal = "ACM Transactions on Computer Systems",
+	year    = 1997,
+	volume  = 15,
+	number  = 2,
+	pages   = "134--165",
+	note    = ""}
+
+@ARTICLE{Anderson97b,
+	author  = "J.H. Anderson and M. Moir",
+	title   = "Using local-spin kappa-exclusion algorithms to improve wait-free object implementations",
+	journal = dc,
+	year    = 1997,
+	volume  = 11,
+	number  = 1,
+	pages   = "1--20",
+	note    = ""}
+
+@INPROCEEDINGS{Andrews95,
+	author       = "D.L. Andrews and P. Austin and P. Costello and D. Levan",
+	title        = "Interprocess communications in a real-time embedded distributed processor",
+	booktitle    = "Proceedings of the 3rd Workshop on Parallel and Distributed Real-Time Systems 1995",
+	year         = 1995,
+	pages        = "201",
+	month        = "April",
+	publisher    = ieeecsp,
+	note         = ""}
+
+@ARTICLE{Anger89,
+	author  = "F.D. Anger",
+	title   = "On Lamport interprocessor communication model",
+	journal = apls,
+	year    = 1989,
+	volume  = 11,
+	number  = 3,
+	pages   = "404--417",
+	note    = ""}
+
+@PHDTHESIS{Arshad97,
+	author  = "M. Arshad",
+	title   = "Contention free synchronization in shared memory multiprocessors",
+	school  = "Ohio State University",
+	year    = 1997,
+	note    = ""}
+
+@INPROCEEDINGS{Aspens90,
+	author= "J. Aspens and M. Herlihy",
+	title= "Wait-free Data Structures in the Asynchronous {PRAM} Model",
+	booktitle= paa,
+	year= 1990,
+	month= "July"}
+
+@ARTICLE{Aspens90b,
+	author  = "J. Aspens and M. Herlihy",
+	title   = "Fast randomized consensus using shared memory",
+	journal = "Journal of Algorithms",
+	year    = 1990,
+	volume  = 11,
+	number  = 3,
+	pages   = "441--461",
+	note    = ""}
+
+@ARTICLE{Attie96,
+	author= "P.C. Attie and E.A. Emerson",
+	title= "Synthesis of concurrent systems for an Atomic Read / Atomic Write model of computation",
+	journal= jacm,
+	year= 1996,
+	pages= "111--120",
+	note = ""}
+
+@INPROCEEDINGS{Attiya92,
+	author  = "H. Attiya and M. Herlihy and O. Rachman",
+	title   = "Efficient atomic snapshots using lattice agreement",
+	booktitle    = "",
+	year         = 1992,
+	volume       = 647,
+	series       = lncs,
+	pages        = "35--53",
+	note         = ""}
+
+@ARTICLE{Attiya94,
+	author  = "H. Attiya and N. Lynch and N. Shavit",
+	title   = "Are wait-free algorithms fast",
+	journal = jacm,
+	year    = 1994,
+	volume  = 41,
+	number  = 4,
+	pages   = "725--763",
+	note    = ""}
+
+@ARTICLE{Attiya95,
+	author  = "H. Attiya and M. Herlihy and O. Rachman",
+	title   = "Atomic snapshots using lattice agreement",
+	journal = dc,
+	year    = 1995,
+	volume  = 8,
+	number  = 3,
+	pages   = "121--132",
+	note    = ""}
+
+@ARTICLE{attiya95b,
+	author  = "H. Attiya and A. Barnoy and D. Dolev",
+	title   = "Sharing memory robustly in message passing systems",
+	journal = jacm,
+	year    = 1995,
+	volume  = 42,
+	number  = 1,
+	pages   = "124--142",
+	note    = ""}
+	
+@TECHREPORT{Awerbuch87,
+	author= "B. Awerbuch and L.M. Kirousis and E. Kranakis and P.M.B. Vitanyi",
+	title= "On Proving Register Atomicity",
+	institution= cwi,
+	number= "CS-R8707",
+	year= 1987,
+	month= "February"}
+
+@INPROCEEDINGS{Awerbuch88,
+	author= "B. Awerbuch and L.M. Kirousis and E. Kranakis and P.M.B. Vitanyi",
+	title= "A Proof Technique for register atomicity",
+	booktitle= fsttcs,
+	series= lncs,
+	volume= 338,
+	year= 1988,
+	pages= "286--303"}
+
+@ARTICLE{Back89,
+	author  = "R.J.R. Back",
+	title   = "A method for refining atomicity in parallel algorithms",
+	journal = lncs,
+	year    = 1989,
+	volume  = 366,
+	pages   = "199--216",
+	note    = ""}
+
+@MASTERSTHESIS{Badriddine92,
+	author  = "K.M. Bidriddine",
+	title   = "New, efficient, and fault tolerant protocols for the distributed mutual exclusion problem",
+	school  = "Arizona State University",
+	year    = 1992,
+	note    = ""}
+
+@ARTICLE{Barbosa90,
+	author  = "V.C. Barbosa",
+	title   = "Blocking versus nonblocking interprocess communication - a note on the effect on concurrency",
+	journal = ipl,
+	year    = 1990,
+	volume  = 36,
+	number  = 4,
+	pages   = "171--175",
+	note    = ""}
+
+@ARTICLE{Barnoy93,
+	author  = "A. Barnoy and D. Dolev",
+	title   = "A partial equivalence between shared memory and message passing in an asynchronous fail-stop distributed environment",
+	journal = "Mathematical Systems Theory",
+	year    = 1993,
+	volume  = 26,
+	number  = 1,
+	pages   = "21--39",
+	note    = ""}
+
+@ARTICLE{Bazzi97,
+	author  = "R.R. Bazzi and G. Neiger and G.L. Peterson",
+	title   = "On the use of registers in achieving wait-free consensus",
+	journal = dc,
+	year    = 1997,
+	volume  = 10,
+	number  = 3,
+	pages   = "117--127",
+	note    = ""}
+
+@BOOK{BenAri90,
+	author    = "M. Ben-Ari",
+	title     = "Principles of Concurrent and Distributed Programming",
+	publisher = ph,
+	year      = 1990,
+	note      = ""}
+
+@ARTICLE{Berard94,
+	author  = "B. Berard",
+	title   = "Global serializability of concurrent programs",
+	journal = tcs,
+	year    = 1994,
+	volume  = 124,
+	number  = 1,
+	pages   = "41--70",
+	note    = ""}
+
+@INPROCEEDINGS{Bergstra85,
+  author = "J.A. Bergstra and J.W. Klop and J.V. Tucker",
+  title  = "Process Algebra with Asynchronous Communication Mechanisms",
+  booktitle= "Seminar on Concurrency",
+  editor = "Winskel, G.",
+  series = lncs,
+  volume = 197,
+  pages  = "76--95",
+  publisher= springer,
+  year   = 1985 }
+
+@INPROCEEDINGS{Berkel88b,
+  author = "Berkel C.H. (Kees) van and Ronald W.J.J. Saeijs",
+  title  = "Compilation of Communicating Processes into Delay-Insensitive Circuits",
+  booktitle= iccd,
+  publisher= icsp,
+  pages  = "157--162",
+  year   = 1988 }
+
+@PHDTHESIS{Berkel92,
+  author = "Berkel, Kees van",
+  title  = "Handshake Circuits: An Intermediary between Communicating Processes and {VLSI}",
+  school = "Eindhoven University of Technology",
+  year   = 1992 }
+
+@ARTICLE{Bershad91,
+	author  = "B.N. Bershad and T.E. Anderson and E.D. Lazowska",
+	title   = "User-level interprocess communicationfor shared memory multiprocessors",
+	journal = "ACM Transactions on Computer Systems",
+	year    = 1991,
+	volume  = 9,
+	number  = 2,
+	pages   = "175",
+	month   = "May",
+	note    = ""}
+
+@ARTICLE{Best81,
+	author  = "E. Best and B. Randell",
+	title   = "A formal model of atomicity in asynchronous systems",
+	journal = "ACTA Informatica",
+	year    = 1981,
+	volume  = 16,
+	number  = 1,
+	pages   = "93--124",
+	note    = ""}
+
+@ARTICLE{Bitar92,
+	author  = "P. Bitar",
+	title   = "The waekest memory access order",
+	journal = "Journal of Parallel and Distributed Computing",
+	year    = 1992,
+	volume  = 15,
+	number  = 4,
+	pages   = "305--331",
+	note    = ""}
+
+@MISC{Bloom86,
+	author= "B. Bloom", 
+	title= "Constructing Two Writer Atomic Registers", 
+	howpublished= mit,
+	year= 1986,
+	month= "June"}
+
+@ARTICLE{Bloom88,
+	author= "B. Bloom", 
+	title= "Constructing Two-writer Atomic Registers",
+	journal= ieeetc, 
+	year= 1988,
+	month= "December",
+	volume= 37, 
+	number= 12,
+	pages= "1506--1514",
+	note=""}
+	@COMMENT "got. 1/M/N - K/M/N"
+
+@ARTICLE{Bochmann79,
+  author = "G. Bochmann",
+  title  = "Distributed Synchronization and Regularity",
+  journal= "Computer Networks",
+  volume = 3,
+  pages  = "36--43",
+  year   = 1979 }
+
+@ARTICLE{Bochmann88,
+  author = "G. Bochmann",
+  title  = "Delay-Independent Design for Distributed Systems",
+  journal= ieeese,
+  volume = "SE-14",
+  number = 8,
+  pages  = "1229--1237",
+  month  = aug,
+  year   = 1988 }
+
+@ARTICLE{Boudol88,
+	author  = "G. Boudol and I. Castellani",
+	title   = "Concurrency and atomicity",
+	journal = tcs,
+	year    = 1988,
+	volume  = 59,
+	number  = "1-2",
+	pages   = "25--84",
+	note    = ""}
+
+@Article{Bo89,
+  author =       "G. Boudol",
+  year =         "1989",
+  journal =      eatcs,
+  pages =        "136--144",
+  title =        "Atomic actions (note)",
+  volume =       "38"}
+
+@INPROCEEDINGS{Brogi97,
+	author  = "A. Brogi and J.M. Jacquet",
+	title   = "Modelling coordination via asynchronous communication",
+	booktitle    = "Coordination models and languages",
+	year         = 1997,
+	editor       = "Garlan D., Le Metayer D.",
+	volume/number = 1282,
+	series       = lncs,
+	pages        = "238--255",
+	note         = ""}
+
+@PHDTHESIS{Brunvand91b,
+  author = "E. Brunvand",
+  title  = "Translating Concurrent Communicating Programs into Asynchronous
+    Circuits",
+  school = "Carnegie Mellon University",
+  number = "CMU-CS-91-198",
+  year   = 1991 }
+
+@ARTICLE{Brzozowski79,
+  author = "J.A. Brzozowski and M. Yoeli",
+  title  = "On a Ternary Model of Gate Networks",
+  journal= ieeetc,
+  volume = "C-28",
+  number = 3,
+  pages  = "178--184",
+  month  = mar,
+  year   = 1979,
+  note   =""}
+  @COMMENT = "uses 0,1/2,1 - where 1/2 represents unknown or changing, no meta refs"
+
+@ARTICLE{Brzozowski87b,
+  author = "J.A. Brzozowski and C.J. Seger",
+  title  = "A Characterization of Ternary Simulation of Gate Networks",
+  journal= ieeetc,
+  volume = " C-36",
+  number = 11,
+  pages  = "1318--1327",
+  month  = nov,
+  year   = 1987 }
+
+@ARTICLE{Brzozowski90,
+  author = "J.A. Brzozowski and C.J.H. Seger",
+  title  = "Advances in Asynchronous Circuit Theory; Part {I}:
+    Gate and Unbounded Inertial Delay Models",
+  journal= eatcs,
+  number = 42,
+  pages  = "198--249",
+  month  = oct,
+  year   = 1990 }
+
+@INPROCEEDINGS{Brzozowski97a,
+  author = "J. A. Brzozowski",
+  title  = "Delay-Insensitivity and Ternary Simulation",
+  booktitle= "Proc. of the First International Conference on Semigroups and
+    Algebraic Engineering",
+  publisher= "World Scientific Publishing Co. Pte. Ltd., Singapore",
+  month  = mar,
+  year   = 1997 }
+
+@TECHREPORT{Burns81,
+	author      = "J.E. Burns",
+	title       = "Complexity of communication among asynchronous parallel processes",
+	institution = git,
+	year        = 1981,
+	number      = "GIT-ICS 81/01",
+	note        = ""}
+
+@PHDTHESIS{Burns81b,
+	author  = "J.E. Burns",
+	title   = "Complexity of communication among asynchronous parallel processes",
+	school  = git,
+	year    = 1981,
+	note    = ""}
+
+@ARTICLE{Burns82,
+	author  = "J.E. Burns and P. Jackson and N.A. Lynch and M.J. Fischer and G.L. Peterson",
+	title   = "Data requirements for implementation of {N}-process mutual exclusion using a single shared variable",
+	journal = jacm,
+	year    = 1982,
+	volume  = 29,
+	number  = 1,
+	pages   = "183--205",
+	note    = ""}
+
+@TECHREPORT{Burns86,
+	author      = "J.E. Burns and G.L. Peterson",
+	title       = "Constructing an atomic single-writer, multi-reader register from atomic single-writer, single-reader registers",
+	institution = git,
+	year        = 1986,
+	number      = "GIT-ICS 86/27",
+	month       = "December",
+	note        = ""}
+
+@TECHREPORT{Burns87a,
+	author= "J.E. Burns and G.L. Peterson",
+	title= "Comments on: Atomic Multireader Register (Detailed abstract)",
+	institution= git,
+	year= 1987,
+	number= "GIT-ICS-87/08",
+	month= "January"}
+
+@TECHREPORT{Burns87b,
+	author= "J.E. Burns and G.L. Peterson",
+	title= "Sharp Bounds for Concurrent Reading while Writing",
+	institution= git,
+	year= 1987,
+	number= "GIT-ICS-87/31", 
+	note= "revised 1988"}
+
+@INPROCEEDINGS{Burns87c,
+	author= "J. Burns and G. Peterson",
+	title= "Constructing Multi-Reader Atomic Values from Non-Atomic Values",
+	booktitle= podc,
+	year= 1987,
+	month= "August",
+	pages= "222--231",
+	number = "6th Annual",
+	note =""}
+	@COMMENT "1/1/N - 1/M/N & 1/M/1"
+
+@TECHREPORT{Burns87d,
+	author= "J.E. Burns and G.L. Peterson",
+	title= "Pure Buffers for Concurrent Reading While Writing",
+	institution= git,
+	year= 1987,
+	number= "GIT-ICS-87/17",
+	month= "April"}
+
+@INPROCEEDINGS{Burns89,
+	author= "J.E. Burns and G.L. Peterson",
+	title= "The ambiguity of choosing",
+	booktitle= podc,
+	year= 1989,
+	pages= "145--157",
+	number = "8th annual"}
+
+@ARTICLE{Burns93,
+	author  = "J.E. Burns and N.A. Lynch",
+	title   = "Bounds on shared memory for mutual exclusion",
+	journal = "Information and Computation",
+	year    = 1993,
+	volume  = 107,
+	number  = 2,
+	pages   = "171--184",
+	note    = ""}
+
+@ARTICLE{Buss96,
+	author  = "J.F. Buss and P.C. Kanellakis and P.L. Radge and A.A. Shvartsman",
+	title   = "Parallel algorithms with processor failures and delays",
+	journal = "Journal of Algorithms",
+	year    = 1996,
+	volume  = 20,
+	number  = 1,
+	pages   = "45--86",
+	note    = ""}
+
+@ARTICLE{Cacciari95,
+	author  = "L. Cacciari and O. Rafiq",
+	title   = "Modelling and analysis of temporal constraints in communication protocols",
+	journal = "Annals of Telecommunications",
+	year    = 1995,
+	volume  = 50,
+	number  = "11-12",
+	pages   = "907--919",
+	note	= ""}
+	@COMMENT "reachability"
+
+@INPROCEEDINGS{CaoHuu93,
+	author       = "T. CaoHuu and W. Yong and K. Lee",
+	title        = "Universal read/write buffer for multiprocessor cache coherency schemes",
+	booktitle    = "27th Asilomar Conference on Signals, Systems and Computers",
+	year         = 1993,
+	pages        = "785--790",
+	month        = "November",
+	publisher    = ieeecsp,
+	note         = ""}
+
+@ARTICLE{Carvalho83,
+	author  = "O.S.F. Carvalho and G. Roucairol",
+	title   = "On mutual exclusion in computer networks",
+	journal = cacm,
+	year    = 1983,
+	volume  = 26,
+	number  = 2,
+	pages   = "146--147",
+	note    = ""}
+
+@ARTICLE{Cau96,
+	author  = "A. Cau and P. Collette",
+	title   = "Parallel composition of assumption-commitment specifications. A unifying approach for shared variable and distributed message passing concurrency",
+	journal = "ACTA informatica",
+	year    = 1996,
+	volume  = 33,
+	number  = 2,
+	pages   = "153",
+	note    = ""}
+
+@ARTICLE{Chandy85,
+	author  = "K.M. Chandy and L. Lamport",
+	title   = "Distributed snapshots - determining global states of distributed systems",
+	journal = "ACM Transactions on Computer Systems",
+	year    = 1985,
+	volume  = 3,
+	number  = 1,
+	pages   = "63--75",
+	note    = ""}
+
+@ARTICLE{Chang96,
+	author  = "Y. Chang",
+	title   = "A simulation study on distributed mutual exclusion",
+	journal = "Journal of Parallel and Distributed computing",
+	year    = 1996,
+	volume  = 33,
+	number  = 2,
+	pages   = "107",
+	note    = ""}
+
+@ARTICLE{CharronBost95,
+	author  = "B. CharronBost and F. Mattern and G. Tel",
+	title   = "Synchronous, asynchronous and causally ordered communication",
+	journal = dc,
+	year    = 1995,
+	volume  = 9,
+	number  = 4,
+	pages   = "173",
+	note    = ""}
+
+@ARTICLE{CharronBost97,
+	author  = "B. CharronBost and R. Cori and A. Petit",
+	title   = "Introduction to the algorithm of shared objects",
+	journal = "Rairo-informatique theorique et applications-theoretical informatics and applications",
+	year    = 1997,
+	volume  = 31,
+	number  = 2,
+	pages   = "97--148",
+	note    = "language: french"}
+
+@INPROCEEDINGS{Chaudhuri91,
+	author       = "S. Chaudhuri and J. Welch",
+	title        = "Bounds on the costs of register implementations",
+	booktitle    = "",
+	year         = 1991,
+	volume       = 486,
+	series       = lncs,
+	pages        = "402--421",
+	note         = ""}
+
+@ARTICLE{Chaudhuri94,
+	author  = "S. Chaudhuri and J.L. Welch",
+	title   = "Bounds on the costs of multivalued register implementations",
+	journal = "SIAM Journal of Computing",
+	year    = 1994,
+	volume  = 23,
+	number  = 2,
+	pages   = "335--354",
+	note    = ""}
+
+@INPROCEEDINGS{Chen89,
+	author       = "W. Chen and J.T. Udding and T. Verhoeff",
+	title        = "Networks of communicating processes and their (de-)composition",
+	booktitle    = "",
+	year         = 1989,
+	volume       = 375,
+	series       = lncs,
+	pages        = "174--196",
+	note         = ""}
+
+@ARTICLE{Chiang90,
+  author = "Jen-Shiun Chiang and Damu Radhakrishnan",
+  title  = "Hazard-free Design of Mixed Operating Mode Asynchronous
+    Sequential Circuits",
+  journal= ije,
+  volume = 68,
+  number = 1,
+  pages  = "23--37",
+  year   = 1990 }
+
+@ARTICLE{Chor94,
+	author  = "B. Chor and A. Israeli and M. Li",
+	title   = "Wait-free consensus using asynchronous hardware",
+	journal = "SIAM Journal on Computing",
+	year    = 1994,
+	volume  = 23,
+	number  = 4,
+	pages   = "701--712",
+	note    = ""}
+
+@ARTICLE{Choudhury97,
+	author  = "A.K. Choudhury and E.L. Hahne",
+	title   = "A new buffer management scheme for hierarchical shared memory switches",
+	journal = "IEEE/ACM Transactions on Networking",
+	year    = 1997,
+	volume  = 5,
+	pages   = "726--738",
+	month   = "October",
+	note    = ""}
+
+@ARTICLE{Choy96,
+	author  = "M. Choy and A.K. Singh",
+	title   = "Localizing failures in distributed synchronization",
+	journal = ieeetpds,
+	year    = 1996,
+	volume  = 7,
+	number  = 7,
+	pages   = "705--716",
+	note    = ""}
+
+@INPROCEEDINGS{Chu92,
+  author = "Tam-Anh Chu",
+  title  = "Automatic synthesis and verification of hazard-free control circuits from asynchronous finite state machine Specifications",
+  pages  = "407--413",
+  booktitle= iccd,
+  publisher= icsp,
+  month  = oct,
+  year   = 1992 }
+
+@INPROCEEDINGS{Chu93c,
+  author = "Tam-Anh Chu",
+  title  = "On the specification and synthesis of hazard-free asynchronous
+    control circuits",
+  pages  = "1495--1498",
+  booktitle= iscas,
+  publisher= icsp,
+  volume = 3,
+  year   = 1993 }
+
+@ARTICLE{Chu94,
+  author = "Tam-Anh Chu",
+  title  = "Synthesis of Hazard-Free Control Circuits from Asynchronous
+    Finite State Machine Specifications",
+  pages  = "61--84",
+  journal= vlsisp,
+  volume = 7,
+  number = "1/2",
+  month  = feb,
+  year   = 1994 }
+
+@INPROCEEDINGS{Chung94,
+  author = "Edwin C.Y. Chung and Lindsay Kleeman",
+  title  = "Metastable-robust Self-timed Circuit Synthesis from Live Safe
+    Simple Signal Transition Graphs",
+  pages  = "97--105",
+  booktitle= async,
+  month  = nov,
+  year   = 1994 }
+
+@ARTICLE{Cohen83,
+	author  = "S. Cohen and D. Lehmann and A. Pnueli",
+	title   = "Symmetric and economical solutions to the mutual exclusion problem in a distributed system",
+	journal = lncs,
+	year    = 1983,
+	volume  = 154,
+	pages   = "128--136",
+	note    = ""}
+
+@ARTICLE{Cohen84,
+	author  = "S. Cohen and D. Lehmann and A. Pnueli",
+	title   = "Symmetric and economical solutions to the mutual exclusion problem in a distributed system",
+	journal = tcs,
+	year    = 1984,
+	volume  = 34,
+	number  = "1-2",
+	pages   = "215--225",
+	note    = ""}
+
+@ARTICLE{Courtois71,
+	author= "P.J. Courtois and F. Heymans and D.L. Parnas",
+	title= "Concurrent Control with readers and writers",
+	journal= cacm,
+	year= 1971,
+	volume= 14,
+	number= 10,
+	month= "October",
+	pages= "667--668",
+	note = "Classic reader/writer problem?"}
+
+@INPROCEEDINGS{Cypher95,
+	author       = "R. Cypher",
+	title        = "The communication requirements of mutual exclusion",
+	booktitle    = "7th Annual ACM Symposium on Parallel Algorithms and Archotectures",
+	year         = 1995,
+	pages        = "147--156",
+	month        = "July",
+	publisher    = "ACM",
+	note         = ""}
+
+@ARTICLE{Datta95,
+	author  = "A.K. Datta and O.R. Aguilar and R. Flatebo and S. Ghosh",
+	title   = "Simulating shared memory primitive in asynchronous message passing systems",
+	journal = "Computer Systems Science and Engineeing",
+	year    = 1995,
+	volume  = 10,
+	number  = 2,
+	pages   = "75--83",
+	note    = ""}
+
+@INPROCEEDINGS{Davies97,
+	author       = "A.C. Davies",
+	title        = "Asynchronous Communications Between Locally Synchronous Subsystems",
+	booktitle    = "Proc. Polish - Czech - Hungarian Workshop on Circuit Theory, Signal Processing and Applications",
+	year         = 1997,
+	pages        = "75--80",
+	month        = "September",
+	note         = "got"}
+
+@INPROCEEDINGS{DeBoer96,
+	author       = "F.S. de Boer and H. Tej and W.P. de Roever and M. van Hulst",
+	title        = "Compositionality in real-time shared variable concurrency",
+	booktitle    = "Formal Techniques in Real-Time and Fault-Tolerant Systems",
+	year         = 1996,
+	volume       = 1135,
+	series       = lncs,
+	pages        = "420--439",
+	note         = ""}
+
+@INPROCEEDINGS{DeBoer97,
+	author       = "F.S. de Boer and U. Hannemann and W.P. de Roever",
+	title        = "A compositional proof system for shared variable concurrency",
+	booktitle    = "FME '97: Industrial Applications and Strengthened Foundations of Formal Methods",
+	year         = 1997,
+	volume       = 1313,
+	series       = lncs,
+	pages        = "515--532",
+	note         = ""}
+
+@INPROCEEDINGS{Dolev90,
+	author= "S. Dolev and A. Israeli and S. Moran",
+	title= "Self-stabilization of dynamical systems assuming only read/write atomicity",
+	booktitle= podc,
+	year= 1990,
+	month= "August",
+	pages= "103--117",
+	number= "9th annual"}
+
+@ARTICLE{Dolev93,
+	author  = "S. Dolev and A. Israeli and S. Moran",
+	title   = "Self-stabilization of dynamical-systems assuming only read write atomicity",
+	journal = dc,
+	year    = 1993,
+	volume  = 7,
+	number  = 1,
+	pages   = "3--16",
+	note    = ""}
+
+@ARTICLE{Dolev97,
+	author  = "S. Dolev and J.L. Welch",
+	title   = "Wait-free clock synchronization",
+	journal = "Algorithmica",
+	year    = 1997,
+	volume  = 18,
+	number  = 4,
+	pages   = "486--511",
+	note    = ""}
+
+@INPROCEEDINGS{Dwork92,
+	author       = "C. Dwork and M. Herlihy and S.A. Plotkin and O. Waarts",
+	title        = "Time lapse snapshots",
+	booktitle    = "",
+	year         = 1992,
+	volume       = 601,
+	series       = lncs,
+	pages        = "154--170",
+	note         = ""}
+
+@ARTICLE{Dwork97,
+	author  = "C. Dwork and M. Herlihy and O. Waarts",
+	title   = "Contention in shared memory algorithms",
+	journal = jacm,
+	year    = 1997,
+	volume  = 44,
+	pages   = "779--805",
+	month   = "November",
+	note    = ""}
+
+@TECHREPORT{Ebergen90,
+  author = "Jo C. Ebergen",
+  title  = "Arbiters: An Exercise in Specifying and Decomposing Asynchronously Communicating Components",
+  type   = "Research Report",
+  number = "CS-90-29",
+  institution= "Computer Science Dept., Univ. of Waterloo, Canada",
+  month  = jul,
+  year   = 1990 }
+
+@ARTICLE{Ebergen92a,
+  author = "Jo C. Ebergen",
+  title  = "Arbiters: an exercise in specifying and decomposing asynchronously communicating components",
+  pages  = "223--245",
+  journal= "Science of Computer Programming",
+  volume = 18,
+  number = 3,
+  month  = jun,
+  year   = 1992 }
+
+@ARTICLE{Egecioglu94,
+	author  = "O. Egecioglu and A.K. Singh",
+	title   = "Naming symmetrical processes using shared variables",
+	journal = dc,
+	year    = 1994,
+	volume  = 8,
+	number  = 1,
+	pages   = "19--38",
+	note    = ""}
+
+@ARTICLE{Fischer93,
+	author  = "M.J. Fischer and S. Moran and G. Taubenfeld",
+	title   = "Space-efficient asynchronous consensus without shared memory initialization",
+	journal = ipl,
+	year    = 1993,
+	volume  = 45,
+	number  = 2,
+	pages   = "101--105",
+	note    = ""}
+
+@ARTICLE{Friedman69,
+  author = "A. D. Friedman and R. L. Graham and J. D. Ullman",
+  title  = "Universal single transition time asynchronous state
+    assignments",
+  journal= ieeetc,
+  volume = "C-18",
+  pages  = "541--547",
+  month  = jun,
+  year   = 1969 }
+
+@INPROCEEDINGS{Furunaes97,
+	author       = "J. Furunaes and J. Adomat and L. Lindh and J. Staerner",
+	title        = "A prototype for interprocess communication support, in hardware",
+	booktitle    = "9th EuroMicro workshop on Real-Time Systems",
+	year         = 1997,
+	pages        = "18--24",
+	month        = "June",
+	publisher    = "IEEE",
+	note         = ""}
+
+@ARTICLE{Ghosch87,
+	author  = "S. Ghosch",
+	title   = "The world's shortest mutual exclusion algorithm",
+	journal = cacm,
+	year    = 1987,
+	volume  = 30,
+	pages   = "997",
+	month   = "December",
+	note    = ""}
+
+@ARTICLE{Greenwood95,
+	author  = "G.W. Greenwood",
+	title   = "On the equity of mutual exclusion algorithms in distributed systems",
+	journal = ipl,
+	year    = 1995,
+	volume  = 56,
+	number  = 1,
+	pages   = "19",
+	note    = ""}
+
+@INPROCEEDINGS{Gribomot96,
+	author       = "E.P. Gribomot",
+	title        = "Atomicity refinement and trace reduction theorems",
+	booktitle    = "Computer Aided Verification",
+	year         = 1996,
+	editor       = "Alur R., Henzinger T.A.",
+	volume       = 1102,
+	series       = lncs,
+	pages        = "311--322",
+	note         = "8th International conference"}
+
+@TECHREPORT{Haldar,
+	author= "S. Haldar and K. Vidyasankar",
+	title= "A Space-optimum 1-buffer read/write construction of 1-writer 1-reader multivalued atomic variable",
+	institute= "Theoretical computer science group, Tata Institute of Fundamental Research, Bombay, India",
+	year= "Year unknown"}
+
+@TECHREPORT{Haldar89,
+	author      = "S. Haldar",
+	title       = "One bounded mutual exclusion using two blocked set binary semaphores and two shared bits",
+	institution = "Cornell University",
+	year        = 1989,
+	number      = "TR 89-1006",
+	note        = ""}
+
+@TECHREPORT{Haldar91,
+	author= "S. Haldar and K. Vidyasankar",
+	title= "Counter examples to a one writer multireader atomic variable construction of Burns and Peterson",
+	institute= "Dept. Comp. Sci. Memorial Uni. Newfoundland, St. John's Canada",
+	number= "9106",
+	year= 1991,
+	note =""}
+	@COMMENT "1/1/N - 1/M/N & 1/M/1"
+	
+@ARTICLE{Haldar92,
+	author= "S. Haldar and K. Vidyasankar",
+	title= "Counter examples to a one writer multireader atomic variable construction of Burns and Peterson",
+	journal= acmosr,
+	volume= "26",
+	number= 1,
+	year= 1992,
+	pages= "78--88"}
+
+@INPROCEEDINGS{Haldar94,
+	author= "S. Haldar and P.S. Subramanian",
+	title= "Space optimum conflict-free construction of 1-writer 1-reader multivalued atomic variable",
+	booktitle= woda,
+	number= 857,
+	series= lncs,
+	year= 1994,
+	pages= "116--129"}
+
+@ARTICLE{Haldar95,
+	author= "S. Haldar and K. Vidyasankar",
+	title= "Constructing 1-writer multi-reader multivalued atomic variables from regular variables",
+	journal= jacm,
+	volume= "42",
+	number= 1,
+	year= 1995,
+	pages= "186--203",
+	note = ""}
+
+@ARTICLE{Haldar95b,
+	author  = "S. Haldar and K. Vidyasankar",
+	title   = "Buffer-optimal constructions of 1-writer multireader multivalued atomic shared variables",
+	journal = "Journal of Parallel and Distributed Computing",
+	year    = 1995,
+	volume  = 31,
+	number  = 2,
+	pages   = "174--180",
+	note    = ""}
+
+@ARTICLE{Haldar96,
+	author= "S. Halder and K. Vidyasankar",
+	title= "Space-efficient construction of buffer-optimal 1-writer 1-reader multivalued atomic variable",
+	journal= jacm,
+	year= 1996,
+	note = ""}
+
+@ARTICLE{Haldar96b,
+	author  = "S. Haldar and K. Vidyasankar",
+	title   = "Simple extensions of 1-writer atomic variable constructions to multiwriter ones",
+	journal = "ACTA Informatica",
+	year    = 1996,
+	volume  = 33,
+	number  = 2,
+	pages   = "177--202",
+	note    = ""}
+
+@ARTICLE{Hennessy87,
+  author = "M. Hennessy",
+  title  = "An algebraic theory of fair asynchronous communicating processes",
+  pages  = "121--143",
+  journal= tcs,
+  volume = 49,
+  year   = 1987 }
+
+@ARTICLE{Herlihy91,
+	author  = "M. Herlihy",
+	title   = "Wait-Free Synchronization",
+	journal = apls,
+	year    = 1991,
+	volume  = 13,
+	number  = 1,
+	pages   = "124--149",
+	note    = ""}
+
+@ARTICLE{Hesselink94,
+	author  = "W.H. Hesselink",
+	title   = "Wait-free linearization with an assertional proof",
+	journal = dc,
+	year    = 1994,
+	volume  = 8,
+	number  = 2,
+	pages   = "65--80",
+	note    = ""}
+
+@ARTICLE{Hesselink95,
+	author  = "W.H. Hesselink",
+	title   = "Wait-free linearization with a mechanical proof",
+	journal = dc,
+	year    = 1995,
+	volume  = 9,
+	number  = 1,
+	pages   = "21--36",
+	note    = ""}
+
+@MISC{Hitachi81,
+        title        = "Reading and writing in the same cycle",
+        howpublished = "European patent",
+        month        = "September",
+        year         = 1981,
+        note         = "async. FIFO, Patent No. 2-086-623"}
+
+@INPROCEEDINGS{Hoepman93,
+	author       = "J.H. Hoepman and J. Tromp",
+	title        = "Binary Snapshots",
+	booktitle    = "",
+	year         = 1993,
+	volume       = 725,
+	series       = lncs,
+	pages        = "18--25",
+	note         = ""}
+
+@ARTICLE{Hoover96,
+	author  = "H.J. Hoover and P. Rudnicki",
+	title   = "Uniform self-stabilizing orientation of unicyclic networks under read/write atomicity",
+	journal = "Chicago Journal of Theoretical Computer Science",
+	year    = 1996,
+	volume  = 5,
+	pages   = "1--7",
+	note    = ""}
+
+@BOOK{IEEE92,
+	author    = "P.K. Srimani and S.R. Das",
+	title     = "Distributed mutual exclusion algorithms",
+	publisher = ieeecsp,
+	year      = 1992,
+	series    = "IEEE Computer Society Press Technology Series",
+	note      = "ISBN 0818633808"}
+
+@TECHREPORT{Israeli87,
+	author      = "A. Isralei and M. Li and P.M.B. Vitanyi",
+	title       = "Simple multireader registers using time-stamp schemes",
+	institution = cwi,
+	year        = 1987,
+	number      = "CS-R8758",
+	note        = ""}
+
+@INPROCEEDINGS{Israeli92,
+	author= "A. Israeli and A. Shaham",
+	title= "Optimal multi-writer multi-reader atomic register",
+	booktitle= podc,
+	year= 1992,
+	month= "August",
+	pages= "71--82",
+	number = "11th annual",
+	note = ""}
+
+@TECHREPORT{Israeli92a,
+	author      = "A. Israeli and A. Shaham",
+	title       = "Optimal multi-writer multi-reader atomic register",
+	institution = cwi,
+	year        = 1992,
+	number      = "CS-R9235",
+	note        = ""}
+
+@INPROCEEDINGS{Israeli93,
+	author       = "A. Israeli and L. Rappoport",
+	title        = "Efficient wait-free implmentations of a concurrent priority queue",
+	booktitle    = "",
+	year         = 1993,
+	volume       = 725,
+	series       = lncs,
+	pages        = "1--17",
+	note         = ""}
+
+@ARTICLE{Israeli98,
+	author  = "A. Israeli and A. Shirazi",
+	title   = "The time complexity of updating snapshot memories",
+	journal = ipl,
+	year    = 1998,
+	volume  = 65,
+	number  = 1,
+	pages   = "33--40",
+	note    = ""}
+
+@INPROCEEDINGS{Jayanti91,
+	author       = "P. Jayanti and S. Toueg",
+	title        = "Wakeup under read write atomicity",
+	booktitle    = "",
+	year         = 1991,
+	volume       = 486,
+	series       = lncs,
+	pages        = "277--288",
+	note         = ""}
+
+@INPROCEEDINGS{Jayanti92,
+	author       = "P. Jayanti and A. Sethi and E.L. Lloyd",
+	title        = "Minimal shared information for concurrent reading and writing",
+	booktitle    = "",
+	year         = 1992,
+	volume       = 579,
+	series       = lncs,
+	pages        = "212--228",
+	note         = ""}
+
+@TECHREPORT{Jayanti92b,
+	author      = "P. Jayanti",
+	title       = "Fault tolerant wait-free shared objects",
+	institution = "Cornell University",
+	year        = 1992,
+	number      = "TR-92-1298",
+	note        = "Update of TR-92-1281"}
+
+@ARTICLE{Jayanti97,
+	author  = "P. Jayanti",
+	title   = "Robust wait-free hierarchies",
+	journal = jacm,
+	year    = 1997,
+	volume  = 44,
+	number  = 4,
+	pages   = "592--614",
+	note    = ""}
+
+@INPROCEEDINGS{Jiffry98,
+	author       = "M.A. Jiffry",
+	title        = "{P}etri net analysis of the {MASCOT} pool {IDA} commuication mechanisms",
+	booktitle    = "Proceedings Design {CPN} Workshop",
+	year         = 1998,
+	note         = ""}
+
+@ARTICLE{Jump75,
+  author = "J. Robert Jump and P. S. Thiagarajan",
+  title  = "On the interconnection of asynchronous control structures",
+  journal= jacm,
+  volume = 22,
+  pages  = "596--612",
+  month  = oct,
+  year   = 1975 }
+
+@ARTICLE{Kaiser82,
+	author  = "C. Kaiser",
+	title   = "Mutual exclusion and priority scheduling",
+	journal = "TSI-Technique et Science Informatiques",
+	year    = 1982,
+	volume  = 1,
+	number  = 1,
+	pages   = "59--68",
+	note    = ""}
+
+@ARTICLE{Karlin88,
+	author  = "A.R. Karlin and E. Upfal",
+	title   = "Parallel hashing - an efficient implementation of shared memory",
+	journal = jacm,
+	year    = 1988,
+	volume  = 35,
+	number  = 4,
+	pages   = "876--892",
+	note    = ""}
+
+@ARTICLE{Killeen95,
+	author  = "T. Killeen and M. Celenk",
+	title   = "Reducing interprocess communication overhead through register windows",
+	journal = "SouthEastern Symposium on System Theory",
+	year    = 1995,
+	volume  = 27,
+	pages   = "130--135",
+	publisher = ieeecsp,
+	note    = ""}
+
+@TECHREPORT{Kirousis87a,
+	author= "L.M. Kirousis and E. Kranakis and P.M.B. Vitanyi",
+	title= "Atomic Multireader Register (Detailed abstract)",
+	institution= cwi,
+	number= "CS-8704",
+	year= "1987",
+	month= "January"}
+
+@TECHREPORT{Kirousis87b,
+	author= "L.M. Kirousis and E. Kranakis and P.M.B. Vitanyi",
+	title= "Atomic Multireader Register",
+	institution= cwi,
+	number= "CS-8722",
+	year= "1987"}
+
+@INPROCEEDINGS{Kirousis88,
+	author= "L.M. Kirousis and E. Kranakis and P.M.B. Vitanyi", 
+	title= "Atomic Multireader Register",
+	booktitle= wodc,
+	series= lncs,
+	number= 312,
+	year= 1988,
+	month= "July",
+	pages= "278--296",
+	note=""}
+	%COMMENT "got. 2 reader polynomial solution. 1/1/N - 1/M/N and 1/M/1"
+
+@INPROCEEDINGS{Kirousis91,
+	author       = "L.M. Kirousis and P. Spirakis and P. Tsigas",
+	title        = "Simple atomic snapshots a linear complexity solution with unbounded time-stamps",
+	booktitle    = "",
+	year         = 1991,
+	volume       = 497,
+	series       = lncs,
+	pages        = "582--587",
+	note         = ""}
+
+@INPROCEEDINGS{Kirousis92,
+	author       = "L.M. Kirousis and P. Spirakis and P. Tsigas",
+	title        = "Reading many variables in one atomic operation - solutions with linear or sublinear complexity",
+	booktitle    = "",
+	year         = 1992,
+	volume       = 579,
+	series       = lncs,
+	pages        = "229--241",
+	note         = ""}
+
+@INPROCEEDINGS{Kirousis93,
+	author       = "L.M. Kirousis and A.G. Veneris",
+	title        = "Efficient algorithms for checking the atomicity of a run of read and write operations",
+	booktitle    = "",
+	year         = 1993,
+	volume       = 725,
+	series       = lncs,
+	pages        = "54--68",
+	note         = ""}
+
+@ARTICLE{Kirousis94,
+	author  = "L.M. Kirousis and P. Spirakis and P. Tsigas",
+	title   = "Reading many variables in one atomic operation - solutions with linear and sublinear complexity",
+	journal = ieeetpds,
+	year    = 1994,
+	volume  = 5,
+	number  = 7,
+	pages   = "688--696",
+	note    = ""}
+
+@ARTICLE{Kirousis95,
+	author  = "L.M. Kirousis and A.G. Venersis",
+	title   = "Efficient algorithms for checking the atomicity of a run of read and write operations",
+	journal = "ACTA Informatica",
+	year    = 1995,
+	volume  = 32,
+	number  = 2,
+	pages   = "155--170",
+	note    = ""}
+
+@ARTICLE{Kirousis96,
+	author  = "L.M. Kirousis and P. Spirakis and P. Tsigas",
+	title   = "Simple atomic snapshots - a linear complexity solution with unbounded time-stamps",
+	journal = ipl,
+	year    = 1996,
+	volume  = 58,
+	number  = 1,
+	pages   = "47--53",
+	note    = ""}
+
+@INPROCEEDINGS{Kobayashi93,
+	author       = "N. Kobayashi and A. Yonezawa",
+	title        = "Asynchronous communication model based on linear logic",
+	booktitle    = "Parallel Symbolic Computing: Languages, Systems and Applications",
+	year         = 1993,
+	volume       = 748,
+	series       = lncs,
+	pages        = "331--337",
+	month        = "October",
+	note         = ""}
+
+@INPROCEEDINGS{Kranakis89,
+	author       = "E. Kranakis",
+	title        = "Functional dependencies of variables in wait-free programs",
+	booktitle    = "",
+	year         = 1989,
+	volume       = 392,
+	series       = lncs,
+	pages        = "148--159",
+	note         = ""}
+
+@ARTICLE{Kruskal88,
+	author  = "C.P. Kruskal and L. Rudolph and M. Snir",
+	title   = "Efficient synchronization on multiprocessors with shared memory",
+	journal = apls,
+	year    = 1988,
+	volume  = 10,
+	number  = 4,
+	pages   = "579--601",
+	note    = ""}
+
+@ARTICLE{Kshemkalyani97,
+	author  = "A.D. Kshemkalyani",
+	title   = "Reasoning about causality between distributed nonatomic events",
+	journal = "Artificial Intelligence",
+	year    = 1997,
+	volume  = 92,
+	number  = "1-2",
+	pages   = "301-315",
+	note    = ""}
+
+@ARTICLE{Kshemkalyani97b,
+	author  = "A.D. Kshemkalyani",
+	title   = "A framework for viewing atomic events in distributed computations",
+	journal = tcs,
+	year    = 1997,
+	volume  = 196,
+	number  = "1-2",
+	pages   = "45--70",
+	note    = ""}
+
+@ARTICLE{Lakshmanan88,
+	author  = "K.B. Lakshmanan and K. Thulasiraman",
+	title   = "On the use of synchrinisers for asynchronous communication networks",
+	journal = lncs,
+	year    = 1988,
+	volume  = 312,
+	pages   = "257-277",
+	note    = ""}
+
+@INPROCEEDINGS{Lam92,
+	author       = "K.Y. Lam and D. Gollmann",
+	title        = "Freshness assurnace of authentication protocols",
+	booktitle    = "?",
+	year         = 1992,
+	volume       = 648,
+	series       = lncs,
+	pages        = "261--271",
+	note         = ""}
+
+@ARTICLE{Lamport77,
+	author= "L. Lamport",
+	title= "Concurrent reading and writing",
+	journal= cacm,
+	volume= 11,
+	year= 1977,
+	pages= "806--811",
+	note = ""}
+
+@ARTICLE{Lamport83,
+	author  = "L. Lamport",
+	title   = "An assertional correctness proof of a distributed algorithm",
+	journal = "Science of Computer Programming",
+	year    = 1983,
+	volume  = 2,
+	number  = 3,
+	pages   = "175--206",
+	note    = ""}
+
+@ARTICLE{Lamport84,
+	author  = "L. Lamport",
+	title   = "Using time instead of timeout for fault tolerant distributed systems",
+	journal = apls,
+	year    = 1984,
+	volume  = 6,
+	number  = 2,
+	pages   = "254--280",
+	note    = ""}
+
+@ARTICLE{Lamport85b,
+	author  = "L. Lamport and P.M. Melliarsmith",
+	title   = "Synchronizing clocks in the presence of faults",
+	journal = jacm,
+	year    = 1985,
+	volume  = 32,
+	number  = 1,
+	pages   = "52--78",
+	note    = ""}
+
+@ARTICLE{Lamport86,
+	author= "L. Lamport",
+	title= "On Interprocess Communication Parts {I} ({B}asic {F}ormalism) and {II} ({A}lgorithms)",
+	journal= dc,
+	year= 1986,
+	volume= 1,
+	pages= "77--101",
+	note=""}
+	%COMMENT "multi-reader problem posed, safe bit definition, 1/1/1 - K/M/N"
+
+@ARTICLE{Lamport86b,
+	author  = "L. Lamport",
+	title   = "The mutual exclusion problem Parts {I} (a theory of interprocess communication) and {II} (statement and solutions)",
+	journal = jacm,
+	year    = 1986,
+	volume  = 33,
+	number  = 2,
+	pages   = "313--326, 327--348",
+	note    = ""}
+
+@ARTICLE{Lamport87,
+	author  = "L. Lamport",
+	title   = "A fast mutual exclusion algorithm",
+	journal = "ACM Transactions on Computer Systems",
+	year    = 1987,
+	volume  = 5,
+	number  = 1,
+	pages   = "1--11",
+	note    = ""}
+
+@TECHREPORT{Lamport89,
+	author      = "L. Lamport and F.B. Schnieder",
+	title       = "Pretending Atomicity",
+	institution = "SRC Digital Equipment Corp.",
+	year        = 1989,
+	number      = "44",
+	note        = ""}
+
+@ARTICLE{Lamport90,
+	author  = "L. Lamport",
+	title   = "A theorem on atomicity in distributed algorithms",
+	journal = dc,
+	year    = 1990,
+	volume  = 4,
+	number  = 2,
+	pages   = "59--68",
+	note    = ""}
+
+@ARTICLE{Lamport90b,
+	author  = "L. Lamport",
+	title   = "Concurrent reading and writing of clocks",
+	journal = "ACM Transactions on Computer Systems",
+	year    = 1990,
+	volume  = 8,
+	number  = 4,
+	pages   = "305--310",
+	note    = ""}
+
+@ARTICLE{Lamport91,
+	author  = "L. Lamport",
+	title   = "The mutual exclusion problem has been solved",
+	journal = "cacm",
+	year    = 1991,
+	volume  = 34,
+	number  = 1,
+	pages   = "110, 119",
+	month   = "January",
+	note    = ""}
+	%COMMENT "got 110 from IEE, their copy had 119 missing with the refs on it"
+
+@ARTICLE{Lamport94,
+	author  = "L. Lamport",
+	title   = "The temporal logic of actions",
+	journal = apls,
+	year    = 1994,
+	volume  = 16,
+	number  = 3,
+	pages   = "872--923",
+	note    = ""}
+
+@ARTICLE{Lamport97,
+	author  = "L. Lamport",
+	title   = "How to make a correct multiprocess algorithm program execute correctly on a multiprocessor",
+	journal = ieeetc,
+	year    = 1997,
+	volume  = 46,
+	number  = 7,
+	pages   = "779--782",
+	note    = ""}
+
+@ARTICLE{Leary97,
+	author = "J. O'Leary and G. Brown",
+	title = "Synchronous emulation of Asynchronous circuits",
+	journal = ieeetcad,
+	volume = 16,
+	number = 2,
+	pages = "205--209",
+  	month  = feb,
+  	year   = 1997,
+	note = ""}
+	%COMMENT "FPGA impl. of async ccts, uses Tangram (CSP like). doesn't preserve complete async just communication behaviour." 
+
+@ARTICLE{Leung97,
+	author  = "H.F. Leung and H.F. Ting",
+	title   = "An optimal algorithm for global termination detection in shared-memory asynchronous multiprocessor systems",
+	journal = ieeetpds,
+	year    = 1997,
+	volume  = 8,
+	number  = 5,
+	pages   = "538--543",
+	note    = ""}
+
+@TECHREPORT{Li87,
+	author      = "M. Li and P.M.B. Vitanyi",
+	title       = "A very simple construction for atomic multiwriter register",
+	institution = cwi,
+	year        = 1987,
+	number      = "CS-R8751",
+	note        = ""}
+
+@TECHREPORT{Li87b,
+	author= "M. Li and P.M.B. Vitanyi",
+	title= "A Very Simple Construction for Atomic multiwriter register",
+	institute= "Aiken Comp. Lab., Harvard Univ.",
+	year= 1987,
+	number= "TR 01-87"}
+
+@INPROCEEDINGS{Li89a,
+	author= "M. Li and J. Tromp and P.M.B. Vitanyi",
+	title= "How to Construct Wait Free Variables",
+	booktitle= alp,
+	series= lncs,
+	year= 1989,
+	volume= 372,
+	pages= "488-505"}
+
+@INPROCEEDINGS{Li89b,
+	author= "M. Li and P.M.B. Vitanyi",
+	title= "How to share concurrent asynchronous wait-free variables",
+	booktitle= alp,
+	series= lncs,
+	volume= 372,
+	year= 1989,
+	pages= "488--505",
+	note = ""}
+	%COMMENT "2 reader polynomial solution, 1/1/N - 1/M/N and 1/M/1, 1/M/N - K/M/N"
+
+@TECHREPORT{Li89c,
+	author= "M. Li and J. Tromp and P.M.B. Vitanyi",
+	title= "How to share concurrent wait-free variables",
+	institute= cwi,
+	number= "CS-8916",
+	year= 1989,
+	month= "April"}
+
+@INPROCEEDINGS{Li91,
+  author = "H. F. Li and S. C. Leung and P. N. Lam",
+  title  = "Synthesis of Delay-Insensitive Circuits by Refinement into Atomic Threads",
+  pages  = "180--186",
+  booktitle= iccd,
+  publisher= icsp,
+  month  = oct,
+  year   = 1991 }
+
+@INPROCEEDINGS{Li92,
+	author= "M. Li and P.M.B. Vitanyi",
+	title= "Optimality of wait-free atomic multiwriter variables",
+	booktitle= ipl,
+	volume= 43,
+	number= 2,
+	year= 1992,
+	pages= "107--112"}
+
+@ARTICLE{Li96,
+	author= "M. Li and J. Tromp and P.M.B. Vitanyi",
+	title= "How to share Concurrent Wait-Free Variables",
+	journal= jacm,
+	volume= 43,
+	number= 4,
+	month= "July",
+	year= 1996,
+	pages= "723--746"}
+
+@INPROCEEDINGS{Lien94,
+	author       = "H.M. Lien and S.M. Yuan",
+	title        = "A new approach of constructing information structure for mutual exclusion in distributed systems",
+	booktitle    = "1994 International Conference on Parallel and Distributed Systems",
+	year         = 1994,
+	editor       = "Ni L.M.",
+	pages        = "588--591",
+	month        = "December",
+	publisher    = "IEEE",
+	note         = ""}
+
+@ARTICLE{Lin88,
+	author  = "H.A. Lin",
+	title   = "A methodology for constructing communication protocols with multiple concurrent functions",
+	journal = dc,
+	year    = 1988,
+	volume  = 3,
+	number  = 1,
+	pages   = "23--40",
+	note    = ""}
+
+@ARTICLE{Lycklama91,
+	author  = "E.A. Lycklama and V. Hadzilacos",
+	title   = "A 1st come 1st served mutual-exclusion algorithm with small communication variables",
+	journal = apls,
+	year    = 1991,
+	volume  = 13,
+	number  = 4,
+	pages   = "558--576",
+	note    = ""}
+
+@BOOK{Lynch96,
+        author = "N.A. Lynch",
+        title     = "Distributed Algorithms",
+        publisher = "Morgan Kaufmann",
+        year      = 1996,
+        series    = "Data Management Systems",
+        note      = "ISBN 1-55860-348-4"}
+	%COMMENT "seen, async comms have either fifo, waiting or critical sections"
+
+@ARTICLE{Manabe98,
+	author  = "Y. Manabe and R. Baldoni and M. Raynal and S. Aoyagi",
+	title   = "k-arbiter: a safe and general scheme for h-out of-k mutual exclusion",
+	journal = tcs,
+	year    = 1998,
+	volume  = 183,
+	number  = "1-2",
+	pages   = "97",
+	note    = ""}
+
+@ARTICLE{Marshall94,
+  author = "Alan Marshall and Bill Coates and Polly Siegel",
+  title  = "Designing an Asynchronous Communications Chip",
+  journal= ieeedt,
+  volume = 11,
+  number = 2,
+  pages  = "8--21",
+  year   = 1994 }
+
+@ARTICLE{Martel92,
+	author  = "C. Martel and A. Park and R. Subramonian",
+	title   = "Work optimal asynchronous algorithms for shared memory parallel computers",
+	journal = "SIAM Journal on Computing",
+	year    = 1992,
+	volume  = 21,
+	number  = 6,
+	pages   = "1070--1099",
+	month   = "December",
+	note    = ""}
+
+@ARTICLE{Martin85a,
+  author = "Alain J. Martin",
+  title  = "The Probe: An Addition to Communication Primitives",
+  journal= ipl,
+  volume = 20,
+  number = 3,
+  pages  = "125--130",
+  note   = "Erratum: IPL 21(2):107, 1985",
+  year   = 1985 }
+
+@ARTICLE{Mavronicolas93,
+	author  = "M. Mavronicolas",
+	title   = "Efficiency of semi-synchronous versus asynchronous systems: atomic shared memory",
+	journal = "Computers and Mathematics with Applications",
+	year    = 1993,
+	volume  = 25,
+	number  = 2,
+	pages   = "81",
+	month   = "January",
+	note    = ""}
+
+@INPROCEEDINGS{McCarthy94,
+	author       = "M. McCarthy and C. Marlin",
+	title        = "Interprocess communication protocol support in a distributed integrated software developement environment",
+	booktitle    = "17th Annual Computer Science Conference",
+	year         = 1994,
+	editor       = "Gupta G.",
+	volume       = 16,
+	series       = "Australian Computer Science Communications",
+	pages        = "363--372",
+	month        = "January",
+	publisher    = "Christchurch, University of Canterbury",
+	note         = ""}
+
+@INPROCEEDINGS{McCartney94,
+	author       = "T.P. McCartney and K.J. Goldman",
+	title        = "Visual specification of interprocess and intraprocess communication",
+	booktitle    = "10th IEEE Symposium on Visual Languages",
+	year         = 1994,
+	pages        = "80--89",
+	month        = "October",
+	publisher    = ieeecsp,
+	note         = ""}
+
+@ARTICLE{McNamee90,
+	author  = "C.M. McNamee and R.A. Olsson",
+	title   = "Transformations for optimizing interprocess communications and synchronization mechanisms",
+	journal = "International Journal of Parallel Processing",
+	year    = 1990,
+	volume  = 19,
+	number  = 5,
+	pages   = "357",
+	month   = "October",
+	note    = ""}
+
+@ARTICLE{Mellocrummey91,
+	author  = "J.M. Mellocrummey and M.L. Scott",
+	title   = "Scalable reader-writer synchronization for shared memory multiprocessors",
+	journal = "Sigplan notices",
+	year    = 1991,
+	volume  = 26,
+	number  = 7,
+	pages   = "106--113",
+	note    = ""}
+
+@ARTICLE{Mellocrummey91b,
+	author  = "J.M. Mellocrummey and M.L. Scott",
+	title   = "Synchronization without contention",
+	journal = "Sigplan Notices",
+	year    = 1991,
+	volume  = 26,
+	number  = 4,
+	pages   = "269--278",
+	note    = ""}
+
+@ARTICLE{Merlin76,
+        author  = "P.M. Merlin",
+        title   = "A methodology for the design and implementation of communications protocols",
+        journal = "IEEE Trans Commun.",
+        year    = 1976,
+        volume  = COM-24,
+        number  = 6,
+        pages   = "614--621",
+        month   = "June",
+        note    = ""}
+	%COMMENT "in KCL Lib, telephone system, busy etc i.e. waiting." 
+
+@INPROCEEDINGS{Merritt92,
+	author       = "M. Merritt and G. Taubenfeld",
+	title        = "Atomic {M}-Register operations",
+	booktitle    = "",
+	year         = 1992,
+	volume 	     = 579,
+	series       = lncs,
+	pages        = "289--294",
+	note         = ""}
+
+@ARTICLE{Merritt93,
+	author  = "M. Merritt and G. Taubenfeld",
+	title   = "Speeding Lamport's fast mutual exclusion algorithm",
+	journal = ipl,
+	year    = 1993,
+	volume  = 45,
+	number  = 3,
+	pages   = "137",
+	month   = "March",
+	note    = ""}
+
+@ARTICLE{Merritt94,
+	author  = "M. Merritt and G. Taubenfeld",
+	title   = "Atomic {M}-Register operations",
+	journal = dc,
+	year    = 1994,
+	volume  = 7,
+	number  = 4,
+	pages   = "213--221",
+	note    = ""}
+
+@BOOK{Milner89,
+  author = "R. Milner",
+  title  = "Communication and Concurrency",
+  publisher= ph,
+  year   = 1989,
+  note = "ISBN 0-13-114984-9. KCL Lib - QA267 MIL"}
+
+@INPROCEEDINGS{Misra85,
+	author  = "J. Misra",
+	title   = "Axioms for memory access in asynchronous hardware systems",
+	booktitle    = "",
+	year         = 1985,
+	volume       = 197,
+	series       = lncs,
+	pages        = "96-110",
+	note         = ""}
+
+@ARTICLE{Misra86,
+	author= "J. Misra",
+	title= "Axioms for memory access in asynchronous hardware systems",
+	journal= apls,
+	number= 8,
+	year= 1986,
+	pages= "142--153"}
+
+@TECHREPORT{Neilson89,
+	author      = "M.L. Neilson",
+	title       = "A dag-based algorithm for distributed mutual exclusion",
+	institution = "Kansas State University",
+	year        = 1989,
+	number      = "TR-CS-89-12",
+	note        = ""}
+
+@INPROCEEDINGS{Newman-Wolf87,
+	author= "R. Newman-Wolf",
+	title= "A Protocol for wait-free, atomic, multi-reader shared variables",
+	booktitle= podc,
+	year= 1987,
+	month= "August",
+	pages= "232--248",
+	number = "6th annual",
+	note = ""}
+	%COMMENT "2 reader polynomial solution, 1/1/N - 1/M/N and 1/M/1"
+
+@ARTICLE{Nishimura91,
+	author  = "N. Nishimura",
+	title   = "Asynchronous shared memory parallel computation (preliminary version)",
+	journal = "Computer Architecture News",
+	year    = 1991,
+	volume  = 19,
+	number  = 1,
+	pages   = "97",
+	month   = "March",
+	note    = ""}
+
+@ARTICLE{Nishimura94,
+	author  = "N. Nishimura",
+	title   = "A model for asynchronous shared-memory parallel computation",
+	journal = "SIAM Journal on Computing",
+	year    = 1994,
+	volume  = 23,
+	number  = 6,
+	pages   = "1231--1252",
+	note    = ""}
+
+@ARTICLE{Nishimura95,
+	author  = "N. Nishimura",
+	title   = "Efficient asynchronous simulation of a class of synchronous parallel algorithms",
+	journal = "Journal of Computer and System Sciences",
+	year    = 1995,
+	volume  = 50,
+	number  = 1,
+	pages   = "98--113",
+	note    = ""}
+
+@MISC{O'Neill76,
+        author       = "M. O'Neill and J.N. Hanlon",
+        title        = "A data storage arrangement for buffering asynchronous input and output data streams",
+        howpublished = "European patent",
+        month        = "January",
+        year         = 1976,
+        note         = "Patent No. 1-487-706"}
+	%COMMENT "3 slot buffer for async data. No Metastability, uses mutual exclusion and waiting on the control variables. Ceased 16/1/1992"
+
+@ARTICLE{Orda97,
+	author  = "A. Orda and M. Merritt",
+	title   = "Efficient test and set constructions for faulty shared memory",
+	journal = ipl,
+	year    = 1997,
+	volume  = 62,
+	number  = 1,
+	pages   = "41--46",
+	note    = ""}
+
+@INPROCEEDINGS{Orava89,
+  author = "Fredrik Orava",
+  title  = "Verifying Safety and Deadlock Properties of Networks of Asynchronously Communicating Processes",
+  booktitle= "Protocol Specification, Testing and Verification: Proceedings of the 9th International {IFIP} WG~6.1 Workshop",
+  editor = "Brinksma, Ed and Scollo, Guiseppe and Vissers, Chris A.",
+  year   = 1989 }
+
+@ARTICLE{Page89,
+	author  = "I.P. Page and R.T. Jacob",
+	title   = "The solution of mutual exclusion problems which can be described graphically",
+	journal = "The Computer Journal",
+	year    = 1989,
+	volume  = 32,
+	pages   = "45--54",
+	month   = "February",
+	note    = ""}
+
+@ARTICLE{Peterson81,
+	author  = "G.L. Peterson",
+	title   = "Myths about the mutual exclusion problem",
+	journal = ipl,
+	year    = 1981,
+	volume  = 12,
+	number  = 3,
+	pages   = "115--116",
+	note    = ""}
+
+@ARTICLE{Peterson83,
+	author= "G.L. Peterson",
+	title= "Concurrent reading while writing",
+	journal= apls,
+	volume= 5,
+	number= 1,
+	year= 1983,
+	pages= "46--55",
+	note = ""}
+	%COMMENT "got, First to suggest the problem?, 1/M/1 - 1/M/N"
+
+@TECHREPORT{Peterson86,
+	author= "G.L. Peterson and J.E. Burns",
+	title= "Concurrent Reading while Writing {II}: The Multi-Writer Case (Preliminary report)",
+	institute= git,
+	number= "GIT-ICS-86/26",
+	year= 1986,
+	month= "December"}
+
+@INPROCEDDINGS{Peterson87,
+	author= "G.L. Peterson and J.E. Burns",
+	title= "Concurrent Reading while Writing {II}: The Multi-Writer Case",
+	booktitle= ifcs,
+	year= 1987,
+	pages= "383--392",
+	note = ""}
+	%COMMENT "2 reader polynomial solution, 1/M/N - K/M/N"
+
+@ARTICLE{Plouzeau87,
+	author  = "N. Plouzeau and M. Raynal and J.P. Verjus",
+	title   = "The relationship between producers and consumer - some distributed solutions",
+	journal = "TSI - Technique et Science Informatiques",
+	year    = 1987,
+	volume  = 6,
+	number  = 3,
+	pages   = "231--241",
+	note    = "Language: French"}
+
+@INPROCEEDINGS{Poledna96,
+	author       = "S. Poledna",
+	title        = "Optimizing interprocess communication for embedded real-time systems",
+	booktitle    = "17th IEEE Real Time Systems Symposium",
+	year         = 1996,
+	pages        = "311--320",
+	month        = "December",
+	publisher    = ieeecsp,
+	note         = ""}
+
+@ARTICLE{Rabin82,
+	author  = "M.O. Rabin",
+	title   = "{N}-process mutual exclusion with bounded waiting by 4. {Log2N} valued shared variables",
+	journal = "Journal of Computer and System Sciences",
+	year    = 1982,
+	volume  = 25,
+	number  = 1,
+	pages   = "66--75",
+	note    = ""}
+
+@INPROCEEDINGS{Ramachandran89,
+	author       = "U. Ramachandran and M. Ahamad and M.Y.A. Khalidi",
+	title        = "Coherence of distributed shared memory: Unifying synchronization and datatransfer",
+	booktitle    = "Proc. of the 1989 Int'l Conf. on Parallel Processing (ICPP'89)",
+	year         = 1989,
+	volume       = 2,
+	pages        = "160--169",
+	month        = "August",
+	note         = ""}
+
+@TECHREPORT{Ramachandran94,
+	author      = "M. Ramachandran and M. Singhal",
+	title       = "Decntralized semaphore support in a virtual shared memory system",
+	institution = "Computer and Information Sciences Research Center, Ohio State University",
+	year        = 1994,
+	number      = "OSU-CISRC-3/94-TR10",
+	month       = "March",
+	note        = ""}
+
+@TECHREPORT{Ramachandran94b,
+	author      = "M. Ramachandran and M. Singhal",
+	title       = "On the synchronization mechanisms in distributed shared memory systems",
+	institution = "Computer and Information Sciences Research Center, Ohio State University",
+	year        = 1994,
+	number      = "OSU-CISRC-10/94-TR54",
+	month       = "October",
+	note        = ""}
+
+@MASTERSTHESIS{Ratcliffe86,
+	author       = "M. Ratcliffe",
+	title        = "Implementation of an asynchronous four slot communication mechanism",
+	school  = "Hatfield Polythechnic",
+	year    = 1986,
+	type    = "MSc",
+	month   = "January",
+	note    = "" }
+
+@TECHREPORT{Raymond87,
+	author      = "K. Raymond",
+	title       = "Multiple entries with Ricart and Agrawala's distributed mutual exclusion algorithm",
+	institution = "University of Queensland",
+	year        = 1987,
+	number      = "78",
+	note        = ""}
+
+@TECHREPORT{Raymond88,
+	author      = "K. Raymond",
+	title       = "Implementing distributed semaphores using distributed mutual exlusion techniques",
+	institution = "University of Queensland",
+	year        = 1988,
+	number      = "93",
+	note        = ""}
+
+@ARTICLE{Raynal91,
+	author  = "M. Raynal",
+	title   = "A simple taxonomy for distributed mutual exclusion algorithms",
+	journal = "Operating Systems Review",
+	year    = 1991,
+	volume  = 25,
+	number  = 2,
+	pages   = "47--51",
+	month   = "April",
+	note    = ""}
+
+@MASTERSTHESIS{Reiners96,
+	author  = "P.D. Rainers",
+	title   = "Understanding the wait-free set-consensus partial order",
+	school  = "Iowa State University",
+	year    = 1996,
+	note    = ""}
+
+@ARTICLE{Reynolds90,
+	author  = "C.W. Reynolds",
+	title   = "Signaling regions - multiprocessing in a shared memory reconsidered",
+	journal = "Software Practice and Experience",
+	year    = 1990,
+	volume  = 20,
+	number  = 4,
+	pages   = "325--356",
+	note    = ""}
+
+@ARTICLE{Ricart81,
+	author  = "G. Ricart and A.K. Agrawala",
+	title   = "An optimal algorithm for mutual exclusion in computer networks",
+	journal = cacm,
+	year    = 1981,
+	volume  = 24,
+	number  = 1,
+	pages   = "9--17",
+	note    = ""}
+
+@ARTICLE{Ricart83,
+	author  = "G. Ricart and A. Agrawala",
+	title   = "On mutual exclusion in computer networks - response",
+	journal = cacm,
+	year    = 1983,
+	volume  = 26,
+	number  = 2,
+	pages   = "147--148",
+	note    = ""}
+
+@INPROCEEDINGS{Roine96,
+  author = "Per Torstein R{\o}ine",
+  title  = "A System for Asynchronous High-speed Chip to Chip Communication",
+  booktitle= async,
+  publisher= icsp,
+  month  = mar,
+  year   = 1996 }
+
+@ARTICLE{Satoh95,
+	author  = "I. Satoh and M. Tokoro",
+	title   = "Time and asynchronouy in interactions among distributed real-time objects",
+	journal = lncs,
+	year    = 1995,
+	volume  = 952,
+	pages   = "331--350",
+	note    = ""}
+
+@TECHREPORT{Schaffer88,
+	author= "R. Schaffer",
+	title= "On the correctness of atomic multi-writer registers", 
+	institution= mit, 
+	year= 1988,
+	number= "MIT/LCS/TM-364",
+        month= "June",
+	note = ""}
+	%COMMENT "1/M/N - K/M/N. KCL Lib. FOL QA76 MIT"
+
+@MASTERSTHESIS{Schaffer88b,
+	author  = "R.W. Schaffer",
+	title   = "The Peterson-Burns multi-writer, multi-reader atomic register algorithm",
+	school  = mit,
+	year    = 1988,
+	type    = "B.S. thesis",
+	note    = ""}
+	%COMMENT "Supercised by Nancy Lynch"
+
+@PHDTHESIS{Schols92,
+  author = "Huub Schols",
+  title  = "Delay-insensitive Communication",
+  school = eut,
+  month  = dec,
+  year   = 1992 }
+
+@ARTICLE{Serbedzija90,
+	author  = "N.B. Serbedzija",
+	title   = "High level programming of real-time systems with asynchronous communication",
+	journal = "Information and Software Technology",
+	year    = 1990,
+	volume  = 32,
+	pages   = "497--505",
+	month   = "September",
+	note    = ""}
+
+@ARTICLE{Shade93,
+	author  = "E. Shade and K.T. Narayana",
+	title   = "Real-time semantics for shared-variable concurrency",
+	journal = "Information and Computation",
+	year    = 1993,
+	volume  = 102,
+	number  = 1,
+	pages   = "56--82",
+	note    = ""}
+
+@TECHREPORT{Shafer91,
+	author      = "K. Shafer",
+	title       = "Modeling asynchronous distributed communication",
+	institution = "Ohio State University",
+	year        = 1991,
+	number      = "OSU-CISRC-7/91-TR19",
+	note        = ""}
+
+@INPROCEEDINGS{Shamsi83,
+	author       = "F.A. Shamsi",
+	title        = "{I}bn {S}ina's argument against atomicity",
+	booktitle    = "",
+	year         = 1983,
+	pages        = "479--494",
+	publisher    = "Basbakanlik Basimevi",
+	note         = ""}
+	%COMMENT "Unknown conference 1983, Ankara. Journal Toplanti Bidirileri Dizisi, No. 1."
+
+@INPROCEEDINGS{Simpson87,
+        author       = "H.R. Simpson",
+        title        = "Fully Asynchronous Communication",
+        booktitle    = "Mascot in Real-Time Systems",
+        year         = 1987,
+        series       = "Colloquium",
+        month        = "May",
+        organisation = "IEE",
+        note         = ""}
+
+@MISC{Simpson88,
+        author       = "H.R. Simpson",
+        title        = "Asynchronous Communication Systems",
+        howpublished = "European Patent",
+        year         = 1988,
+        note         = "Publication No. 0 292 287"}
+
+@ARTICLE{Simpson90,
+	author  = "H.R. Simpson",
+	title   = "Four-slot fully asynchronous communication mechanism",
+	journal = ieepte,
+	year    = 1990,
+	volume  = 137,
+	number  = 1,
+	pages   = "17--30",
+	month   = "January",
+	note    = ""}
+
+@ARTICLE{Simpson92,
+	author  = "H.R. Simpson",
+	title   = "Correctness analysis for class of asynchronous communication mechanisms",
+	journal = ieepte,
+	year    = 1992,
+	volume  = 139,
+	number  = 1,
+	pages   = "35--49",
+	month   = "January",
+	note    = ""}
+
+@ARTICLE{Simpson97a,
+	author  = "H.R. Simpson",
+	title   = "New algorithms for asynchronous communication",
+	journal = ieepte,
+	year    = 1997,
+	volume  = 144,
+	number  = 4,
+	pages   = "227--231",
+	month   = "July",
+	note    = ""}
+
+@ARTICLE{Simpson97b,
+	author  = "H.R. Simpson",
+	title   = "Role model analysis of an asynchronous communication mechanism",
+	journal = ieepte,
+	year    = 1997,
+	volume  = 144,
+	number  = 4,
+	pages   = "232--240",
+	month   = "July",
+	note    = ""}
+
+@ARTICLE{Simpson97c,
+	author  = "H.R. Simpson",
+	title   = "Multireader and multiwriter asynchronous communication mechanisms",
+	journal = ieepte,
+	year    = 1997,
+	volume  = 144,
+	number  = 4,
+	pages   = "241--243",
+	month   = "July",
+	note    = ""}
+
+@TECHREPORT{Singh86,
+	author= "A.K. Singh and J.H. Anderson and M.G. Gouda",
+	title= "The Elusive Atomic Register Revisited",
+	institute= uta,
+	number= "86.30",
+	year= 1986,
+	month= "December"}
+
+@INPROCEEDINGS{Singh87,
+	author= "A.K. Singh and J.H. Anderson and M.G. Gouda",
+	title= "The Elusive Atomic Register Revisited",
+	booktitle= podc,
+	pages= "206--221",
+	year= 1987,
+	month= "August",
+	number = "6th annual"}
+	%note = "2 reader polynomial, 1/1/N - 1/M/N and 1/M/1"
+
+@TECHREPORT{Singh89,
+	author      = "A.K. Singh and J.H. Anderson and M.G. Gouda",
+	title       = "The elusive atomic register (updated version)",
+	institution = "University of Texas at Austin",
+	year        = 1989,
+	number      = "TR-89-14",
+	month       = "May",
+	note        = ""}
+
+@INPROCEEDINGS{Singh90,
+	author       = "A.K. Singh",
+	title        = "An axiomatization of wait-freedom and low-atomicity",
+	booktitle    = "",
+	year         = 1990,
+	volume       = 468,
+	series       = lncs,
+	pages        = "154--163",
+	note         = ""}
+
+@ARTICLE{Singh91,
+	author  = "A.K. Singh",
+	title   = "Specification of concurrent objects using auxiliary variables",
+	journal = "Science of Computer Programming",
+	year    = 1991,
+	volume  = 16,
+	number  = 1,
+	pages   = "49--88",
+	note    = ""}
+
+@ARTICLE{Singh92,
+	author  = "A.K. Singh",
+	title   = "Towards an understanding of unbounded variables in asynchronous systems",
+	journal = ipl,
+	year    = 1992,
+	volume  = 42,
+	number  = 1,
+	pages   = "7--17",
+	note    = ""}
+
+@ARTICLE{Singh93,
+	author  = "A.K. Singh and M.G. Gouda",
+	title   = "{RANKERS} - a classification of synchronization problems",
+	journal = "Science of Computer Programming",
+	year    = 1993,
+	volume  = 21,
+	number  = 3,
+	pages   = "191--223",
+	note    = ""}
+
+@ARTICLE{Singh94,
+	author= "A.K. Singh and J.H. Anderson and M.G. Gouda",
+	title= "The Elusive Atomic Register",
+	journal= jacm,
+	Volume= 41,
+	number= 2,
+	year= 1994,
+	month= "March",
+	pages= "311--339",
+	note = ""}
+
+@ARTICLE{Singhal93,
+	author  = "M. Singhal",
+	title   = "A Taxonomy of distributed mutual exclusion",
+	journal = "Journal of Parallel and distributed computing",
+	year    = 1993,
+	volume  = 18,
+	number  = 1,
+	pages   = "94",
+	month   = "May",
+	note    = ""}
+
+@ARTICLE{Skudlarek94,
+	author  = "J.P. Skudlarek",
+	title   = "Remarks on a methodology for implementing highly concurrent data objects",
+	journal = "Sigplan Notices",
+	year    = 1994,
+	volume  = 29,
+	number  = 12,
+	pages   = "87--93",
+	note    = ""}
+
+@ARTICLE{Smith96,
+	author  = "E. Smith",
+	title   = "On the border of causality - contact and confusion",
+	journal = tcs,
+	year    = 1996,
+	volume  = 153,
+	number  = "1-2",
+	pages   = "245--270",
+	note    = ""}
+
+@ARTICLE{Sommen97,
+	author  = "F.W. Sommen and W.H.J. Feijen and A.J.M. Gasteren",
+	title   = "Peterson's mutual exclusion algorithm revisited",
+	journal = "Science of Computer Programming",
+	year    = 1997,
+	volume  = 29,
+	number  = 3,
+	pages   = "327",
+	note    = ""}
+
+@INPROCEEDINGS{Stankovic91,
+	author       = "J.A. Stankovic and K. Ramamritham and E.M. Nahum",
+	title        = "Predicatable interprocess communication for hard real-time systems",
+	booktitle    = "10th Workshop Distributed Computer Control Systems 1991: towards distributed real-time systems with predicatable timing properties",
+	year         = 1991,
+	editor       = "Kopetz H., Rodd M.G.",
+	pages        = "69--74",
+	month        = "September",
+	publisher    = "Pergamon",
+	note         = ""}
+
+@ARTICLE{Stark82,
+	author  = "E.W. Stark",
+	title   = "Semaphore primitives and starvation free mutual exclusion",
+	journal = jacm,
+	year    = 1982,
+	volume  = 29,
+	number  = 4,
+	pages   = "1049--1072",
+	note    = ""}
+
+@ARTICLE{Staunstrup89,
+	author  = "J. Staunstrup and J. Nievergelt",
+	title   = "The behavior of shared objects - concepts, pitfalls, and a new model",
+	journal = ipl,
+	year    = 1989,
+	volume  = 30,
+	number  = 3,
+	pages   = "145--151",
+	note    = ""}
+
+@TECHREPORT{Styer89,
+	author      = "E. Styer and G.L. Peterson",
+	title       = "Tight bounds for shared memory symmetric mutual exclusion problems",
+	institution = "Georgia Institute o Technology",
+	year        = 1989,
+	number      = "GIT-ICS 89/09",
+	note        = ""}
+
+@PHDTHESIS{Subramonian91,
+	author  = "R. Subramonian",
+	title   = "Asynchronous algorithms for shared memory parallel computers",
+	school  = "University of California, Davis",
+	year    = 1991,
+	note    = ""}
+
+@ARTICLE{Svensson94,
+	author  = "C. Svensson and J. Yuan",
+	title   = "A 3-level asynchronous protocol for a differential two-wire communication link",
+	journal = ieeejssc,
+	year    = 1994,
+	volume  = 29,
+	pages   = "1129--1132",
+	month   = "September",
+	note    = ""}
+
+@INPROCEEDINGS{Tromp89,
+	author= "J. Tromp",
+	title= "How to Construct an Atomic Variable (Extended Abstract)",
+	booktitle= woda,
+	volume = 392,
+	series= lncs,
+	year= 1989,
+	pages= "292--302",
+	note = ""}
+	%COMMENT "got, 1/1/1 - 1/1/N"
+
+@TECHREPORT{Tromp89a,
+	author      = "J.T. Tromp",
+	title       = "How to contruct an atomic variable",
+	institution = cwi,
+	year        = 1989,
+	number      = "CS-R8939",
+	note        = ""}
+
+@ARTICLE{Tromp,
+	author= "J. Tromp",
+	title= "How to Comstruct an Atomic Variable",
+	note= "Quoted - To Appear, reason for 4 slots claimed to be in here, but never published"}
+
+@ARTICLE{Tsitsiklis95,
+	author  = "J.N. Tsitsiklis and G.D. Stamoulis",
+	title   = "On the average communication complexity of asynchronous distributed algorithms",
+	journal = jacm,
+	year    = 1995,
+	volume  = 42,
+	number  = 2,
+	pages   = "392",
+	note    = ""}
+
+@ARTICLE{Upfal87,
+	author  = "E. Upfal and A. Wigderson",
+	title   = "How to share memory in a distributed system",
+	journal = jacm,
+	year    = 1987,
+	volume  = 34,
+	number  = 1,
+	pages   = "116--127",
+	note    = ""}
+
+@ARTICLE{Vidyasankar88,
+	author= "K. Vidyasankar",
+	title= "Converting Lamport's regular registers to atomic registers",
+	journal= ipl,
+	Volume= 28, 
+	number = 6,
+	year= 1988,
+	pages= "287--290",
+	note = ""}
+	%COMMENT "1/M/1 - 1/M/N"
+
+@ARTICLE{Vidyasankar89,
+	author= "K. Vidyasankar",
+	title= "An Elegant 1-writer multireader multivalued atomic register",
+	journal= ipl,
+	volume = 30,
+	number= 5,
+	pages= "221-223",
+	year= 1989}
+
+
+@ARTICLE{Vidyasankar90,
+	author= "K. Vidyasankar",
+	title= "Concurrent reading while writing revisted",
+	journal= dc,
+	volume= 4,
+	number= 2,
+	year= 1990,
+	pages= "81-85"}
+
+@ARTICLE{Vidyasankar91,
+	author= "K. Vidyasankar",
+	title= "A very simple construction of 1-writer multireader multivalued atomic variable",
+	journal= ipl,
+	volume= 37,
+	number= 6,
+	pages= "323-326",
+	year= 1991}
+
+@ARTICLE{Vidyasankar96,
+	author  = "K. Vidyasankar",
+	title   = "Weak Atomicity - A helpful notion in the construction of atomic shared variables",
+	journal = "Sahana-Academy Proceedings in Engineering Sciences",
+	year    = 1996,
+	volume  = 21,
+	number  = 2,
+	pages   = "245--259",
+	note    = ""}
+
+@TECHREPORT{Verhoeff89,
+  author = "Tom Verhoeff",
+  title  = "Characterizations of Delay-Insensitive Communication Protocols",
+  type   = csn,
+  number = "89/06",
+  institution= eut,
+  month  = may,
+  year   = 1989 }
+
+@TECHREPORT{Vitanyi86,
+	author      = "P.M.B. Vitanyi and B. Awerbuch",
+	title       = "Atomic Shared Register Access by Asynchronous Hardware",
+	institution = mit,
+	year        = 1986,
+	number      = "MIT/LCS/TM 314",
+	note        = ""}
+	%COMMENT "KCL Lib. FOL QA76 MIT"
+
+@TECHREPORT{Vitanyi86b,
+	author      = "P.M.B. Vitanyi and B. Awerbuch",
+	title       = "Atomic shared register access by asynchronous hardware: detailed abstract",
+	institution = cwi,
+	year        = 1986,
+	number      = "CS-R8628",
+	note        = ""}
+
+@INPROCEEDINGS{Vitanyi87,
+	author= "P.M.B. Vitanyi and B. Awerbuch",
+	title= "Atomic Shared Register Access by Asynchronous Hardware",
+	booktitle= ifcs,
+	year= 1987,
+	pages= "233--243",
+	note= "errata Ibid., 1987."}
+	%COMMENT " Multi-reader problem posed? 1/M/N - K/M/N. Unbounded variable size solution"
+
+@TECHREPORT{Walker89,
+	author      = "D.J. Walker",
+	title       = "Automated analysis of mutual exclusion algorithms using {CCS}",
+	institution = "University of Edinburgh",
+	year        = 1989,
+	type        = "LFCS report",
+	number      = "ECS-LFCS-89-91",
+	note        = ""}
+
+@ARTICLE{Wing92,
+	author  = "J.M. Wing and C. Gong",
+	title   = "Testing and verifying concurrent objects",
+	journal = "Journal of Parallel and Distributed Computing",
+	year    = 1993,
+	volume  = 17,
+	number  = "1-2",
+	pages   = "164--182",
+	note    = ""}
+
+@PHDTHESIS{Wu92,
+	author  = "M.M. Wu",
+	title   = "Asynchronous algorithms for shared memory",
+	school  = "University og Illinois at Urbana-Champaign",
+	year    = 1992,
+	note    = ""}
+
+@ARTICLE{Wu93,
+	author  = "M.M. Wu and M.C. Loui",
+	title   = "Modeling robust asynchronous communication protocols with finite state machines",
+	journal = ieeetc,
+	year    = 1993,
+	volume  = 41,
+	number  = 3,
+	pages   = "492--500",
+	note    = ""}
+
+@TECHREPORT{Xia95,
+	author      = "F. Xia and I.G. Clark",
+	title       = "{P}etri net models of a class of asynchronous communication mechanisms",
+	institution = "Department of Electronic and Electrical Engineering, King's College London",
+	year        = 1995}
+
+@INPROCEEDINGS{Xia97b,
+        author       = "F. Xia and I.G. Clark and A.C. Davies",
+        title        = "{P}etri-net based investigation of synchronisation-free interprocess communication in shared-memory real-time systems",
+        booktitle    = "Second UK Asynchronous Forum",
+        year         = 1997,
+        editor       = "Furber S.B., Yakovlev A.V.",
+        month        = "July",
+        organisation = "University of Newcastle upon Tyne, UK.",
+        note         = ""}
+
+@INPROCEEDINGS{Xia98,
+  author = "Fei Xia and Ian Clark",
+  title  = "Complementing role models with {Petri} nets in studying
+    asynchronous data communications",
+  booktitle="International Conference on Applications and Theory of {Petri}
+    nets",
+  pages  = "66--85",
+  year   = 1998 } 
+
+@INBOOK{Xia2000b,
+        author = "F. Xia and I. Clark",
+        title     = "Complementing role models with {P}etri nets in studying asynchronous data communications",
+        chapter   = "1",
+        pages     = "33--50",
+        publisher = "Kluwer Academic Publishers",
+        year      = 2000,
+        edition   = "Hardware Design and {P}etri Nets (Eds. Yakovlev A. Gomes L. Lavagno L.)",
+        month     = "March",
+        note = "ISBN 0-7923-7791-5" } 
+
+@ARTICLE{Yang95,
+	author  = "J.H. Yang and J.H. Anderson",
+	title   = "A fast, scalable mutual exclusion algorithm",
+	journal = dc,
+	year    = 1995,
+	volume  = 9,
+	number  = 1,
+	pages   = "51",
+	note    = ""}
+
+@ARTICLE{Zhang96,
+	author  = "X.D. Zhang and Y. Yan and R. Castaneda",
+	title   = "Evaluating and designing software mutual exclusion algorithms on shared memory multiprocessors",
+	journal = "IEEE Parallel and Distributed Technology",
+	year    = 1996,
+	volume  = 4,
+	number  = 1,
+	pages   = "25--42",
+	note    = ""}
+
+@COMMENT{ ==================================================================== }
+@COMMENT{                        End of atomic.bib                             }
+@COMMENT{ ==================================================================== }

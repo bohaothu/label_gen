@@ -1,0 +1,1892 @@
+% File: csrg.bib
+%
+% This bibliography contains a lot of papers!  Please feel free to
+% add more and then commit your changes.
+%
+% There are a few rules about adding new citations:
+% * All citations should include first names and page numbers.
+% * The key for a citation should be of the form:
+%   lastname:confxx
+%   where "lastname" is the last name of the first author,
+%   "conf" is the abbreviation of the conference or journal in which
+%   the paper appeared, and "xx" is the two-digit year of publication.s key would not be unique, add a letter to the end of the
+%   key to make it unique.  For example, you might have:
+%   long:ipccc01
+%   long:ipccc01a
+%   if there were two papers with "Long" as the first author in IPCCC 2001.
+% * Use strings corresponding to conference names.  The string should be
+%   of the form confxx, where "conf" is the standard conference abbreviation
+%   and xx is the year.  DO NOT USE sequence numbers here (ie, don't use
+%   osdi4 for the OSDI that occurred in 2000---we never remember which
+%   OSDI is which, but we typically know the year).  For each string you
+%   use, create an entry in the top of the bibliography for the string.
+%   This entry can include year-specific info (such as "10th Annual
+%   Conference on Foo").  You need only create a string if you expect
+%   more than one or two papers from the conference.
+% * Please keep the bibliography alphabetized by key.  There is a script
+%   (alphabetize.pl) in this directory that will do this.  Just run it as:
+%   alphabetize.pl < orig.bib > sorted.bib
+%   MAKE SURE THAT THE FOLLOWING LINE PRECEDES THE FIRST BIBLIOGRAPHY ENTRY!
+%   % ALPHABETIZE
+%
+% Version : $Id: csrg.bib,v 1.17 2002/03/09 23:27:03 ari Exp $
+
+@string{asplos92 =	"Proceedings of the 5th Interational Conference
+			 on Architectural Support for Programming Languages
+			 and Operating Systems ({ASPLOS})"}
+@string{asplos94 =	"Proceedings of the 6th Interational Conference
+			 on Architectural Support for Programming Languages
+			 and Operating Systems ({ASPLOS})"}
+@string{asplos96 =	"Proceedings of the 7th Interational Conference
+			 on Architectural Support for Programming Languages
+			 and Operating Systems ({ASPLOS})"}
+@string{asplos98 =	"Proceedings of the 8th Interational Conference
+			 on Architectural Support for Programming Languages
+			 and Operating Systems ({ASPLOS})"}
+@string{asplos00 =	"Proceedings of the 9th Interational Conference
+			 on Architectural Support for Programming Languages
+			 and Operating Systems ({ASPLOS})"}
+@string{cmg95 =		"Proceedings of the 21st International Conference
+			 for the Resource Management and Performance
+			 and Performance Evaluation of Enterprise Computing
+			 Systems ({CMG95})"}
+@string{cmg98 =		"Proceedings of the 24th International Conference
+			 for the Resource Management and Performance
+			 and Performance Evaluation of Enterprise Computing
+			 Systems ({CMG98})"}
+@string{cmg99 =		"Proceedings of the 25th International Conference
+			 for the Resource Management and Performance
+			 and Performance Evaluation of Enterprise Computing
+			 Systems ({CMG99})"}
+@string{cmg00 =		"Proceedings of the 26th International Conference
+			 for the Resource Management and Performance
+			 and Performance Evaluation of Enterprise Computing
+			 Systems ({CMG00})"}
+@string{computer =	"IEEE Computer"}
+@string{fast02 =	"Proceedings of the FAST 2002 Conference on File and
+			 Storage Technologies"}
+@string{freenix99 =	"Proceedings of the Freenix Track: 1999 USENIX
+			 Annual Technical Conference"}
+@string{freenix00 =	"Proceedings of the Freenix Track: 2000 USENIX
+			 Annual Technical Conference"}
+@string{freenix01 =	"Proceedings of the Freenix Track: 2001 USENIX
+			 Annual Technical Conference"}
+@string{hotos95	=	"Proceedings of the 5th IEEE Workshop on Hot Topics
+			 in Operating Systems ({HotOS-V})"}
+@string{hotos97	=	"Proceedings of the 6th IEEE Workshop on Hot Topics
+			 in Operating Systems ({HotOS-VI})"}
+@string{hotos99	=	"Proceedings of the 7th IEEE Workshop on Hot Topics
+			 in Operating Systems ({HotOS-VII})"}
+@string{hotos01	=	"Proceedings of the 8th IEEE Workshop on Hot Topics
+			 in Operating Systems ({HotOS-VIII})"}
+@string{ipccc00	=	"Proceedings of the 19th {IEEE} International
+			 Performance, Computing and Communications Conference
+			 ({IPCCC 2000})"}
+@string{ipccc01	=	"Proceedings of the 20th {IEEE} International
+			 Performance, Computing and Communications Conference
+			 ({IPCCC 2001})"}
+@string{mascots99 =	"Proceedings of the 7th International Symposium
+			 on Modeling, Analysis, and Simulation of Computer
+			 and Telecommunication Systems (MASCOTS '99)"}
+@string{mascots00 =	"Proceedings of the 8th International Symposium
+			 on Modeling, Analysis, and Simulation of Computer
+			 and Telecommunication Systems (MASCOTS '00)"}
+@string{mascots01 =	"Proceedings of the 9th International Symposium
+			 on Modeling, Analysis, and Simulation of Computer
+			 and Telecommunication Systems (MASCOTS '01)"}
+@string{micro =		"IEEE Micro"}
+@string{mss98 =		"Proceedings of the 6th Goddard Conference on
+			 Mass Storage Systems and Technologies / 15th IEEE
+			 Symposium on Mass Storage Systems"}
+@string{mss99 =		"Proceedings of the 16th {IEEE} Symposium on
+			 Mass Storage Systems and Technologies"},
+@string{mss00 =		"Proceedings of the 17th {IEEE} Symposium on
+			 Mass Storage Systems and Technologies"},
+@string{mss01 =		"Proceedings of the 18th {IEEE} Symposium on
+			 Mass Storage Systems and Technologies"},
+@string{osdi94 =	"Proceedings of the 1st Symposium on Operating Systems
+			 Design and Implementation ({OSDI})"}
+@string{osdi96 =	"Proceedings of the 2nd Symposium on Operating Systems
+			 Design and Implementation ({OSDI})"}
+@string{osdi99 =	"Proceedings of the 3rd Symposium on Operating Systems
+			 Design and Implementation ({OSDI})"}
+@string{osdi00 =	"Proceedings of the 4th Symposium on Operating Systems
+			 Design and Implementation ({OSDI})"}
+@string{pdis96 =	"Proceedings of the 1996 International Conference
+			 on Parallel and Distributed Information Systems (PDIS '96)"}
+@string{pdpta99 =	"Proceedings of the 1999 International Conference
+			 on Parallel and Distributed Processing Techniques
+			 and Applications (PDPTA '99)"}
+@string{pdpta00 =	"Proceedings of the 2000 International Conference
+			 on Parallel and Distributed Processing Techniques
+			 and Applications (PDPTA '00)"}
+@string{ppl =		"Parallel Processing Letters"}
+@string{sc91 =		"Proceedings of Supercomputing '91"}
+@string{sc92 =		"Proceedings of Supercomputing '92"}
+@string{sc93 =		"Proceedings of Supercomputing '93"}
+@string{sc94 =		"Proceedings of Supercomputing '94"}
+@string{sc95 =		"Proceedings of Supercomputing '95"}
+@string{sc96 =		"Proceedings of Supercomputing '96"}
+@string{sigmetrics94 =	"Proceedings of the 1994 {SIGMETRICS} Conference"}
+@string{sigmetrics95 =	"Proceedings of the 1995 {SIGMETRICS} Conference"}
+@string{sigmetrics96 =	"Proceedings of the 1996 {SIGMETRICS} Conference"}
+@string{sigmetrics97 =	"Proceedings of the 1997 {SIGMETRICS} Conference"}
+@string{sigmetrics98 =	"Proceedings of the 1998 {SIGMETRICS} Conference"}
+@string{sigmetrics99 =	"Proceedings of the 1999 {SIGMETRICS} Conference"}
+@string{sigmetrics00 =	"Proceedings of the 2000 {SIGMETRICS} Conference"}
+@string{sigmetrics01 =	"Proceedings of the 2001 {SIGMETRICS} Conference"}
+@string{sigmod00 =	"Proceedings of the 2000 ACM SIGMOD International
+			 Conference on Management of Data"}
+@string{sosp89	=	"Proceedings of the 12th {ACM} Symposium on Operating
+			 Systems Principles ({SOSP '89})"}
+@string{sosp91	=	"Proceedings of the 13th {ACM} Symposium on Operating
+			 Systems Principles ({SOSP '91})"}
+@string{sosp93	=	"Proceedings of the 14th {ACM} Symposium on Operating
+			 Systems Principles ({SOSP '93})"}
+@string{sosp95	=	"Proceedings of the 15th {ACM} Symposium on Operating
+			 Systems Principles ({SOSP '95})"}
+@string{sosp97	=	"Proceedings of the 16th {ACM} Symposium on Operating
+			 Systems Principles ({SOSP '97})"}
+@string{sosp99	=	"Proceedings of the 17th {ACM} Symposium on Operating
+			 Systems Principles ({SOSP '99})"}
+@string{sosp01	=	"Proceedings of the 18th {ACM} Symposium on Operating
+			 Systems Principles ({SOSP '01})"}
+@string{tcl97 =		"Proceedings of the 5th Annual Tcl/Tk Conference"}
+@string{tcl98 =		"Proceedings of the 6th Annual Tcl/Tk Conference"}
+@string{transnet =	"IEEE/ACM Transactions on Networking"}
+@string{usenix88w =	"Proceedings of the Winter 1988 {USENIX} Technical
+			 Conference"}
+@string{usenix90w =	"Proceedings of the Winter 1990 {USENIX} Technical
+			 Conference"}
+@string{usenix92w =	"Proceedings of the Winter 1992 {USENIX} Technical
+			 Conference"}
+@string{usenix92s =	"Proceedings of the Summer 1992 {USENIX} Technical
+			 Conference"}
+@string{usenix93w =	"Proceedings of the Winter 1993 {USENIX} Technical
+			 Conference"}
+@string{usenix93s =	"Proceedings of the Summer 1993 {USENIX} Technical
+			 Conference"}
+@string{usenix94w =	"Proceedings of the Winter 1994 {USENIX} Technical
+			 Conference"}
+@string{usenix94s =	"Proceedings of the Summer 1994 {USENIX} Technical
+			 Conference"}
+@string{usenix95w =	"Proceedings of the Winter 1995 {USENIX} Technical
+			 Conference"}
+@string{usenix96 =	"Proceedings of the 1996 {USENIX} Annual Technical
+			 Conference"}
+@string{usenix97 =	"Proceedings of the 1997 {USENIX} Annual Technical
+			 Conference"}
+@string{usenix98 =	"Proceedings of the 1998 {USENIX} Annual Technical
+			 Conference"}
+@string{usenix99 =	"Proceedings of the 1999 {USENIX} Annual Technical
+			 Conference"}
+@string{usenix00 =	"Proceedings of the 2000 {USENIX} Annual Technical
+			 Conference"}
+@string{usenix01 =	"Proceedings of the 2001 {USENIX} Annual Technical
+			 Conference"}
+@string{vldb98 =	"Proceedings of the 1998 Conference on Very Large
+			 Databases ({VLDB})"}
+@string{vldb98 =	"Proceedings of the 1999 Conference on Very Large
+			 Databases ({VLDB})"}
+@string{vldb00 =	"Proceedings of the 2000 Conference on Very Large
+			 Databases ({VLDB})"}
+@string{vldb01 =	"Proceedings of the 2001 Conference on Very Large
+			 Databases ({VLDB})"}
+
+% ALPHABETIZE
+
+@InProceedings{akala:tcl98,
+  author = 	 {Kennedy Akala and Ethan Miller and Jeff Hollingsworth},
+  title = 	 {Using Content-Derived Names for Package Management in {Tcl}},
+  booktitle = 	 tcl98,
+  organization = {USENIX},
+  address =	 {San Diego, CA},
+  month =	 sep,
+  year =	 1998,
+  pages =	 {171--179},
+}
+
+@InProceedings{almeida:pdis96,
+  author = "Virg'ilio Almeida and Azer Bestavros and Mark Crovella and Adriana de Oliveira",
+  title = "Characterizing reference locality in the {WWW}",
+  booktitle = 	 pdis96,
+  pages =	 {},
+  month =	 dec,
+  year =	 1996
+}
+
+@InProceedings{amer:ipccc01,
+  author = 	 {Ahmed Amer and Darrell~D.~E. Long},
+  title = 	 {Noah: Low-Cost File Access Prediction Through Pairs},
+  booktitle = 	 ipccc01,
+  organization = {IEEE},
+  month = 	 apr,
+  year = 	 2001,
+  pages = 	 {},
+}
+
+@InProceedings{amer:mascots01,
+  author =       {Ahmed Amer and Darrell D.~E.~Long},
+  title =        {Aggregating Caches: A Mechanism for Implicit File Prefetching},
+  booktitle =    mascots01,
+  pages =        {293-301},
+  year =         {2001},   
+  address =      {Cincinnati, OH},
+  month =        aug,
+  organization = {IEEE},
+  annote =       {The first full aggregating cache paper accepted for publication.}
+}
+
+@InProceedings{amir:hotos95,
+  author = "E. Amir and H. Balakrishnan and R. Katz",
+  title = "Efficient {TCP} over Networks With Wireless Links",
+  booktitle = hotos95,
+  year = 1995,
+  month = may
+}
+
+@InProceedings{anderson:fast02,
+  author =	 {Eric Anderson and Michael Hobbs and Kimberly Keeton and Susan Spence and Mustafa Uysal and Alistair Veitch},
+  title = 	 {Hippodrome: running circles around storage administration},
+  booktitle = 	 fast02,
+  month =	 jan,
+  year =	 2002,
+  address =	 {Monterey, CA},
+}
+
+@InProceedings{anderson:fast02a,
+  author =	 {Eric Anderson and Ram Swaminathan and Alistair Veitch and Guillermo~A. Alvarez and John Wilkes},
+  title = 	 {Selecting {RAID} levels for disk arrays},
+  booktitle = 	 fast02,
+  month =	 jan,
+  year =	 2002,
+  address =	 {Monterey, CA},
+}
+
+@InProceedings{ anderson:osdi00,
+  author = "D. Anderson and J. Chase and A. Vahdat",
+  title = "Interposed Request Routing for Scalable Network Storage",
+  month = oct,
+  year = "2000" 
+}
+=======
+@Article{anderson:tocs96,
+  author = 	 {Thomas Anderson and Michael Dahlin and Jeanna Neefe and
+		  David Patterson and Drew Roselli and Randolph~Y. Wang},
+  title = 	 {Serverless Network File Systems},
+  journal = 	 tocs,
+  volume =	 14,
+  number =	 1,
+  month =	 feb,
+  year = 	 1996,
+  pages =	 {41-79}
+}
+
+@InProceedings{ arlitt:wisp99,
+  author = "Martin Arlitt and Ludmila Cherkasova and John Dilley and Richard Friedrich",
+  title = "Evaluating Content ManagementTechniques for Web Proxy Caches",
+  booktitle = "Proceedings of the 2nd Workshop on Internet Server Performance WISP'99",
+  address = "Atlanta, Georgia",
+  month = may,
+  year = "1999"
+}
+ 
+@InProceedings{baker:asplos92,
+  author = 	 {Mary Baker and Satoshi Asami and Etienne Deprit and
+		  John Ousterhout and Margo Seltzer},
+  title = 	 {Non-volatile Memory for Fast, Reliable File Systems},
+  booktitle = 	 asplos92,
+  organization = {ACM},
+  pages =	 {10-22},
+  month =	 oct,
+  year =	 1992,
+}
+
+@InProceedings{baker:sosp91,
+  author = 	{M. Baker and J. Hartman and M. Kupfer and K. Shirriff and J. Ousterhout},
+  title =	{Measurements of a Distributed File System},
+  booktitle =	sosp91,
+  pages = 	{198-212},
+  month = 	oct,
+  year = 	1991,
+}
+
+@InProceedings{bakre:icdcs95,
+  author = "Ajay Bakre and B. R. Badrinath",
+  title = "{I-{TCP}}: Indirect {TCP} for Mobile Hosts",
+  booktitle = "15th International Conference on Distributed Computing Systems",
+  month = may,
+  year = "1995"
+}
+
+@Article{bellare:lncs96,
+  author = 	 {M. Bellare and R. Canetti and H. Krawczyk},
+  title = 	 {Keying Hash Functions for Message Authentication},
+  journal = 	 {Lecture Notes in Computer Science},
+  volume =	 1109,
+  year = 	 1996,
+  pages =	 {1--15},
+}
+
+@InProceedings{blackwell:usenix95,
+  author = 	 {Trevor Blackwell and Jeffrey Harris and and Margo Seltzer},
+  title = 	 {Heuristic Cleaning Algorithms in Log-Structured File
+		  Systems},
+  booktitle = 	 usenix95w,
+  organization = {USENIX},
+  month =	 jan,
+  year =	 1995,
+  pages =	 {277-288},
+}
+
+@InProceedings{blaze:security93,
+  author = 	 {Matt Blaze},
+  title = 	 {A Cryptographic File System for {Unix}},
+  booktitle = 	 {Proceedings of the First ACM Conference on Computer and
+		  Communication Security},
+  month =	 nov,
+  year =	 1993,
+  pages =	 {9--15},
+}
+
+@InProceedings{blaze:usenix94s,
+  author = 	 {Matt Blaze},
+  title = 	 {Key Management in an Encrypting File System},
+  booktitle = 	 usenix94s,
+  month =	 jun,
+  year =	 1994,
+  pages =	 {27--34},
+}
+
+@InProceedings{blaze:wwos93,
+  author = 	 {Matt Blaze},
+  title = 	 {Transparent Mistrust: {OS} Support for
+		  Cryptography-in-the-Large},
+  booktitle = 	 {Proceedings of the Fourth Workshop on Workstation
+		  Operating Systems},
+  year =	 1993,
+  pages =	 {98--102},
+}
+
+@Article{boeve:ieeemagnetics99,
+  author	= "H. Boeve and C. Bruynseraede and J. Das and K. Dessein and
+		   G. Borghs and J. De Boeck and R. Sousa and L. Melo and
+		   P. Freitas",
+  title		= "Technology assessment for the implementation of
+		   magnetoresistive elements with semiconductor components
+		   in magnetic random access memory (MRAM) architectures",
+  journal	= "IEEE Transactions on Magnetics",
+  volume	= 35,
+  number	= 5,
+  month		= sep,
+  year		= 1999,
+  pages		= "2820-2825",
+}
+
+
+@InProceedings{breslau:iwcw98,
+  author = "L. Breslau and P. Cao and L. Fan and G. Phillips and S. Shenker",
+  title = "{On the Implications of Zipf's Law for Web Caching}",
+  booktitle = "{3rd International WWW Caching Workshop}",
+  year = "1998",
+  month = jun,
+  url = "citeseer.nj.nec.com/40886.html"
+}
+
+@InProceedings{burns:hotos01,
+  author = 	 {Randal Burns and Roger Rees and Zachary Peterson
+		  and Darrell~D.~E. Long},
+  title = 	 {Allocation and Data Placement Using Virtual Contiguity},
+  booktitle = 	 hotos01,
+  year =	 2001,
+  pages =	 {submitted},
+}
+
+@InProceedings{ busari:mascots01,
+  author = "M. Busari and Carey Williamson",
+  title = "Simulation Evaluation of Heterogeneous Web Proxy Caching Hierarchies",
+  booktitle =    mascots01,
+  pages =        {379-388},
+  year =         {2001},
+  address =      {Cincinnati, OH},
+  month =        aug,
+  organization = {IEEE},
+}
+  
+@InProceedings{butler:cmg00,
+  author = 	 {Lee Butler and Travis Atkison and Ethan Miller},
+  title = 	 {Comparing CPU Performance Between and Within
+		  Processor Families},
+  booktitle = 	 cmg00,
+  month =	 dec,
+  year =	 2000,
+}
+
+@Article{carley:appliedphysics00,
+  author = 	 {L. Carley and J. Bain and G. Fedder and D. Greve
+		  and D. Guillou and M. Lu and T. Mukherjee and S. Santhanam
+		  and L. Abelmann and S. Min},
+  title = 	 {Single-chip computers with microelectromechanical
+		  systems-based magnetic memory},
+  journal = 	 {Journal of Applied Physics},
+  volume =	 87,
+  number =	 9,
+  month =	 may,
+  year = 	 2000,
+  pages =	 {6680-6685}
+}
+
+
+
+@Article{carley:cacm00,
+  author =	"L. R. Carley and Gregory Ganger and David Nagle",
+  title =	"Designing Computer Systems with {MEMS}-based Storage",
+  journal =	cacm,
+  month =	nov,
+  year =	2000,
+  volume =	43,
+  number =	11,
+}
+
+
+@InProceedings{cattaneo:freenix01,
+  author = 	 {Giuseppe Cattaneo and Luigi Catuogno and Aniello Del Sorbo
+		  and Pino Persiano},
+  title = 	 {The Design and Implementation of a Transparent
+		  Cryptographic File System for {UNIX}},
+  booktitle = 	 freenix01,
+  address =	 {Boston, MA},
+  month =	 jun,
+  year =	 2001,
+  pages =	 {199--212},
+}
+
+@InProceedings{ chankhunthod:usenix96,
+  author = "Anawat Chankhunthod and Peter Danzig and Chuck Neerdaels and Michael F. Schwartz and Kurt J. Worrell",
+  title = "A Hierarchical {I}nternet Object Cache",
+  booktitle = usenix96,
+  address = "San Diego, CA",
+  year = "1996",
+  url = "citeseer.nj.nec.com/article/chankhunthod95hierarchical.html"
+}
+
+@Article{chen:acm94,
+  author= {Peter~M. Chen and Edward~K. Lee and Garth~A. Gibson and Randy~H. Katz and David~A. Patterson},
+  title = {RAID: High-Performance, Reliable Secondary Storage},
+  journal = {ACM Computing Surveys},
+  month={June},
+  year = {1994},
+  volume={26},
+  number={2}
+}
+
+@InProceedings{chen:asplos96,
+  author = 	 {Peter~M. Chen and Wee Teck Ng and Subhachandra Chandra and
+		  Christopher Aycock and Gurushankar Rajamani and
+		  David Lowell},
+  title = 	 {The {Rio} File Cache: Surviving Operating System Crashes},
+  booktitle = 	 asplos96,
+  month =	 oct,
+  year =	 1996,
+  pages =	 {74--83},
+}
+
+@InProceedings{chen:ipps93,
+ author	= "Peter~M. Chen and Edward~K. Lee and Ann~L. Drapeau and
+	   Ken Lutz and Ethan~L. Miller and Srinivasan Seshan and
+	   Ken Shirriff and David~A. Patterson and Randy~H. Katz",
+ title	= "{Performance and Design Evaluation of the RAID-II Storage Server}",
+ booktitle = "International Parallel Processing Symposium: Workshop on I/O
+	      in Parallel Computer Systems",
+ year	= 1993,
+ month	= apr,
+}
+
+@Article{chen:jdpd94,
+ author	= "Peter M. Chen and Edward K. Lee and Ann L. Drapeau and
+	   Ken Lutz and Ethan L. Miller and Srinivasan Seshan and
+	   Ken Shirriff and David A. Patterson and Randy H. Katz",
+ title	= "{Performance and Design Evaluation of the RAID-II Storage Server}",
+ journal = "Journal of Distributed and Parallel Databases",
+ year	= 1994,
+ month	= jul,
+ volume = 2,
+ number = 3,
+ pages	= {243--260},
+}
+
+@MastersThesis{chen:msthesis94,
+  author = 	 {Kerhong Chen},
+  title = 	 {Write Caching in Distributed File Systems},
+  school = 	 {University of Saskatchewan},
+  month =	 jun,
+  year = 	 1994,
+  type =	 {M.Sc. thesis}
+}
+
+@InProceedings{chou:sosp01,
+  author = 	 {Andy Chou and Junfeng Yang and Benjamin Chelf and
+		  Seth Hallem and Dawson Engler},
+  title = 	 {An Empirical Study of Operating System Errors},
+  booktitle = 	 sosp01,
+  address =	 {Lake Louise, Alberta, Canada},
+  month =	 oct,
+  year =	 2001,
+  pages =	 {73--88}
+}
+
+@InProceedings{chutani:usenix92,
+  author = 	 {Sailesh Chutani and Owen~T. Anderson and Michael~L. Kazar and
+		  Bruce~W. Leverett and W.~Anthony Mason and
+		  Robert~N. Sidebotham},
+  title = 	 {The {Episode} File System},
+  booktitle = 	 usenix92w,
+  month =	 jan,
+  year =	 1992,
+  pages =	 {43--60},
+}
+
+
+@Misc{cieslak:wccp00,
+  author = "M. Cieslak and D. Forster and G. Tiwana and R. Wilson",
+  title = "{{Web Cache Coordination Protocol (WCCP) V2.0, Internet-Draft , draft-wilson-wrec-wccp-v2-00.txt}}",
+  month = jul,
+  year = 2000
+}
+
+@Article{comer:computingsurveys79,
+  author = 	 {Douglas Comer},
+  title = 	 {The Ubiquitous {B-tree}},
+  journal = 	 {Computing Surveys},
+  month =	 jun,
+  year = 	 1979,
+  volume =	 11,
+  number =	 2,
+  pages =	 {121--137},
+}
+
+@InProceedings{cost:atal97,
+  author = 	 {R.~Scott Cost and Jeegar Lakhani and Ian Soboroff and
+		  Tim Finin and Ethan Miller and Charles Nicholas},
+  title = 	 {{TKQML:} A Scripting Tool for Building Agents},
+  booktitle = 	 {Proceedings of the 1997 Conference on Agent Theories
+		  and Agent Languages (ATAL97)},
+  organization = {IEEE},
+  address =	 {Newport, RI},
+  month =	 jul,
+  year =	 1997,
+  pages =	 {339--343},
+}
+
+<<<<<<< csrg.bib
+@PhdThesis(daeman:phdthesis95,
+  author =	"Joan Daeman",
+  title =	"Cipher and Hash Function Design",
+  school =	"Katholieke Universiteit Leuven",
+  month =	mar,
+  year =	1995,
+)
+>>>>>>> 1.14
+
+@InProceedings{daemen:smartcard98,
+  author = 	 {Joan Daemen and Vincent Rijmen},
+  title = 	 {The block cipher {Rijndael}},
+  booktitle = 	 {Proceedings of the Third Smart Card Research and
+		  Advanced Applications Conference},
+  year =	 1998,
+}
+
+@InProceedings{dahlin:osdi94,
+  author = 	 {Michael Dahlin and Randy Wang and Tom Anderson
+		  and David Patterson},
+  title = 	 {Cooperative Caching: Using Remote Client Memory to
+		  Improve File System Performance},
+  booktitle = 	 osdi94,
+  month =	 nov,
+  year =	 1994,
+  pages =	 {267-280}
+}
+
+
+@misc{dave:electrodesign00,
+  author = 	 {Dave Bursky},
+  howpublished = 	 {Electronic Design},
+  month = 	 {March},
+  note = 	 {http://www.planetee.com/planetee/servlet/DisplayDocument?ArticleID=7422},
+  title = 	 {Serial EEPROMs Answer Designers' Needs For More Poing Storage},
+  year = 	 {2000}
+}
+
+@article{ diot:network00,
+  author = "C. Diot and B. Levine and J. Lyles and H. Kassem and D. Balensiefen",
+  title = "Deployment issues for the {IP} multicast service and architecture",
+  journal = "IEEE Network",
+  volume = "14",
+  pages = "10-20",
+  year = "2000",
+  url = "citeseer.nj.nec.com/diot00deployment.html"
+}
+
+@Article{dobbertin:lncs96,
+  author = 	 {H.~Dobbertin},
+  title = 	 {Cryptanalysis of {MD4}},
+  journal = 	 {Lecture Notes in Computer Science},
+  year = 	 1996,
+  volume =	 1039,
+  note =	 {Fast Software Encryption Workshop},
+  pages =	 {53--69},
+}
+
+@InProceedings{douglis:osdi94,
+  author = 	 {Fred Douglis and Frans Kaashoek and Kai Li and
+		  Ram\'{o}n C\'{a}ceres and Brian Marsh and Joshua A. Tauber},
+  title = 	 {Storage Alternatives for Mobile Computers},
+  booktitle = 	 osdi94,
+  address =	 {Monterey, CA},
+  month =	 nov,
+  year =	 1994,
+  pages =	 {25--37},
+}
+
+@InProceedings{durlam:sscc00,
+  author	= "M. Durlam and P. Naji and M. DeHerrera and S. Tehrani
+		   and G. Kerszykowski and K. Kyler",
+  title		= "Nonvolatile RAM based on magnetic tunnel junction elements",
+  booktitle	= "IEEE International Solid-State Circuits Conference",
+  month		= feb,
+  year		= 2000,
+  pages		= "130-131",
+}
+
+
+@InProceedings{ebert:gi97,
+  author = 	 {David Ebert and Chris Shaw and Amen Zwa and Ethan Miller
+		  and D.~A.~Roberts},
+  title = 	 {Interactive Volume Visualization for Document
+		  Corpus Management},
+  booktitle = 	 {Proceedings of Graphics Interface},
+  address =	 {Kelowna, BC, Canada},
+  organization = {Canadian Human-Computer Communications Society},
+  month =	 may,
+  year =	 1997,
+  pages =	 {121--128}
+}
+
+@Article{ebert:ieeecga97,
+  author = 	 {David Ebert and Amen Zwa and Ethan Miller and
+		  Chris D. Shaw and D.~Aaron Roberts},
+  title = 	 {Two-handed Volumetric Document Corpus Management},
+  journal = 	 {IEEE Computer Graphics and Applications},
+  month =	 jul,
+  year = 	 1997,
+  volume =	 17,
+  number =	 4,
+  pages =	 {60--62},
+}
+
+@InProceedings{english:usenix92,
+  author = 	 {Robert~M. English and Alexander~A. Stepanov},
+  title = 	 {{Loge:} a self-organizing disk controller},
+  booktitle = 	 usenix92w,
+  month =	 jan,
+  year =	 1992,
+  pages =	 {237-252},
+}
+
+@InProceedings{fan:photonics98,
+  author = 	 {J.~Y.~Fan and X.~Zhao and J.~P.~Zhang and F.~S.~Choa and
+		  Y.~Chai and J.~H.~Chen and E.~Miller and H.~Motteler and
+		  P.-L.~Liu and T.~Tanbun-Ek and P.~Wisk and W.~T.~Tsang and
+		  G.~Zydzik and C.~A.~Burrus},
+  title = 	 {Wavelength-division-multiplexed ({WDM}) data block
+		  switching for parallel computing and interconnect},
+  booktitle = 	 {IEEE International Conference on Applications of
+		  Photonic Technology},
+  address =	 {Ottawa, Canada},
+  month =	 jul,
+  year =	 1998,
+  pages =	 {634--638},
+}
+
+@article{ fan:transnet00,
+  author = "Li Fan and Pei Cao and Jussara Almeida and Andrei Z. Broder",
+  title = "Summary {C}ache: {A} scalable wide-area web cache sharing protocol",
+  journal = transnet,
+  volume = "8",
+  number = "3",
+  pages = "281-293",
+  year = "2000",
+  url = "citeseer.nj.nec.com/article/fan98summary.html"
+}
+
+
+@TECHREPORT{fips180-1,
+  institution =  {National Institute of Standards and Technology},
+  title =	 {Secure Hash Standard},
+  type =	 {FIPS},
+  number =	 {180-1},
+  month =	 apr,
+  year =	 1995
+}
+
+@InProceedings{forney:fast02,
+  author = 	 {Brian~C. Forney and Andrea~C. Arpaci-Dusseau and Remzi~H. Arpaci-Dusseau},
+  title = 	 {Storage--Aware Caching: Revisiting Caching for Heterogeneous Storage Systems},
+  booktitle = 	 fast02,
+  month =	 jan,
+  year =	 2002,
+  address =	 {Monterey, CA},
+}
+
+@InProceedings{ fox:sosp97,
+    author = "Armando Fox and Steven D. Gribble and Yatin Chawathe and Eric A. Brewer and Paul Gauthier",
+    title = "Cluster-Based Scalable Network Services",
+    booktitle = sosp97,
+    pages = "78-91",
+    month = oct,
+    year = "1997"
+}
+
+@InProceedings{freeman:mascots99,
+  author = 	 {William Freeman and Ethan Miller},
+  title = 	 {An Experimental Analysis of Cryptographic Overhead in
+		  Performance-Critical Systems},
+  booktitle = 	 mascots99,
+  organization = {IEEE},
+  address =	 {College Park, MD},
+  year =	 1999,
+  month =	 oct,
+  pages =	 {348--357},
+}
+
+@InProceedings{freeman:mss00,
+  author = 	 {William Freeman and Ethan Miller},
+  title = 	 {Design for a Decentralized Security System for
+		  Network-Attached Storage},
+  booktitle = 	 mss00,
+  address = 	 {College Park, MD},
+  month =	 mar,
+  year =	 2000,
+  pages =	 {361--373},
+}
+
+@InProceedings{fu:osdi00,
+  author = 	 {Kevin Fu and M. Frans Kaashoek and David Mazi\`{e}res},
+  title = 	 {Fast and Secure Distributed Read-Only File System},
+  booktitle = 	 osdi00,
+  address =	 {San Diego, CA},
+  month =	 oct,
+  year =	 2000,
+  pages =	 {181--196},
+}
+
+@unpublished{gaetano,
+  author = 	 {Gaetano Palumbo},
+  note = 	 {http://graymalkin.dees.unict.it/courses/elesd/memorie.pdf},
+  title = 	 {Semiconductor Memories}
+}
+
+@InProceedings{ganger:cmg95,
+  author =	"Gregory R. Ganger",
+  title =	"Generating Representative Synthetic Traces: An Unsolved
+		 Problem",
+  booktitle =	cmg95,
+  month =	dec,
+  year =	1995,
+  pages =	"1263-1269",
+}
+
+@TechReport{ganger:disksim99,
+  author =	"Gregory~R. Ganger and Bruce~L. Worthington and Yale~N. Patt",
+  title =	"The {DiskSim} Simulation Environment Version 2.0 Reference
+		 Manual",
+  institution =	"Carnegie Mellon University / University of Michigan",
+  month = 	dec,
+  year =	1999,
+}
+
+
+@InProceedings{ganger:osdi94,
+  author = 	 {Gregory~R. Ganger and Yale~N. Patt},
+  title = 	 {Metadata Update Performance in File Systems},
+  booktitle = 	 osdi94,
+  month =	 nov,
+  year =	 1994,
+  pages =	 {49--60},
+}
+
+
+@InProceedings{ganger:usenix97,
+  author = 	 {Gregory~R. Ganger and M.~Frans Kaashoek},
+  title = 	 {Embedded Inodes and Explicit Groupings: Exploiting
+		  Disk Bandwidth for Small Files},
+  booktitle = 	 usenix97,
+  month =	 jan,
+  year =	 1997,
+  pages =	 {1--17},
+}
+
+@Article{garciamolina:tkde92,
+  author = 	 {Hector Garcia-Molina and Kenneth Salem},
+  title = 	 {Main Memory Database Systems: An Overview},
+  journal = 	 tkde,
+  year = 	 1992,
+  volume =	 4,
+  number =	 6,
+  pages =	 {509--516}
+}
+
+@InProceedings{gibson:asplos98,
+  author = 	 {Garth~A. Gibson and David~F. Nagle and Khalil Amiri and
+		  Jeff Butler and Fay~W. Chang and Howard Gobioff and
+		  Charles Hardin and Erik Riedel and David Rochberg and
+		  Jim Zelenka},
+  title = 	 {A Cost-Effective, High-Bandwidth Storage Architecture},
+  booktitle = 	 asplos98,
+  address =	 {San Jose, CA},
+  month =	 oct,
+  year =	 1998,
+  pages =	 {92--103},
+}
+
+@InProceedings{gibson:cmg98,
+  author = 	 {Timothy Gibson and Ethan~L. Miller and Darrell~D.~E. Long},
+  title = 	 {Long-term File Activity and Inter-reference Patterns},
+  booktitle = 	 cmg98,
+  address =	 {Anaheim, CA},
+  month =	 dec,
+  year =	 1998,
+  pages =	 {976--987},
+}
+
+@InProceedings{gibson:cmg99,
+  author = 	 {Timothy Gibson and Ethan Miller},
+  title = 	 {An Improved Long-Term File Usage Prediction Algorithm},
+  booktitle = 	 cmg99,
+  address =	 {Reno, NV},
+  month =	 dec,
+  year =	 1999,
+  pages =	 {639--648},
+}
+
+@InProceedings{gibson:mss98,
+  author = 	 {Timothy~J. Gibson and Ethan~L. Miller},
+  title = 	 {Long-Term File Activity Patterns in a {UNIX}
+		  Workstation Environment},
+  booktitle = 	 mss98,
+  address =	 {College Park, MD},
+  month =	 mar,
+  year =	 1998,
+  pages =	 {355--372}
+}
+
+
+@TechReport(gobioff:cmu-97-185,
+	author = "Howard Gobioff and Garth Gibson and Doug Tygar",
+	title =  "Security for Network Attached Storage Devices",
+	institution =  "Carniege Mellon",
+	year =  1997,
+	month = oct,
+	number = "TR CMU-CS-97-185",
+)
+
+@PhDThesis{gobioff:phdthesis99,
+  author = 	 {Howard Gobioff},
+  title = 	 {Security for a High Performance Commodity Storage Subsystem},
+  school = 	 {Carnegie Mellon University},
+  month =	 jul,
+  year = 	 1999,
+  note =	 {Also available as Technical Report CMU-CS-99-160.},
+}
+
+@InProceedings{gopal:osdi99,
+  author = 	 {Burra Gopal and Udi Manber},
+  title = 	 {Integrating Content-Based Access Mechanisms with
+		  Hierarchical File Systems},
+  booktitle = 	 osdi99,
+  month =	 feb,
+  year = 	 1999,
+  pages =	 {265--278},
+}
+
+
+@Misc{goulde:inktomi99,
+  author = "M. Goulde",
+  title = "{{Network Caching Guide: Optimizing Web Content Delivery, Inktomi Corporation Whitepaper, http://www.inktomi.com}}",
+  year = "1999",
+  month = mar,
+  url = "http://www.inktomi.com"
+}
+
+
+@InProceedings{gribble:sigmetrics98,
+  author =	"Steven Gribble and Gurmeet Singh Manku and Eric Brewer
+		 and Timothy~J. Gibson and Ethan~L. Miller",
+  title =	"Self-Similarity in File Systems: Measurement and
+		 Applications",
+  booktitle =	sigmetrics98,
+  address =	{Madison, WI},
+  month =	jun,
+  year =	1998,
+  pages =	{141--150},
+}
+
+@InProceedings{griffin:osdi00,
+  author = 	 {John~L. Griffin and Steven~W. Schlosser and
+		  Gregory~R. Ganger and David~F. Nagle},
+  title = 	 {Operating System Management of {MEMS}-based Storage Devices},
+  booktitle = 	 osdi00,
+  month =	 oct,
+  year = 	 2000,
+  pages =	 {227--242}
+}
+
+@InProceedings{griffin:sigmetrics00,
+  author =	"John~L. Griffin and Steven~W. Schlosser and
+		 Gregory~R. Ganger and David~F. Nagle",
+  title =	"Modeling and Performance of {MEMS}-based Storage Devices",
+  booktitle =	sigmetrics00,
+  month =	jun,
+  year =	2000,
+  pages =	"56-65",
+}
+
+@Article{haber:jcrypt91,
+    author = "Stuart Haber and W.~Scott Stornetta",
+    title = "How to time-stamp a digital document",
+    journal =	"Journal of Cryptology: the journal of the
+		 International Association for Cryptologic Research",
+    volume = "3",
+    number = "2",
+    pages = "99--111",
+    year = "1991",
+}
+
+@InProceedings{hagmann:sosp87,
+  author = 	 {R. Hagmann},
+  title = 	 {Reimplementing the {Cedar File System} using logging and
+		  group commit},
+  booktitle = 	 sosp,
+  month =	 nov,
+  year =	 1987,
+  pages =	 {155--162}
+}
+
+@PhdThesis{haining:phdthesis,
+  author = 	 {Theodore Haining},
+  title = 	 {Non-Volatile Cache Management For Improving Write
+		  Response Time With Rotating Magnetic Media},
+  school = 	 {University of California, Santa Cruz},
+  year = 	 2000,
+}
+
+@InProceedings{hillyer:sigmetrics97,
+  author =	"Bruce Hillyer and Avi Silberschatz",
+  title =	"On the Modeling and Performance Characteristics of a
+		 Serpentine Tape Drive",
+  booktitle =	sigmetrics97,
+  month =	may,
+  year =	1997,
+  pages =	"170-179",
+}
+
+@InProceedings{hitz:usenix94,
+  author = 	 {Dave Hitz and James Lau and Michael Malcom},
+  title = 	 {File System Design for an {NFS} File Server Appliance},
+  booktitle = 	 usenix94w,
+  address = 	 {San Francisco, CA},
+  month =	 jan,
+  year =	 1994,
+  pages =	 {235--246},
+}
+
+@Article{hollingsworth:ppl99,
+  author = 	 {Jeffrey Hollingsworth and Ethan Miller and Kennedy Akala},
+  title = 	 {Binary Version Management for Computational Grids},
+  journal = 	 ppl,
+  month =	 jun,
+  year = 	 1999,
+  volume =	 9,
+  number =	 2,
+  pages =	 {215--225},
+}
+
+@InProceedings{hollingsworth:ssr97,
+  author = 	 {Jeffrey Hollingsworth and Ethan Miller},
+  title = 	 {Using Content-Derived Names for Configuration Management},
+  booktitle = 	 {Proceedings of the 1997 Symposium on Software
+		  Reusability (SSR '97)},
+  organization = {IEEE},
+  address =	 {Boston, MA},
+  month =	 may,
+  year =	 1997,
+  pages =	 {104--109}
+}
+
+
+@Article{howard:tocs88,
+  author = 	 {John~H. Howard and Michael~L. Kazar and Sherri~G. Menees and
+		  David~A. Nichols and M.~Satyanarayanan and
+		  Robert~N. Sidebotham and Michael~J. Wes},
+  title = 	 {Scale and Performance in a Distributed File System},
+  journal = 	 tocs,
+  volume =	 6,
+  number =	 1,
+  month =	 feb,
+  year = 	 1988,
+  pages =	 {51--81},
+}
+
+@InProceedings{ioannidis:security93,
+  author =	{John Ioannidis and Matt Blaze},
+  title =	{The Architecture and Implementation of Network-Layer
+		 Security under {Unix}},
+  booktitle = 	 {Proceedings of the First ACM Conference on Computer and
+		  Communication Security},
+  month =	 nov,
+  year =	1993,
+  pages =	{29--39},
+  url =		{citeseer.nj.nec.com/ioannidis93architecture.html},
+}
+
+
+
+@TechReport{jacobson:scheduling91,
+	author = 			 {David~M. Jacobson and John Wilkes},
+	title = 			 {Disk scheduling algorithms based on rotational position},
+	institution =  {Hewlett-Packard Laboratories, Concurrent Systems Project},
+	year = 				 {1992},
+	number = 	 {HPL-CSP-91-7rev1},
+	month = 		 {March}
+}
+
+@InProceedings{johnson:mss98,
+  author = 	 {Theodore Johnson and Ethan~L. Miller},
+  title = 	 {Benchmarking Tape Systems Performance},
+  booktitle = 	 mss98,
+  address =	 {College Park, MD},
+  month =	 mar,
+  year =	 1998,
+  pages =	 {95--112}
+}
+
+@MastersThesis{johnson:msthesis99,
+  author = 	 {Edwin N. Johnson },
+  title = 	 {A protocol for network level caching, {(C-TCP)}},
+  school = 	 {MIT},
+  month =	 may,
+  year = 	 1998,
+  type =	 {{M.E.E.C.S T}hesis},
+  url = {http://www.sds.lcs.mit.edu/publications/odin98.html}
+}
+
+@InProceedings{johnson:vldb98,
+  author =	"Theodore Johnson and Ethan~L. Miller",
+  title =	"Performance Measurements and Models of Tertiary
+		 Storage Devices",
+  booktitle =	vldb98,
+  address =	{New York, NY},
+  month =	aug,
+  year =	1998,
+  pages =	{50--61},
+}
+
+@article{katz:can89,
+ author	= "Randy H. Katz and John K. Ousterhout and David A. Patterson
+	   and Peter Chen and Ann Chervenak and Rich Drewes and Garth Gibson
+	   and Ed Lee and Ken Lutz and Ethan Miller and Mendel Rosenblum",
+ title	= "A Project on High Performance {I/O} Subsystems",
+ year	= 1989,
+ month	= sep,
+ journal = "Computer Architecture News {(CAN)}",
+ volume	= 17,
+ number	= 5,
+ pages	= {24--31},
+ keywords = "RAID, prototype, progress report"
+}
+
+@InProceedings{kim:fast02,
+  author = 	 {Minyong Kim and Landon~P. Cox and Brian~D. Noble},
+  title =	 {Safety, Visibility and Performance in a Wide--Area File System},
+  booktitle = 	 fast02,
+  month =	 jan,
+  year =	 2002,
+  address =	 {Monterey, CA},
+}
+
+@InProceedings{lee:asplos96,
+  author = 	 {Edward K. Lee and Chandramohan A. Thekkath},
+  title = 	 {{Petal}: Distributed Virtual Disks},
+  booktitle = 	 asplos96,
+  address =	 {Cambridge, MA},
+  year =	 1996,
+  pages =	 {84--92},
+}
+
+@Article{lehman:tkde92,
+  author = 	 {Tobin Lehman and Eugene Shekita and Luis-Felipe Cabrera},
+  title = 	 {An Evaluation of {Starburst's} Memory Resident Storage
+		  Component},
+  journal = 	 tkde,
+  year = 	 1992,
+  volume =	 4,
+  number =	 6,
+  pages =	 {555--566}
+}
+
+@InProceedings{loverso:usenix93,
+ author	= {Susan J. LoVerso and Marshall Isman and Andy Nanopoulos and
+ 		William Nesheim and Ewan D. Milne and Richard Wheeler},
+ title	= {{\em sfs}: {A} Parallel File System for the {CM-5}},
+ booktitle = usenix93s,
+ year	= 1993,
+ pages	= {291--305},
+ keyword = {parallel I/O, multiprocessor file system, pario bib},
+ comment = {They took the Unix file system from SunOS and extended it to run
+  on the CM-5. This involved handling non-power-of-two block sizes, parallel
+  I/O calls, large file sizes, and more encouragement for extents to be
+  allocated. The hardware is particularly suited to RAID~3 with a 16 byte
+  striping unit, although in theory the software could do anything it wants.
+  Geared to data-parallel model. Proc nodes (PNs) contact the timesharing
+  daemon (TD) on the control processor (CP), who gets block lists from the file
+  system, which runs on one of the CPs. The TD then arranges with the disk
+  storage nodes (DSNs) to do the transfer directly with the PNs. Each DSN has
+  8~MB of buffer space, 8 disk drives, 4 SCSI busses, and a SPARC as
+  controller. Partition managers mount non-local sfs via NFS. Performance
+  results good. Up to 185~MB/s on 118 (2~MB/s) disks.}
+}
+@InProceedings{lowell:sosp97,
+  author = 	 {David~E. Lowell and Peter~M. Chen},
+  title = 	 {Free Transactions With {Rio Vista}},
+  booktitle = 	 sosp97,
+  month =	 dec,
+  year =	 1997,
+  pages =	 {92-101},
+}
+
+
+@INPROCEEDINGS{madhyastha:mss01,
+  author =	"Tara Madhyastha and Katherine Pu Yang",
+  title =	"Physical Modeling of Probe-Based Storage",
+  booktitle =	mss01,
+  month =	apr,
+  year =	2001,
+  pages =	"207-224",
+}
+
+@InProceedings{maheshwari:osdi00,
+  author = 	 {Umesh Maheshwari and Radek Vingralek and Bill Shapiro},
+  title = 	 {How to Build a Trusted Database System on Untrusted Storage},
+  booktitle = 	 osdi00,
+  address =	 {San Diego, CA},
+  month =	 oct,
+  year =	 2000,
+  pages =	 {135--150},
+}
+
+@TECHREPORT{malkin:RIPv294,
+  AUTHOR = {G. Malkin},
+  TITLE = {{RIP} Version 2 Protocol Analysis},
+  INSTITUTION = {{IETF}},
+  TYPE = {{RFC}},
+  NUMBER = {1721},
+  MONTH = {November},
+  YEAR = {1994},
+  PS = {RIPv2-Analysis94.txt}
+}
+
+@BOOK{marion95,
+  author =	"J.~B. Marion and S.~T. Thornton",
+  title =	"Classical Dynamics of Particles and Systems",
+  publisher =	{Saunders College Publishing},
+  year =	1995,
+}
+
+@InProceedings{mazieres:hotos01,
+  author = 	 {David Mazi\`{e}res and Dennis Shasha},
+  title = 	 {Don't Trust your File Server},
+  booktitle = 	 hotos01,
+  address =	 {Schloss Elmau, Germany},
+  month =	 may,
+  year =	 2001,
+  pages =	 {99--104},
+}
+
+@InProceedings{mazieres:sosp99,
+  author =	{David Mazi\`{e}res and Michael Kaminsky and M. Frans Kaashoek
+		 and Emmett Witchel},
+  title =	{Separating Key Management from File System Security},
+  booktitle = 	 sosp99,
+  month =	 dec,
+  year =	 1999,
+  pages =	{124--139},
+  url =		{citeseer.nj.nec.com/mazieres99separating.html},
+}
+
+
+
+@Book{mckusick:bsd96,
+  author = 	 {M.~Kirk McKusick and Keith Bostic and Michael J. Karels and
+		  John~S. Quarterman},
+  title = 	 {The Design and Implementation of the 4.4 {BSD}
+		  Operating System},
+  publisher = 	 {Addison Wesley},
+  year = 	 1996,
+}
+
+
+@InProceedings{mckusick:freenix99,
+  author = 	 {M.~Kirk McKusick and Gregory~R. Ganger},
+  title = 	 {Soft Updates: A Technique For Eliminating Most
+		  Synchronous Writes in the {Fast Filesystem}},
+  booktitle = 	 freenix99,
+  month =	 jun,
+  year =	 1999,
+  pages =	 {1-18},
+}
+
+@Article{mckusick:tocs84,
+  author = 	 {Marshall Kirk McKusick and William N. Joy and
+		  Samuel J. Leffler and Robert S. Fabry},
+  title = 	 {A Fast File System for {UNIX}},
+  journal = 	 tocs,
+  month =	 aug,
+  year = 	 1984,
+  volume =	 2,
+  number =	 3,
+  pages =	 {181--197},
+}
+
+@InProceedings{miller:fast02,
+  author = 	 {Ethan~L. Miller and Darrell~D.~E. Long and
+		  William~E. Freeman and Benjamin~C. Reed},
+  title = 	 {Strong Security for Network-Attached Storage},
+  booktitle = 	 fast02,
+  month =	 jan,
+  year =	 2002,
+  address =	 {Monterey, CA},
+}
+
+@InProceedings{miller:hotos01,
+  author = 	 {Ethan~L. Miller and Scott~A. Brandt and Darrell~D.~E. Long},
+  title = 	 {{HeRMES}: High-Performance Reliable {MRAM}-Enabled Storage},
+  booktitle = 	 hotos01,
+  pages =	 {83--87},
+  year =	 2001,
+  month =	 may
+}
+
+@Article{miller:jodi00,
+  author = 	 {Ethan Miller and Dan Shen and Junli Liu and
+		  Charles Nicholas},
+  title = 	 {Performance and Scalability of a Large-Scale N-gram
+		  Based Information Retrieval System},
+  journal = 	 {Journal of Digital Information},
+  month =	 jan,
+  year = 	 2000,
+  pages =	 {25 pages}
+}
+
+
+@Article{miller:parallelcomputing97,
+  author = 	 {Ethan L. Miller and Randy H. Katz},
+  title = 	 {{RAMA}: An easy-to-use, high-performance parallel
+		  file system},
+  journal = 	 {Parallel Computing},
+  year = 	 1997,
+  volume =	 23,
+  number =	 4,
+  pages =	 {419--446},
+}
+
+@InProceedings{miller:pdpta99,
+  author = 	 {Ethan Miller and Dan Shen and Junli Liu and
+		  Charles Nicholas and Ting Chen},
+  title = 	 {Techniques for Gigabyte-Scale N-gram Based Information
+		  Retrieval on Personal Computers},
+  booktitle = 	 pdpta99,
+  address =	 {Las Vegas, NV},
+  month =	 jun,
+  year =	 1999,
+  pages =	 {1410--1416},
+}
+
+@InProceedings{miller:sc91,
+ author	= "Ethan L. Miller and Randy H. Katz",
+ title	= "Input/Output Behavior of Supercomputing Applications",
+ booktitle = sc91,
+ month	= nov,
+ year	= 1991,
+ pages	= {567-576},
+}
+
+@InProceedings{miller:wcae00,
+  author = 	 {Ethan Miller and Jon Squire},
+  title = 	 "{esim}: A Structural Design Language and Simulator
+		  for Computer Architecture Education",
+  booktitle = 	 {2000 Workshop on Computer Architecture
+		  Education (WCAE 2000)},
+  organization = {ACM \& IEEE},
+  address =	 {Vancouver, Canada},
+  month =	 jun,
+  year =	 2000,
+  pages =	 {42--48},
+}
+
+@InProceedings{mogul:sigcomm97,
+  author = "Jeffrey C. Mogul and Fred Douglis and Anja Feldmann and Balachander Krishnamurthy",
+  title = "Potential Benefits of Delta Encoding and Data Compression for {HTTP}",
+  booktitle = "{SIGCOMM97}",
+  pages = "181-194",
+  year = "1997",
+  url = "citeseer.nj.nec.com/mogul97potential.html"
+}
+
+@Book{motwani95,
+	author =	"R. Motwani and P. Raghavan",
+	title =		"Randomized Algorithms",
+	publisher =	"Cambridge University Press",
+	year =		1995,
+}
+
+@TECHREPORT{moy:OSPFv294,
+  TITLE = {{OSPF} Version 2},
+  AUTHOR = {J. Moy},
+  INSTITUTION = {{IETF}},
+  TYPE = {{RFC}},
+  NUMBER = {{1583}},
+  YEAR = 1994,
+  MONTH = {March},
+  PS = {OSPFv2.txt}
+}
+
+@TECHREPORT{muntz:multilevel91,
+  AUTHOR = {D. Muntz and P. Honeyman},
+  TITLE = {Multi level caching in distributed file systems},
+  INSTITUTION = {U.Michigan Ctr. for IT Integration ({CITI})},
+  TYPE = {Technical Report},
+  NUMBER = {91-3},
+  MONTH = {August},
+  YEAR = {1991}
+}
+
+@InProceedings{muthitacharoen:sosp01,
+  author = 	 {Athicha Muthitacharoen and Benjie Chen and
+		  David Mazi\`{e}res},
+  title = 	 {A Low-Bandwidth Network File System},
+  booktitle = 	 sosp01,
+  year =	 2001,
+  month =	 oct
+}
+
+@InProceedings{neumann:usenix88w,
+  author = 	 {B.~Clifford Neumann and Jennifer~G. Steiner and
+		  Jeffrey~I. Schiller},
+  title = 	 {{Kerberos}: An Authentication Service for Open Network
+		  Systems},
+  booktitle = 	 usenix88w,
+  address =	 {Dallas, TX},
+  year = 	 1988,
+  pages =	 {191--201},
+}
+
+@InProceedings{ng:fast02,
+  author = 	 {Wee Teck Ng and Bruce Hillyer and Elizabeth Shriver and Eran Gabber and Banu Ozden},
+  title =	 {Obtaining High Performance for Storage Outsourcing},
+  booktitle = 	 fast02,
+  month =	 jan,
+  year =	 2002,
+  address =	 {Monterey, CA},
+}
+
+@TechReport{ousterhout:techreport89,
+  author = 	 {John K. Ousterhout},
+  title = 	 {Why aren't operating systems getting faster as
+		  fast as hardware?},
+  institution =  {Compaq (Digital) Western Research Lab},
+  month =	 oct,
+  year = 	 1989,
+  type = 	 {Technical Note},
+  number =	 {TN-11},
+}
+
+
+@article{ partridge:transnet98,
+  author = "C. Partridge and P. Carvey",
+  title = "A 50-{G}b/s {IP} router",
+  journal = transnet,
+  volume = "6",
+  number = "3",
+  pages = {237--248},
+  year = "1998",
+  month = jun
+}
+
+@article{paxson:transnet95,
+    author = "Vern Paxson and Sally Floyd",
+    title = "Wide area traffic: the failure of {Poisson} modeling",
+    journal = transnet,
+    volume = "3",
+    number = "3",
+    pages = "226--244",
+    year = "1995"
+}
+
+@article{paxson:transnet99,
+    author = "Vern Paxson",
+    title = "End-to-end {I}nternet packet dynamics",
+    journal = transnet,
+    volume = "7",
+    number = "3",
+    pages = "277-292",
+    year = "1999",
+    url = "citeseer.nj.nec.com/paxson97endtoend.html"
+}
+
+@InProceedings{quinlan:venti02,
+author =  {Sean Quinlan and Sean Dorward},
+title = {Venti: a new approach to archival storage},
+booktitle = {Conference on File and Storage Technologies ({FAST})},
+pages = {89-101},
+year = {2002},
+organization = {USENIX}
+}
+
+@TECHREPORT{ramakrishnan:ecn99,
+  AUTHOR = {K.~K. Ramakrishnan and S. Floyd},
+  TITLE ={A Proposal to add Explicit Congestion Notification ({ECN}) to {IP}},
+  INSTITUTION = {{IETF}},
+  YEAR = 1999,
+  TYPE = {{RFC}},
+  NUMBER = 2481,
+  MONTH = {January},
+  PS = {}
+}
+
+@InProceedings{rao:sigmod00,
+  author = 	 {Jun Rao and Kenneth A. Ross},
+  title = 	 {Making {B+}-Trees Cache Conscious in Main Memory},
+  booktitle = 	 sigmod00,
+  address =	 {Dallas, TX},
+  month =	 may,
+  year =	 2000,
+  pages =	 {475--486}
+}
+
+@Article{reed:micro00,
+  author = 	 {Benjamin Reed and E.~Chron and Randal Burns and
+		  Darrell~D.~E. Long},
+  title = 	 {Authenticating Network Attached Storage},
+  journal = 	 micro,
+  volume =	 20,
+  number =	 1,
+  month =	 jan,
+  year = 	 2000,
+  pages =	 {49--57},
+}
+
+@InProceedings{reid:computerssecurity96,
+  author = 	 {J. Reid},
+  title = 	 {Plugging the Holes on Host-Based Authentication},
+  booktitle = 	 {Computers and Security},
+  year =	 1996,
+  pages =	 {661--671},
+}
+
+
+@InProceedings{reidel:fast02,
+  author = 	 {Erik Reidel and Mahesh Kallahalla and Ram Swaminathan},
+  title = 	 {A framework for evaluating storage system security},
+  booktitle = 	 fast02,
+  address =	 {Monterey, CA},
+  month =	 jan,
+  year =	 2002,
+}
+
+@InProceedings(reiher:sans93,
+  author =	"P. Reiher and T. Page and G. Popek and J. Cook and
+		 S. Crocker",
+  title =	"{Truffles}---Secure File Sharing With Minimal System
+		 Administrator Intervention",
+  booktitle =	"Procedings of the 1993 World Conference on System
+		 Administration, Networking, and Security",
+  month =	apr,
+  year =	1993
+)
+
+@TECHREPORT{rekhter:BGPv4,
+  AUTHOR = {Y. Rekhter and T. Li},
+  TITLE = {A Border Gateway Protocol 4 ({BGP}-4)},
+  INSTITUTION = {{IETF}},
+  YEAR = 1995,
+  TYPE = {{RFC}},
+  NUMBER = 1771,
+  MONTH = {March},
+  PS = {BGPv4.txt}
+}
+
+@Misc{rfc2104,
+  author =	"H. Krawczyk and M. Bellare and R. Canetti",
+  title =	"{HMAC}: Keyed-Hashing for Message Authentication",
+  publisher =	"{IETF} Network Working Group RFC2104",
+  month =	feb,
+  year =	1997,
+}
+
+@article{ rizzo:transnet00,
+    author = "Luigi Rizzo and Lorenzo Vicisano",
+    title = "Replacement policies for a proxy cache",
+    journal = transnet,
+    volume = "8",
+    number = "2",
+    pages = "158-170",
+    year = "2000"
+}
+
+@InProceedings{roselli:usenix00,
+  author = 	 {Drew Roselli and Jay Lorch and Tom Anderson},
+  title = 	 {A comparison of file system workloads},
+  booktitle = 	 usenix00,
+  month =	 jun,
+  year =	 2000,
+  pages =	 {41-54},
+}
+
+
+@Article{rosenblum:tocs92,
+  author = 	 {Mendel Rosenblum and John K. Ousterhout},
+  title = 	 {The design and implementation of a log-structured
+		  file system},
+  journal = 	 tocs,
+  month =	 feb,
+  year = 	 1992,
+  volume =	 10,
+  number =	 1,
+  pages =	 {26-52},
+}
+
+
+@Article{ruemmler:computer94,
+ author	= {Chris Ruemmler and John Wilkes},
+ title	= {An Introduction to Disk Drive Modeling},
+ journal = computer,
+ volume	= 27,
+ number	= 3,
+ month	= mar,
+ year	= 1994,
+ pages	= "17-29",
+}
+
+@InProceedings{santry:sosp99,
+  author = 	 {D. Santry and M. Feeley and N. Hutchinson and A. Veitch
+		  and R. Carton and J. Ofir},
+  title = 	 {Deciding when to forget in the {Elephant} file system},
+  booktitle = 	 sosp99,
+  month =	 dec,
+  year =	 1999,
+  pages =	 {110-123},
+}
+
+@InProceedings{satya:sosp93,
+  author = 	 {M. Satyanarayanan and H. Mashburn and P. Kumar
+		  and D. Steere and J. Kistler},
+  title = 	 {Lightweight recoverable virtual memory},
+  booktitle =	 sosp93,
+  month =	 dec,
+  year =	 1993,
+  pages =	 {146-160}
+}
+
+@InProceedings{scheuerlein:sscc00,
+  author	= "R. Scheuerlein and W. Gallagher and S. Parkin and A. Lee
+		   and S. Ray and R. Robertazzi and W. Reohr",
+  title		= "10 ns read and write non-volatile memory array using
+		   a magnetic tunnel junction and FET",
+  booktitle	= "IEEE International Solid-State Circuits Conference",
+  month		= feb,
+  year		= 2000,
+  pages		= "128-129",
+}
+
+
+@INPROCEEDINGS{schlosser:asplos00,
+  author =	"S. Schlosser and J. Griffin and Nagle and G. Ganger",
+  title =	"Designing Computer Systems with {MEMS}-based Storage",
+  booktitle =	asplos00,
+  year =	2000,
+  pages =	"1-12",
+}
+
+
+
+@Book{schneier:appliedcrypto,
+  author =	 {Bruce Schneier},
+  title = 	 {Applied Cryptography},
+  publisher = 	 {Wiley},
+  address =	 {New York, NY},
+  edition =	 {2nd},
+  year = 	 1996,
+}
+
+@TECHREPORT{schulzrinne:rtp96,
+  AUTHOR = {H. Schulzrinne and GMD Fokus and S. Casner and R. Frederick and V. Jacobson},
+  TITLE = {{RTP}: A Transport Protocol for Real Time Applications},
+  INSTITUTION = {{IETF}},
+  YEAR = 1996,
+  TYPE = {{RFC}},
+  NUMBER = 1889,
+  MONTH = {January},
+  PS = {}
+}
+
+@InProceedings{seltzer:usenix90,
+  author =	"Margo Seltzer and Peter Chen and John Ousterhout",
+  title =	"Disk Scheduling Revisited",
+  booktitle =	usenix90w,
+  month =	jan,
+  year =	1990,
+  pages =	"313-323",
+}
+
+@InProceedings{seltzer:usenix93,
+  author = 	 {Margo Seltzer and Keith Bostic and M. Kirk McKusick
+		  and Carl Staelin},
+  title = 	 {An implementation of a log-structured file system for {UNIX}},
+  booktitle = 	 usenix93w,
+  month =	 jan,
+  year =	 1993,
+  pages =	 {307-326}
+}
+
+@InProceedings{shapiro:mss99,
+  author = 	 {Michael Shapiro and Ethan Miller},
+  title = 	 {Managing Databases with Binary Large Objects},
+  booktitle = 	 mss99,
+  month =	 mar,
+  year =	 1999,
+  address =	 {San Diego, CA},
+  pages =	 {185--193},
+}
+
+@Article{shaw:ijdl99,
+  author = 	 {Christopher Shaw and James Kukla and Ian Soboroff and
+		  David Ebert and Charles Nicholas and Amen Zwa and
+		  Ethan Miller and D.~Aaron Roberts},
+  title = 	 {Interactive Volumetric Information Visualization for
+		  Document Corpus Management},
+  journal = 	 {International Journal on Digital Libraries},
+  year = 	 1999,
+  volume =	 2,
+  number =	 {2--3},
+  pages =	 {144Å≠-156}
+}
+
+@InProceedings{shriver:usenix01,
+  author = 	 {Elizabeth Shriver and Eran Gabber and Lan Huang
+		  Christopher A. Stein},
+  title = 	 {Storage Management for Web Proxies},
+  booktitle = 	 usenix01,
+  month =	 jun,
+  year =	 2001,
+  pages =	 {203-216},
+}
+
+
+@InProceedings{sobti:fast02,
+  author =	 {Sumeet Sobti and Nitin Garg and Chi Zang and Xiang Yu and Arvind Krishnamurthy and Randolph~Y.Wang},
+  title = 	 {Personal{RAID}: Mobile Storage for Distributed and Disconnected Computers},
+  booktitle = 	 fast02,
+  month =	 jan,
+  year =	 2002,
+  address =	 {Monterey, CA},
+}
+
+@Article{spasojevic:tocs96,
+  author = 	 {Mirjana Spasojevic and M.~Satyanarayanan},
+  title = 	 {An Empirical Study of a Wide-Area Distributed File System},
+  journal = 	 tocs,
+  volume =	 14,
+  number =	 2,
+  month =	 may,
+  year = 	 1996,
+  pages =	 {200--222},
+}
+
+@TechReport{strange:techreport92a,
+	author =	"Steven Strange",
+	title =		"Analysis of Long-Term {UNIX} File Access Patterns
+			 for Application to Automatic File Migration
+			 Strategies",
+	number =	"UCB/CSD 92/700",
+	institution =	"University of California, Berkeley",
+	month =		aug,
+	year =		1992,
+}
+
+@InProceedings{strunk:osdi00,
+  author = 	 {John~D. Strunk and Garth~R. Goodson and
+		  Michael~L. Scheinholtz and Craig~A.~N. Soules and
+		  Gregory R. Ganger},
+  title = 	 {Self-Securing Storage: Protecting Data in
+		  Compromised Systems},
+  booktitle = 	 osdi00,
+  month =	 oct,
+  year = 	 2000,
+  pages =	 {165-180},
+}
+
+@InProceedings{sweeney:usenix96,
+  author = 	 {A. Sweeney and D. Doucette and W. Hu and C. Anderson
+		  and M. Nishimoto and G. Peck},
+  title = 	 {Scalability in the {XFS} file system},
+  booktitle = 	 usenix96,
+  month =	 jan,
+  year =	 1996,
+  pages =	 {1-14}
+}
+
+@unpublished{taec:whitepaper,
+  author = 	 {TaecWhitePaper},
+  note = 	 {http://www.toshiba.com/taec/components/WhitePaper/Flash\_Memories.pdf},
+  title = 	 {An Overview of Flash Memories}
+}
+
+@Article{teorey:cacm72,
+  author =	"T. J. Teorey and T. B. Pinkerton",
+  title =	"A Comparative Analysis of Disk Scheduling Policies",
+  journal =	cacm,
+  volume =	15,
+  number =	3,
+  month =	mar,
+  year =	1972,
+  pages =	"177-184",
+}
+
+
+@Inproceedings{tewari:icdcs99,
+    author = "Renu Tewari and Michael Dahlin and Harrick M. Vin and Jonathan S. Kay",
+    title = "Design Considerations for Distributed Caching on the {I}nternet",
+    booktitle = "International Conference on Distributed Computing Systems",
+    pages = "273-284",
+    year = "1999",
+    url = "citeseer.nj.nec.com/article/tewari99design.html"
+}
+
+@InProceedings{vogels:sosp99,
+  author = 	 {W. Vogels},
+  title = 	 {File system usage in {Windows NT 4.0}},
+  booktitle = 	 sosp99,
+  month =	 dec,
+  year =	 1999,
+  pages =	 {93-109},
+}
+
+@InProceedings{ward:fast02,
+  author = 	 {Julie Ward and Michael O'Sullivan and Troy Shahoumian and John Wilkes},
+  title =	 {Appia: automatic storage area network fabric design},
+  booktitle = 	 fast02,
+  month =	 jan,
+  year =	 2002,
+  address =	 {Monterey, CA},
+}
+
+@InProceedings{wetherall:openarch98,
+  author = "D. Wetherall and J. Guttag and D. Tennenhouse",
+  title = "{ANTS}: A Toolkit for Building and Dynamically Deploying Network Protocols",
+  booktitle = "Proceedings of IEEE Openarch'98",
+  month = apr,
+  year = "1998"
+}
+
+@Article{wiener:cryptobytes98,
+  author = 	 {M.~J. Wiener},
+  title = 	 {Performance Comparison of Public-Key Cryptosystems},
+  journal = 	 {RSA CryptoBytes},
+  volume =	 4,
+  number =	 1,
+  month =	 "Summer",
+  year = 	 1998,
+}
+
+@Article{wise:ieee98,
+  author = 	 {K. Wise},
+  title = 	 {Special issue on integrated sensors, microactuators,
+		  and microsystems ({MEMS})},
+  journal = 	 {Proceedings of the IEEE},
+  month =	 aug,
+  year = 	 1998,
+  volume = 	 86,
+  number = 	 8,
+  pages = 	 {1531-1787},
+}
+
+
+@Book{witten:mg,
+  author =	 {Ian H. Witten and Alistair Moffat and Timothy C. Bell},
+  title = 	 {Managing Gigabytes},
+  publisher = 	 {Morgan Kaufmann Publishers},
+  year = 	 1999
+}
+
+@TechReport{wong:mycache00,
+  author =	"T.~M. Wong and Gregory~R. Ganger and John~Wilkes",
+  title =	"My Cache or Yours? {Making} Storage More Exclusive",
+  institution =	"CMU-CS-00-157 Carnegie Mellon University",
+  month = 	nov,
+  year =	2000,
+}
+
+@InProceedings{worthington:sigmetrics94,
+  author =	"Bruce Worthington and Gregory Ganger and Yale Patt",
+  title =	"Scheduling Algorithms for Modern Disk Drives",
+  booktitle =	sigmetrics94,
+  month =	may,
+  year =	1994,
+  pages =	"241-251",
+}
+
+
+@InProceedings{wu:asplos94,
+  author = 	 {M. Wu and W. Zwaenepoel},
+  title = 	 {{eNVy}: a non-volatile, main memory storage system},
+  booktitle = 	 asplos94,
+  organization = {ACM},
+  month =	 oct,
+  year =	 1994,
+  pages =	 {86-97}
+}
+
+@InProceedings{ yeh:mascots01,
+  author = "Tsozen Yeh and Darrell~D.~E. Long and Scott Brandt",
+  title = "Performing File Prediction with a Program-Based Successor Model",
+  booktitle =    mascots01,
+  pages =        {193-202},
+  year =         {2001},
+  address =      {Cincinnati, OH},
+  month =        aug,
+  organization = {IEEE},
+}
+
+@InProceedings{ yu:sigcomm99,
+  author = "Haobo Yu and Lee Breslau and Scott Shenker",
+  title = "A Scalable Web Cache Consistency Architecture",
+  booktitle = "{SIGCOMM99}",
+  pages = "163-174",
+  year = "1999",
+  url = "citeseer.nj.nec.com/yu99scalable.html"
+}
+
+@TechReport{zadok:cucs-021-98,
+  author = 	 {Erez Zadok and Ion Badulescu and Alex Shender},
+  title = 	 {{Cryptfs}: A Stackable Vnode Level Encryption File System},
+  institution =  {Columbia University},
+  year = 	 1998,
+  number =	 {CUCS-021-98},
+}
+
+@Book{zimmerman95,
+  author =	 {Philip Zimmerman},
+  title = 	 {{PGP} Source Code and Internals},
+  publisher = 	 {MIT Press},
+  year = 	 1995
+}

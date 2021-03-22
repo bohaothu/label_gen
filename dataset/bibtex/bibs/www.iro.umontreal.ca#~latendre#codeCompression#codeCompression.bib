@@ -1,0 +1,1773 @@
+%%                                                  
+%%  BibTeX database file, for use with LaTeX/BibTeX 
+%%  database : Code compaction/compression                      
+%%   
+%%  Last modified November 12, 2004.
+%%
+%%    Mario Latendresse
+%%    Departement d'Informatique et de Recherche Operationnelle
+%%    Universite de Montreal
+%%    Montreal, QC
+%%    Canada
+%%    email: latendre "at" iro.umontreal.ca
+%%
+%%  This bibliography was started and maintained until June 2002 by:
+%%
+%%     Rik van de Wiel                                 
+%%     Philips Research Laboratories                   
+%%     Building WDC p.040, Prof. Holstlaan 4             
+%%     5656 AA Eindhoven                               
+%%     The Netherlands                                 
+%%     e-mail: Rik.van.de.Wiel "at" philips.com  
+%%                                                  
+@Preamble{{\typeout{}
+           \typeout{The Code Compaction/Compression Bibliography.}
+           \typeout{Last modified on November 2, 2004}}}
+
+%%   Predefined journals 
+ 
+@STRING{cacm     = "Communications of the ACM"}
+@STRING{acmpls   = "ACM Transactions on Programming Languages and Systems"}
+@STRING{ieeetc   = "IEEE Transactions on Computers"}
+@STRING{ieeetit  = "IEEE Transactions on Information Theory"}
+@STRING{ieeetvs  = "IEEE Transactions on VLSI Systems"}
+@STRING{jacm     = "Journal of the ACM"}
+@STRING{microrep = "Microprocessor Report"}
+@STRING{spe      = "Software - Practice and Experience"}
+
+%%   Predefined publishers  
+
+@STRING{ap  	 = "Academic Press"}
+@STRING{aw  	 = "Addison-Wesley"} 
+@STRING{csp 	 = "IEEE Computer Society Press"}
+@STRING{cwi 	 = "CWI"}   
+@STRING{esp 	 = "Elsevier Science Publishers"}
+@STRING{kap 	 = "Kluwer Academic Publishers"}
+@STRING{mit 	 = "MIT Press"}
+@STRING{ph  	 = "Prentice-Hall"}
+@STRING{springer = "Springer-Verlag"}
+
+%%   Predefined conference proceedings  
+
+@STRING{acm      = "Association for Computing Machinery"}
+@STRING{acmcc	 = "Proc. of the ACM SIGPLAN Symposium on Compiler Construction"}
+@STRING{async    = "Proc. International Symposium on Advanced Research in
+                    Asynchronous Circuits and Systems"}
+@STRING{arvlsi   = "Proc. Conf. on Advanced Research in VLSI"}
+@STRING{asplos   = "Proc. Symp. on Architectural Support for Programming Languages 
+                   and Operating Systems"}
+@STRING{compcon  = "Proc. Int'l Computer Conference"}
+@STRING{iccd     = "Proc. Int'l Conf. on Computer Design"}
+@STRING{iccad    = "Proc. Int'l Conf. on Computer-Aided Design"}
+@STRING{isca     = "Proc. Int'l Symp. on Computer Architecture"}
+@STRING{isss     = "Proc. ACM/IEEE Int'l Symp. on System Synthesis"}
+@STRING{ivme     = "Proc. of the Workshop on Interpreters, Virtual Machines, and Emulators"}
+@STRING{micro    = "Proc. Int'l Symp. on Microarchitecture"}
+@STRING{euromicro= "Proc. of EUROMICRO Conference"}
+@STRING{pieee    = "Proc. of the IEEE"}
+@STRING{pldi     = "Proc. Conf. on Programming Languages Design and Implementation"}
+@STRING{popl     = "Proc. Symp. on Principles of Programming Languages"}
+@STRING{dac      = "Proc. ACM/IEEE Design Automation Conference"}
+@STRING{wcsss    = "Workshop on Compiler Support for System Software"}
+@STRING{dcc	 = "Proc. Data Compression Conference"}
+@STRING{esc	 = "Proc. Embedded Systems Conference"}
+@STRING{lctes	 = "Proc. ACM SIGPLAN Workshop on Languages, Compilers, and Tools for Embedded Systems"}
+
+
+@STRING{ta  = " (To appear)"}
+@STRING{sub = " (Submitted)"}
+@STRING{np  = " Not published"}
+
+% Add entries on GCC summit 2004
+
+% The following entries added after November 14, 2004
+
+@Article{surveyACM2003,
+ author = {Besz\'{e}des, \'{A}rp\'{a}d and Ferenc, Rudolf and  Gyim\'{o}thy, Tibor and  Dolenc, Andr\'{e} and Karsisto, Konsta},
+ title = {Survey of code-size reduction methods},
+ journal = {ACM Comput. Surv.},
+ volume = {35},
+ number = {3},
+ year = {2003},
+ issn = {0360-0300},
+ pages = {223--267},
+ doi = {http://doi.acm.org/10.1145/937503.937504},
+ publisher = {ACM Press},
+ abstract = "Program code compression is an emerging research activity
+ that is having an impact in several production areas such as
+ networking and embedded systems. This is because the reduced-sized
+ code can have a positive impact on network traffic and embedded
+ system costs such as memory requirements and power
+ consumption. Although code-size reduction is a relatively new
+ research area, numerous publications already exist on it. The methods
+ published usually have different motivations and a variety of
+ application contexts. They may use different principles and their
+ publications often use diverse notations. To our knowledge, there are
+ no publications that present a good overview of this broad range of
+ methods and give a useful assessment. This article surveys twelve
+ methods and several related works appearing in some 50 papers
+ published up to now. We provide extensive assessment criteria for
+ evaluating the methods and offer a basis for comparison. We conclude
+ that it is fairly hard to make any fair comparisons of the methods or
+ draw conclusions about their applicability."
+}
+
+@INPROCEEDINGS{BFG04,
+   author       = "Besz\'edes, \'Arp\'ad and Ferenc, Rudolf and Gergely, Tam\'as and Gyim\'othy, Tibor and L\'oki, G\'abor and Vid\'acs, L\'aszl\'o",
+   title        = "CSiBE Benchmark: One Year Perspective and Plans",
+   booktitle    = "Proceedings of the 2004 GCC Developers' Summit",
+   year         = 2004,
+   month        = jun,
+   pages        = "7-15",
+   location     = "Ottawa, Canada"
+}
+
+@INPROCEEDINGS{LKJ04,
+   author       = "L\'oki, G\'abor and Kiss, \'Akos and J\'asz, Judit and Besz\'edes, \'Arp\'ad",
+   title        = "Code Factoring in GCC",
+   booktitle    = "Proceedings of the 2004 GCC Developers' Summit",
+   year         = 2004,
+   month        = jun,
+   pages        = "79-84",
+   location     = "Ottawa, Canada"
+}
+
+
+@INPROCEEDINGS{BGG03,
+   author       = "Besz\'edes, \'Arp\'ad and Gergely, Tam\'as and Gyim\'othy, Tibor and L\'oki, G\'abor and Vid\'acs, L\'aszl\'o",
+   title        = "Optimizing for Space : Measurements and Possibilities for Improvement",
+   booktitle    = "Proceedings of the 2003 GCC Developers' Summit",
+   year         = 2003,
+   month        = may,
+   pages        = "7-20",
+   location     = "Ottawa, Canada",
+   abstract = "GCC's optimization for space seems to have been often
+neglected, in favor of performance tuning.  With this work we aim at
+determining the weakpoints of GCC concerning its optimization
+capability for space. We compare (1) GCC with two non-free ARM
+cross-compiler toolchains, (2) how GCC evolved from release 3.2.2 to
+version 3.3, and (3) two runtime libraries for the Linux kernel. All
+tests were performed using the C front end and for the ARM target both
+as standalone and as Linux executables. The test suite is comprised of
+applications from well-known benchmark suites such as SPEC and
+Mediabench.  An optimal combination of compiler (and linker) options
+with respect to minimal code size is elaborated as well. We conclude
+that GCC 3.3 steadily improves with respect to version 3.2.2 and that
+it is only about 11% behind a high-performance non-free compiler. At
+the same time, we were able to document a number of issues that
+deserve further investigation in order to improve code generation for
+space."
+}
+
+
+% The following entries were added on November 2, 2004.
+
+@INPROCEEDINGS{Krishnaswamy02,
+ author = {Arvind Krishnaswamy and Rajiv Gupta},
+ title = {Profile guided selection of ARM and thumb instructions},
+ booktitle = {Proceedings of the joint conference on Languages, compilers and tools for embedded systems},
+ year = {2002},
+ isbn = {1-58113-527-0},
+ pages = {56--64},
+ location = {Berlin, Germany},
+ doi = {http://doi.acm.org/10.1145/513829.513840},
+ publisher = {ACM Press},
+ }
+
+@ARTICLE{Cooper99a,
+  author =       "Keith D. Cooper and Philip J. Schielke and Devika
+                 Subramanian",
+  title =        "Optimizing for Reduced Code Space using Genetic
+                 Algorithms",
+  journal =      "ACM SIG{\-}PLAN Notices",
+  volume =       "34",
+  number =       "7",
+  pages =        "1--9",
+  month =        jul,
+  year =         "1999",
+  coden =        "SINODQ",
+  ISSN =         "0362-1340",
+  bibdate =      "Tue Aug 31 06:24:16 1999",
+  acknowledgement = ack-nhfb,
+}
+
+@INPROCEEDINGS{Pugh99,
+   author 	= "William Pugh",
+   title 	= "Compressing {Java} Class Files",
+   booktitle 	= pldi,
+   pages        = "247--258",
+   year 	= 1999
+}
+
+@INPROCEEDINGS{Rayside99,
+   author 	= "Derek Rayside and Evan Mamas and Erik Hons",
+   title 	= "Compact Java Binaries for Embedded Systems",
+   booktitle 	= "Cascon",
+   month        = nov,
+   year 	= 1999,
+   pages        = "1--14"
+}
+
+@INPROCEEDINGS{Lucco00,
+  author =       "Steven Lucco",
+  title =        "Split-Stream Dictionary Program Compression",
+  booktitle =    pldi,
+  address =      "Vancouver, British Columbia",
+  month =        jun # " 18--21,",
+  year =         "2000",
+  pages =        "27--34",
+}
+
+@TECHREPORT{kf96,
+  author =       "Michael Franz and Thomas Kistler",
+  title =        "A Tree-Based Alternative to Java Byte-Codes",
+  institution =  "Department of Information and Computer Science,
+                 University of California, Irvine",
+  type =         "techreport",
+  number =       "96-58",
+  month =        dec,
+  year =         "1996",
+  url =          "http://www.ics.uci.edu/~franz/publications/C9703a%20TreeBasedAlternative.pdf",
+  abstract =     "Despite the apparent success of the Java Virtual
+                 Machine, its lackluster performance makes it ill-suited
+                 for many speed-critical ap- plications. Although the
+                 latest just-in-time compilers and dedicated Java
+                 processors try to remedy this situation, optimized code
+                 compiled directly from a C program source is still
+                 orders of magnitude faster than software transported
+                 via Java byte-codes. This is true even if the Java
+                 byte-codes are subsequently further translated into
+                 native code. In this paper, we claim that these
+                 performance penalties are not a neces- sary consequence
+                 of machine-independence, but related to Java's partic-
+                 ular intermediate representation. We have constructed a
+                 prototype and are further developing a software
+                 transportability scheme founded on a tree-based
+                 alternative to Java byte-codes. This tree-based
+                 intermediate representation is not only twice as
+                 compact as Java byte-codes, but also contains more
+                 detailed semantic information, some of which is
+                 critical for advanced code optimizations. Our
+                 architecture not only provides on-the-fly code
+                 generation from this intermediate representation, but
+                 also continuous re-optimization of the existing
+                 code-base by a low-priority background process. The
+                 re-optimization process is guided by up-to-the-minute
+                 profiling data, leading to superior optimization
+                 results.",
+}
+
+@ARTICLE{Horspool99,
+  title =        "Tailored Compression of Java Class Files",
+  author =       "R. Nigel Horspool and Jason Corless",
+  journal =      "Software -- Practice and Experience",
+  volume =       28,
+  number =       12,
+  year =         1999,
+  pages =        "1253--1268"
+}
+
+@ARTICLE{Earle82,
+   author 	= "W. Earle",
+   title  	= "Compress {ROM} programs with a math-function interpreter",
+   journal	= "Electronic design news",
+   month 	= mar,
+   year   	= 1982
+}
+
+@ARTICLE{Turner86,
+   author 	= "N. Turner",
+   title  	= "The right to Assemble. Code compression with mini-interpreters",
+   journal	= "Dr. Dobbs journal",
+   month 	= may,
+   pages        = "110--111",
+   year   	= 1986
+}
+
+@ARTICLE{Hehner77,
+    title={Information Content of Programs and Operation Encoding},
+    author={Eric C. R. Hehner},
+    area={Programming Methodology},
+    pages={290--297},
+    journal=jacm,
+    month=apr,
+    year=1977,
+    volume=24,
+    number=2,
+    keywords={},
+    cr64-categories={},
+    source={http://theory.lcs.mit.edu/~jacm/jacm.bib}
+}
+
+@ARTICLE{Hehner76,
+  author =       "Eric C. R. Hehner",
+  title =        "Computer design to minimize memory requirements",
+  journal =      "Computer",
+  volume =       "9",
+  number =       "8",
+  pages =        "65--70",
+  month =        aug,
+  year =         "1976",
+  coden =        "CPTRB4",
+  ISSN =         "0018-9162",
+  bibdate =      "Thu Dec 12 07:20:54 MST 1996",
+  abstract =     "It is shown that matching the instructions and their
+                 representations to the distributions of usage can save
+                 75\% of the space taken by contemporary machine
+                 representations. The gain in space may be accompanied
+                 by a reduction in execution time due to more efficient
+                 use of data paths. Variable-length codes can also
+                 eliminate all forms of overflow from machine-language,
+                 and greatly reduce the probability of overflow in
+                 data.",
+  acknowledgement = ack-nhfb,
+  classification = "722; 723",
+  journalabr =   "Computer",
+  keywords =     "computer programming languages; computers",
+}
+
+@ARTICLE{Piu98,
+  author =       "Ian Piumarta and Fabio Riccardi",
+  title =        "Optimizing Direct-threaded Code by Selective
+                 Inlining",
+  journal =      "ACM SIG{\-}PLAN Notices",
+  volume =       "33",
+  number =       "5",
+  pages =        "291--300",
+  month =        may,
+  year =         "1998",
+  coden =        "SINODQ",
+  ISBN =         "0-89791-987-4",
+  ISSN =         "0362-1340",
+  bibdate =      "Thu May 13 12:37:28 MDT 1999",
+  url =          "http://www.acm.org:80/pubs/citations/proceedings/pldi/277650/p291-piumarta/",
+  acknowledgement = ack-nhfb,
+  annote =       "Published as part of the Proceedings of PLDI'98.",
+  keywords =     "algorithms; experimentation; languages; performance",
+  subject =      "{\bf D.3.4} Software, PROGRAMMING LANGUAGES,
+                 Processors, Optimization. {\bf D.3.4} Software,
+                 PROGRAMMING LANGUAGES, Processors, Interpreters. {\bf
+                 D.3.4} Software, PROGRAMMING LANGUAGES, Processors,
+                 Translator writing systems and compiler generators.",
+}
+
+@ARTICLE{Wil72,
+  author   = "W. T. Wilner",
+  title    = "Burroughs {B1700} memory utilization",
+  journal  = "AFIPS FJCC",
+  volume   = "41",
+  year     = "1972",
+  pages    = "579--586"
+}
+
+@INPROCEEDINGS{ICCAD94*391,
+  author =       "I.-J. Huang and A. M. Despain",
+  title =        "Generating Instruction Sets and Microarchitectures
+                 from Applications",
+  pages =        "391--396",
+  booktitle =    "International Conference on Computer-Aided Design",
+  month =        nov,
+  publisher =    "IEEE Computer Society Press",
+  address =      "Los Alamitos, Ca., USA",
+  year =         "1994",
+  ISBN =         "0-89791-690-5",
+}
+
+@INPROCEEDINGS{HolmerDes91,
+  author =       "Bruce K. Holmer and Alvin M. Despain",
+  title =        "Viewing Instruction Set Design as an Optimization
+                 Problem",
+  booktitle =    "Proceedings of the 24th Annual International Symposium
+                 on Microarchitecture",
+  address =      "Albuquerque, New Mexico",
+  month =        nov # " 18--20,",
+  organization = "ACM SIGMICRO and IEEE Computer Society TC-MICRO",
+  year =         "1991",
+  pages =        "153--162",
+}
+
+@ARTICLE{Bennet89,
+  author =       "J. P. Bennet and G. C. Smith",
+  title =        "The Need for Reduced Byte Stream Instruction Sets",
+  journal =      "The Computer Journal",
+  volume =       "32",
+  pages =        "370--373",
+  year =         "1989",
+  refs =         "8",
+  checked =      "19950714",
+  source =       "Main library",
+  abstract =     "In the design of byte stream instruction sets, a
+                 popular methodology has been peephole refinement of a
+                 canonical instruction set. By this we mean the addition
+                 of extra opcodes over the minimum necessary for a
+                 viable machine in order to handle particular common
+                 cases more efficiently. Such machines by the use of
+                 ``escape'' sequences often have hundreds of different
+                 opcodes. By comparison, modern ``Reduced Instruction
+                 Set'' computers, which do not take the byte stream
+                 approach, have a very small number of opcodes. We argue
+                 that in theact there is not significant benefit to be
+                 achieved by having byte stream instructions sets of
+                 more than around 100 opcodes. A formal basis for the
+                 selection of extra opcodes is used in justifying this
+                 view.",
+  sjb =          "The conclusion is ``Only add those extra opcodes you
+                 really need. There really is little point in filling up
+                 an instruction set with little-used opcodes. Fewer
+                 opcodes means less microcod, and more silicon for
+                 hardware assistance. It also makes the compiler
+                 writer's job easier, with fewer options in selecting
+                 opcodes.''",
+}
+
+@PhdThesis{Bennet87,
+  author =       "J. P. Bennet",
+  title =        "A Methodology for Automated Design of Computer
+                 Instruction Sets",
+  school =       "University of Cambridge",
+  year =         "1987",
+  reffrom =      "Bennett:Smith:bcs:cj:1989",
+}
+
+@INPROCEEDINGS{SohVaj89,
+  author =       "G. S. Sohi and S. Vajapeyam",
+  title =        "Tradeoffs in Instruction Format Design for Horizontal
+                 Architectures",
+  pages =        "15--25",
+  booktitle =    "Proceedings of the 3rd International Conference on
+                 Architectural Support for Programming Languages and
+                 Operating System (ASPLOS)",
+  journal =      "SIGPLAN Notices",
+  volume =       "24",
+  number =       "5",
+  month =        may,
+  year =         "1989",
+  publisher =    "ACM Press",
+  address =      "New York, NY",
+  ISBN =         "0-89791-300-0",
+}
+
+@MASTERSTHESIS{Dube96,
+   author 	= "Danny Dubé",
+   title  	= "Un système de programmation {Scheme} pour micro-contrôleur",
+   school 	= "Université de Montréal",
+   month        = apr,
+   year   	= 1996
+}
+
+@INPROCEEDINGS{dube2000,
+  title =        "{BIT}: A very compact {Scheme} system for embedded applications",
+  author =       "Danny Dubé",
+  booktitle =    "Proceedings of the Workshop on Scheme and Functional Programming",
+  editor =       "Matthias Felleisen",
+  month =         sep,
+  year =         "2000",
+}
+
+@TECHREPORT{Leroy90,
+  pages =        "100 p.",
+  type =         "Technical Report",
+  number =       "RT-0117",
+  institution =  "Inria, Institut National de Recherche en Informatique
+                 et en Automatique",
+  title =        "The {ZINC} experiment : an economical implementation
+                 of the {ML} language",
+  bibdate =      "February 1, 1990",
+  author =       "Xavier Leroy",
+  language =     "A",
+  year      =     1990
+}
+
+@TECHREPORT{Nekritch00,
+  author =       "Yakov Nekritch",
+  title =        "Decoding of Canonical Huffman Codes with Look-Up
+                 Tables",
+  institution =  "University of Bonn, Department of Computer Science",
+  number =       "85209-CS",
+  month =        jan,
+  year =         "2000",
+  url =          "ftp://theory.cs.uni-bonn.de/pub/reports/cs-reports/1999/85209-CS.ps.gz",
+  note =         "Wed, 06 Sep 2000 09:44:01 GMT",
+}
+
+@TECHREPORT{Nekritch98,
+  author =       "Yakov Nekritch",
+  title =        "On Efficient Decoding of Huffman Codes",
+  institution =  "Department of Computer Science, University of Bonn",
+  number =       "85190-CS",
+  month =        may,
+  year =         "1998",
+  url =          "ftp://theory.cs.uni-bonn.de/pub/reports/cs-reports/1998/85190-cs.ps.gz",
+  abstract =     "Two new algorithms for space- and time-efficient
+                 decoding of minimum redundancy codes with numerical
+                 sequence property are investigated. Both algorithms are
+                 particularly efficient in case of large source
+                 alphabets and limited memory resources. Practical
+                 experiments show a reduction of up to 50 $\backslash$\%
+                 and more in the number of operations.",
+  note =         "Wed, 12 Nov 98 14:00:00 GMT",
+}
+
+@INPROCEEDINGS{Moffat95,
+  title =        "Space-Efficient Construction of Optimal Prefix Codes",
+  author =       "Alistair Moffat and Andrew Turpin and Jyrki Katajainen",
+  pages =        "192--201",
+  booktitle =    dcc,
+  month =        mar,
+  year =         "1995",
+}
+
+@ARTICLE{ITC::Hashemian95,
+  title =        "Memory Efficient and High-Speed Search {Huffman} Coding",
+  author =       "Reza Hashemian",
+  pages =        "2576--2581",
+  journal =    "IEEE Transactions on Communications",
+  month =        oct,
+  year =         "1997",
+  volume =       "43",
+  number =       "10",
+}
+
+@ARTICLE{Schwartz1964,
+  title =        "Generating a Canonical Prefix Encoding",
+  author =       "Eugene S. Schwartz and Bruce Kallick",
+  pages =        "166--169",
+  journal =      "Communications of the ACM",
+  month =        mar,
+  year =         "1964",
+  volume =       "7",
+  number =       "3",
+}
+
+@INPROCEEDINGS{CPM::Klein1997,
+  title =        "Space- and Time-Efficient Decoding with Canonical
+                 {Huffman} Trees",
+  author =       "Shmuel T. Klein",
+  booktitle =    "Combinatorial Pattern Matching, 8th Annual Symposium",
+  editor =       "Alberto Apostolico and Jotun Hein",
+  address =      "Aarhus, Denmark",
+  month =        "30~" # jun # "--2~" # jul,
+  year =         "1997",
+  series =       "Lecture Notes in Computer Science",
+  volume =       "1264",
+  publisher =    "Springer",
+  ISBN =         "ISBN 3-540-63220-4",
+  pages =        "65--75",
+}
+
+@ARTICLE{Chung:1997:EHD,
+  author =       "Kuo-Liang Chung",
+  title =        "Efficient {Huffman} decoding",
+  journal =      "Information Processing Letters",
+  volume =       "61",
+  number =       "2",
+  pages =        "97--99",
+  day =          "28",
+  month =        feb,
+  year =         "1997",
+  coden =        "IFPLAT",
+  ISSN =         "0020-0190",
+  mrclass =      "68P05 (94B35)",
+  mrnumber =     "1 439 875",
+  bibdate =      "Sat Nov 7 17:55:50 MST 1998",
+  acknowledgement = ack-nhfb,
+}
+
+@TECHREPORT{Raeder98,
+  type =         "Technical Report",
+  number =       "RR-3578",
+  institution =  "Inria, Institut National de Recherche en Informatique
+                 et en Automatique",
+  title =        "Java Bytecode Compression for Embedded Systems",
+  language =     "A",
+  pages =        "22 p.",
+  bibdate =      "December 1, 1998",
+  year      =     1998,
+  author =       "Lars Raeder Clausen and Ulrik Pagh Schultz and Charles
+                 Consel and Gilles Muller",
+  abstract =     "La conception et l'execution d'un programme dans un
+                 systeme embarque doit repondre a des contraintes en
+                 taille de memoire et en temps de reponse. Dans cet
+                 article, nous montrons qu'il est possible de factoriser
+                 automatiquement des sequences d'instructions communes
+                 pour du code intermediaire Java. Sur un ensemble de
+                 programmes Java representatifs, nous avons obtenu un
+                 taux moyen de compression de la taille du code
+                 intermediare de 30\%, ceci avec un temps d'execution
+                 augmente au plus de 30\%. L'implementation de la
+                 factorisation requiert des modifications mineures au
+                 sein d'une machine virtuelle Java. Nous decrivons ces
+                 modifications pour la machine virtuelle d'Harissa et
+                 presentons un algorithme permettant de factoriser le
+                 code intermediaire. A program executing on an embedded
+                 system or similar environment faces limited memory
+                 resources and fixed time constrains. We demonstrate how
+                 factorization of common instruction sequences can be
+                 automatically applied to Java bytecode programs. Based
+                 on a series of experiments, we argue that program size
+                 is reduced by 30\% on the average, typically with an
+                 execution time penalty of less than 30\%. The one-time,
+                 minor modifications necessary to make a standard Java
+                 interpreter compatible with this factorized code are
+                 presented on the Harissa virtual machine, together with
+                 an algorithm for performing the factorization of Java
+                 bytecode.",
+}
+
+@INPROCEEDINGS{ivme03,
+   author   = "Mario Latendresse and Marc Feeley",
+   title    = "Generation of Fast Interpreters for Huffman Compressed Bytecode",
+   month    = jun,
+   booktitle = ivme,
+   publisher = acm,
+   year     = 2003
+}
+
+@PHDTHESIS{phd:Latendresse2000,
+   author 	= "Mario Latendresse",
+   title  	= "Génération de machines virtuelles pour l'exécution de programmes compressés",
+   school 	= "Université de Montréal",
+   month        = may,
+   year   	= 2000,
+   note = "Available at www.iro.umontreal.ca/\verb+~+latendre/publications/"
+}
+
+@TECHREPORT{Report1219,
+ Author = "Mario Latendresse and Marc Feeley",
+ Title = "Fast and Compact decoding of {Huffman} encoded virtual instructions",
+ Type = "Technical Report",
+ year = "2002",
+ institution = "University of Montreal",
+ number = "DIRO-1219",
+ month = nov,
+ note = "Available at www.iro.umontreal.ca/\verb+~+latendre/publications/"
+}
+
+
+%%% The following entries were taken from Rik van de Wiel Bibliography.
+
+@MISC{compact-bib,
+  author = "Mario Latendresse",
+  title  = "{The {C}ode {C}ompaction/{C}ompression Bibliography}",
+  url    = "http://www.iro.umontreal.ca/~latendre",
+  howpublished= "{\tt http://www.iro.umontreal.ca}",
+  organization = "University of Montreal"
+}
+
+@TECHREPORT{Araujo2000a,
+   author 	= "Guido Ara\'{u}jo and Paulo Centoducatte and Rodolfo Azevedo and Ricardo Pannain",
+   title  	= "Expression Tree Based Algorithms for Code Compression on Embedded {RISC} Architectures",
+   number 	= "IC-00-01",
+   month 	= jan, 
+   year 	= 2000,
+   institution 	= "Instituto de Computa\c{c}\~{a}o - UNICAMP",
+   pages 	= 27,
+   language 	= engl,
+   note   	= ""
+}
+
+@ARTICLE{Araujo2000,
+   author 	= "Guido Ara\'{u}jo and Paulo Centoducatte and Rodolfo Azevedo and Ricardo Pannain",
+   title  	= "Expression Tree Based Algorithms for Code Compression on Embedded {RISC} Architectures",
+   journal	= ieeetvs,
+   month	= mar,
+   year   	= 2000
+}
+
+@INPROCEEDINGS{Araujo98,
+   author 	= "Guido Ara\'{u}jo and Paulo Centoducatte and Mario C\^{o}rtes and Ricardo Pannain",
+   title  	= "Code compression based on operand factorization",
+   booktitle   	= micro,
+   year   	= 1998,
+   month	= dec,
+   pages	= "194--201",
+   note   	= ""
+}
+
+@BOOK{ARM95,
+   author	= "ARM",
+   title    	= "An Introduction to Thumb",
+   publisher	= "Advanced {RISC} Machines Ltd.",
+   year     	= 1995,
+   month    	= mar,
+   note   	= ""   
+}
+
+@ARTICLE{Anantha90,
+   author    	= "Kasi Anantha and Fred Long",
+   title     	= "Code Compaction for Parallel Architectures",
+   journal   	= spe,
+   pages     	= "537--554",
+   volume    	= 20,
+   number    	= 6,
+   month     	= jun,
+   year      	= 1990
+}
+
+@INPROCEEDINGS{Bandyopadhyay87,
+   author    	= "S. Bandyopadhyay and V.S. Begwani and R.B. Murray",
+   title     	= "Compiling for the {CRISP} Microprocessor",
+   booktitle 	= compcon,
+   year      	= 1987
+}
+
+@INPROCEEDINGS{Baxter98,
+   author    	= "I. Baxter and A. Yahin and L. Moura and M. Sant'Anna and L. Bier",
+   title     	= "Clone Detection Using Abstract Syntax Trees",
+   booktitle 	= "Proc. of the Int'l. Conf. on Software Maintenance",
+   year      	= 1998,
+   note   	= ""   
+}
+
+@INPROCEEDINGS{Benes97,
+   author    	= "Martin Benes and Steven M. Nowick and Andrew Wolfe",
+   title     	= "A Fast Asynchronous {H}uffman Decoder for Compressed-Code Embedded Processors",
+   booktitle 	= async,
+   month     	= sep,
+   year      	= 1998
+}
+
+@INPROCEEDINGS{Benes98,
+   author    	= "Martin Benes and Andrew Wolfe and Steven M. Nowick",
+   title     	= "A High-Speed Asynchronous Decompression Circuit for Embedded 
+    	     	   Processors",
+   booktitle 	= arvlsi,
+   month     	= sep,
+   year      	= 1997,
+}
+
+@INPROCEEDINGS{Berenbaum87a,
+   author    	= "A.D. Berenbaum and D.R. Ditzel and H.R. McLellen",
+   title     	= "Introduction to the {CRISP} Instruction Set Architecture",
+   booktitle 	= compcon,
+   year      	= 1987
+}
+
+@INPROCEEDINGS{Berenbaum87b,
+   author    	= "A.D. Berenbaum and D.R. Ditzel and H.R. McLellen",
+   title     	= "Architectural Innovations in the {CRISP} Microprocessor",
+   booktitle 	= compcon,
+   year      	= 1987
+}
+
+@TECHREPORT{Bird96,
+   author      	= "P. Bird and T. Mudge",
+   title       	= "An Instruction Stream Compression Technique",
+   institution 	= "EECS Department, University of Michigan",
+   type        	= "Technical Report",
+   number      	= "CSE-TR-319-96",
+   year        	= 1996,
+   month       	= nov   
+}
+
+@INPROCEEDINGS{Breternitz97,
+   author 	= "Breternitz Jr., Mauricio and Roger Smith",
+   title 	= "Enhanced Compression Techniques to Symplify Program Decompression
+          	   and Execution",
+   booktitle 	= iccd,
+   pages 	= "170--176",
+   year 	= 1997,   
+   month 	= oct   
+}
+
+@TECHREPORT{Bunda92,
+   title  	= "16-bit Vs. 32-bit Instructions for Pipelined Microprocessors",
+   author 	= "John D. Bunda and Donald S. Fussell and Roy M. Jenevein and W. C. Athas",
+   institution	= "The University of Texas at Austin, Department of Computer Sciences",
+   type   	= "Technical Report",
+   number 	= "TR-92-39",
+   year   	= 1992,
+   note   	= "" #
+		  ""
+}
+
+@INPROCEEDINGS{Bunda99,
+   author 	= "Benda S. Baker and Udi Manber and Robert Muth",
+   title 	= "Compressing Differences of Executable Code",
+   booktitle 	= wcsss,
+   year 	= 1999,
+   month 	= may,
+   note		= ""   
+}
+
+@INPROCEEDINGS{Cate91,
+   author 	= "Vincent Cate and Thomas Gross",
+   title 	= "Integration of Compression and Caching for a Two-Level
+                   File System",
+   pages 	= "200--211",
+   booktitle 	= asplos,
+   year 	= 1991
+}
+
+@INPROCEEDINGS{Centoducatte99,
+   author 	= "Paulo Centoducatte and Ricardo Pannain and Guido Ara\'{u}jo",
+   title  	= "Compressed Code Execution on {DSP} Architectures",
+   booktitle   	= isss,
+   year   	= 1999,
+   month	= nov,
+   note   	= ""
+}
+
+@TECHREPORT{Chen97a,
+   author 	= "I. Chen and P. Bird and T. Mudge",
+   title  	= "The Impact of Instruction Compression on I-cache Performance",
+   institution	= "EECS Department, University of Michigan",
+   type   	= "Technical Report",
+   number 	= "CSE-TR-330-97",
+   year   	= 1996
+}
+
+@PHDTHESIS{Chen97b,
+   author 	= "I. Chen",
+   title  	= "Enhancing Instruction Fetching Mechanism Using Data Compression",
+   school 	= "University of Michigan",
+   year   	= 1997
+}
+
+@ARTICLE{Clausen2000,
+   author 	= "L. R. Clausen and U. P. Schultz and C. Consel and G. Muller",
+   title  	= "Java bytecode compression for low-end embedded systems",
+   journal	= acmpls,
+   volume 	= 22,
+   number 	= 3,
+   pages	= "471--489",
+   year   	= 2000
+}
+
+
+@TECHREPORT{Clausen98,
+   author 	= "L. R. Clausen and U. P. Schultz and C. Consel and G. Muller",
+   title  	= "Java Bytecode Compression for Embedded Systems",
+   institution	= "Institut de Recherche en Informatique et Systemes Aleatoires",
+   type   	= "Technical Report",
+   number 	= "No 1213",
+   year   	= 1998,
+   note		= ""   
+}
+
+@INPROCEEDINGS{Conte96,
+   author 	= "Thomas M. Conte and Sanjeev Banerjia and Sergei Larin and
+                   Kishore N. Menezes and Aumedh W. Sathaye",
+   title 	= "Instruction fetch mechanisms for VLIW architectures with compressed encodings",
+   booktitle 	= isca,
+   year 	= 1996,
+   month 	= nov,
+   note		= ""   
+}
+
+@INPROCEEDINGS{Cooper99,
+   author 	= "Keith D. Cooper and Nathaniel McIntosh",
+   title 	= "Enhanced Code Compression for Embedded {RISC} Processors",
+   booktitle 	= pldi,
+   year 	= 1999,
+   month 	= may,
+   note		= ""   
+}
+
+@INPROCEEDINGS{Davidson82,
+   author 	= "Jack W. Davidson and Chris W. Fraser",
+   title 	= "Eliminating Redundant Object Code",
+   booktitle 	= popl,
+   pages 	= "128--132",
+   year 	= 1982
+}
+
+@ARTICLE{Debray2000b,
+   author 	= "Saumya Debray and William Evans and Robert Muth and Bjorn de Sutter",
+   title  	= "Compiler Techniques for Code Compaction",
+   journal	= acmpls,
+   volume 	= 22,
+   number 	= 2,
+   pages	= "378--415",
+   year   	= 2000,
+   note		= ""   
+}
+
+@TECHREPORT{Debray2000a,
+   author 	= "Saumya Debray and William Evans and Robert Muth and Bjorn de Sutter",
+   title  	= "Compiler Techniques for Code Compaction",
+   institution	= "Department of Computer Science, The University of Arizona",
+   type   	= "Technical Report",
+   number 	= "TR00-04",
+   month	= mar,
+   year   	= 2000,
+   note		= ""   
+}
+
+@INPROCEEDINGS{Debray99,
+   author 	= "Saumya Debray and William Evans and Robert Muth",
+   title 	= "Compiler Techniques for Code Compression",
+   booktitle 	= wcsss,
+   year 	= 1999,
+   month 	= may,
+   note		= "" #
+                  "  Note: Preliminary version of article in " # acmpls # "."
+}
+
+@INPROCEEDINGS{Debray2002,
+   author 	= "Saumya Debray and William Evans",
+   title 	= "Profile-Guided Code Compression",
+   booktitle 	= pldi,
+   year 	= 2002,
+   month 	= jun,
+   note		= ""
+}
+
+@INPROCEEDINGS{Ditzel87,
+   author 	= "D. Ditzel and H.R. McLellan and A.D. Berenbaum",
+   title 	= "The Hardware Architecture of the {CRISP} Microprocessor",
+   booktitle 	= isca,
+   month 	= jun,
+   year 	= 1987   
+}
+
+@ARTICLE{Elias87,
+   author 	= "Peter Elias",
+   title  	= "Interval and Recency Rank Source Coding: Two On-line 
+          	   Adaptive Variable-length Schemes",
+   journal	= ieeetit,
+   volume 	= 33,
+   number 	= 1,
+   year   	= 1987
+}
+
+@INPROCEEDINGS{Ernst97,
+   author 	= "Jens Ernst and Christopher W. Fraser and William Evans and
+            	   Steven Lucco and Todd A. Proebsting",
+   title 	= "Code Compression",
+   booktitle 	= pldi,
+   year 	= 1997,   
+   month 	= jun,    
+   pages 	= "358--365",
+   note   	= ""
+}
+
+@PHDTHESIS{Franz94,
+   author 	= "M. Franz",
+   title  	= "Code-Generation On-The-Fly: A Key to Portable Software",
+   school 	= "Swiss Federal Institute of Technology",
+   year   	= 1994
+}
+
+@INCOLLECTION{Franz97a,
+   author 	= "M. Franz",
+   title  	= "Adaptive Compression of Syntax Trees and Iterative Dynamic Code
+         	   Optimization: Two Basic Technologies for Mobile-Object Systems",
+   editor       = "Jan Vitek and Christian Tschudi",		   
+   booktitle	= "Mobile Object Systems: Towards the Programmable Internet,",
+   series       = "Lecture Notes in Computer Science",
+   publisher    = springer,
+   pages	= "263--276",
+   year   	= 1997,
+   note   	= ""
+}	
+
+@ARTICLE{Franz97b,
+   author 	= "M. Franz and T. Kistler",
+   title  	= "Slim Binaries",
+   journal      = cacm,
+   volume       = 40,
+   number       = 12,
+   month        = dec,
+   year   	= 1997,
+   pages        = "87--94"
+}
+
+@INPROCEEDINGS{Fraser84,
+   author 	= "C. Fraser and E. Myers and A. Wendt",
+   title 	= "Analyzing and Compressing Assembly Code",
+   booktitle 	= acmcc,
+   year 	= 1984,   
+   volume 	= 19,
+   pages 	= "117--121",
+   month 	= jun    
+}
+
+@ARTICLE{Fraser86,
+  title =        "Integrating code generation and optimization",
+  author =       "Christopher W. Fraser and Alan L. Wendt",
+  booktitle =    acmcc,
+  address =      "Palo Alto, CA",
+  journal =      "SIGPLAN Notices",
+  volume =       21,
+  number =       7,
+  month =        "June",
+  year =         1986,
+  pages =        "242--248"
+}
+
+@ARTICLE{Fraser95,
+   author 	= "Christopher W. Fraser and  Todd A. Proebsting",
+   title  	= "Custom Instruction Sets For Code Compression",
+   journal	= "Unpublished manuscript." # 
+                  "{\tt http://research.microsoft.com/\~{}toddpro/papers/pldi2.ps}",
+   year   	= 1995,
+   note   	= ""
+}
+	
+@INPROCEEDINGS{Fraser99,
+   author 	= "Christopher W. Fraser",
+   title 	= "Automatic Inference of Models for Statistical Code Compression",
+   booktitle 	= pldi,
+   year 	= 1999,
+   month 	= may,
+   pages 	= "242--246",
+   note		= ""
+
+}
+
+@INPROCEEDINGS{Fraser2001,
+   author 	= "Christopher W. Fraser and Will Evans",
+   title 	= "Bytecode compression via profiled grammar rewriting",
+   booktitle 	= pldi,
+   year 	= 2001,
+   month 	= jun,
+   note		= ""
+}
+
+@ARTICLE{Frieder76,
+  title =        "A Process for the Determination of Addresses
+                  in Variable Length Addressing",
+  author =       "Gideon Frieder and Harry J. Saal",
+  journal =      cacm,
+  volume =       19,
+  number =       6,
+  month =        "June",
+  year =         1976,
+  pages =        "335--338"
+}
+
+@BOOK{Game98,
+   author	= "Mark Game and Alan Booker",
+   title    	= "CodePack: Code Compression for {PowerPC} Processors",
+   publisher	= "International Business Machines (IBM) Corporation",
+   year     	= 1998
+}
+
+@PHDTHESIS{Geschke72,
+   author 	= "Charles M. Geschke",
+   title  	= "Global Program Optimizations",
+   school 	= "Carnegie Mellon University",
+   year  	= 1972
+}
+
+@ARTICLE{Gonzales99,
+   author    	= "David Ruimy Gonzales",
+   title     	= "Micro-{RISC} Architecture for the Wireless Market",
+   journal   	= "IEEE Micro",
+   volume	= 19,
+   number	= 4,
+   year   	= 1999
+}
+
+@ARTICLE{Hanson83,
+  title =        "Simple Code Optimization",
+  author =       "David B. Hanson",
+  journal =      "Software -- Practice and Experience",
+  volume =       13,
+  number =       8,
+  year =         1983,
+  pages =        "745--763"
+}
+
+@ARTICLE{Hoogerbrugge99,
+   author    	= "Jan Hoogerbrugge and Lex Augusteijn and Jeroen Trum and 
+                   Rik van de Wiel",
+   title     	= "A Code Compression System Based on Pipelined Interpreters",
+   journal   	= spe,
+   volume	= 29,
+   number	= 11,
+   year   	= 1999
+}
+
+@INPROCEEDINGS{Huffman52,
+   author 	= "D.A. Huffman",
+   title 	= "A Method for Construction of Minimum Redundancy Codes",
+   booktitle 	= pieee,
+   volume 	= 40,
+   year 	= 1952,
+   pages 	= "1098--1101"
+}
+
+@BOOK{IBM98,
+   author	= "IBM",
+   title    	= "CodePack: {PowerPC} Code Compression Utility User's Manual. Version 3.0",
+   publisher	= "International Business Machines (IBM) Corporation",
+   year     	= 1998
+}
+
+@INPROCEEDINGS{Ishiura97,
+   author 	= "N. Ishiura and M. Yamaguchi",
+   title 	= "Instruction Code Compression for Application Specific VLIW Processors
+		   Based on Automatic Field Partitioning",
+   booktitle 	= "Proc. of the Workshop on Synthesis and System Integration of Mixed Technologies",
+   year 	= 1997,
+   month 	= dec,    
+   pages 	= "105--109"
+}
+
+@ARTICLE{Kemp98,
+  title =        "A Decompression Core for {PowerPC}",
+  author =       "T.M. Kemp and R.M. Montoye and J.D. Harper and J.D. Palmer and D.J. Auerbach",
+  journal =    	 "{IBM} Journal of Research and Development",
+  volume =       42,
+  number =       6,
+  month =        "Nov",
+  year =         1998
+}
+
+@INPROCEEDINGS{Kirovski97,
+   author 	= "Darko Kirovski and Johnson Kin and William H. Mangione-Smith",
+   title 	= "Procedure Based Program Compression",
+   booktitle 	= micro,
+   year 	= 1997,   
+   month 	= dec,    
+   note   	= ""
+}
+
+@BOOK{Kissell97,
+   author 	= "K. Kissell",
+   title  	= "{MIPS16}: High-density {MIPS} for the Embedded Market",
+   publisher 	= "Silicon Graphics {MIPS} Group",
+   year   	= 1997
+}
+
+@INPROCEEDINGS{Kjelso97,
+   author 	= "Morten Kjels\o and Mark Gooch and Simon Jones",
+   title 	= "Design and Performance of a Main Memory Hardware Data Compressor",
+   booktitle 	= euromicro,
+   publisher 	= csp,
+   year 	= 1996
+}
+
+@INPROCEEDINGS{Koopman92,
+   author 	= "Koopman Jr., Philip",
+   title 	= "A Preliminary Exploration of Optimized Stack Code Generation",
+   booktitle 	= "Proc. of Rochester Forth Conference",
+   year 	= 1992
+}
+
+@ARTICLE{Korolev58,
+   author	= "L. N. Korolev",
+   title	= "Coding and Code Compression",
+   pages	= "328--33",
+   translator	= "Morris D. Friedman",
+   journal	= jacm,
+   month	= oct,
+   year		= 1958,
+   volume 	= 5,
+   number	= 4
+}
+
+@INPROCEEDINGS{Kozuch94,
+   author 	= "M. Kozuch and A. Wolfe",
+   title 	= "Compression of Embedded System Programs",
+   booktitle 	= iccd,
+   year 	= 1994
+}
+
+@TECHREPORT{Kozuch95,
+   author 	= "Michael Kozuch and Andrew Wolfe",
+   title  	= "Performance Analysis of the Compressed Code {RISC} Processor",
+   institution	= "Princeton University Computer Engineering",
+   type   	= "Technical Report",
+   number 	= "CE-A95-2",
+   year   	= 1995
+}
+
+@INPROCEEDINGS{Kreuzer97,
+   author 	= "Werner Kreuzer and Bernhard Wess",
+   title 	= "Cooperative register assignment and code compaction for digital 
+                   signal processors with irregular datapath",
+   booktitle 	= "Proc. Int'l Conf. on Acoustics, Speech and Signal Processing",
+   year 	= 1997
+}
+
+@TECHREPORT{Kunchithapadam99,
+    author 	= "Krishna Kunchithapadam and James R. Larus",
+    title 	= "Using Lightweight Procedures to Improve Instruction Cache Performance",
+    institution = "University of Wisconsin-Madison",
+    number 	= "CS-TR-1999-1390",
+    year 	= 1999,
+    note   	= ""
+}
+
+@ARTICLE{Kwon99,
+   author 	= "Young-Jun Kwon and Danny Parker and Hyuk Jae Lee",
+   title  	= "{TOE}: Instruction Set Architecture for Code Size Reduction
+                   and Two Operations Execution",
+   journal	= "Presented at the International Workshop on Compiler and 
+                   Architecture Support for Embedded Systems. " # np # " yet.",
+   year   	= 1999,
+   month       	= oct,
+   note   	= ""
+}
+	
+
+@INPROCEEDINGS{Latendresse2000,
+   author 	= "Mario Latendresse",
+   title  	= "Automatic Generation of Compact Programs and Virtual Machines for Scheme",
+   booktitle 	= "Proc. of the Workshop on Scheme and Functional Programming",
+   year 	= 2000,
+   month       	= sep,
+   note   	= ""
+}
+
+@INPROCEEDINGS{Larin99,
+   author 	= "S. Y. Larin and T. M. Conte",
+   title 	= "Compiler-driven cached code compression schemes for embedded {ILP} processors",
+   booktitle 	= micro,
+   year 	= 1999,   
+   month 	= nov
+}
+
+@INPROCEEDINGS{Lefurgy97,
+   author 	= "Charles Lefurgy and Peter Bird and I-Cheng Chen and Trevor Mudge",
+   title 	= "Improving Code Density Using Compression Techniques",
+   booktitle 	= micro,
+   year 	= 1997,   
+   month 	= dec,    
+   note   	= ""
+}
+
+@TECHREPORT{Lefurgy98,
+   author      	= "Charles Lefurgy and  Trevor Mudge",
+   title       	= "Code Compression for {DSP}",
+   institution 	= "EECS Department, University of Michigan",
+   type        	= "Technical Report",
+   number      	= "CSE-TR-380-98",
+   year        	= 1998,
+   month       	= nov,
+   note   	= ""
+}
+
+@INPROCEEDINGS{Lefurgy99a,
+   author 	= "Charles Lefurgy and Eva Piccininni and Trevor Mudge",
+   title  	= "Analysis of a High-performance Code Compression Method",
+   booktitle	= micro,
+   year   	= 1999,
+   month       	= nov,
+   note   	= ""
+}
+	
+@ARTICLE{Lefurgy99b,
+   author 	= "Charles Lefurgy and Trevor Mudge",
+   title  	= "Fast Software-managed Code Decompression",
+   journal	= "Presented at the International Workshop on Compiler and 
+                   Architecture Support for Embedded Systems. " # np # " yet.",
+   year   	= 1999,
+   month       	= jul,
+   note   	= ""
+}
+	
+@PHDTHESIS{Lefurgy2000a,
+   author 	= "Charles Lefurgy",
+   title  	= "Efficient Execution of Compressed Programs",
+   school 	= "University of Michigan",
+   month 	= jun,  
+   year   	= 2000,
+   note   	= ""
+}
+	
+@INPROCEEDINGS{Lefurgy2000,
+   author 	= "Charles Lefurgy and Eva Piccininni and Trevor Mudge",
+   title  	= "Reducing Code Size with Run-time Decompression",
+   booktitle	= "Proc. of the International Symposium on High-Performance Computer Architecture",
+   year   	= 2000,
+   month       	= jan,
+   note   	= ""
+}
+
+@INPROCEEDINGS{Lekatsas2001,
+   author 	= "H. Lekatsas and J. Henkel and W. Wolf",
+   title 	= "Design and Simulation of a Pipelined Decompression Architecture for Embedded Systems",
+   booktitle 	= isss,
+   month       	= oct,
+   year 	= 2001,
+   note		= ta
+}
+
+@INPROCEEDINGS{Lekatsas2000c,
+   author 	= "H. Lekatsas and Joerg Henkel and Wayne Wolf",
+   title 	= "Code Compression as a Variable in Hardware/Software Co-Design",
+   booktitle 	= "International Workshop on Hardware/Software Co-Design",
+   year 	= 2000,
+   note   	= ""
+}
+
+@INPROCEEDINGS{Lekatsas2000b,
+   author 	= "H. Lekatsas and Joerg Henkel and Wayne Wolf",
+   title 	= "Code Compression for Low Power Embedded System Design",
+   booktitle 	= dac,
+   year 	= 2000,   
+   note   	= ""
+}
+
+@INPROCEEDINGS{Lekatsas2000a,
+   author 	= "H. Lekatsas and Joerg Henkel and Wayne Wolf",
+   title 	= "Arithmetic Coding for Low Power Embedded System Design",
+   booktitle 	= dcc,
+   pages	= "430--439",
+   year 	= 2000,   
+   note   	= ""
+}
+
+@ARTICLE{Lekatsas99a,
+   author 	= "H. Lekatsas and Wayne Wolf",
+   title 	= "{SAMC}: A Code Compression Algorithm for Embedded Processors",
+   journal =      "IEEE Transactions on CAD",
+   volume =       "18",
+   number =       "12",
+   pages =        "1689--1701",
+   month =        dec,
+   year =         "1999",
+   note   	= ""
+
+}
+ 
+@INPROCEEDINGS{Lekatsas98,
+   author 	= "Haris Lekatsas and Wayne Wolf",
+   title 	= "Code Compression for Embedded Systems",
+   booktitle 	= dac,
+   year 	= 1998,   
+   note   	= ""
+}
+
+@INPROCEEDINGS{Lekatsas99,
+   author 	= "Haris Lekatsas and Wayne Wolf",
+   title 	= "Random Access Decompression using Binary Arithmetic Coding",
+   booktitle 	= dcc,
+   year 	= 1999,   
+   month       	= mar,
+   pages	= "306--315",
+   note   	= ""
+}
+
+@INPROCEEDINGS{Lekatsas2002,
+   author 	= "Haris Lekatsas and {J\"{o}rg} Henkel and Venkata Jakkula",
+   title 	= "Design of a One-cycle Decompression Hardware for Performance Increase in Embedded Systems",
+   booktitle 	= dac,
+   year 	= 2002,   
+   month       	= jun,
+   pages	= "34--39"
+}
+
+@INPROCEEDINGS{Liao95,
+   author 	= "Stan Liao and S. Devadas and K Keutzer",
+   title 	= "Code Density Optimization for Embedded {DSP} Processors 
+         	   Using Data Compression Techniques",
+   booktitle 	= arvlsi,
+   year 	= 1995,
+   note   	= ""
+}
+
+@ARTICLE{Liao95a,
+  title =        "Storage Assignment to Decrease Code Size",
+  author =       "Stan Liao and Srinivas Devadas and Kurt Keutzer
+                  and Steve Tjiang and Albert Wang",
+  booktitle =    "Proceedings of the ACM SIGPLAN '95 Conference on
+                  Programming Language Design and Implementation",
+  journal =      "SIGPLAN Notices",
+  volume =       30,
+  number =       6,
+  month=         "June",
+  year =         1995,
+  pages =        "186--195",
+  note   	= ""
+}
+
+@INPROCEEDINGS{Liao95b,
+  title =        "Code Optimization Techniques for Embedded {DSP} Microprocessors",
+  author =       "Stan Liao and Srinivas Devadas and Kurt Keutzer
+                  and Steve Tjiang and Albert Wang",
+   booktitle 	= dac,
+   year 	= 1995
+}
+
+@INPROCEEDINGS{Liao95c,
+  title =        "Instruction Selection Using Binate Covering for Code Size Optimization",
+  author =       "Stan Liao and Srinivas Devadas and Kurt Keutzer and Steve Tjiang",
+  booktitle = 	 iccad,
+  pages =        "393--399",
+  year 	= 	 1995
+}
+
+@PHDTHESIS{Liao96,
+   author 	= "Stan Liao",
+   title  	= "Code Generation and Optimization for Embedded Digital Signal Processors",
+   school 	= "Massachusetts Institute of Technology",
+   month 	= jun,  
+   year   	= 1996,
+   note   	= ""
+}
+
+@ARTICLE{Liao96a,
+  author =       "Stan Liao and Srinivas Devadas and Kurt Keutzer and
+                 Steven Tjiang and Albert Wang",
+  title =        "Storage assignment to decrease code size",
+  journal =      "ACM Transactions on Programming Languages and Systems",
+  volume =       "18",
+  number =       "3",
+  pages =        "235--253",
+  month =        may,
+  year =         "1996",
+  coden =        "ATPSDT",
+  ISSN =         "0164-0925",
+  abstract =     "DSP architectures typically provide indirect
+                 addressing modes with autoincrement and decrement. In
+                 addition, indexing mode is generally not available, and
+                 there are usually few, if any, general-purpose
+                 registers. Hence, it is necessary to use address
+                 registers and perform address arithmetic to access
+                 automatic variables. Subsuming the address arithmetic
+                 into autoincrement and decrement modes improves the
+                 size of the generated code. In this article we present
+                 a formulation of the problem of optimal storage
+                 assignment such that explicit instructions for address
+                 arithmetic are minimized. We prove that for the case of
+                 a single address register the decision problem is
+                 NP-complete, even for a single basic block. We then
+                 generalize the problem to multiple address registers.
+                 For both cases heuristic algorithms are given, and
+                 experimental results are presented.",
+  keywords =     "algorithms; experimentation; management; measurement;
+                 theory"
+}
+
+@ARTICLE{Liao98,
+  title =        "A text compression based method for code size minimization in embedded systems",
+  author =       "Stan Liao and Kurt Keutzer and Srinivas Devadas",
+  journal =      "ACM Transactions on Design Automation of Electronic Systems",
+  volume =       4,
+  number =       1,
+  month=         "January",
+  year =         1999
+}
+
+@INPROCEEDINGS{Lucco2000,
+  title =        "Split-Stream Dictionary Program Compression",
+  author =       "Steven Lucco",
+  booktitle = 	 pldi,
+  pages =        "27--34",
+  year 	= 	 2000
+}
+
+@ARTICLE{Marks80,
+  title =        "Compilation to Compact Code",
+  author =       "Brian Marks",
+  journal =      "IBM Journal of Research and Development",
+  volume =       "24",
+  number =       "6",
+  month =        "November",
+  year =         "1980",
+  pages =        "684--691"
+}
+
+@INPROCEEDINGS{Markwardt96,
+  title =        "Efficient Operand Passing for {RISC} Processors",
+  author =       "Gert Markwardt and G{\"{u}}nter Kemnitz and Rainer G. Spallek and Patrick Schulz",
+  booktitle =    "Proc. of Workshop on Interaction between Compilers and Computer Architecture",
+  address =      "San Jose, California",
+  month =        "February",
+  year =         1996
+}
+
+
+@INPROCEEDINGS{Massalin87,
+  title =        "Superoptimizer -- A Look at the Smallest Program",
+  author =       "Henry Massalin",
+  booktitle =    {Proceedings of the Second International
+                  Conference on Architectural Support for
+                  Programming Languages and Operating Systems},
+  address =      "Palo Alto, California",
+  year =         "1987",
+  pages =        "122--126"
+}
+
+@ARTICLE{McCreight76,
+  title =        "A Space-Economical Suffix Tree
+                  Construction Algorithm",
+  author =       "Edward M. McCreight",
+  journal =      jacm,
+  volume =       "23",
+  number =       "2",
+  month =        "April",
+  year =         "1976",
+  pages =        "262--272"
+}
+
+@ARTICLE{McKeeman65,
+  title =        "Peephole Optimization",
+  author =       "W. M. McKeeman",
+  journal =      "Communications of the ACM",
+  volume =       "8",
+  number =       "7",
+  month =        "July",
+  year =         "1965",
+  pages =        "443--444"
+}
+
+@INPROCEEDINGS{Miretsky99,
+  title =        "{RISC} Code Compression Model",
+  author =       "Alex Miretsky and Arie Ben-Efraim and Vitaly Sukonik and
+                  Alexander Saper and Avi Ginsberg and Rami Natan and Amit Dor",
+  booktitle =    esc,
+  address =      "Chicago, Illinois",
+  month =        "March",
+  year =         1999
+}
+
+
+@INPROCEEDINGS{Murtagh84,
+  title =        "A Less Dynamic Memory Allocation Scheme
+                  for Algol-like Languages",
+  author =       "Thomas P. Murtagh",
+  booktitle =    "Conference Record of the Eleventh Annual ACM
+                  Symposium on Principles of Programming Languages",
+  address =      "Salt Lake City, UT",
+  month =        "January",
+  year =         1984,
+  pages =        "283--289"
+}
+
+@ARTICLE{Murtagh91,
+  title =        "An Improved Storage Management Scheme
+                  For Block Structured Languages",
+  author =       "T. P. Murtagh",
+  journal =      "ACM Transactions on Programming Languages and Systems",
+  volume =       13,
+  number =       3,
+  month =        "July",
+  year =         1991,
+  pages =        "327--398"
+}
+
+@ARTICLE{Nam99,
+  title =	   "Improving Dictionary-based Code Compression in {VLIW} Architectures",
+  author =	   "Sang-Joon Nam and In-Cheol Park and Chong-Min Kyung",
+  journal =	   "IEICE Trans. on Fundamentals of Electronics, 
+                    Communications and Computer Sciences",
+  volume =	   "E82-A",
+  number =	   11,
+  month =	   nov,
+  year =	   1999,
+  pages =	   "2318--2324",
+  note  = 	   ""
+}
+
+@TECHREPORT{Peck75,
+   author 	= "J.E.L. Peck and V.S. Manis and W.E. Webb",
+   title  	= "Code Compaction for Minicomputers with {INTCODE} and {MINICODE}",
+   institution	= "Department of Computer Science, University of Britisch Columbia",
+   type   	= "Technical Report",
+   number 	= "TR-75-02",
+   year   	= 1975
+}
+
+@INPROCEEDINGS{Pittman87,
+   author 	= "Thomas Pittman",
+   title 	= "Two-Level Hybrid Interpreter. Native Code Execution for Combined
+         	   Space-Time Program Efficientcy",
+   booktitle 	= acmcc,
+   year 	= 1987,   
+   pages 	= "150--152"
+}
+
+@INPROCEEDINGS{Proebsting95,
+   author 	= "T. Proebsting",
+   title 	= "Optimizing a {ANSI} {C} Interpreter with Superoperators",
+   booktitle 	= popl,
+   year 	= 1995,   
+   pages 	= "322--332"
+}
+
+@INPROCEEDINGS{Rao99,
+   author 	= "Amit Rao and Santosh Pande",
+   title 	= "Storage Assignment Optimizations to Generate Compact and Efficient Code on Embedded {DSP}s",
+   booktitle 	= pldi,
+   year 	= 1999,
+   month 	= may
+}
+
+@ARTICLE{Richards71,
+  title =        "How To Keep the Addresses Short",
+  author =       "Donald L. Richards",
+  journal =      "Communications of the ACM",
+  volume =       14,
+  number =       5,
+  month =        "May",
+  year =         1971,
+  pages =        "346--349"
+}
+
+@PHDTHESIS{Rosenberg83,
+   author 	= "Jonathan Rosenberg",
+   title  	= "Generating Compact Code for Generic Subprograms",
+   school 	= "Carnegie Mellon University",
+   year   	= 1983
+}
+
+@INPROCEEDINGS{Ruggieri88,
+  title =        "Lifetime Analysis of Dynamically Allocated Objects",
+  author =       "Cristina Ruggieri and Thomas P. Murtagh",
+  booktitle =    "Conference Record of the Fifteenth Annual ACM
+                  Symposium on Principles of Programming Languages",
+  address =      "San Diego, California",
+  month =        "January",
+  year =         1988,
+  pages =        "285--293"
+}
+
+@MASTERSTHESIS{Runeson2000a,
+   author 	= "Johan Runeson",
+   title  	= "Code compression through procedural abstraction before register allocation",
+   school 	= "University of Uppsala",
+   month 	= mar,
+   year   	= 2000,
+   note  	= "" #
+                  "Note from author: In this version not all experimental results are correct;
+		   this will be corrected in a later version."
+}
+
+@INPROCEEDINGS{Runeson2000b,
+   author 	= "J. Runeson and S. {Nystr\"{o}m} and J. {Sj\"{o}din}",
+   title 	= "Optimizing Code Size through Procedural Abstraction",
+   year 	= 2000,
+   booktitle 	= lctes,
+   note  	= ""
+}
+
+@INPROCEEDINGS{Sugino93,
+  title =        "{DSP} Code Optimization by Use of Code Compression Method
+         	  Based on Neural Network",
+  author =       "Nobuhiko Sugino and Koji Tamura and Akinori Nishihara",  
+  booktitle =    "Proc. Digital Signal Processing Symposium",
+  month =        oct,
+  year =         1993,
+  pages =        "29--34"
+}
+
+@INPROCEEDINGS{Sutter2001,
+  title =        "Combining Global Code and Data Compaction",
+  author =       "Bjorn de Sutter and Bruno de Bus and Koen de Bosschere and Saumya Debray",  
+  booktitle =    lctes,
+  month =        jun,
+  year =         2001,
+  note  	= ""
+}
+
+@INPROCEEDINGS{Srivastava93,
+   author 	= "A. Srivastava and A.M. Despain",
+   title 	= "Prophetic Branches: A Branch Architecture for Code Compaction
+		   and Efficient Execution",
+   year 	= 1993,
+   booktitle 	= micro,
+   pages 	= "94--99"
+}
+
+@INPROCEEDINGS{Taunton91,
+   author 	= "M. Taunton",
+   title 	= "Compressed Executables: An Exercise in Thinking Small",
+   year 	= 1991,
+   booktitle 	= "Proc. of the Summer 1991 USENIX Conference",
+   address 	= "Nashville, {TN}",
+   pages 	= "385--403",
+}
+
+@ARTICLE{Turley95,
+   author 	= "J.L. Turley",
+   title  	= "Thumb Squeezes {ARM} Code Size",
+   journal	= microrep,
+   volume  	= 9,
+   number 	= 4,
+   month 	= mar,
+   year   	= 1995
+}
+
+@ARTICLE{Turley97,
+   author 	= "J.L. Turley",
+   title  	= "M.Core Shrinks Code, Power Budgets",
+   journal	= microrep,
+   pages 	= "12--15",
+   month 	= oct,
+   year   	= 1997
+}
+
+@ARTICLE{Warren78,
+  title =        "Static Main Storage Packing Problems",
+  author =       "Warren Jr., Henry S.",
+  journal =      "Acta Informatica",
+  volume =       "9",
+  year =         "1978",
+  pages =        "355--376"
+}
+
+@TECHREPORT{Wegdam98,
+   author 	= "Maarten Wegdam",
+   title  	= "Compact Code through Custom Instruction Sets",
+   institution	= "Philips Research Laboratories, Eindhoven, The Netherlands",
+   type   	= "Nat. Lab. Unclassified Report",
+   number 	= "UR 822/98",
+   year   	= 1998,
+   note   	= ""
+}
+
+@INPROCEEDINGS{Weiner73,
+  title =        "Linear pattern matching algorithms",
+  author =       "P. Weiner",
+  booktitle =    "Conference Record, IEEE 14th Annual Symposium on
+                 Switching and Automata Theory",
+  pages =        "1--11",
+  year =         "1973"
+}
+
+@INPROCEEDINGS{Wolfe92,
+   author 	= "A. Wolfe and A. Chanin",
+   title 	= "Executing Compressed Programs on an Embedded {RISC} Architecture",
+   booktitle 	= micro,
+   year 	= 1992
+}
+
+@INPROCEEDINGS{Xie2001,
+   author 	= "Y. Xie and H. Lekatsas and W. Wolf",
+   title 	= "Code Compression for {VLIW} Processors",
+   booktitle 	= dcc,
+   month 	= mar,    
+   year 	= 2001
+}
+
+@INPROCEEDINGS{Xie2001a,
+   author 	= "Y. Xie and H. Lekatsas and W. Wolf",
+   title 	= "A Code Decompression Architecture for {VLIW} Processors",
+   booktitle 	= micro,
+   month 	= dec,    
+   year 	= 2001,
+   note		= sub
+}
+
+@INPROCEEDINGS{Xie2001b,
+   author 	= "Y. Xie and H. Lekatsas and W. Wolf",
+   title 	= "Compression Ratio and Decompression Overhead Tradeoffs 
+                   in Code Compression for {VLIW} Architectures",
+   booktitle 	= "Proc. Int'l. Conference on ASIC",
+   month 	= oct,    
+   year 	= 2001,
+   note		= sub
+}
+
+@INPROCEEDINGS{Yoshida97,
+   author 	= "Yukihiro Yoshida and Boa-Yu Song and Hiroyuki Okuhata and 
+         	   Takao Onoye and Isao Shirakawa",
+   title 	= "An Object Compression Approach to Embedded Processors",
+   booktitle 	= "Proc. Int'l. Symp. on Low-Power Electronics and Design",
+   year 	= 1997,   
+   month 	= aug    
+}
+
+@MASTERSTHESIS{Zastre95,
+   author 	= "M. Zastre",
+   title  	= "Compacting Object Code via Parameterized Procedural Abstraction",
+   school 	= "University of Victoria",
+   year   	= 1995
+}
+

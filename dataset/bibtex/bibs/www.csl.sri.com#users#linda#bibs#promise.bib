@@ -1,0 +1,187 @@
+@article{Papadopoulos2001229,
+title = {Analysis and synthesis of the behaviour of complex programmable electronic systems in conditions of failure},
+journal = {Reliability Engineering \& System Safety},
+volume = {71},
+number = {3},
+month = {March},
+pages = {229--247},
+year = {2001},
+doi = {10.1016/S0951-8320(00)00076-4},
+author = {Y. Papadopoulos and J. McDermid and R. Sasse and G. Heiner},
+keywords = {Automated safety analysis, Mechanical fault tree synthesis, Software hazard analysis, Safety cases},
+abstract = {This paper introduces a new method for safety analysis which modifies, automates and integrates a number of classical safety analysis techniques to address some of the problems currently encountered in complex safety assessments. The method enables the analysis of a complex programmable electronic system from the functional level through to low levels of its hardware and software implementation. In the course of the assessment, the method integrates design and safety analysis and harmonises hardware safety analysis with the hazard analysis of software architectures. It also introduces an algorithm for the synthesis of fault trees, which mechanises and simplifies a large and traditionally problematic part of the assessment, the development of fault trees. In this paper, we present the method and discuss its application on a prototypical distributed brake-by-wire system for cars. We argue that the method can help us rationalise and simplify an inherently creative and difficult task and therefore gain a consistent and meaningful picture of how a complex programmable system behaves in conditions of failure.}
+}
+
+@article{Wolforth:2010:GSA:1779608.1779612,
+ author = {Wolforth, Ian and Walker, Martin and Grunske, Lars and Papadopoulos, Yiannis},
+ title = {Generalizable safety annotations for specification of failure patterns},
+ journal = {Software: Practice and Experience},
+ volume = {40},
+ number = {5},
+ month = {April},
+ year = {2010},
+ pages = {453--483},
+ doi = {10.1002/spe.966},
+ keywords = {compositional safety evaluation, dependability, failure patterns, generalizable safety annotations},
+ abstract = {Components in programmable systems often exhibit patterns of failure that are independent of function or system context. In this paper, we show that it is possible to capture, and reuse where appropriate, such patterns for the purposes of system safety analysis. We describe a language that enables abstract specification of failure behaviour and define the syntax and semantics of this language. The language extends concepts originally defined in HiP-HOPS, a technique that enables a largely automated form of compositional system safety analysis. The paper describes how this language can be used to describe component failure patterns and demonstrates how it can be applied using a simple fuel system example. The approach is evaluated on a set of retrospective industrial case studies, where data-mining and reverse engineering techniques are applied in order to identify hidden patterns in legacy safety analyses. Results show clear potential for practical use of patterns in HiP-HOPS. We argue that careful specification and reuse of failure patterns in conjunction with a tool that automates Fault Tree and Failure Modes and Effects Analysis can help to simplify complex safety assessments},
+} 
+
+@article{Wolforth:2010:CRC:1813452.1813460,
+ author = {Wolforth, Ian and Walker, Martin and Papadopoulos, Yiannis and Grunske, Lars},
+ title = {Capture and reuse of composable failure patterns},
+ journal = {International Journal of Critical Computer-Based Systems},
+ volume = {1},
+ number = {1/2/3},
+ month = {February},
+ year = {2010},
+ pages = {128--147},
+ doi = {10.1504/IJCCBS.2010.031710},
+ keywords = {safety patterns, reuse in safety analysis, automated FMEA, automated FTA },
+ abstract = {Emerging safety analysis techniques use composition of failure models or fault simulation in formal models of a system to determine relationships between the causes and effects of failure. Most recent work has focused on developing system modelling and algorithms for automatic safety analysis. However, little work has focused on developing principles to improve reuse of safety analyses in the context of these techniques. In this paper, we describe a generalised failure logic (GFL) that can capture abstract reusable characteristics of failure behaviour and show how the GFL can be used with templates for the specification of reusable and inheritable component failure patterns. Finally, we illustrate how such patterns can be used with HiP-HOPS, an automated fault tree and FMEA synthesis tool, in order to simplify safety analysis while formalising and improving reuse. Benefits of this approach are discussed in the light of a case study on a brake-by-wire example.}
+}
+
+@INPROCEEDINGS{5542620,
+ author={Mahmud, N. and Papadopoulos, Y. and Walker, M.},
+ booktitle={International Conference on Dependable Systems and Networks Workshops},
+ title={A translation of State Machines to temporal fault trees},
+ year={2010},
+ month=jul,
+ pages={45--51},
+ abstract={State Machines (SMs) are increasingly being used to gain a better understanding of the failure behaviour of safety-critical systems. In dependability analysis, SMs are translated to other models, such as Generalized Stochastic Petri Nets (GSPNs) or combinatorial fault trees. The former does not enable qualitative analysis, whereas the second allows it but can lead to inaccurate or erroneous results, because combinatorial fault trees do not capture the temporal semantics expressed by SMs. In this paper, we discuss the problem and propose a translation of SMs to temporal fault trees using Pandora, a recent technique for introducing temporal logic to fault trees, thus preserving the significance of the temporal sequencing of faults and allowing full qualitative analysis. Since dependability models inform the design of condition monitoring and failure prevention measures, improving the representation and analysis of dynamic effects in such models can have a positive impact on proactive failure avoidance.},
+ keywords={Pandora technique;combinatorial fault trees;condition monitoring measurement;dependability analysis;failure prevention measurement;generalized stochastic Petri Nets;proactive failure avoidance;safety-critical systems;state machines;temporal fault trees;temporal logic;Petri nets;finite state machines;temporal logic;trees (mathematics);},
+ doi={10.1109/DSNW.2010.5542620},
+}
+
+@incollection {springerlink:10.1007/978-3-540-75101-4_12,
+   author = {Walker, Martin and Bottaci, Leonardo and Papadopoulos, Yiannis},
+   title = {Compositional Temporal Fault Tree Analysis},
+   booktitle = {Computer Safety, Reliability, and Security (SAFECOMP)},
+   series = {Lecture Notes in Computer Science},
+   pages = {106--119},
+   volume = {4680},
+   doi = {10.1007/978-3-540-75101-4_12},
+   abstract = {HiP-HOPS (Hierarchically-Performed Hazard Origin and Propaga-tion Studies) is a recent technique that partly automates Fault Tree Analysis (FTA) by constructing fault trees from system topologies annotated with component-level failure specifications. HiP-HOPS has hitherto created only classical combinatorial fault trees that fail to capture the often significant temporal ordering of failure events. In this paper, we propose temporal extensions to the fault tree notation that can elevate HiP-HOPS, and potentially other FTA techniques, above the classical combinatorial model of FTA. We develop the formal foundations of a new logic to represent event sequences in fault trees using Priority-AND, Simultaneous-AND, and Priority-OR gates, and present a set of temporal laws to identify logical contradictions and remove redundancies in temporal fault trees. By qualitatively analysing these temporal trees to obtain ordered minimal cut-sets, we show how these extensions to FTA can enhance the safety of dynamic systems.},
+   keywords = {temporal fault trees, formal FTA, automated FTA, fault tree synthesis, formal safety analysis},
+   year = {2007}
+}
+
+@article{Walker20091115,
+ title = {Qualitative temporal analysis: Towards a full implementation of the Fault Tree Handbook},
+ journal = {Control Engineering Practice},
+ volume = {17},
+ number = {10},
+ pages = {1115--1125},
+ year = {2009},
+ doi = {10.1016/j.conengprac.2008.10.003},
+ author = {Martin Walker and Yiannis Papadopoulos},
+ keywords = {Fault trees, Temporal logic, Safety critical, Safety analysis, Reliability},
+ abstract = {The Fault Tree Handbook has become the de facto standard for fault tree analysis (FTA), defining the notation and mathematical foundation of this widely used safety analysis technique. The Handbook recognises that classical combinatorial fault trees employing only Boolean gates cannot capture the potentially critical significance of the temporal ordering of failure events in a system. Although the Handbook proposes two dynamic gates that could remedy this, a Priority-AND and an Exclusive-OR gate, these gates were never accurately defined. This paper proposes extensions to the logical foundation of fault trees that enable use of these dynamic gates in an extended and more powerful FTA. The benefits of this approach are demonstrated on a generic triple-module standby redundant system exhibiting dynamic behaviour.},
+ month = {October}
+}
+
+@INPROCEEDINGS{5521571,
+ author={Xiaocheng Ge and Paige, R.F. and McDermid, J.A.},
+ booktitle={International Conference on Secure Software Integration and Reliability Improvement Companion},
+ title={Analysing System Failure Behaviours with PRISM},
+ year={2010},
+ month={June},
+ pages={130--136},
+ abstract={The verification of safety-critical systems using formal techniques is not something new. Traditionally, safety-critical systems are verified using hazard analysis techniques, e.g., fault tree analysis. As safety-critical systems have become larger and more complex, several analysis techniques with compositional capabilities were developed. However, these techniques were not able to analyse stochastic systems. In this paper, we present a model-based compositional safety analysis technique (i.e., failure propagation analysis) and explore the feasibility of integrating this safety analysis technique with techniques of probabilistic model checking, more precisely the PRISM model checker. By doing so, we make it possible to rigorously verify a model while system failure behaviours are quantitatively analysed.},
+ keywords={PRISM model checker;compositional capability;failure analysis;fault tree analysis;formal techniques;hazard analysis techniques;model-based compositional safety analysis technique;probabilistic model checking;safety critical system verification;stochastic system;failure analysis;formal verification;safety-critical software;stochastic processes;},
+ doi={10.1109/SSIRI-C.2010.32},
+}
+
+@incollection {springerlink:10.1007/978-3-642-04468-7_18,
+   author = {Ge, Xiaocheng and Paige, Richard and McDermid, John},
+   title = {Probabilistic Failure Propagation and Transformation Analysis},
+   booktitle = {Computer Safety, Reliability, and Security (SAFECOMP)},
+   series = {Lecture Notes in Computer Science},
+   pages = {215--228},
+   volume = {5775},
+   doi = {10.1007/978-3-642-04468-7_18},
+   abstract = {A key concern in safety engineering is understanding the overall emergent failure behaviour of a system, i.e., behaviour exhibited by the system that is outside its specification of acceptable behaviour. A system can exhibit failure behaviour in many ways, including that from failures of individual or a small number of components. It is important for safety engineers to understand how system failure behaviour relates to failures exhibited by individual components. In this paper, we propose a safety analysis technique, failure propagation and transformation analysis (FPTA), which automatically and quantitatively analyses failures based on a model of failure logic. The technique integrates previous work on automated failure analysis with probabilistic model checking supported by the PRISM tool. We demonstrate the technique and tool on a small, yet realistic safety-related application.},
+   keywords = {failure, safety analysis, probabilistic analysis, component-based system},
+   year = {2009}
+}
+
+@article{Wallace200553,
+ title = {Modular Architectural Representation and Analysis of Fault Propagation and Transformation},
+ journal = {Electronic Notes in Theoretical Computer Science},
+ volume = {141},
+ number = {3},
+ pages = {53--71},
+ year = {2005},
+ doi = {10.1016/j.entcs.2005.02.051},
+ author = {Malcolm Wallace},
+ keywords = {components, architecture, safety-critical, validation},
+ abstract = {This paper describes a modular representation and compositional analysis of a system's hardware and software components, called Fault Propagation and Transformation Calculus (FPTC). We show, given an architectural description of how components are combined into a whole system, together with an FPTC expression of each component's failure behaviour, how the failure properties of the whole system can be computed automatically from the individual FPTC expressions.\par From a safety point of view, this provides some idea of robustness: the system's capability to withstand certain types of failures in individual components. It also provides a way to understand how and where to develop fault accommodation within an architecture.},
+ month = {December},
+}
+
+@article {SPE:SPE1044,
+ author = {Adachi, Masakazu and Papadopoulos, Yiannis and Sharvia, Septavera and Parker, David and Tohdo, Tetsuya},
+ title = {An approach to optimization of fault tolerant architectures using {HiP-HOPS}},
+ journal = {Software: Practice and Experience},
+ publisher = {John Wiley & Sons, Ltd.},
+ issn = {1097-024X},
+ doi = {10.1002/spe.1044},
+ pages = {},
+ keywords = {dependability analysis, fault tolerance, active safety, multi-objective optimization, genetic algorithms},
+ year = {2011},
+ abstract = {New processes for the design of dependable systems must address both cost and dependability concerns. They should also maximize the potential for automation to address the problem of increasing technological complexity and the potentially immense design spaces that need to be explored. In this paper we show a design process that integrates system modelling, automated dependability analysis and evolutionary optimization techniques to achieve the optimization of designs with respect to dependability and cost from the early stages. Computerized support is provided for difficult aspects of fault tolerant design, such as decision making on the type and location of fault detection and fault tolerant strategies. The process is supported by HiP-HOPS, a scalable automated dependability analysis and optimization tool. The process was applied to a Pre-collision system for vehicles at an early stage of its design. The study shows that HiP-HOPS can overcome the limitations of earlier work based on Reliability Block Diagrams by enabling dependability analysis and optimization of architectures that may have a network topology and exhibit multiple failure modes.},
+}
+
+@article{Papadopoulos200577,
+title = {Evolving car designs using model-based automated safety analysis and optimisation techniques},
+journal = {Journal of Systems and Software},
+volume = {76},
+number = {1},
+pages = {77--89},
+year = {2005},
+doi = {10.1016/j.jss.2004.06.027},
+author = {Yiannis Papadopoulos and Christian Grante},
+keywords = {Fault tree synthesis, Automated safety analysis, Software hazard analysis, Fault tolerance, Multi-objective optimization},
+abstract = {Development processes in the automotive industry need to evolve to address increasing demands for integration of car functions over common networked infrastructures. New processes must address cost and safety concerns and maximize the potential for automation to address the problem of increasing technological complexity. In this paper, we propose a design process in which techniques for semi-automatic safety and reliability analysis of systems models are combined with multi-objective optimisation techniques to assist the gradual development of designs that can meet reliability and safety requirements and maximise profit within pragmatic development cost constraints. The proposed process relies on tools to automate some aspects of the design that we believe could be automated and thus simplified without loss of the creative input brought in the process by designers.}
+}
+
+@ARTICLE{1035218, 
+author={Isermann, R. and Schwarz, R. and Stolzl, S.}, 
+journal={Control Systems, IEEE}, 
+title={Fault-tolerant drive-by-wire systems}, 
+year={2002}, 
+month=oct, 
+volume={22}, 
+number={5}, 
+pages={64--81}, 
+abstract={The article begins with a review of electronic driver assisting systems such as ABS, traction control, electronic stability control, and brake assistant. We then review drive-by-wire systems with and without mechanical backup. Drive-by-wire systems consist of an operating unit with an electrical output, haptic feedback to the driver, bus systems, microcomputers, power electronics, and electrical actuators. For their design safety, integrity methods such as reliability, fault tree and hazard analysis, and risk classification are required. Different fault-tolerance principles with various forms of redundancy are considered, resulting in fail-operational, fail-silent, and fail-safe systems. Fault-detection methods are discussed for use in low-cost components, followed by a review of principles for fault-tolerant design of sensors, actuators, and communication. We evaluate these methods and principles and show how they can be applied to low-cost automotive components and drive-by-wire systems. A brake-by-wire system with electronic pedal and electric brakes is then considered in more detail, showing the design of the components and the overall architecture. Finally, we present conclusions and an outlook for further development of drive-by-wire systems.}, 
+keywords={ ABS; antilock brake systems; brake assistant; brake pedal; bus systems; design safety; drive-by-wire systems; electrical actuators; electrical output; electronic driver assisting systems; electronic stability control; fail-operational systems; fail-safe systems; fail-silent systems; fault tree analysis; fault-detection methods; fault-tolerance; haptic feedback; hazard analysis; integrity methods; low-cost automotive components; mechanical backup; power electronics; redundancy; reliability; risk classification; steering wheel; traction control; automobiles; automotive electronics; brakes; braking; electric actuators; fault diagnosis; fault tolerance; haptic interfaces; redundancy; safety}, 
+doi={10.1109/MCS.2002.1035218}, 
+}
+
+@PhdThesis{MerlePhD2010,
+  author = 	 {G. Merle},
+  title = 	 {Algebraic modelling of Dynamic Fault Trees, contribution to qualitative and quantitative analysis},
+  school = 	 {Ecole Normale Sup\'erieure de Cachan, France},
+  year = 	 {2010},
+  month = 	 jun,
+  url = 	 {\url{http://hal.archives-ouvertes.fr/docs/00/50/20/12/PDF/PhD_thesis_GM.pdf}},
+}
+
+@ARTICLE{5361394,
+author={Merle, G. and Roussel, J.-M. and Lesage, J.-J. and Bobbio, A.},
+journal={IEEE Transactions on Reliability}, 
+title={Probabilistic Algebraic Analysis of Fault Trees With Priority Dynamic Gates and Repeated Events},
+year={2010},
+month=mar,
+volume={59},
+number={1},
+pages={250--261},
+keywords={Boolean operators;Markov model;failure distribution;priority dynamic fault trees;priority dynamic gates;probabilistic algebraic analysis;repeated events;Boolean algebra;Markov processes;fault trees;probability;},
+doi={10.1109/TR.2009.2035793},
+}
+
+@Misc{PRISM,
+  key = 	 {{PRISM} Probabilistic Symbolic Model Chekcer},
+  howpublished = {\url{http://www.prismmodelchecker.org/}},
+}
+

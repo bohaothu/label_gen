@@ -1,0 +1,649 @@
+%
+%				Benjamin Bejhoo Kimia
+%
+%	Kimia86		Deblurring Gaussian Blur, Continuous and... (MEng)
+%	Kimia89		Toward a Computational Theory of Shape...
+%	Kimia90		Toward a Computational Theory of Shape...
+%	Kimia90		On the Evolution of Curves via a Function... (TR)
+%	Kimia91		Toward a Computational Theory of Shape (PhD)
+%	Kimia92		Entropy Scale-Space
+%	Kimia92		On the Evolution of Curves via a Function... (JMAA)
+%	Kimia92		Exploring the Shape Manifold...
+%	Kimia92		The Shape Triangle: Parts, Protrusions, & Bends
+%	Kimia93		Analytic Inverse of Discrete Gaussian Blur
+%	Kimia94		On the Shape Triangle
+%	Kimia94		On Optimal Control Methods in Computer Vision...
+%	Kimia95		Shapes, Shocks and Deformations...
+%	Kimia96		Geometric Heat Equation & Nonlinear Diffusion...
+%
+%	Arehart93	Mathematical Morphology: The Hamilton-Jacobi... 
+%	Giblin99	On the Intrinsic Reconstruction of Shape...
+%	Giblin99	On the Local Form and Transitions... (2D)
+%	Giblin00	On the Local Form of Symmetry Sets,... (3D)
+%	Giblin02	Transitions of the 3D Medial Axis Under...
+%	Hummel87	Deblurring Gaussian Blur 
+%	Kimmel95	Shape from Shading via Level Sets
+%	Kong01		On Solving 2D and 3D Puzzles nder Curve Matching
+%	Neskovic94	3D Shape Representation from Curvature-Dependent...
+%	Sapiro93	Implementing Continuous-Scale Morphology
+%	Sebastian01	Alignment-based Recognition of Shape Outlines
+%	Sebastian02	Shock-based Indexing into Large Shape Databases
+%	Sebastian02	Metric-based Shape Retrieval in Large Databases
+%	Sharvit98	Symmetry-based Indexing of Image Databases
+%	Siddiqi94	On the Anatomy of Visual Form
+%	Siddiqi95	Parts of Visual Form: Computational Aspects
+%	Siddiqi96	Parts of Visual Form: Ecological
+%	Siddiqi96	A Shock Grammar for Recognition
+%	Siddiqi97	Geometric Shock-Capturing ENO Schemes...
+%	Siddiqi99	Shocks, Shapes, and Wiggles
+%	Tek95		Image Segmentation by Reaction-Diffusion Bubbles
+%       Tek97CEDT       Interpenetrating Waves & Multiple Generation...
+%	Tek97CVIU	Volumetric Segmentation of Medical Images
+%	Tek98ISMM	Curve Evolution, Wave Propagation, & Math. Morpho.
+%	Tek99ICCV	Symmetry Maps of Free-Form Curve Segments via...
+%	Tek99CVPR	Perceptual organization via symmetry map ...
+%	Tek99PhD	The Role of Symmetry Maps in Representing Objects...
+%	Tek01		Boundary Smoothing via Symmetry Transforms
+%
+
+@MastersThesis{Kimia86Master,
+  author =	{Kimia, B. B.},
+  title =	{Deblurring Gaussian Blur, Continuous and Discrete
+		 Approaches},
+  school = 	{McGill University, Electrical Engineering Dept.},
+  address = 	{Montreal, Canada},
+  year = 	1986,
+}
+
+@TechReport{Kimia89Overview,
+  author =	{B. B. Kimia and A. Tannebaum and S. W. Zucker},
+  title =	{Toward a Computational Theory of Shape: An Overview},
+  OPTtype =	CIMTR,
+  number = 	{CIM-89-13},
+  institution =	{McGill University, Electrical Engineering Dept.},
+  address = 	{Montreal, Canada},
+  year = 	1989,
+  month = 	jun
+}
+
+@Article{Kimia90Overview,
+  author =	{B. B. Kimia and A. Tannebaum and S. W. Zucker},
+  title =	{Toward a Computational Theory of Shape: An Overview},
+  booktitle =	"Proc. of the First European Conf. on Computer Vision
+		  (ECCV)",
+  pages = 	{402--407},
+  year =	{1990},
+  address =	{Antibes, France},
+}
+
+@TechReport{Kimia90Evolution,
+  author =	{B. B. Kimia and A. Tannebaum and S. W. Zucker},
+  title =	{On the Evolution of Curves via a Function of
+		 Curvature, {I}: The Classical Case},
+  OPTtype =	CIMTR,
+  number = 	{CIM-90-3},
+  institution =	{McGill University, Electrical Engineering Dept.},
+  address = 	{Montreal, Canada},
+  year = 	1990,
+  month = 	sep
+}
+
+@PhdThesis{Kimia91Toward,
+  author =	{B. B. Kimia},
+  title =	{Toward a Computational Theory of Shape},
+  school = 	{McGill University, Electrical Engineering Dept.},
+  address = 	{Montreal, Canada},
+  year = 	1991,
+  month = 	jan,
+  note =	{171 pages.}
+}
+
+
+@InProceedings{Kimia92Entropy,
+  author = 	 "Benjamin B. Kimia and Allen R. Tannenbaum and Steven
+		  W. Zucker",
+  title = 	 "Entropy Scale-Space",
+  editor =	 "C. Arcelli and L.P. Cordella and G. S. di Baja",
+  pages =	 "333--344",
+  booktitle =	 "Proceedings of the International Workshop on Visual Shape",
+  year =	 "1992",
+  organization = "IAPR",
+  publisher =	 "Plenum Press",
+  address =	 "Capri, Italy",
+  note =	 "Conference held in May 1991.",
+}
+
+@Article{Kimia92Evolution,
+  author =	{B. B. Kimia and A. Tannenbaum and Steven W. Zucker},
+  title = 	{On the Evolution of Curves via a Function of Curvature.
+		 {I}. {T}he Classical Case},
+  journal = 	{Jour. of Math. An. Ap.},
+  year = 	 1992,
+  month = 	 {January},
+  volume = 	 163,
+  number = 	 2,
+  pages = 	 {438--458}
+}
+
+
+@InProceedings{Kimia92Exploring,
+  author = 	 "Benjamin B. Kimia and Allen R. Tannenbaum and Steven
+		  W. Zucker",
+  title = 	 "Exploring the Shape Manifold: The Role of
+		  Conservation Laws",
+  editor =	 "Ying-Lie O and Alexander Toet and David Foster and
+		  Henk J.A.M. Heijmans and Peter Meer",
+  pages =	 "601--620",
+  booktitle =	 "Shape In Picture: Mathematical Description of Shape
+		  in Grey-level Images",
+  year =	 "1992",
+  series =	 {NATO ASI Series F},
+  volume =	 {126},
+  OPTorganization = "",
+  publisher =	 "Springer-Verlag",
+  address =	 "Driebergen, the Netherlands",
+  month =	 "September",
+  note =	 "Proceedings of the ``Shape in Picture'' NATO workshop.",
+}
+
+@TechReport{Kimia92Triangle,
+  author = 	 "Benjamin B. Kimia and Allen R. Tannenbaum and Steven
+		  W. Zucker",
+  title = 	 "The Shape Triangle: Parts, Protrusions, and Bends",
+  institution =  "McRCIM, McGill University",
+  year = 	 "1992",
+  number =	 "TR-92-15",
+  address =	 "Montreal, Canada",
+  OPTmonth = 	 "",
+  OPTnote = 	 "",
+}
+
+@Article{Kimia93Analytic,
+  author =	{B. B. Kimia and Steven W. Zucker},
+  title = 	{Analytic Inverse of Discrete {G}aussian Blur},
+  journal = 	{Optical Engineering},
+  year = 	 1993,
+  month = 	 jan,
+  volume = 	 32,
+  number = 	 1,
+  pages = 	 {166--176},
+  annote =	{Early version published as Technical Report
+		  TR-85-14R, McRCIM, McGill University, Canada, 1985.}
+}
+
+
+@InProceedings{Kimia94Triangle,
+  author = 	 "Benjamin B. Kimia and Allen R. Tannenbaum and Steven
+		  W. Zucker",
+  title = 	 "On the Shape Triangle",
+  editor =	 "C. Arcelli and L.P. Cordella and G. S. di Baja",
+  series =	 "2nd International Workshop on Visual Form",
+  pages =	 "307--323",
+  booktitle =	 "Aspects of Visual Form Processing",
+  year =	 "1994",
+  organization = "IAPR",
+  publisher =	 "World Scientific",
+  address =	 "Singapore",
+  month =	 "May-June",
+  note =	 "Workshop held in Capri, Italy.",
+  OPTannote = 	 ""
+}
+
+
+@InCollection{Kimia94Optimal,
+  author = 	 "Benjamin B. Kimia and Allen R. Tannenbaum and Steven
+		  W. Zucker",
+  title = 	 "On Optimal Control Methods in Computer Vision and
+		  Image Processing",
+  booktitle =	 "Geometry-Driven Diffusion in Computer Vision",
+  publisher =	 "Kluwer",
+  year =	 "1994",
+  editor =	 "Bart M. ter Haar Romeny",
+  OPTvolume = 	 "",
+  OPTseries = 	 "",
+  pages =	 "307--338",
+  OPTaddress = 	 "",
+  OPTedition = 	 "",
+  month =	 "September",
+  OPTnote = 	 "",
+  OPTannote = 	 ""
+}
+
+@Article{Kimia95Shapes,
+  author = 	 "B. B. Kimia and A. Tannenbaum and Steven W. Zucker",
+  title = 	 "Shapes, Shocks and Deformations {I}: The Components
+		  of Shape and the Reaction--Diffusion Space",
+  journal =	 "IJCV",
+  year =	 "1995",
+  volume =	 "15",
+  OPTnumber = 	 "",
+  pages =	 "189--224",
+  OPTmonth = 	 "",
+  note =	 "Previously published as Technical Report LEMS-105,
+		  Brown University, Eng. Div., Providence, RI, USA,
+		  June 1992.",
+  OPTannote = 	 ""
+}
+
+@Article{Kimia96Geom,
+  author = 	 "Benjamin B. Kimia and Kaleem Siddiqi",
+  title = 	 "Geometric Heat Equation and Nonlinear Diffusion of
+		  Shapes and Images",
+  journal =	 "CVGIP-IU",
+  year =	 "1996",
+  volume =	 "64",
+  number =	 "3",
+  pages =	 "305--322",
+  month =	 "November",
+  OPTannote = 	 ""
+}
+
+%%%%%%%%%%%
+%
+
+@InProceedings{Arehart93,
+  author = 	 "Alan Arehart and Luc Vincent and B. B. Kimia",
+  title = 	 "Mathematical Morphology: The {H}amilton-{J}acobi
+		  Connection",
+  OPTeditor = 	 "",
+  pages =	 "215--219",
+  booktitle =	 "Proc. of ICCV",
+  year =	 "1993",
+  organization = "IEEE Computer Society",
+  OPTpublisher = "",
+  OPTaddress = 	 "",
+  OPTmonth = 	 "",
+  note =	 "Previously published as Technical Report LEMS-108,
+		  Brown University, Eng. Div., Providence, RI, USA,
+		  June 1992.",
+}
+
+@InProceedings{Giblin99CVPR,
+  author = 	 "P. J. Giblin and B. B. Kimia",
+  title = 	 "On the Intrinsic Reconstruction of Shape from its
+		  Symmetries",
+  OPTeditor = 	 "",
+  OPTvolume = 	 "",
+  pages =	 "79--84",
+  booktitle =	 "Proc. of CVPR",
+  year =	 "1999",
+  organization = "IEEE Computer Society",
+  OPTpublisher = "",
+  OPTaddress = 	 "",
+  OPTmonth = 	 "",
+  OPTannote = 	 ""
+}
+
+@InProceedings{Giblin99ICCV,
+  author = 	 "P. J. Giblin and B. B. Kimia",
+  title = 	 "On the Local Form and Transitions of Symmetry Sets,
+		  and Medial Axes, and Shocks in {2D}",
+  OPTeditor = 	 "",
+  OPTvolume = 	 "",
+  pages =	 "385--391",
+  booktitle =	 "Proc. of ICCV",
+  year =	 "1999",
+  organization = "IEEE Computer Society",
+  OPTpublisher = "",
+  address =	 "Greece",
+  month =	 "September",
+  OPTannote = 	 ""
+}
+
+@InProceedings{Giblin00,
+  author = 	 "P. J. Giblin and B. B. Kimia",
+  title = 	 "On the Local Form of Symmetry Sets, and Medial
+		  Axes, and Shocks in {3D}",
+  OPTeditor = 	 "",
+  OPTvolume = 	 "",
+  pages =	 "566--573",
+  booktitle =	 "Proc. of CVPR",
+  year =	 "2000",
+  organization = "IEEE Computer Society",
+  OPTpublisher = "",
+  OPTaddress = 	 "",
+  OPTmonth = 	 "",
+  OPTannote = 	 ""
+}
+
+@InProceedings{Giblin02,
+  author =	{P. J. Giblin and B. B. Kimia},
+  title =	{Transitions of the 3{D} Medial Axis Under a One-Parameter
+		 Family of Deformations},
+  booktitle = 	{Computer Vision --- ECCV},
+  pages =	{719--734}, 
+  year =	{2002},
+  OPTeditor = 	{A. Heyden and G. Sparr and M. Nielsen and P. Johansen},
+  volume =	{II},
+  number =	{LNCS 2351},
+  series =	{Lecture Notes in Computer Science},
+  address =	{Copenhagen, Denmark},
+  month =	{May},
+  OPTorganization = {},
+  publisher =	{Springer},
+  OPTnote = 	 {},
+  OPTannote = 	 {7th European Conference on Computer Vision. 4 volumes}
+}
+
+@Article{Hummel87,
+  author = 	 "Robert Hummel and Benjamin Behjoo Kimia and Steven
+		  Warren Zucker",
+  title = 	 "Deblurring {G}aussian blur",
+  journal =	 "CVGIP",
+  year =	 "1987",
+  volume =	 "38",
+  OPTnumber = 	 "",
+  pages =	 "66--80",
+  OPTmonth = 	 "",
+  OPTnote = 	 "",
+  annote =	 "Previously published as Technical Report 83-15R,
+		  McGill University, Elec. Eng., Montreal, Canada,
+		  July 1984."
+}
+
+@Article{Kimmel95,
+  author = 	 "R. Kimmel and A. M. Bruckstein and B. B. Kimia",
+  title = 	 "Shape from Shading via Level Sets",
+  journal =	 "IJCV",
+  year =	 "1995",
+  volume =	 "16",
+  number =	 "2",
+  OPTpages = 	 "",
+  OPTmonth = 	 "",
+  note =	 "Previously published as Technical Report 9209,
+		  Technion, Israel, June 1992.",
+  annote =	 "Numerical approximation of wavefront propagation
+		 (here, isohypses -- equal height contours -- level
+		 curves). Lambertian (matte) surface. The evolution
+		 eqns. for the isohypses are a pair of nonlinear
+		 initial value PDE. The speed of propagation is a
+		 function of image brightness (i.e., it varies
+		 spatially). Lagrangian (local) vs Eulerian (cartesian
+		 coordinates) formulations (they favor the Eulerian
+		 one). Entropy condition & topological splits.
+		 Potential surface. Water filling from outside
+		 boundary. Starting from extrema."
+}
+
+@InProceedings{Kong01,
+  author =	{Weixin Kong and Benjamin Kimia},
+  title =	{On Solving {2D} and {3D} Puzzles under Curve Matching},
+  booktitle =	{Proc. of CVPR}, 
+  pages =	{583--590}, 
+  year =	{2001}, 
+}
+
+@InProceedings{Neskovic94,
+  author = 	 "Predrag Neskovic and Benjamin B. Kimia",
+  title = 	 "Three-Dimensional Shape Representation from
+		  Curvature-Dependent Deformations",
+  OPTeditor = 	 "",
+  OPTvolume = 	 "",
+  pages =	 "6--10",
+  booktitle =	 "Proc. of ICIP",
+  year =	 "1994",
+  OPTorganization = "",
+  OPTpublisher = "",
+  OPTaddress = 	 "",
+  OPTmonth = 	 "",
+  OPTannote = 	 ""
+}
+
+@Article{Sapiro93,
+  author = 	 "G. Sapiro and B. B. Kimia and R. Kimmel and
+		  D. Shaked  and A.M. Bruckstein",
+  title = 	 "Implementing Continuous-Scale Morphology",
+  journal =	 "Pattern Recognition",
+  year =	 "1993",
+  volume =	 "26",
+  number =	 "9",
+  pages =	 "1363--1372",
+  OPTmonth = 	 "",
+  annote =	 "Numerical approximation of wavefront
+		  propagation. Follows Sethian and Osher.",
+}
+
+@InCollection{Sebastian01,
+  author = 	 {Thomas B. Sebastian and Philip N. Klein and
+		  Benjamin B. Kimia},
+  title = 	 {Alignment-based Recognition of Shape Outlines},
+  booktitle = 	 {Visual Form},
+  pages =	 {606--618},
+  publisher =	 {Springer},
+  year =	 {2001},
+  OPTeditor = 	 {C. Arcelli and L.P. Cordella and G. Sanniti di Baja},
+  number =	 {},
+  series =	 {Lecture Notes in Computer Science},
+  OPTaddress = 	 {},
+  OPTedition = 	 {},
+  OPTmonth = 	 {},
+  OPTnote = 	 {},
+  OPTannote = 	 {}
+}
+
+@InProceedings{Sebastian02ECCV,
+  author = {Thomas B. Sebastian and Philip N. Klein and Benjamin B. Kimia},
+  title = {Shock-based Indexing into Large Shape Databases},
+  booktitle = {ECCV},
+  year = 2002,
+  pages = {Part III:731 - 746}, 
+}
+
+@InProceedings{Sebastian02ICPR,
+  author = {Thomas B. Sebastian and Benjamin B. Kimia},
+  title = {Metric-based Shape Retrieval in Large Databases},
+  booktitle = {ICPR},
+  year = 2002,
+  month = August,
+  address = {Quebec City, Canada},
+  pages = {Accepted -- To Appear},
+}
+
+@Article{Sharvit98,
+  author = 	 "Daniel Sharvit and Jacky Chan and H\"useyin Tek and
+		  Benjamin B. Kimia",
+  title = 	 "Symmetry-based Indexing of Image Databases",
+  journal =	 "Journal of Visual Communication and Image Representation",
+  year =	 "1998",
+  volume =	 "9",
+  number =	 "4",
+  pages =	 "366--380",
+  month =	 "December",
+  OPTannote = 	 ""
+}
+
+@InProceedings{Siddiqi94,
+  author = 	 "Kaleem Siddiqi and Kathryn J. Tresness and Benjamin
+		  B. Kimia",
+  title = 	 "On the Anatomy of Visual Form",
+  editor =	 "C. Arcelli and L.P. Cordella and G. S. di Baja",
+  series =	 "2nd International Workshop on Visual Form",
+  pages =	 "507--521",
+  booktitle =	 "Aspects of Visual Form Processing",
+  year =	 "1994",
+  organization = "IAPR",
+  publisher =	 "World Scientific",
+  address =	 "Singapore",
+  month =	 "May-June",
+  note =	 "Workshop held in Capri, Italy.",
+  OPTannote = 	 ""
+}
+
+@Article{Siddiqi95,
+  author = 	 "Kaleem Siddiqi and Benjamin B. Kimia",
+  title = 	 "Parts of Visual Form: Computational Aspects",
+  journal =	 "IEEE Trans. on PAMI",
+  year =	 "1995",
+  volume =	 "17",
+  number =	 "3",
+  pages =	 "239--251",
+  month =	 "March",
+  annote =	 "Earlier versions published in CVPR'93 (pp.75-81) and 
+		  Tech. Rep. LEMS-114.",
+  keywords =	{Part-line. Partitioning Scheme. Robustness &
+		 Stability. Limb: pair of negative curvature minima
+		 with co-circular boundary tangents. Neck: part-line
+		 which is a local minimum of the diameter of an
+		 inscribed circle. Salience of limbs: (1) Continuation
+		 as a discrete co-circularity condition; (2) Extent of
+		 a part-line: ratio of the major to minor axes of the
+		 largest inscribed ellipse. Salience of necks: (1)
+		 Average curvature disparity computed over a few
+		 scales; (2) Neck's length; (3) Influence region.
+		 Boundary-based algorithms.}
+}
+
+@Article{Siddiqi96,
+  author = 	 "Kaleem Siddiqi and Kathryn J. Tresness and Benjamin
+		  B. Kimia",
+  title = 	 "Parts of Visual Form: Ecological and Psychophysical
+		  Aspects",
+  journal =	 "Perception",
+  year =	 "1996",
+  volume =	 "25",
+  OPTnumber = 	 "",
+  pages =	 "399--424",
+  OPTmonth = 	 "",
+  annote =	 "Previously published as Technical Report LEMS-104,
+		  Brown University, Engineering, May 1992."
+}
+
+@InProceedings{Siddiqi96CVPR,
+  author = 	 {Kaleem Siddiqi and Benjamin B. Kimia},
+  title = 	 {A Shock Grammar for Recognition},
+  booktitle = 	 {Proceedings of the Conference on Computer Vision
+		  and Pattern Recognition},
+  pages =	 {507--513},
+  year =	 {1996},
+  OPTeditor = 	 {},
+  OPTvolume = 	 {},
+  address =	 {San Francisco, CA, USA},
+  month =	 {June},
+  organization = {IEEE Computer Society},
+  OPTpublisher = {},
+}
+
+@Article{Siddiqi97ENO,
+  author = 	 "Kaleem Siddiqi and Benjamin B. Kimia and {Chi-Wang} Shu",
+  title = 	 "Geometric Shock-Capturing {ENO} Schemes for Subpixel
+		  Interpolation, Computation and Curve Evolution",
+  journal =	 "GMIP",
+  year =	 "1997",
+  volume =	 "59",
+  number =	 "5",
+  pages =	 "278--301",
+  month =	 "September",
+  annote =	 "Earlier versions published at ISCV'95 and as
+		  Tech.Rep. LEMS-142, Feb.1995."
+}
+
+@Article{Siddiqi99,
+  author = 	 "Kaleem Siddiqi and Benjamin Kimia and Allen
+		  Tannenbaum and Steven Zucker",
+  title = 	 "Shocks, Shapes, and Wiggles",
+  journal =	 "Image and Vision Computing",
+  year =	 "1999",
+  volume =	 "17",
+  number =	 "5-6",
+  pages =	 "365--373",
+  OPTmonth = 	 "",
+  OPTannote = 	 ""
+}
+
+@InProceedings{Tek95Bubbles,
+  author = 	 "Huseyin Tek and Benjamin B. Kimia",
+  title = 	 "Image Segmentation by Reaction-Diffusion Bubbles",
+  OPTeditor = 	 "",
+  OPTvolume = 	 "",
+  pages =	 "156--162",
+  booktitle =	 "Proc. of ICCV",
+  year =	 "1995",
+  OPTorganization = "",
+  OPTpublisher = "",
+  OPTaddress = 	 "",
+  OPTmonth = 	 "",
+  OPTannote = 	 ""
+}
+
+@Article{Tek97CVIU,
+  author = 	 "Huseyin Tek and Benjamin B. Kimia",
+  title = 	 "Volumetric Segmentation of Medical Images by
+		  Three-Dimensional Bubbles",
+  journal =	 "CVIU",
+  year =	 "1997",
+  volume =	 "64",
+  number =	 "2",
+  pages =	 "246--258",
+  month =	 "February",
+  annote =	 "Earlier version at WPMCV'95 (pp.9-16) and
+		  Tech.Rep. LEMS-147, Providence, RI, USA."
+}
+
+@InCollection{Tek98ISMM,
+  author = 	 "Huseyin Tek and Benjamin B. Kimia",
+  title = 	 "Curve Evolution, Wave Propagation, and Mathematical
+		  Morphology",
+  booktitle =	 "Mathematical Morphology and its Applications to
+		  Image and Signal Processing",
+  publisher =	 "Kluwer Academic",
+  year =	 "1998",
+  editor =	 "Henk J.A.M. Heijmans and Jos B.T.M. Roerdink",
+  volume =	 "12",
+  series =	 "Computational Imaging and Vision",
+  pages =	 "115--126",
+  address =	 "Amsterdam, The Netherlands",
+  month =	 "June",
+  OPTannote = 	 ""
+}
+
+@InProceedings{Tek99ICCV,
+  author = 	 "H. Tek and B. Kimia",
+  title = 	 "Symmetry Maps of Free-Form Curve Segments via Wave
+		  Propagation",
+  pages =	 "362--369",
+  booktitle =	 "IEEE Proc. $7^{th}$ ICCV",
+  year =	 "1999",
+  OPTorganization = "IEEE Comp. Society",
+  address =	 "Kerkrya, Greece",
+  month =	 "September"}
+
+@InProceedings{Tek99CVPR,
+  author = 	 {H. Tek and B. Kimia},
+  title = 	 {Perceptual organization via symmetry map and 
+		  symmetry transforms},
+  booktitle = 	 {IEEE Proc. of CVPR},
+  OPTpages = 	 {},
+  year =	 {1999},
+  OPTvolume = 	 {},
+  address =	 {Forth Collins, Colorado},
+  month =	 {June},
+  OPTorganization = {},
+  OPTpublisher = {},
+  OPTnote = 	 {},
+}
+
+@PhdThesis{Tek99PhD,
+  author = 	 {H{\"u}seyin Tek},
+  title = 	 {The Role of Symmetry Maps in Representing Objects in Images},
+  school = 	 {Brown University, Division of Engineering},
+  year = 	 {1999},
+  OPTtype = 	 {},
+  address =	 {Providence, RI, USA},
+  OPTmonth = 	 {},
+  OPTnote = 	 {},
+  OPTannote = 	 {}
+}
+
+@Article{Tek01,
+  author = 	 {H. Tek and B. B. Kimia},
+  title = 	 {Boundary Smoothing via Symmetry Transforms},
+  journal = 	 {Journal of Mathematical Imaging and Vision},
+  year = 	 {2001},
+  volume =	 {14},
+  number =	 {3},
+  pages =	 {211--223},
+  month =	 {May},
+  OPTnote = 	 {},
+  OPTannote = 	 {}
+}
+

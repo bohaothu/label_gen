@@ -1,0 +1,1426 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  <title>Lorenzo Martignoni</title>
+  <link href="/style.css" rel="stylesheet" type="text/css"/>
+  <link rel="shortcut icon" href="/favicon.ico" />
+  <link rel="alternate" href="http://martignlo.greyhats.it/blog/feed" type="application/atom+xml" title="Lorenzo Martignoni"/>
+
+  <script language="javascript" type="text/javascript">
+  <!--
+     function toggle_visibility(id) {
+     var e = document.getElementById(id);
+     if(e.style.display == 'block')
+        e.style.display = 'none';
+     else
+        e.style.display = 'block';
+     }
+   //-->
+  </script>
+
+
+
+
+</head>
+
+<body>
+  <div id="header">
+    <div class="body">
+      <div class="title">
+        <table width="100%"> 
+	  <tr>
+	    <td>Lorenzo Martignoni</td>
+	    <td align="right"> 
+	      <div class="fortune">
+		Let the machine do the dirty work<br />
+		&mdash; Kernighan and Ritchie
+	      </div>
+	    </td>
+	    <td align="right" width="1%"> 
+	      <img src="/me.png" alt="me" height="56"/>
+	    </td>
+	  </tr>
+	</table>
+      </div>
+
+      <div class="menu">
+
+	<div class="menuitem">
+	  
+	    <a href="/">About</a>
+	    
+	</div>
+
+	<div class="menuitem">
+	  
+	  <div class="selected">
+	    
+	    <a href="/papers/papers.bib">Publications</a>
+	    
+	  </div>
+	  
+	</div>
+
+	<div class="menuitem">
+	  
+	    <a href="/projects/">Projects &amp; Software</a>
+	    
+	</div>
+
+	<div class="menuitem">
+	  
+	    <a href="/hacking/">Hacking</a>
+	    
+	</div>
+
+	<div class="menuitem">
+	  <a href="/blog/">Blog</a> &nbsp; <a href="/blog/feed"><img src="/rss.png" align="top" alt=""/></a>
+	</div>
+
+	<div style="clear:both">
+	</div>
+      </div>
+
+    </div>
+  </div>
+
+  <div id="main">
+    <div class="body">
+
+      
+
+<div class="biblio">
+  <ul>
+    
+
+    <li> 
+      <span style="font-size:110%"><b>Dynamic and Transparent Analysis of Commodity Production Systems</b></span>
+
+      <br/>
+     
+      <a name="hyperdbg"></a>Aristide Fattori, Roberto Paleari, Lorenzo Martignoni, Mattia Monga
+
+      <br/>
+
+      
+      In <i>Proceedings of the 25<sup>th</sup> International Conference on Automated Software Engineering (ASE)</i>
+      
+      
+      
+
+      <br/>
+
+      September 2010. 
+      
+      Antwerp, Belgium. <b>To appear</b>
+      
+
+      <br/>
+
+      
+      <br/>
+      Code available online: <a href="http://code.google.com/p/hyperdbg/">http://code.google.com/p/hyperdbg/</a>
+      <br/>
+      
+
+     
+      <div class="icons">
+	
+	<a href="#hyperdbg" onclick="toggle_visibility('abstract_hyperdbg'); return false;">Abstract</a> &nbsp; 
+        
+	&bull; &nbsp; <a href="#hyperdbg" onclick="toggle_visibility('bibtex_hyperdbg'); return false;">BibTeX</a> &nbsp; 
+	
+	
+   	&bull; &nbsp; <a href="ase10.pdf">Paper</a> &nbsp;
+	
+	
+	
+	&bull; &nbsp; <span class="missing">Slides</span> &nbsp;
+	
+	
+      </div>
+
+      <br/>
+
+      <div id="abstract_hyperdbg" style="display:none">
+	<div class="abstract">
+	  We propose a framework that provides a programming interface to perform complex dynamic system-level analyses of deployed production systems. By leveraging hardware support for virtualization available nowadays on all commodity machines, our framework is completely transparent to the system under analysis and it guarantees isolation of the analysis tools running on its top. Thus, the internals of the kernel of the running system needs not to be modified and the whole platform runs unaware of the framework. Moreover, errors in the analysis tools do not affect the running system and the framework. This is accomplished by installing a minimalistic virtual machine monitor and migrating the system, as it runs, into a virtual machine. In order to demonstrate the potentials of our framework we developed an interactive kernel debugger, codenamed HyperDbg. HyperDbg can be used to debug any critical kernel component, and even to single step the execution of exception and interrupt handlers.
+	</div>
+      </div>
+
+      <div id="bibtex_hyperdbg" style="display:none">
+	<pre>@inproceedings{hyperdbg,
+  author           = {Aristide Fattori and Roberto Paleari and Lorenzo Martignoni and Mattia Monga},
+  title            = {Dynamic and Transparent Analysis of Commodity Production Systems},
+  booktitle        = {Proceedings of the 25$^{th}$ International Conference on Automated Software Engineering (ASE)},
+  month            = sep,
+  note             = {Antwerp, Belgium. \textbf{To appear}},
+  year             = 2010,
+}</pre>
+      </div>
+    </li>
+    
+
+    <li> 
+      <span style="font-size:110%"><b>Live and Trustworthy Forensic Analysis of Commodity Production Systems</b></span>
+
+      <br/>
+     
+      <a name="hypersleuth"></a>Lorenzo Martignoni, Aristide Fattori, Roberto Paleari, Lorenzo Cavallaro
+
+      <br/>
+
+      
+      In <i>Proceedings of the 13<sup>th</sup> International Symposium on Recent Advances in Intrusion Detection (RAID)</i>
+      
+      
+      
+
+      <br/>
+
+      September 2010. 
+      
+      Ottawa, Canada. <b>To appear</b>
+      
+
+      <br/>
+
+      
+
+     
+      <div class="icons">
+	
+	<a href="#hypersleuth" onclick="toggle_visibility('abstract_hypersleuth'); return false;">Abstract</a> &nbsp; 
+        
+	&bull; &nbsp; <a href="#hypersleuth" onclick="toggle_visibility('bibtex_hypersleuth'); return false;">BibTeX</a> &nbsp; 
+	
+	&bull; &nbsp; <span class="missing">Paper</span> &nbsp;
+	
+	
+	&bull; &nbsp; <span class="missing">Slides</span> &nbsp;
+	
+	
+      </div>
+
+      <br/>
+
+      <div id="abstract_hypersleuth" style="display:none">
+	<div class="abstract">
+	  We present HyperSleuth, a framework that leverages the virtualization extensions provided by commodity hardware to securely perform live forensic analysis of potentially compromised production systems. HyperSleuth provides a trusted execution environment that guarantees four fundamental properties. First, an attacker controlling the system cannot interfere with the analysis and cannot tamper the results. Second, the framework can be installed as the system runs, without a reboot and without loosing any volatile data. Third, the analysis performed is completely transparent to the OS and to an attacker. Finally, the analysis can be periodically and safely interrupted to resume normal execution of the system. On top of HyperSleuth we implemented three forensic analysis applications: a lazy physical memory dumper, a lie detector, and a system call tracer. The experimental evaluation we conducted demonstrated that even time consuming analysis, such as the dump of the content of the physical memory, can be securely performed without interrupting the services offered by the system.
+	</div>
+      </div>
+
+      <div id="bibtex_hypersleuth" style="display:none">
+	<pre>@inproceedings{hypersleuth,
+  author           = {Lorenzo Martignoni and Aristide Fattori and Roberto Paleari and Lorenzo Cavallaro},
+  title            = {{Live and Trustworthy Forensic Analysis of Commodity Production Systems}},
+  booktitle        = {Proceedings of the 13$^{th}$ International Symposium on Recent Advances in Intrusion Detection (RAID)},
+  month            = sep,
+  note             = {Ottawa, Canada. \textbf{To appear}},
+  year             = 2010,
+}</pre>
+      </div>
+    </li>
+    
+
+    <li> 
+      <span style="font-size:110%"><b>Testing system virtual machines</b></span>
+
+      <br/>
+     
+      <a name="kemufuzzer"></a>Lorenzo Martignoni, Roberto Paleari, Giampaolo Fresi Roglia, Danilo Bruschi
+
+      <br/>
+
+      
+      In <i>Proceedings of the 2010 International Symposium on Testing and Analysis (ISSTA)</i>
+      
+      
+      
+
+      <br/>
+
+      July 2010. 
+      
+      Trento, Italy
+      
+
+      <br/>
+
+      
+      <br/>
+      Code and sample test-cases available: <a href="http://code.google.com/p/kemufuzzer/">http://code.google.com/p/kemufuzzer/</a>
+      <br/>
+      
+
+     
+      <div class="icons">
+	
+	<a href="#kemufuzzer" onclick="toggle_visibility('abstract_kemufuzzer'); return false;">Abstract</a> &nbsp; 
+        
+	&bull; &nbsp; <a href="#kemufuzzer" onclick="toggle_visibility('bibtex_kemufuzzer'); return false;">BibTeX</a> &nbsp; 
+	
+	
+   	&bull; &nbsp; <a href="http://portal.acm.org/ft_gateway.cfm%3Fid%3D1831730%26type%3Dpdf%26coll%3DACM%26dl%3DACM%26CFID%3D98421045%26CFTOKEN%3D17391641">Paper</a> &nbsp;
+	
+	
+	
+	&bull; &nbsp; <a href="KEmuFuzzer.pdf">Slides</a> &nbsp;
+	
+	
+      </div>
+
+      <br/>
+
+      <div id="abstract_kemufuzzer" style="display:none">
+	<div class="abstract">
+	  Virtual machines offer the ability to partition the resources of a physical system and to create isolated execution environments. The development of virtual machines is a very challenging task. This is particularly true for system virtual machines, since they run an operating system and must replicate in every detail the incredibly complex environment it requires. Nowadays, system virtual machines are the key component of many critical architectures. However, only little effort has been invested to test if the environment they provide is semantically equivalent to the environment found on real machines. In this paper we present a methodology specific for testing system virtual machines. This methodology is based on protocol-specific fuzzing and differential analysis, and consists in forcing a virtual machine and the corresponding physical machine to execute specially crafted snippets of user- and system-mode code and in comparing their behaviors. We have developed a prototype, codenamed KEmuFuzzer, that implements our methodology for the Intel x86 architecture and used it to test four state-of-the-art virtual machines: BOCHS, QEMU, VirtualBox and VMware. We discovered defects in all of them.
+	</div>
+      </div>
+
+      <div id="bibtex_kemufuzzer" style="display:none">
+	<pre>@inproceedings{kemufuzzer,
+  author           = {Lorenzo Martignoni and Roberto Paleari and Giampaolo Fresi Roglia and Danilo Bruschi},
+  title            = {{Testing system virtual machines}},
+  booktitle        = {Proceedings of the 2010 International Symposium on Testing and Analysis (ISSTA)},
+  month            = jul,
+  note             = {Trento, Italy.},
+  pages            = {171--182},
+  year             = 2010,
+}</pre>
+      </div>
+    </li>
+    
+
+    <li> 
+      <span style="font-size:110%"><b>N-version disassembly: differential testing of x86 disassemblers</b></span>
+
+      <br/>
+     
+      <a name="nvariant"></a>Roberto Paleari, Lorenzo Martignoni, Giampaolo Fresi Roglia, Danilo Bruschi
+
+      <br/>
+
+      
+      In <i>Proceedings of the 2010 International Symposium on Testing and Analysis (ISSTA)</i>
+      
+      
+      
+
+      <br/>
+
+      July 2010. 
+      
+      Trento, Italy
+      
+
+      <br/>
+
+      
+
+     
+      <div class="icons">
+	
+	<a href="#nvariant" onclick="toggle_visibility('abstract_nvariant'); return false;">Abstract</a> &nbsp; 
+        
+	&bull; &nbsp; <a href="#nvariant" onclick="toggle_visibility('bibtex_nvariant'); return false;">BibTeX</a> &nbsp; 
+	
+	
+   	&bull; &nbsp; <a href="http://portal.acm.org/ft_gateway.cfm%3Fid%3D1831741%26type%3Dpdf%26coll%3DACM%26dl%3DACM%26CFID%3D98421045%26CFTOKEN%3D17391641">Paper</a> &nbsp;
+	
+	
+	
+	&bull; &nbsp; <span class="missing">Slides</span> &nbsp;
+	
+	
+      </div>
+
+      <br/>
+
+      <div id="abstract_nvariant" style="display:none">
+	<div class="abstract">
+	  The output of a disassembler is used for many different purposes (e.g., debugging and reverse engineering). Therefore, disassemblers represent the first link of a long chain of stages on which any high-level analysis of machine code depends upon. In this paper we demonstrate that many disassemblers fail to decode certain instructions and thus that the first link of the chain is very weak. We present a methodology, called <i>N-version disassembly</i>, to verify the correctness of disassemblers, based on differential analysis. Given a set of <i>n - 1</i> disassemblers, we use them to decode fragments of machine code and we compare their output against each other. To further corroborate the output of these disassemblers, we developed a special instruction decoder, the <i>n<sup>th</sup></i>, that delegates the decoding to the CPU, the ideal decoder. We tested eight of the most popular disassemblers for Intel x86, and found bugs in each of them.
+	</div>
+      </div>
+
+      <div id="bibtex_nvariant" style="display:none">
+	<pre>@inproceedings{nvariant,
+  author           = {Roberto Paleari and Lorenzo Martignoni and Giampaolo Fresi Roglia and Danilo Bruschi},
+  title            = {{N-version disassembly: differential testing of x86 disassemblers}},
+  booktitle        = {Proceedings of the 2010 International Symposium on Testing and Analysis (ISSTA)},
+  month            = jul,
+  note             = {Trento, Italy.},
+  pages            = {265--274},
+  year             = 2010,
+}</pre>
+      </div>
+    </li>
+    
+
+    <li> 
+      <span style="font-size:110%"><b>Conqueror: tamper-proof code execution on legacy systems</b></span>
+
+      <br/>
+     
+      <a name="dimva10"></a>Lorenzo Martignoni, Roberto Paleari, Danilo Bruschi
+
+      <br/>
+
+      
+      In <i>Proceedings of the 7<sup>th</sup> Conference on Detection of Intrusions and Malware and Vulnerability Assessment (DIMVA)</i>
+      
+      
+      
+
+      <br/>
+
+      July 2010. 
+      
+      Bonn, Germany
+      
+
+      <br/>
+
+      
+
+     
+      <div class="icons">
+	
+	<a href="#dimva10" onclick="toggle_visibility('abstract_dimva10'); return false;">Abstract</a> &nbsp; 
+        
+	&bull; &nbsp; <a href="#dimva10" onclick="toggle_visibility('bibtex_dimva10'); return false;">BibTeX</a> &nbsp; 
+	
+	
+   	&bull; &nbsp; <a href="http://www.springerlink.com/content/456p39604401pgkr/fulltext.pdf">Paper</a> &nbsp;
+	
+	
+	
+	&bull; &nbsp; <span class="missing">Slides</span> &nbsp;
+	
+	
+      </div>
+
+      <br/>
+
+      <div id="abstract_dimva10" style="display:none">
+	<div class="abstract">
+	  We present Conqueror, a software-based attestation scheme for tamper-proof code execution on untrusted legacy systems. Beside providing load-time attestation of a piece of code, Conqueror also ensures run-time integrity. Conqueror constitutes a valid alternative to trusted computing platforms, for systems lacking specialized hardware for attestation. We implemented a prototype, specific for the Intel x86 architecture, and evaluated the proposed scheme. Our evaluation showed that, compared to competitors, Conqueror is resistant to static and dynamic attacks and that our scheme represents an important building block for realizing new security systems.
+	</div>
+      </div>
+
+      <div id="bibtex_dimva10" style="display:none">
+	<pre>@inproceedings{dimva10,
+  author           = {Lorenzo Martignoni and Roberto Paleari and Danilo Bruschi},
+  publisher        = {Springer},
+  title            = {{Conqueror: tamper-proof code execution on legacy systems}},
+  series           = {Lecture Notes in Computer Science},
+  booktitle        = {Proceedings of the 7$^{th}$ Conference on Detection of Intrusions and Malware and Vulnerability Assessment (DIMVA)},
+  month            = jul,
+  note             = {Bonn, Germany.},
+  pages            = {21--40},
+  year             = 2010,
+}</pre>
+      </div>
+    </li>
+    
+
+    <li> 
+      <span style="font-size:110%"><b>Surgically returning to randomized lib(c)</b></span>
+
+      <br/>
+     
+      <a name="saratoga"></a>Giampaolo Fresi Roglia, Lorenzo Martignoni, Roberto Paleari, Danilo Bruschi
+
+      <br/>
+
+      
+      In <i>Proceedings of the 25<sup>th</sup> Annual Computer Security Applications Conference (ACSAC)</i>
+      
+      
+      
+
+      <br/>
+
+      December 2009. 
+      
+      Honolulu, Hawaii, USA
+      
+
+      <br/>
+
+      
+
+     
+      <div class="icons">
+	
+	<a href="#saratoga" onclick="toggle_visibility('abstract_saratoga'); return false;">Abstract</a> &nbsp; 
+        
+	&bull; &nbsp; <a href="#saratoga" onclick="toggle_visibility('bibtex_saratoga'); return false;">BibTeX</a> &nbsp; 
+	
+	
+   	&bull; &nbsp; <a href="http://www.acsac.org/2009/openconf/modules/request.php%3Fmodule%3Doc_proceedings%26action%3Dview.php%26a%3DAccept%26id%3D243">Paper</a> &nbsp;
+	
+	
+	
+	&bull; &nbsp; <span class="missing">Slides</span> &nbsp;
+	
+	
+      </div>
+
+      <br/>
+
+      <div id="abstract_saratoga" style="display:none">
+	<div class="abstract">
+	  To strengthen systems against code injection attacks, the write or execute only policy (W^X) and address space layout randomization (ASLR) are typically used in combination. The former separates data and code, while the latter randomizes the layout of a process. In this paper we present a new attack to bypass W^X and ASLR. The state-of-art attack against this combination of protections is based on brute-force, while ours is based on the leakage of sensitive information about the memory layout of the process. Using our attack an attacker can exploit the large majority of programs vulnerable to stack-based buffer overflows <i>surgically</i>, i.e., in just a single shot. We have estimated that our attack is feasible on 95.6% and 61.8% executables (of medium size) for Intel x86 and x86-64 architectures respectively. We also analyze the effectiveness at preventing our attack of other existing protections, that can be combined with W^X and ASLR. We conclude that position independent executables (PIE) are essential to complement ASLR and to prevent our attack. However, PIE requires recompilation, it is not adopted even when supported, and it is not available on all ASLR-capable operating systems. To overcome these limitations, we propose a new protection that is as effective as PIE, does not require recompilation, and introduces only a minimal overhead (about 2.69% with respect to the unprotected execution).
+	</div>
+      </div>
+
+      <div id="bibtex_saratoga" style="display:none">
+	<pre>@inproceedings{saratoga,
+  author           = {Giampaolo Fresi Roglia and Lorenzo Martignoni and Roberto Paleari and Danilo Bruschi},
+  publisher        = {IEEE Computer Society},
+  title            = {{Surgically returning to randomized lib(c)}},
+  booktitle        = {Proceedings of the 25$^{th}$ Annual Computer Security Applications Conference (ACSAC)},
+  month            = dec,
+  note             = {Honolulu, Hawaii, USA},
+  pages            = {60--69},
+  year             = 2009,
+}</pre>
+      </div>
+    </li>
+    
+
+    <li> 
+      <span style="font-size:110%"><b>A framework for behavior-based malware analysis in the cloud</b></span>
+
+      <br/>
+     
+      <a name="iciss09"></a>Lorenzo Martignoni, Roberto Paleari, Danilo Bruschi
+
+      <br/>
+
+      
+      In <i>Proceedings of the 5<sup>th</sup> International Conference on Information Systems Security (ICISS 2009)</i>
+      
+      
+      
+
+      <br/>
+
+      December 2009. 
+      
+      Kolkata, India
+      
+
+      <br/>
+
+      
+
+     
+      <div class="icons">
+	
+	<a href="#iciss09" onclick="toggle_visibility('abstract_iciss09'); return false;">Abstract</a> &nbsp; 
+        
+	&bull; &nbsp; <a href="#iciss09" onclick="toggle_visibility('bibtex_iciss09'); return false;">BibTeX</a> &nbsp; 
+	
+	
+   	&bull; &nbsp; <a href="http://www.springerlink.com/content/m2u404473702m636/fulltext.pdf">Paper</a> &nbsp;
+	
+	
+	
+	&bull; &nbsp; <a href="SyscallProxying.pdf">Slides</a> &nbsp;
+	
+	
+      </div>
+
+      <br/>
+
+      <div id="abstract_iciss09" style="display:none">
+	<div class="abstract">
+	  To ease the analysis of potentially malicious programs, dynamic behavior-based techniques have been proposed in the literature. Unfortunately, these techniques often give incomplete results because the execution environments in which they are performed are synthetic and do not faithfully resemble the environments of end-users, the intended targets of the malicious activities. In this paper, we present a new framework for improving behavior-based analysis of suspicious programs, that allows an end-user to delegate security labs, <i>the cloud</i>, the execution and the analysis of a program and to force the program to behave as if it were executed directly in the environment of the former. The evaluation demonstrated that the proposed framework allows security labs to improve the completeness of the analysis, by analyzing a piece of malware on behalf of multiple end-users simultaneously, while performing a fine-grained analysis of the behavior of the program with no computational cost for the end-users.
+	</div>
+      </div>
+
+      <div id="bibtex_iciss09" style="display:none">
+	<pre>@inproceedings{iciss09,
+  author           = {Lorenzo Martignoni and Roberto Paleari and Danilo Bruschi},
+  publisher        = {Springer},
+  title            = {{A framework for behavior-based malware analysis in the cloud}},
+  booktitle        = {Proceedings of the 5$^{th}$ International Conference on Information Systems Security (ICISS 2009)},
+  month            = dec,
+  note             = {Kolkata, India},
+  pages            = {178--192},
+  year             = 2009,
+}</pre>
+      </div>
+    </li>
+    
+
+    <li> 
+      <span style="font-size:110%"><b>A fistful of red-pills: How to automatically generate procedures to detect CPU emulators</b></span>
+
+      <br/>
+     
+      <a name="woot09"></a>Roberto Paleari, Lorenzo Martignoni, Giampaolo Fresi Roglia, Danilo Bruschi
+
+      <br/>
+
+      
+      In <i>Proceedings of the 3rd USENIX Workshop on Offensive Technologies (WOOT)</i>
+      
+      
+      
+
+      <br/>
+
+      August 2009. 
+      
+      Montreal, Canada
+      
+
+      <br/>
+
+      
+      <br/>
+      More info: <a href="/projects/redpills.html">/projects/redpills.html</a>
+      <br/>
+      
+
+     
+      <div class="icons">
+	
+	<a href="#woot09" onclick="toggle_visibility('abstract_woot09'); return false;">Abstract</a> &nbsp; 
+        
+	&bull; &nbsp; <a href="#woot09" onclick="toggle_visibility('bibtex_woot09'); return false;">BibTeX</a> &nbsp; 
+	
+	
+   	&bull; &nbsp; <a href="http://www.usenix.org/event/woot09/tech/full_papers/paleari.pdf">Paper</a> &nbsp;
+	
+	
+	
+	&bull; &nbsp; <a href="RedPills.pdf">Slides</a> &nbsp;
+	
+	
+      </div>
+
+      <br/>
+
+      <div id="abstract_woot09" style="display:none">
+	<div class="abstract">
+	  Malware includes several protections to complicate their analysis: the longer it takes to analyze a new malware sample, the longer the sample survives and the larger number of systems it compromises. Nowadays, new malware samples are analyzed dynamically using virtual environments (e.g., emulators, virtual machines, or debuggers). Therefore, malware incorporate a variety of tests to detect whether they are executed through such environments and obfuscate their behavior if they suspect their execution is being monitored. Several simple tests, we indistinctly call <i>red-pills</i>, have already been proposed in literature to detect whether the execution of a program is performed in a real or in a virtual environment. In this paper we propose an automatic and systematic technique to generate red-pills, specific for detecting if a program is executed through a CPU emulator. Using this technique we generated <i>thousands of new red-pills</i>, involving <i>hundreds of different opcodes</i>, for two publicly available emulators, which are widely used for analyzing malware.
+	</div>
+      </div>
+
+      <div id="bibtex_woot09" style="display:none">
+	<pre>@inproceedings{woot09,
+  author           = {Roberto Paleari and Lorenzo Martignoni and Giampaolo Fresi Roglia and Danilo Bruschi},
+  publisher        = {ACM},
+  title            = {A fistful of red-pills: How to automatically generate procedures to detect {CPU} emulators},
+  booktitle        = {Proceedings of the 3rd USENIX Workshop on Offensive Technologies (WOOT)},
+  month            = aug,
+  note             = {Montreal, Canada},
+  year             = 2009,
+}</pre>
+      </div>
+    </li>
+    
+
+    <li> 
+      <span style="font-size:110%"><b>Testing CPU emulators</b></span>
+
+      <br/>
+     
+      <a name="issta09"></a>Lorenzo Martignoni, Roberto Paleari, Giampaolo Fresi Roglia, Danilo Bruschi
+
+      <br/>
+
+      
+      In <i>Proceedings of the 2009 International Conference on Software Testing and Analysis (ISSTA)</i>
+      
+      
+      
+
+      <br/>
+
+      July 2009. 
+      
+      Chicago, Illinois, USA
+      
+
+      <br/>
+
+      
+
+     
+      <div class="icons">
+	
+	<a href="#issta09" onclick="toggle_visibility('abstract_issta09'); return false;">Abstract</a> &nbsp; 
+        
+	&bull; &nbsp; <a href="#issta09" onclick="toggle_visibility('bibtex_issta09'); return false;">BibTeX</a> &nbsp; 
+	
+	
+   	&bull; &nbsp; <a href="http://portal.acm.org/ft_gateway.cfm%3Fid%3D1572303%26type%3Dpdf%26coll%3DPORTAL%26dl%3DACM%26CFID%3D46553390%26CFTOKEN%3D27637410">Paper</a> &nbsp;
+	
+	
+	
+	&bull; &nbsp; <a href="EmuFuzzer.pdf">Slides</a> &nbsp;
+	
+	
+      </div>
+
+      <br/>
+
+      <div id="abstract_issta09" style="display:none">
+	<div class="abstract">
+	  A CPU emulator is a software that simulates a hardware CPU. Emulators are widely used by computer scientists for various kind of activities (e.g., debugging, profiling, and malware analysis). Although no theoretical limitation prevents to develop an emulator that faithfully emulates a physical CPU, writing a fully featured emulator is a very challenging and error-prone task. Modern CISC architectures have a very rich instruction set, some instructions lack proper specifications, and others may have undefined effects in corner-cases. This paper presents a testing methodology specific for CPU emulators, based on fuzzing. The emulator is ``stressed'' with specially crafted test-cases, to verify whether the CPU is properly emulated or not. Improper behaviours of the emulator are detected by running the same test-case concurrently on the emulated and on the physical CPUs and by comparing the state of the two after the execution. Differences in the final state testify defects in the code of the emulator. We implemented this methodology in a prototype (codenamed \textsfEmuFuzzer), analysed four state-of-the-art IA-32 emulators (QEMU, Valgrind, Pin and BOCHS), and found several defects in each of them, some of which can prevent the proper execution of programs.
+	</div>
+      </div>
+
+      <div id="bibtex_issta09" style="display:none">
+	<pre>@inproceedings{issta09,
+  author           = {Lorenzo Martignoni and Roberto Paleari and Giampaolo Fresi Roglia and Danilo Bruschi},
+  publisher        = {ACM},
+  title            = {{Testing CPU emulators}},
+  booktitle        = {Proceedings of the 2009 International Conference on Software Testing and Analysis (ISSTA)},
+  month            = jul,
+  note             = {Chicago, Illinois, USA},
+  pages            = {261--272},
+  year             = 2009,
+}</pre>
+      </div>
+    </li>
+    
+
+    <li> 
+      <span style="font-size:110%"><b>How good are malware detectors at remediating infected systems?</b></span>
+
+      <br/>
+     
+      <a name="dimva09"></a>Emanuele Passerini, Roberto Paleari, Lorenzo Martignoni
+
+      <br/>
+
+      
+      In <i>Proceedings of the 6<sup>th</sup> Conference on Detection of Intrusions and Malware and Vulnerability Assessment (DIMVA)</i>
+      
+      
+      
+
+      <br/>
+
+      July 2009. 
+      
+      Como, Italy
+      
+
+      <br/>
+
+      
+
+     
+      <div class="icons">
+	
+	<a href="#dimva09" onclick="toggle_visibility('abstract_dimva09'); return false;">Abstract</a> &nbsp; 
+        
+	&bull; &nbsp; <a href="#dimva09" onclick="toggle_visibility('bibtex_dimva09'); return false;">BibTeX</a> &nbsp; 
+	
+	
+   	&bull; &nbsp; <a href="http://www.springerlink.com/content/19h7778mu73lg256/fulltext.pdf">Paper</a> &nbsp;
+	
+	
+	
+	&bull; &nbsp; <span class="missing">Slides</span> &nbsp;
+	
+	
+      </div>
+
+      <br/>
+
+      <div id="abstract_dimva09" style="display:none">
+	<div class="abstract">
+	  Malware detectors are applications that attempt to identify and block malicious programs. Unfortunately, malware detectors might not always be able to preemptively block a malicious program from infecting the system (e.g., when the signatures database is not promptly updated). In these situations, the only way to eradicate the infection without having to reinstall the entire system is to rely on the remediation capabilities of the detectors. Therefore, it is essential to evaluate the efficacy and accuracy of anti-malware software in such situations. This paper presents a testing methodology to assess the quality (completeness) of the \textitremediation procedures used by malware detectors to revert the effect of an infection from a compromised system. To evaluate the efficacy of our testing methodology, we developed a prototype and used it to test six of the top-rated commercial malware detectors currently available on the market. The results of our evaluation witness, that in many situations, the tested malware detectors fail to completely remove the effects of an infection.
+	</div>
+      </div>
+
+      <div id="bibtex_dimva09" style="display:none">
+	<pre>@inproceedings{dimva09,
+  author           = {Emanuele Passerini and Roberto Paleari and Lorenzo Martignoni},
+  publisher        = {Springer},
+  title            = {{How good are malware detectors at remediating infected systems?}},
+  series           = {Lecture Notes in Computer Science},
+  booktitle        = {Proceedings of the 6$^{th}$ Conference on Detection of Intrusions and Malware and Vulnerability Assessment (DIMVA)},
+  month            = jul,
+  note             = {Como, Italy},
+  pages            = {21--37},
+  year             = 2009,
+}</pre>
+      </div>
+    </li>
+    
+
+    <li> 
+      <span style="font-size:110%"><b>A Layered Architecture for Detecting Malicious Behaviors</b></span>
+
+      <br/>
+     
+      <a name="raid08"></a>Lorenzo Martignoni, Elizabeth Stinson, Matt Fredrikson, Somesh Jha, John Mitchell
+
+      <br/>
+
+      
+      In <i>Proceedings of the International Symposium on Recent Advances in Intrusion Detection, RAID, Cambridge, Massachusetts, USA</i>
+      
+      
+      
+
+      <br/>
+
+      September 2008. 
+      
+
+      <br/>
+
+      
+
+     
+      <div class="icons">
+	
+	<a href="#raid08" onclick="toggle_visibility('abstract_raid08'); return false;">Abstract</a> &nbsp; 
+        
+	&bull; &nbsp; <a href="#raid08" onclick="toggle_visibility('bibtex_raid08'); return false;">BibTeX</a> &nbsp; 
+	
+	
+   	&bull; &nbsp; <a href="http://www.springerlink.com/content/f0717078102g3747/fulltext.pdf">Paper</a> &nbsp;
+	
+	
+	
+	&bull; &nbsp; <a href="raid2008.pdf">Slides</a> &nbsp;
+	
+	
+      </div>
+
+      <br/>
+
+      <div id="abstract_raid08" style="display:none">
+	<div class="abstract">
+	  We address the \textitsemantic gap problem in behavioral monitoring by using hierarchical behavior graphs to infer high-level behaviors from myriad low-level events that could be parts of many different kinds of behavior. Our experimental system traces the execution of a process, performing data-flow analysis to identify meaningful actions such as ``proxying'', ``keystroke logging'', ``data leaking'', and ``downloading and executing a program'' from complex combinations of rudimentary system calls. To preemptively address evasive malware behavior, our specifications are carefully crafted to detect alternate sequences of events that achieve the same high-level goal. We tested seven malicious bots and eleven benign programs and found that we were able to thoroughly identify high-level behaviors across this diverse code base. Moreover, we were able to distinguish malicious execution of high-level behaviors from benign by distinguishing remotely-initiated from locally-initiated actions.
+	</div>
+      </div>
+
+      <div id="bibtex_raid08" style="display:none">
+	<pre>@inproceedings{raid08,
+  author           = {Lorenzo Martignoni and Elizabeth Stinson and Matt Fredrikson and Somesh Jha and John Mitchell},
+  publisher        = {Springer},
+  title            = {{A Layered Architecture for Detecting Malicious Behaviors}},
+  series           = {Lecture Notes in Computer Science},
+  booktitle        = {Proceedings of the International Symposium on Recent Advances in Intrusion Detection, RAID, Cambridge, Massachusetts, USA.},
+  month            = sep,
+  year             = 2008,
+}</pre>
+      </div>
+    </li>
+    
+
+    <li> 
+      <span style="font-size:110%"><b>FluXOR: detecting and monitoring fast-flux service networks</b></span>
+
+      <br/>
+     
+      <a name="dimva08"></a>Emanuele Passerini, Roberto Paleari, Lorenzo Martignoni, Danilo Bruschi
+
+      <br/>
+
+      
+      In <i>Proceedings of the 5<sup>th</sup> Conference on Detection of Intrusions and Malware and Vulnerability Assessment (DIMVA)</i>
+      
+      
+      
+
+      <br/>
+
+      July 2008. 
+      
+      Paris, France
+      
+
+      <br/>
+
+      
+
+     
+      <div class="icons">
+	
+	<a href="#dimva08" onclick="toggle_visibility('abstract_dimva08'); return false;">Abstract</a> &nbsp; 
+        
+	&bull; &nbsp; <a href="#dimva08" onclick="toggle_visibility('bibtex_dimva08'); return false;">BibTeX</a> &nbsp; 
+	
+	
+   	&bull; &nbsp; <a href="http://www.springerlink.com/content/r710h553172801x6/fulltext.pdf">Paper</a> &nbsp;
+	
+	
+	
+	&bull; &nbsp; <span class="missing">Slides</span> &nbsp;
+	
+	
+      </div>
+
+      <br/>
+
+      <div id="abstract_dimva08" style="display:none">
+	<div class="abstract">
+	  <i>Botnets</i> are large groups of compromised machines (<i>bots</i>) used by miscreants for the most illegal activities (e.g., sending spam emails, denial-of-service attacks, phishing and other web scams). To protect the identity and to maximise the availability of the core components of their business, miscreants have recently started to use <i>fast-flux service networks</i>, large groups of bots acting as front-end proxies to these components. Motivated by the conviction that prompt detection and monitoring of these networks is an essential step to contrast the problem posed by botnets, we have developed FluXOR, a system to detect and monitor fast-flux service networks. FluXOR monitoring and detection strategies entirely rely on the analysis of a set of features observable from the point of view of a victim of the scams perpetrated by the botnets. We have been using FluXOR for about a month and so far we have detected 387 fast-flux service networks, totally composed by 31998 distinct compromised machines, which we believe to be associated with 16 botnets. <b>Real-time results are publicly available at</b> <a href="http://fluxor.laser.dico.unimi.it">http://fluxor.laser.dico.unimi.it</a>.
+	</div>
+      </div>
+
+      <div id="bibtex_dimva08" style="display:none">
+	<pre>@inproceedings{dimva08,
+  author           = {Emanuele Passerini and Roberto Paleari and Lorenzo Martignoni and Danilo Bruschi},
+  publisher        = {Springer},
+  title            = {FluXOR: detecting and monitoring fast-flux service networks},
+  series           = {Lecture Notes in Computer Science},
+  booktitle        = {Proceedings of the 5$^{th}$ Conference on Detection of Intrusions and Malware and Vulnerability Assessment (DIMVA)},
+  month            = jul,
+  note             = {Paris, France},
+  year             = 2008,
+}</pre>
+      </div>
+    </li>
+    
+
+    <li> 
+      <span style="font-size:110%"><b>OmniUnpack: Fast, Generic, and Safe Unpacking of Malware</b></span>
+
+      <br/>
+     
+      <a name="omniunpack"></a>Lorenzo Martignoni, Mihai Christodorescu, Somesh Jha
+
+      <br/>
+
+      
+      In <i>Proceedings of the 23<sup>rd</sup> Annual Computer Security Applications Conference (ACSAC)</i>
+      
+      
+      
+
+      <br/>
+
+      December 2007. 
+      
+      Miami Beach, Florida, USA
+      
+
+      <br/>
+
+      
+
+     
+      <div class="icons">
+	
+	<a href="#omniunpack" onclick="toggle_visibility('abstract_omniunpack'); return false;">Abstract</a> &nbsp; 
+        
+	&bull; &nbsp; <a href="#omniunpack" onclick="toggle_visibility('bibtex_omniunpack'); return false;">BibTeX</a> &nbsp; 
+	
+	
+   	&bull; &nbsp; <a href="http://www.acsa-admin.org/2007/papers/151.pdf">Paper</a> &nbsp;
+	
+	
+	
+	&bull; &nbsp; <a href="OmniUnpack.pdf">Slides</a> &nbsp;
+	
+	
+      </div>
+
+      <br/>
+
+      <div id="abstract_omniunpack" style="display:none">
+	<div class="abstract">
+	  Malicious software (or malware) has become a growing threat as malware writers have learned that signature-based detectors can be easily evaded by ``packing'' the malicious payload in layers of compression or encryption. State-of-the-art malware detectors have adopted both static and dynamic techinques to recover the payload of packed malware, but unfortunately such techniques are highly ineffective. In this paper we propose a new technique, called OmniUnpack, to monitor the execution of a program in real-time and to detect when the program has removed the various layers of packing. OmniUnpack aids malware detection by directly providing to the detector the unpacked malicious payload. Experimental results demonstrate the effectiveness of our approach. OmniUnpack is able to deal with both known and unknown packing algorithms and introduces a low overhead (at most 11% for packed benign programs).
+	</div>
+      </div>
+
+      <div id="bibtex_omniunpack" style="display:none">
+	<pre>@inproceedings{omniunpack,
+  author           = {Lorenzo Martignoni and Mihai Christodorescu and Somesh Jha},
+  publisher        = {IEEE Computer Society},
+  title            = {{OmniUnpack: Fast, Generic, and Safe Unpacking of Malware}},
+  booktitle        = {Proceedings of the 23$^{rd}$ Annual Computer Security Applications Conference (ACSAC)},
+  month            = dec,
+  note             = {Miami Beach, Florida, USA},
+  year             = 2007,
+}</pre>
+      </div>
+    </li>
+    
+
+    <li> 
+      <span style="font-size:110%"><b>A Smart Fuzzer for x86 Executables</b></span>
+
+      <br/>
+     
+      <a name="smartfuzz"></a>Andrea Lanzi, Lorenzo Martignoni, Mattia Monga, Roberto Paleari
+
+      <br/>
+
+      
+      In <i>Proceedings of the 3<sup>rd</sup> International Workshop on Software Engineering for Secure Systems (SESS)</i>
+      
+      
+      
+
+      <br/>
+
+      May 2007. 
+      
+      Minneapolis, MN, USA
+      
+
+      <br/>
+
+      
+
+     
+      <div class="icons">
+	
+	<a href="#smartfuzz" onclick="toggle_visibility('abstract_smartfuzz'); return false;">Abstract</a> &nbsp; 
+        
+	&bull; &nbsp; <a href="#smartfuzz" onclick="toggle_visibility('bibtex_smartfuzz'); return false;">BibTeX</a> &nbsp; 
+	
+	
+   	&bull; &nbsp; <a href="sess07.pdf">Paper</a> &nbsp;
+	
+	
+	
+	&bull; &nbsp; <span class="missing">Slides</span> &nbsp;
+	
+	
+      </div>
+
+      <br/>
+
+      <div id="abstract_smartfuzz" style="display:none">
+	<div class="abstract">
+	  The automatic identification of security-relevant flaws in binary executables is still a young but promising research area. In this paper, we describe a new approach for the identification of vulnerabilities in object code we called \textitsmart fuzzing. While conventional fuzzing uses random input to discover crash conditions, smart fuzzing restricts the input space by using a preliminary static analysis of the program, then refined by monitoring each execution. In other words, the search is driven by a mix of static and dynamic analysis in order to lead the execution path to selected corner cases that are the most likely to expose vulnerabilities, thus improving the effectiveness of fuzzing as a means for finding security breaches in black-box programs.
+	</div>
+      </div>
+
+      <div id="bibtex_smartfuzz" style="display:none">
+	<pre>@inproceedings{smartfuzz,
+  author           = {Andrea Lanzi and Lorenzo Martignoni and Mattia Monga and Roberto Paleari},
+  publisher        = {ACM},
+  title            = {{A Smart Fuzzer for x86 Executables}},
+  booktitle        = {Proceedings of the 3$^{rd}$ International Workshop on Software Engineering for Secure Systems (SESS)},
+  month            = may,
+  note             = {Minneapolis, MN, USA},
+  year             = 2007,
+}</pre>
+      </div>
+    </li>
+    
+
+    <li> 
+      <span style="font-size:110%"><b>Code Normalization for Self-Mutating Malware</b></span>
+
+      <br/>
+     
+      <a name="sp07"></a>Danilo Bruschi, Lorenzo Martignoni, Mattia Monga
+
+      <br/>
+
+      
+      
+      <i>Security and Privacy</i>
+      
+      
+
+      <br/>
+
+      May 2007. 
+      
+
+      <br/>
+
+      
+
+     
+      <div class="icons">
+	
+	<a href="#sp07" onclick="toggle_visibility('abstract_sp07'); return false;">Abstract</a> &nbsp; 
+        
+	&bull; &nbsp; <a href="#sp07" onclick="toggle_visibility('bibtex_sp07'); return false;">BibTeX</a> &nbsp; 
+	
+	
+   	&bull; &nbsp; <a href="http://doi.ieeecomputersociety.org/10.1109/MSP.2007.31">Paper</a> &nbsp;
+	
+	
+	
+	&bull; &nbsp; <span class="missing">Slides</span> &nbsp;
+	
+	
+      </div>
+
+      <br/>
+
+      <div id="abstract_sp07" style="display:none">
+	<div class="abstract">
+	  Next-generation malware will adopt self-mutation to circumvent current malware detection techniques. The authors propose a strategy based on code normalization that reduces different instances of the same malware into a common form that can enable accurate detection.
+	</div>
+      </div>
+
+      <div id="bibtex_sp07" style="display:none">
+	<pre>@article{sp07,
+  author           = {Danilo Bruschi and Lorenzo Martignoni and Mattia Monga},
+  publisher        = {IEEE Computer Society},
+  title            = {{Code Normalization for Self-Mutating Malware}},
+  journal          = {Security and Privacy},
+  number           = {2},
+  month            = may,
+  volume           = {5},
+  year             = 2007,
+  pages            = {46--54},
+}</pre>
+      </div>
+    </li>
+    
+
+    <li> 
+      <span style="font-size:110%"><b>Detecting Self-Mutating Malware Using Control Flow Graph Matching</b></span>
+
+      <br/>
+     
+      <a name="dimva06"></a>Danilo Bruschi, Lorenzo Martignoni, Mattia Monga
+
+      <br/>
+
+      
+      In <i>Proceedings of the 3<sup>rd</sup> Conference on Detection of Intrusions and Malware and Vulnerability Assessment (DIMVA)</i>
+      
+      
+      
+
+      <br/>
+
+      July 2006. 
+      
+      Berlin, Germany
+      
+
+      <br/>
+
+      
+
+     
+      <div class="icons">
+	
+	<a href="#dimva06" onclick="toggle_visibility('abstract_dimva06'); return false;">Abstract</a> &nbsp; 
+        
+	&bull; &nbsp; <a href="#dimva06" onclick="toggle_visibility('bibtex_dimva06'); return false;">BibTeX</a> &nbsp; 
+	
+	&bull; &nbsp; <span class="missing">Paper</span> &nbsp;
+	
+	
+	&bull; &nbsp; <span class="missing">Slides</span> &nbsp;
+	
+	
+      </div>
+
+      <br/>
+
+      <div id="abstract_dimva06" style="display:none">
+	<div class="abstract">
+	  Next generation malware will by be characterized by the intense use of polymorphic and metamorphic techniques aimed at circumventing the current malware detectors, based on pattern matching. In order to deal with this new kind of threat, novel techniques have to be devised for the realization of malware detectors. Recent papers started to address such an issue and this paper represents a further contribution in such a field. More precisely in this paper we propose a strategy for the detection of metamorphic malicious code inside a program $P$ based on the comparison of the control flow graphs of $P$ against the set of control flow graphs of known malware. We also provide experimental data supporting the validity of our strategy.
+	</div>
+      </div>
+
+      <div id="bibtex_dimva06" style="display:none">
+	<pre>@inproceedings{dimva06,
+  author           = {Danilo Bruschi and Lorenzo Martignoni and Mattia Monga},
+  title            = {{Detecting Self-Mutating Malware Using Control Flow Graph Matching}},
+  booktitle        = {Proceedings of the 3$^{rd}$ Conference on Detection of Intrusions and Malware and Vulnerability Assessment (DIMVA)},
+  month            = jul,
+  note             = {Berlin, Germany},
+  year             = 2006,
+}</pre>
+      </div>
+    </li>
+    
+
+    <li> 
+      <span style="font-size:110%"><b>Using Code Normalization for Fighting Self-Mutating Malware</b></span>
+
+      <br/>
+     
+      <a name="tr0806"></a>Danilo Bruschi, Lorenzo Martignoni, Mattia Monga
+
+      <br/>
+
+      
+      
+      
+      <i>Technical report 08-06</i>. Dipartimento di Informatica e Comunicazione &mdash; Universit&agrave; degli Studi di Milano
+      
+
+      <br/>
+
+      March 2006. 
+      
+
+      <br/>
+
+      
+
+     
+      <div class="icons">
+	
+	<a href="#tr0806" onclick="toggle_visibility('abstract_tr0806'); return false;">Abstract</a> &nbsp; 
+        
+	&bull; &nbsp; <a href="#tr0806" onclick="toggle_visibility('bibtex_tr0806'); return false;">BibTeX</a> &nbsp; 
+	
+	
+   	&bull; &nbsp; <a href="rt0806.pdf">Paper</a> &nbsp;
+	
+	
+	
+	&bull; &nbsp; <span class="missing">Slides</span> &nbsp;
+	
+	
+      </div>
+
+      <br/>
+
+      <div id="abstract_tr0806" style="display:none">
+	<div class="abstract">
+	  Self mutating malware has been introduced by computer virus writers who, in '90s, started to write polymorphic and metamorphic viruses in order to defeat anti-virus products. In this paper we present a novel approach for dealing with self mutating code which could represent the basis for a new detection strategy for this type of malware. A tool prototype has been implemented in order to validate the idea and the results are quite encouraging, and indicate that it could represent a new strategy for detecting this kind of malware.
+	</div>
+      </div>
+
+      <div id="bibtex_tr0806" style="display:none">
+	<pre>@techreport{tr0806,
+  author           = {Danilo Bruschi and Lorenzo Martignoni and Mattia Monga},
+  title            = {{Using Code Normalization for Fighting Self-Mutating Malware}},
+  number           = {08-06},
+  month            = mar,
+  year             = 2006,
+  institution      = {Dipartimento di Informatica e Comunicazione -- Universit\`a degli Studi di Milano},
+}</pre>
+      </div>
+    </li>
+    
+
+    <li> 
+      <span style="font-size:110%"><b>Using Code Normalization for Fighting Self-Mutating Malware</b></span>
+
+      <br/>
+     
+      <a name="issse06"></a>Danilo Bruschi, Lorenzo Martignoni, Mattia Monga
+
+      <br/>
+
+      
+      In <i>Proceedings of the International Symposium of Secure Software Engineering (ISSSE)</i>
+      
+      
+      
+
+      <br/>
+
+      March 2006. 
+      
+      Arlington, VA, USA
+      
+
+      <br/>
+
+      
+
+     
+      <div class="icons">
+	
+	<a href="#issse06" onclick="toggle_visibility('abstract_issse06'); return false;">Abstract</a> &nbsp; 
+        
+	&bull; &nbsp; <a href="#issse06" onclick="toggle_visibility('bibtex_issse06'); return false;">BibTeX</a> &nbsp; 
+	
+	&bull; &nbsp; <span class="missing">Paper</span> &nbsp;
+	
+	
+	&bull; &nbsp; <span class="missing">Slides</span> &nbsp;
+	
+	
+      </div>
+
+      <br/>
+
+      <div id="abstract_issse06" style="display:none">
+	<div class="abstract">
+	  Self mutating malware has been introduced by computer virus writers who, in '90s, started to write polymorphic and metamorphic viruses in order to defeat anti-virus products. In this paper we present a novel approach for dealing with self mutating code which could represent the basis for a new detection strategy for this type of malware. A tool prototype has been implemented in order to validate the idea and the results are quite encouraging, and indicate that it could represent a new strategy for detecting this kind of malware.
+	</div>
+      </div>
+
+      <div id="bibtex_issse06" style="display:none">
+	<pre>@inproceedings{issse06,
+  author           = {Danilo Bruschi and Lorenzo Martignoni and Mattia Monga},
+  publisher        = {IEEE Computer Society},
+  title            = {{Using Code Normalization for Fighting Self-Mutating Malware}},
+  booktitle        = {Proceedings of the International Symposium of Secure Software Engineering (ISSSE)},
+  month            = mar,
+  note             = {Arlington, VA, USA},
+  year             = 2006,
+}</pre>
+      </div>
+    </li>
+    
+
+    <li> 
+      <span style="font-size:110%"><b>Detecting Self-Mutating Malware Using Control Flow Graph Matching</b></span>
+
+      <br/>
+     
+      <a name="tr0906"></a>Danilo Bruschi, Lorenzo Martignoni, Mattia Monga
+
+      <br/>
+
+      
+      
+      
+      <i>Technical report 09-06</i>. Dipartimento di Informatica e Comunicazione &mdash; Universit&agrave; degli Studi di Milano
+      
+
+      <br/>
+
+      March 2006. 
+      
+
+      <br/>
+
+      
+
+     
+      <div class="icons">
+	
+	<a href="#tr0906" onclick="toggle_visibility('abstract_tr0906'); return false;">Abstract</a> &nbsp; 
+        
+	&bull; &nbsp; <a href="#tr0906" onclick="toggle_visibility('bibtex_tr0906'); return false;">BibTeX</a> &nbsp; 
+	
+	
+   	&bull; &nbsp; <a href="rt0906.pdf">Paper</a> &nbsp;
+	
+	
+	
+	&bull; &nbsp; <span class="missing">Slides</span> &nbsp;
+	
+	
+      </div>
+
+      <br/>
+
+      <div id="abstract_tr0906" style="display:none">
+	<div class="abstract">
+	  Next generation malware will by be characterized by the intense use of polymorphic and metamorphic techniques aimed at circumventing the current malware detectors, based on pattern matching. In order to deal with this new kind of threat, novel techniques have to be devised for the realization of malware detectors. Recent papers started to address such an issue and this paper represents a further contribution in such a field. More precisely in this paper we propose a strategy for the detection of metamorphic malicious code inside a program $P$ based on the comparison of the control flow graphs of $P$ against the set of control flow graphs of known malware. We also provide experimental data supporting the validity of our strategy.
+	</div>
+      </div>
+
+      <div id="bibtex_tr0906" style="display:none">
+	<pre>@techreport{tr0906,
+  author           = {Danilo Bruschi and Lorenzo Martignoni and Mattia Monga},
+  title            = {{Detecting Self-Mutating Malware Using Control Flow Graph Matching}},
+  number           = {09-06},
+  month            = mar,
+  year             = 2006,
+  institution      = {Dipartimento di Informatica e Comunicazione -- Universit\`a degli Studi di Milano},
+}</pre>
+      </div>
+    </li>
+    
+
+    <li> 
+      <span style="font-size:110%"><b>How to Reuse Knowledge About Forensic Investigations</b></span>
+
+      <br/>
+     
+      <a name="dfrws04"></a>Danilo Bruschi, Lorenzo Martignoni, Mattia Monga
+
+      <br/>
+
+      
+      In <i>Proceedings of the 4<sup>th</sup> Digital Forensic Research Workshop (DFRWS)</i>
+      
+      
+      
+
+      <br/>
+
+      August 2004. 
+      
+      Linticum, MD, USA
+      
+
+      <br/>
+
+      
+
+     
+      <div class="icons">
+	
+	<a href="#dfrws04" onclick="toggle_visibility('abstract_dfrws04'); return false;">Abstract</a> &nbsp; 
+        
+	&bull; &nbsp; <a href="#dfrws04" onclick="toggle_visibility('bibtex_dfrws04'); return false;">BibTeX</a> &nbsp; 
+	
+	
+   	&bull; &nbsp; <a href="dfrws04.pdf">Paper</a> &nbsp;
+	
+	
+	
+	&bull; &nbsp; <span class="missing">Slides</span> &nbsp;
+	
+	
+      </div>
+
+      <br/>
+
+      <div id="abstract_dfrws04" style="display:none">
+	<div class="abstract">
+	  When detectives perform investigations they manage a huge amount of information, they make use of specialized skills and analyze a wide knowledge base of evidence. Most of the work is not explicitly recorded and this hurdles external reviews and training. In this paper we propose a model able to organize forensic knowledge in a reusable way. Thus, past experience may be used to train new personnel, to foster knowledge sharing among detective communities and to expose collected information to quality assessment by third parties.
+	</div>
+      </div>
+
+      <div id="bibtex_dfrws04" style="display:none">
+	<pre>@inproceedings{dfrws04,
+  author           = {Danilo Bruschi and Lorenzo Martignoni and Mattia Monga},
+  title            = {{How to Reuse Knowledge About Forensic Investigations}},
+  booktitle        = {Proceedings of the 4$^{th}$ Digital Forensic Research Workshop (DFRWS)},
+  month            = aug,
+  note             = {Linticum, MD, USA},
+  year             = 2004,
+}</pre>
+      </div>
+    </li>
+    
+  </ul>
+</div>
+
+
+
+      
+         <div class="footer" align="right">
+           Last updated: Tue, 25 Jan 2011 14:03:58 +0000
+         </div>
+      
+    </div>
+  </div>
+
+  <script type="text/javascript">
+    var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+    document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+  </script>
+  <script type="text/javascript">
+    try {
+    var pageTracker = _gat._getTracker("UA-9647299-2");
+    pageTracker._trackPageview();
+    } catch(err) {}
+  </script>
+
+</body>
+</html>
+

@@ -1,0 +1,384 @@
+@string{BCS="British Computer Society"}
+@string{BELL="{AT\&T} Bell Laboratories"}
+@string{CMU="Computer Science Department, Carnegie-Mellon University"}
+@string{CORNELL="Department of Computer Science, Cornell University"}
+@string{CRC="Cambridge Research Centre, SRI International"}
+@string{CUCL="Computer Laboratory, University of Cambridge"}
+@string{CUED="Cambridge University Engineering Department"}
+@string{DAIMI=" DAIMI, Aarhus University"}
+@string{DIKU=" DIKU, University of Copenhagen"}
+@string{DOC="Department of Computing, Imperial College, London"}
+@string{DPMMS="Department of Pure Mathematics and Mathematical Statistics,
+               University of Cambridge"}
+@string{ECRC="European Computer-Industry Research Centre GmbH"}
+@string{EUCSD="Department of Computer Science, University of Edinburgh"}
+@string{IBMTJ="IBM Thomas J. Watson Research Center"}
+@string{IMEC=" IMEC, Leuven, Belgium"}
+@string{Indiana="Indiana University Computer Science Department"}
+@string{LFCS="Laboratory for Foundations of Computer Science, Department of
+              Computer Science, University of Edinburgh"}
+@string{MITLCS="Laboratory for Computer Science, MIT"}
+@string{PRG="Programming Research Group,
+              Oxford University Computing Laboratory"}
+@string{PMG="Programming Methodology Group, University of {G\"oteborg} and
+             Chalmers University of Technology"}
+@string{SRC="DEC Systems Research Center, Palo Alto"}
+@string{STANFORD="Computer Science Department, Stanford University"}
+@string{UCBCSD="Computer Science Division, University of California, 
+Berkeley"}
+@string{UCL="Department of Computer Science, University College London"}
+@string{UEA="Declarative Systems Architecture Group, School of Computing
+		 Studies and Accountancy, University of East Anglia"}
+@string{UKC="Computing Laboratory, University of Kent at Canterbury"}
+
+@string{ACMCS="ACM Computing Surveys"}
+@string{ACTAI="Acta Informatica"}
+@string{APAL="Annals of Pure and Applied Logic"}
+@string{CACM="Communications of the {ACM}"}
+@string{CL="Computer Languages"}
+@string{ESOP="European Symposium on Programming"}
+@string{FAC="Formal Aspects of Computing"}
+@string{IC="Information and Control"}
+@string{JACM="Journal of the {ACM}"}
+@string{JCSS="Journal of Computer and System Sciences"}
+@string{JLP="The Journal of Logic Programming"}
+@string{Polymorphism="Polymorphism---The {ML}/{LCF}/Hope Newsletter"}
+@string{SIGPLAN="{ACM} {SIGPLAN} Notices"}
+@string{SWPE="Software---Practice and Experience"}
+@string{TCS="Theoretical Computer Science"}
+@string{TODS="{ACM} Transactions on Database Systems"}
+@string{TOG="{ACM} Transactions on Graphics"}
+@string{TOPLAS="{ACM} Transactions on Programming Languages and Systems"}
+@string{TSE="IEEE Transactions on Software Engineering"}
+
+% Papers from a volume of LNCS should be done using Incollection or
+% Inproceedings
+
+@string{LNCS="Lecture Notes in Computer Science"}
+@string{AP="Academic Press"}
+@string{CUP="Cambridge University Press"}
+@string{OUP="Oxford University Press"}
+@string{MITP="MIT Press, Cambridge, Mass."}
+@string{PHI="Prentice-Hall International"}
+@string{SV="Springer-Verlag"}
+@string{WILEY="John Wiley and Sons, Chichester"}
+@string{PIT="Pitman"}
+
+@string{FPLCA="Functional Programming Languages and Computer Architecture"}
+@string{ICALP="International Colloquium on Automata, Languages and 
+Programming"}
+@string{LFP="{LISP} and Functional Programming"}
+@string{LICS="{IEEE} Symposium on Logic in Computer Science"}
+@string{MFCS="International Conference on
+              Mathematical Foundations of Computer Science"}
+@string{PODC="Principles of Distributed Computing"}
+@string{PODS="Principles of Database Systems"}
+@string{POPL="{ACM} Symposium on Principles of Programming Languages"}
+
+@inproceedings{SMLtoJava, 
+  author = {P.~N.~Benton and A.~J.~Kennedy and G.~Russell}, 
+  title = {Compiling {Standard ML} to {Java} bytecodes},
+  year = 1998, 
+  booktitle = {3rd ACM SIGPLAN International Conference on Functional Programming}, 
+  place = {Baltimore}, 
+  month = {September}, 
+  url = {http://research.microsoft.com/~akenn/sml/SMLtoJava.ps}, 
+  publisher = {ACM Press},
+  abstract =
+  {MLJ compiles SML'97 into verifier-compliant Java bytecodes.  Its
+  features include type-checked interlanguage working extensions which
+  allow ML and Java code to call each other, automatic recompilation
+  management, compact compiled code and runtime performance which,
+  using a `just in time' compiling Java virtual machine, usually
+  exceeds that of existing specialised bytecode interpreters for
+  ML. Notable features of the compiler itself include whole-program
+  optimisation based on rewriting, compilation of polymorphism by
+  specialisation, a novel monadic intermediate language which
+  expresses effect information in the type system and some interesting
+  data representation choices.}  
+}
+
+@inproceedings{SMLJavaInterop, 
+  author = {P.~N.~Benton and A.~J.~Kennedy}, 
+  title = {Interlanguage Working Without Tears: Blending {SML} with {Java}},
+  year = 1999, 
+  booktitle = {4th ACM SIGPLAN International Conference on Functional Programming}, 
+  place = {Paris}, 
+  month = {September}, 
+  url = {http://research.microsoft.com/~akenn/sml/SMLJavaInterop.pdf}, 
+  publisher = {ACM Press},
+  abstract =
+  {A good foreign-language interface is crucial for the success of any
+   modern programming language implementation. Although all serious
+   compilers for functional languages have some facility for
+   interlanguage working, these are often
+   limited and awkward to use. 
+    
+   This article describes the features for bidirectional
+   interlanguage working with Java that are built into the latest version
+   of the MLj compiler. Because the MLj foreign interface is to
+   another high-level typed language which shares a garbage collector
+   with compiled ML code, and because we are willing to extend the ML
+   language, we are able to provide unusually powerful, safe and easy to
+   use interlanguage working features. Indeed, rather then being a
+   traditional foreign \emph{interface}, our language extensions are more
+   a partial \emph{integration} of Java features into SML.
+
+   We describe this integration of Standard ML and Java, first informally with
+   example program fragments, and then formally in the notation used by
+   The Definition of Standard ML.}
+}
+
+@inproceedings{DesignAndImplementationOfGenerics,
+  author = "A.~J.~Kennedy and D.~Syme",
+  title = "Design and Implementation of Generics for the {.NET Common Language Runtime}",
+  booktitle = "Programming Language Design and Implementation",
+  year = 2001,
+  publisher = {ACM Press},
+  url = {http://research.microsoft.com/~akenn/generics/DesignAndImplementationOfGenerics.pdf}
+}
+
+@inproceedings{FormalizationOfGenerics,
+ author = {Dachuan Yu and Andrew J. Kennedy and Don Syme},
+ title = {Formalization of Generics for the {.NET Common Language Runtime}},
+ booktitle = {POPL '04: Proceedings of the 31st ACM SIGPLAN-SIGACT Symposium on Principles of Programming Languages},
+ year = {2004},
+ isbn = {1-58113-729-X},
+ pages = {39--51},
+ location = {Venice, Italy},
+ publisher = {ACM Press},
+ url = {http://research.microsoft.com/~akenn/generics/FormalizationOfGenerics.pdf}
+}
+
+@inproceedings{DimensionTypes,
+ author = {Andrew J. Kennedy},
+ title = {Dimension Types},
+ booktitle = {ESOP '94: Proceedings of the 5th European Symposium on Programming},
+ year = {1994},
+ isbn = {3-540-57880-3},
+ pages = {348--362},
+ publisher = {Springer-Verlag},
+ url = {http://research.microsoft.com/~akenn/units/DimensionTypes.ps}
+}
+
+@inproceedings{RelationalParametricityAndUnitsOfMeasure,
+ author = {Andrew J. Kennedy},
+ title = {Relational parametricity and units of measure},
+ booktitle = {POPL '97: Proceedings of the 24th ACM SIGPLAN-SIGACT Symposium on Principles of Programming Languages},
+ year = {1997},
+ isbn = {0-89791-853-3},
+ pages = {442--455},
+ location = {Paris, France},
+ doi = {http://doi.acm.org/10.1145/263699.263761},
+ publisher = {ACM Press},
+ url = {http://research.microsoft.com/~akenn/units/RelationalParametricityAndUnitsOfMeasure.pdf}
+ }
+
+
+@article{DrawingTrees,
+  author    = {Andrew J. Kennedy},
+  title     = {Functional Pearl: Drawing Trees},
+  journal   = {Journal of Functional Programming},
+  publisher = {CUP},
+  volume    = {6},
+  number    = {3},
+  year      = {1996},
+  pages     = {527-534},
+  bibsource = {DBLP, http://dblp.uni-trier.de},
+  abstract = {This article describes the application of functional
+programming techniques to a problem previously studied by imperative
+programmers, that of drawing general trees automatically.  We first
+consider the nature of the problem and the ideas behind its solution
+(due to Radack), independent of programming language
+implementation. We then describe a Standard ML program which reflects
+the structure of the abstract solution much better than an imperative
+language implementation.  We conclude with an informal discussion on
+the correctness of the implementation and some changes which improve
+the algorithm's worst-case time complexity.},
+
+  url = {http://research.microsoft.com/~akenn/fun/DrawingTrees.pdf}
+}
+
+
+
+@article{PicklerCombinators,
+  author    = {Andrew J. Kennedy},
+  title     = {Functional Pearl: Pickler Combinators},
+  journal   = {Journal of Functional Programming},
+
+  abstract = {The tedium of writing pickling and unpickling functions
+  by hand is relieved using a combinator library similar in spirit to
+  the well-known parser combinators. Picklers for primitive types are
+  combined to support tupling, alternation, recursion, and structure
+  sharing. Code is presented in Haskell; an alternative implementation
+  in ML is discussed.},
+
+  publisher = {CUP},
+  volume    = {14},
+  number    = {6},
+  year      = {2004},
+  pages     = {727-739},
+  url = {http://research.microsoft.com/~akenn/fun/PicklerCombinators.pdf}
+}
+
+
+@article{MonadsEffectsAndTransformations,
+  author    = {Nick Benton and
+               Andrew J. Kennedy},
+  title     = {Monads, Effects and Transformations},
+  booktitle = {Third International Workshop on Higher Order Operational Techniques in Semantics (HOOTS)},
+  place = {Paris},
+  journal   = {Electronic Notes in Theoretical Computer Science},
+  publisher = {Elsevier},
+  volume    = {26},
+  year      = {1999},
+  url = {http://research.microsoft.com/~akenn/sml/MonadsEffectsAndTransformations.pdf}
+}
+
+
+
+
+@article{ExceptionalSyntax,
+  author    = {Nick Benton and
+               Andrew J. Kennedy},
+  title     = {Exceptional Syntax},
+  journal   = {Journal of Functional Programming},
+  publisher = {CUP},
+  volume    = {11},
+  number    = {4},
+  year      = {2001},
+  pages     = {395-410},
+  url = {http://research.microsoft.com/~akenn/sml/ExceptionalSyntax.pdf}
+}
+
+@article{TransposingFToCSharp,
+  author = {Andrew J. Kennedy and Don Syme},
+  title = {Transposing {F} to {C$^\sharp$}: Expressivity of parametric polymorphism in an object-oriented language},
+  journal = {Concurrency and Computation: Practice and Experience},
+  year = 2004,
+  month = {June},
+  volume = 16, 
+  number = 7,
+  publisher = {Wiley},
+  url = {http://research.microsoft.com/~akenn/generics/TransposingFToCSharp.pdf}
+}
+
+@inproceedings{GADTOOP,
+  author = {Andrew J. Kennedy and Claudio Russo},
+  title = "Generalized Algebraic Data Types and Object-Oriented Programming",
+  booktitle = "Object Oriented Programming, Systems, Languages and Applications (OOPSLA)",
+  year = 2005,
+  month = {October}, 
+  abstract = {Generalized algebraic data types (GADTs) have received much attention
+recently in the functional programming community. They generalize the
+type-parameterized datatypes of ML and Haskell by permitting
+constructors to produce different type-instantiations of the same
+datatype. GADTs have a number of applications, including
+strongly-typed evaluators, generic pretty-printing, generic traversals
+and queries, and typed LR parsing.  We show that existing
+object-oriented programming languages such as Java and C# can
+express GADT definitions, and a large class of GADT-manipulating
+programs, through the use of generics, subclassing, and virtual
+dispatch. However, some programs can be written only through the use of
+redundant run-time casts.  We propose a generalization of the type constraint
+mechanisms of C# and Java to avoid the need for such casts,
+present a Visitor pattern for GADTs, and describe a switch
+construct as an alternative to virtual dispatch on datatypes. We
+formalize both extensions and prove a type soundness result.},
+  url = {http://research.microsoft.com/~akenn/generics/GADTOOP.pdf}
+}
+
+@inproceedings{GADTOOP,
+  author = {Andrew J. Kennedy and Benjamin C. Pierce},
+  title = "On Decidability of Nominal Subtyping with Variance",
+  booktitle = "International Workshop on Foundations and Developments of Object-Oriented Languages (FOOL/WOOD)",
+  year = 2007,
+  month = {January}, 
+  abstract = {We investigate the algorithmics of subtyping in the presence of nominal
+inheritance and variance for generic types, as found in Java 5, Scala 2.0,
+and the .NET 2.0 Intermediate Language.  We prove that the general problem
+is undecidable and characterize three different decidable fragments.  From
+the latter, we conjecture that undecidability critically depends on the
+combination of three features that are not found together in any of these
+languages: contravariant type constructors, class hierarchies in which the
+set of types reachable from a given type by inheritance and decomposition is
+not always finite, and class hierarchies in which a type may have multiple
+supertypes with the same head constructor.
+
+These results settle one case of practical interest: subtyping between
+ground types in the .NET intermediate language is decidable; we conjecture
+that our proof can also be extended to show full decidability of subtyping
+in .NET.  For Java and Scala, the decidability questions remain open;
+however, the proofs of our preliminary results introduce a number of novel
+techniques that we hope may be useful in further attacks on these questions.},
+  url = {http://research.microsoft.com/~akenn/generics/FOOL2007.pdf}
+}
+
+@inproceedings{CSharpVarianceConstraints,
+  author = {Burak Emir and Andrew J. Kennedy and Claudio Russo and Dachuan Yu},
+  title = "Variance and Generalized Constraints for C# Generics",
+  booktitle = "European Conference on Object-Oriented Programming (ECOOP)",
+  year = 2006,
+  month = {July}, 
+  abstract = {Generic types in C# behave invariantly with respect to
+subtyping. We propose a system of type-safe variance for
+C# that supports the declaration of covariant and contravariant
+type parameters on generic types. To support more
+widespread application of variance we also generalize the existing
+constraint mechanism with arbitrary subtype assertions on
+classes and methods. This extension is useful even in the absence of
+variance, and subsumes equational constraints proposed
+for Generalized Algebraic Data Types (GADTs).
+We formalize the subtype relation in both declarative and
+syntax-directed style, and describe and prove the correctness of
+algorithms for constraint closure and subtyping. Finally, we formalize
+and prove a type safety theorem for a featherweight language with
+variant classes and generalized constraints.},
+  url = {http://research.microsoft.com/~akenn/generics/ECOOP06.pdf}
+}
+
+@article{SecuringDotNET,
+  author = {Andrew J. Kennedy},
+  title = {Securing the .NET Programming Model},
+  booktitle = "Theoretical Computer Science",
+  year = 2007,
+  month = {January},
+  note = {Special Issue containing selected articles from APPSEM II Workshop},
+  abstract = {The security of the .NET programming model is studied from the
+standpoint of fully abstract compilation of C#. A number of
+failures of full abstraction are identified, and fixes described. The most serious
+problems have recently been fixed for version 2.0 of the .NET Common
+Language Runtime.},
+  url = {http://research.microsoft.com/~akenn/sec/appsem-tcs.pdf}
+}
+  
+
+@inproceedings{CompilingContinuations,
+  author = {Andrew Kennedy},
+  title = {Compiling with Continuations, Continued},
+  year = 2007, 
+  booktitle = {ACM SIGPLAN International Conference on Functional Programming}, 
+  place = {Freiburg, Germany}, 
+  month = {October}, 
+  url = {http://research.microsoft.com/~akenn/sml/CompilingWithContinuationsContinued.pdf}, 
+  publisher = {ACM Press},
+  abstract =
+  {We present a series of CPS-based intermediate languages suitable for
+functional language compilation, arguing that they have practical
+benefits over direct-style languages based on A-normal form (ANF) or
+monads.  Inlining of functions demonstrates the benefits most clearly:
+in ANF-based languages, inlining involves a re-normalization step that
+rearranges let expressions and possibly introduces a new `join point'
+function, and in monadic languages, commuting conversions must be
+applied; in contrast, inlining in our CPS language is a simple
+substitution of variables for variables.
+
+We present a contification transformation implemented by simple
+rewrites on the intermediate language.  Exceptions are modelled using
+so-called `double-barrelled' CPS. Subtyping on exception constructors
+then gives a very straightforward effect analysis for exceptions.  We
+also show how a graph-based representation of CPS terms can be
+implemented extremely efficiently, with linear-time term
+simplification.}
+}
+

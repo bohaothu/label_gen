@@ -1,0 +1,592 @@
+@InProceedings{Skala:SPIRE05,
+   title =       "Measuring the Difficulty of Distance-Based Indexing",
+   author =      "Matthew Skala",
+   bibdate =     "2005-10-31",
+   bibsource =   "DBLP, http://dblp.uni-trier.de/db/conf/spire/spire2005.html#Skala05",
+   booktitle =   "String Processing and Information Retrieval, 12th
+                  International Conference, {SPIRE} 2005, Buenos Aires,
+                  Argentina, November 2-4, 2005, Proceedings",
+   publisher =   "Springer",
+   year =        "2005",
+   volume =      "3772",
+   editor =      "Mariano P. Consens and Gonzalo Navarro",
+   ISBN =        "3-540-29740-5",
+   pages =       "103--114",
+   series =      "Lecture Notes in Computer Science",
+   URL =         "http://ansuz.sooke.bc.ca/professional/spire05-paper.php",
+}
+
+
+@book{ABN,
+   author = "Barry C. Arnold and N. Balakrishnan and H. N. Nagaraja",
+   title = "A First Course in Order Statistics",
+   publisher = "John Wiley {\&} Sons, Inc.",
+   address = "New York",
+   year = 1992,
+   series = "Wiley series in probability and mathematical statistics",
+}
+
+@ARTICLE{Amsaleg:Local,
+   AUTHOR = {L. Amsaleg and P. Gros},
+   TITLE = {Content-based retrieval using local descriptors:
+            Problems and issues from a database perspective},
+   JOURNAL = {Pattern Analysis and Applications},
+   YEAR = 2001,
+   VOLUME = 4,
+   NUMBER = {2/3},
+   PAGES = {1--124}
+}
+
+@book{AntiTrust,
+   author =       "{Howitt~(dir.)},Peter",
+   title =        "{AntiTrust}",
+   publisher =    "MGM Home Entertainment",
+   year =         "2001",
+   note =         "North American DVD release of 2000 motion picture from
+                   MGM Pictures.",
+}
+
+@InProceedings{BaezaYates:FQ,
+   title =        "Proximity Matching Using Fixed-Queries Trees",
+   author =       "Ricardo A. Baeza-Yates and Walter Cunto and Udi Manber
+                   and Sun Wu",
+   booktitle =    "{CPM} (Combinatorial Pattern Matching)",
+   year =         "1994",
+   series =       "Lecture Notes in Computer Science",
+   volume =       "807",
+   publisher =    "Springer",
+   ISBN =         "ISBN 3-540-58094-8",
+   pages =        "198--212",   
+}
+
+
+@inproceedings{Beckmann:RStar,
+   author    = {Norbert Beckmann and Hans-Peter Kriegel and
+                Ralf Schneider and Bernhard Seeger},
+   title     = {The {R*}-Tree: An Efficient and Robust Access Method for Points
+                and Rectangles},
+   booktitle = {{SIGMOD} (International Conference on
+                Management of Data)},
+   year      = {1990},
+   pages     = {322-331},
+   url =
+     "http://dbs.mathematik.uni-marburg.de/publications/myPapers/1990/BKSS90.pdf",
+   abstract  = "The R-tree, one of the most popular access methods for
+rectangles, is based on the heuristic optimization of the area of the
+enclosing rectangle in each inner node. By running numerous experiments in a
+standardized testbed under highly varying data, queries and operations, we
+were able to design the R*-tree which incorporates a combined optimization
+of area, margin and overlap of each enclosing rectangle in the directory.
+Using our standardized testbed in an exhaustive performance comparison, it
+turned out that the R*-tree clearly outperforms the existing R-tree variants
+Guttman's linear and quadratic R-tree and Greene's variant of the R-tree.
+This superiority of the R*-tree holds for different types of queries and
+operations, such as map overlay, for both rectangles and multidimensional
+points in all experiments. From a practical point of view the R*-tree is
+very attractive because of the following two reasons: 1 it efficiently
+supports point and spatial data at the same time and 2 its implementation
+cost is only slightly higher than that of other R-trees.",
+}
+
+
+@inproceedings{Berchtold:Pyramid,
+   author = {Stefan Berchtold and Christian B{\"o}hm and Hans-Peter Kriegel},
+   title = {The Pyramid-Tree: Breaking the Curse of Dimensionality},
+   booktitle = {{SIGMOD} (International Conference
+                on Management of Data)},
+   year = {1998},
+   isbn = {0-89791-955-5},
+   pages = {142--153},
+}
+% " (work around a bug in jed)
+
+@Article{Bozkaya:MVP,
+   author =       "Tolga Bozkaya and Meral Ozsoyoglu",
+   title =        "Indexing large metric spaces for similarity search queries",
+   journal =      "ACM Transactions on Database Systems",
+   volume =       "24",
+   number =       "3",
+   pages =        "361--404",
+   month =        sep,
+   year =         "1999",
+   coden =        "ATDSD3",
+   ISSN =         "0362-5915",
+   bibdate =      "Tue Sep 26 08:44:02
+   MDT 2000",
+   url = "http://www.acm.org/pubs/citations/journals/tods/1999-24-3/p361-bozkaya/",
+   abstract =     "One of the common queries in many database
+      applications is finding approximate matches to a given
+      query item from a collection of data items. For
+      example, given an image database, one may want to
+      retrieve all images that are similar to a given query
+      image. Distance-based index structures are proposed for
+      applications where the distance computations between
+      objects of the data domain are expensive (such as
+      high-dimensional data) and the distance function is
+      metric. In this paper we consider using distance-based
+      index structures for similarity queries on large metric
+      spaces. We elaborate on the approach that uses
+      reference points (vantage points) to partition the data
+      space into spherical shell-like regions in a
+      hierarchical manner. We introduce the multivantage
+      point tree structure (mvp-tree) that uses more than one
+      vantage point to partition the space into spherical
+      cuts at each level. In answering similarity-based
+      queries, the mvp-tree also utilizes the precomputed (at
+      construction time) distances between the data points
+      and the vantage points.\par We summarize the experiments comparing
+      mvp-trees to vp-trees that have a
+      similar partitioning strategy, but use only one vantage
+      point at each level and do not make use of the
+      precomputed distances. Empirical studies show that the
+      mvp-tree outperforms the vp-tree by 20\% to 80\% for
+      varying query ranges and different distance
+      distributions. Next, we generalize the idea of using
+      multiple vantage points and discuss the results of
+      experiments we have made to see how varying the number
+      of vantage points in a node affects affects performance
+      and how much is gained in performance by making use of
+      precomputed distances. The results show that, after
+      all, it may be best to use a large number of vantage
+      points in an internal node in order to end up with a
+      single directory node and keep as many of the
+      precomputed distances as possible to provide more
+      efficient filtering during search operations. Finally,
+      we provide some experimental results that compare
+      mvp-trees with M-trees, which is a dynamic distance-based index
+      structure for metric domains.",
+}
+
+% Walter A. and Robert M., but they're abbreviated on the original.
+@Article{Burkhard:Approaches,
+   author =       "W. A. Burkhard and R. M. Keller",
+   title =        "Some Approaches to Best-Match File Searching",
+   journal =      "Communications of the ACM",
+   volume =       "16",
+   number =       "4",
+   pages =        "230--236",
+   month =        apr,
+   year =         "1973",
+   coden =        "CACMA2",
+   ISSN =         "0001-0782",
+   bibdate =      "Mon Jan 22 06:28:51 MST 2001",
+   abstract =     "The problem of searching the set of keys in a file to
+                   find a key which is closest to a given query key is
+                   discussed. After `closest'', in terms of a metric on
+                   the key space, is suitably defined, three file
+                   structures are presented together with their
+                   corresponding search algorithms, which are intended to
+                   reduce the number of comparisons required to achieve
+                   the desired result. These methods are derived using
+                   certain inequalities satisfied by metrics and by
+                   graph-theoretic concepts. Some empirical results are
+                   presented which compare the efficiency of the
+                   methods.",
+   acknowledgement = ack-nhfb,
+   classcodes =   "C6120 (File organisation)",
+   classification = "723; 901",
+   corpsource =   "Univ. California, San Diego, CA, USA",
+   journalabr =   "Commun ACM",
+   keywords =     "best match; data processing; file organisation; file
+                   searching; file structuring; heuristics; information
+                   retrieval systems",
+   oldlabel =     "BurkhardK73",
+   treatment =    "T Theoretical or Mathematical",
+   xmldata =
+   "ftp://ftp.informatik.uni-trier.de/pub/users/Ley/bib/records.tar.gz#journals/cacm/BurkhardK73",
+}
+
+
+@techreport{Chavez:Intrinsic,
+   author =       "Edgar Ch{\'a}vez and Gonzalo Navarro",
+   title =        "Measuring the Dimensionality of General Metric Spaces",
+   institution =  "Department of Computer Science, University of Chile",
+   year =         2000,
+   number =       "TR/DCC-00-1",
+   note =         "Submitted.  Online {\texttt{ftp://ftp.dcc.uchile.cl/pub/users/gnavarro/metricmodel.ps.gz}}",
+}
+
+@Article{Ciaccia:Searching,
+   author =       "Paolo Ciaccia and Marco Patella",
+   title =        "Searching in metric spaces with user-defined and
+                   approximate distances",
+   journal =      "ACM Transactions on Database Systems",
+   volume =       "27",
+   number =       "4",
+   pages =        "398--437",
+   month =        dec,
+   year =         "2002",
+   coden =        "ATDSD3",
+   ISSN =         "0362-5915",
+}
+
+@Book{CLRS,
+   author =       "T. H. Cormen and C. E. Leiserson and R. L. Rivest and C. Stein",
+   title =        "Introduction to Algorithms.",
+   publisher =    "MIT Press",
+   year =         "2001"
+}
+                                  
+@inproceedings{Craver:SDMI,
+   author =       "Scott A. Craver and Min Wu and Bede Liu and
+                   Adam Stubblefield and Ben Swartzlander and Dan S. Wallach
+                   and Drew Dean and Edward W. Felten",
+   title =        "Reading Between the Lines: Lessons from the {SDMI} {Challenge}",
+   booktitle =    "4th International Information Hiding Workshop",
+   month =        apr # "~25--27,",
+   year =         2001,
+   address =      "Pittsburgh, {PA}, {USA}",
+   note =         "Statement read in lieu of withdrawn paper.
+                   Online {\texttt{http://www.cs.princeton.edu/sip/sdmi/sdmimessage.txt}}",
+}
+
+@techreport{Dasgupta:JLL,
+   author = "Sanjoy Dasgupta and Anupam Gupta",
+   title = "An elementary proof of the {J}ohnson-{L}indenstrauss {L}emma",
+   institution = "International Computer Science Institute",
+   number = "TR-99-006",
+   address = "Berkeley, California",
+   year = "1999",
+   url = "http://citeseer.nj.nec.com/dasgupta99elementary.html"
+}
+
+@inproceedings{Damiani:Open,
+   author =       "E. Damiani and De Capitani di Vimercati, S.
+                   and S. Paraboschi and P. Samarai",
+   title =        "An Open Digest-based Technique for Spam Detection",
+   booktitle =    "2004 International Workshop on Security in Parallel and
+                   Distributed Systems",
+   month =        sep # "~15--17,",
+   year =         2004,
+   address =      "San Francisco, {CA}, {USA}",
+}
+
+@misc{DigestNilsimsa,
+   author =       "Norwood, Chad and {cmeclax}",
+   title =        "{Digest::Nilsimsa 0.06}",
+   howpublished = "Computer software",
+   note =         "Online
+      {\texttt{http://search.cpan.org/\textasciitilde{}vipul/Digest-Nilsimsa-0.06/}}",
+   year =         2002,
+   month =        jun # "~13",
+}
+
+@incollection{DMCA,
+   author =       "{U.S. Congress}",
+   title =        "{Digital} {Millennium} {Copyright} {Act} ({DMCA})",
+   booktitle =    "United States Code, Title 17",
+   type =         "section",
+   chapter =      "1201",
+   publisher =    "U.S. Copyright Office",
+   year =         1998
+}
+
+@InProceedings{Filho:Similarity,
+   author =       "Roberto Filho and Agma Traina and Caetano Traina Jr.
+                   and Christos Faloutsos",
+   title =        "Similarity Search without Tears: The {OMNI}-Family of
+                   All-Purpose Access Methods",
+   pages =        "623--632",
+   booktitle =    "ICDE (International Conference on Data Engineering)",
+   ISBN =         "0-7695-1001-9",
+   month =        apr,
+   publisher =    "IEEE",
+   year =         "2001",
+}
+
+% FIXME correct this citation?
+@article{FisherTippett,
+   author =       "Fisher, R. A. and Tippett, L. H. C.",
+   title =        "Limiting forms of the frequency distribution of the
+                   largest or smallest member of a sample",
+   journal =      "Proceedings of the Cambridge Philosophical Society",
+   year =         1928,
+   volume =       24,
+   pages =        "180--190",
+}
+
+@inproceedings{Fridrich:Visual,
+   author =       "Jiri Fridrich",
+   title =        "Visual Hash for Oblivious Watermarking",
+   pages =        "286--294",
+   booktitle =    "SPIE Photonic West Electronic Imaging 2000, Security and
+                   Watermarking of Multimedia Contents",
+   month =        jan # "~24--26,",
+   year =         2000,
+   address =      "San Jose, California",
+}
+
+@misc{GIMP,
+   author =       "Peter Mattis and Spencer Kimball",
+   title =        "The {GNU} Image Manipulation Program ({GIMP}) 1.2.3",
+   howpublished = "Computer software",
+   note =         "Online
+      {\texttt{http://www.gimp.org/}}",
+}
+
+@book{Galambos,
+   author = "Janos Galambos",
+   title = "The Asymptotic Theory of Extreme Order Statistics",
+   publisher = "Robert E. Krieger Publishing Company",
+   address = "Malabar, Florida, U.S.A.",
+   year = 1987,
+   edition = "Second",
+   uwcall = "QA 274.G34 1987",
+}
+
+@article{Grumbach:Challenge,
+  author =        "Grumbach, S. and Tahi, F.",
+  title =         "A New Challenge for Compression Algorithms:
+                   Genetic Sequences",
+  journal =       "Journal of Information Processing and Management",
+  year =          1994,
+  volume =        30,
+  number =        6,
+  pages =         "875--886",
+}
+
+@InProceedings{Gunther:Spatial,
+   author =       "Oliver G{\"u}nther and Hartmut Noltemeier",
+   title =        "Spatial Database Indices for Large Extended Objects",
+   pages =        "520--529",
+   booktitle =    "International Conference on Data Engineering",
+   month =        apr,
+   publisher =    "IEEE Computer Society Press",
+   address =      "Los Alamitos, Ca., USA",
+   year =         "1991",
+   ISBN =         "0-8186-2138-9",
+}
+% "
+
+@Article{Guttman:R,
+   author =       "Antonin Guttman",
+   title =        "{$R$}-trees: a dynamic index structure for spatial
+                     searching",
+   journal =      "SIGMOD Record (ACM Special Interest Group on
+                 Management of Data)",
+   volume =       "14",
+   number =       "2",
+   pages =        "47--57",
+   year =         "1984",
+   ISBN =         "0-89791-128-8",
+   ISSN =         "0163-5808",
+   abstract =     "In order to handle spatial data efficiently, as
+                   required in computer aided design and geo-data
+                   applications, a database system needs an index
+                   mechanism that will help it retrieve data items quickly
+                   according to their spatial locations.  However,
+                   traditional indexing methods are not well suited to
+                   data objects of non-zero size located in
+                   multi-dimensional spaces.  This paper describes a
+                   dynamic index structure called an R-tree which meets
+                   this need, and gives algorithms for searching and
+                   updating it. The author presents the results of a
+                   series of tests which indicate that the structure
+                   performs well, and concludes that it is useful for
+                   current database systems in spatial applications.",
+}
+
+% FIXME correct this citation?
+@article{Hall:Rate,
+   author =       "Peter Hall",
+   title =        "On the rate of convergence of normal extremes",
+   journal =      "Journal of Applied Probability",
+   year =         1979,
+   volume =       16,
+   pages =        "433--439",
+}
+
+
+@book{HarryPotter,
+   author =       "{Columbus~(dir.)},Chris",
+   title =        "Harry {Potter} and the Philosopher's Stone",
+   publisher =    "Warner Home Video",
+   year =         "2002",
+   note =         "Canadian DVD release of 2001 motion picture from Warner
+                   Brothers Pictures.",
+}
+
+@inproceedings{Hjaltason:Ranking,
+   author = "G{\'i}sli R. Hjaltason and Hanan Samet",
+   title = "Ranking in Spatial Databases",
+   booktitle = "Advances in Spatial Databases: Proceedings of the 4th
+      International Symposium on Large Spatial Databases ({SSD} {'95})",
+   pages = "83--95",
+   year = "1995",
+   month = aug,
+   number = 951,
+   series = "Lecture Notes in Computer Science",
+   publisher = "Springer",
+   url = "citeseer.nj.nec.com/hjaltason95ranking.html"
+}
+
+@inproceedings{JohnsonLindenstrauss,
+   author = "Johnson, W.B. and Lindenstrauss, J.",
+   title = "Extensions of {L}ipschitz maps into a {H}ilbert space",
+   booktitle = "Conference in Modern Analysis and Probability (1982, {Y}ale
+                {U}niversity)",
+   pages = "189--206",
+   publisher = "{AMS}",
+   year = 1984,
+   volume = 26,
+   series = "Contemporary Mathematics",
+   uwcallnum = "QA299.6 .C66 1982",
+}
+
+@InProceedings{Katayama:SR,
+   author =       "Norio Katayama and Shin'ichi Satoh",
+   title =        "The {SR-tree}: an index structure for high-dimensional
+                   nearest neighbor queries",
+   booktitle =    "{SIGMOD} (International Conference
+                   on Management of Data)",
+   ISBN =         "0-89791-911-4",
+   ISSN =         "0163-5808",
+   pages =        "369--380",
+   year =         "1997",
+   bibdate =      "Wed Oct 25 08:47:38 MDT 2000",
+   URL =
+   "http://www.acm.org/pubs/articles/proceedings/mod/253260/p369-katayama/p369-katayama.pdf;
+      http://www.acm.org/pubs/citations/proceedings/mod/253260/p369-katayama/",
+}
+
+% FIXME
+@misc{libpng,
+   author =       "Greg Roelofs",
+   title =        "{\texttt{libpng} 1.0.12}",
+   howpublished = "Computer software",
+   note =         "Online
+      {\texttt{http://www.libpng.org/pub/png/}}",
+}
+
+
+@article{Li:Information,
+   author =       "Ming Li and Jonathan H. Badger and Chen Xin and
+                   Sam Kwong and Paul Kearney and Haoyong Zhang",
+   title = "An Information Based Sequence Distance and Its Application to
+            Whole Mitochondrial Genome Phylogeny",
+   journal = "Bioinformatics",
+   year = 2001,
+   volume = 17,
+   number = 2,
+   pages = "149--154",
+   url = "http://www.bioinformatics.uwaterloo.ca/papers/01infodist.pdf",
+}
+
+
+@article{Mico:Fast,
+   author = "Luisa Mic{\'{o}} and Jose Oncina and Rafael C. Carrasco",
+   title = "A Fast Branch {\&} Bound Nearest Neighbour Classifier in Metric Spaces",
+   journal = "Pattern Recognition Letters",
+   year = 1996,
+   volume = 17,
+   pages = "731--739",
+   url = "citeseer.nj.nec.com/354981.html"
+}
+
+@book{PerfectBlue,
+   author =       "{Kon~(dir.)}, Satoshi",
+   title =        "Perfect Blue",
+   publisher =    "Manga Entertainment",
+   year =         "2000",
+   note =         "North American DVD release of 1999 motion picture from
+                   Rex Entertainment.",
+}
+
+@book{PrincessBride,
+   author =       "{Reiner~(dir.)}, Rob",
+   title =        "The Princess Bride (Special Edition)",
+   publisher =    "MGM Home Entertainment",
+   year =         "2001",
+   note =         "North American DVD release of 1987 motion picture from
+                   Act III Communications.",
+}
+
+@InProceedings{RKV:Nearest,
+   author =       "Nick Roussopoulos and Stephen Kelley and
+                   Fr{\'e}d{\'e}ric Vincent",
+   title =        "Nearest neighbor queries",
+   booktitle =    "{SIGMOD} (International
+   Conference on Management of Data)",
+   year =         "1995",
+   ISBN =         "0-89791-731-6",
+   ISSN =         "0163-5808",
+   pages =        "71--79",
+   year =         "1995",
+   bibdate =      "Wed Oct 25 08:47:40 MDT 2000",
+   url = "http://www.acm.org/pubs/articles/proceedings/mod/223784/p71-roussopoulos/p71-roussopoulos.pdf;
+          http://www.acm.org/pubs/citations/proceedings/mod/223784/p71-roussopoulos/",
+}
+
+@inproceedings{Sahinalp:Distance,
+   author =       "S. Cenk Sahinalp and Murat Tasan and Jai Macker
+                   and Z. Meral Ozsoyoglu",
+   title =        "Distance Based Indexing for String Proximity Search",
+   booktitle =    "ICDE (International Conference on Data
+                   Engineering)",
+   publisher =    "IEEE Computer Society",
+   year      =    "2003",
+   ISBN      =    "0-7803-7665-X",
+}
+
+@inproceedings{Sellis:RPlus,
+    author    = {Timos K. Sellis and Nick Roussopoulos and
+                 Christos Faloutsos},
+    title     = {The {R+}-Tree: A Dynamic Index for Multi-Dimensional Objects},
+    booktitle = {{VLDB'87} (International Conference on Very
+                 Large Data Bases)},
+    publisher = {Morgan Kaufmann},
+    year      = {1987},
+    isbn      = {0-934613-46-X},
+    pages     = {507--518},
+}
+
+@misc{SpamArchive,
+   author =       "SpamArchive.org",
+   title =        "Donate your Spam to Science",
+   howpublished = "Web site",
+   note =         "Online
+      {\texttt{http://www.spamarchive.org/}}",
+   year =         2005,
+   month =        jun # "~8",
+}
+
+@misc{transcode,
+   author =       "Thomas {\"{O}streich (maintainer)}",
+   title =        "{\texttt{transcode} 0.6.1}",
+   howpublished = "Computer software",
+   note =         "Online
+      {\texttt{http://www.theorie.physik.uni-goettingen.de/\textasciitilde{}ostreich/transcode/}}",
+}
+% "
+
+@article{Uhlmann:GHTree,
+   author =       "Jeffrey K. Uhlmann",
+   title =        "Satisfying general proximity/similarity queries with
+                   metric trees",
+   journal =      "Information Processing Letters",
+   year =         1991,
+   volume =       40,
+   pages =        "175--179",
+   month =        nov # "~25,",
+}
+
+@InProceedings{Yianilos:Excluded,
+   author =       "Peter N. Yianilos",
+   title =        "Excluded Middle Vantage Point Forests for Nearest
+                   Neighbour Search",
+   booktitle =    "ALENEX (Algorithm Engineering and Experimentation:
+      International Workshop)",
+   year =         "1999",
+}
+
+@InProceedings{Yianilos:VPTree,
+   author =       "Peter N. Yianilos",
+   title =        "Data Structures and Algorithms for Nearest Neighbor
+                   Search in General Metric Spaces",
+   pages =        "311--321",
+   ISBN =         "0-89871-313-7",
+   booktitle =    "{SODA} (Symposium
+                   on Discrete Algorithms)",
+   year =         "1993",
+   publisher =    "SIAM",
+}

@@ -1,0 +1,1106 @@
+
+@Article{Klinz,
+  author = 	 {Bettina Klinz and Gerhard J. Woeginger},
+  title = 	 {Minimum-Cost Dynamic Flows:  The Series-Parallel Case },
+  journal = 	 {Networks},
+  year = 	 {2004},
+  volume = 	 {43},
+  pages = 	 {153-162},
+  annote = 	 {
+  
+  This paper gives a good introduction to dynamic networks which consist of a directed graph with capacities, costs, and transit times on the arcs.  In particular the authors make use of an interesting greedy algorithm which yields optimal solutions in polynomial time.  This paper may also provide some insight into the graph approach Steve Billups was discussing.  
+  } 
+}
+
+@Article{Azaron,
+  author ={Amir Azaron and Farhad Kianfar},
+  title  ={Dynamic shortest path in stochastic dynamic networks:  Ship routing problem},
+  journal ={European Journal of Operational Research},
+
+  year = {2003},
+  volume ={144},
+  pages ={138-156},
+  annote ={
+  This article illustrates the process of stochastic dynamic programming to find the dynamic shortest path from the source node to the sink node in stochastic dynamic networks.  The part of this paper that may apply to this problem involves placing an environmental variable in each node which evolves in accordance with a continuous time Markov process.  Perhaps this procedure could be applied to the case where we put dummy nodes into our graph to represent probable incoming tasks.  The environmental variable in each node could represent the likelihood of an incoming task occuring during that time period.      
+  }
+}
+
+
+
+@Article{Fleischer,
+  author = 	 {L. Fleischer and E. Tardos},
+  title = 	 {Efficient continuous-time dynamic network flow algorithms},
+  journal = 	 {Operations Research Letters},
+  year = 	 {1998},
+  volume = 	 {23},
+  pages = 	 {71-80},
+  annote = 	 {
+  
+  This paper extends upon solutions of discrete-time dynamic flow algorithms and explores continuous-time dynamic flow problems.  It also provides a good introduction to dynamic flows and dynamic network problems.  Also of interest is the look into maximum dynamic flows and quickest flows.  
+}
+}
+
+@unpublished{Roy,
+  author      = {Benjamin Van Roy and Dimimtri P. Bertsekas and Yuchun Lee and John N. Tsitsiklis},
+  title       = {A Neuro-Dynamic Programming Approach to Retailer Inventory Management},
+  note        = {web page www.mit.edu:8001/people/jnt/Papers/R-96-bvr-retail.pdf },
+  annote      = {This paper combines two ideas that came about from the optimization seminar.  Our problem at hand has been compared to the retailer inventory management problem.  This paper uses neuro-dynamic programming techniques to attack this problem.  These are approximate dynamic programming algorithms which can deal with larger state spaces.  }}
+
+
+
+@book{Gabrel,
+    author    = {Virginie Gabrel and Cecile Murat},
+    title     = {OR in Space and Air},
+    publisher = {Draft},
+    address   = {Paris, France},
+    year      = {2002},
+    annote    = {This is a chapter from the draft of a textbook that will come out on OR in Space and Air.  This chapter presents an overview of a satellite problem almost identical to ours.  Several techniques are used to attack the problem including the use of graph theory and mathematical programming.  Integer programming models are also discussed but the main emphasis is on graph theory approaches to the problem.  This paper does not discuss techniques used for handling the new priority requests that come in, but it gives a good introduction to the basic problem involving one camera.  }}
+
+@Article{shar2,
+  author =          {A.Bhattacharjee and R. Kokku and R. Mall and A. Pal},
+  title =          {{DDSCHED}: A Distributed Dynamic Real-Time Scheduling Algorithm },
+  journal =          {International Conference of Advanced Computing},
+  year =          {1997},
+  volume =          {},
+  pages =          {74-83},
+  annote =          {
+  
+  This paper describes that todays real time systems need enormous computing power
+and they are trying to decrease the power by creating a 
+simpler program. They have created a two step algorithm, which consist of a local
+sceduler and a distributed schedualing scheme. they also present a dynamic soft
+real-time schedualing algorithm for distributed systems. 
+  } 
+}
+
+
+
+
+@Article{sher2,
+  author =          {M. Vasquez and Jin-Kao Hao},
+  title =          {A "Logic-Constrained" Knapsack Formulation and a Tabu Algorithm for the
+daily Photograph Scedualing of an Earth observation Satellite},
+  journal =          {Journal Of Computational Optimization and Applications},
+  year =          {February 2000},
+  volume =          {},
+  pages =          {},
+  annote =          {
+  
+ In this article they present the problem as a generalized version based on the
+knapsack model. they then continue to developea tabu search algorithm which
+integrates features like neihborhoods, tenure mechanisms, constraint handling,
+intensification and diversification..
+}
+}
+
+
+@Article{toro99,
+  author =          {T. Beker and G. Chechik and I. Meilijson and E. Ruppin},
+  title =          {PlanSat-A novel solution for imaging satellite schedualing},
+  journal =          {soligence},
+  year =          {},
+  volume =          {},
+  pages =          {},
+  annote =          {
+  
+  This article gives a great overview on what satellite imaging really involves. It
+also gives a background of what they are working with. Then the author proceeds in
+describing the architecture of the algorithm needed to perform the tasks that they
+need completed for the schedualing .
+  
+  } 
+}
+@unpublished{audsley,
+  author      = {N.C.Audsley and  A.Burns and M.F.Richardson and A.J.Wellings},
+  title       = {Hard Real-Time Scheduling:  The Deadline-Monotonic Approach},
+  note        = {web page www.dimap.ufrn.br/~jair/dstr/artigos/deadlinemonotonic.pdf},
+  annote      = {This paper, from the University of York,  takes a look at
+deadline-monotonic scheduling theory and scheduling sporadic processes. The
+authors compare process computation times and schedulability constraints for
+determining if a scheduling sporadic process will give the same level of
+relability as a deadline-monotonic approach.  It was found that the use of
+sporadic servers required one extra periodic server process and second, an extra
+run-time overhead was required.  The deadline monotonic approach gets rid of these
+extra steps and the outcomes are just as reliable.}}
+
+
+
+@unpublished{aydin,
+  author      = {H.Aydin and  R.Melhem and D.Mosse and P.Mejia-Alvarez},
+  title       = {Dynamic and Aggressive Scheduling Techniques for Power-Aware
+Real-Time Systems},
+  note        = {web page www.cs.pitt.edu/PARTS/papers/RTSS01\_aydin.pdf},
+  annote      = {This article pursues the options of a static solution, an online
+speed reduction mechanism and an online adaptive and speculative speed adjustment
+mechanism.  Each of the options explore power saving options in a real-time
+system.  The authors conclude that the reclaiming algorithm saves 50-70 percent of
+power used over the static power-aware algorithm and the reward based scheduling
+algoritm.}}
+
+
+
+@unpublished{monch,
+  author      = {Lars Monch and Ilka Habenicht},
+  title       = {Simulation-Based Assessment of Batching Heuristics in Semiconductor
+Manufacturing},
+  note        = {web page www.informs-cs.org/wsc03papers/167.pdf},
+  annote      = {Monch and Habenicht, from the Technical University of Ilmenau,
+composed this paper on the performance of dispatching and scheduling heuristics
+for batching tools in semiconductor wafer fabrication.  The authors investigated
+the performance of modifications to Apparent Tardiness Cost, this process does not
+take into account future arrivals.  Second, they looked at the process of future
+arrivals.  Finally, the authors combined a genetic algorithm with the ATC results.
+ The authors conclude that in comparing their three heuristic approaches to the
+problem, that Dynamic Batch Dispatching Heuristics offered the most usefull
+results.  The authors suggest that in using a genetic algoritm-based scheduling
+heuristic and the DBDH system, the user will get the most optimal results.}}
+
+
+@book{smith:dynamic,
+    author    = {David K. Smith},
+    title     = {Dynamic Programming: A Practical Introduction},
+    publisher = {Ellis Horwood},
+    address   = {Dhichester, England},
+    year      = {1991},
+    annote ={This book gives a very basic introduction to dynamic 
+programming.  It introduces dynamic programming using classic problems such 
+as the knapsack problem and determining shortes routes.  Also included are 
+examples of production problems used to exhibit recursion in dynamic 
+programming.  It starts with deterministic models then moves to stochastic 
+models}
+}
+
+@Article{cheng,
+  author =          {Jie Cheng and Russell Greiner and Jonathan Kelly and David Bell and
+Weiru Liu},
+  title =          {Learning Bayesian networks from data:
+An information-theory based approach},
+  journal =          {Artificial Intelligence},
+  year =          {2002},
+  volume =          {137},
+  pages =          {43-90},
+  annote =          {
+  
+ Provides algorithms that use information theory to learn Bayesian networks. The
+algorithms are said to be efficient, and have been demonstrated to work in real
+world applications, not just theoretically. Although scheduling is not mentioned,
+these ideas could be useful in creating a model that learns each attempt in
+scheduling.} 
+}
+
+
+
+
+@Article{cortes,
+  author =          {Corinna Cortes and Daryl Pregibon and Chris Volinsky},
+  title =          {Computational Methods for Dynamic Graphs},
+  journal =          {Journal of Computational and Graphical Statistics},
+  year =          {2003},
+  volume =          {12},
+  pages =          {950-970},
+  number =       {4},
+  annote =          {This paper considers some problems mainly in the area of communication
+between network ID's . The manner in which these problems are attacked, however,
+uses Dynamic Graphs which are basically graphs in which the nodes and edges are
+appearing, disappearing, and continually changing with time. This could be helpful
+in developing tools to deal with the graph that we may end up with in our
+problem.}
+}
+
+@Article{cig,
+  author =          {R. Cigolini and M. Perona and A. Portioli and T. Zambelli},
+  title =          {A new dynamic look-ahead scheduling procedure for batching machines},
+  journal =          {Journal of Scheduling},
+  year =          {2002},
+  volume =          {5},
+  pages =          {185-204},
+  annote =          {In this article a new procedure is proposed for batching requests. It
+focuses on this problem as related to shop floor control in the manufacturing of
+semiconductors. This paper deals with the problem of when to run our algorithm
+when less than a full load is queuing at that given time. Do we run our algorithm,
+or wait until more request come in? The procedure uses parallel batching machines.}
+}
+ 
+@Article{har,
+  author =          {F. Harary and G. Gupta},
+  title =          {Dynamic Graph Models},
+  journal =          {Mathl. Comput. Modelling},
+  year =          {1997},
+  volume =          {25},
+  number =       {7},
+  pages =          {79-87},
+  annote =          {Some more theoretical results about properties of dynamic graphs in
+general. Although more theory than application, the goals are application driven.
+A good source for just some basic theory about dynamic graphs, but would require a
+good deal of work to relate results to our specific problem.}}
+
+
+@Article{tobita,
+  author =          {Takao Tobita and Hironori Kasahara},
+  title =          {A standard task graph set for fair evaluation of multiprocessor
+scheduling algorithms},
+  journal =          {Journal of Scheduling},
+  year =          {2002},
+  volume =          {5},
+  pages =          {379-394},
+  annote =          {This paper suggests a ``fair algorithm" for evaluation of scheduling
+algorithms. The paper introduces both some old evaluation techniques, this new
+one, and then actually evaluates some well known algorithms in order to show its
+comparison abilities in action. A possible useful resource if multiple algorithms
+are created and we wish to evaluate the against each other.}}
+
+
+@unpublished{Barbulescu,
+  author =          {Laura Barbalescu and Adele E. Howe and L. Darrell Whitley},
+  title =          {Leap Before You Look: An Effective Strategy in an Oversubscribed
+Scheduling Problem},
+  note = {web page http://www.cs.colostate.edu/~howe/papers/AAAI04.pdf},
+  annote = {This paper focuses on the genetic algorithm, Genitor, and Squeaky Wheel
+Optimization as means for solving the oversubscribed scheduling problem.  Research
+indicates that both techniques are effective because they make huge leaps in the
+search space.  This is a permutation-based method in which large changes are made
+that affect a huge portion of the schedule.  This is why they call it leap before
+you look.  The Genitor and SWO use Greedy initialization to make them faster from
+the beginning.  They perform nearly 100 times faster than local searching methods.
+ While the local search technique identifies needed changes, assess the overall
+effects, and then dismisses or implements changes, the Genitor and SWO make large
+changes on each iteration. This works well for handling large amounts of requests.
+ This document contains data tables and graphs from several evaluations.
+  }}
+
+@Article{tD97,
+  author =          {T. G. Dietterich},
+  title =          {Machine learning research:  four current directions },
+  journal =          {AI Magazine},
+  year =          {1997},
+  volume =          {18},
+  pages =          {97-136},
+  annote =          {
+  
+  This article focuses on four areas of machine learning:  ensembles of classifiers,
+methods for scaling up supervised learning algorithms, reinforcement learning, and
+learning complex stochastic models.  The section on reinforcement learning reviews
+some basics of dynamic programming, but of particular interest is the section on
+probabilistic networks.  Here, three steps are identified when "learning" a
+stochastic model:  graphical structure choice, labeling nodes with appropriate
+probability distributions, and fitting training data and parameters from node
+probability distributions.  The third step is the only one that requires a
+learning algorithm.  Runtime on this algorithm is exponential unless the graph is
+sparsely connected.  This may or may not be useful to our project.
+  } 
+}
+
+
+
+
+@Article{mL02,
+  author =          {M. Lemaitre and G. Verfaille and F. Jouhaud and J. Lachiver and N.
+Bataille},
+  title =          {Selecting and scheduling observations of agile satellites},
+  journal =          {Aerospace Science and Technology},
+  year =          {2002},
+  volume =          {6},
+  pages =          {367-381},
+  annote =          {
+  
+  This article explores four different approaches to satellite scheduling and task
+completion.  The algorithms addressed are:  greedy, dynamic programming,
+constraint programming, and local search method.  It begins by outlining the
+problem and stating possible constraints that affect the choice of completing a
+task, similar to our discussion about scoring.  It itemizes input data, decision
+variables, constraints (time), and quality criteria.  
+\\
+This paper does not score nodes but, instead, puts two values on the edges between
+nodes:  transition time and weight from origin.  It also gives some numerical data
+to work with and pseudocode for all algorithms discussed.  This may be a good
+jumping off point.
+}
+}
+
+
+@Article{mD00,
+  author =          {M. Druzdzel and L. van der Gaag},
+  title =          {Building probabilistic networks:  '{W}here do the numbers come from?' 
+{G}uest editors' introduction},
+  journal =          {IEEE Transactions on Knowledge and Data Engineering},
+  year =          {2000},
+  volume =          {12},
+  pages =          {481-486},
+  annote =          {
+  
+ Here, development of a probabilistic network is broken down into identifying
+variables and their possible values, identifying relationships between variables to
+produce a graphical structure, and obtaining probabilities.  
+\\
+Two ways of using available data to learn the graphical structure are suggested: 
+constraint-based and a Bayesian search using the graph with the highest posterior
+probability.  Numerical inaccuracies effecting the graphical structure's network
+output is addressed by evaluating output using sensitivity and uncertainty analysis.
+ In addition to numerical uncertainty comes density of the graph.  With increased
+connectivity comes exponentially many probabilities per variable.  The number of
+probabilities can be reduced using a parametric probability distribution.
+ } 
+}
+
+
+
+
+@Article{aL03,
+  author =          {A. Lindgren and A. Doia and O. Schelen},
+  title =          {Poster:  probabilistic routing in intermittently connected networks},
+  journal =          {Mobi{H}oc},
+  year =          {2003},
+  volume =          {},
+  pages =          {},
+  annote =          {
+  
+  This poster presentation gives some good ideas as to different ways to think about
+our project.  Specifically, the idea that if a location has been visited in the
+past, it will most likely be visited again.  This leads to probabilistic routing
+and delivery predictability.  Each node is given a delivery predictability,
+specifying the node's probability of being requested.  This can assist in
+"scoring" our nodes and allows for ways to decide which tasks to fulfill.  
+\\
+This poster is concerned with communication between nodes and passing on messages,
+but I found it to be a good starting point to thinking about node request and
+visitation probability.
+  
+  } 
+}
+
+
+
+                  
+@TechReport{jP99,
+    author    = "J. Pemberton and F. Galiber, III",
+    title     = "{A constraint-based approach to satellite scheduling}",
+    type      = "",
+    institution = "Pacific-Sierra Research",
+    address   = "",
+    year      = "",
+    annote    = "
+
+This technical report begins by outlining the problem, itemizing constraints, and
+then briefly discussing approaches to solving the satellite scheduling problem.  The
+authors begin by stating that the problem consists of a start time and a duration
+time for completing a task, designating the problem as a form of Constraint
+Satisfaction Problem.  They suggest approaching the problem by creating a model for
+tasks, resources, events, and constraints by translating them into variables with
+ranges.  A solution is said to be found using heuristic-search with constraint
+propagation utilizing Generic Resource, Event, and Activity Scheduler (GREAS), but
+further description of GREAS and the use of heuristic-search is lacking.
+"
+}
+
+@techreport{scheduling:techniques,
+    author    = {A. Globus and J. Crawford and J. Lohn and A. Pryor},
+    title     = {A Comparison of Techniques for Scheduling Earth Observing Satellites},
+    institution  = { CSC at NASA Ames and NASA Ames},
+    year      = {},
+    number     = {},
+
+    annote = {The report examines four algorithms, showing the benefits of each when applied to satellite scheduling: hill climbing, simulated annealing, steady-state tournament selection genetic algorithm, and a generational elitist genetic algorithm.
+                    Furthermore, the show the specific fitness curve they used during their simulations, which accounted for the set of unscheduled observation requests, the observation's priority, the mean off-nadir pointing angle, and weighted each of them for varying importance.  While simulating, they examine ten realistically-sized Earth Observing Satellite (EOS) scheduling problems to determine that simulated annealing outperformed hill climbing, which out performed the genetic algorithms.  Their swap strategies included a simple random swap mutation and a more intelligent squeaky mutation.}  }
+
+
+@techreport{dynamic:trevlingrp,
+    author    = {S. Irani and X. Lu and A. Regan},
+    title     = {On-Line Algorithms for the Dynamic Traveling Repair Problem},
+    institution  = { Information and Computer Science and the Institute of Transportation Studies},
+    year      = {},
+    number     = {},
+
+    annote = {Since the satellite scheduling problems is dynamic in nature, and we need to learn about current research, dynamic traveling repair problems create an almost analogous scenario to explore.  The on-line algorithms used to find solutions incorporates windows of various sizes, a notification time, a bounded diameter in a metric space, and a service time.  While they focus on uniform window sizes, they state that their BATCH and Double-Gain can be applied to more general situations such as satellite scheduling.  They also explain that another algorithm to consider for solving these problems is the BATCH algorithm with insertions, where the algorithm can service a newly arrived request or a request which is about to expire if it can be handled without having to drop any of the requests in the current BATCH path.}  }
+
+@book{operationsr:lpdpnlp,
+    author    = {P. Jensen and J. F. Bard},
+    title     = {Operations Research Models and Methods},
+    publisher = {John Wiley and Sons},
+    address   = {Chickester, England},
+    year      = {2003},
+    annote ={This book contains an awesome overview of the many different approaches available to the field of operations research.  Moreover, the book covers linear and dynamic programming, each of which are extremely important for learning how to solve the satellite scheduling problem.  The book gives simple, but very detailed examples, building quickly, and exploring numerous variations that can occur with a single problem.} }
+
+
+
+@techreport{scheduling4:bllah,
+    author    = {J. Dungan and J. Frank and A. Jonsson and R. Morris and D. Smith},
+    title     = {Advances in Planning and Scheduling of Remote Sensing Instruments for Fleets of Earth Observing Satellites},
+    institution  = {Computational Sciences Division, NASA Ames},
+    year      = {},
+    number         = {},
+
+    annote = {The paper explains how scheduling is currently done, stating the names for the software utilized.  Moreover, they explain the algorithm techniques that they employ and the current focus of scheduling. }  }
+
+
+@Article{Cheng,
+  author = 	 {Cheng-Chung Cheng and Stephen F. Smith},
+  title = 	 {Applying Constraint Satisfaction Techniques to Job Shop Scheduling},
+  journal =  	{CMU Robotics Institute},
+  year = 	 {1995},
+  volume={},
+  pages = 	 {4-41},
+  annote = 	 {
+  
+  This paper, the authors investigate the applicability of a constraint satisfaction problem solving(CSP) model, recently developed for deadline scheduling, to more commonly studied problems of schedule optimization.
+  } 
+}
+
+
+
+
+@Article{Wall,
+  author = 	 {Matthew Bartschi Wall},
+  title = 	 {A Genetic Algorithm for Resource-Constrained Scheduling},
+  journal = 	 {The Massachusetts Institute of Technology},
+  year = 	 {1996},
+  volume = 	 {},
+  pages = 	 {1-50},
+  annote = 	 {
+  
+This thesis describes a genetic algorithm approach to resource-constrained scheduling using a direct, time-based representation.  Also it presents a structured method for defining and evaluating multiple constraints and objectives
+}
+}
+
+
+
+
+@Article{Baptiste,
+  author = 	 {Philippe Baptiste and Claude Le Pape and Wim Nuijten},
+  title = 	 {Constraint-Based Optimization and Approximation for Job-Shop Scheduling},
+  journal = 	 {AAAI-SIGMAN Workshop on Intelligent Manufacturing Systems},
+  year = 	 {1995},
+  volume = 	 {IJCAI},
+  pages = 	 {1-11},
+  annote = 	 {
+  
+This paper presents constraint-based optimization algorithms and a constraint-based approximation algorithm for the job-shop scheduling problem.
+} 
+}
+
+@article{hoitomt.luh.pattipati:lagrangian,
+  author    = "Debra J. Hoitomt and Peter B. Luh and Krishna R. Pattipati",
+  title     = "A Practical Approach to Job-Shop Scheduling Problems",
+  journal   = "IEEE Transactions on Robotics and Automation",
+  year      = "1993",
+  volume    = "9",
+  pages     = "",
+  annote    = "This describes the use of Lagrangian Relaxation to
+            find a near optimal solution, within 4 percent to integer programs.
+            The problem is decomposed into operation-level subproblems.
+            The authors demonstrate a method for calculating the theoretical
+            optimum and use this to measure the quality of their solution. "
+}
+
+
+@article{bell:lagrangian,
+  author    = "Colin E. Bell",
+  title     = "Scheduling deep-space network data transmissions: a Lagrangian relaxation approach",
+  journal   = "SPIE",
+  year      = "1993",
+  volume    = "1963",
+  pages     = "330-340",
+  annote    = "The paper discusses an IP model for scheduling the transmission of
+        data from a constellation of satellites to a receiving center on earth.
+        It demonstrates the problem formulation and solution by Lagrangian relaxation
+        using real data from a week."
+}
+
+@book{cheng.yang:general,
+    author    = {Wei-Cheng Lin and Chung-Yang Liu and Da-Yin Liao and Yung-Yao Lee},
+    title     = {Daily Imaging Scheduling of An Earth Observation Satellite },
+    address  = {\url{http://scholar.google.com/scholar?hl=en&lr=&q=cache:emfFVGBk2EEJ:140.112.161.103/gdoc/D86921013a.pdf+lagrangian+relaxation+satellite+scheduling}},
+    publisher = {World Wide Web},
+
+    annote = {This report discusses the solution to a problem very much like the
+        one in our clinic. Using Lagrangian relaxation, the authors define a
+        robust MIP to handel many of the tasks under consideration in our course.}  }
+
+         
+@TechReport{Smith,
+    author    = "Thomas Lewis",
+    title     = "Collection Planning System: A Multi-Source Satellite Imagery 
+ Collection Optimization Application",
+    type      = "An overview of Software Capabilities",
+    institution = "World Wide Web",
+    address   = "www-math.cudenver.edu/~billups/courses/ma5779/papers/index.html",
+    year      = "2003",
+    annote    = " The figure of merit equation(FOM),on page 11,determines how 
+``optimum'' may be defined. This formula also allows us to add other functions
+and the constants may be customised for each problem."}
+               
+@unpublished{Lin,
+  author      = {Wei-Cheng Lin and Da-Yin Liao},
+  title       = {A Tabu Search Algorithm for Satellite Imaging Scheduling},
+  note        = {web page http://gra103.aca.ntu.edu.tw/gdoc/D86921013a.pdf},
+  annote      = {In this paper, Lin and Liao claim that for high complexity,
+ dynamic programming and search techniques thereof are too time-consuming or
+ impractical for optimal solutions.  A greedy heuristic, with the help of 
+ Lagrangian multipliers, was developed to re-allocate imaging tasks into a
+ reasonable schedule.  However, this proved to be expensive as compared to the
+ Tabu search algorithm.  The Tabu search is a meta-heuristic approach to 
+ combinatorial optimization problems.  The Tabu search algorithm developed by
+ Lin and Liao combines ideas to make searching effective and efficient. }}
+
+
+@unpublished{barbulescu:oversubscribed,
+  author      = {Laura Barbulescu and Adele Howe and L.  Darrell Whitley and Mark
+Roberts},
+  title       = {Trading Places: How to Schedule More in a Multi-Resource
+Oversubscribed Scheduling Problem},
+  note        = "web page www.cc.gatech.edu/fac/Sven.Koenig/icaps/icaps04/icapspapers/
+                 ICAPS04BarbulescuL.pdf",
+  annote      = {This paper presents applications of the genetic algorithm. The
+authors provide details about the crossover 
+                 method and how this might be a better approach because there are
+more pairwise changes.  Also, there is evidence
+                 that the genetic algorithm is learning and presenting results of a
+heauristic based on itself.  Lastly, this
+                 paper gives a comparison of the genetic algorithm to other
+algorithms, such as, the greedy, hill climbing, random,
+                 and Gooley algorithms.  This paper can help with our project
+because of the results that are given from each
+                 of the algorithms that the genetic algoritm was compared to.}}
+
+
+@techreport{song:multi-axis-algorithms,
+        author    = {Dezhen Song and  A. Frank van der Stappen  and Ken Goldberg},
+        title     = {Exact Algorithms for Single Frame Selection on Multi-Axis Satellites},
+        year    = {November 22, 2004},
+        institution  = {World Wide Web},
+        address =
+"http://www.faculty.cs.tamu.edu/dzsong/pdfs/dez-exact-satellite-tase-v15.pdf",
+        annote = {This paper presents algorithms that optimize coverage and
+resolution based on the requested image and the 
+                  location of the multi-axis satellite camera.  This paper can help
+with our problem because we can further
+                  accommodate the request of our customers based on a reward metric
+system that the authors provide.  For 
+                  instance, the reward can either be related to the optimal coverage
+area or the resolution of the image.
+                  Also, algorithms for plateau and base vertices, discrete
+resolution, and continuous resolution are given.
+                  Therefore, the methods provided in this paper can help us generate
+algorithms for our criteria of each
+                  image and aid with the scoring algorithm that we develop.}
+
+}
+
+@unpublished{cglass97,
+  author =       {Celia A. Glass and Chris N. Potts and Vitaly A. Strusvich},
+  title =        {Shop Scheduling with Batching to Minimize the Makespan},
+  year =         {1997},
+  annote =       {This talks about multiple heuristic approaches to shop scheduling, using batching, which gives an output of a certain performance ratio and runtime(n/log n).  This algorithm limits the batches to a certain size and to a certain number of batches
+
+  }
+}
+	      
+
+@MastersThesis{mfederico,
+  author = 	 {Marcello Federico and Mauro Cettolo},
+  title = 	 {Language Modeling for Efficient Beam-Search},
+  school = 	 {IRST-Instituto per la Ricerca Scientifica e Tecnologica},
+  annote =       {This paper talks about the idea of a beam search.  This is a breath first search like algorithm with a width, representing how many forks at each node.  This could be used in a dynamic programing algorithm as a way of identifying alternate paths.}}
+
+                  
+
+@unpublished{Kent,
+  author      = {Kent},
+  title       = {Greedy Introduction},
+  note        = {web page
+www.personal.kent.edu/~rmuhamma/Algorithms/MyAlgorithms/Greedy/},
+  annote      = {This is an article on the greedy algorithm approach. It breaks it
+down and shows an example computer program that looks like it might be in C
+language. The exmaple he uses is a program that makes change for a given amount
+entered. He then shows that the program makes change using the largest coins
+possible. It follows that the program just did its job for that one step and took
+no consideration of what kind of change would be best. That is, it solved the
+problem at hand without looking into the future for what would be overall the best
+solution. It also has some definitions on feasibility.}}
+
+
+
+@unpublished{Trick,
+  author      = {Michael A. Trick},
+  title       = {A Second Example},
+  note        = {web page http://mat.gsia.cmu.edu/classes/dynamic/node3.html},
+  annote      = {This is a class webpage that I found that simplified the approach
+that we take to dynamic programming. It uses a road network with four stages and
+goes step by step through the problem to show how each stage is solved. It is very
+similar to the problem we are trying to solve. The only real differences are that
+instead of the nodes being weighted, the arcs are, and instead of having perfect
+'stages' our nodes will be spaced more inconsistently. Nonetheless, it gives a
+good representation of how to include dynamic programming into our project with
+Raytheon}}
+
+
+
+
+@TechReport{wehart,
+        title = "Mixed Integer Programming",
+        year = "1997",
+        type = "{Integer Programming}",
+        institution = "Sandia National Labratories",
+        address="{http://www.cs.sandia.gov/opt/survey/mip.html}",
+        annote  = {This is a report on how mixed integer programming works. It starts by
+showing the form of a mixed integer program with n variables and m constraints.
+They explain the branch and bound method which is the most widely used method for
+solving integer programs. It goes into some detail about how the variables have
+only two possible restrictions, one and zero. There's  also some mention of the 
+branch and cut method as well as the branch and price method.}
+        
+}
+
+@techreport{jones.rabelo:jobshop,
+    author    = {A. Jones and J. C. Rabelo},
+    title     = {Survey of Job Shop Scheduling Techniques},
+    institution  = {National Institute of Standards and Technology},
+    year      = {1998},
+    number    = {},
+    annote = {Jones and Rabelo examine several different methods that have been
+applied to the problem of 
+scheduling.  The mathematical techniques include the use of decomposition
+strategies, Lagrangian relaxation and
+constraint-based models in optimizing scheduling problems.  They discuss heuristic
+approaches such as dispatching
+(or sequencing) rules.  The authors give an overview of the use of artificial
+intelligence, artificial neural 
+networks and neighborhood search methods such as simulated annealing and genetic
+algorithms.}  
+}
+
+
+@InProceedings{jonsson.morris.ea:theory,
+     author = {A. Jonsson and P. Morris and N. Muscettola and K. Rajan and B. Smith},
+     title  = {Planning in Interplanetary Space: Theory and Practice},
+     booktitle  = {Proceedings of the Fifth International Conference on Artificial
+Intelligence Planning Systems},
+     year       = {2000},
+     editor     = {},
+     publisher  = {},
+     address    = {},
+     annote = {Jonsson et al. describe the Remote Agent Experiment Planner/Scheduler
+(RAX-PS) 
+activated by NASA in May of 1999.  This AI-based planner/scheduler runs of the
+flight processor of a spacecraft.
+The RAX-PS plans consist of networks of constraints and are generated as temporarily
+flexible to allow for
+adjustments to actual plan execution.  The result of the RAX-PS is a system that
+builds concurrent plans, or schedules,
+with more than a hundred tasks within the requirements of performance.}
+}
+
+
+@InProceedings{khatib.frank.ea:intrlvd,
+     author = {L. Khatib and J. Frank and D. Smith and R. Morris and J. Dungan},
+     title  = {Interleaved Observation Execution and Rescheduling on Earth Observing
+Systems},
+     booktitle  = {Proceedings of the ICAPS Workshop on Planning and Execution},
+     year       = {2003},
+     editor     = {},
+     publisher  = {},
+     address    = {},
+     annote = {Khatib et al. explore the benefits of on-board scheduling compared to
+scheduling dictated
+from the ground.  They argue that since the priority of tasks change dramatically
+due to meteorological conditions,
+natural disasters and ground or satellite capabilities, and further, since contact
+between the satellite and
+the ground is feasible only about 5 to 10 percent of the time, it is necessary for
+the on-board system to be able 
+to execute revisions in scheduling.  The authors discuss an approach which involves
+interleaving schedule execution
+with dynamic shedule revisions that are based upon changes in the expected priority
+of tasks.}
+}
+
+
+@InProceedings{kramer.smith:flexible,
+     author = {L. Kramer and S. F. Smith},
+     title  = {Maximizing Flexibility: A Retraction Heuristic for Oversubscribed
+Scheduling Problems},
+     booktitle  = {In Proceedings Eighteenth International Joint Conference on
+Artificial Intelligence},
+     year       = {2003},
+     editor     = {},
+     publisher  = {Springer-Verlag},
+     address    = {Acapulco, Mexico},
+     annote = {Kramer and Smith apply a controlled, iterative repair search method
+to an oversubscribed
+scheluling problem.  Their approach uses a new retraction heuristic they call
+"max-flexibility."  This heuristic
+identifies which tasks to temporarily extract from the existing schedule for
+reassignment in order to add
+other tasks into the schedule.  The max-flexibility heuristic  selects tasks that
+have the greatest amount of 
+flexibility for assignment within corresponding feasible windows of time.  The
+researchers find that, when tested
+upon problem data from a fielded airlift mission, their heuristic performs better
+than two other contention-
+based retraction heuristic methods.}
+}
+
+
+@InProceedings{pemberton.greenwald:dynamic,
+     author = {J. Pemberton and L. Greenwald},
+     title  = {On the Need for Dynamic Scheduling of Imaging Satellites},
+     booktitle  = {Future Intelligent Earth Observing Satellites Symposium},
+     year       = {2002},
+     editor     = {},
+     publisher  = {},
+     address    = {},
+     annote = {Pemberton and Greenwald argue that dynamic scheduling techniques are
+superior to purely static
+techniques because dynamic scheduling allows the satellite system to utilize
+information obtained during
+schedule execution and to react to changes in the environment, prioritization, and
+resource availability.  
+The authors discuss conditions under which the scheduling problem can become
+dynamic.  The claim is that 
+dynamic schedules improve mission outcomes and reduce mission costs.}
+}
+
+
+@InProceedings{barbulescu.howe.ea:genetic,
+    author    = {L. Barbulescu and A. E. Howe and J. Watson and L. D. Whitley},
+    title     = {Satellite Range Scheduling: A Comparison of Genetic, Heuristic and
+Local Search},
+    booktitle = {Parallel Problem Solving from Nature - PPSN VII: Seventh
+International Conference},
+    year      = {2002},
+    editor    = {J. J. Merelo Guervos and P. Adamidis and H. G. Beyer and J. L.
+Fernandez-Villacanas and H. P. Schwefel},
+    publisher = {Springer-Verlag GmbH},
+    address   = {Grenada, Spain},
+    annote ={Barbulescu et al. use data from the U.S. Air Force Satellite Control
+Network to test 
+and compare the performances of heuristic, local search and genetic algorithms on 
+the problem of satellite scheduling.  They find that the heuristic approach is not
+successful
+for complex and large-scale problems.  The authors find evidence that the genetic
+algorithm GENITOR
+performs best overall for the larger, more complex scheduling problems.} 
+}
+
+
+@Article{gabrel:enumeration,
+  author =   {Virginie Gabrel and Daniel Vanderpooten},
+  title =    {Enumeration and interactive selection of efficient paths
+  in a multiple criteria graph for scheduling an earth observing satellite},
+  journal =      {European Journal of Operational Research},
+  year =     {2002},
+  volume =   {139},
+  pages =    {533-542},
+  annote =   {
+
+  This journal article has a focus on creating algorithms for satellite
+  scheduling, and does so with a shortest path algorithm.  The algorithm takes
+  a variety of vertices and combines them.  The vertices are all placed into
+  subgraphs, and then the final algorithm takes all of the vertices into
+  consideration.  In a model conducted with 500 vertices, 258 were efficiently
+  utilized into a schedule that took the computer 13 minutes to compute.  The
+  algorithm and path was not allowed to circuit, while it was allowed to be
+  flexible to efficiently solve the problem.
+  }
+}
+
+
+
+
+@Article{hifi:knapsack,
+  author =   {Mhand Hifi and  Hedi M'Hallab and Slim Sadfia},
+  title =    {An exact algorithm for the knapsack sharing problem},
+  journal =      {Computers and Operations Research},
+  year =     {2005},
+  volume =   {32},
+  pages =    {1311-1324},
+  annote =   {
+
+  This article goes into depth about the knapsack algorithm,
+  and discusses how it can efficiently place a given number
+  of tasks into a discrete block of time or space.  The group comes up
+  with an efficient means to solve the problem with a binary algorithm which
+  can be used in two steps.  The first step basically takes the input data
+  and sorts it in a favorable way, while the second part of the algorithm
+  turns the data into an efficient and desirable order.  The article also
+  compares this algorithm and its solution with similar algorithms.
+}
+}
+
+
+
+
+@Article{mosheiov:minimizing,
+  author =   {Gur Mosheiov},
+  title =    {Minimizing total completion time and total deviation of job completion
+times from a restrictive due-date },
+  journal =      {European Journal of Operational Research},
+  year =     {2005},
+  volume =   {165},
+  pages =    {20-33},
+  annote =   {
+
+  Within this article are many things which are important to the proposed
+  problems with satellite scheduling.  This algorithm tackles the task of
+  trying to come up with an algorithm which has due-dates for inputs, and
+  where time scheduling can change as tasks are completed, either by the
+  due-date or tardy.  It also allows for efficient dynamic programming.
+  The researchers tested the algorithm, which can be solved in polynomial
+  time, and found that it actually did very well, numerically, when compared with an
+  optimal schedule that was NP-hard. }
+}
+
+
+
+
+@Article{sourd:optimal,
+  author =   {Francis Sourd},
+  title =    {Optimal timing of a sequence of tasks with general completion costs },
+  journal =      {European Journal of Operational Research},
+  year =     {2005},
+  volume =   {165},
+  pages =    {82-96},
+  annote =   {
+
+  Sourd explores dynamic programming in an algorithm which seems
+  to be quite efficient at scheduling tasks.  The algorithm here
+  even goes far enough to determine costs involved.  It also
+  explores how the algorithm can efficiently schedule tasks in
+  order to maximize tasks completed and minimize idle-time in the
+  schedule.  Detailed further is how the algorithm can work a
+  schedule very quickly, in some cases organizing 2000 tasks
+  within 1 second, and it is possible to set a maximum time limit
+  for solving the scheduling algorithm.  The algorithm was written
+  in C++ format.
+
+  }
+}
+
+@Article{Motta,
+  author =          {Enrico Motta and Dynanesh Rajpathak and Zdenek Zdrahal and  Rajkumar
+Roy},
+  title =          {The Epistemology of Scheduling Problems},
+  
+           
+  year =          {2002},
+  volume =          {},
+  pages =          {76},
+  annote =          {This article specifies the parameters for any scheduling problem. It
+lays a good foundation for outlining scheduling problems regardless of
+application. Web address is
+http:/kmi.open.ac.uk/people/dynanesh/Publications/ECAI-2002/sent/E0076.pdf}} 
+  
+
+@Article{Sun,
+  author =          {Jun Sun and Eytan Modiano },
+  title =          {Routing Strategies for Maximizing Throughput in LEO Satellite Networks},
+  journal =          {IEEE Journal on Selected Areas In Communications},
+  year =          {February 2004},
+  volume =          {22},
+  pages =          {273-286},
+  annote =          {This covers flow of information through a satellite network. It
+addresses transmission scheduling schemes such as random packet, oldest packet,
+and shortest hops win which prove useful.
+}
+}
+
+
+
+
+@Article{Chen,
+  author =          {Pai-Hsuen Chen and Chih Jen Lin and Bernard Scholkopf},
+  title =          {A Tutorial on V-Support Vector Machines},
+  journal =          {},
+  year =          {},
+  volume =          {},
+  pages =          {},
+  annote =          {Explains statistical learning theory in support vector machines and
+feature space to create a learning algorithm.
+  Web address is http:// www.cise.ntu.edu.tw/~cjin/papers/nusvtutorial.pdf
+  } 
+}
+
+
+
+@book{Christianini,
+  author    = {Nello Christianini and John Shane Taylor},
+  title     = {An Introduction to Support Vector Machines and other kernel based
+learning methods},
+  publisher = {Cambridge University Press},
+  address   = {United Kingdom at University Press, Cambridge},
+  year      = {2000},
+  annote    = {This explains how data is classified with a set of hypothesis which
+uses functions to transform the data into a form appropiate for learning and
+classification. It uses a learning algorithm found in optimization. }}
+
+@book{Ross,
+    author    = {Sheldon Ross},
+    title     = {Simulation, Second Edition},
+    publisher = {Academic Press Inc.},
+    address   = {525 B Street,Suite 1900, San Diego, CA 92101 and 1300 Boylston St.,
+Chestnut Hill, MA 02167},
+    year      = {1997},
+    annote    = {This book explains how to use random numbers to simulate various
+probability distributions. It also explains Monte Carlo methods.}} 
+
+
+
+@book{Adeli,
+    author    = {Hojjat Adeli and Shih Lin Hung},
+    title     = {Machine Learning Neural Networks,Genetic Algorithms, and Fuzzy
+Systems},
+    publisher = {John Wiley and Sons, Inc.},
+    address   = {New York, Chichester, Brisbane, Toronto, Singapore},
+    year      = {1995},
+    annote    = {This books talks about development of computing systems with
+learning capability. This means we can design a machine capable of making
+decisions and prioritizing tasks.}}
+                  
+
+
+@book{Ravindra,
+    author    = {Ravindra K. Ahuja and  Thomas L. Magnanti and James Orlin},
+    title     = {Network Flows Theory, Algorithms and Applications},
+    publisher = {Prentice Hall Inc.},
+    address   = {Englewood Cliffs, New Jersey 07632},
+    year      = {1993},
+    annote    = {This book illustrates the connection between dynamic programming
+and shortest path. It covers La Grangian relaxation, constrained shortest path,
+traveling salesman, and vehicle routing problems to name a few.
+                  }  }
+                  
+
+
+@book{Gross,
+    author    = {Jonathan Gross and Jay Yellen},
+    title     = {Graph Theory and Its Applications},
+    publisher = {CRC Press},
+    address   = {Boca Raton, London, New York, Washington D.C.},
+    year      = {1999},
+    annote    = {This book introduces the basics of graph theory. Among the relevant
+subjects are optimality and network flow which are useful concepts in dynamic
+programming. }  }
+                  
+                  
+
+@unpublished{Kent,
+  author      = {Kent},
+  title       = {Greedy Introduction},
+  note        = {web page
+www.personal.kent.edu/~rmuhamma/Algorithms/MyAlgorithms/Greedy/},
+  annote      = {This is an article on the greedy algorithm approach. It breaks it
+down and shows an example computer program that looks like it might be in C
+language. The exmaple he uses is a program that makes change for a given amount
+entered. He then shows that the program makes change using the largest coins
+possible. It follows that the program just did its job for that one step and took
+no consideration of what kind of change would be best. That is, it solved the
+problem at hand without looking into the future for what would be overall the best
+solution. It also has some definitions on feasibility.}}
+
+
+
+@unpublished{Trick,
+  author      = {Michael A. Trick},
+  title       = {A Second Example},
+  note        = {web page http://mat.gsia.cmu.edu/classes/dynamic/node3.html},
+  annote      = {This is a class webpage that I found that simplified the approach
+that we take to dynamic programming. It uses a road network with four stages and
+goes step by step through the problem to show how each stage is solved. It is very
+similar to the problem we are trying to solve. The only real differences are that
+instead of the nodes being weighted, the arcs are, and instead of having perfect
+'stages' our nodes will be spaced more inconsistently. Nonetheless, it gives a
+good representation of how to include dynamic programming into our project with
+Raytheon}}
+
+
+
+
+@TechReport{wehart,
+        title = "Mixed Integer Programming",
+        year = "1997",
+        type = "{Integer Programming}",
+        institution = "Sandia National Labratories",
+        address="{http://www.cs.sandia.gov/opt/survey/mip.html}",
+        annote  = {This is an report on how mixed integer programming works. It starts by
+showing the form of a mixed integer program with n variables and m constraints.
+They explain the branch and bound method which is the most widely used method for
+solving integer programs. It goes into some detail about how the variables have
+only two possible restrictions, one and zero. There's  also some mention of the 
+branch and cut method as well as the branch and price method.}
+        
+}
+@Article{gloss1,
+  author =   {Inc., Free Software Foundation},
+  title =    {Wikipedia, The Free Encyclopedia },
+  publisher =    {World Wide Web},
+  address =     {http://en.wikipedia.org/wiki/Main_Page},
+  year =     {2005},
+
+  annote =   {
+
+This site serves as a glossary for technical terms. The site is
+very broad in topics, but topics are not in-depth.
+  }
+}
+
+@Article{zipfslaw,
+  author =   {David Cary},
+  title =    {Task Scheduling Using Zipf's Law },
+  publisher =    {World Wide Web},
+  address =     {http://c2.com/cgi/wiki?TaskSchedulingUsingZipfsLaw},
+  year =     {2005},
+
+  annote =   {
+
+Site offers a review of Zipf's Law and how it applies to task
+scheduling. Zipf's Law applies more to business than engineering,
+but it orders tasks using an order of importance and an order of
+difficulty.  The proportion is found and used to schedule tasks.
+
+  }
+}
+
+@Article{gloss2,
+  author =   {Paul E. Black},
+  title =    {National Institute of Standards and Technology},
+  publisher =    {World Wide Web},
+  address =     {http://nist.gov/},
+  year =     {2005},
+
+  annote =   {
+
+This site also serves as a glossary for technical terms. The site
+is extremely broad.  Any technical term is likely to be found
+here.  However, content is not very deep.
+  }
+}
+
+@Article{greed1,
+  author =   {Dr. Michael Mascagni},
+  title =    {Introduction to Greedy Algorithms},
+  publisher=    {World Wide Web},
+  address =     {http://www.cs.fsu.edu/~cop4531/slideshow/},
+  year =     {2005},
+
+  annote =   {
+
+This site is a tutorial on greedy algorithms.  The site provides
+definitions, examples, and proofs.  This is a good resource for
+beginners on greedy algorithms.
+  }
+}
+
+@Article{examp1,
+  author =   {Eric Weisstein},
+  title =    {Mathworld},
+  publisher =    {World Wide Web},
+  address =     {http://mathworld.wolfram.com},
+  year =     {2005},
+
+  annote =   {
+
+This is a comprehensive mathematics site.  This site provides many
+definitions and examples on a broad range of topics.  Most topics
+have in-depth material.
+  }
+}
+

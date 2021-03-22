@@ -1,0 +1,612 @@
+﻿
+@book{mortenson_computer_1989,
+	address = {New York, {NY}},
+	title = {Computer Graphics: An Introduction to the Mathematics and Geometry},
+	publisher = {Industrial Press Inc.},
+	author = {Michael Mortenson},
+	year = {1989}
+},
+
+@inproceedings{cohen_learning_1996,
+	title = {Learning Trees and Rules with {Set-Valued} Features},
+	url = {citeseer.ist.psu.edu/article/cohen96learning.html},
+	booktitle = {{AAAI/IAAI,} Vol. 1},
+	author = {William W Cohen},
+	year = {1996},
+	pages = {709--716}
+},
+
+@inproceedings{ferri_improvingauc_2003,
+	title = {Improving the {AUC} of Probabilistic Estimation Trees},
+	url = {http://www.cs.bris.ac.uk/Publications/pub_master.jsp?id=2000549},
+	abstract = {In this work we investigate several issues in order to improve the performance of probabilistic estimation trees {(PETs).} First, we derive a new probability smoothing that takes into account the class distributions of all the nodes from the root to each leaf. Secondly, we introduce or adapt some new splitting criteria aimed at improving probability estimates rather than improving classification accuracy, and compare them with other accuracy-aimed splitting criteria. Thirdly, we analyse the effect of pruning methods and we choose a cardinality-based pruning, which is able to significantly reduce the size of the trees without degrading the quality of the estimates. The quality of probability estimates of these three issues is evaluated by the 1-vs-1 multi-class extension of the Area Under the {ROC} Curve {(AUC)} measure, which is becoming widespread for evaluating probability estimators, ranking of predictions in particular.},
+	booktitle = {Proceedings of the 14th European Conference on Machine Learning.},
+	author = {Cesar Ferri and Peter Flach and José {Hernandez-Orallo}},
+	month = sep,
+	year = {2003},
+	pages = {121---132}
+},
+
+@book{pai_evaluating_????,
+	title = {Evaluating Diagnostic and Screening Tests},
+	url = {http://www.sunmed.org/Dia.html},
+	author = {Madhukar Pai}
+},
+
+@inproceedings{flach_repairing_2003,
+	title = {Repairing concavities in {ROC} curves},
+	booktitle = {Proc. 2003 {UK} Workshop on Computational Intelligence},
+	publisher = {University of Bristol},
+	author = {Peter A. Flach and S. Wu},
+	month = aug,
+	year = {2003},
+	pages = {38―44}
+},
+
+@article{mossman_three-way_1999,
+	title = {Three-way {ROCs}},
+	volume = {19},
+	journal = {Medical Decision Making},
+	author = {Douglas Mossman},
+	year = {1999},
+	pages = {78―89}
+},
+
+@article{webb_application_2005,
+	title = {On the Application of {ROC} Analysis to Predict Classification Performance Under Varying Class Distributions},
+	volume = {58},
+	number = {1},
+	journal = {Machine Learning},
+	author = {Geoffrey Webb and Kai Ming Ting},
+	year = {2005}
+},
+
+@inproceedings{provost_robust_1998,
+	address = {Menlo Park, {CA}},
+	title = {Robust Classification Systems for Imprecise Environments},
+	booktitle = {Proceedings of {AAAI-98}},
+	publisher = {{AAAI} Press},
+	author = {Foster Provost and Tom Fawcett},
+	year = {1998},
+	pages = {706―713}
+},
+
+@inproceedings{cortes_auc_2004,
+	address = {Cambridge, {MA}},
+	title = {{AUC} Optimization vs. Error Rate Minimization},
+	url = {http://www.cs.nyu.edu/~mohri/postscript/auc.pdf},
+	abstract = {The area under an {ROC} curve {(AUC)} is a criterion used in many applications to measure the quality of a classiﬁcation algorithm. However, the objective function optimized in most of these algorithms is the error rate and not the {AUC} value. We give a detailed statistical analysis of the relationship between the {AUC} and the error rate, including the ﬁrst exact expression of the expected value and the variance of the {AUC} for a ﬁxed error rate. Our results show that the average {AUC} is monotonically increasing as a function of the classiﬁcation accuracy, but that the standard deviation for uneven distributions and higher error rates is noticeable.  Thus, algorithms designed to minimize the error rate may not lead to the best possible {AUC} values. We show that, under certain conditions, the global function optimized by the {RankBoost} algorithm is exactly the {AUC.} We report the results of our experiments with {RankBoost} in several datasets demonstrating the beneﬁts of an algorithm speciﬁcally designed to globally optimize the {AUC} over other existing algorithms optimizing an approximation of the {AUC} or only locally optimizing the {AUC.}},
+	booktitle = {Advances in Neural Information Processing Systems},
+	publisher = {{MIT} Press},
+	author = {Corinna Cortes and Mehryar Mohri},
+	editor = {Sebastian Thrun and Lawrence Saul and Bernhard Schölkopf},
+	year = {2004}
+},
+
+@inproceedings{bostrm_maximizingarea_2005,
+	title = {Maximizing the Area under the {ROC} Curve with Decision Lists and Rule Sets},
+	url = {http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.97.1324},
+	abstract = {Decision lists (or ordered rule sets) have two attractive properties compared to unordered rule sets: they re- quire a simpler classiﬁcation procedure and they allow for a more compact representation. However, it is an open question what eﬀect these properties have on the area under the {ROC} curve {(AUC).} Two ways of forming decision lists are considered in this study: by generat- ing a sequence of rules, with a default rule for one of the classes, and by imposing an order upon rules that have been generated for all classes. An empirical investiga- tion shows that the latter method gives a signiﬁcantly higher {AUC} than the former, demonstrating that the compactness obtained by using one of the classes as a default is indeed associated with a cost. Furthermore, by using all applicable rules rather than the ﬁrst in an ordered set, an even further signiﬁcant improvement in {AUC} is obtained, demonstrating that the simple classiﬁ- cation procedure is also associated with a cost. The ob- served gains in {AUC} for unordered rule sets compared to decision lists can be explained by that learning rules for all classes as well as combining multiple rules allow for examples to be ranked according to a more ﬁne-grained scale compared to when applying rules in a ﬁxed order and providing a default rule for one of the classes. },
+	booktitle = {Proceedings of the International Conference on Machine Learning 2005 Workshop on {ROC} Analysis in Machine Learning },
+	author = {Henrik Boström},
+	year = {2005}
+},
+
+@inproceedings{provost_case_1998,
+	address = {San Francisco, {CA}},
+	title = {The Case Against Accuracy Estimation for Comparing Induction Algorithms},
+	booktitle = {Proceedings of {ICML-98}},
+	author = {Foster Provost and Tom Fawcett and Ron Kohavi},
+	editor = {Jude Shavlik},
+	year = {1998},
+	note = {Available: {{\textbackslash}urlhttp://www.purl.org/NET/tfawcett/papers/ICML98-final.ps.gz}},
+	pages = {445―453}
+},
+
+@misc{nakas_ordered_2006,
+	edition = {Second Edition},
+	title = {Ordered Multiple Class Receiver Operating Characteristic {(ROC)} Analysis},
+	url = {http://www.informaworld.com/smpp/content~content=a758543493~db=all~jumptype=rss},
+	abstract = {The assessment of diagnostic markers for classification and prediction in two-class problems is commonly performed with the use of Receiver Operating Characteristic {(ROC)} curves. The {ROC} curve is a graphical representation of True Positive Rates {(TPR;} sensitivity) versus False Positive Rates {(FPR;} 1-specificity). It is defined by considering a classification criterion over all possible values for the two classes under study (commonly referred to as the diseased and healthy populations). The area under the {ROC} curve {(AUC)} can be used as a global measure of the ability of this classification criterion to distinguish between these two populations under consideration. Statistical inference is based on U-statistic (non-parametric) or parametric estimation of the {AUC} and its standard error. In three-class diagnostic problems, three True Class Rates {(TCR)} are defined as a direct generalization of the two-class case and can easily be extended in multiple-class classification problems. In the three-class situation, an {ROC} surface is generated in three dimensions by considering all possible values of the test. As a natural generalization of the area under the {ROC} curve, the volume under the {ROC} surface {(VUS)} can be used as a global measure of the ability of the test to discriminate between three groups. Estimates of the {VUS} and its standard error are generated using U-statistics or bootstrap methodology. These formulations can be used whenever the diagnostic marker measurements are continuous or ordered categories. A classification of three groups of subjects based on an imaging marker is described in an example. },
+	journal = {Encyclopedia of Biopharmaceutical Statistics},
+	author = {Christos Nakas and Constantin Yiannoutsos},
+	month = aug,
+	year = {2006}
+},
+
+@book{james_p_egan_signal_1975,
+	address = {New York},
+	series = {Series in Cognitition and Perception},
+	title = {Signal Detection Theory and {ROC} Analysis},
+	publisher = {Academic Press},
+	author = {James P Egan},
+	year = {1975}
+},
+
+@article{swets_measuringaccuracy_1988,
+	title = {Measuring the accuracy of diagnostic systems},
+	volume = {240},
+	abstract = {Diagnostic systems of several kinds are used to distinguish between two classes of events, essentially "signals" and "noise". For them, analysis in terms of the "relative operating characteristic" of signal detection theory provides a precise and valid measure of diagnostic accuracy. It is the only measure available that is uninfluenced by decision biases and prior probabilities, and it places the performances of diverse systems on a common, easily interpreted scale. Representative values of this measure are reported here for systems in medical imaging, materials testing, weather forecasting, information retrieval, polygraph lie detection, and aptitude testing. Though the measure itself is sound, the values obtained from tests of diagnostic systems often require qualification because the test data on which they are based are of unsure quality. A common set of problems in testing is faced in all fields. How well these problems are handled, or can be handled in a given field, determines the degree of confidence that can be placed in a measured value of accuracy. Some fields fare much better than others.},
+	journal = {Science},
+	author = {J. Swets},
+	month = jun,
+	year = {1988},
+	pages = {1285―1293}
+},
+
+@article{beck_use_1986,
+	title = {The Use of {ROC} Curves in Test Performance Evaluation},
+	volume = {110},
+	journal = {Arch Pathol Lab Med},
+	author = {J. Robert Beck and Edward K Schultz},
+	year = {1986},
+	pages = {13―20}
+},
+
+@techreport{barber_quickhull_1993,
+	title = {The quickhull algorithm for convex hull},
+	number = {{GCG53}},
+	institution = {University of Minnesota},
+	author = {C. B Barber and D. P Dobkin and H. Huhdanpaa},
+	year = {1993},
+	note = {Available: {{\textbackslash}urlftp://geom.umn.edu/pub/software/qhull.tar.Z}}
+},
+
+@article{swets_better_2000,
+	title = {Better Decisions through Science},
+	volume = {283},
+	url = {http://www.psychologicalscience.org/pdf/pspi/sciam.pdf},
+	abstract = {{YES/NO} {DIAGNOSTIC} {QUESTIONS} {ABOUND,} not just in medicine but in most ﬁelds. Yet proven 
+techniques that increase the odds of making a correct call are dangerously underused. 
+},
+	journal = {Scientific American},
+	author = {John A Swets and Robyn M Dawes and John Monahan},
+	month = oct,
+	year = {2000},
+	pages = {82―87}
+},
+
+@inproceedings{yan_optimizing_2003,
+	title = {Optimizing Classifier Performance via an Approximation to the {Wilcoxon-Mann-Whitney} Statistic},
+	url = {http://www.cs.colorado.edu/~mozer/papers/reprints/wilcoxon_mann_whitney.pdf},
+	booktitle = {Proceedings of {ICML-2003}},
+	publisher = {{AAAI} Press},
+	author = {Lian Yan and Robert H Dodier and Michael Mozer and Richard H Wolniewicz},
+	editor = {Tom Fawcett and Nina Mishra},
+	month = aug,
+	year = {2003},
+	pages = {848―855}
+},
+
+@article{bradley_use_1997,
+	title = {The use of the area under the {ROC} curve in the evaluation of machine learning algorithms},
+	volume = {30},
+	number = {7},
+	journal = {Pattern Recognition},
+	author = {Andrew P Bradley},
+	year = {1997},
+	pages = {1145―1159}
+},
+
+@inproceedings{brefeld_auc_????,
+	address = {Bonn, Germany},
+	title = {{AUC} Maximizing Support Vector Learning},
+	url = {http://www.informatik.hu-berlin.de/~brefeld/publications/auc.pdf},
+	abstract = {The area under the {ROC} curve {(AUC)} is a natural performance measure when the goal is to ﬁnd a discriminative decision function. We present a rigorous derivation of an {AUC} maximizing Support Vector Machine; its optimization criterion is composed of a convex bound on the {AUC} and a margin term. The number of constraints in the optimization problem grows quadratically in the number of examples. We discuss an approximation for large data sets that clusters the constraints. Our experiments show that the {AUC} maximizing Support Vector Machine does in fact lead to higher {AUC} values.},
+	booktitle = {Proceedings of the {ICML} 2005 workshop on {ROC} Analysis in Machine Learning},
+	author = {Ulf Brefeld and Tobias Scheffer}
+},
+
+@inproceedings{spackman_signal_1989,
+	address = {San Mateo, {CA}},
+	title = {Signal detection theory: Valuable tools for evaluating inductive learning},
+	booktitle = {Proceedings of the Sixth International Workshop on Machine Learning},
+	publisher = {Morgan Kaufman},
+	author = {K. A Spackman},
+	year = {1989},
+	pages = {160―163}
+},
+
+@techreport{srinivasan_notelocation_1999,
+	address = {Oxford, England},
+	type = {Technical Report},
+	title = {Note on the location of optimal classifiers in n-dimensional {ROC} space},
+	url = {http://citeseer.nj.nec.com/srinivasan99note.html},
+	number = {{PRG-TR-2-99}},
+	institution = {Oxford University Computing Laboratory},
+	author = {A. Srinivasan},
+	year = {1999}
+},
+
+@misc{hopley_magnificent_????,
+	title = {The magnificent {ROC}},
+	url = {http://www.anaesthetist.com/mnm/stats/roc/Findex.htm},
+	journal = {Receiver Operating Characteristic Curves: an introduction},
+	author = {Lara Hopley and Jo van Schalkwyk},
+	howpublished = {{http://www.anaesthetist.com/mnm/stats/roc/Findex.htm}}
+},
+
+@article{frnkranz_roc_2005,
+	title = {{ROC} ŉ' Rule Learning ― Towards a Better Understanding of Covering Algorithms},
+	volume = {58},
+	abstract = {This paper provides an analysis of the behavior of separate-and-conquer or covering rule learning algorithms by visualizing their evaluation metrics and their dynamics in {PN-space,} a variant of {ROC-space.} Our results show that most commonly used search heuristics, including accuracy, weighted relative accuracy, entropy, and Gini index, are equivalent to one of two fundamental prototypes: precision, which tries to optimize the area under the {ROC} curve for unknown costs, and a cost-weighted difference between covered positive and negative examples, which tries to ﬁnd the optimal point under known or assumed costs. We also 
+show that a straightforward generalization of the m-estimate trades off these two prototypes. 
+Furthermore, our results show that stopping and ﬁltering criteria like {CN2’s} signiﬁcance test 
+focus on identifying signiﬁcant deviations from random classiﬁcation, which does not necessarily avoid overﬁtting. We also identify a problem with Foil’s {MDL-based} encoding length restriction, which proves to be largely equivalent to a variable threshold on the recall of the rule. In general, we interpret these results as evidence that, contrary to common conception, pre-pruning heuristics are not very well understood and deserve more investigation.},
+	number = {1},
+	journal = {Machine Learning},
+	author = {Johannes Fürnkranz and Peter Flach},
+	year = {2005},
+	pages = {39―77}
+},
+
+@article{adams_comparing_1999,
+	title = {Comparing classifiers when the misallocations costs are uncertain},
+	volume = {32},
+	journal = {Pattern Recognition},
+	author = {N. M Adams and D. J Hand},
+	year = {1999},
+	pages = {1139―1147}
+},
+
+@inproceedings{lane_extensions_2000,
+	title = {Extensions of {ROC} Analysis to multi-class domains},
+	booktitle = {{ICML-2000} Workshop on {Cost-Sensitive} Learning},
+	author = {Terran Lane},
+	editor = {Tom Dietterich and Dragos Margineantu and Foster Provost and Peter Turney},
+	year = {2000}
+},
+
+@inproceedings{prati_roccer:algorithm_2005,
+	title = {{ROCCER:} An Algorithm for Rule Learning Based on {ROC} Analysis},
+	url = {http://www.ijcai.org/papers/0621.pdf},
+	abstract = {We introduce a rule selection algorithm called {ROCCER,} which operates by selecting classiﬁcation rules from a larger set of rules – for instance found by Apriori – using {ROC} analysis. Experimental comparison with rule induction algorithms shows that {ROCCER} tends to produce considerably smaller rule sets with compatible Area Under the {ROC} Curve {(AUC)} values. The individual rules that compose the rule set also have higher support and stronger association indexes.},
+	booktitle = {{IJCAI} 2005},
+	author = {Ronaldo Prati and Peter Flach},
+	year = {2005},
+	pages = {823―828}
+},
+
+@inproceedings{ferri_learning_2002,
+	title = {Learning decision trees using the area under the {ROC} curve},
+	url = {http://www.dsic.upv.es/users/elp/cferri/105.pdf },
+	abstract = {{ROC} analysis is increasingly being recognised as an important tool for evaluation and comparison of classifiers when the operating characteristics (i.e. class distribution and cost parameters) are not known at training time. Usually, each classifier is characterised by its estimated true and false positive rates and is represented by a single point in the {ROC} diagram. In this paper, we show how a single decision tree can represent a set of classifiers by choosing different labellings of its leaves, or equivalently, an ordering on the leaves. In this setting, rather than estimating the accuracy of a single tree, it makes more sense to use the area under the {ROC} curve {(AUC)} as a quality metric. We also propose a novel splitting criterion which chooses the split with the highest local {AUC.} To the best of our knowledge, this is the first probabilistic splitting criterion that is not based on weighted average impurity. We present experiments suggesting that the {AUC} splitting criterion leads to trees with equal or better {AUC} value, without sacrificing accuracy if a single labelling is chosen.},
+	booktitle = {Proceedings of the Nineteenth International Conference on Machine Learning {(ICML} 2002)},
+	author = {C. Ferri and P. Flach and J. {Hernàndez-Orallo}},
+	year = {2002},
+	keywords = {induction, Rule learning},
+	pages = {139―146}
+},
+
+@article{tilbury_receiver_2000,
+	title = {Receiver Operating Characteristic Analysis for Intelligent Medical Systems ― A New Approach for Finding non-parametric Confidence Intervals},
+	volume = {47},
+	number = {7},
+	journal = {{IEEE} Transactions on Biomedical Engineering},
+	author = {Julian Tilbury and Peter Van Eetvelt and Jonathan Garibaldi and John Curnow and Emmanuel Ifeachor},
+	year = {2000},
+	note = {Available: {\textbackslash}urlhttp://www.cs.nott.ac.uk/{\textbackslash} jmg/papers/ieee-be-00.pdf},
+	pages = {952―963}
+},
+
+@inproceedings{macskassy_confidence_2004,
+	title = {Confidence Bands for {ROC} Curves: Methods and an Empirical Study},
+	booktitle = {Proceedings of the First Workshop on {ROC} Analysis in {AI} {(ROCAI-04)}},
+	author = {S. Macskassy and F. Provost},
+	month = aug,
+	year = {2004}
+},
+
+@inproceedings{bradley_cost-sensitive_1995,
+	address = {Canberra, {ACT,} Australia},
+	title = {Cost-sensitive Decision Tree Pruning: Use of the {ROC} Curve},
+	booktitle = {Proceedings of the Eighth Australian Joint Conference on Artificial Intelligence},
+	author = {Andrew Bradley and Brian Lovell},
+	month = nov,
+	year = {1995},
+	note = {Available: {{\textbackslash}urlftp://ftp.cssip.elec.uq.edu.au/pub/cssip/reports/pap/ajcai95-t.ps.Z}},
+	pages = {1―8}
+},
+
+@article{tortorella_reducingclassification_2004,
+	title = {Reducing the classification cost of support vector classifiers through an {ROC-based} reject rule },
+	volume = {7},
+	url = {http://www.springerlink.com/content/w7q03ea3c0m7dn2h/},
+	doi = {10.1007/s10044-004-0209-2},
+	abstract = {This paper presents a novel reject rule for support vector classifiers, based on the receiver operating characteristic {(ROC)} curve. The rule minimises the expected classification cost, defined on the basis of classification and the error costs for the particular application at hand. The rationale of the proposed approach is that the {ROC} curve of the {SVM} contains all of the necessary information to find the optimal threshold values that minimise the expected classification cost. To evaluate the effectiveness of the proposed reject rule, a large number of tests has been performed on several data sets, and with different kernels. A comparison technique, based on the Wilcoxon rank sum test, has been defined and employed to provide the results at an adequate significance level. The experiments have definitely confirmed the effectiveness of the proposed reject rule.},
+	journal = {Pattern Analysis and Applications},
+	author = {Francesco Tortorella},
+	year = {2004},
+	pages = {128---143}
+},
+
+@article{dreiseitl_comparing_2000,
+	title = {Comparing three-class diagnostic tests by three-way {ROC} analysis},
+	volume = {20},
+	journal = {Medical Decision Making},
+	author = {Stephan Dreiseitl and Lucila {Ohno-Machado} and Michael Binder},
+	year = {2000},
+	pages = {323―331}
+},
+
+@unpublished{drummond_classifier_2002,
+	title = {Classifier cost curves: Making performance evaluation easier and more informative},
+	author = {Chris Drummond and Robert C Holte},
+	year = {2002},
+	note = {Unpublished manuscript available from the authors}
+},
+
+@article{hand_simple_2001,
+	title = {A simple generalization of the area under the {ROC} curve to multiple class classification problems},
+	volume = {45},
+	number = {2},
+	journal = {Machine Learning},
+	author = {David Hand and Robert Till},
+	month = nov,
+	year = {2001},
+	pages = {171―186}
+},
+
+@inproceedings{barakat_rule_2006,
+	title = {Rule Extraction from Support Vector Machines: Measuring the Explanation Capability Using the Area under the {ROC} Curve},
+	volume = {2},
+	booktitle = {Proceedings of {ICPR} 2006. 18th International Conference on Pattern Recognition},
+	publisher = {{IEEE} Press},
+	author = {N. Barakat and A. P Bradley},
+	year = {2006},
+	pages = {812―815}
+},
+
+@inproceedings{provost_analysis_1997,
+	address = {Menlo Park, {CA}},
+	title = {Analysis and Visualization of Classifier Performance: Comparison under imprecise class and cost distributions},
+	booktitle = {Proceedings of the Third International Conference on Knowledge Discovery and Data Mining {(KDD-97)}},
+	author = {Foster Provost and Tom Fawcett},
+	year = {1997},
+	pages = {43―48}
+},
+
+@inproceedings{lewis_evaluating_1991,
+	title = {Evaluating Text Categorization},
+	booktitle = {Proceedings of Speech and Natural Language Workshop},
+	publisher = {Morgan Kaufmann},
+	author = {David Lewis},
+	year = {1991},
+	pages = {312―318}
+},
+
+@techreport{rakotomamonjy_support_2004,
+	title = {Support Vector Machines and Area under {ROC} curve},
+	institution = {University of Rouen},
+	author = {Alain Rakotomamonjy},
+	year = {2004}
+},
+
+@inproceedings{mozer_proddingroc_????,
+	title = {Prodding the {ROC} Curve: Constrained 
+Optimization of Classiﬁer Performance},
+	url = {http://www.cs.colorado.edu/~mozer/papers/reprints/prodding.pdf },
+	abstract = {When designing a two-alternative classiﬁer, one ordinarily aims to maximize the classiﬁer’s ability to discriminate between members of the two classes. We describe a situation in a real-world business application of machine-learning prediction in which an additional constraint is placed on the nature of the solution: that the classiﬁer achieve a speciﬁed correct acceptance or correct rejection rate (i.e., that it achieve a ﬁxed accuracy on members of one class or the other). Our domain is predicting churn in the telecommunications industry. Churn refers to customers who switch from one service provider to another. We propose four algorithms for training a classiﬁer subject to this domain constraint, and present results showing that each algorithm yields a reliable improvement in performance. Although the improvement is modest in magnitude, it is nonetheless impressive given the difﬁculty of the problem and the ﬁnancial return that it achieves to the service provider.},
+	booktitle = {Proceedings {NIPS-13} },
+	author = {Michael Mozer and Robert Dodier and Michael Colagrasso and César {Guerra-Salcedo} and Richard Wolniewicz}
+},
+
+@article{provost_robust_2001,
+	title = {Robust Classification for Imprecise Environments},
+	volume = {42},
+	number = {3},
+	journal = {Machine Learning},
+	author = {Foster Provost and Tom Fawcett},
+	year = {2001},
+	pages = {203―231}
+},
+
+@inproceedings{bostrm_maximizingarea_2005-1,
+	title = {Maximizing the Area under the {ROC} Curve using Incremental Reduced Error Pruning},
+	url = {http://www.dsic.upv.es/~flip/ROCML2005/papers/bostromCRC.pdf },
+	abstract = {The use of incremental reduced error pruning for maximizing the area under the {ROC} curve {(AUC)} instead of accuracy is investigated. A commonly used accuracy-based exclusion criterion is shown to include rules that result in concave {ROC} curves as well as to exclude rules that result in convex {ROC} curves. A previously proposed exclusion criterion for unordered rule sets, based on the lift, is on the other hand shown to be equivalent to requiring a convex {ROC} curve when adding a new rule. An empirical evaluation shows that using lift for ordered rule sets leads to a signiﬁcant improvement. Furthermore, the generation of unordered rule sets is shown to allow for more ﬁne-grained rankings than ordered rule sets, which is conﬁrmed by a significant gain in the empirical evaluation. Eliminating rules that do not have a positive eﬀect on the estimated {AUC} is shown to slightly improve {AUC} for ordered rule sets, while no improvement is obtained for unordered rule sets.},
+	booktitle = {Proceedings of the {ICML-2005} Workshop on {ROC} Analysis in Machine Learning},
+	author = {Henrik Boström},
+	year = {2005}
+},
+
+@misc{holte_personal_2002,
+	title = {Personal communication},
+	abstract = {{"However,} Holte has pointed out that the independent variable, false positive rate, is often not under the direct control of the researcher.  It may be preferable to average {ROC} points using an independent variable whose value can be controlled directly, such as the threshold on the classifier scores."},
+	author = {Robert Holte},
+	year = {2002}
+},
+
+@inproceedings{fawcett_using_2001,
+	title = {Using Rule Sets to Maximize {ROC} Performance},
+	url = {http://home.comcast.net/~tom.fawcett/public_html/papers/ICDM-final.pdf},
+	abstract = {Rules are commonly used for classification because they are modular, intelligible and easy to learn. Existing work in classification rule learning assumes the goal is to produce categorical classifications to maximize classification accuracy. Recent work in machine learning has pointed out the limitations of classification accuracy; when class distributions are skewed, or error costs are unequal, an accuracy maximizing rule set can perform poorly. A more flexible use of a rule set is to produce instance scores indicating the likelihood that an instance belongs to a given class. With such an ability, we can apply rulesets effectively when distributions are skewed or error costs are unequal. This paper empirically investigates different strategies for evaluating rule sets when the goal is to maximize the scoring {(ROC)} performance.d},
+	booktitle = {Proceedings of the {IEEE} International Conference on Data Mining {(ICDM-2001)}},
+	author = {Tom Fawcett},
+	month = jul,
+	year = {2001},
+	pages = {131―138}
+},
+
+@article{fawcett_introduction_2006,
+	title = {An Introduction to {ROC} Analysis},
+	volume = {27},
+	number = {8},
+	journal = {Pattern Recognition Letters},
+	author = {Tom Fawcett},
+	month = jun,
+	year = {2006},
+	pages = {882―891}
+},
+
+@inproceedings{lavra_relevancy_????,
+	title = {Relevancy constraints revisited in {ROC} space},
+	url = {http://www.ke.informatik.tu-darmstadt.de/events/ECML-PKDD-04-WS/Proceedings/lavrac.pdf},
+	abstract = {This paper presents relevancy constraints used in subgroup discovery and a novel interpretation of the concept of relevancy in the {ROC} space context. It provides deﬁnitions of feature relevancy and constraints for feature ﬁltering, introduces relevancy based mechanisms for handling of missing values in the examples, and discusses the concept of relevancy as an approach that can help to avoid overﬁtting. It is argued that logical combinations of features (rules) can be also treated as features and that the same relevancy relations and constraints can be applied for them as well. The paper includes an experimental evaluation of the discussed concepts on a descriptive induction task of gene expression data analysis. 
+},
+	booktitle = {Proceedings of {ECML/PKDD-04}},
+	author = {Nada Lavrač and Dragan Gamberger}
+},
+
+@book{mcclish_statistical_2002,
+	series = {Wiley Series in Probability and Statistics},
+	title = {Statistical Methods in Diagnostic Medicine},
+	isbn = {9780471347729},
+	url = {http://www.wiley.com/WileyCDA/WileyTitle/productCd-0471347728.html},
+	abstract = {An important role of diagnostic medicine research is to estimate and compare the accuracies of diagnostic tests. This book provides a comprehensive account of statistical methods for design and analysis of diagnostic studies, including sample size calculations, estimation of the accuracy of a diagnostic test, comparison of accuracies of competing diagnostic tests, and regression analysis of diagnostic accuracy data. Discussing recently developed methods for correction of verification bias and imperfect reference bias, methods for analysis of clustered diagnostic accuracy data, and meta-analysis methods, Statistical Methods in Diagnostic Medicine explains:
+* Common measures of diagnostic accuracy and designs for diagnostic accuracy studies
+* Methods of estimation and hypothesis testing of the accuracy of diagnostic tests
+* Meta-analysis
+* Advanced analytic techniques-including methods for comparing correlated {ROC} curves in multi-reader studies, correcting verification bias, and correcting when an imperfect gold standard is used
+Thoroughly detailed with numerous applications and end-of-chapter problems as well as a related {FTP} site providing {FORTRAN} program listings, data sets, and instructional hints, Statistical Methods in Diagnostic Medicine is a valuable addition to the literature of the field, serving as a much-needed guide for both clinicians and advanced students. },
+	number = {414},
+	publisher = {Wiley},
+	author = {Donna {McClish} and {Xiao-Hua} Zhou and Nancy Obuchowski},
+	month = jul,
+	year = {2002},
+	pages = {464},
+	annote = {First chapter {(Introduction)} is available on-line in {PDF} format.}
+},
+
+@article{hanley_meaning_1982,
+	title = {The Meaning and Use of the Area under a Receiver Operating Characteristic {(ROC)} Curve},
+	volume = {143},
+	journal = {Radiology},
+	author = {James A Hanley and Barbara J {McNeil}},
+	year = {1982},
+	pages = {29―36}
+},
+
+@phdthesis{sing_learning_2004,
+	title = {Learning Localized Rule Mixtures by Maximizing the Area under the {ROC} Curve, with an Application to the Prediction of {HIV-1} Coreceptor Usage},
+	school = {{Max-Planck-Institut} für Informatik Saarbrücken},
+	author = {Tobias Sing},
+	month = mar,
+	year = {2004}
+},
+
+@inproceedings{prati_roccer:roc_2004,
+	title = {{ROCCER:} A {ROC} convex hull rule learning algorithm},
+	booktitle = {{ECML/PKDD} 04 Workshop: Advances in Inductive Rule Learning},
+	author = {Ronaldo Prati and Peter Flach},
+	editor = {Johannes Fürnkranz},
+	year = {2004},
+	pages = {144--153}
+},
+
+@article{swets_psychological_2000,
+	title = {Psychological Science can Improve Diagnostic Decisions},
+	volume = {1},
+	number = {1},
+	journal = {Psychological Science in the Public Interest},
+	author = {John A Swets and Robyn M Dawes and John Monahan},
+	month = may,
+	year = {2000},
+	pages = {1―26}
+},
+
+@techreport{webb_have_2003,
+	type = {Tech Report},
+	title = {Have We Overestimated the Value of {ROC} Analysis Under Varying Class Distributions},
+	url = { http://www.csse.monash.edu/~webb/cgi-bin/../Files/WebbTing03.pdf },
+	abstract = {We counsel caution in the application of {ROC} analysis for prediction of classifier accuracy under varying class distributions. The heart of our contention is that in real-world applications variations of class distribution are likely to result from forces that affect the distribution of the attribute-values, rather than forces that directly affect the class distribution. In statistical terms, it is usually the class, rather than the attributes, that is the dependent variable. If the class distribution alters as an indirect consequence of changes in the distribution of the attribute values, rather than vice versa, performance estimates derived through {ROC} analysis may be grossly inaccurate.},
+	number = {2003/138},
+	institution = {School of Computer Science and Software Engineering, Monash University},
+	author = {G. I Webb and K. M Ting},
+	year = {2003},
+	annote = {See also {"On} the Application of {ROC} Analysis to Predict Classification Performance Under Varying Class Distributions" in the Machine Learning Journal, which is substantially similar to this.}
+},
+
+@inproceedings{ling_auc:better_2003,
+	series = {Lecture Notes in Computer Science},
+	title = {{AUC:} A Better Measure than Accuracy in Comparing Learning Algorithms},
+	url = {http://www.csd.uwo.ca/faculty/cling/papers/cai03.ps},
+	doi = {10.1007/3-540-44886-1},
+	booktitle = {Advances in Artificial Intelligence: 16th Conference of the Canadian Society for Computational Studies of Intelligence},
+	publisher = {Springer},
+	author = {Charles X Ling and Jin Huang and Harry Zhang},
+	year = {2003},
+	pages = {329―341}
+},
+
+@article{schfer_efficient_1994,
+	title = {Efficient Confidence Bounds for {ROC} Curves},
+	volume = {13},
+	journal = {Statistics in Medicine},
+	author = {Helmut Schäfer},
+	year = {1994},
+	pages = {1551―1561}
+},
+
+@techreport{fawcett_roc_2003,
+	type = {Tech Report},
+	title = {{ROC} Graphs: Notes and Practical Considerations for Researchers},
+	number = {{HPL-2003-4}},
+	institution = {{HP} Laboratories},
+	author = {Tom Fawcett},
+	year = {2003},
+	note = {Available: {{\textbackslash}urlhttp://www.purl.org/NET/tfawcett/papers/ROC101.pdf}}
+},
+
+@inproceedings{drummond_explicitly_2000,
+	title = {Explicitly Representing Expected Cost: An alternative to {ROC} representation},
+	booktitle = {Proceedings of {KDD-2000}},
+	publisher = {{ACM} Press},
+	author = {Chris Drummond and Robert C Holte},
+	editor = {Raghu Ramakrishnan and Sal Stolfo},
+	year = {2000},
+	pages = {198―207}
+},
+
+@inproceedings{flach_repairing_2005,
+	title = {Repairing concavities in {ROC} curves},
+	booktitle = {Proceedings of the Nineteenth International Joint Conference on Artificial Intelligence {(IJCAI'05)}},
+	publisher = {Springer},
+	author = {Peter A Flach and Shaomin Wu},
+	editor = {Leslie Pack Kaelbling and Alessandro Saffiotti},
+	month = aug,
+	year = {2005},
+	pages = {702―707}
+},
+
+@inproceedings{martin_det_1997,
+	address = {Rhodes, Greece},
+	title = {The {DET} Curve in Assessment of Detection Task Performance},
+	booktitle = {Proc. Eurospeech '97},
+	author = {Alvin Martin and George Doddington and Terri Kamm and Mark Ordowski and Mark Przybocki},
+	year = {1997},
+	note = {Available: {\textbackslash}urlhttp://www.nist.gov/itl/iad/894.01/publications/papersrc/det.ps},
+	pages = {1895―1898}
+},
+
+@article{fawcett_prie:system_2008,
+	title = {{PRIE:} A system for generating rulelists to maximize {ROC} performance},
+	volume = {17},
+	url = {http://home.comcast.net/~tom.fawcett/public_html/papers/DMKD-UBDM-dist.pdf },
+	doi = {10.1007/s10618-008-0089-y},
+	abstract = {Rules are commonly used for classification because they are modular, intelligible and easy to learn. Existing work in classification rule learning assumes the goal is to produce categorical classifications to maximize classification accuracy. Recent work in machine learning has pointed out the limitations of classification accuracy: when class distributions are skewed, or error costs are unequal, an
+accuracy maximizing classifier can perform poorly. This paper presents a method for learning rules directly from {ROC} space when the goal is to maximize the area under the {ROC} curve {(AUC).} Basic principles from rule learning and computational geometry are used to focus search for promising rule combinations. The result is a system that can learn intelligible rulelists with good {ROC} performance.},
+	number = {2},
+	journal = {Data Mining and Knowledge Discovery},
+	author = {Tom Fawcett},
+	month = oct,
+	year = {2008},
+	keywords = {Rule learning},
+	pages = {207---224}
+},
+
+@book{flach_many_2004,
+	title = {The Many Faces of {ROC} Analysis in Machine Learning},
+	author = {Peter Flach},
+	month = jul,
+	year = {2004},
+	note = {{ICML-04} Tutorial. Notes available from {\textbackslash}urlhttp://www.cs.bris.ac.uk/{\textbackslash} {flach/ICML04tutorial/index.html}}
+},
+
+@misc{zou_receiver_2002,
+	title = {Receiver operating characteristic {(ROC)} literature research},
+	url = {http://www.spl.harvard.edu/archive/spl-pre2007/pages/ppl/zou/roc.html},
+	author = {Kelly H Zou},
+	year = {2002},
+	howpublished = {http://www.spl.harvard.edu/archive/spl-pre2007/pages/ppl/zou/roc.html}
+}

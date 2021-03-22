@@ -1,0 +1,464 @@
+@String{SFU_CS_School = "School of Computing Science, Simon Fraser
+		 University, Burnaby, BC, Canada"}
+
+@TechReport{U-SFraser-CMPT-TR:1999-01,
+  number =       "TR 1999-01",
+  author =       "Robert F. Hadley",
+  title =        "Cognition and the Computational Power of Connectionist
+                 Networks",
+  month =        mar,
+  year =         "1999",
+  org =          "SFU-CMPT",
+  institution =  SFU_CS_School,
+  pages =        "21",
+  url =          "ftp://fas.sfu.ca/pub/cs/TR/1999/CMPT1999-01.ps.gz",
+  abstract =     "This paper examines certain claims of ``cognitive
+                 significance'' which (wisely or not) have been based
+                 upon the theoretical powers of three distinct classes
+                 of connectionist networks, namely, the ``universal
+                 function approximators'', recurrent finite-state
+                 simulation networks, and Turing equivalent networks.
+                 Each class will here be considered with respect to its
+                 potential in the realm of cognitive modeling. Regarding
+                 the first class, I argue that, contrary to the claims
+                 of some influential connectionists, feed-forward
+                 networks do not possess the theoretical capacity to
+                 approximate all functions of interest to cognitive
+                 scientists. For example, they cannot approximate many
+                 important, simple recursive (halting) functions which
+                 map symbolic strings onto other symbolic strings.
+                 
+                 By contrast, I argue that a certain class of recurrent
+                 networks (i.e., those which closely approximate
+                 deterministic finite automata, DFA) shows considerably
+                 greater promise in some domains. However, serious
+                 difficulties arise when we consider how the relevant
+                 recurrent networks (RNNs) could acquire the weight
+                 vectors needed to support DFA simulations. Indeed, the
+                 most widely used method of inducing weight vectors
+                 (supervised learning) is shown to be implausible in the
+                 realm of several high-level cognitive functions.
+                 Furthermore, hypotheses founded upon innate-wiring and
+                 self-organizing learning likewise encounter serious
+                 obstacles. This is not to say that a set of separate
+                 connectionist modules would present similar obstacles.
+                 However, a set of RNN modules is not an RNN in the
+                 sense assumed by the various theoretical proofs
+                 discussed herein.
+                 
+                 In addition, the class of Turing equivalent networks is
+                 here examined. It is argued that the relevance of such
+                 networks to cognitive modeling is seriously undermined
+                 by their reliance on infinite precision in crucial
+                 weights and/or node activations. I also examine what
+                 advantage these networks might possess over and above
+                 classical symbolic algorithms. For, from a cognitive
+                 standpoint, the Turing equivalent networks present
+                 difficulties very similar to certain classical
+                 algorithms; they appear highly contrived, their
+                 structure is fragile, and they exhibit little or no
+                 noise-tolerance.",
+}
+
+
+
+@TechReport{U-SFraser-CMPT-TR:1999-02,
+  number =       "TR 1999-02",
+  author =       "Philip W. L. Fong and Robert D. Cameron",
+  title =        "Proof Linking: Modular Verification of Mobile Programs
+                 in the Presence of Lazy, Dynamic Linking",
+  month =        apr,
+  year =         "1999",
+  org =          "SFU-CMPT",
+  institution =  SFU_CS_School,
+  pages =        "1--25",
+  url =          "ftp://fas.sfu.ca/pub/cs/TR/1999/CMPT1999-02.pdf",
+  postscript =   "ftp://fas.sfu.ca/pub/cs/TR/1999/CMPT1999-02.ps.gz",
+  abstract =     "Although mobile code systems typically employ run-time
+                 code verifiers to secure host computers from
+                 potentially malicious code, implementation flaws in the
+                 verifiers may still leave the host system vulnerable to
+                 attack. Compounding the inherent complexity of the
+                 verification algorithms themselves, the need to support
+                 lazy dynamic linking in mobile code systems typically
+                 leads to architectures that exhibit strong
+                 interdependencies between the loader, the verifier and
+                 the linker. To simplify verifier construction and
+                 provide improved assurances of verifier integrity, we
+                 propose a modular architecture based on the concept of
+                 proof linking. This architecture encapsulates the
+                 verification process and removes dependencies between
+                 the loader, the verifier, and the linker. We also
+                 formally model the process of proof linking and
+                 establish properties to which correct implementations
+                 must conform. As an example, we instantiate our
+                 architecture for the problem of Java bytecode
+                 verification and assess the correctness of this
+                 instantiation. Finally, we briefly discuss alternative
+                 mobile code verification architectures enabled by the
+                 proof linking concept.",
+}
+
+@TechReport{U-SFraser-CMPT-TR:1999-03,
+  number =       "TR 1999-03",
+  author =       "Sheng Li and Qiang Yang",
+  title =        "Active{CBR}: Integrating Case-based Reasoning and
+                 Active Databases",
+  month =        "",
+  year =         "1999",
+  org =          "SFU-CMPT",
+  institution =  SFU_CS_School,
+  pages =        "",
+  abstract =     "Case-based reasoning (CBR) is an Artificial
+                 Intelligence (AI) technique for problem solving that
+                 uses previous similar examples to solve a current
+                 problem. Despite its success, most of current CBR
+                 systems are passive: they require human users to
+                 activate them manually and to provide information about
+                 the incoming problem explicitly. In this paper, we
+                 present an integrated system that combines CBR system
+                 with an active database system. Active databases, with
+                 the support of active rules, can perform event
+                 detecting, condition monitoring, and event handling
+                 (action execution) in an automatic manner. The combined
+                 ActiveCBR system consists of two layers. In the lower
+                 layer, the active database is rule-driven; in the
+                 higher layer, the result of action execution of active
+                 rules is transformed into feature-value pairs required
+                 by the CBR subsystem.
+                 
+                 The layered architecture separates case-based reasoning
+                 from complicated rule-based reasoning, and improves the
+                 traditional \emph{passive} CBR system with the
+                 \emph{active} property. Advantages of the combined
+                 ActiveCBR system include flexibility in knowledge
+                 management that an active database system lacks, and
+                 having the CBR system autonomously respond to external
+                 events that a passive CBR system lacks. This work,
+                 which is a first attempt to combine the two types of
+                 systems, contributes to both database research and CBR
+                 research in that it allows the combined knowledge base
+                 to be highly autonomous, well scalable, and easily
+                 changeable. We demonstrate the system efficiency and
+                 effectiveness through empirical tests. %these
+                 advantages through empirical tests.",
+}
+
+@TechReport{U-SFraser-CMPT-TR:1999-04,
+  number =       "TR 1999-04",
+  author =       "Qiang Yang and Jing Wu",
+  title =        "Interactive Case Based Reasoning with Case Clustering
+                 and Decision Forests",
+  month =        jan,
+  year =         "1999",
+  org =          "SFU-CMPT",
+  institution =  SFU_CS_School,
+  pages =        "35",
+  abstract =     "In interactive case based reasoning, it is important
+                 to present a small number of important cases and
+                 problem features to the user at one time. This goal is
+                 difficult to achieve when large case bases are common
+                 place in industrial practice. In this paper we present
+                 our solution to the problem by highlighting the
+                 interactive user-interface component of \caseadvisor\
+                 system. In \caseadvisor, decision forests are created
+                 in real time to help compress a large case base into
+                 several small ones. This is done by merging similar
+                 cases together through a novel clustering algorithm. An
+                 important side effect of this operation is that it
+                 allows up-to-date maintenance operations to be
+                 performed for case base management. During the
+                 retrieval process, an information-guided subsystem can
+                 then generate decision forests based on users' current
+                 answers obtained through an interactive process. Action
+                 steps are suggested to the user in an incremental
+                 manner, and results of the actions are used to
+                 formulate the next questions and suggestions. Possible
+                 questions to the user are carefully analyzed through
+                 information theory. An important feature of the system
+                 is that case-base maintenance and reasoning are
+                 integrated in a seamless whole. In this article we
+                 present the system architecture, algorithms as well as
+                 empirical evaluations that support our claims.",
+}
+
+@TechReport{U-SFraser-CMPT-TR:1999-05,
+  number =       "TR 1999-05",
+  author =       "Andrew Fall and Joseph Fall",
+  title =        "Beauty and the Beast: Separating Specification from
+                 Implementation for Models of Landscape Dynamics",
+  month =        apr,
+  year =         "1999",
+  org =          "SFU-CMPT",
+  institution =  SFU_CS_School,
+  pages =        "21",
+  status =       issued,
+  abstract =     "Spatially explicit models of landscape structure and
+                 change are becoming common tools for complimenting
+                 empirical studies, evaluating management strategies,
+                 and developing theory in landscape ecology. In many
+                 cases, such models are inseparable from the computer
+                 programs used to implement them. When the underlying
+                 model is hidden in the details of a program, it is
+                 difficult to verify, modify or adapt the model, make
+                 comparisons between models, or integrate two or more
+                 models. One of the goals of SELES (Spatially Explicit
+                 Landscape Event Simulator) has been to separate the
+                 specification of model behaviour from the mechanics of
+                 implementing such a model on a computer. SELES models
+                 are specified in a high-level, structured modelling
+                 language that frees landscape modellers from
+                 programming, allowing them to focus on the underlying
+                 model rather than the implementation details. The SELES
+                 simulation engine executes the model, converting the
+                 high-level specification into a computer simulation of
+                 landscape change. The SELES language is declarative,
+                 and thus permits a clear representation of the
+                 underlying model, which, in turn, yields models that
+                 are more easily verified, compared, modified, and
+                 reused. SELES also provides a structured framework that
+                 facilitates rapid model prototyping and guides the
+                 development of a broad class of spatial landscape
+                 models.",
+}
+
+@TechReport{U-SFraser-CMPT-TR:1999-06,
+  number =       "TR 1999-06",
+  author =       "L. Hafer",
+  title =        "bonsai{G}: Algorithms and Design",
+  month =        aug,
+  year =         "1999",
+  org =          "SFU-CMPT",
+  institution =  SFU_CS_School,
+  pages =        "33",
+  url =          "ftp://fas.sfu.ca/pub/cs/TR/1999/CMPT1999-06.pdf",
+  postscript =   "ftp://fas.sfu.ca/pub/cs/TR/1999/CMPT1999-06.ps.gz",
+  abstract =     "This report describes the implementation of bonsaiG, a
+                 program for mixed-integer linear programming (MILP).
+                 bonsaiG is a research code, designed to explore the
+                 utility and power of arc consistency as a general
+                 technique for solving MILP problems, and to provide a
+                 foundation for exploring other techniques. It strives
+                 to provide maximum flexibility, control, and
+                 robustness, while retaining a reasonable level of
+                 efficiency. It implements a LP-based branch-and-bound
+                 algorithm and supports binary, general integer, and
+                 continuous variables. The underlying LP is an
+                 implementation of a dynamic LP algorithm.",
+}
+
+@TechReport{U-SFraser-CMPT-TR:1999-07,
+  number =       "TR 1999-07",
+  author =       "L. Hafer",
+  title =        "bonsai{G}: User's Manual",
+  month =        aug,
+  year =         "1999",
+  org =          "SFU-CMPT",
+  institution =  SFU_CS_School,
+  pages =        "17",
+  url =          "ftp://fas.sfu.ca/pub/cs/TR/1999/CMPT1999-07.pdf",
+  postscript =   "ftp://fas.sfu.ca/pub/cs/TR/1999/CMPT1999-07.ps.gz",
+  abstract =     "User's Manual for the bonsaiG MILP code.",
+}
+
+@TechReport{U-SFraser-CMPT-TR:1999-08,
+  number =       "TR 1999-08",
+  author =       "Yinlong Sun and David F. Fracchia and Mark S. Drew and
+                 and Thomas W. Calvert",
+  title =        "Rendering Iridescent Colors of Optical Disks",
+  month =        sep,
+  year =         "1999",
+  org =          "SFU-CMPT",
+  institution =  SFU_CS_School,
+  pages =        "46",
+  url =          "ftp://fas.sfu.ca/pub/cs/TR/1999/CMPT1999-08.pdf",
+  abstract =     "The iridescent colors observed on objects such as
+                 optical disks are caused by light diffraction from
+                 their surface microstructure. We show that when an
+                 optical disk is illuminated by a light source it
+                 typically displays a major highlight strip of colors
+                 diagonally across the disk, consisting of saturated
+                 colors that vary along the strip, and a pair of weak
+                 strips of unsaturated colors that change across the
+                 strip. In this report, we propose a diffractive
+                 illumination model and use it to render such iridescent
+                 colors. Our model is based completely on the physical
+                 structure of optical disks and includes contributions
+                 due to both diffractive and non-diffractive factors.
+                 For the diffractive part, we first model the pit
+                 periodicity for optical disks by using identical
+                 spheres and we then approximate their distribution
+                 within tracks by uniform groups of spheres. Utilizing
+                 this representation, we carry out analytic,
+                 self-contained calculations from first principles based
+                 on the superposition principle of light waves, and
+                 derive the distribution of light intensity due to
+                 diffraction. We also propose and prove the condition
+                 for highlights on illuminated grooved surfaces; this
+                 condition provides the non-diffractive contribution
+                 within our model. The model successfully accounts for
+                 the complex behavior of optical disks --- rendered
+                 images achieve excellent agreement with corresponding
+                 photographs of real disks. While this report
+                 specifically focuses on optical disks, the key idea in
+                 our illumination model is generally applicable to
+                 various diffractive structures.",
+}
+
+@TechReport{U-SFraser-CMPT-TR:1999-09,
+  number =       "TR 1999-09",
+  author =       "Robert R. Benkoczi and Binay K. Bhattacharya",
+  title =        "Spine Tree Decomposition",
+  month =        "10",
+  year =         "1999",
+  org =          "SFU-CMPT",
+  institution =  SFU_CS_School,
+  pages =        "23",
+  url =          "ftp://fas.sfu.ca/pub/cs/TR/1999/CMPT1999-09.ps.gz",
+  abstract =     "Many practical problems on trees require
+                 datastructures to efficiently extract information from
+                 these trees. A common approach to the problem is to use
+                 recursion combined with tree decomposition. The
+                 centroid tree decomposition has been extensively used
+                 for this purpose. We propose a different approach, a
+                 spine tree decomposition that is, in our opinion, more
+                 intuitive, faster to compute and gives almost always
+                 better results when this data structure is used in
+                 centroid problems instead of a centroid decomposition.
+                 Particularly, we look into two problems for which a
+                 centroid decomposition is used. We show that the
+                 centroid decomposition has a major disadvantage over
+                 our decomposition and that people are forced to
+                 circumvent it using high constant factor algorithms, or
+                 even brute-force. Moreover, our decomposition is self
+                 adapting, giving the best results when used on
+                 unbalanced trees and having the same performance with
+                 the centroid decomposition on balanced trees.",
+}
+
+
+@TechReport{U-SFraser-CMPT-TR:1999-10,
+  number =       "TR 1999-10",
+  author =       "Jiawei Han and Jian Pei and Yiwen Yin",
+  title =        "Mining partial periodicity using frequent pattern
+                 trees",
+  month =        jul,
+  year =         "1999",
+  org =          "SFU-CMPT",
+  institution =  SFU_CS_School,
+  pages =        "19",
+  url =          "ftp://fas.sfu.ca/pub/cs/TR/1999/CMPT1999-10.pdf.gz",
+  abstract =     "Mining partial periodic patterns in time-series
+                 databases may disclose interesting relationships among
+                 events. Such mining may expect to discover many short
+                 as well as long frequent patterns. The classical
+                 Apriori algorithm is efficient for mining short
+                 frequent patterns but is quite costly at mining long
+                 patterns. The MaxMiner-like algorithm is good for
+                 mining long frequent max-patterns, but does not work
+                 efficiently for mining a mixture of long and short
+                 patterns. The MaxHitSet algorithm developed in our
+                 previous research performs well if there are not too
+                 many distinct patterns but encounters difficulties at
+                 handling a large number of frequent patterns.
+                 
+                 In this study, we propose a novel Frequent Pattern Tree
+                 (FPtree) structure, which is an extended tree structure
+                 storing compressed, crucial information about frequent
+                 patterns, and develop two efficient FPtree based
+                 algorithms, FPall and FPmax, for mining frequent
+                 periodic all-patterns and frequent periodic
+                 max-patterns respectively. With the FPtree structure,
+                 the mining of long and short frequent patterns, as well
+                 as frequent max-patterns can be performed efficiently.
+                 Our experimental and performance studies show that the
+                 FPtree based mining outperforms in a wide margin all of
+                 the three previously proposed methods suitable for
+                 mining frequent periodic patterns in time-series
+                 databases.",
+}
+
+@TechReport{U-SFraser-CMPT-TR:1999-11,
+  number =       "TR 1999-11",
+  author =       "David J. Cowperthwaite and M. Sheelagh T. Carpendale
+                 and F. David Fracchia",
+  title =        "Editing In Elastic Presentation Spaces",
+  month =        oct,
+  year =         "1999",
+  org =          "SFU-CMPT",
+  institution =  SFU_CS_School,
+  pages =        "6",
+  abstract =     "Recent years have seen the development of increasingly
+                 more general distortion viewing methods in response to
+                 the screen real-estate problem. While these methods
+                 have provided a means of displaying more information
+                 within the limitations of the computer screen, the very
+                 distortions that they introduce present a problem in
+                 subsequent interaction with the data. Distortions of
+                 the information space are arbitrarily complex and
+                 analytical solutions to perform a backwards mapping are
+                 correspondingly convoluted. We present here a general
+                 solution to the problem of determining the origin of a
+                 point in a distorted information space that does not
+                 rely on the construction of an analytical backwards
+                 mapping. This method relies on the congruent distortion
+                 of an encoded map space along with the information
+                 space and provides a simple means of determining the
+                 original position of any point within a distorted
+                 space.",
+}
+
+@TechReport{U-SFraser-CMPT-TR:1999-12,
+  number =       "TR 1999-12",
+  author =       "Zinovi Tauber and Ze-Nian Li and Mark S. Drew",
+  title =        "Locale-based Object Search under Illumination Change",
+  month =        nov,
+  year =         "1999",
+  org =          "SFU-CMPT",
+  institution =  SFU_CS_School,
+  pages =        "6",
+  url =          "ftp://fas.sfu.ca/pub/cs/TR/1999/CMPT1999-12.ps.gz",
+  abstract =     "Providing a user with an effective image search engine
+                 has been a very active research area. A search by an
+                 object model is considered to be one of the most
+                 desirable and yet difficult tasks. An added difficulty
+                 is that objects can be photographed under different
+                 lighting conditions. We have developed a feature
+                 localization scheme that finds a set of {\em locales}
+                 in an image. Locales are defined to be overlapping
+                 regions of an image. We make use of a diagonal model
+                 for illumination change and obtain a candidate set of
+                 lighting transformation coefficients in chromaticity
+                 space. For each pair of coefficients, {\em Elastic
+                 Correlation} is performed, which is a form of
+                 correlation of locale colors. Elastic Correlation also
+                 yields a candidate assignment of image locales to
+                 search object locales.
+                 
+                 A weighted Mean-Square-Error minimization for pose
+                 estimation is then applied, followed by an efficient
+                 process of texture histogram intersection and a
+                 Generalized Hough Transform, since the rotation, scale
+                 and translation parameters have been recovered. Tests
+                 on a database of over 1,400 images and video clips show
+                 promising image retrieval results.",
+}
+
+
+@TechReport{U-SFraser-CMPT-TR:1999-13,
+  number =       "TR 1999-13",
+  author =       "Andrew Kurn",
+  title =        "Allocation of Strictly Ordered Processors Is
+                 {NP}-Complete",
+  month =        dec,
+  year =         "1999",
+  org =          "SFU-CMPT",
+  institution =  SFU_CS_School,
+  pages =        "7",
+  url =          "ftp://fas.sfu.ca/pub/cs/TR/1999/CMPT1999-13.ps.gz",
+  abstract =     "For a set of tasks with fixed start and end times, and
+                 for a well ordered set of processors, the question,
+                 whether the tasks can be run on the processors, is
+                 NP-complete.",
+}
+
