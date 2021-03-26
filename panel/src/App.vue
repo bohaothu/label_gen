@@ -1,11 +1,7 @@
 <template>
   <v-app>
-    <v-app-bar
-      app
-      color="primary"
-      dark
-      dense
-    >
+
+    <v-app-bar app color="primary" dark dense clipped-left flat>
       <div class="d-flex align-center">
         <v-img
           alt="Vuetify Logo"
@@ -38,24 +34,36 @@
       </v-btn>
     </v-app-bar>
 
+    <v-navigation-drawer v-model="toggle" clipped dark app>
+      <v-list nav>
+        <v-list-item v-for="item in nav_items" :key="item.title" :to="item.link">
+          <v-list-item-icon><v-icon>{{ item.icon }}</v-icon></v-list-item-icon>
+          <v-list-item-content>
+            <v-list-item-title> {{ item.title }} </v-list-item-title>
+          </v-list-item-content>
+        </v-list-item>
+      </v-list>
+    </v-navigation-drawer>
+
     <v-main>
-      <HelloWorld/>
+      <router-view></router-view>
     </v-main>
   </v-app>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld';
 
 export default {
   name: 'App',
 
-  components: {
-    HelloWorld,
-  },
-
   data: () => ({
-    //
+    nav: null,
+    nav_items: [
+      { title: '导入数据', icon: 'mdi-view-dashboard', link: "/" },
+      { title: '数据列表', icon: 'mdi-image', link: "/viewdata" },
+      { title: '统计资料', icon: 'mdi-image', link: "/stat" },
+      { title: 'About', icon: 'mdi-help-box', link: "/about" },
+    ]
   }),
 };
 </script>
