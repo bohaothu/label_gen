@@ -3,6 +3,7 @@ import VueRouter from 'vue-router'
 import ViewData from '../views/ViewData.vue'
 import Stat from '../views/Stat.vue'
 import Welcome from '../views/Welcome.vue'
+import WordCloud from '../views/WordCloud.vue'
 
 Vue.use(VueRouter)
 
@@ -21,6 +22,11 @@ const routes = [
     path: '/stat',
     name: 'Stat',
     component: Stat
+  },
+  {
+    path: '/wordcloud',
+    name: 'WordCloud',
+    component: WordCloud
   },
   {
     path: '/about',

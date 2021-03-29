@@ -5,7 +5,7 @@
       :items="$store.state.stat.items"
       :items-per-page="10"
       class="elevation-1"
-      style="padding: 0 24px; width: 100%"
+      style="padding: 0 16px; width: 100%"
       dense flat>
       </v-data-table>
     </v-row>

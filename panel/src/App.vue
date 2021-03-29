@@ -62,6 +62,7 @@ export default {
       { title: '导入数据', icon: 'mdi-view-dashboard', link: "/" },
       { title: '数据列表', icon: 'mdi-file-table', link: "/viewdata" },
       { title: '统计资料', icon: 'mdi-poll-box', link: "/stat" },
+      { title: 'Label 云', icon: 'mdi-image', link: "/wordcloud" },
       { title: 'Debug', icon: 'mdi-help-box', link: "/about" },
     ]
   }),
