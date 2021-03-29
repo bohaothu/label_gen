@@ -60,9 +60,9 @@ export default {
     nav: null,
     nav_items: [
       { title: '导入数据', icon: 'mdi-view-dashboard', link: "/" },
-      { title: '数据列表', icon: 'mdi-image', link: "/viewdata" },
-      { title: '统计资料', icon: 'mdi-image', link: "/stat" },
-      { title: 'About', icon: 'mdi-help-box', link: "/about" },
+      { title: '数据列表', icon: 'mdi-file-table', link: "/viewdata" },
+      { title: '统计资料', icon: 'mdi-poll-box', link: "/stat" },
+      { title: 'Debug', icon: 'mdi-help-box', link: "/about" },
     ]
   }),
 };

@@ -1,46 +1,33 @@
 <template>
   <v-container>
-    <v-card>
-      <v-card-title>生成随机数据</v-card-title>
+    <v-card style="padding: 0 24px 16px">
+      <v-card-title style="padding-left: 0px">生成随机数据</v-card-title>
+      <v-row>
+        <v-col><v-text-field style="width: 80%" label="数据列数" v-model="row_num"></v-text-field></v-col>
+        <v-col><v-text-field style="width: 80%" label="Features 个数" v-model="features_num"></v-text-field></v-col>
+        <v-col><v-text-field style="width: 80%" label="Labels 个数" v-model="labels_num"></v-text-field></v-col>
+      </v-row>
       <v-card-action>
-        <v-btn @click="fetchData">生成</v-btn>
-        <v-btn to="/about">飞</v-btn>
+        <v-btn color="primary" @click="fetchData">生成</v-btn>
       </v-card-action>
     </v-card>
+    <v-snackbar v-model="success">生成数据成功</v-snackbar>
   </v-container>
 </template>
 <script>
 
 export default {
   name: "WelcomePage",
+  data: () => ({
+    row_num: 100,
+    features_num: 5,
+    labels_num: 10,
+    success: false
+  }),
   methods: {
     fetchData() {
-      this.axios.get("http://localhost:5000/random?row=10&features=5&labels=10")
-        .then(res => { if(res.status == 200) return res.data })
-        .then(x => {
-          this.$store.commit("addToState", {table: "df", field: "headers", value: this.transHeader(x.schema.fields)})
-          this.$store.commit("addToState",{table: "df", field: "items", value: x.data})
-          this.$store.commit("addToState",{table: "stat", field: "items", value: this.transStat(x.stat)})
-      })
-      this.axios.get("http://localhost:5000/random/label?labels=10")
-      .then(res => { if(res.status == 200) return res.data })
-      .then(x => { this.$store.commit("addToState",{table: "df", field: "labels", value: x})})
-
-    },
-    transHeader(arr) {
-      let z=[]
-      for(let item of arr){
-        z.push({text: item.name, value: item.name, show: true})
-      }
-      return z
-    },
-    transStat(obj) {
-      let z=[]
-      for(let key of Object.keys(obj)){
-        z.push({feature_name: key, min: obj[key].min, max: obj[key].max,
-        median: obj[key].median, mean: obj[key].mean, std: obj[key].std, var: obj[key].var})
-      }
-      return z
+      this.$store.dispatch('fetchData',{row_num: this.row_num, features_num: this.features_num, labels_num: this.labels_num })
+      .then(res => { this.success = res })
     }
   }
 }

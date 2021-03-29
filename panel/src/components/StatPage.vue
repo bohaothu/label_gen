@@ -1,79 +1,95 @@
 <template>
   <v-container>
-    <v-row>
-      <v-checkbox v-model="toggle.selectAll" label="全选" @change="selectAllChange"></v-checkbox>
-      <v-checkbox v-model="hd.show" v-for="hd in headerFilter"
-      :key="hd.value" :label="hd.text" @change="selectOneChange"></v-checkbox>
+    <v-row style="margin-top: -4px; padding: 8px">
+      <v-data-table :headers="$store.state.stat.headers"
+      :items="$store.state.stat.items"
+      :items-per-page="10"
+      class="elevation-1"
+      style="padding: 0 24px; width: 100%"
+      dense flat>
+      </v-data-table>
     </v-row>
-    <v-data-table :headers="columnFilter"
-    :items="$store.state.df.items"
-    :items-per-page="5"
-    class="elevation-1">
-    <template v-slot:item.labels="{item}">
-      <v-chip v-for="lbl in genLabelArr(item.labels)" :key="lbl.id">
-        {{ lbl.text }}
-      </v-chip>
-    </template>
-    </v-data-table>
-    <v-data-table :headers="$store.state.stat.headers"
-    :items="$store.state.stat.items"
-    :items-per-page="10"
-    class="elevation-1"
-    dense>
-    </v-data-table>
+    <v-row style="padding: 8px">
+      <v-card style="width: 100%" elevation="1">
+        <svg :width="svgWidth" :height="svgHeight"></svg>
+      </v-card>
+    </v-row>
   </v-container>
 </template>
 
 <script>
+import * as d3 from 'd3'
 
 export default {
   name: 'StatPage',
-
   data: () => ({
-    df: {
-      headers: []
-    },
-    toggle: {
-      selectAll: true
-    }
+    svgWidth: 720,
+    svgHeight: 500,
   }),
   computed: {
-    headerFilter() {
-      return this.$store.state.df.headers.filter(x => { return x.value !== "labels"})
-    },
-    columnFilter() {
-      return this.$store.state.df.headers.filter(x => x.show)
+    labelCount() {
+      return this.$store.state.df.labels.map((e,i) => ({ label: e, count: this.$store.state.df.labels_count[i]}))
     }
   },
   methods: {
-    statColumnFilter(arr) {
-      let z=[]
-      for(let item of arr){
-        if(this.df.headers.filter(x => { return x.value === item.feature_name })[0].show){
-          z.push(item)
-        }
-      }
-      return z
-    },
-    genLabelArr(lbl_arr) {
-      let z=[]
-      for(let [index, value] of lbl_arr.entries()){
-        if(value === 1) z.push({text: this.$store.state.df.labels[index], id: value+index})
-      }
-      return z
-    },
-    selectOneChange() {
-      if(this.$store.state.df.headers.filter(x => x.show).length === this.$store.state.df.headers.length){
-        this.toggle.selectAll = true
-      }else {
-        this.toggle.selectAll = false
-      }
-    },
-    selectAllChange(event) {
-      for(let item of this.$store.state.df.headers){
-        if(item.value !== "labels") item.show = event
-      }
+    draw() {
+      let data = this.labelCount.sort((a,b) => { return b.count - a.count}).reverse()
+
+      let margin = {top: 20, right: 20, bottom:30, left: 80}
+      let width = this.svgWidth - margin.left - margin.right
+      let height = this.svgHeight - margin.left - margin.right
+
+      // set the ranges
+      let y = d3.scaleBand()
+                .range([height, 0])
+                .padding(0.2);
+
+      let x = d3.scaleLinear()
+                .range([0, width]);
+      // append the svg object to the body of the page
+      // append a 'group' element to 'svg'
+      // moves the 'group' element to the top left margin
+      let svg = d3.select("svg")
+          .attr("width", width + margin.left + margin.right)
+          .attr("height", height + margin.top + margin.bottom)
+          .append("g")
+          .attr("transform",
+                "translate(" + margin.left + "," + margin.top + ")");
+
+      // Scale the range of the data in the domains
+      x.domain([0, d3.max(data, function(d){ return d.count; })])
+      y.domain(data.map(function(d) { return d.label; }));
+      //y.domain([0, d3.max(data, function(d) { return d.sales; })]);
+
+      // append the rectangles for the bar chart
+      svg.selectAll(".bar")
+          .data(data)
+          .enter().append("rect")
+          .attr("class", "bar")
+          .attr("width", function(d) {return x(d.count); } )
+          .attr("y", function(d) { return y(d.label); })
+          .attr("height", y.bandwidth())
+          .attr("fill", "#0D47A1")
+
+      // add the x Axis
+      svg.append("g")
+          .attr("transform", "translate(0," + height + ")")
+          .call(d3.axisBottom(x));
+
+      // add the y Axis
+      svg.append("g")
+          .call(d3.axisLeft(y));
     }
+  },
+  mounted() {
+    this.draw()
   }
 }
 </script>
+
+<style scoped>
+.stat-card {
+  width: 90%;
+  padding: 8px;
+}
+</style>
