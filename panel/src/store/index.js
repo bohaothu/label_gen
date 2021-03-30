@@ -5,19 +5,6 @@ import axios from 'axios'
 Vue.use(Vuex)
 
 const helperMethods = {
-  transHeader(arr) {
-    let z=[]
-    let col=""
-    for(let item of arr){
-      if (item.name === "index"){
-        col = "#"
-      }else{
-        col = item.name
-      }
-      z.push({text: col, value: item.name, show: true})
-    }
-    return z
-  },
   transStat(obj) {
     let z=[]
     for(let key of Object.keys(obj)){
@@ -31,8 +18,8 @@ const helperMethods = {
 export default new Vuex.Store({
   state: {
     df: {
-      headers: [],
-      items: [{}],
+      fields: [],
+      items: [],
       labels: [],
       labels_count: []
     },
@@ -57,7 +44,7 @@ export default new Vuex.Store({
       .then(axios.spread((...res) => {
         const responseTable = res[0].data
         const responseLabel= res[1].data
-        context.commit("addToState", {table: "df", field: "headers", value: helperMethods.transHeader(responseTable.schema.fields)})
+        context.commit("addToState", {table: "df", field: "fields", value: responseTable.schema.fields })
         context.commit("addToState", {table: "df", field: "items", value: responseTable.data})
         context.commit("addToState", {table: "stat", field: "items", value: helperMethods.transStat(responseTable.stat)})
         context.commit("addToState", {table: "df", field: "labels_count", value: responseTable.labels_count})
