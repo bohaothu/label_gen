@@ -15,31 +15,42 @@ const helperMethods = {
   }
 }
 
+const apiAddr="http://localhost:5000"
+
 export default new Vuex.Store({
   state: {
     df: {
       fields: [],
       items: [],
       labels: [],
-      labels_count: []
+      labels_count: [],
+      suggestion: []
     },
     stat: {
       headers: [{text: "Feature", value: "feature_name"}, {text:"最小值", value: "min"},
       {text:"最大值", value: "max"}, {text:"中位数", value: "median"}, {text:"众数", value: "mean"},
       {text:"标准差", value: "std"}, {text:"变异数", value: "var"}],
       items: [{}]
+    },
+    snackbar: {
+      status: false,
+      msg: ""
     }
   },
   mutations: {
     addToState(state, payload){
       // table: df, field: headers, value: value
       state[payload.table][payload.field] = payload.value
+    },
+    showSnackbar(state, payload){
+      state.snackbar.status = true
+      state.snackbar.msg = payload.msg
     }
   },
   actions: {
     fetchData(context, payload){
-      const requestTable=axios.get("http://localhost:5000/random", {params: {row: payload.row_num, features: payload.features_num, labels: payload.labels_num}})
-      const requestLabel=axios.get("http://localhost:5000/random/label", {params: {labels: payload.labels_num}})
+      const requestTable=axios.get(apiAddr+"/random", {params: {row: payload.row_num, features: payload.features_num, labels: payload.labels_num}})
+      const requestLabel=axios.get(apiAddr+"/random/label", {params: {labels: payload.labels_num}})
       return axios.all([requestTable, requestLabel])
       .then(axios.spread((...res) => {
         const responseTable = res[0].data
@@ -49,6 +60,38 @@ export default new Vuex.Store({
         context.commit("addToState", {table: "stat", field: "items", value: helperMethods.transStat(responseTable.stat)})
         context.commit("addToState", {table: "df", field: "labels_count", value: responseTable.labels_count})
         context.commit("addToState",{table: "df", field: "labels", value: responseLabel})
+        return true
+      })).catch(err => {
+        console.error(err)
+        return false
+      })
+    },
+    fetchFakeSuggestion(context, payload){
+      return axios.get(apiAddr+"/random/suggest", {params: {row: payload.row_num, features: payload.features_num, labels: payload.labels_num}})
+      .then(res => {
+        context.commit("addToState",{table: "df", field: "suggestion", value: res.data})
+        return true
+      }).catch(err => {
+        console.error(err)
+        return false
+      })
+    },
+    submitCsv(context, payload){
+      let formData = new FormData()
+      formData.append("file", payload.csvFile)
+      const requestUpload=axios.post(apiAddr+"/upload_csv", formData, {headers: {'Content-Type': 'multipart/form-data'}})
+      const requestLabel=axios.get(apiAddr+"/random/label", {params: {labels: payload.labels_num}})
+
+      return axios.all([requestUpload, requestLabel])
+      .then(axios.spread((...res) => {
+        const responseUpload= JSON.parse(res[0].data.csvResult)
+        const responseLabel= res[1].data
+        context.commit("addToState", {table: "df", field: "fields", value: responseUpload.schema.fields })
+        context.commit("addToState", {table: "df", field: "items", value: responseUpload.data})
+        context.commit("addToState", {table: "stat", field: "items", value: helperMethods.transStat(responseUpload.stat)})
+        context.commit("addToState", {table: "df", field: "labels_count", value: responseUpload.labels_count})
+        context.commit("addToState",{table: "df", field: "labels", value: responseLabel})
+        context.commit("showSnackbar",{msg: res[0].data.message})
         return true
       })).catch(err => {
         console.error(err)

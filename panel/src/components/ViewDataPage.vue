@@ -10,22 +10,22 @@
           </v-btn>
         </template>
         <v-card>
-          <v-card-title>Hello</v-card-title>
+          <v-card-title>标签筛选</v-card-title>
           <v-card-text>
-            <v-chip v-for="lbl in labelArr.filter(x => x.show)" :key="lbl.id+'-show'"
-            close @click:close="lbl.show = false">
-              {{ lbl.text }}
+            <v-chip-group multiple column active-class="primary--text"
+            v-model="labelFilter" @change="labelFilterChange">
+            <v-chip v-for="lbl,idx in labelArr" :key="lbl.id" filter>
+              {{ lbl.text }} ({{ $store.state.df.labels_count[idx] }})
             </v-chip>
-            <v-divider></v-divider>
-            <v-chip v-for="lbl in labelArr.filter(x => !x.show)" :key="lbl.id+'-hide'"
-            close @click:close="lbl.show = true">
-              {{ lbl.text }}
-            </v-chip>
+            </v-chip-group>
           </v-card-text>
           <v-card-action>
           </v-card-action>
         </v-card>
       </v-dialog>
+      <v-btn small icon color="indigo" style="align-self: baseline; margin-top: 3px" @click="suggest = !suggest">
+          <v-icon>mdi-access-point</v-icon>
+      </v-btn>
       <v-checkbox v-model="toggle.selectAll" v-if="hasData" label="全选" @change="selectAllChange"></v-checkbox>
       <v-checkbox v-model="hd.show" v-for="hd in headerFilter"
       :key="hd.value" :label="hd.text" @change="selectOneChange"></v-checkbox>
@@ -38,11 +38,17 @@
       class="elevation-1"
       style="padding: 0 16px; width: 100%">
       <template v-slot:item.labels="{item}">
-        <v-chip v-for="lbl in genLabelArr(item.labels)" :key="lbl.id">
+        <v-chip v-for="lbl in genLabelArr(item.labels,item.index)" :key="lbl.id" :color="getLabelColor(lbl.value)">
           {{ lbl.text }}
         </v-chip>
       </template>
+      <template v-slot:header.labels="{ header }">
+        {{ suggest? header.text+" (建议)":header.text }}
+      </template>
       </v-data-table>
+    </v-row>
+    <v-row style="padding: 8px">
+      建议：{{ suggest? "开":"关" }}
     </v-row>
   </v-container>
 </template>
@@ -58,7 +64,8 @@ export default {
     toggle: {
       selectAll: true,
       tagDialog: false
-    }
+    },
+    suggest: false
   }),
   mounted() {
     this.headerArr = this.$store.state.df.fields.map(x => {return {text: x.name === "index" ? "#": x.name, value: x.name, show: true}})
@@ -75,20 +82,38 @@ export default {
     itemsFilter() {
       const labelMask = this.labelArr.map(x => x.show)
       const comp = (a,b) => { return a===b? true:b }
-      return this.$store.state.df.items.filter(x => {
-        let labelBool = x.labels.map(x => x > 0)
+      return this.$store.state.df.items.filter((x,index) => {
+        let labelBool = []
+        if(this.suggest){
+          labelBool = this.$store.state.df.suggestion[index].map(x => x > 0)
+        }else{
+          labelBool = x.labels.map(x => x > 0)
+        }
         return labelBool.map((e,i) => comp(e,labelMask[i])).every(y => y)
       })
+    },
+    labelFilter() {
+      const z = []
+      this.labelArr.forEach((e,i) => {
+        if(e.show) z.push(i)
+      })
+      return z
     },
     hasData() {
       return this.$store.state.df.items.length > 0
     }
   },
   methods: {
-    genLabelArr(lbl_arr) {
+    genLabelArr(itemLabel, itemIndex) {
       let z=[]
-      for(let [index, value] of lbl_arr.entries()){
-        if(value === 1) z.push({text: this.$store.state.df.labels[index], id: value+index})
+      let labelArr=[]
+      if(this.suggest){
+        labelArr = this.$store.state.df.suggestion[itemIndex]
+      }else{
+        labelArr = itemLabel
+      }
+      for(let [index, value] of labelArr.entries()){
+        if(value > 0) z.push({text: this.$store.state.df.labels[index], id: value+index, value: value})
       }
       return z
     },
@@ -102,6 +127,20 @@ export default {
     selectAllChange(event) {
       for(let item of this.headerArr){
         if(item.value !== "labels") item.show = event
+      }
+    },
+    labelFilterChange(event){
+      this.labelArr.forEach((e,i) => {
+        this.labelArr[i].show = event.includes(i)? true:false
+      })
+    },
+    getLabelColor(val){
+      if(this.suggest){
+        if(val > 0.7) return "primary"
+        else if(val > 0.5) return "info"
+        else return "warning"
+      }else{
+        return "gray"
       }
     }
   }
