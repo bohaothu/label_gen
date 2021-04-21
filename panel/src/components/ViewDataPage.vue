@@ -65,7 +65,8 @@ export default {
       selectAll: true,
       tagDialog: false
     },
-    suggest: false
+    suggest: false,
+    labelFilter: []
   }),
   mounted() {
     this.headerArr = this.$store.state.df.fields.map(x => {return {text: x.name === "index" ? "#": x.name, value: x.name, show: true}})
@@ -80,25 +81,29 @@ export default {
       return this.headerArr.filter(x => x.show)
     },
     itemsFilter() {
-      const labelMask = this.labelArr.map(x => x.show)
-      const comp = (a,b) => { return a===b? true:b }
-      return this.$store.state.df.items.filter((x,index) => {
-        let labelBool = []
-        if(this.suggest){
-          labelBool = this.$store.state.df.suggestion[index].map(x => x > 0)
-        }else{
-          labelBool = x.labels.map(x => x > 0)
-        }
-        return labelBool.map((e,i) => comp(e,labelMask[i])).every(y => y)
-      })
+      if(this.labelFilter.length){
+        const labelMask = this.labelArr.map(x => x.show)
+        const comp = (a,b) => { return (a===true && b===true)? true:false }
+        return this.$store.state.df.items.filter((x,index) => {
+          let labelBool = []
+          if(this.suggest){
+            labelBool = this.$store.state.df.suggestion[index].map(x => x > 0)
+          }else{
+            labelBool = x.labels.map(x => x > 0)
+          }
+          return labelBool.map((e,i) => comp(e,labelMask[i])).includes(true)
+        })
+      }else{
+        return this.$store.state.df.items
+      }
     },
-    labelFilter() {
+    /*labelFilter() {
       const z = []
       this.labelArr.forEach((e,i) => {
         if(e.show) z.push(i)
       })
       return z
-    },
+    },*/
     hasData() {
       return this.$store.state.df.items.length > 0
     }
@@ -133,6 +138,7 @@ export default {
       this.labelArr.forEach((e,i) => {
         this.labelArr[i].show = event.includes(i)? true:false
       })
+      console.log(this.labelArr.map(x => x.show))
     },
     getLabelColor(val){
       if(this.suggest){
