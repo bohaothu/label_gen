@@ -22,7 +22,7 @@ export default new Vuex.Store({
     df: {
       fields: [],
       items: [],
-      labels: [],
+      labels: [], // labels_name
       labels_count: [],
       suggestion: []
     },
@@ -35,6 +35,11 @@ export default new Vuex.Store({
     snackbar: {
       status: false,
       msg: ""
+    },
+    mask: {
+      headers: [],
+      labels: [],
+      builtInDataset: ""
     }
   },
   mutations: {
@@ -45,6 +50,11 @@ export default new Vuex.Store({
     showSnackbar(state, payload){
       state.snackbar.status = true
       state.snackbar.msg = payload.msg
+    },
+    RESETMASK(state,payload){
+      for(let key in state.mask){
+        state.mask[key] = []
+      }
     }
   },
   actions: {
@@ -62,6 +72,42 @@ export default new Vuex.Store({
         context.commit("addToState",{table: "df", field: "labels", value: responseLabel})
         return true
       })).catch(err => {
+        console.error(err)
+        return false
+      })
+    },
+    importDefaultDataset(context, payload){
+      let startTime = Date.now()
+      return axios.get(apiAddr+"/builtin/load", {params: {dataset: payload.dataset}})
+      .then( res => res.data )
+      .then( x => {
+        context.commit("addToState", {table: "df", field: "fields", value: x.schema.fields })
+        context.commit("addToState", {table: "df", field: "items", value: x.data})
+        context.commit("addToState", {table: "stat", field: "items", value: helperMethods.transStat(x.stat)})
+        context.commit("addToState", {table: "df", field: "labels_count", value: x.labels_count})
+        context.commit("addToState",{table: "df", field: "labels", value: x.labels_name})
+        context.commit("addToState",{table: "mask", field: "builtInDataset", value: payload.dataset})
+        return true
+      })
+      .then(y => {
+        let elaspedTime = Date.now() - startTime
+        if(y) context.commit("showSnackbar",{msg: "载入 "+payload.dataset+" 成功，用时 "+ elaspedTime + " ms"})
+      }).catch(err => {
+        console.error(err)
+        return false
+      })
+    },
+    importDefaultSuggestion(context, payload){
+      let startTime = Date.now()
+      return axios.get(apiAddr+"/builtin/predict", {params: {dataset: payload.dataset}})
+      .then(res => {
+        context.commit("addToState",{table: "df", field: "suggestion", value: res.data})
+        return true
+      })
+      .then(y => {
+        let elaspedTime = Date.now() - startTime
+        if(y) context.commit("showSnackbar",{msg: "生成推荐成功，用时： "+ elaspedTime + " ms"})
+      }).catch(err => {
         console.error(err)
         return false
       })
@@ -97,6 +143,12 @@ export default new Vuex.Store({
         console.error(err)
         return false
       })
+    },
+    resetMask(context, payload){
+      context.commit("RESETMASK")
+    },
+    updateMask(context, payload){
+      context.commit("addToState", {table: "mask", field: payload.field, value: payload.value})
     }
   },
   modules: {

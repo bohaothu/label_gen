@@ -1,6 +1,6 @@
 <template>
   <v-container>
-    <v-card style="padding: 0 24px 16px; margin-bottom: 16px">
+    <v-card style="padding: 0 24px 16px; margin-bottom: 16px;">
       <v-card-title style="padding-left: 0px">上传数据</v-card-title>
       <v-row>
         <v-file-input truncate-length="100" label="训练集" show-size v-model="files"></v-file-input>
@@ -27,10 +27,10 @@
     <v-card style="padding: 0 24px 16px">
       <v-card-title style="padding-left: 0px">选择内置数据集</v-card-title>
       <v-row>
-        <v-col><v-select :items="defaultDataset.sort()" label="数据集"></v-select></v-col>
+        <v-col><v-select :items="defaultDataset" v-model="builtInListSelect" label="数据集"></v-select></v-col>
       </v-row>
       <v-card-action>
-        <v-btn color="primary">导入</v-btn>
+        <v-btn color="primary" @click="importBuiltIn">导入</v-btn>
       </v-card-action>
     </v-card>
     <v-snackbar v-model="snack.success">{{snack.msg}}</v-snackbar>
@@ -38,6 +38,7 @@
 </template>
 
 <script>
+import axios from 'axios'
 
 export default {
   name: "WelcomePage",
@@ -50,10 +51,18 @@ export default {
       success: false,
       msg: ""
     },
-    defaultDataset: ["delicious","emotions"]
+    defaultDataset: [],
+    builtInListSelect: null
   }),
+  mounted() {
+    axios.get("http://localhost:5000/builtin/list")
+    .then(res => res.data)
+    .then(x => this.defaultDataset = x)
+    .catch(err => console.error(err))
+  },
   methods: {
     fetchData() {
+      this.$store.dispatch('resetMask')
       this.$store.dispatch('fetchData',{row_num: this.row_num, features_num: this.features_num, labels_num: this.labels_num })
       .then(res => {
         this.snack.success = res
@@ -64,6 +73,14 @@ export default {
         this.snack.success = res
         this.snack.msg = res? "生成推荐成功":"未知错误"
         })
+    },
+    importBuiltIn() {
+      if(this.builtInListSelect){
+        this.$store.dispatch('resetMask')
+        this.$store.dispatch('importDefaultDataset',{dataset: this.builtInListSelect})
+      }else{
+        alert("请先选择数据集！")
+      }
     },
     submitCsv() {
       if(this.files){

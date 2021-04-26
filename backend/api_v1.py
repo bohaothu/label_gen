@@ -9,6 +9,9 @@ from flask_cors import CORS
 import os
 from werkzeug.utils import secure_filename
 from helpers import gen_matrix, gen_label
+from skmultilearn.dataset import load_dataset
+from skmultilearn.problem_transform import BinaryRelevance
+from sklearn.svm import SVC
 
 f=Faker(locale="zh_CN")
 
@@ -26,6 +29,11 @@ def allowed_file(filename):
 def hello_world():
   print("hello")
   return jsonify(message="Hello World!")
+
+@app.route('/hello/echo')
+def hello_echo():
+  msg = request.args.get("msg")
+  return msg, 200
 
 @app.route('/random')
 def random_data():
@@ -113,7 +121,56 @@ def upload_csv():
 
 @app.route('/uploads/<filename>')
 def uploaded_file(filename):
-    return send_from_directory(app.config['UPLOAD_FOLDER'], filename)
+  return send_from_directory(app.config['UPLOAD_FOLDER'], filename)
+
+@app.route('/builtin/list')
+def builtin_list():
+  available=["emotions"]
+  return ujson.dumps(available), 200
+
+@app.route('/builtin/load')
+def builtin_load():
+  dataset_name=request.args.get("dataset")
+  # load dataset and transform to pandas dataframe
+  X, y, feature_names, label_names = load_dataset(dataset_name, 'test')
+  df=pd.DataFrame.sparse.from_spmatrix(X)
+  df.columns=list(map(lambda x: x[0], feature_names))
+  df["labels"]=pd.DataFrame.sparse.from_spmatrix(y).apply(lambda x: x.to_numpy(),axis=1)
+
+  # create statistic data
+  df_to_dense=df.select_dtypes(['number','Sparse[int]','Sparse[float]']).sparse.to_dense()
+  df1=pd.DataFrame(data=pd.concat([
+  df_to_dense.min(), df_to_dense.max(),
+  df_to_dense.median(), df.mean(),
+  df_to_dense.std(), df_to_dense.var()],axis=1))
+  df1.columns=["min", "max", "median","mean","std","var"]
+  df1.to_json(orient="index")
+
+  # generate output
+  result_decoded = ujson.loads(df.to_json(orient="table"))
+  result_decoded["stat"] = ujson.loads(df1.to_json(orient="index"))
+  result_decoded["labels_count"] = ujson.loads(pd.Series(np.sum(df["labels"],axis=0)).to_json(orient="records"))
+  result_decoded["labels_name"] = list(map(lambda x: x[0], label_names))
+  result_decoded["features_name"] = [{"feature": x[0], "type": x[1]} for x in feature_names]
+
+  return ujson.dumps(result_decoded), 200
+
+@app.route('/builtin/predict')
+def builtin_predict():
+  dataset_name=request.args.get("dataset")
+
+  # load training and testing set
+  X_train, y_train, feature_names, label_names = load_dataset(dataset_name, 'train')
+  X_test, y_test, _, _ = load_dataset(dataset_name, 'test')
+
+  # create classifier
+  clf = BinaryRelevance(classifier=SVC(probability=True), require_dense=None)
+  clf.fit(X_train, y_train)
+
+  predict_proba = clf.predict_proba(X_test)
+
+  return ujson.dumps(predict_proba.todense().tolist())
+
 
 if __name__ == "__main__":
   app.run()
