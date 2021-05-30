@@ -33,6 +33,7 @@ def hello_world():
 @app.route('/hello/echo')
 def hello_echo():
   msg = request.args.get("msg")
+  print("Just received: ", msg)
   return msg, 200
 
 @app.route('/random')
