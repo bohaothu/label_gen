@@ -1,0 +1,262 @@
+<template>
+  <div>
+    <v-container fluid>
+      <v-row align="center" justify="space-between" style="height: 90vh">
+        <v-col cols="12" md="8" class="fill-height d-flex flex-column">
+          <v-card outlined class="mx-auto" style="height: 100%; width: 100%;">
+            <v-card-text class="fill-height d-flex align-center justify-center rounded">
+              <v-progress-circular v-if="!option.series[0].data.length" class="preloader" value="10"></v-progress-circular>
+              <v-chart v-if="option.series[0].data.length" style="height: 100%; width: 100%;" :option="option" autoresize/>
+            </v-card-text>
+          </v-card>
+        </v-col>
+        <v-col class="fill-height d-flex flex-column">
+          <v-row>
+            <v-col cols="6" md="12">
+              <v-card outlined class="px-4 pb-4 mx-auto fill-height" style="height: 360px">
+                <v-card-title class="px-0">Filters</v-card-title>
+                <v-card-text class="px-0 pb-0 mb-0" style="overflow-y: scroll; height: 216px">
+                  <v-row v-for="(item, idx) in labelFilters" :key="item.key" dense>
+                    <v-col cols="10">
+                      <v-dialog v-model="toggle.editingDialog" width="960">
+                    <template v-slot:activator="{ on, attrs }">
+                      <v-btn color="warning" block depressed outlined v-bind="attrs" v-on="on">{{ item.name }}</v-btn>
+                    </template>
+                  <v-card class="px-4 pb-2">
+                    <v-card-title class="pl-2 pb-4">Edit filter</v-card-title>
+                    <v-card-text class="pl-2">
+                      <v-row v-for="(condition, idx) in getFilter(item.key)" :key="condition.key">
+                        <v-col cols="3" class="pb-0">
+                          <v-select v-model="condition.field" :items="filterAcceptedMethods.field" style="width: 100%" dense outlined></v-select>
+                        </v-col>
+                        <v-col cols="3" class="pb-0">
+                          <v-select v-model="condition.operator" :items="filterAcceptedMethods.operator[condition.field]" style="width: 100%" dense outlined></v-select>
+                        </v-col>
+                        <v-col cols="5" class="pb-0">
+                          <v-select v-model="condition.value" :items="filterAcceptedMethods.value[condition.field]" style="width: 100%" chips multiple dense outlined></v-select>
+                        </v-col>
+                        <v-col cols="1" class="pb-0">
+                          <v-btn v-if="idx < getFilter(item.key).length - 1" color="secondary" @click="removeEditCondition(item.key,idx)"><v-icon>mdi-minus</v-icon></v-btn>
+                          <v-btn v-if="idx == getFilter(item.key).length - 1" color="primary" @click="addEditCondition(item.key)"><v-icon>mdi-plus</v-icon></v-btn>
+                        </v-col>
+                      </v-row>
+                    </v-card-text>
+                    <v-card-action>
+                      <!--<v-btn color="primary" @click="saveEditedFilter">Save Filter</v-btn>-->
+                    </v-card-action>
+                  </v-card>
+                </v-dialog>
+                    </v-col>
+                    <v-col cols="2">
+                      <v-btn text @click="removeFilter(idx)"><v-icon>mdi-delete-forever</v-icon></v-btn>
+                    </v-col>
+                  </v-row>
+                </v-card-text>
+                <v-card-actions class="justify-center" style="position: absolute; left: 50%; top: 88%; transform: translate(-50%,-50%);">
+                  <v-dialog v-model="toggle.filterDialog" width="960">
+                    <template v-slot:activator="{ on, attrs }">
+                      <v-btn color="primary" outlined v-bind="attrs" v-on="on">Add Filter</v-btn>
+                    </template>
+                  <v-card class="px-4 pb-6">
+                    <v-card-title class="pl-2 pb-4">Add new filter</v-card-title>
+                    <v-card-text class="pl-2">
+                      <v-row v-for="(condition, idx) in newFilter" :key="condition.key">
+                        <v-col cols="3" class="pb-0">
+                          <v-select v-model="condition.field" :items="filterAcceptedMethods.field" style="width: 100%" dense outlined></v-select>
+                        </v-col>
+                        <v-col cols="3" class="pb-0">
+                          <v-select v-model="condition.operator" :items="filterAcceptedMethods.operator[condition.field]" style="width: 100%" dense outlined></v-select>
+                        </v-col>
+                        <v-col cols="5" class="pb-0">
+                          <v-select v-model="condition.value" :items="filterAcceptedMethods.value[condition.field]" style="width: 100%" chips multiple dense outlined></v-select>
+                        </v-col>
+                        <v-col cols="1" class="pb-0">
+                          <v-btn v-if="idx < newFilter.length - 1" color="secondary" @click="removeNewCondition(idx)"><v-icon>mdi-minus</v-icon></v-btn>
+                          <v-btn v-if="idx == newFilter.length - 1" color="primary" @click="addNewCondition"><v-icon>mdi-plus</v-icon></v-btn>
+                        </v-col>
+                      </v-row>
+                    </v-card-text>
+                    <v-card-action>
+                      <v-btn color="primary" :disabled="checkNewFilterEmptyValues" @click="createFilter">Create Filter</v-btn>
+                    </v-card-action>
+                  </v-card>
+                </v-dialog>
+              </v-card-actions>
+            </v-card></v-col>
+            <v-col cols="6" md="12">
+              <v-card outlined class="px-4 pb-4 fill-height" style="height: 280px; width: 100%">
+                <v-card-title class="px-0">Filtered Results</v-card-title>
+                <v-card-text>
+                  <p v-for="(item, idx) in searchData" :key="item.key" dense>
+                    {{ item.filter.name }} {{ item.filterResult.length }}
+                  </p>
+                </v-card-text>
+              </v-card>
+            </v-col>
+          </v-row>
+        </v-col>
+      </v-row>
+    </v-container>
+  </div>
+</template>
+
+<script>
+import { use } from "echarts/core";
+import { CanvasRenderer } from "echarts/renderers";
+import { ScatterChart } from 'echarts/charts'
+import { TitleComponent, TooltipComponent, LegendComponent } from "echarts/components";
+import VChart, { THEME_KEY } from "vue-echarts";
+
+use([
+  CanvasRenderer,
+  ScatterChart,
+  TitleComponent,
+  TooltipComponent,
+  LegendComponent
+]);
+
+export default {
+  name: 'WordCloud',
+  components: {
+    VChart
+  },
+  provide: {
+    [THEME_KEY]: "light"
+  },
+  mounted() {
+    this.option.series[0].data = this.$store.state.df.tsne;
+    this.newFilter = [{ field: "Labels", operator: "Contain", value: [], key: this.$store.state.helper.guid()}];
+  },
+  data() {
+    return {
+      toggle: {
+        filterDialog: false,
+        editorDialog: false
+      },
+      filterAcceptedMethods: {
+        field: ["Labels"],
+        operator: { Labels: ["Contain","Not Contain"]},
+        value: { Labels: this.$store.state.df.labels }
+      },
+      newFilter:[],
+      labelFilters: [],
+      option: {
+        xAxis: {
+          type: 'value'
+        },
+        yAxis: {
+          type: 'value'
+        },
+        tooltip: {
+          position: 'top'
+        },
+        series: [
+          {
+            symbolSize: 10,
+            data: [],
+            type: 'scatter'
+          }
+        ],
+        color:  [
+          '#bbb', '#37A2DA', '#e06343', '#37a354', '#b55dba', '#b5bd48', '#8378EA', '#96BFFF'
+        ]
+      }
+    }
+  },
+  methods: {
+    removeNewCondition(index){
+      const key_to_nemove = this.newFilter[index].key;
+      this.newFilter = this.newFilter.filter(x => x.key != key_to_nemove)
+    },
+    addNewCondition() {
+      this.newFilter.push({ field: "", operator: "", value: [], key: this.$store.state.helper.guid()});
+    },
+    removeEditCondition(key,index){
+      const filter_index_to_edit = this.labelFilters.findIndex(x => x.key === key);
+      const filter_to_edit = this.labelFilters[filter_index_to_edit].conditions;
+      const key_to_remove = filter_to_edit[index].key;
+      this.labelFilters[filter_index_to_edit].conditions = this.labelFilters[filter_index_to_edit].conditions.filter(x => x.key !== key_to_remove);
+    },
+    addEditCondition(key) {
+      const filter_to_edit = this.labelFilters.filter(x => x.key === key)[0].conditions;
+      filter_to_edit.push({field: "Labels", operator: "Contain", value: [], key: this.$store.state.helper.guid()});
+    },
+    createFilter() {
+      let filter_name = this.newFilter[0].operator + " \"" + this.newFilter[0].value[0] + "\""
+      this.labelFilters.push({name: filter_name, conditions: this.newFilter, key: this.$store.state.helper.guid()});
+      this.newFilter = [{ field: "Labels", operator: "Contain", value: [], key: this.$store.state.helper.guid()}];
+      this.toggle.filterDialog = false;
+      //add new point to chart
+      let wanted_tsne_points = [];
+      this.searchData[this.labelFilters.length - 1].filterResult.forEach( x => wanted_tsne_points.push(this.$store.state.df.tsne[x]) );
+      this.option.series.push({type: "scatter", data: wanted_tsne_points})
+    },
+    removeFilter(index) {
+      const key_to_nemove = this.labelFilters[index].key;
+      this.labelFilters = this.labelFilters.filter(x => x.key != key_to_nemove)
+    },
+    getFilter(key) {
+      return this.labelFilters.filter(x => x.key === key)[0].conditions;
+    }
+  },
+  computed: {
+    checkNewFilterEmptyValues(){
+      return this.newFilter.every(x => x.value.length === 0)
+    },
+    searchData() {
+      let z=[];
+      const that = this;
+      const filterMethod = {
+        Labels: {
+          Contain(val) {
+            let wanted_item = [];
+            for(let label of val){
+              let label_index = that.$store.state.df.labels.indexOf(label);
+              that.$store.state.df.items.filter(x => x.labels[label_index] === 1)
+              .forEach(y => wanted_item.includes(y.index)? void(0):wanted_item.push(y.index));
+            }
+            return wanted_item;
+          },
+          NotContain(val) {
+            let wanted_item = [];
+            //let wanted_tsne_points = [];
+            for(let label of val){
+              let label_index = that.$store.state.df.labels.indexOf(label);
+              that.$store.state.df.items.filter(x => x.labels[label_index] === 0)
+              .forEach(y => wanted_item.includes(y.index)? void(0):wanted_item.push(y.index));
+              //wanted_item.forEach(wanted_tsne_points.push(this.$store.state.df));
+            }
+            return wanted_item;
+          }
+        }
+      };
+      for(let filter of this.labelFilters){
+        let wanted_index=[];
+        for(let condition of filter.conditions){
+          filterMethod[condition.field][condition.operator.replace(/\s/g, '')](condition.value)
+          .forEach(y => wanted_index.includes(y)? void(0):wanted_index.push(y))
+        }
+        z.push({filter: filter, filterResult: wanted_index, key: this.$store.state.helper.guid()});
+      }
+      return z;
+    }
+  }
+}
+</script>
+
+<style scoped>
+.preloader {
+  animation-name: spin;
+  animation-duration: 1500ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+@keyframes spin {
+    from {
+        transform:rotate(0deg);
+    }
+    to {
+        transform:rotate(360deg);
+    }
+}
+</style>

@@ -12,6 +12,7 @@ from helpers import gen_matrix, gen_label
 from skmultilearn.dataset import load_dataset
 from skmultilearn.problem_transform import BinaryRelevance
 from sklearn.svm import SVC
+from sklearn.manifold import TSNE
 
 f=Faker(locale="zh_CN")
 
@@ -133,10 +134,10 @@ def builtin_list():
 def builtin_load():
   dataset_name=request.args.get("dataset")
   # load dataset and transform to pandas dataframe
-  X, y, feature_names, label_names = load_dataset(dataset_name, 'test')
-  df=pd.DataFrame.sparse.from_spmatrix(X)
+  X_train, y_train, feature_names, label_names = load_dataset(dataset_name, 'train')
+  df=pd.DataFrame.sparse.from_spmatrix(X_train)
   df.columns=list(map(lambda x: x[0], feature_names))
-  df["labels"]=pd.DataFrame.sparse.from_spmatrix(y).apply(lambda x: x.to_numpy(),axis=1)
+  df["labels"]=pd.DataFrame.sparse.from_spmatrix(y_train).apply(lambda x: x.to_numpy(),axis=1)
 
   # create statistic data
   df_to_dense=df.select_dtypes(['number','Sparse[int]','Sparse[float]']).sparse.to_dense()
@@ -153,6 +154,14 @@ def builtin_load():
   result_decoded["labels_count"] = ujson.loads(pd.Series(np.sum(df["labels"],axis=0)).to_json(orient="records"))
   result_decoded["labels_name"] = list(map(lambda x: x[0], label_names))
   result_decoded["features_name"] = [{"feature": x[0], "type": x[1]} for x in feature_names]
+
+  #tsne axis
+  data_set = pd.DataFrame(y_train.todense(),columns=[label_names[x][0] for x in range(y_train.shape[1])])
+  t_sne = TSNE()
+  t_sne.fit(data_set)
+  t_sne_df = pd.DataFrame(t_sne.embedding_, index=data_set.index)
+
+  result_decoded["tsne"] = ujson.loads(t_sne_df.to_json(orient="values"))
 
   return ujson.dumps(result_decoded), 200
 

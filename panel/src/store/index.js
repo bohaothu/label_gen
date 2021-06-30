@@ -24,7 +24,8 @@ export default new Vuex.Store({
       items: [],
       labels: [], // labels_name
       labels_count: [],
-      suggestion: []
+      suggestion: [],
+      tsne: []
     },
     stat: {
       headers: [{text: "Feature", value: "feature_name"}, {text:"最小值", value: "min"},
@@ -40,6 +41,11 @@ export default new Vuex.Store({
       headers: [],
       labels: [],
       builtInDataset: ""
+    },
+    helper: {
+      guid() {
+        return  Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15);
+      }
     }
   },
   mutations: {
@@ -86,6 +92,7 @@ export default new Vuex.Store({
         context.commit("addToState", {table: "stat", field: "items", value: helperMethods.transStat(x.stat)})
         context.commit("addToState", {table: "df", field: "labels_count", value: x.labels_count})
         context.commit("addToState",{table: "df", field: "labels", value: x.labels_name})
+        context.commit("addToState",{table: "df", field: "tsne", value: x.tsne})
         context.commit("addToState",{table: "mask", field: "builtInDataset", value: payload.dataset})
         return true
       })
