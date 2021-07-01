@@ -13,14 +13,14 @@
         <v-col class="fill-height d-flex flex-column">
           <v-row>
             <v-col cols="6" md="12">
-              <v-card outlined class="px-4 pb-4 mx-auto fill-height" style="height: 360px">
+              <v-card outlined class="px-4 pb-4 mx-auto fill-height" style="height: 320px">
                 <v-card-title class="px-0">Filters</v-card-title>
-                <v-card-text class="px-0 pb-0 mb-0" style="overflow-y: scroll; height: 216px">
+                <v-card-text class="px-0 pb-0 mb-0" style="overflow-y: scroll; height: 180px">
                   <v-row v-for="(item, idx) in labelFilters" :key="item.key" dense>
                     <v-col cols="10">
                       <v-dialog v-model="toggle.editingDialog" width="960">
                     <template v-slot:activator="{ on, attrs }">
-                      <v-btn color="warning" block depressed outlined v-bind="attrs" v-on="on">{{ item.name }}</v-btn>
+                      <v-btn color="warning" style="width: 100%" small block depressed outlined v-bind="attrs" v-on="on">{{ item.name }}</v-btn>
                     </template>
                   <v-card class="px-4 pb-2">
                     <v-card-title class="pl-2 pb-4">Edit filter</v-card-title>
@@ -48,7 +48,7 @@
                 </v-dialog>
                     </v-col>
                     <v-col cols="2">
-                      <v-btn text @click="removeFilter(idx)"><v-icon>mdi-delete-forever</v-icon></v-btn>
+                      <v-btn small text @click="removeFilter(idx)"><v-icon>mdi-delete-forever</v-icon></v-btn>
                     </v-col>
                   </v-row>
                 </v-card-text>
@@ -84,9 +84,9 @@
               </v-card-actions>
             </v-card></v-col>
             <v-col cols="6" md="12">
-              <v-card outlined class="px-4 pb-4 fill-height" style="height: 280px; width: 100%">
+              <v-card outlined class="px-4 pb-4 mx-auto fill-height" style="height: 320px; width: 100%">
                 <v-card-title class="px-0">Filtered Results</v-card-title>
-                <v-card-text>
+                <v-card-text class="px-0">
                   <p v-for="(item, idx) in searchData" :key="item.key" dense>
                     {{ item.filter.name }} {{ item.filterResult.length }}
                   </p>
@@ -165,8 +165,8 @@ export default {
   },
   methods: {
     removeNewCondition(index){
-      const key_to_nemove = this.newFilter[index].key;
-      this.newFilter = this.newFilter.filter(x => x.key != key_to_nemove)
+      const key_to_remove = this.newFilter[index].key;
+      this.newFilter = this.newFilter.filter(x => x.key != key_to_remove)
     },
     addNewCondition() {
       this.newFilter.push({ field: "", operator: "", value: [], key: this.$store.state.helper.guid()});
@@ -182,18 +182,32 @@ export default {
       filter_to_edit.push({field: "Labels", operator: "Contain", value: [], key: this.$store.state.helper.guid()});
     },
     createFilter() {
-      let filter_name = this.newFilter[0].operator + " \"" + this.newFilter[0].value[0] + "\""
-      this.labelFilters.push({name: filter_name, conditions: this.newFilter, key: this.$store.state.helper.guid()});
+      // push filter to labelFilters array
+      const filter_id = this.$store.state.helper.guid()
+      const filter_name = this.newFilter[0].operator + " \"" + this.newFilter[0].value[0] + "\""
+      this.labelFilters.push({name: filter_name, conditions: this.newFilter, key: filter_id});
+      //reset new filter
       this.newFilter = [{ field: "Labels", operator: "Contain", value: [], key: this.$store.state.helper.guid()}];
       this.toggle.filterDialog = false;
       //add new point to chart
       let wanted_tsne_points = [];
       this.searchData[this.labelFilters.length - 1].filterResult.forEach( x => wanted_tsne_points.push(this.$store.state.df.tsne[x]) );
-      this.option.series.push({type: "scatter", data: wanted_tsne_points})
+      const next_chart_idx = this.option.series.findIndex(x => x.filter_key === "toberemove");
+      console.log(next_chart_idx);
+      if(next_chart_idx !== -1){
+        this.option.series[next_chart_idx].data = wanted_tsne_points;
+        this.option.series[next_chart_idx].filter_key = filter_id;
+      }else{
+        this.option.series.push({type: "scatter", data: wanted_tsne_points, filter_key: filter_id});
+      }
     },
     removeFilter(index) {
-      const key_to_nemove = this.labelFilters[index].key;
-      this.labelFilters = this.labelFilters.filter(x => x.key != key_to_nemove)
+      const key_to_remove = this.labelFilters[index].key;
+      const chart_idx_to_remove = this.option.series.findIndex(x => x.filter_key === key_to_remove);
+      this.labelFilters = this.labelFilters.filter(x => x.key !== key_to_remove);
+      // remove filter result from chart
+      this.option.series[chart_idx_to_remove].data = [];
+      this.option.series[chart_idx_to_remove].filter_key = "toberemove";
     },
     getFilter(key) {
       return this.labelFilters.filter(x => x.key === key)[0].conditions;
