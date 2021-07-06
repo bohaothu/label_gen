@@ -20,7 +20,12 @@
                     <v-col cols="10">
                       <v-dialog v-model="toggle.editingDialog" width="960">
                     <template v-slot:activator="{ on, attrs }">
-                      <v-btn color="warning" style="width: 100%" small block depressed outlined v-bind="attrs" v-on="on">{{ item.name }}</v-btn>
+                      <v-btn color="warning" style="width: 100%" small block depressed outlined v-bind="attrs" v-on="on">
+                        <div class="d-flex align-center" style="margin-left: -12px; width:100%; ">
+                        <span :style="{'color': getColor(idx),'margin-top': '-0.2rem', 'font-size': '2rem'}">&bull;</span>
+                        <span>{{ item.name }}</span>
+                        </div>
+                      </v-btn>
                     </template>
                   <v-card class="px-4 pb-2">
                     <v-card-title class="pl-2 pb-4">Edit filter</v-card-title>
@@ -211,6 +216,11 @@ export default {
     },
     getFilter(key) {
       return this.labelFilters.filter(x => x.key === key)[0].conditions;
+    },
+    getColor(index) {
+      const key_to_find = this.labelFilters[index].key;
+      const chart_idx_to_find = this.option.series.findIndex(x => x.filter_key === key_to_find);
+      return this.option.color[chart_idx_to_find];
     }
   },
   computed: {
