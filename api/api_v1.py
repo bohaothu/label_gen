@@ -13,6 +13,7 @@ from skmultilearn.dataset import load_dataset
 from skmultilearn.problem_transform import BinaryRelevance
 from sklearn.svm import SVC
 from sklearn.manifold import TSNE
+from sklearn.cluster import KMeans
 
 f=Faker(locale="zh_CN")
 
@@ -164,6 +165,26 @@ def builtin_load():
   result_decoded["tsne"] = ujson.loads(t_sne_df.to_json(orient="values"))
 
   return ujson.dumps(result_decoded), 200
+
+@app.route('/builtin/cluster')
+def builtin_cluster():
+  dataset_name=request.args.get("dataset")
+  cluster_num=int(request.args.get("num",default="4"))
+
+  X_train, y_train, _, label_names = load_dataset(dataset_name, 'train')
+  data_set = pd.DataFrame(y_train.todense(),columns=[label_names[x][0] for x in range(y_train.shape[1])])
+
+  estimator = KMeans(n_clusters=cluster_num)
+  estimator.fit(data_set)
+
+  cluster_result = [[] for _ in range(cluster_num)]
+
+  for idx in range(len(estimator.labels_)):
+    current_bucket = int(estimator.labels_[idx])
+    cluster_result[current_bucket].append(idx)
+
+  return ujson.dumps({"cluster_result": cluster_result, "cluster_num": cluster_num, "method": "kmeans"}), 200
+
 
 @app.route('/builtin/predict')
 def builtin_predict():

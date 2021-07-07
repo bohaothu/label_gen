@@ -42,13 +42,11 @@
       <v-snackbar v-model="snack.success">{{snack.msg}}</v-snackbar>
     </v-row>
     </v-container>
-    <GlobalSnackbar/>
   </div>
 </template>
 
 <script>
 import axios from 'axios'
-import GlobalSnackbar from '@/components/GlobalSnackbar'
 
 export default {
   name: 'Welcome',
@@ -86,8 +84,12 @@ export default {
     },
     importBuiltIn() {
       if(this.builtInListSelect){
-        this.$store.dispatch('resetMask')
-        this.$store.dispatch('importDefaultDataset',{dataset: this.builtInListSelect})
+        let startTime = Date.now();
+        this.$store.dispatch('resetMask');
+        this.$store.dispatch('importDefaultDataset',{dataset: this.builtInListSelect});
+        let elaspedTime = Date.now() - startTime;
+        this.snack.success = this.$store.state.df.items.length? true:false;
+        this.snack.msg = "载入 "+this.builtInListSelect+" 成功，用时 "+ elaspedTime + " ms";
       }else{
         alert("请先选择数据集！")
       }
@@ -101,9 +103,6 @@ export default {
         })
       }
     }
-  },
-  components: {
-    GlobalSnackbar
   }
 }
 </script>

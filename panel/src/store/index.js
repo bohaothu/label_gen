@@ -42,7 +42,12 @@ export default new Vuex.Store({
       labels: [],
       builtInDataset: ""
     },
+    builtin: {
+      isBuiltIn: false,
+      dataset: ""
+    },
     helper: {
+      apiAddr: "http://localhost:5000",
       guid() {
         return  Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15);
       }
@@ -83,23 +88,21 @@ export default new Vuex.Store({
       })
     },
     importDefaultDataset(context, payload){
-      let startTime = Date.now()
       return axios.get(apiAddr+"/builtin/load", {params: {dataset: payload.dataset}})
       .then( res => res.data )
       .then( x => {
-        context.commit("addToState", {table: "df", field: "fields", value: x.schema.fields })
-        context.commit("addToState", {table: "df", field: "items", value: x.data})
-        context.commit("addToState", {table: "stat", field: "items", value: helperMethods.transStat(x.stat)})
-        context.commit("addToState", {table: "df", field: "labels_count", value: x.labels_count})
-        context.commit("addToState",{table: "df", field: "labels", value: x.labels_name})
-        context.commit("addToState",{table: "df", field: "tsne", value: x.tsne})
-        context.commit("addToState",{table: "mask", field: "builtInDataset", value: payload.dataset})
+        context.commit("addToState", {table: "df", field: "fields", value: x.schema.fields });
+        context.commit("addToState", {table: "df", field: "items", value: x.data});
+        context.commit("addToState", {table: "stat", field: "items", value: helperMethods.transStat(x.stat)});
+        context.commit("addToState", {table: "df", field: "labels_count", value: x.labels_count});
+        context.commit("addToState",{table: "df", field: "labels", value: x.labels_name});
+        context.commit("addToState",{table: "df", field: "tsne", value: x.tsne});
+        context.commit("addToState",{table: "mask", field: "builtInDataset", value: payload.dataset});
+        context.commit("addToState",{table: "builtin", field: "isBuiltIn", value: true});
+        context.commit("addToState",{table: "builtin", field: "dataset", value: payload.dataset});
         return true
       })
-      .then(y => {
-        let elaspedTime = Date.now() - startTime
-        if(y) context.commit("showSnackbar",{msg: "载入 "+payload.dataset+" 成功，用时 "+ elaspedTime + " ms"})
-      }).catch(err => {
+      .catch(err => {
         console.error(err)
         return false
       })

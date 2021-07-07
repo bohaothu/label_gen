@@ -108,9 +108,10 @@
 <script>
 import { use } from "echarts/core";
 import { CanvasRenderer } from "echarts/renderers";
-import { ScatterChart } from 'echarts/charts'
+import { ScatterChart } from "echarts/charts";
 import { TitleComponent, TooltipComponent, LegendComponent } from "echarts/components";
 import VChart, { THEME_KEY } from "vue-echarts";
+import axios from 'axios';
 
 use([
   CanvasRenderer,
@@ -131,6 +132,25 @@ export default {
   mounted() {
     this.option.series[0].data = this.$store.state.df.tsne;
     this.newFilter = [{ field: "Labels", operator: "Contain", value: [], key: this.$store.state.helper.guid()}];
+    if(this.$store.state.builtin.isBuiltIn){
+      axios.get(this.$store.state.helper.apiAddr + "/builtin/cluster?dataset=" + this.$store.state.builtin.dataset)
+      .then(res => res.data)
+      .then(x => {
+        const clusterResult = x.cluster_result;
+        let i = 1;
+        for(let item of clusterResult){
+          let filter_id = this.$store.state.helper.guid();
+          let clusterCondition = [{field: "Cluster", operator: "Kmeans", value: item, key: this.$store.state.helper.guid()}];
+          this.labelFilters.push({name: "Cluster " + i, conditions: clusterCondition, key: filter_id});
+          let wanted_tsne_points = [];
+          item.forEach( x => wanted_tsne_points.push(this.$store.state.df.tsne[x]) );
+          this.option.series.push({type: "scatter", data: wanted_tsne_points, filter_key: filter_id});
+          i += 1;
+        }
+      })
+      .catch(err => console.error(err))
+    }
+    console.log(this.searchData)
   },
   data() {
     return {
@@ -162,9 +182,7 @@ export default {
             type: 'scatter'
           }
         ],
-        color:  [
-          '#bbb', '#37A2DA', '#e06343', '#37a354', '#b55dba', '#b5bd48', '#8378EA', '#96BFFF'
-        ]
+        color:  ['#bbb','#a1c9f4', '#ffb482', '#8de5a1', '#ff9f9b', '#d0bbff', '#debb9b', '#fab0e4', '#cfcfcf', '#fffea3', '#b9f2f0']
       }
     }
   },
@@ -196,9 +214,11 @@ export default {
       this.toggle.filterDialog = false;
       //add new point to chart
       let wanted_tsne_points = [];
+      console.log(this.searchData[this.labelFilters.length - 1].filterResult);
       this.searchData[this.labelFilters.length - 1].filterResult.forEach( x => wanted_tsne_points.push(this.$store.state.df.tsne[x]) );
+      //console.log(wanted_tsne_points);
       const next_chart_idx = this.option.series.findIndex(x => x.filter_key === "toberemove");
-      console.log(next_chart_idx);
+      //console.log(next_chart_idx);
       if(next_chart_idx !== -1){
         this.option.series[next_chart_idx].data = wanted_tsne_points;
         this.option.series[next_chart_idx].filter_key = filter_id;
@@ -251,6 +271,11 @@ export default {
               //wanted_item.forEach(wanted_tsne_points.push(this.$store.state.df));
             }
             return wanted_item;
+          }
+        },
+        Cluster: {
+          Kmeans(val){
+            return val;
           }
         }
       };
