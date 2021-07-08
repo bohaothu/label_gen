@@ -3,7 +3,7 @@ import VueRouter from 'vue-router'
 import ViewData from '../views/ViewData.vue'
 import Stat from '../views/Stat.vue'
 import Welcome from '../views/Welcome.vue'
-import WordCloud from '../views/LabelSpace.vue'
+import LabelSpace from '../views/LabelSpace.vue'
 
 Vue.use(VueRouter)
 
@@ -26,7 +26,7 @@ const routes = [
   {
     path: '/labelspace',
     name: 'LabelSpace',
-    component: WordCloud
+    component: LabelSpace
   },
   {
     path: '/about',

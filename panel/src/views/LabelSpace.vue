@@ -5,7 +5,7 @@
         <v-col cols="12" md="8" class="fill-height d-flex flex-column">
           <v-card outlined class="mx-auto" style="height: 100%; width: 100%;">
             <v-card-text class="fill-height d-flex align-center justify-center rounded">
-              <v-progress-circular v-if="!option.series[0].data.length" class="preloader" value="10"></v-progress-circular>
+              <v-progress-circular v-if="!option.series[0].data.length" indeterminate></v-progress-circular>
               <v-chart v-if="option.series[0].data.length" style="height: 100%; width: 100%;" :option="option" autoresize/>
             </v-card-text>
           </v-card>
@@ -32,13 +32,13 @@
                     <v-card-text class="pl-2">
                       <v-row v-for="(condition, idx) in getFilter(item.key)" :key="condition.key">
                         <v-col cols="3" class="pb-0">
-                          <v-select v-model="condition.field" :items="filterAcceptedMethods.field" style="width: 100%" dense outlined></v-select>
+                          <v-select v-model="condition.field" :items="filterAllMethods.field" style="width: 100%" dense outlined></v-select>
                         </v-col>
                         <v-col cols="3" class="pb-0">
-                          <v-select v-model="condition.operator" :items="filterAcceptedMethods.operator[condition.field]" style="width: 100%" dense outlined></v-select>
+                          <v-select v-model="condition.operator" :items="filterAllMethods.operator[condition.field]" style="width: 100%" dense outlined></v-select>
                         </v-col>
                         <v-col cols="5" class="pb-0">
-                          <v-select v-model="condition.value" :items="filterAcceptedMethods.value[condition.field]" style="width: 100%" chips multiple dense outlined></v-select>
+                          <v-select v-model="condition.value" :items="filterAllMethods.value[condition.field]" :disabled="!filterAllMethods.value[condition.field]" style="width: 100%" chips multiple dense outlined></v-select>
                         </v-col>
                         <v-col cols="1" class="pb-0">
                           <v-btn v-if="idx < getFilter(item.key).length - 1" color="secondary" @click="removeEditCondition(item.key,idx)"><v-icon>mdi-minus</v-icon></v-btn>
@@ -122,7 +122,7 @@ use([
 ]);
 
 export default {
-  name: 'WordCloud',
+  name: 'LabelSpace',
   components: {
     VChart
   },
@@ -160,26 +160,39 @@ export default {
       },
       filterAcceptedMethods: {
         field: ["Labels"],
-        operator: { Labels: ["Contain","Not Contain"]},
+        operator: { Labels: ["Contain","Not Contain"] },
         value: { Labels: this.$store.state.df.labels }
+      },
+      filterAllMethods: {
+        field: ["Labels","Cluster"],
+        operator: { Labels: ["Contain","Not Contain"], Cluster: ["Kmeans"] },
+        value: { Labels: this.$store.state.df.labels, Cluster: false }
       },
       newFilter:[],
       labelFilters: [],
       option: {
         xAxis: {
-          type: 'value'
+          type: "value"
         },
         yAxis: {
-          type: 'value'
+          type: "value"
         },
         tooltip: {
-          position: 'top'
+          trigger: "axis",
+          position: "top"/*,
+          formatter: (params) => {
+            return `
+                Tooltip: <br />
+                ${params[0].seriesName}: ${params[0].value}<br />
+                ${params[1].seriesName}: ${params[1].value}
+                `;
+          },*/
         },
         series: [
           {
             symbolSize: 10,
             data: [],
-            type: 'scatter'
+            type: "scatter"
           }
         ],
         color:  ['#bbb','#a1c9f4', '#ffb482', '#8de5a1', '#ff9f9b', '#d0bbff', '#debb9b', '#fab0e4', '#cfcfcf', '#fffea3', '#b9f2f0']
@@ -294,18 +307,4 @@ export default {
 </script>
 
 <style scoped>
-.preloader {
-  animation-name: spin;
-  animation-duration: 1500ms;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
-}
-@keyframes spin {
-    from {
-        transform:rotate(0deg);
-    }
-    to {
-        transform:rotate(360deg);
-    }
-}
 </style>

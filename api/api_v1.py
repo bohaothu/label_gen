@@ -128,7 +128,7 @@ def uploaded_file(filename):
 
 @app.route('/builtin/list')
 def builtin_list():
-  available=sorted(["emotions","birds"])
+  available=sorted(["emotions","birds","medical"])
   return ujson.dumps(available), 200
 
 @app.route('/builtin/load')
@@ -204,4 +204,4 @@ def builtin_predict():
 
 
 if __name__ == "__main__":
-  app.run()
+  app.run(debug=True)
