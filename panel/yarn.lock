@@ -1359,12 +1359,12 @@
   optionalDependencies:
     prettier "^1.18.2"
 
-"@vue/composition-api@^1.0.0-rc.12":
-  version "1.0.0-rc.12"
-  resolved "https://registry.nlark.com/@vue/composition-api/download/@vue/composition-api-1.0.0-rc.12.tgz#30a122ee74ba322310efd15f1b33ee5822f4bbdc"
-  integrity sha1-MKEi7nS6MiMQ79FfGzPuWCL0u9w=
+"@vue/composition-api@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.nlark.com/@vue/composition-api/download/@vue/composition-api-1.0.0.tgz?cache=0&sync_timestamp=1626329153462&other_urls=https%3A%2F%2Fregistry.nlark.com%2F%40vue%2Fcomposition-api%2Fdownload%2F%40vue%2Fcomposition-api-1.0.0.tgz#d0f73081676a2907d4421144621185329df8c5f5"
+  integrity sha1-0PcwgWdqKQfUQhFEYhGFMp34xfU=
   dependencies:
-    tslib "^2.2.0"
+    tslib "^2.3.0"
 
 "@vue/preload-webpack-plugin@^1.1.0":
   version "1.1.2"
@@ -7870,7 +7870,7 @@ tslib@^1.9.0:
   resolved "https://registry.npm.taobao.org/tslib/download/tslib-1.14.1.tgz#cf2d38bdc34a134bcaf1091c41f6619e2f672d00"
   integrity sha1-zy04vcNKE0vK8QkcQfZhni9nLQA=
 
-tslib@^2.2.0:
+tslib@^2.3.0:
   version "2.3.0"
   resolved "https://registry.nlark.com/tslib/download/tslib-2.3.0.tgz?cache=0&other_urls=https%3A%2F%2Fregistry.nlark.com%2Ftslib%2Fdownload%2Ftslib-2.3.0.tgz#803b8cdab3e12ba581a4ca41c8839bbb0dacb09e"
   integrity sha1-gDuM2rPhK6WBpMpByIObuw2ssJ4=

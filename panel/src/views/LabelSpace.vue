@@ -88,16 +88,16 @@
                   </v-row>
                 </v-card-text>
                 <v-card-actions class="justify-center" style="position: absolute; left: 50%; top: 88%; transform: translate(-50%,-50%);">
-                  
               </v-card-actions>
             </v-card></v-col>
             <v-col cols="6" md="12">
               <v-card outlined class="px-4 pb-4 mx-auto fill-height" style="width: 100%">
                 <v-card-title class="px-0">Filtered Results</v-card-title>
-                <v-card-text class="px-0">
-                  <p v-for="(item, idx) in searchData" :key="item.key" dense>
+                <v-card-text class="px-0" style="text-align: justify">
+                  {{ getCurrentPoint }}
+                  <!-- <p v-for="(item, idx) in searchData" :key="item.key" dense>
                     {{ item.filter.name }} {{ item.filterResult.length }}
-                  </p>
+                  </p> -->
                 </v-card-text>
               </v-card>
             </v-col>
@@ -159,7 +159,8 @@ export default {
               this.labelFilterNames[x] = [{name: filter_name, filter_id: filter_id}];
             }
             } );
-          this.option.series.push({type: "scatter", data: wanted_tsne_points, filter_key: filter_id});
+          this.option.series.push({name: filter_name, type: "scatter", data: wanted_tsne_points, filter_key: filter_id});
+          this.option.legend.data.push(filter_name);
         }
       })
       .catch(err => console.error(err))
@@ -192,12 +193,16 @@ export default {
         yAxis: {
           type: "value"
         },
+        legend: {
+          data: []
+        },
         tooltip: {
           trigger: "item",
           position: "top",
           formatter: (params) => {
             const filter_of_data = this.getFilterNames(params.data[2].df_index);
             const label_of_data = this.genLabelArr(params.data[2].df_index);
+            this.currentPoint = params.data[2].df_index;
             let tooltip_html="";
             if(filter_of_data.length){
               tooltip_html="Groups (NUM): </br>".replace("NUM",filter_of_data.length);
@@ -222,7 +227,8 @@ export default {
           }
         ],
         color:  ['#bbb','#a1c9f4', '#ffb482', '#8de5a1', '#ff9f9b', '#d0bbff', '#debb9b', '#fab0e4', '#cfcfcf', '#fffea3', '#b9f2f0']
-      }
+      },
+      currentPoint: -1
     }
   },
   methods: {
@@ -272,17 +278,22 @@ export default {
       if(next_chart_idx !== -1){
         this.option.series[next_chart_idx].data = wanted_tsne_points;
         this.option.series[next_chart_idx].filter_key = filter_id;
+        this.option.legend.data.push(filter_name);
+        console.log(this.option.legend);
       }else{
-        this.option.series.push({type: "scatter", data: [wanted_tsne_points], filter_key: filter_id});
+        this.option.series.push({name: filter_name, type: "scatter", data: [wanted_tsne_points], filter_key: filter_id});
       }
     },
     removeFilter(index) {
       const key_to_remove = this.labelFilters[index].key;
       const chart_idx_to_remove = this.option.series.findIndex(x => x.filter_key === key_to_remove);
-      this.labelFilters = this.labelFilters.filter(x => x.key !== key_to_remove);
+      // remove filter legend
+      this.option.legend.data = this.option.legend.data.filter(x => x != this.labelFilters[index].name);
       // remove filter result from chart
       this.option.series[chart_idx_to_remove].data = [];
       this.option.series[chart_idx_to_remove].filter_key = "toberemove";
+      // remove filter
+      this.labelFilters = this.labelFilters.filter(x => x.key !== key_to_remove);
     },
     getFilter(key) {
       return this.labelFilters.filter(x => x.key === key)[0].conditions;
@@ -306,10 +317,21 @@ export default {
     }
   },
   computed: {
+    getCurrentPoint(){
+      if(this.currentPoint >= 0){
+        const current_item = this.$store.state.df.items[this.currentPoint];
+        const excluded_keys = ["index","labels"];
+        const keys = Object.keys(current_item).filter(x => !excluded_keys.includes(x)).slice(0,10);
+        let currentPoint_html = "";
+        for(let item of keys){
+          currentPoint_html += `${item}: ${current_item[item]}\n`;
+        }
+        return currentPoint_html;
+      }
+    },
     getFilterNames(){
-      let vm = this;
       return function (idx) {
-          return vm.labelFilterNames[idx].filter(x => vm.labelFilters.map(y => y.key).includes(x.filter_id));
+          return this.labelFilterNames[idx].filter(x => this.labelFilters.map(y => y.key).includes(x.filter_id));
       };
     },
     checkNewFilterEmptyValues(){
