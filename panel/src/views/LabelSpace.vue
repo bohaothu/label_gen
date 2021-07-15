@@ -50,12 +50,17 @@
                     <v-col cols="10">
                       <v-dialog v-model="toggle.editingDialog" width="960">
                     <template v-slot:activator="{ on, attrs }">
-                      <v-btn color="warning" style="width: 100%" small block depressed outlined v-bind="attrs" v-on="on">
-                        <div class="d-flex align-center" style="margin-left: -12px; width:100%; ">
-                        <span :style="{'color': getColor(idx),'margin-top': '-0.2rem', 'font-size': '2rem'}">&bull;</span>
-                        <span>{{ item.name }}</span>
-                        </div>
-                      </v-btn>
+                      <v-tooltip bottom>
+                        <template v-slot:activator="{ on, attrs }">
+                          <v-btn color="warning" style="width: 100%" small block depressed outlined v-bind="attrs" v-on="on">
+                            <div class="d-flex align-center" style="margin-left: -12px; width:100%; ">
+                            <span :style="{'color': getColor(idx),'margin-top': '-0.2rem', 'font-size': '2rem'}">&bull;</span>
+                            <span style="text-align: left; width: 16rem; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;">{{ item.name }}</span>
+                            </div>
+                          </v-btn>
+                        </template>
+                          <span>{{item.name}}</span>
+                      </v-tooltip>
                     </template>
                   <v-card class="px-4 pb-2">
                     <v-card-title class="pl-2 pb-4">Edit filter "{{item.name}}"</v-card-title>
@@ -215,6 +220,8 @@ export default {
               for(let item of label_of_data){
                 tooltip_html += this.getTooltipBull(-1) + item.name + "</br>";
               }
+            }else{
+              tooltip_html += "No Labels";
             }
             return tooltip_html;
           }

@@ -128,7 +128,7 @@ def uploaded_file(filename):
 
 @app.route('/builtin/list')
 def builtin_list():
-  available=sorted(["emotions","birds","medical"])
+  available=sorted(["emotions","birds","medical","genbase"])
   return ujson.dumps(available), 200
 
 @app.route('/builtin/load')
