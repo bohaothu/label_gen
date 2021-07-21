@@ -99,7 +99,7 @@
               <v-card outlined class="px-4 pb-4 mx-auto fill-height" style="width: 100%">
                 <v-card-title class="px-0">Filtered Results</v-card-title>
                 <v-card-text class="px-0" style="text-align: justify">
-                  {{ getCurrentPoint }}
+                  <div style="text-align: justify" v-html="getCurrentPoint"></div>
                   <!-- <p v-for="(item, idx) in searchData" :key="item.key" dense>
                     {{ item.filter.name }} {{ item.filterResult.length }}
                   </p> -->
@@ -218,7 +218,7 @@ export default {
             if(label_of_data.length){
               tooltip_html += "Labels (NUM): </br>".replace("NUM",label_of_data.length);
               for(let item of label_of_data){
-                tooltip_html += this.getTooltipBull(-1) + item.name + "</br>";
+                tooltip_html += this.getTooltipBull(-1) + item.name.replace("\\","") + "</br>";
               }
             }else{
               tooltip_html += "No Labels";
@@ -331,7 +331,7 @@ export default {
         const keys = Object.keys(current_item).filter(x => !excluded_keys.includes(x)).slice(0,10);
         let currentPoint_html = "";
         for(let item of keys){
-          currentPoint_html += `${item}: ${current_item[item]}\n`;
+          currentPoint_html += `<h5 style="display: inline">${item}</h5> ${current_item[item]}</br>`;
         }
         return currentPoint_html;
       }
