@@ -132,13 +132,31 @@ def builtin_list():
   return ujson.dumps(available), 200
 
 @app.route('/builtin/load')
-def builtin_load():
+def builtin_load(nolabel=0):
   dataset_name=request.args.get("dataset")
+  drop_nolabel=True if int(request.args.get("nolabel",default="0")) else False
+
   # load dataset and transform to pandas dataframe
   X_train, y_train, feature_names, label_names = load_dataset(dataset_name, 'train')
   df=pd.DataFrame.sparse.from_spmatrix(X_train)
   df.columns=list(map(lambda x: x[0], feature_names))
-  df["labels"]=pd.DataFrame.sparse.from_spmatrix(y_train).apply(lambda x: x.to_numpy(),axis=1)
+
+  #drop instance with no label when "nolabel=1"
+  if(drop_nolabel):
+    label_exist=[]
+    y_sum = np.sum(y_train.todense(),axis=1)
+    for i in range(len(y_train.todense())):
+      if np.sum(y_sum[i]) > 0:
+        label_exist.append(True)
+      else:
+        label_exist.append(False)
+    df = df[label_exist]
+    df_y = y_train[label_exist]
+  else:
+    df_y = y_train
+
+  #attch label data to df
+  df["labels"]=pd.DataFrame.sparse.from_spmatrix(df_y).apply(lambda x: x.to_numpy(),axis=1)
 
   # create statistic data
   df_to_dense=df.select_dtypes(['number','Sparse[int]','Sparse[float]']).sparse.to_dense()
@@ -163,6 +181,7 @@ def builtin_load():
   t_sne_df = pd.DataFrame(t_sne.embedding_, index=data_set.index)
 
   result_decoded["tsne"] = ujson.loads(t_sne_df.to_json(orient="values"))
+  result_decoded["length"] = len(df)
 
   return ujson.dumps(result_decoded), 200
 
@@ -170,9 +189,21 @@ def builtin_load():
 def builtin_cluster():
   dataset_name=request.args.get("dataset")
   cluster_num=int(request.args.get("num",default="4"))
+  drop_nolabel=True if int(request.args.get("nolabel",default="0")) else False
 
   X_train, y_train, _, label_names = load_dataset(dataset_name, 'train')
   data_set = pd.DataFrame(y_train.todense(),columns=[label_names[x][0] for x in range(y_train.shape[1])])
+
+  #drop instance with no label when "nolabel=1"
+  if(drop_nolabel):
+    label_exist=[]
+    y_sum = np.sum(y_train.todense(),axis=1)
+    for i in range(len(y_train.todense())):
+      if np.sum(y_sum[i]) > 0:
+        label_exist.append(True)
+      else:
+        label_exist.append(False)
+    data_set = data_set[label_exist]
 
   estimator = KMeans(n_clusters=cluster_num)
   estimator.fit(data_set)
@@ -184,7 +215,6 @@ def builtin_cluster():
     cluster_result[current_bucket].append(idx)
 
   return ujson.dumps({"cluster_result": cluster_result, "cluster_num": cluster_num, "method": "kmeans"}), 200
-
 
 @app.route('/builtin/predict')
 def builtin_predict():
