@@ -4,9 +4,14 @@
       <v-row align="center" justify="space-between" style="height: 90vh">
         <v-col cols="12" md="8" class="fill-height d-flex flex-column">
           <v-card outlined class="mx-auto" style="height: 100%; width: 100%;">
-            <v-card-text class="fill-height d-flex align-center justify-center rounded">
-              <v-progress-circular v-if="!option.series[0].data.length" indeterminate></v-progress-circular>
-              <v-chart v-if="option.series[0].data.length" style="height: 100%; width: 100%;" :option="option" autoresize/>
+            <v-card-text class="fill-height d-flex flex-column align-center justify-center rounded">
+              <v-progress-circular v-if="!options[spaceTab].series[0].data.length" indeterminate></v-progress-circular>
+              <v-chart v-if="options[spaceTab].series[0].data.length" style="height: 100%; width: 100%;" :option="options[spaceTab]" autoresize/>
+              <v-btn-toggle v-model="spaceTab">
+                <v-btn v-for="item in spaceTabs" :key="item.tab">
+                  <v-icon small class="ma-1">{{ item.icon }}</v-icon> {{ item.tab }}
+                </v-btn>
+              </v-btn-toggle>
             </v-card-text>
           </v-card>
         </v-col>
@@ -144,8 +149,8 @@ export default {
     [THEME_KEY]: "light"
   },
   mounted() {
-    this.option.series[0].data = new Array();
-    this.option.series[0].data = this.$store.state.df.tsne;
+    this.options[0].series[0].data = new Array();
+    this.options[0].series[0].data = this.$store.state.tsne.label;
     this.newFilter = [{ field: "Labels", operator: "Contain", value: [], key: this.$store.state.helper.guid()}];
     if(this.$store.state.builtin.isBuiltIn){
       let requestUrl = "";
@@ -165,7 +170,7 @@ export default {
           this.labelFilters.push({name: filter_name, conditions: clusterCondition, key: filter_id});
           let wanted_tsne_points = [];
           item.forEach( x => {
-            let new_point = this.$store.state.df.tsne[x];
+            let new_point = this.$store.state.tsne.label[x];
             new_point[2] = {name: filter_name, df_index: x, filter_id: filter_id};
             wanted_tsne_points.push(new_point);
             if(this.labelFilterNames[x]){
@@ -176,13 +181,14 @@ export default {
               this.labelFilterNames[x] = [{name: filter_name, filter_id: filter_id}];
             }
             } );
-          this.option.series.push({name: filter_name, type: "scatter", data: wanted_tsne_points, filter_key: filter_id});
-          this.option.legend.data.push(filter_name);
+          this.options[0].series.push({name: filter_name, type: "scatter", data: wanted_tsne_points, filter_key: filter_id});
+          this.options[0].legend.data.push(filter_name);
         }
       })
       .catch(err => console.error(err))
     }
-    //console.log(this.searchData)
+    this.options[1].series[0].data = new Array();
+    this.options[1].series[0].data = this.$store.state.tsne.feature;
   },
   data() {
     return {
@@ -209,7 +215,7 @@ export default {
       newFilter:[],
       labelFilters: [],
       labelFilterNames: [], // array of array, represent filter name of each data points
-      option: {
+      options: [{
         xAxis: {
           type: "value"
         },
@@ -217,6 +223,7 @@ export default {
           type: "value"
         },
         legend: {
+          y: "top",
           data: []
         },
         tooltip: {
@@ -253,7 +260,32 @@ export default {
         ],
         color:  ['#bbb','#a1c9f4', '#ffb482', '#8de5a1', '#ff9f9b', '#d0bbff', '#debb9b', '#fab0e4', '#cfcfcf', '#fffea3', '#b9f2f0']
       },
-      currentPoint: -1
+      {
+        xAxis: {
+          type: "value"
+        },
+        yAxis: {
+          type: "value"
+        },
+        legend: {
+          y: "top",
+          data: []
+        },
+        series: [
+          {
+            symbolSize: 10,
+            data: [],
+            type: "scatter"
+          }
+        ],
+        color:  ['#bbb','#a1c9f4', '#ffb482', '#8de5a1', '#ff9f9b', '#d0bbff', '#debb9b', '#fab0e4', '#cfcfcf', '#fffea3', '#b9f2f0']
+      }],
+      currentPoint: -1,
+      spaceTab: 0,
+      spaceTabs: [
+        { tab: "Label Space", icon: "mdi-tag"},
+        { tab: "Feature Space", icon: "mdi-pound"}
+      ]
     }
   },
   methods: {
@@ -287,7 +319,7 @@ export default {
       console.log(this.searchData[this.labelFilters.length - 1].filterResult);
       console.log("I am here2")
       this.searchData[this.labelFilters.length - 1].filterResult.forEach( x => {
-        let new_point = this.$store.state.df.tsne[x];
+        let new_point = this.$store.state.tsne.label[x];
         new_point[2] = {name: filter_name, df_index: x, filter_id: filter_id};
         wanted_tsne_points.push(new_point);
         if(this.labelFilterNames[x]){
@@ -299,25 +331,25 @@ export default {
           }
         } );
       //console.log(wanted_tsne_points);
-      const next_chart_idx = this.option.series.findIndex(x => x.filter_key === "toberemove");
+      const next_chart_idx = this.options[0].series.findIndex(x => x.filter_key === "toberemove");
       //console.log(next_chart_idx);
       if(next_chart_idx !== -1){
-        this.option.series[next_chart_idx].data = wanted_tsne_points;
-        this.option.series[next_chart_idx].filter_key = filter_id;
-        this.option.legend.data.push(filter_name);
+        this.options[0].series[next_chart_idx].data = wanted_tsne_points;
+        this.options[0].series[next_chart_idx].filter_key = filter_id;
+        this.options[0].legend.data.push(filter_name);
         console.log(this.option.legend);
       }else{
-        this.option.series.push({name: filter_name, type: "scatter", data: [wanted_tsne_points], filter_key: filter_id});
+        this.options[0].series.push({name: filter_name, type: "scatter", data: [wanted_tsne_points], filter_key: filter_id});
       }
     },
     removeFilter(index) {
       const key_to_remove = this.labelFilters[index].key;
-      const chart_idx_to_remove = this.option.series.findIndex(x => x.filter_key === key_to_remove);
+      const chart_idx_to_remove = this.options[0].series.findIndex(x => x.filter_key === key_to_remove);
       // remove filter legend
-      this.option.legend.data = this.option.legend.data.filter(x => x != this.labelFilters[index].name);
+      this.options[0].legend.data = this.options[0].legend.data.filter(x => x != this.labelFilters[index].name);
       // remove filter result from chart
-      this.option.series[chart_idx_to_remove].data = [];
-      this.option.series[chart_idx_to_remove].filter_key = "toberemove";
+      this.options[0].series[chart_idx_to_remove].data = [];
+      this.options[0].series[chart_idx_to_remove].filter_key = "toberemove";
       // remove filter
       this.labelFilters = this.labelFilters.filter(x => x.key !== key_to_remove);
     },
@@ -338,12 +370,12 @@ export default {
             axios.get([this.$store.state.helper.apiAddr,"/builtin/cluster?dataset=",this.$store.state.builtin.dataset,"&nolabel=1"].join(""))
             .then(res => res.data)
             .then(x => {
-              const seriesLength = JSON.parse(JSON.stringify(this.option.series.length));
+              const seriesLength = JSON.parse(JSON.stringify(this.options[0].series.length));
               for(let i=1; i<seriesLength; i++){
-                this.option.series.pop();
+                this.options[0].series.pop();
               }
-              this.option.series[0].data=[];
-              this.option.series[0].data = this.$store.state.df.tsne;
+              this.options[0].series[0].data=[];
+              this.options[0].series[0].data = this.$store.state.tsne.label;
               this.labelFilters = [];
               this.labelFilterNames = [];
               this.newFilter = [{ field: "Labels", operator: "Contain", value: [], key: this.$store.state.helper.guid()}];
@@ -355,7 +387,7 @@ export default {
                 this.labelFilters.push({name: filter_name, conditions: clusterCondition, key: filter_id});
                 let wanted_tsne_points = [];
                 item.forEach( x => {
-                  let new_point = this.$store.state.df.tsne[x];
+                  let new_point = this.$store.state.tsne.label[x];
                   new_point[2] = {name: filter_name, df_index: x, filter_id: filter_id};
                   wanted_tsne_points.push(new_point);
                   if(this.labelFilterNames[x]){
@@ -366,8 +398,8 @@ export default {
                     this.labelFilterNames[x] = [{name: filter_name, filter_id: filter_id}];
                   }
                   } );
-                this.option.series.push({name: filter_name, type: "scatter", data: wanted_tsne_points, filter_key: filter_id});
-                this.option.legend.data.push(filter_name);
+                this.options[0].series.push({name: filter_name, type: "scatter", data: wanted_tsne_points, filter_key: filter_id});
+                this.options[0].legend.data.push(filter_name);
                 this.isLoading.noLabel = false;
                 this.isFinished.noLabel = true;
                 this.$store.dispatch('noLabelDefaultDataset',{nolabel: true});
@@ -396,14 +428,14 @@ export default {
     getColor() {
       return function(index){
         const key_to_find = this.labelFilters[index].key;
-        const chart_idx_to_find = this.option.series.findIndex(x => x.filter_key === key_to_find);
-        return this.option.color[chart_idx_to_find];
+        const chart_idx_to_find = this.options[0].series.findIndex(x => x.filter_key === key_to_find);
+        return this.options[0].color[chart_idx_to_find];
       }
     },
     getTooltipBull(){
       return function(key){
-        const chart_idx_to_find = this.option.series.findIndex(x => x.filter_key === key);
-        return `<span style="color: ${this.option.color[chart_idx_to_find]}; font-size: 1rem">&bull;&nbsp;</span>`
+        const chart_idx_to_find = this.options[0].series.findIndex(x => x.filter_key === key);
+        return `<span style="color: ${this.options[0].color[chart_idx_to_find]}; font-size: 1rem">&bull;&nbsp;</span>`
       }
     },
     getFilter() {
@@ -418,7 +450,7 @@ export default {
     },
     getFilterItemCount(){
       return function(filter_key){
-        const current_filter = this.option.series.filter(x => x.filter_key === filter_key);
+        const current_filter = this.options[0].series.filter(x => x.filter_key === filter_key);
         if(current_filter.length){
           return "(" + current_filter[0].data.length + ")";
         }

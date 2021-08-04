@@ -99,7 +99,7 @@ export default {
         let startTime = Date.now();
         this.isLoading.builtIn = true;
         this.$store.dispatch('resetMask');
-        this.$store.dispatch('importDefaultDataset',{dataset: this.builtInListSelect})
+        this.$store.dispatch('importDefaultDataset',{dataset: this.builtInListSelect, nolabel: 0})
         .then(x => {
           if(x.success){
             let elaspedTime = Date.now() - startTime;

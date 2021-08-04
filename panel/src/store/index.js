@@ -24,8 +24,11 @@ export default new Vuex.Store({
       items: [],
       labels: [], // labels_name
       labels_count: [],
-      suggestion: [],
-      tsne: []
+      suggestion: []
+    },
+    tsne: {
+      label: [],
+      feature: []
     },
     stat: {
       headers: [{text: "Feature", value: "feature_name"}, {text:"最小值", value: "min"},
@@ -71,8 +74,8 @@ export default new Vuex.Store({
   },
   actions: {
     fetchData(context, payload){
-      const requestTable=axios.get(apiAddr+"/random", {params: {row: payload.row_num, features: payload.features_num, labels: payload.labels_num}})
-      const requestLabel=axios.get(apiAddr+"/random/label", {params: {labels: payload.labels_num}})
+      const requestTable = axios.get(apiAddr+"/random", {params: {row: payload.row_num, features: payload.features_num, labels: payload.labels_num}})
+      const requestLabel = axios.get(apiAddr+"/random/label", {params: {labels: payload.labels_num}})
       return axios.all([requestTable, requestLabel])
       .then(axios.spread((...res) => {
         const responseTable = res[0].data
@@ -89,24 +92,33 @@ export default new Vuex.Store({
       })
     },
     importDefaultDataset(context, payload){
-      return axios.get(apiAddr+"/builtin/load", {params: {dataset: payload.dataset, nolabel: payload.nolabel}})
-      .then( res => res.data )
-      .then( x => {
-        context.commit("addToState", {table: "df", field: "fields", value: x.schema.fields });
-        context.commit("addToState", {table: "df", field: "items", value: x.data});
-        context.commit("addToState", {table: "stat", field: "items", value: helperMethods.transStat(x.stat)});
-        context.commit("addToState", {table: "df", field: "labels_count", value: x.labels_count});
-        context.commit("addToState",{table: "df", field: "labels", value: x.labels_name});
-        context.commit("addToState",{table: "df", field: "tsne", value: x.tsne});
+      const reqLoad = axios.get(apiAddr+"/builtin/load", {params: {dataset: payload.dataset, nolabel: payload.nolabel}});
+      const reqTsneLabel = axios.get(apiAddr+"/builtin/tsne", {params: {dataset: payload.dataset, nolabel: payload.nolabel, type: "label"}});
+      const reqTsneFeature = axios.get(apiAddr+"/builtin/tsne", {params: {dataset: payload.dataset, nolabel: payload.nolabel, type: "feature"}});
+      return axios.all([reqLoad, reqTsneLabel, reqTsneFeature])
+      .then(axios.spread((...res) => {
+        const resLoad = res[0].data;
+        const resTsneLabel = res[1].data;
+        const resTsneFeature = res[2].data;
+        context.commit("addToState", {table: "df", field: "fields", value: resLoad.schema.fields });
+        context.commit("addToState", {table: "df", field: "items", value: resLoad.data});
+        context.commit("addToState", {table: "df", field: "labels_count", value: resLoad.labels_count});
+        context.commit("addToState",{table: "df", field: "labels", value: resLoad.labels_name});
+
+        context.commit("addToState", {table: "stat", field: "items", value: helperMethods.transStat(resLoad.stat)});
         context.commit("addToState",{table: "mask", field: "builtInDataset", value: payload.dataset});
+
         context.commit("addToState",{table: "builtin", field: "isBuiltIn", value: true});
         context.commit("addToState",{table: "builtin", field: "dataset", value: payload.dataset});
-        context.commit("addToState",{table: "builtin", field: "noLabel", value: false});
-        return {success: true}
-      })
+        context.commit("addToState",{table: "builtin", field: "noLabel", value: payload.nolabel? true:false});
+        context.commit("addToState",{table: "tsne", field: "label", value: resTsneLabel.tsne});
+        context.commit("addToState",{table: "tsne", field: "feature", value: resTsneFeature.tsne});
+
+        return {success: true};
+      }))
       .catch(err => {
-        console.error(err)
-        return {success: false}
+        console.error(err);
+        return {success: false};
       })
     },
     noLabelDefaultDataset(context, payload){
