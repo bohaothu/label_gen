@@ -44,7 +44,8 @@ export default new Vuex.Store({
     },
     builtin: {
       isBuiltIn: false,
-      dataset: ""
+      dataset: "",
+      noLabel: false
     },
     helper: {
       apiAddr: "http://localhost:5000",
@@ -88,7 +89,7 @@ export default new Vuex.Store({
       })
     },
     importDefaultDataset(context, payload){
-      return axios.get(apiAddr+"/builtin/load", {params: {dataset: payload.dataset}})
+      return axios.get(apiAddr+"/builtin/load", {params: {dataset: payload.dataset, nolabel: payload.nolabel}})
       .then( res => res.data )
       .then( x => {
         context.commit("addToState", {table: "df", field: "fields", value: x.schema.fields });
@@ -100,12 +101,16 @@ export default new Vuex.Store({
         context.commit("addToState",{table: "mask", field: "builtInDataset", value: payload.dataset});
         context.commit("addToState",{table: "builtin", field: "isBuiltIn", value: true});
         context.commit("addToState",{table: "builtin", field: "dataset", value: payload.dataset});
-        return true
+        context.commit("addToState",{table: "builtin", field: "noLabel", value: false});
+        return {success: true}
       })
       .catch(err => {
         console.error(err)
-        return false
+        return {success: false}
       })
+    },
+    noLabelDefaultDataset(context, payload){
+      context.commit("addToState",{table: "builtin", field: "noLabel", value: payload.nolabel});
     },
     importDefaultSuggestion(context, payload){
       let startTime = Date.now()

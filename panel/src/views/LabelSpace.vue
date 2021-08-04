@@ -16,7 +16,12 @@
               <v-card outlined class="px-4 pb-4 mx-auto fill-height">
                 <v-card-title class="d-flex justify-space-between px-0">
                   Filters
-                  <v-dialog v-model="toggle.filterDialog" width="960">
+                  <span>
+                    <v-btn text color="primary" class="mr-2" @click="reloadWithNoLabel" :disabled="isLoading.noLabel || isFinished.noLabel">
+                      <v-icon v-if="!isLoading.noLabel">mdi-backspace</v-icon>
+                      <v-progress-circular v-if="isLoading.noLabel" :size="20" indeterminate></v-progress-circular>
+                    </v-btn>
+                    <v-dialog v-model="toggle.filterDialog" width="960">
                     <template v-slot:activator="{ on, attrs }">
                       <v-btn color="primary" outlined v-bind="attrs" v-on="on">Add Filter</v-btn>
                     </template>
@@ -43,7 +48,8 @@
                       <v-btn color="primary" :disabled="checkNewFilterEmptyValues" @click="createFilter">Create Filter</v-btn>
                     </v-card-action>
                   </v-card>
-                </v-dialog>
+                    </v-dialog>
+                  </span>
                 </v-card-title>
                 <v-card-text class="px-0 pb-0 mb-0" style="overflow-y: scroll; height: 180px">
                   <v-row v-for="(item, idx) in labelFilters" :key="item.key" dense justify="space-between">
@@ -59,7 +65,7 @@
                             </div>
                           </v-btn>
                         </template>
-                          <span>{{item.name}}</span>
+                          <span>{{item.name}} {{getFilterItemCount(item.key)}}</span>
                       </v-tooltip>
                     </template>
                   <v-card class="px-4 pb-2">
@@ -142,7 +148,13 @@ export default {
     this.option.series[0].data = this.$store.state.df.tsne;
     this.newFilter = [{ field: "Labels", operator: "Contain", value: [], key: this.$store.state.helper.guid()}];
     if(this.$store.state.builtin.isBuiltIn){
-      axios.get(this.$store.state.helper.apiAddr + "/builtin/cluster?dataset=" + this.$store.state.builtin.dataset)
+      let requestUrl = "";
+      if(this.$store.state.builtin.noLabel){
+        requestUrl = [this.$store.state.helper.apiAddr,"/builtin/cluster?dataset=",this.$store.state.builtin.dataset,"&nolabel=1"].join("");
+      }else{
+        requestUrl = [this.$store.state.helper.apiAddr,"/builtin/cluster?dataset=",this.$store.state.builtin.dataset].join("");
+      };
+      axios.get(requestUrl)
       .then(res => res.data)
       .then(x => {
         const clusterResult = x.cluster_result;
@@ -177,6 +189,12 @@ export default {
       toggle: {
         filterDialog: false,
         editorDialog: false
+      },
+      isLoading: {
+        noLabel: false
+      },
+      isFinished: {
+        noLabel: false
       },
       filterAcceptedMethods: {
         field: ["Labels"],
@@ -267,6 +285,7 @@ export default {
       //add new point to chart
       let wanted_tsne_points = [];
       console.log(this.searchData[this.labelFilters.length - 1].filterResult);
+      console.log("I am here2")
       this.searchData[this.labelFilters.length - 1].filterResult.forEach( x => {
         let new_point = this.$store.state.df.tsne[x];
         new_point[2] = {name: filter_name, df_index: x, filter_id: filter_id};
@@ -302,18 +321,6 @@ export default {
       // remove filter
       this.labelFilters = this.labelFilters.filter(x => x.key !== key_to_remove);
     },
-    getFilter(key) {
-      return this.labelFilters.filter(x => x.key === key)[0].conditions;
-    },
-    getColor(index) {
-      const key_to_find = this.labelFilters[index].key;
-      const chart_idx_to_find = this.option.series.findIndex(x => x.filter_key === key_to_find);
-      return this.option.color[chart_idx_to_find];
-    },
-    getTooltipBull(key){
-      const chart_idx_to_find = this.option.series.findIndex(x => x.filter_key === key);
-      return `<span style="color: ${this.option.color[chart_idx_to_find]}; font-size: 1rem">&bull;&nbsp;</span>`
-    },
     genLabelArr(df_index){
       const labels_in_entity = this.$store.state.df.items[df_index].labels;
       const labelArr = [];
@@ -321,6 +328,56 @@ export default {
         v > 0? labelArr.push({name: this.$store.state.df.labels[i], label_index: i}):void(0);
       }
       return labelArr;
+    },
+    reloadWithNoLabel() {
+      if(this.$store.state.builtin.isBuiltIn){
+        this.isLoading.noLabel = true;
+        this.$store.dispatch('importDefaultDataset',{dataset: this.$store.state.builtin.dataset, nolabel: 1})
+        .then(x => {
+          if(x.success){
+            axios.get([this.$store.state.helper.apiAddr,"/builtin/cluster?dataset=",this.$store.state.builtin.dataset,"&nolabel=1"].join(""))
+            .then(res => res.data)
+            .then(x => {
+              const seriesLength = JSON.parse(JSON.stringify(this.option.series.length));
+              for(let i=1; i<seriesLength; i++){
+                this.option.series.pop();
+              }
+              this.option.series[0].data=[];
+              this.option.series[0].data = this.$store.state.df.tsne;
+              this.labelFilters = [];
+              this.labelFilterNames = [];
+              this.newFilter = [{ field: "Labels", operator: "Contain", value: [], key: this.$store.state.helper.guid()}];
+              const clusterResult = x.cluster_result;
+              for(let [idx,item] of clusterResult.entries()){
+                let filter_id = this.$store.state.helper.guid();
+                let filter_name = "Cluster " + idx;
+                let clusterCondition = [{field: "Cluster", operator: "Kmeans", value: item, key: this.$store.state.helper.guid()}];
+                this.labelFilters.push({name: filter_name, conditions: clusterCondition, key: filter_id});
+                let wanted_tsne_points = [];
+                item.forEach( x => {
+                  let new_point = this.$store.state.df.tsne[x];
+                  new_point[2] = {name: filter_name, df_index: x, filter_id: filter_id};
+                  wanted_tsne_points.push(new_point);
+                  if(this.labelFilterNames[x]){
+                    if(!this.labelFilterNames[x].map(y => y.name).includes(filter_name)){
+                      this.labelFilterNames[x].push({name: filter_name, filter_id: filter_id});
+                    }
+                  }else{
+                    this.labelFilterNames[x] = [{name: filter_name, filter_id: filter_id}];
+                  }
+                  } );
+                this.option.series.push({name: filter_name, type: "scatter", data: wanted_tsne_points, filter_key: filter_id});
+                this.option.legend.data.push(filter_name);
+                this.isLoading.noLabel = false;
+                this.isFinished.noLabel = true;
+                this.$store.dispatch('noLabelDefaultDataset',{nolabel: true});
+              }
+            })
+            .catch(err => console.error(err))
+          }
+        })
+        .catch(err => console.error(err));
+      }
     }
   },
   computed: {
@@ -336,10 +393,36 @@ export default {
         return currentPoint_html;
       }
     },
+    getColor() {
+      return function(index){
+        const key_to_find = this.labelFilters[index].key;
+        const chart_idx_to_find = this.option.series.findIndex(x => x.filter_key === key_to_find);
+        return this.option.color[chart_idx_to_find];
+      }
+    },
+    getTooltipBull(){
+      return function(key){
+        const chart_idx_to_find = this.option.series.findIndex(x => x.filter_key === key);
+        return `<span style="color: ${this.option.color[chart_idx_to_find]}; font-size: 1rem">&bull;&nbsp;</span>`
+      }
+    },
+    getFilter() {
+      return function(key){
+        return this.labelFilters.filter(x => x.key === key)[0].conditions;
+      };
+    },
     getFilterNames(){
-      return function (idx) {
+      return function(idx){
           return this.labelFilterNames[idx].filter(x => this.labelFilters.map(y => y.key).includes(x.filter_id));
       };
+    },
+    getFilterItemCount(){
+      return function(filter_key){
+        const current_filter = this.option.series.filter(x => x.filter_key === filter_key);
+        if(current_filter.length){
+          return "(" + current_filter[0].data.length + ")";
+        }
+      }
     },
     checkNewFilterEmptyValues(){
       return this.newFilter.every(x => x.value.length === 0)
@@ -353,6 +436,7 @@ export default {
             let wanted_item = [];
             for(let label of val){
               let label_index = that.$store.state.df.labels.indexOf(label);
+              console.log(label_index);
               that.$store.state.df.items.filter(x => x.labels[label_index] === 1)
               .forEach(y => wanted_item.includes(y.index)? void(0):wanted_item.push(y.index));
             }
@@ -376,14 +460,17 @@ export default {
           }
         }
       };
+      console.log("searchData start");
       for(let filter of this.labelFilters){
         let wanted_index=[];
         for(let condition of filter.conditions){
+          //console.log(filterMethod[condition.field][condition.operator.replace(/\s/g, '')](condition.value))
           filterMethod[condition.field][condition.operator.replace(/\s/g, '')](condition.value)
-          .forEach(y => wanted_index.includes(y)? void(0):wanted_index.push(y))
+          .forEach(y => wanted_index.includes(y)? void(0):wanted_index.push(y));
         }
         z.push({filter: filter, filterResult: wanted_index, key: this.$store.state.helper.guid()});
       }
+      console.log(z);
       return z;
     }
   }

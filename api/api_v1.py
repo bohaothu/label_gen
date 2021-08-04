@@ -156,7 +156,7 @@ def builtin_load(nolabel=0):
     df_y = y_train
 
   #attch label data to df
-  df["labels"]=pd.DataFrame.sparse.from_spmatrix(df_y).apply(lambda x: x.to_numpy(),axis=1)
+  df_labels=pd.DataFrame.sparse.from_spmatrix(df_y).apply(lambda x: x.to_numpy(),axis=1)
 
   # create statistic data
   df_to_dense=df.select_dtypes(['number','Sparse[int]','Sparse[float]']).sparse.to_dense()
@@ -170,12 +170,13 @@ def builtin_load(nolabel=0):
   # generate output
   result_decoded = ujson.loads(df.to_json(orient="table"))
   result_decoded["stat"] = ujson.loads(df1.to_json(orient="index"))
-  result_decoded["labels_count"] = ujson.loads(pd.Series(np.sum(df["labels"],axis=0)).to_json(orient="records"))
+  #result_decoded["labels"] = df_labels
+  result_decoded["labels_count"] = ujson.loads(pd.Series(np.sum(df_labels,axis=0)).to_json(orient="records"))
   result_decoded["labels_name"] = list(map(lambda x: x[0], label_names))
   result_decoded["features_name"] = [{"feature": x[0], "type": x[1]} for x in feature_names]
 
   #tsne axis
-  data_set = pd.DataFrame(y_train.todense(),columns=[label_names[x][0] for x in range(y_train.shape[1])])
+  data_set = pd.DataFrame(df_y.todense(),columns=[label_names[x][0] for x in range(y_train.shape[1])])
   t_sne = TSNE()
   t_sne.fit(data_set)
   t_sne_df = pd.DataFrame(t_sne.embedding_, index=data_set.index)

@@ -101,7 +101,7 @@ export default {
         this.$store.dispatch('resetMask');
         this.$store.dispatch('importDefaultDataset',{dataset: this.builtInListSelect})
         .then(x => {
-          if(x){
+          if(x.success){
             let elaspedTime = Date.now() - startTime;
             this.isLoading.builtIn = false;
             this.snack.success = this.$store.state.df.items.length? true:false;
