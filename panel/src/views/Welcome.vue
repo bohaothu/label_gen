@@ -75,7 +75,7 @@ export default {
     }
   }),
   mounted() {
-    axios.get("http://localhost:5000/builtin/list")
+    axios.get(this.$store.state.helper.apiAddr+"/builtin/list")
     .then(res => res.data)
     .then(x => this.defaultDataset = x)
     .catch(err => console.error(err))

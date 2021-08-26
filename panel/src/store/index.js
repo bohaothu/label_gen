@@ -15,7 +15,8 @@ const helperMethods = {
   }
 }
 
-const apiAddr="http://localhost:5000"
+const apiIP="192.168.1.3"
+const apiAddr="http://"+apiIP+":5001"
 
 export default new Vuex.Store({
   state: {
@@ -51,7 +52,7 @@ export default new Vuex.Store({
       noLabel: false
     },
     helper: {
-      apiAddr: "http://localhost:5000",
+      apiAddr: apiAddr,
       guid() {
         return  Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15);
       }
@@ -92,14 +93,10 @@ export default new Vuex.Store({
       })
     },
     importDefaultDataset(context, payload){
-      const reqLoad = axios.get(apiAddr+"/builtin/load", {params: {dataset: payload.dataset, nolabel: payload.nolabel}});
-      const reqTsneLabel = axios.get(apiAddr+"/builtin/tsne", {params: {dataset: payload.dataset, nolabel: payload.nolabel, type: "label"}});
-      const reqTsneFeature = axios.get(apiAddr+"/builtin/tsne", {params: {dataset: payload.dataset, nolabel: payload.nolabel, type: "feature"}});
+      const reqLoad = axios.get(apiAddr+"/builtin/load", {params: {dataset: payload.dataset, nolabel: payload.nolabel, entities: payload.entities}});
       return axios.all([reqLoad, reqTsneLabel, reqTsneFeature])
       .then(axios.spread((...res) => {
         const resLoad = res[0].data;
-        const resTsneLabel = res[1].data;
-        const resTsneFeature = res[2].data;
         context.commit("addToState", {table: "df", field: "fields", value: resLoad.schema.fields });
         context.commit("addToState", {table: "df", field: "items", value: resLoad.data});
         context.commit("addToState", {table: "df", field: "labels_count", value: resLoad.labels_count});
@@ -111,6 +108,22 @@ export default new Vuex.Store({
         context.commit("addToState",{table: "builtin", field: "isBuiltIn", value: true});
         context.commit("addToState",{table: "builtin", field: "dataset", value: payload.dataset});
         context.commit("addToState",{table: "builtin", field: "noLabel", value: payload.nolabel? true:false});
+
+        return {success: true};
+      }))
+      .catch(err => {
+        console.error(err);
+        return {success: false};
+      })
+    },
+    importDefaultTsne(context,payload){
+      const reqTsneLabel = axios.get(apiAddr+"/builtin/tsne", {params: {dataset: payload.dataset, nolabel: payload.nolabel, entities: payload.entities, type: "label"}});
+      const reqTsneFeature = axios.get(apiAddr+"/builtin/tsne", {params: {dataset: payload.dataset, nolabel: payload.nolabel, entities: payload.entities, type: "feature"}});
+      return axios.all([reqTsneLabel, reqTsneFeature])
+      .then(axios.spread((...res) => {
+        const resTsneLabel = res[0].data;
+        const resTsneFeature = res[1].data;
+
         context.commit("addToState",{table: "tsne", field: "label", value: resTsneLabel.tsne});
         context.commit("addToState",{table: "tsne", field: "feature", value: resTsneFeature.tsne});
 

@@ -7,9 +7,9 @@
             <v-card-text class="fill-height d-flex flex-column align-center justify-center rounded">
               <v-progress-circular v-if="!options[spaceTab].series[0].data.length" indeterminate></v-progress-circular>
               <v-chart v-if="options[spaceTab].series[0].data.length" style="height: 100%; width: 100%;" :option="options[spaceTab]" autoresize/>
-              <v-btn-toggle v-model="spaceTab">
+              <v-btn-toggle v-model="spaceTab" @change="spaceTabOnChange">
                 <v-btn v-for="item in spaceTabs" :key="item.tab">
-                  <v-icon small class="ma-1">{{ item.icon }}</v-icon> {{ item.tab }}
+                  <v-icon small left>{{ item.icon }}</v-icon> {{ item.tab }}
                 </v-btn>
               </v-btn-toggle>
             </v-card-text>
@@ -20,40 +20,78 @@
             <v-col cols="6" md="12">
               <v-card outlined class="px-4 pb-4 mx-auto fill-height">
                 <v-card-title class="d-flex justify-space-between px-0">
-                  Filters
                   <span>
+                  <v-menu bottom :close-on-click="true" :close-on-content-click="false" v-model="toggle.quickFilterMenu">
+                    <template v-slot:activator="{ on, attrs }">
+                      <v-btn v-bind="attrs" v-on="on" class="mr-2" text>Graph Filters</v-btn>
+                    </template>
+                    <v-card>
+                      <v-card-title class="mb-0">Create Graph Filter</v-card-title>
+                      <v-card-subtitle class="py-0">建立过滤器，在可视化图中将符合过滤条件的点标出</v-card-subtitle>
+                      <v-card-text class="pa-0">
+                        <v-list class="py-0">
+                          <v-list-item class="py-0">
+                            <v-list-item-content class="py-0">
+                              <v-list-item-title>Labels contain</v-list-item-title>
+                            </v-list-item-content>
+                          </v-list-item>
+                          <v-list-item class="py-0">
+                            <!--<v-list-item-title class="mb-0">Labels contain</v-list-item-title>-->
+                            <v-list-item-content class="py-0">
+                              <v-chip-group column multiple active-class="primary--text" v-model="quickFilter">
+                                <v-chip v-for="(item,idx) in this.$store.state.df.labels" :key="'graph'+idx">{{item}}</v-chip>
+                              </v-chip-group>
+                            </v-list-item-content>
+                          </v-list-item>
+                        </v-list>
+                      </v-card-text>
+                      <v-card-actions>
+                        <v-spacer></v-spacer>
+                        <v-btn text @click="toggle.quickFilterMenu = false">Cancel</v-btn>
+                        <v-btn color="primary" text @click="quickCreateFilter">Create</v-btn>
+                      </v-card-actions>
+                    </v-card>
+                  </v-menu>
+                  </span>
+                  <span>
+                  <v-menu bottom :close-on-click="true" :close-on-content-click="false" v-model="toggle.entityFilterMenu">
+                    <template v-slot:activator="{ on, attrs }">
+                      <v-btn dark color="indigo" class="mr-2" v-bind="attrs" v-on="on">
+                        <v-icon>mdi-filter</v-icon>
+                      </v-btn>
+                    </template>
+                    <v-card>
+                      <v-card-title class="mb-0">Create Entities Filter</v-card-title>
+                      <v-card-subtitle class="py-0">设定过滤条件，在可视化图中保留符合条件的点</v-card-subtitle>
+                      <v-card-text class="pa-0">
+                        <v-list class="py-0">
+                          <v-list-item class="py-0">
+                            <v-list-item-content class="py-0">
+                              <v-list-item-title>Labels contain</v-list-item-title>
+                            </v-list-item-content>
+                          </v-list-item>
+                          <v-list-item class="py-0">
+                            <v-list-item-content class="py-0">
+                              <v-chip-group column multiple active-class="primary--text" v-model="entityFilter">
+                                <v-chip v-for="(item,idx) in this.$store.state.df.labels" :key="'entity'+idx">{{item}}</v-chip>
+                              </v-chip-group>
+                            </v-list-item-content>
+                          </v-list-item>
+                        </v-list>
+                      </v-card-text>
+                      <v-card-actions>
+                        <v-spacer></v-spacer>
+                        <v-btn text @click="toggle.entityFilterMenu = false">Cancel</v-btn>
+                        <v-btn text color="primary" @click="performEntityFilter">Perform</v-btn>
+                      </v-card-actions>
+                    </v-card>
+                  </v-menu>
+                    <!--
                     <v-btn text color="primary" class="mr-2" @click="reloadWithNoLabel" :disabled="isLoading.noLabel || isFinished.noLabel">
                       <v-icon v-if="!isLoading.noLabel">mdi-backspace</v-icon>
                       <v-progress-circular v-if="isLoading.noLabel" :size="20" indeterminate></v-progress-circular>
                     </v-btn>
-                    <v-dialog v-model="toggle.filterDialog" width="960">
-                    <template v-slot:activator="{ on, attrs }">
-                      <v-btn color="primary" outlined v-bind="attrs" v-on="on">Add Filter</v-btn>
-                    </template>
-                  <v-card class="px-4 pb-6">
-                    <v-card-title class="pl-2 pb-4">Add new filter</v-card-title>
-                    <v-card-text class="pl-2">
-                      <v-row v-for="(condition, idx) in newFilter" :key="condition.key">
-                        <v-col cols="3" class="pb-0">
-                          <v-select v-model="condition.field" :items="filterAcceptedMethods.field" style="width: 100%" dense outlined></v-select>
-                        </v-col>
-                        <v-col cols="3" class="pb-0">
-                          <v-select v-model="condition.operator" :items="filterAcceptedMethods.operator[condition.field]" style="width: 100%" dense outlined></v-select>
-                        </v-col>
-                        <v-col cols="5" class="pb-0">
-                          <v-select v-model="condition.value" :items="filterAcceptedMethods.value[condition.field]" style="width: 100%" chips multiple dense outlined></v-select>
-                        </v-col>
-                        <v-col cols="1" class="pb-0">
-                          <v-btn v-if="idx < newFilter.length - 1" color="secondary" @click="removeNewCondition(idx)"><v-icon>mdi-minus</v-icon></v-btn>
-                          <v-btn v-if="idx == newFilter.length - 1" color="primary" @click="addNewCondition"><v-icon>mdi-plus</v-icon></v-btn>
-                        </v-col>
-                      </v-row>
-                    </v-card-text>
-                    <v-card-action>
-                      <v-btn color="primary" :disabled="checkNewFilterEmptyValues" @click="createFilter">Create Filter</v-btn>
-                    </v-card-action>
-                  </v-card>
-                    </v-dialog>
+                    -->
                   </span>
                 </v-card-title>
                 <v-card-text class="px-0 pb-0 mb-0" style="overflow-y: scroll; height: 180px">
@@ -108,7 +146,9 @@
             </v-card></v-col>
             <v-col cols="6" md="12">
               <v-card outlined class="px-4 pb-4 mx-auto fill-height" style="width: 100%">
-                <v-card-title class="px-0">Filtered Results</v-card-title>
+                <v-card-title class="px-0">
+                  <v-btn @click="chartDebug" text>Details</v-btn>
+                </v-card-title>
                 <v-card-text class="px-0" style="text-align: justify">
                   <div style="text-align: justify" v-html="getCurrentPoint"></div>
                   <!-- <p v-for="(item, idx) in searchData" :key="item.key" dense>
@@ -149,16 +189,13 @@ export default {
     [THEME_KEY]: "light"
   },
   mounted() {
-    this.options[0].series[0].data = new Array();
-    this.options[0].series[0].data = this.$store.state.tsne.label;
+    for(let i=0; i<this.spaceTabs.length; i++){
+      this.options[i].series[0].data = new Array();
+      this.options[i].series[0].data = this.$store.state.tsne[this.spaceTabs[i].tsne_type];
+    }
     this.newFilter = [{ field: "Labels", operator: "Contain", value: [], key: this.$store.state.helper.guid()}];
     if(this.$store.state.builtin.isBuiltIn){
-      let requestUrl = "";
-      if(this.$store.state.builtin.noLabel){
-        requestUrl = [this.$store.state.helper.apiAddr,"/builtin/cluster?dataset=",this.$store.state.builtin.dataset,"&nolabel=1"].join("");
-      }else{
-        requestUrl = [this.$store.state.helper.apiAddr,"/builtin/cluster?dataset=",this.$store.state.builtin.dataset].join("");
-      };
+      let requestUrl = `${this.$store.state.helper.apiAddr}/builtin/cluster?dataset=${this.$store.state.builtin.dataset}&nolabel=${this.$store.state.builtin.noLabel?1:0}`;
       axios.get(requestUrl)
       .then(res => res.data)
       .then(x => {
@@ -168,33 +205,35 @@ export default {
           let filter_name = "Cluster " + idx;
           let clusterCondition = [{field: "Cluster", operator: "Kmeans", value: item, key: this.$store.state.helper.guid()}];
           this.labelFilters.push({name: filter_name, conditions: clusterCondition, key: filter_id});
-          let wanted_tsne_points = [];
-          item.forEach( x => {
-            let new_point = this.$store.state.tsne.label[x];
-            new_point[2] = {name: filter_name, df_index: x, filter_id: filter_id};
-            wanted_tsne_points.push(new_point);
-            if(this.labelFilterNames[x]){
-              if(!this.labelFilterNames[x].map(y => y.name).includes(filter_name)){
-                this.labelFilterNames[x].push({name: filter_name, filter_id: filter_id});
+          for(let i=0; i<this.spaceTabs.length; i++) {
+            let wanted_tsne_points = [];
+            item.forEach( x => {
+              let new_point = this.$store.state.tsne[this.spaceTabs[i].tsne_type][x];
+              new_point[2] = {name: filter_name, df_index: x, filter_id: filter_id};
+              wanted_tsne_points.push(new_point);
+              if(this.labelFilterNames[x]){
+                if(!this.labelFilterNames[x].map(y => y.name).includes(filter_name)){
+                  this.labelFilterNames[x].push({name: filter_name, filter_id: filter_id});
+                }
+              }else{
+                this.labelFilterNames[x] = [{name: filter_name, filter_id: filter_id}];
               }
-            }else{
-              this.labelFilterNames[x] = [{name: filter_name, filter_id: filter_id}];
-            }
-            } );
-          this.options[0].series.push({name: filter_name, type: "scatter", data: wanted_tsne_points, filter_key: filter_id});
-          this.options[0].legend.data.push(filter_name);
+            });
+            this.options[i].series.push({name: filter_name, type: "scatter", data: wanted_tsne_points, filter_key: filter_id});
+            this.options[i].legend.data.push(filter_name);
+          }
         }
       })
       .catch(err => console.error(err))
-    }
-    this.options[1].series[0].data = new Array();
-    this.options[1].series[0].data = this.$store.state.tsne.feature;
+    };
   },
   data() {
     return {
       toggle: {
         filterDialog: false,
-        editorDialog: false
+        editorDialog: false,
+        quickFilterMenu: false,
+        entityFilterMenu: false
       },
       isLoading: {
         noLabel: false
@@ -212,7 +251,6 @@ export default {
         operator: { Labels: ["Contain","Not Contain"], Cluster: ["Kmeans"] },
         value: { Labels: this.$store.state.df.labels, Cluster: false }
       },
-      newFilter:[],
       labelFilters: [],
       labelFilterNames: [], // array of array, represent filter name of each data points
       options: [{
@@ -283,9 +321,11 @@ export default {
       currentPoint: -1,
       spaceTab: 0,
       spaceTabs: [
-        { tab: "Label Space", icon: "mdi-tag"},
-        { tab: "Feature Space", icon: "mdi-pound"}
-      ]
+        { tab: "Label Space", icon: "mdi-tag", tsne_type: "label"},
+        { tab: "Feature Space", icon: "mdi-pound", tsne_type: "feature"}
+      ],
+      quickFilter: [],
+      entityFilter: []
     }
   },
   methods: {
@@ -306,50 +346,59 @@ export default {
       const filter_to_edit = this.labelFilters.filter(x => x.key === key)[0].conditions;
       filter_to_edit.push({field: "Labels", operator: "Contain", value: [], key: this.$store.state.helper.guid()});
     },
-    createFilter() {
+    quickCreateFilter() {
       // push filter to labelFilters array
-      const filter_id = this.$store.state.helper.guid()
-      const filter_name = this.newFilter[0].operator + " \"" + this.newFilter[0].value[0] + "\"" + (this.newFilter[0].value.length > 1? " and "+ (this.newFilter[0].value.length -1) + " more":"")
-      this.labelFilters.push({name: filter_name, conditions: this.newFilter, key: filter_id});
-      //reset new filter
-      this.newFilter = [{ field: "Labels", operator: "Contain", value: [], key: this.$store.state.helper.guid()}];
-      this.toggle.filterDialog = false;
-      //add new point to chart
-      let wanted_tsne_points = [];
-      console.log(this.searchData[this.labelFilters.length - 1].filterResult);
-      console.log("I am here2")
-      this.searchData[this.labelFilters.length - 1].filterResult.forEach( x => {
-        let new_point = this.$store.state.tsne.label[x];
-        new_point[2] = {name: filter_name, df_index: x, filter_id: filter_id};
-        wanted_tsne_points.push(new_point);
-        if(this.labelFilterNames[x]){
-            if(!this.labelFilterNames[x].map(y => y.name).includes(filter_name)){
-              this.labelFilterNames[x].push({name: filter_name, filter_id: filter_id});
+      //console.log(this.quickFilter)
+      let quickFilterValue = [];
+      for(let item of this.quickFilter){
+        quickFilterValue.push(this.$store.state.df.labels[item]);
+      }
+      let newQuickFilter = [{field: "Labels", operator: "Contain", key: this.$store.state.helper.guid(), value: quickFilterValue}];
+      let filter_id = this.$store.state.helper.guid();
+      let filter_name = newQuickFilter[0].operator + " \"" + newQuickFilter[0].value[0] + "\"" + (newQuickFilter[0].value.length > 1? " and "+ (newQuickFilter[0].value.length -1) + " more":"");
+      this.labelFilters.push({name: filter_name, conditions: newQuickFilter, key: filter_id});
+      //console.log("labelFilters",this.labelFilters);
+      for(let i=0; i<this.spaceTabs.length; i++){
+        //add new point to chart
+        let wanted_tsne_points = [];
+        console.log("filterResult",this.searchData[this.labelFilters.length - 1].filterResult);
+        this.searchData[this.labelFilters.length - 1].filterResult.forEach( x => {
+          let new_point = this.$store.state.tsne[this.spaceTabs[i].tsne_type][x];
+          new_point[2] = {name: filter_name, df_index: x, filter_id: filter_id};
+          wanted_tsne_points.push(new_point);
+          if(this.labelFilterNames[x]){
+              if(!this.labelFilterNames[x].map(y => y.name).includes(filter_name)){
+                this.labelFilterNames[x].push({name: filter_name, filter_id: filter_id});
+              }
+            }else{
+              this.labelFilterNames[x] = [{name: filter_name, filter_id: filter_id}];
             }
-          }else{
-            this.labelFilterNames[x] = [{name: filter_name, filter_id: filter_id}];
-          }
-        } );
-      //console.log(wanted_tsne_points);
-      const next_chart_idx = this.options[0].series.findIndex(x => x.filter_key === "toberemove");
-      //console.log(next_chart_idx);
-      if(next_chart_idx !== -1){
-        this.options[0].series[next_chart_idx].data = wanted_tsne_points;
-        this.options[0].series[next_chart_idx].filter_key = filter_id;
-        this.options[0].legend.data.push(filter_name);
-        console.log(this.option.legend);
-      }else{
-        this.options[0].series.push({name: filter_name, type: "scatter", data: [wanted_tsne_points], filter_key: filter_id});
+        });
+        console.log(wanted_tsne_points);
+        let next_chart_idx = this.options[0].series.findIndex(x => x.filter_key === "toberemove");
+        //console.log(next_chart_idx);
+        if(next_chart_idx !== -1){
+          this.options[i].series[next_chart_idx].data = wanted_tsne_points;
+          this.options[i].series[next_chart_idx].filter_key = filter_id;
+          this.options[i].legend.data.push(filter_name);
+          //console.log(this.option.legend);
+        }else{
+          this.options[i].series.push({name: filter_name, type: "scatter", data: wanted_tsne_points, filter_key: filter_id});
+        }
+        this.toggle.quickFilterMenu = false;
+        this.quickFilter = [];
       }
     },
     removeFilter(index) {
       const key_to_remove = this.labelFilters[index].key;
       const chart_idx_to_remove = this.options[0].series.findIndex(x => x.filter_key === key_to_remove);
-      // remove filter legend
-      this.options[0].legend.data = this.options[0].legend.data.filter(x => x != this.labelFilters[index].name);
-      // remove filter result from chart
-      this.options[0].series[chart_idx_to_remove].data = [];
-      this.options[0].series[chart_idx_to_remove].filter_key = "toberemove";
+      for(let i=0; i<this.spaceTabs.length; i++){
+        // remove filter legend
+        this.options[i].legend.data = this.options[i].legend.data.filter(x => x != this.labelFilters[index].name);
+        // remove filter result from chart
+        this.options[i].series[chart_idx_to_remove].data = [];
+        this.options[i].series[chart_idx_to_remove].filter_key = "toberemove";
+      }
       // remove filter
       this.labelFilters = this.labelFilters.filter(x => x.key !== key_to_remove);
     },
@@ -361,6 +410,47 @@ export default {
       }
       return labelArr;
     },
+    performEntityFilter() {
+      const that = this;
+      const wanted_item = [];
+      this.entityFilter.forEach(label_index =>{
+        that.$store.state.df.items.filter(x => x.labels[label_index] === 1)
+          .forEach(y => wanted_item.includes(y.index)? void(0):wanted_item.push(y.index));
+      })
+      if(this.$store.state.builtin.isBuiltIn){
+        
+        this.$store.dispatch('importDefaultTsne',{dataset: this.$store.state.builtin.dataset, entities: JSON.stringify(wanted_item)})
+        .then(x => {
+          if(x.success){
+            this.labelFilters = [];
+            this.labelFilterNames = [];
+            for(let i=0; i<this.spaceTabs.length; i++){
+              this.options[i].legend.data = [];
+              for(let j=0; j<seriesLength; j++){
+                this.options[i].series.pop();
+              }
+            }
+
+            axios.get(this.$store.state.helper.apiAddr+"/builtin/tsne", {params: {dataset: this.$store.state.builtin.dataset,
+            entities: JSON.stringify(wanted_item), type: "label"}})
+            .then(res => res.data)
+            .then(x => {
+              this.options[0].series=[{ symbolSize: 10, data: x.tsne, type: "scatter" }]
+            })
+
+            axios.get(this.$store.state.helper.apiAddr+"/builtin/tsne", {params: {dataset: this.$store.state.builtin.dataset,
+            entities: JSON.stringify(wanted_item), type: "feature"}})
+            .then(res => res.data)
+            .then(x => {
+              this.options[1].series=[{ symbolSize: 10, data: x.tsne, type: "scatter" }]
+            })
+
+            this.toggle.entityFilterMenu = false;
+          }
+        })
+        .catch(err => console.error(err));
+      }
+    },
     reloadWithNoLabel() {
       if(this.$store.state.builtin.isBuiltIn){
         this.isLoading.noLabel = true;
@@ -370,9 +460,11 @@ export default {
             axios.get([this.$store.state.helper.apiAddr,"/builtin/cluster?dataset=",this.$store.state.builtin.dataset,"&nolabel=1"].join(""))
             .then(res => res.data)
             .then(x => {
-              const seriesLength = JSON.parse(JSON.stringify(this.options[0].series.length));
-              for(let i=1; i<seriesLength; i++){
-                this.options[0].series.pop();
+              for(let i=0; i<this.spaceTabs.length; i++){
+                let seriesLength = JSON.parse(JSON.stringify(this.options[i].series.length));
+                for(let j=1; j<seriesLength; j++){
+                  this.options[i].series.pop();
+                }
               }
               this.options[0].series[0].data=[];
               this.options[0].series[0].data = this.$store.state.tsne.label;
@@ -410,6 +502,12 @@ export default {
         })
         .catch(err => console.error(err));
       }
+    },
+    spaceTabOnChange() {
+      console.log("selcting: " + this.spaceTabs[this.spaceTab].tsne_type)
+    },
+    chartDebug() {
+      console.log("options",this.options);
     }
   },
   computed: {
@@ -429,6 +527,7 @@ export default {
       return function(index){
         const key_to_find = this.labelFilters[index].key;
         const chart_idx_to_find = this.options[0].series.findIndex(x => x.filter_key === key_to_find);
+        //console.log(this.options[0].color[chart_idx_to_find],key_to_find);
         return this.options[0].color[chart_idx_to_find];
       }
     },
@@ -468,7 +567,7 @@ export default {
             let wanted_item = [];
             for(let label of val){
               let label_index = that.$store.state.df.labels.indexOf(label);
-              console.log(label_index);
+              //console.log(label_index);
               that.$store.state.df.items.filter(x => x.labels[label_index] === 1)
               .forEach(y => wanted_item.includes(y.index)? void(0):wanted_item.push(y.index));
             }
@@ -502,7 +601,7 @@ export default {
         }
         z.push({filter: filter, filterResult: wanted_index, key: this.$store.state.helper.guid()});
       }
-      console.log(z);
+      //console.log(z);
       return z;
     }
   }
