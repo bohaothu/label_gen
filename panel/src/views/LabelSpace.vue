@@ -418,7 +418,6 @@ export default {
           .forEach(y => wanted_item.includes(y.index)? void(0):wanted_item.push(y.index));
       })
       if(this.$store.state.builtin.isBuiltIn){
-        
         this.$store.dispatch('importDefaultTsne',{dataset: this.$store.state.builtin.dataset, entities: JSON.stringify(wanted_item)})
         .then(x => {
           if(x.success){
@@ -426,6 +425,7 @@ export default {
             this.labelFilterNames = [];
             for(let i=0; i<this.spaceTabs.length; i++){
               this.options[i].legend.data = [];
+              let seriesLength = JSON.parse(JSON.stringify(this.options[i].series.length));
               for(let j=0; j<seriesLength; j++){
                 this.options[i].series.pop();
               }

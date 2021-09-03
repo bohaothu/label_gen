@@ -15,7 +15,7 @@ const helperMethods = {
   }
 }
 
-const apiIP="192.168.1.3"
+const apiIP="127.0.0.1"
 const apiAddr="http://"+apiIP+":5001"
 
 export default new Vuex.Store({
@@ -94,9 +94,13 @@ export default new Vuex.Store({
     },
     importDefaultDataset(context, payload){
       const reqLoad = axios.get(apiAddr+"/builtin/load", {params: {dataset: payload.dataset, nolabel: payload.nolabel, entities: payload.entities}});
+      const reqTsneLabel = axios.get(apiAddr+"/builtin/tsne", {params: {dataset: payload.dataset, nolabel: payload.nolabel, entities: payload.entities, type: "label"}});
+      const reqTsneFeature = axios.get(apiAddr+"/builtin/tsne", {params: {dataset: payload.dataset, nolabel: payload.nolabel, entities: payload.entities, type: "feature"}});
       return axios.all([reqLoad, reqTsneLabel, reqTsneFeature])
       .then(axios.spread((...res) => {
         const resLoad = res[0].data;
+        const resTsneLabel = res[1].data;
+        const resTsneFeature = res[2].data;
         context.commit("addToState", {table: "df", field: "fields", value: resLoad.schema.fields });
         context.commit("addToState", {table: "df", field: "items", value: resLoad.data});
         context.commit("addToState", {table: "df", field: "labels_count", value: resLoad.labels_count});
@@ -108,6 +112,9 @@ export default new Vuex.Store({
         context.commit("addToState",{table: "builtin", field: "isBuiltIn", value: true});
         context.commit("addToState",{table: "builtin", field: "dataset", value: payload.dataset});
         context.commit("addToState",{table: "builtin", field: "noLabel", value: payload.nolabel? true:false});
+
+        context.commit("addToState",{table: "tsne", field: "label", value: resTsneLabel.tsne});
+        context.commit("addToState",{table: "tsne", field: "feature", value: resTsneFeature.tsne});
 
         return {success: true};
       }))

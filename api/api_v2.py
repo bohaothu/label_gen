@@ -7,7 +7,8 @@ import ujson
 from flask_cors import CORS
 from werkzeug.utils import secure_filename
 from helpers import gen_matrix, gen_label
-from skmultilearn.dataset import load_dataset
+#from skmultilearn.dataset import load_dataset
+from dataset import load_dataset
 from sklearn.svm import SVC
 from sklearn.manifold import TSNE
 from sklearn.cluster import KMeans
