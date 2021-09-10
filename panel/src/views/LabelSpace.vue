@@ -161,6 +161,28 @@
         </v-col>
       </v-row>
     </v-container>
+    <v-snackbar v-model="snackbar.success">{{snackbar.msg}}</v-snackbar>
+    <v-dialog v-model="this.toggle.clusterDialog" persistent max-width="320">
+      <v-card>
+        <v-card-title class="text-h5">
+          加载聚类结果？
+        </v-card-title>
+        <v-card-text>
+          <span>数据集 <b>{{this.$store.state.builtin.dataset}}</b></span> <br>
+          <span>聚类算法 <b>Kmeans (默认)</b></span> <br>
+          <span>聚类个数 <b>4 (默认)</b></span>
+        </v-card-text>
+        <v-card-actions>
+          <v-spacer></v-spacer>
+          <v-btn color="green darken-1" text @click="toggle.clusterDialog = false;">
+            Disagree
+          </v-btn>
+          <v-btn color="green darken-1" text @click="loadCluster">
+            Agree
+          </v-btn>
+        </v-card-actions>
+      </v-card>
+    </v-dialog>
   </div>
 </template>
 
@@ -188,44 +210,18 @@ export default {
   provide: {
     [THEME_KEY]: "light"
   },
+  created() {
+    if(this.$store.state.builtin.isBuiltIn){
+      this.$store.dispatch('importDefaultTsne',{dataset: this.$store.state.builtin.dataset, nolabel: 0});
+      this.toggle.clusterDialog = true;
+    }
+  },
   mounted() {
     for(let i=0; i<this.spaceTabs.length; i++){
       this.options[i].series[0].data = new Array();
       this.options[i].series[0].data = this.$store.state.tsne[this.spaceTabs[i].tsne_type];
     }
     this.newFilter = [{ field: "Labels", operator: "Contain", value: [], key: this.$store.state.helper.guid()}];
-    if(this.$store.state.builtin.isBuiltIn){
-      let requestUrl = `${this.$store.state.helper.apiAddr}/builtin/cluster?dataset=${this.$store.state.builtin.dataset}&nolabel=${this.$store.state.builtin.noLabel?1:0}`;
-      axios.get(requestUrl)
-      .then(res => res.data)
-      .then(x => {
-        const clusterResult = x.cluster_result;
-        for(let [idx,item] of clusterResult.entries()){
-          let filter_id = this.$store.state.helper.guid();
-          let filter_name = "Cluster " + idx;
-          let clusterCondition = [{field: "Cluster", operator: "Kmeans", value: item, key: this.$store.state.helper.guid()}];
-          this.labelFilters.push({name: filter_name, conditions: clusterCondition, key: filter_id});
-          for(let i=0; i<this.spaceTabs.length; i++) {
-            let wanted_tsne_points = [];
-            item.forEach( x => {
-              let new_point = this.$store.state.tsne[this.spaceTabs[i].tsne_type][x];
-              new_point[2] = {name: filter_name, df_index: x, filter_id: filter_id};
-              wanted_tsne_points.push(new_point);
-              if(this.labelFilterNames[x]){
-                if(!this.labelFilterNames[x].map(y => y.name).includes(filter_name)){
-                  this.labelFilterNames[x].push({name: filter_name, filter_id: filter_id});
-                }
-              }else{
-                this.labelFilterNames[x] = [{name: filter_name, filter_id: filter_id}];
-              }
-            });
-            this.options[i].series.push({name: filter_name, type: "scatter", data: wanted_tsne_points, filter_key: filter_id});
-            this.options[i].legend.data.push(filter_name);
-          }
-        }
-      })
-      .catch(err => console.error(err))
-    };
   },
   data() {
     return {
@@ -233,7 +229,8 @@ export default {
         filterDialog: false,
         editorDialog: false,
         quickFilterMenu: false,
-        entityFilterMenu: false
+        entityFilterMenu: false,
+        clusterDialog: false
       },
       isLoading: {
         noLabel: false
@@ -325,7 +322,11 @@ export default {
         { tab: "Feature Space", icon: "mdi-pound", tsne_type: "feature"}
       ],
       quickFilter: [],
-      entityFilter: []
+      entityFilter: [],
+      snackbar: {
+        success: false,
+        msg: ""
+      }
     }
   },
   methods: {
@@ -508,6 +509,45 @@ export default {
     },
     chartDebug() {
       console.log("options",this.options);
+    },
+    loadCluster() {
+      let startTime = Date.now();
+      if(this.$store.state.builtin.isBuiltIn){
+        let requestUrl = `${this.$store.state.helper.apiAddr}/builtin/cluster?dataset=${this.$store.state.builtin.dataset}&nolabel=${this.$store.state.builtin.noLabel?1:0}`;
+        axios.get(requestUrl)
+        .then(res => res.data)
+        .then(x => {
+          const clusterResult = x.cluster_result;
+          for(let [idx,item] of clusterResult.entries()){
+            let filter_id = this.$store.state.helper.guid();
+            let filter_name = "Cluster " + idx;
+            let clusterCondition = [{field: "Cluster", operator: "Kmeans", value: item, key: this.$store.state.helper.guid()}];
+            this.labelFilters.push({name: filter_name, conditions: clusterCondition, key: filter_id});
+            for(let i=0; i<this.spaceTabs.length; i++) {
+              let wanted_tsne_points = [];
+              item.forEach( x => {
+                let new_point = this.$store.state.tsne[this.spaceTabs[i].tsne_type][x];
+                new_point[2] = {name: filter_name, df_index: x, filter_id: filter_id};
+                wanted_tsne_points.push(new_point);
+                if(this.labelFilterNames[x]){
+                  if(!this.labelFilterNames[x].map(y => y.name).includes(filter_name)){
+                    this.labelFilterNames[x].push({name: filter_name, filter_id: filter_id});
+                  }
+                }else{
+                  this.labelFilterNames[x] = [{name: filter_name, filter_id: filter_id}];
+                }
+              });
+              this.options[i].series.push({name: filter_name, type: "scatter", data: wanted_tsne_points, filter_key: filter_id});
+              this.options[i].legend.data.push(filter_name);
+            }
+          }
+          let elaspedTime = Date.now() - startTime;
+          this.toggle.clusterDialog = false;
+          this.snackbar.success = true;
+          this.snackbar.msg = "加载聚类结果成功 用时 "+ elaspedTime + " ms";
+        })
+        .catch(err => console.error(err))
+      };
     }
   },
   computed: {
