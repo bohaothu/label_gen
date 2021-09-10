@@ -1,14 +1,16 @@
-from flask import Flask, jsonify, request
-from flask import flash, redirect, url_for
-from flask import send_from_directory
 import numpy as np
 import pandas as pd
 import ujson
+import os
+from flask import Flask, jsonify, request
+from flask import flash, redirect, url_for
+from flask import send_from_directory
 from flask_cors import CORS
 from werkzeug.utils import secure_filename
-from helpers import gen_matrix, gen_label
+from helper.helpers import gen_matrix, gen_label
 #from skmultilearn.dataset import load_dataset
-from dataset import load_dataset
+#from helper.dataset import load_dataset
+from helper.dataset_local import load_dataset, available_datasets
 from sklearn.svm import SVC
 from sklearn.manifold import TSNE
 from sklearn.cluster import KMeans
@@ -33,7 +35,7 @@ def hello_echo():
 
 @app.route('/builtin/list')
 def builtin_list():
-  available=sorted(["emotions","birds","medical","genbase"])
+  available=sorted(available_datasets())
   return ujson.dumps(available), 200
 
 @app.route('/builtin/load')
@@ -44,6 +46,7 @@ def builtin_load():
 
   # load dataset and transform to pandas dataframe
   X_train, y_train, feature_names, label_names = load_dataset(dataset_name, 'train')
+
   df=pd.DataFrame.sparse.from_spmatrix(X_train)
   df.columns=list(map(lambda x: x[0], feature_names))
 
@@ -198,7 +201,6 @@ def builtin_predict():
   predict_proba = clf.predict_proba(X_test)
 
   return ujson.dumps(predict_proba.todense().tolist())
-
 
 if __name__ == "__main__":
   app.run(debug=True,host="0.0.0.0",port=5001)
