@@ -94,14 +94,14 @@
                     -->
                   </span>
                 </v-card-title>
-                <v-card-text class="px-0 pb-0 mb-0" style="overflow-y: scroll; height: 180px">
+                <v-card-text class="px-0 pb-0 mb-0 fill-height">
                   <v-row v-for="(item, idx) in labelFilters" :key="item.key" dense justify="space-between">
                     <v-col cols="10">
-                      <v-dialog v-model="toggle.editingDialog" width="960">
+                    <v-dialog v-model="toggle.editorDialog" width="960">
                     <template v-slot:activator="{ on, attrs }">
                       <v-tooltip bottom>
                         <template v-slot:activator="{ on, attrs }">
-                          <v-btn color="warning" style="width: 100%" small block depressed outlined v-bind="attrs" v-on="on">
+                          <v-btn color="warning" style="width: 100%" small block depressed outlined v-bind="attrs" v-on="on" @click="toggle.editorDialog = true">
                             <div class="d-flex align-center" style="margin-left: -12px; width:100%; ">
                             <span :style="{'color': getColor(idx),'margin-top': '-0.2rem', 'font-size': '2rem'}">&bull;</span>
                             <span style="text-align: left; width: 16rem; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;">{{ item.name }}</span>
@@ -112,26 +112,11 @@
                       </v-tooltip>
                     </template>
                   <v-card class="px-4 pb-2">
-                    <v-card-title class="pl-2 pb-4">Edit filter "{{item.name}}"</v-card-title>
+                    <v-card-title class="pl-2 pb-4">"{{item.name}}"</v-card-title>
                     <v-card-text class="pl-2">
-                      <v-row v-for="(condition, idx) in getFilter(item.key)" :key="condition.key">
-                        <v-col cols="3" class="pb-0">
-                          <v-select v-model="condition.field" :items="filterAllMethods.field" style="width: 100%" dense outlined></v-select>
-                        </v-col>
-                        <v-col cols="3" class="pb-0">
-                          <v-select v-model="condition.operator" :items="filterAllMethods.operator[condition.field]" style="width: 100%" dense outlined></v-select>
-                        </v-col>
-                        <v-col cols="5" class="pb-0">
-                          <v-select v-model="condition.value" :items="filterAllMethods.value[condition.field]" :disabled="!filterAllMethods.value[condition.field]" style="width: 100%" chips multiple dense outlined></v-select>
-                        </v-col>
-                        <v-col cols="2" class="pb-0">
-                          <v-btn v-if="idx < getFilter(item.key).length - 1" color="secondary" @click="removeEditCondition(item.key,idx)"><v-icon>mdi-minus</v-icon></v-btn>
-                          <v-btn v-if="idx == getFilter(item.key).length - 1" color="primary" @click="addEditCondition(item.key)"><v-icon>mdi-plus</v-icon></v-btn>
-                        </v-col>
-                      </v-row>
+                      show chart here
                     </v-card-text>
                     <v-card-action>
-                      <!--<v-btn color="primary" @click="saveEditedFilter">Save Filter</v-btn>-->
                     </v-card-action>
                   </v-card>
                 </v-dialog>
@@ -540,6 +525,9 @@ export default {
               this.options[i].series.push({name: filter_name, type: "scatter", data: wanted_tsne_points, filter_key: filter_id});
               this.options[i].legend.data.push(filter_name);
             }
+          }
+          for(let i=0; i<this.spaceTabs.length; i++){
+            this.options[i].series[0].data = [[0,0]]
           }
           let elaspedTime = Date.now() - startTime;
           this.toggle.clusterDialog = false;
