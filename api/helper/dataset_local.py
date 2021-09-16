@@ -11,7 +11,7 @@ def get_package_dir():
     return package_directory
 
 def available_datasets():
-    return ["emotions","birds","medical","genbase"]
+    return ["emotions","birds","medical","genbase","delicious","bibtex"]
 
 def load_dataset(dataset_name, variant):
     with open(os.path.join(dataset_directory, dataset_name,str(variant)+'.pickle'), 'rb') as f:

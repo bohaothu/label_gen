@@ -53,8 +53,6 @@ export default {
     nav_items: [
       { title: 'Import Data', icon: 'mdi-view-dashboard', link: "/" },
       { title: 'Label Space', icon: 'mdi-image', link: "/labelspace" },
-      { title: '数据列表', icon: 'mdi-file-table', link: "/viewdata" },
-      { title: 'Statistic', icon: 'mdi-poll-box', link: "/stat" },
       { title: 'Debug', icon: 'mdi-help-box', link: "/about" },
     ]
   }),
