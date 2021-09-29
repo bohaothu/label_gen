@@ -37,10 +37,6 @@ export default new Vuex.Store({
       {text:"标准差", value: "std"}, {text:"变异数", value: "var"}],
       items: [{}]
     },
-    snackbar: {
-      status: false,
-      msg: ""
-    },
     mask: {
       headers: [],
       labels: [],
@@ -70,6 +66,12 @@ export default new Vuex.Store({
     RESETMASK(state,payload){
       for(let key in state.mask){
         state.mask[key] = []
+      }
+    },
+    resetStateTable(state,payload){
+      let tableToBeReset = state[payload.table];
+      for(let key in tableToBeReset){
+        tableToBeReset[key] = [];
       }
     }
   },
@@ -112,6 +114,8 @@ export default new Vuex.Store({
         /*context.commit("addToState",{table: "tsne", field: "label", value: resTsneLabel.tsne});
         context.commit("addToState",{table: "tsne", field: "feature", value: resTsneFeature.tsne});*/
 
+        context.commit("resetStateTable",{table: "tsne"});
+
         return {success: true};
       })
       .catch(err => {
@@ -139,31 +143,6 @@ export default new Vuex.Store({
     },
     noLabelDefaultDataset(context, payload){
       context.commit("addToState",{table: "builtin", field: "noLabel", value: payload.nolabel});
-    },
-    importDefaultSuggestion(context, payload){
-      let startTime = Date.now()
-      return axios.get(apiAddr+"/builtin/predict", {params: {dataset: payload.dataset}})
-      .then(res => {
-        context.commit("addToState",{table: "df", field: "suggestion", value: res.data})
-        return true
-      })
-      .then(y => {
-        let elaspedTime = Date.now() - startTime
-        if(y) context.commit("showSnackbar",{msg: "生成推荐成功，用时： "+ elaspedTime + " ms"})
-      }).catch(err => {
-        console.error(err)
-        return false
-      })
-    },
-    fetchFakeSuggestion(context, payload){
-      return axios.get(apiAddr+"/random/suggest", {params: {row: payload.row_num, features: payload.features_num, labels: payload.labels_num}})
-      .then(res => {
-        context.commit("addToState",{table: "df", field: "suggestion", value: res.data})
-        return true
-      }).catch(err => {
-        console.error(err)
-        return false
-      })
     },
     submitCsv(context, payload){
       let formData = new FormData()

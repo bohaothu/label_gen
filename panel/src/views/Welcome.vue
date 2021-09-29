@@ -98,15 +98,20 @@ export default {
       if(this.builtInListSelect){
         let startTime = Date.now();
         this.isLoading.builtIn = true;
-        this.$store.dispatch('resetMask');
+        /*this.$store.dispatch('resetMask');*/
         this.$store.dispatch('importDefaultDataset',{dataset: this.builtInListSelect, nolabel: 0})
         .then(x => {
           if(x.success){
-            let elaspedTime = Date.now() - startTime;
-            this.isLoading.builtIn = false;
-            this.snack.success = this.$store.state.df.items.length? true:false;
-            this.snack.msg = "载入 "+this.builtInListSelect+" 成功，用时 "+ elaspedTime + " ms";
-            this.isFinished.builtIn = true;
+            this.$store.dispatch('importDefaultTsne',{dataset: this.builtInListSelect, nolabel: 0})
+            .then(x => {
+              if(x.success){
+                let elapsedTime = Date.now() - startTime;
+                this.snack.msg = "加载 "+this.builtInListSelect+" 成功，用时 "+ elapsedTime + " ms";
+                this.snack.success = this.$store.state.df.items.length? true:false;
+                this.isLoading.builtIn = false;
+                this.isFinished.builtIn = true;
+              }
+            });
           }
         });
       }else{

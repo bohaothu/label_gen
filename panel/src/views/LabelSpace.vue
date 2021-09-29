@@ -114,12 +114,12 @@
                   <v-card class="px-4 pb-2">
                     <v-card-title class="pl-2 pb-4">"{{item.name}}"</v-card-title>
                     <v-card-text class="pl-2">
-                      show chart here
+                      {{idx}} show chart here
                     </v-card-text>
                     <v-card-action>
                     </v-card-action>
                   </v-card>
-                </v-dialog>
+                    </v-dialog>
                     </v-col>
                     <v-col cols="2">
                       <v-btn small text @click="removeFilter(idx)"><v-icon>mdi-delete-forever</v-icon></v-btn>
@@ -197,7 +197,6 @@ export default {
   },
   created() {
     if(this.$store.state.builtin.isBuiltIn){
-      this.$store.dispatch('importDefaultTsne',{dataset: this.$store.state.builtin.dataset, nolabel: 0});
       this.toggle.clusterDialog = true;
     }
   },
@@ -512,7 +511,8 @@ export default {
               let wanted_tsne_points = [];
               item.forEach( x => {
                 let new_point = this.$store.state.tsne[this.spaceTabs[i].tsne_type][x];
-                new_point[2] = {name: filter_name, df_index: x, filter_id: filter_id};
+                /*console.log(new_point)
+                new_point[2] = {name: filter_name, df_index: x, filter_id: filter_id};*/
                 wanted_tsne_points.push(new_point);
                 if(this.labelFilterNames[x]){
                   if(!this.labelFilterNames[x].map(y => y.name).includes(filter_name)){
@@ -522,12 +522,10 @@ export default {
                   this.labelFilterNames[x] = [{name: filter_name, filter_id: filter_id}];
                 }
               });
-              this.options[i].series.push({name: filter_name, type: "scatter", data: wanted_tsne_points, filter_key: filter_id});
+              this.options[i].series.push({name: filter_name, type: "scatter", data: wanted_tsne_points,
+              filter_key: filter_id, df_indexs: JSON.parse(JSON.stringify(item))});
               this.options[i].legend.data.push(filter_name);
             }
-          }
-          for(let i=0; i<this.spaceTabs.length; i++){
-            this.options[i].series[0].data = [[0,0]]
           }
           let elaspedTime = Date.now() - startTime;
           this.toggle.clusterDialog = false;
