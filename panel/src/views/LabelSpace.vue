@@ -7,7 +7,7 @@
             <v-card-text class="fill-height d-flex flex-column align-center justify-center rounded">
               <v-progress-circular v-if="!options[spaceTab].series[0].data.length" indeterminate></v-progress-circular>
               <v-chart v-if="options[spaceTab].series[0].data.length" style="height: 100%; width: 100%;" :option="options[spaceTab]" autoresize/>
-              <v-btn-toggle v-model="spaceTab" @change="spaceTabOnChange">
+              <v-btn-toggle v-if="options[spaceTab].series[0].data.length" v-model="spaceTab" @change="spaceTabOnChange">
                 <v-btn v-for="item in spaceTabs" :key="item.tab">
                   <v-icon small left>{{ item.icon }}</v-icon> {{ item.tab }}
                 </v-btn>
@@ -111,12 +111,27 @@
                           <span>{{item.name}} {{getFilterItemCount(item.key)}}</span>
                       </v-tooltip>
                     </template>
-                  <v-card class="px-4 pb-2">
-                    <v-card-title class="pl-2 pb-4">"{{item.name}}"</v-card-title>
+                  <v-card class="px-4 pb-2" style="height: 50vh; width: 100vw">
+                    <v-card-title class="pl-2 pb-4">
+                      "{{item.name}}"
+                    </v-card-title>
                     <v-card-text class="pl-2">
-                      {{idx}} show chart here
+                        <v-form>
+                          <v-row>
+                              <v-col cols="4">
+                                <v-select v-model="formData.figureField" :items="getDatasetFields" dense outlined></v-select>
+                              </v-col>
+                            </v-row>
+                        </v-form>
+                      <v-row>
+                        <v-chart :option="dialogChartOptions" autoresize/>
+                      </v-row>
+                      <v-row>
+                        {{options[0].series[idx].df_indexs}}
+                      </v-row>
                     </v-card-text>
                     <v-card-action>
+                      {{idx}}
                     </v-card-action>
                   </v-card>
                     </v-dialog>
@@ -180,6 +195,7 @@ import VChart, { THEME_KEY } from "vue-echarts";
 import axios from 'axios';
 
 use([
+  BarChart,
   CanvasRenderer,
   ScatterChart,
   TitleComponent,
@@ -234,6 +250,23 @@ export default {
       },
       labelFilters: [],
       labelFilterNames: [], // array of array, represent filter name of each data points
+      formData: {
+        figureField: "",
+        figureType: ""
+      },
+      dialogChartOptions: {
+        xAxis: {
+          type: 'category',
+          data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
+        },
+        yAxis: {
+          type: 'value'
+        },
+        series: [{
+          data: [120, 200, 150, 80, 70, 110, 130],
+          type: 'bar'
+        }]
+      },
       options: [{
         xAxis: {
           type: "value"
@@ -511,8 +544,8 @@ export default {
               let wanted_tsne_points = [];
               item.forEach( x => {
                 let new_point = this.$store.state.tsne[this.spaceTabs[i].tsne_type][x];
-                /*console.log(new_point)
-                new_point[2] = {name: filter_name, df_index: x, filter_id: filter_id};*/
+                /*console.log(new_point)*/
+                new_point[2] = {name: filter_name, df_index: x, filter_id: filter_id};
                 wanted_tsne_points.push(new_point);
                 if(this.labelFilterNames[x]){
                   if(!this.labelFilterNames[x].map(y => y.name).includes(filter_name)){
@@ -537,6 +570,12 @@ export default {
     }
   },
   computed: {
+    getDatasetFields(){
+      return this.$store.state.df.fields.map(x => x.name).filter(y => {
+        const blackList = ["index","labels"];
+        return !blackList.includes(y);
+      })
+    },
     getCurrentPoint(){
       if(this.currentPoint >= 0){
         const current_item = this.$store.state.df.items[this.currentPoint];
@@ -629,6 +668,10 @@ export default {
       }
       //console.log(z);
       return z;
+    },
+    filterOnClick(event,index) {
+      console.log(event,index)
+      //toggle.editorDialog[idx] = true;
     }
   }
 }

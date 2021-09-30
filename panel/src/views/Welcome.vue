@@ -2,6 +2,7 @@
   <div class="about">
     <v-container fluid>
     <v-row>
+      <!--
       <v-col cols="12" md="6">
         <v-card class="px-4 pb-4 fill-height" elevation="1">
           <v-card-title class="pl-0">上传数据</v-card-title>
@@ -15,6 +16,7 @@
           </v-card-action>
         </v-card>
       </v-col>
+      -->
       <v-col cols="12" md="6">
         <v-card class="px-4 pb-4 fill-height" elevation="1">
           <v-card-title class="pl-0">生成随机数据</v-card-title>
