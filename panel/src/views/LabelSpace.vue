@@ -97,8 +97,6 @@
                 <v-card-text class="px-0 pb-0 mb-0 fill-height">
                   <v-row v-for="(item, idx) in labelFilters" :key="item.key" dense justify="space-between">
                     <v-col cols="10">
-                    <v-dialog v-model="toggle.editorDialog" width="960">
-                    <template v-slot:activator="{ on, attrs }">
                       <v-tooltip bottom>
                         <template v-slot:activator="{ on, attrs }">
                           <v-btn color="warning" style="width: 100%" small block depressed outlined v-bind="attrs" v-on="on" @click="toggle.editorDialog = true">
@@ -110,31 +108,6 @@
                         </template>
                           <span>{{item.name}} {{getFilterItemCount(item.key)}}</span>
                       </v-tooltip>
-                    </template>
-                  <v-card class="px-4 pb-2" style="height: 50vh; width: 100vw">
-                    <v-card-title class="pl-2 pb-4">
-                      "{{item.name}}"
-                    </v-card-title>
-                    <v-card-text class="pl-2">
-                        <v-form>
-                          <v-row>
-                              <v-col cols="4">
-                                <v-select v-model="formData.figureField" :items="getDatasetFields" dense outlined></v-select>
-                              </v-col>
-                            </v-row>
-                        </v-form>
-                      <v-row>
-                        <v-chart :option="dialogChartOptions" autoresize/>
-                      </v-row>
-                      <v-row>
-                        {{options[0].series[idx].df_indexs}}
-                      </v-row>
-                    </v-card-text>
-                    <v-card-action>
-                      {{idx}}
-                    </v-card-action>
-                  </v-card>
-                    </v-dialog>
                     </v-col>
                     <v-col cols="2">
                       <v-btn small text @click="removeFilter(idx)"><v-icon>mdi-delete-forever</v-icon></v-btn>
@@ -189,8 +162,8 @@
 <script>
 import { use } from "echarts/core";
 import { CanvasRenderer } from "echarts/renderers";
-import { ScatterChart } from "echarts/charts";
-import { TitleComponent, TooltipComponent, LegendComponent } from "echarts/components";
+import { BarChart, ScatterChart } from "echarts/charts";
+import { GridComponent, LegendComponent, TitleComponent, TooltipComponent } from "echarts/components";
 import VChart, { THEME_KEY } from "vue-echarts";
 import axios from 'axios';
 
