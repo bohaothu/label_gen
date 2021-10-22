@@ -1,6 +1,5 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import ViewData from '../views/ViewData.vue'
 import Stat from '../views/Stat.vue'
 import Welcome from '../views/Welcome.vue'
 import LabelSpace from '../views/LabelSpace.vue'
@@ -12,11 +11,6 @@ const routes = [
     path: '/',
     name: 'Welcome',
     component: Welcome
-  },
-  {
-    path: '/viewdata',
-    name: 'ViewData',
-    component: ViewData
   },
   {
     path: '/stat',
