@@ -1,8 +1,6 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Stat from '../views/Stat.vue'
 import Welcome from '../views/Welcome.vue'
-import LabelSpace from '../views/LabelSpace.vue'
 
 Vue.use(VueRouter)
 
@@ -15,12 +13,12 @@ const routes = [
   {
     path: '/stat',
     name: 'Stat',
-    component: Stat
+    component: () => import('../views/Stat.vue')
   },
   {
     path: '/labelspace',
     name: 'LabelSpace',
-    component: LabelSpace
+    component: () => import('../views/LabelSpace.vue')
   },
   {
     path: '/about',

@@ -99,9 +99,9 @@
                     <v-col cols="10">
                       <v-tooltip bottom>
                         <template v-slot:activator="{ on, attrs }">
-                          <v-btn color="warning" style="width: 100%" small block depressed outlined v-bind="attrs" v-on="on" @click="toggle.editorDialog = true">
+                          <v-btn color="warning" style="width: 100%" small block depressed outlined v-bind="attrs" v-on="on" @click="filterOnClick(item)">
                             <div class="d-flex align-center" style="margin-left: -12px; width:100%; ">
-                            <span :style="{'color': getColor(idx),'margin-top': '-0.2rem', 'font-size': '2rem'}">&bull;</span>
+                            <span :style="{'color': options[0].color[idx+1],'margin-top': '-0.2rem', 'font-size': '2rem'}">&bull;</span>
                             <span style="text-align: left; width: 16rem; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;">{{ item.name }}</span>
                             </div>
                           </v-btn>
@@ -156,6 +156,9 @@
         </v-card-actions>
       </v-card>
     </v-dialog>
+    <v-card v-if="toggle.subChartDialog" style="position: absolute; top: 16%; left: 48px; width: 800px; height: 480px">
+      <v-card-text>{{subChartDialog.currentFilterId}} {{getFilterItemIndexByFilterId}}</v-card-text>
+    </v-card>
   </div>
 </template>
 
@@ -203,7 +206,8 @@ export default {
         editorDialog: false,
         quickFilterMenu: false,
         entityFilterMenu: false,
-        clusterDialog: false
+        clusterDialog: false,
+        subChartDialog: false
       },
       isLoading: {
         noLabel: false
@@ -226,19 +230,6 @@ export default {
       formData: {
         figureField: "",
         figureType: ""
-      },
-      dialogChartOptions: {
-        xAxis: {
-          type: 'category',
-          data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
-        },
-        yAxis: {
-          type: 'value'
-        },
-        series: [{
-          data: [120, 200, 150, 80, 70, 110, 130],
-          type: 'bar'
-        }]
       },
       options: [{
         xAxis: {
@@ -316,6 +307,22 @@ export default {
       snackbar: {
         success: false,
         msg: ""
+      },
+      subChartDialog: {
+        currentFilterId: "",
+        options: {
+          xAxis: {
+            type: 'category',
+            data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
+          },
+          yAxis: {
+            type: 'value'
+          },
+          series: [{
+            data: [120, 200, 150, 80, 70, 110, 130],
+            type: 'bar'
+          }]
+        }
       }
     }
   },
@@ -499,6 +506,7 @@ export default {
     },
     chartDebug() {
       console.log("options",this.options);
+      console.log(this.labelFilters)
     },
     loadCluster() {
       let startTime = Date.now();
@@ -540,7 +548,11 @@ export default {
         })
         .catch(err => console.error(err))
       };
-    }
+    },
+    filterOnClick(event){
+      this.subChartDialog.currentFilterId = event.key;
+      this.toggle.subChartDialog = true;
+    },
   },
   computed: {
     getDatasetFields(){
@@ -559,14 +571,6 @@ export default {
           currentPoint_html += `<h5 style="display: inline">${item}</h5> ${current_item[item]}</br>`;
         }
         return currentPoint_html;
-      }
-    },
-    getColor() {
-      return function(index){
-        const key_to_find = this.labelFilters[index].key;
-        const chart_idx_to_find = this.options[0].series.findIndex(x => x.filter_key === key_to_find);
-        //console.log(this.options[0].color[chart_idx_to_find],key_to_find);
-        return this.options[0].color[chart_idx_to_find];
       }
     },
     getTooltipBull(){
@@ -642,9 +646,13 @@ export default {
       //console.log(z);
       return z;
     },
-    filterOnClick(event,index) {
-      console.log(event,index)
-      //toggle.editorDialog[idx] = true;
+    getFilterItemIndexByFilterId() {
+      let z=[];
+      let current_filter = this.labelFilters.find(x => x.key = this.subChartDialog.currentFilterId)
+      for(let cond of current_filter.conditions){
+        cond.value.forEach(x => z.includes(x)? void(0):z.push(x))
+      }
+      return z;
     }
   }
 }
