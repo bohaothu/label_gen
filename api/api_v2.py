@@ -186,21 +186,47 @@ def builtin_cluster():
 
   return ujson.dumps({"cluster_result": cluster_result, "cluster_num": cluster_num, "method": "kmeans"}), 200
 
-@app.route('/builtin/predict')
-def builtin_predict():
+@app.route('/builtin/search')
+def builtin_search():
   dataset_name=request.args.get("dataset")
+  field_name=request.args.get("field")
+  entities=request.args.get("entities",default="all")
+  drop_nolabel=True if int(request.args.get("nolabel",default="0")) else False
 
-  # load training and testing set
+  # load dataset and transform to pandas dataframe
   X_train, y_train, feature_names, label_names = load_dataset(dataset_name, 'train')
-  X_test, y_test, _, _ = load_dataset(dataset_name, 'test')
 
-  # create classifier
-  clf = BinaryRelevance(classifier=SVC(probability=True), require_dense=None)
-  clf.fit(X_train, y_train)
+  df=pd.DataFrame.sparse.from_spmatrix(X_train)
+  df.columns=list(map(lambda x: x[0], feature_names))
 
-  predict_proba = clf.predict_proba(X_test)
+  #drop instance with no label when "nolabel=1"
+  if(drop_nolabel):
+    label_exist=[]
+    y_sum = np.sum(y_train.todense(),axis=1)
+    for i in range(len(y_train.todense())):
+      if np.sum(y_sum[i]) > 0:
+        label_exist.append(True)
+      else:
+        label_exist.append(False)
+    df = df[label_exist]
+    df_y = y_train[label_exist]
+  else:
+    df_y = y_train
 
-  return ujson.dumps(predict_proba.todense().tolist())
+  # filter entities
+  try:
+    wanted_index=ujson.loads(entities)
+  except:
+    wanted_index=None
+
+  if(wanted_index):
+    wanted_mask = [False] * len(df)
+    for item in wanted_index:
+      wanted_mask[int(item)] = True
+    df, df_y = df[wanted_mask], df_y[wanted_mask]
+
+  return df[field_name].value_counts().to_json(orient="columns"), 200
+
 
 if __name__ == "__main__":
   app.run(debug=True,host="127.0.0.1",port=5001)

@@ -11,11 +11,6 @@ const routes = [
     component: Welcome
   },
   {
-    path: '/stat',
-    name: 'Stat',
-    component: () => import('../views/Stat.vue')
-  },
-  {
     path: '/labelspace',
     name: 'LabelSpace',
     component: () => import('../views/LabelSpace.vue')

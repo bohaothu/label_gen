@@ -101,7 +101,7 @@
                         <template v-slot:activator="{ on, attrs }">
                           <v-btn color="warning" style="width: 100%" small block depressed outlined v-bind="attrs" v-on="on" @click="filterOnClick(item)">
                             <div class="d-flex align-center" style="margin-left: -12px; width:100%; ">
-                            <span :style="{'color': options[0].color[idx+1],'margin-top': '-0.2rem', 'font-size': '2rem'}">&bull;</span>
+                            <span :style="{'color': getFilterColor(idx),'margin-top': '-0.2rem', 'font-size': '2rem'}">&bull;</span>
                             <span style="text-align: left; width: 16rem; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;">{{ item.name }}</span>
                             </div>
                           </v-btn>
@@ -156,8 +156,15 @@
         </v-card-actions>
       </v-card>
     </v-dialog>
-    <v-card v-if="toggle.subChartDialog" style="position: absolute; top: 16%; left: 48px; width: 800px; height: 480px">
-      <v-card-text>{{subChartDialog.currentFilterId}} {{getFilterItemIndexByFilterId}}</v-card-text>
+    <v-card v-if="toggle.subChartDialog" style="position: absolute; top: 16%; left: 40px; width: 800px; height: 480px">
+      <v-card-title>
+        {{subChartDialog.currentTitle}}
+        <v-btn icon style="position: absolute; left: 752px" @click="toggle.subChartDialog = false"><v-icon>mdi-close</v-icon></v-btn>
+      </v-card-title>
+      <v-card-text>
+        <v-chart style="height: 400px; width: 100%;" :option="subChartDialog.options" autoresize/>
+      </v-card-text>
+      
     </v-card>
   </div>
 </template>
@@ -190,6 +197,11 @@ export default {
   created() {
     if(this.$store.state.builtin.isBuiltIn){
       this.toggle.clusterDialog = true;
+    }
+    if(!this.$store.state.df.items.length){
+      this.snackbar.msg = "无数据，即将跳转回主页";
+      this.snackbar.success = true;
+      setTimeout(() => {this.$router.push('/')}, 3000); // redirect after 3 sec if no data
     }
   },
   mounted() {
@@ -310,16 +322,18 @@ export default {
       },
       subChartDialog: {
         currentFilterId: "",
+        currentTitle: "",
         options: {
           xAxis: {
             type: 'category',
-            data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
+            data: [],
+            nameLocation: 'center'
           },
           yAxis: {
             type: 'value'
           },
           series: [{
-            data: [120, 200, 150, 80, 70, 110, 130],
+            data: [],
             type: 'bar'
           }]
         }
@@ -551,8 +565,32 @@ export default {
     },
     filterOnClick(event){
       this.subChartDialog.currentFilterId = event.key;
-      this.toggle.subChartDialog = true;
+      this.subChartDialog.currentTitle = event.name;
+      let wanted_item=[];
+      for(let cond of event.conditions){
+        cond.value.forEach(x => wanted_item.includes(x)? void(0):wanted_item.push(x))
+      }
+      axios.get(this.$store.state.helper.apiAddr+"/builtin/search",
+      {params: {dataset: this.$store.state.builtin.dataset,
+      entities: JSON.stringify(wanted_item), field: "location"}})
+      .then(res => res.data)
+      .then(x => {
+        let xAxisData = Object.keys(x);
+        let yAxisData = [];
+        for(let val of xAxisData){
+          yAxisData.push(x[val]);
+        }
+        this.subChartDialog.options.xAxis.data = xAxisData;
+        this.subChartDialog.options.series[0].data = yAxisData;
+        this.subChartDialog.options.xAxis.name = "location";
+      })
+      .then(this.toggle.subChartDialog = true)
     },
+    getFilterColor(filter_index){
+      let id_to_find = this.labelFilters[filter_index].key;
+      let color_index = this.options[0].series.findIndex(x => x.filter_key === id_to_find);
+      return color_index? this.options[0].color[color_index]:this.options[0].color[0]
+    }
   },
   computed: {
     getDatasetFields(){
@@ -644,14 +682,6 @@ export default {
         z.push({filter: filter, filterResult: wanted_index, key: this.$store.state.helper.guid()});
       }
       //console.log(z);
-      return z;
-    },
-    getFilterItemIndexByFilterId() {
-      let z=[];
-      let current_filter = this.labelFilters.find(x => x.key = this.subChartDialog.currentFilterId)
-      for(let cond of current_filter.conditions){
-        cond.value.forEach(x => z.includes(x)? void(0):z.push(x))
-      }
       return z;
     }
   }

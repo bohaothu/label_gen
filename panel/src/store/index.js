@@ -24,23 +24,11 @@ export default new Vuex.Store({
       fields: [],
       items: [],
       labels: [], // labels_name
-      labels_count: [],
-      suggestion: []
+      labels_count: []
     },
     tsne: {
       label: [],
       feature: []
-    },
-    stat: {
-      headers: [{text: "Feature", value: "feature_name"}, {text:"最小值", value: "min"},
-      {text:"最大值", value: "max"}, {text:"中位数", value: "median"}, {text:"众数", value: "mean"},
-      {text:"标准差", value: "std"}, {text:"变异数", value: "var"}],
-      items: [{}]
-    },
-    mask: {
-      headers: [],
-      labels: [],
-      builtInDataset: ""
     },
     builtin: {
       isBuiltIn: false,
@@ -58,15 +46,6 @@ export default new Vuex.Store({
     addToState(state, payload){
       // table: df, field: headers, value: value
       state[payload.table][payload.field] = payload.value
-    },
-    showSnackbar(state, payload){
-      state.snackbar.status = true
-      state.snackbar.msg = payload.msg
-    },
-    RESETMASK(state,payload){
-      for(let key in state.mask){
-        state.mask[key] = []
-      }
     },
     resetStateTable(state,payload){
       let tableToBeReset = state[payload.table];
