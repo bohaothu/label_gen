@@ -95,18 +95,18 @@
                   </span>
                 </v-card-title>
                 <v-card-text class="px-0 pb-0 mb-0 fill-height">
-                  <v-row v-for="(item, idx) in labelFilters" :key="item.key" dense justify="space-between">
+                  <v-row v-for="item in this.$store.state.graphFilter" :key="item.id" dense justify="space-between">
                     <v-col cols="10">
                       <v-tooltip bottom>
                         <template v-slot:activator="{ on, attrs }">
                           <v-btn color="warning" style="width: 100%" small block depressed outlined v-bind="attrs" v-on="on" @click="filterOnClick(item)">
                             <div class="d-flex align-center" style="margin-left: -12px; width:100%; ">
-                            <span :style="{'color': getFilterColor(idx),'margin-top': '-0.2rem', 'font-size': '2rem'}">&bull;</span>
+                            <span :style="{'color': getFilterColor(item), 'margin-top': '-0.2rem', 'font-size': '2rem'}">&bull;</span>
                             <span style="text-align: left; width: 16rem; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;">{{ item.name }}</span>
                             </div>
                           </v-btn>
                         </template>
-                          <span>{{item.name}} {{getFilterItemCount(item.key)}}</span>
+                          <span>{{item.name}} {{getFilterItemCount(item)}}</span>
                       </v-tooltip>
                     </v-col>
                     <v-col cols="2">
@@ -164,7 +164,6 @@
       <v-card-text>
         <v-chart style="height: 400px; width: 100%;" :option="subChartDialog.options" autoresize/>
       </v-card-text>
-      
     </v-card>
   </div>
 </template>
@@ -196,7 +195,9 @@ export default {
   },
   created() {
     if(this.$store.state.builtin.isBuiltIn){
-      this.toggle.clusterDialog = true;
+      if(!Object.keys(this.$store.state.graphFilter).length){ // length > 0 means graphFilters already exist
+        this.toggle.clusterDialog = true;
+      }
     }
     if(!this.$store.state.df.items.length){
       this.snackbar.msg = "无数据，即将跳转回主页";
@@ -210,6 +211,29 @@ export default {
       this.options[i].series[0].data = this.$store.state.tsne[this.spaceTabs[i].tsne_type];
     }
     this.newFilter = [{ field: "Labels", operator: "Contain", value: [], key: this.$store.state.helper.guid()}];
+    if(Object.keys(this.$store.state.graphFilter).length){ // length > 0 means graphFilters already exist
+      const graphFilter = this.$store.state.graphFilter;
+      for(let filter_key in graphFilter){
+        let filter_name = graphFilter[filter_key].name;
+        let wanted_index = [];
+        console.log(filter_key)
+        graphFilter[filter_key].conditions.forEach(cond => {
+          cond.value.forEach(x => wanted_index.includes(x)? void(0):wanted_index.push(x));
+        });
+        console.log(wanted_index)
+        for(let i=0; i<this.spaceTabs.length; i++) {
+          let wanted_tsne_points = [];
+          wanted_index.forEach( x => {
+            let new_point = this.$store.state.tsne[this.spaceTabs[i].tsne_type][x];
+            new_point[2] = {name: filter_name, df_index: x, filter_id: filter_key};
+            wanted_tsne_points.push(new_point);
+          });
+          this.options[i].series.push({name: filter_name, type: "scatter", data: wanted_tsne_points,
+          filter_key: filter_key, df_indexs: wanted_index});
+          this.options[i].legend.data.push(filter_name);
+        }
+      }
+    }
   },
   data() {
     return {
@@ -237,8 +261,6 @@ export default {
         operator: { Labels: ["Contain","Not Contain"], Cluster: ["Kmeans"] },
         value: { Labels: this.$store.state.df.labels, Cluster: false }
       },
-      labelFilters: [],
-      labelFilterNames: [], // array of array, represent filter name of each data points
       formData: {
         figureField: "",
         figureType: ""
@@ -463,64 +485,11 @@ export default {
         .catch(err => console.error(err));
       }
     },
-    reloadWithNoLabel() {
-      if(this.$store.state.builtin.isBuiltIn){
-        this.isLoading.noLabel = true;
-        this.$store.dispatch('importDefaultDataset',{dataset: this.$store.state.builtin.dataset, nolabel: 1})
-        .then(x => {
-          if(x.success){
-            axios.get([this.$store.state.helper.apiAddr,"/builtin/cluster?dataset=",this.$store.state.builtin.dataset,"&nolabel=1"].join(""))
-            .then(res => res.data)
-            .then(x => {
-              for(let i=0; i<this.spaceTabs.length; i++){
-                let seriesLength = JSON.parse(JSON.stringify(this.options[i].series.length));
-                for(let j=1; j<seriesLength; j++){
-                  this.options[i].series.pop();
-                }
-              }
-              this.options[0].series[0].data=[];
-              this.options[0].series[0].data = this.$store.state.tsne.label;
-              this.labelFilters = [];
-              this.labelFilterNames = [];
-              this.newFilter = [{ field: "Labels", operator: "Contain", value: [], key: this.$store.state.helper.guid()}];
-              const clusterResult = x.cluster_result;
-              for(let [idx,item] of clusterResult.entries()){
-                let filter_id = this.$store.state.helper.guid();
-                let filter_name = "Cluster " + idx;
-                let clusterCondition = [{field: "Cluster", operator: "Kmeans", value: item, key: this.$store.state.helper.guid()}];
-                this.labelFilters.push({name: filter_name, conditions: clusterCondition, key: filter_id});
-                let wanted_tsne_points = [];
-                item.forEach( x => {
-                  let new_point = this.$store.state.tsne.label[x];
-                  new_point[2] = {name: filter_name, df_index: x, filter_id: filter_id};
-                  wanted_tsne_points.push(new_point);
-                  if(this.labelFilterNames[x]){
-                    if(!this.labelFilterNames[x].map(y => y.name).includes(filter_name)){
-                      this.labelFilterNames[x].push({name: filter_name, filter_id: filter_id});
-                    }
-                  }else{
-                    this.labelFilterNames[x] = [{name: filter_name, filter_id: filter_id}];
-                  }
-                  } );
-                this.options[0].series.push({name: filter_name, type: "scatter", data: wanted_tsne_points, filter_key: filter_id});
-                this.options[0].legend.data.push(filter_name);
-                this.isLoading.noLabel = false;
-                this.isFinished.noLabel = true;
-                this.$store.dispatch('noLabelDefaultDataset',{nolabel: true});
-              }
-            })
-            .catch(err => console.error(err))
-          }
-        })
-        .catch(err => console.error(err));
-      }
-    },
     spaceTabOnChange() {
       console.log("selcting: " + this.spaceTabs[this.spaceTab].tsne_type)
     },
     chartDebug() {
       console.log("options",this.options);
-      console.log(this.labelFilters)
     },
     loadCluster() {
       let startTime = Date.now();
@@ -534,21 +503,13 @@ export default {
             let filter_id = this.$store.state.helper.guid();
             let filter_name = "Cluster " + idx;
             let clusterCondition = [{field: "Cluster", operator: "Kmeans", value: item, key: this.$store.state.helper.guid()}];
-            this.labelFilters.push({name: filter_name, conditions: clusterCondition, key: filter_id});
+            this.$store.dispatch('pushFilter',{id: filter_id, name: filter_name, conditions: clusterCondition, field: "graphFilter"});
             for(let i=0; i<this.spaceTabs.length; i++) {
               let wanted_tsne_points = [];
               item.forEach( x => {
                 let new_point = this.$store.state.tsne[this.spaceTabs[i].tsne_type][x];
-                /*console.log(new_point)*/
                 new_point[2] = {name: filter_name, df_index: x, filter_id: filter_id};
                 wanted_tsne_points.push(new_point);
-                if(this.labelFilterNames[x]){
-                  if(!this.labelFilterNames[x].map(y => y.name).includes(filter_name)){
-                    this.labelFilterNames[x].push({name: filter_name, filter_id: filter_id});
-                  }
-                }else{
-                  this.labelFilterNames[x] = [{name: filter_name, filter_id: filter_id}];
-                }
               });
               this.options[i].series.push({name: filter_name, type: "scatter", data: wanted_tsne_points,
               filter_key: filter_id, df_indexs: JSON.parse(JSON.stringify(item))});
@@ -586,10 +547,15 @@ export default {
       })
       .then(this.toggle.subChartDialog = true)
     },
-    getFilterColor(filter_index){
-      let id_to_find = this.labelFilters[filter_index].key;
-      let color_index = this.options[0].series.findIndex(x => x.filter_key === id_to_find);
+    getFilterColor(filter_obj){
+      let color_index = this.options[0].series.findIndex(x => x.filter_key === filter_obj.id);
       return color_index? this.options[0].color[color_index]:this.options[0].color[0]
+    },
+    getFilterItemCount(filter_key){
+      let current_filter = this.options[0].series.filter(x => x.filter_key === filter_key);
+      if(current_filter.length){
+        return "(" + current_filter[0].data.length + ")";
+      }
     }
   },
   computed: {
@@ -626,14 +592,6 @@ export default {
       return function(idx){
           return this.labelFilterNames[idx].filter(x => this.labelFilters.map(y => y.key).includes(x.filter_id));
       };
-    },
-    getFilterItemCount(){
-      return function(filter_key){
-        const current_filter = this.options[0].series.filter(x => x.filter_key === filter_key);
-        if(current_filter.length){
-          return "(" + current_filter[0].data.length + ")";
-        }
-      }
     },
     checkNewFilterEmptyValues(){
       return this.newFilter.every(x => x.value.length === 0)

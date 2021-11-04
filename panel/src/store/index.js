@@ -4,17 +4,6 @@ import axios from 'axios'
 
 Vue.use(Vuex)
 
-const helperMethods = {
-  transStat(obj) {
-    let z=[]
-    for(let key of Object.keys(obj)){
-      z.push({feature_name: key, min: obj[key].min, max: obj[key].max,
-      median: obj[key].median, mean: obj[key].mean, std: obj[key].std, var: obj[key].var})
-    }
-    return z
-  }
-}
-
 const apiIP="127.0.0.1"
 const apiAddr="http://"+apiIP+":5001"
 
@@ -30,10 +19,11 @@ export default new Vuex.Store({
       label: [],
       feature: []
     },
+    graphFilter: {},
     builtin: {
       isBuiltIn: false,
       dataset: "",
-      noLabel: false
+      isClusterLoaded: false
     },
     helper: {
       apiAddr: apiAddr,
@@ -51,6 +41,15 @@ export default new Vuex.Store({
       let tableToBeReset = state[payload.table];
       for(let key in tableToBeReset){
         tableToBeReset[key] = [];
+      }
+    },
+    resetGraphFilter(state, payload){
+      state.graphFilter = {};
+    },
+    updateFilter(state, payload){
+      // action, field, id, conditions, name
+      if(payload.action === "push"){
+        state[payload.field][payload.id] = {conditions: payload.conditions, name: payload.name, id: payload.id};
       }
     }
   },
@@ -90,10 +89,8 @@ export default new Vuex.Store({
         context.commit("addToState",{table: "builtin", field: "dataset", value: payload.dataset});
         context.commit("addToState",{table: "builtin", field: "noLabel", value: payload.nolabel? true:false});
 
-        /*context.commit("addToState",{table: "tsne", field: "label", value: resTsneLabel.tsne});
-        context.commit("addToState",{table: "tsne", field: "feature", value: resTsneFeature.tsne});*/
-
         context.commit("resetStateTable",{table: "tsne"});
+        context.commit("resetGraphFilter");
 
         return {success: true};
       })
@@ -137,19 +134,15 @@ export default new Vuex.Store({
         context.commit("addToState", {table: "df", field: "items", value: responseUpload.data})
         context.commit("addToState", {table: "stat", field: "items", value: helperMethods.transStat(responseUpload.stat)})
         context.commit("addToState", {table: "df", field: "labels_count", value: responseUpload.labels_count})
-        context.commit("addToState",{table: "df", field: "labels", value: responseLabel})
-        context.commit("showSnackbar",{msg: res[0].data.message})
+        context.commit("addToState", {table: "df", field: "labels", value: responseLabel})
         return true
       })).catch(err => {
         console.error(err)
         return false
       })
     },
-    resetMask(context, payload){
-      context.commit("RESETMASK")
-    },
-    updateMask(context, payload){
-      context.commit("addToState", {table: "mask", field: payload.field, value: payload.value})
+    pushFilter(context, payload){
+      context.commit("updateFilter", {action: "push", id: payload.id, field: payload.field, conditions: payload.conditions, name: payload.name});
     }
   },
   modules: {
