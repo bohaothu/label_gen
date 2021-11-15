@@ -29,9 +29,12 @@ def hello_world():
 
 @app.route('/hello/echo')
 def hello_echo():
-  msg = request.args.get("msg")
-  print("Just received: ", msg)
-  return msg, 200
+  try:
+    msg = request.args.get("msg")
+    print("Just received: ", msg)
+    return msg, 200
+  except:
+    return "error due to missing arguments or unkown reasons", 400
 
 @app.route('/builtin/list')
 def builtin_list():
@@ -226,6 +229,27 @@ def builtin_search():
     df, df_y = df[wanted_mask], df_y[wanted_mask]
 
   return df[field_name].value_counts().to_json(orient="columns"), 200
+
+@app.route('/builtin/search/label')
+def builtin_search_label():
+  dataset_name=request.args.get("dataset")
+  query=request.args.get("query")
+
+  _, y_train, _, _ = load_dataset(dataset_name, 'train')
+
+  y_train = pd.DataFrame.sparse.from_spmatrix(y_train).apply(lambda x: x.to_numpy(),axis=1)
+  query = ujson.loads(query)
+
+  # multiply query with entities's label array element-wise
+  # if the result > 0, it means that the entitiy contain at least one of labels in query
+  mask = y_train.apply(lambda x1: True if np.sum(np.multiply(x1,query)) > 0 else False)
+
+  query_result = []
+
+  for i in range(len(mask)):
+    query_result.append(i) if mask[i] else None
+
+  return ujson.dumps({"query_result": query_result}), 200
 
 
 if __name__ == "__main__":
