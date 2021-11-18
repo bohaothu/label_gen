@@ -50,6 +50,8 @@ export default new Vuex.Store({
       // action, field, id, conditions, name
       if(payload.action === "push"){
         state[payload.field][payload.id] = {conditions: payload.conditions, name: payload.name, id: payload.id};
+      }else if(payload.action === "delete"){
+        delete state[payload.field][payload.id];
       }
     }
   },
@@ -120,29 +122,11 @@ export default new Vuex.Store({
     noLabelDefaultDataset(context, payload){
       context.commit("addToState",{table: "builtin", field: "noLabel", value: payload.nolabel});
     },
-    submitCsv(context, payload){
-      let formData = new FormData()
-      formData.append("file", payload.csvFile)
-      const requestUpload=axios.post(apiAddr+"/upload_csv", formData, {headers: {'Content-Type': 'multipart/form-data'}})
-      const requestLabel=axios.get(apiAddr+"/random/label", {params: {labels: payload.labels_num}})
-
-      return axios.all([requestUpload, requestLabel])
-      .then(axios.spread((...res) => {
-        const responseUpload= JSON.parse(res[0].data.csvResult)
-        const responseLabel= res[1].data
-        context.commit("addToState", {table: "df", field: "fields", value: responseUpload.schema.fields })
-        context.commit("addToState", {table: "df", field: "items", value: responseUpload.data})
-        context.commit("addToState", {table: "stat", field: "items", value: helperMethods.transStat(responseUpload.stat)})
-        context.commit("addToState", {table: "df", field: "labels_count", value: responseUpload.labels_count})
-        context.commit("addToState", {table: "df", field: "labels", value: responseLabel})
-        return true
-      })).catch(err => {
-        console.error(err)
-        return false
-      })
-    },
     pushFilter(context, payload){
       context.commit("updateFilter", {action: "push", id: payload.id, field: payload.field, conditions: payload.conditions, name: payload.name});
+    },
+    deleteFilter(context, payload){
+      context.commit("updateFilter", {action: "delete", id: payload.id, field: payload.field});
     }
   },
   modules: {
