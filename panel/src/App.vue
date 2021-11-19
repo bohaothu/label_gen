@@ -52,8 +52,7 @@ export default {
     nav: null,
     nav_items: [
       { title: 'Import Data', icon: 'mdi-view-dashboard', link: "/" },
-      { title: 'Label Space', icon: 'mdi-image', link: "/labelspace" },
-      { title: 'Debug', icon: 'mdi-help-box', link: "/about" },
+      { title: 'Visualization', icon: 'mdi-image', link: "/labelspace" },
     ]
   }),
 };

@@ -10,7 +10,7 @@ from werkzeug.utils import secure_filename
 from helper.helpers import gen_matrix, gen_label
 #from skmultilearn.dataset import load_dataset
 #from helper.dataset import load_dataset
-from helper.dataset_local import load_dataset, available_datasets
+from helper.dataset_v2 import load_dataset, available_datasets
 from sklearn.svm import SVC
 from sklearn.manifold import TSNE
 from sklearn.cluster import KMeans
@@ -250,7 +250,6 @@ def builtin_search_label():
     query_result.append(i) if mask[i] else None
 
   return ujson.dumps({"query_result": query_result}), 200
-
 
 if __name__ == "__main__":
   app.run(debug=True,host="127.0.0.1",port=5001)

@@ -1,6 +1,6 @@
 import os
 from helper.dataset import load_dataset
-from helper.dataset_local import get_package_dir, available_datasets
+from helper.dataset_v2 import get_package_dir, available_datasets
 import pickle
 
 dataset_storage_path = os.path.join(get_package_dir(), "..","dataset")
