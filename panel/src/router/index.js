@@ -14,6 +14,10 @@ const routes = [
     path: '/labelspace',
     name: 'LabelSpace',
     component: () => import('../views/LabelSpace.vue')
+  },
+  { path: '/overview',
+    name: 'Overview',
+    component: () => import('../views/Overview.vue')
   }
 ]
 

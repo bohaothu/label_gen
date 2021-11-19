@@ -1,7 +1,7 @@
 <template>
   <div>
     <v-container fluid>
-      <v-row align="center" justify="space-between" style="height: calc(100vh - 60px)">
+      <v-row align="center" justify="space-between" style="height: calc(100vh - 16px)">
         <v-col cols="12" md="8" class="fill-height d-flex flex-column">
           <v-card outlined class="mx-auto" style="height: 100%; width: 100%;">
             <v-card-text class="fill-height d-flex flex-column align-center justify-center rounded">
@@ -101,15 +101,18 @@ export default {
   mounted() {
     this.redrawGraph();
     this.setColorPalette();
-    this.$refs.mychart.chart.on("brushselected", (params) => {
+    if(Object.keys(this.$store.state.feature).length){
+      this.redrawGraph();
+      this.$refs.mychart.chart.on("brushselected", (params) => {
       let selected = params.batch[0].selected[0].dataIndex;
       selected = selected.map(x => this.option.series[0].data[x][2])
       if(selected.length){
         this.newGroupDialog.points = selected;
         this.newGroupDialog.toggle = true;
         this.$refs.mychart.dispatchAction({type: "brush", areas: []});
-      }
-    })
+        }
+      })
+    }
   },
   data() {
     return {
@@ -128,7 +131,7 @@ export default {
             return params.data[2];
           }},
         brush: { 
-          toolbox: ['rect', 'polygon', 'lineX', 'lineY', 'keep', 'clear'],
+          toolbox: ['rect', 'polygon', 'keep', 'clear'],
           throttleType: "debounce",
           throttleDelay: 1000
         },
@@ -197,7 +200,7 @@ export default {
         }
 
         this.option.series.push({type: "scatter", data: new_series_data, filter_id: filter.id, 
-        symbolSize: 10, itemStyle: { color: filter.color }});
+        symbolSize: 10, itemStyle: { color: filter.color }, name: filter.name});
       }
     },
     spaceTabOnChange() {
@@ -212,22 +215,13 @@ export default {
       points: points, color: color, id: id}})
       this.newGroupDialog.toggle = false;
 
-      let new_series_data = [];
-
-      for(let point of points){
-        new_series_data.push([this.$store.state.tsne_label[point].x,this.$store.state.tsne_label[point].y,this.$store.state.tsne_label[point].id])
-      }
-
-      this.option.series.push({type: "scatter", data: new_series_data, filter_id: id, 
-      symbolSize: 10, itemStyle: { color: color }});
+      this.redrawGraph();
     },
     deleteGroup(filter_id) {
       let targetIndex = this.option.series.findIndex(x => x.filter_id === filter_id);
       let targetColor = this.option.series[targetIndex].itemStyle.color;
-      /*this.option.series = this.option.series.filter(x => x.filter_id !== filter_id)*/
       this.$store.dispatch("removeGraphFilter",{table:"graphFilter", id: filter_id});
       this.colorPalette.notUsed.push(targetColor);
-      this.$forceUpdate();
       this.redrawGraph();
     }
   },
