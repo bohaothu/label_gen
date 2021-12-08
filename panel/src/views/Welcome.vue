@@ -1,23 +1,41 @@
 <template>
   <div>
-    <v-container fluid>
-    <v-row>
+    <v-container fluid class="pa-1">
+    <v-row dense>
       <v-col cols="12" md="6">
       <v-card class="px-4 pb-4 fill-height" elevation="1">
-          <v-card-title class="pl-1">
+          <v-card-title>
             选择内置数据集
-            <v-progress-circular v-if="isLoading.builtIn" class="ml-2" :size="24" indeterminate></v-progress-circular>
             <v-icon v-if="isFinished.builtIn" class="ml-2" color="green">mdi-check</v-icon>
           </v-card-title>
           <v-card-text>
-            <v-row>
-              <v-col><v-select :items="builtInDataset" v-model="builtInListSelect" label="数据集"></v-select></v-col>
+            <v-row> 
+              <v-col><v-select dense :items="builtInDataset" v-model="builtInListSelect" label="数据集"></v-select></v-col>
             </v-row>
           </v-card-text>
           <v-card-action>
             <div class="px-1 d-flex justify-space-between">
               <span class="pt-1 text-subtitle-1">{{ getBuiltInDetail }}</span>
-              <v-btn color="primary" @click="importBuiltIn">导入</v-btn>
+              <v-btn color="primary" @click="importBuiltIn" :loading="isLoading.builtIn" :disabled="!builtInListSelect">导入</v-btn>
+            </div>
+          </v-card-action>
+        </v-card>
+      </v-col>
+       <v-col cols="12" md="6">
+      <v-card class="px-4 pb-4 fill-height" elevation="1">
+          <v-card-title>
+            上传分类器
+            <v-icon v-if="isFinished.filter" class="ml-2" color="green">mdi-check</v-icon>
+          </v-card-title>
+          <v-card-text>
+            <v-row>
+              <v-col><v-file-input dense accept="application/json" @change="previewFile" v-model="filterFile"></v-file-input></v-col>
+            </v-row>
+          </v-card-text>
+          <v-card-action>
+            <div class="px-1 d-flex justify-space-between">
+              <span>&nbsp;</span>
+              <v-btn color="primary" @click="readFile" :loading="isLoading.filter" :disabled="!filterFile">导入</v-btn>
             </div>
           </v-card-action>
         </v-card>
@@ -37,15 +55,18 @@ export default {
     defaultDataset: [],
     builtInListSelect: null,
     isLoading: {
-      builtIn: false
+      builtIn: false,
+      filter: false
     },
     isFinished: {
-      builtIn: false
+      builtIn: false,
+      filter: false
     },
     snack: {
       msg: "",
       success: false
-    }
+    },
+    filterFile: null // JS File Object
   }),
   mounted() {
     axios.get(this.$store.state.helper.apiAddr+"/builtin/available")
@@ -58,24 +79,47 @@ export default {
       if(this.builtInListSelect){
         let startTime = Date.now();
         this.isLoading.builtIn = true;
+        this.$store.dispatch('resetAll');
         this.$store.dispatch('importBuiltIn',{dataset: this.builtInListSelect})
         .then(x => {
           if(x.success){
-            this.$store.dispatch('importBuiltIn',{dataset: this.builtInListSelect})
-            .then(x => {
-              if(x.success){
-                let elapsedTime = Date.now() - startTime;
-                this.snack.msg = "加载 "+this.builtInListSelect+" 成功，用时 "+ elapsedTime + " ms";
-                this.snack.success = true;
-                this.isLoading.builtIn = false;
-                this.isFinished.builtIn = true;
-              }
-            });
+            let elapsedTime = Date.now() - startTime;
+            this.snack.msg = "加载 "+this.builtInListSelect+" 成功，用时 "+ elapsedTime + " ms";
+            this.snack.success = true;
+            this.isLoading.builtIn = false;
+            this.isFinished.builtIn = true;
+            window.setTimeout(() => {
+              this.isFinished.builtIn = false;
+            }, 1000);
           }
         });
       }else{
         alert("请先选择数据集！")
       }
+    },
+    previewFile(event){
+      console.log(event);
+    },
+    readFile(){
+      if(this.filterFile){
+        this.isLoading.filter = true;
+        this.filterFile.text()
+        .then(file_text => {
+          let file_decoded = JSON.parse(file_text);
+          return this.$store.dispatch("importUploadFilter", {value: file_decoded.filters})
+        })
+        .then(x => {
+          if(x.success){
+            this.isLoading.filter = false;
+            this.isFinished.filter = true;
+            window.setTimeout(() => {
+              this.isFinished.filter = false;
+            }, 1000);
+          }
+        })
+      }
+      
+
     }
   },
   computed: {

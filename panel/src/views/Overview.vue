@@ -23,7 +23,7 @@
       <v-col cols="4">
         <v-card class="fill-height">
           <v-card-text>
-            <v-row align="start" justify="space-between" no-gutters stlye="height: 680px">
+            <v-row align="start" justify="space-between" no-gutters stlye="height: 720px">
               <v-col cols="8">
                 <v-row no-gutters style="margin-top: -4px; width: 150px">
                   <v-col cols="12" class="text-h6 mb-1">Features</v-col>
@@ -83,6 +83,11 @@ export default {
   provide: {
     [THEME_KEY]: "light"
   },
+  mounted() {
+    if(!Object.keys(this.$store.state.tsne_feature).length){
+      this.$store.dispatch('importTsne',{dataset: this.$store.state.dataset})
+    }
+  },
   data() {
     return {
       attrOption: {
@@ -94,8 +99,6 @@ export default {
         }]
       }
     }
-  },
-  mounted() {
   },
   methods: {
     
