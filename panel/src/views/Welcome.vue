@@ -69,7 +69,7 @@ export default {
     filterFile: null // JS File Object
   }),
   mounted() {
-    axios.get(this.$store.state.helper.apiAddr+"/builtin/available")
+    axios.get(this.$store.state.helper.apiAddr+"/available/list")
     .then(res => res.data)
     .then(x => this.defaultDataset = x)
     .catch(err => console.error(err))
@@ -77,22 +77,8 @@ export default {
   methods: {
     importBuiltIn() {
       if(this.builtInListSelect){
-        let startTime = Date.now();
-        this.isLoading.builtIn = true;
-        this.$store.dispatch('resetAll');
-        this.$store.dispatch('importBuiltIn',{dataset: this.builtInListSelect})
-        .then(x => {
-          if(x.success){
-            let elapsedTime = Date.now() - startTime;
-            this.snack.msg = "加载 "+this.builtInListSelect+" 成功，用时 "+ elapsedTime + " ms";
-            this.snack.success = true;
-            this.isLoading.builtIn = false;
-            this.isFinished.builtIn = true;
-            window.setTimeout(() => {
-              this.isFinished.builtIn = false;
-            }, 1000);
-          }
-        });
+        this.$store.dispatch('importBuiltIn',{dataset: this.builtInListSelect});
+        this.isFinished.builtIn = true;
       }else{
         alert("请先选择数据集！")
       }
@@ -124,12 +110,12 @@ export default {
   },
   computed: {
     builtInDataset() {
-      return this.defaultDataset.map(x => x.name)
+      return this.defaultDataset.map(x => x.dataset_name)
     },
     getBuiltInDetail() {
-      if(this.defaultDataset.find(x => x.name === this.builtInListSelect)){
-        let detail = this.defaultDataset.find(x => x.name === this.builtInListSelect);
-        return `${detail.instances} instances, ${detail.features} features, ${detail.labels} labels`
+      if(this.defaultDataset.find(x => x.dataset_name === this.builtInListSelect)){
+        let detail = this.defaultDataset.find(x => x.dataset_name === this.builtInListSelect);
+        return `${detail.features_count} features, ${detail.labels_count} labels`
       }else{
         return ""
       }

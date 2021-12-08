@@ -101,6 +101,7 @@ import { BarChart, ScatterChart } from "echarts/charts";
 import { BrushComponent, ToolboxComponent, DataZoomComponent, GridComponent, LegendComponent, TitleComponent, TooltipComponent } from "echarts/components";
 import VChart, { THEME_KEY, UPDATE_OPTIONS_KEY } from "vue-echarts";
 import { saveAs } from "file-saver";
+import axios from 'axios';
 
 use([
   BarChart,
@@ -126,6 +127,8 @@ export default {
   created() {
   },
   mounted() {
+    this.importTsne("labels")
+    /*
     if(!Object.keys(this.$store.state.tsne_feature).length){
       this.$store.dispatch('importTsne',{dataset: this.$store.state.dataset})
     }
@@ -148,6 +151,7 @@ export default {
         this.echartEvents.legendselected = params.selected;
       })
     }
+    */
   },
   data() {
     return {
@@ -197,8 +201,8 @@ export default {
       currentPoint: -1,
       spaceTab: 0,
       spaceTabs: [
-        { tab: "Label Space", icon: "mdi-tag", tsne_type: "label", tsne_table: "tsne_label"},
-        { tab: "Feature Space", icon: "mdi-pound", tsne_type: "feature", tsne_table: "tsne_feature"}
+        { tab: "Label Space", icon: "mdi-tag", tsne_type: "labels"},
+        { tab: "Feature Space", icon: "mdi-pound", tsne_type: "features"}
       ],
       quickFilter: [],
       snackbar: {
@@ -231,7 +235,17 @@ export default {
       this.colorPalette.used = usedColor;
       this.colorPalette.notUsed = this.colorPalette.notUsed.filter(x => !usedColor.includes(x));
     },
+    importTsne(tsne_type) {
+      axios.get(`${this.$store.state.helper.apiAddr}/tsne/${tsne_type}/${this.$store.state.dataset}/train`)
+      .then( res => res.data)
+      .then( x => {
+        this.option.series[0].data = x.result;
+      })
+    }, 
     redrawGraph() {
+      let current_tsne_type = this.spaceTabs[this.spaceTab].tsne_type;
+      this.importTsne(current_tsne_type);
+      /*
       let current_tsne_table = this.spaceTabs[this.spaceTab].tsne_table;
       this.option.series.splice(1); // only keep the first series
       this.option.series[0].data = Object.values(this.$store.state[current_tsne_table]).map(z => [z.x,z.y,z.id]);
@@ -253,6 +267,7 @@ export default {
       if(Object.keys(this.echartEvents.legendselected).length){
         this.option.legend.selected = this.echartEvents.legendselected;
       }
+      */
     },
     spaceTabOnChange() {
       this.redrawGraph();
