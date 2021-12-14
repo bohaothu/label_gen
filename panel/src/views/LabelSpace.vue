@@ -34,18 +34,18 @@
                 </span>
                </v-card-title>
                <v-card-text class="px-0 pb-0 mb-0 fill-height">
-                 <v-row v-for="item in this.$store.state.graphFilter" :key="item.id" dense justify="space-between">
+                 <v-row v-for="(item, item_id) in this.$store.state.graphFilter" :key="item_id" dense justify="space-between">
                     <v-col cols="11">
                       <v-tooltip bottom>
                         <template v-slot:activator="{ on, attrs }">
                           <v-btn color="warning" style="width: 100%" small block depressed outlined v-bind="attrs" v-on="on" @click="filterOnClick(item)">
                             <div class="d-flex align-center ml-4" style="width:100%;">
-                            <span :style="{'color': item.color, 'margin-top': '-0.2rem', 'font-size': '2rem'}">&bull;</span>
-                            <span style="text-align: left; width: 16rem; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;">{{ item.name }}</span>
+                            <span class="pl-1" :style="{'color': item.color, 'margin-top': '-0.2rem', 'font-size': '2rem'}">&bull;</span>
+                            <span style="text-align: left; width: 16rem; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;">{{ item.group_name }}</span>
                             </div>
                           </v-btn>
                         </template>
-                          <span>{{item.name}}</span>
+                          <span>{{item.points.length}}</span>
                       </v-tooltip>
                     </v-col>
                     <v-col cols="1">
@@ -125,9 +125,21 @@ export default {
     [UPDATE_OPTIONS_KEY]: true
   },
   created() {
+    this.redrawGraph();
   },
   mounted() {
-    this.importTsne("labels")
+    this.redrawGraph();
+    this.$refs.mychart.chart.on("brushselected", (params) => {
+      let selected = params.batch[0].selected[0].dataIndex;
+      selected = selected.map(x => this.option.series[0].data[x][2])
+      if(selected.length){
+        this.newGroupDialog.points = selected;
+        this.newGroupDialog.toggle = true;
+        this.$refs.mychart.dispatchAction({type: "brush", areas: []});
+      }else{
+        this.$refs.mychart.dispatchAction({type: "brush", areas: []});
+      }
+    })
     /*
     if(!Object.keys(this.$store.state.tsne_feature).length){
       this.$store.dispatch('importTsne',{dataset: this.$store.state.dataset})
@@ -136,17 +148,7 @@ export default {
     this.setColorPalette();
     if(Object.keys(this.$store.state.feature).length){
       this.redrawGraph();
-      this.$refs.mychart.chart.on("brushselected", (params) => {
-        let selected = params.batch[0].selected[0].dataIndex;
-        selected = selected.map(x => this.option.series[0].data[x][2])
-        if(selected.length){
-          this.newGroupDialog.points = selected;
-          this.newGroupDialog.toggle = true;
-          this.$refs.mychart.dispatchAction({type: "brush", areas: []});
-        }else{
-          this.$refs.mychart.dispatchAction({type: "brush", areas: []});
-        }
-      })
+      
       this.$refs.mychart.chart.on("legendselectchanged", (params) => {
         this.echartEvents.legendselected = params.selected;
       })
@@ -169,7 +171,7 @@ export default {
       option: { // option 0 for label space
         xAxis: { type: "value" },
         yAxis: { type: "value" },
-        legend: { y: "top", data: ["No Group"] },
+        legend: { y: "top", data: this.legendData },
         dataZoom: { type: "inside"},
         tooltip: {
           trigger: "item",
@@ -235,16 +237,39 @@ export default {
       this.colorPalette.used = usedColor;
       this.colorPalette.notUsed = this.colorPalette.notUsed.filter(x => !usedColor.includes(x));
     },
-    importTsne(tsne_type) {
-      axios.get(`${this.$store.state.helper.apiAddr}/tsne/${tsne_type}/${this.$store.state.dataset}/train`)
-      .then( res => res.data)
-      .then( x => {
-        this.option.series[0].data = x.result;
+    importTsneWithQuery(tsne_type, config){
+      return axios({
+        method: "post",
+        url: `/tsne/${tsne_type}/${this.$store.state.dataset}/train`,
+        baseURL: this.$store.state.helper.apiAddr,
+        headers: {"Content-Type": "application/json;charset=UTF-8"},
+        params: config.params,
+        data: config.data,
+        params: { nolabel: this.displayPreference.notShowZeroLabelPoint? 1:0 },
+        data: { points_to_keep: config.data.points_to_keep, points_to_drop: config.data.points_to_drop, filter_id: config.data.filter_id}
       })
-    }, 
+    },
     redrawGraph() {
       let current_tsne_type = this.spaceTabs[this.spaceTab].tsne_type;
-      this.importTsne(current_tsne_type);
+      this.importTsneWithQuery(current_tsne_type, {
+        params: { nolabel: this.displayPreference.notShowZeroLabelPoint? 1:0 },
+        data: { points_to_keep: [], points_to_drop: this.pointsToDrop }
+      }).then( res => res.data ) 
+      .then( x => this.option.series[0].data = x.result );
+      this.option.series.splice(1); // only keep the first series
+
+      for(let item in this.$store.state.graphFilter){
+        let group = this.$store.state.graphFilter[item];
+        this.importTsneWithQuery(current_tsne_type, {
+          params: { nolabel: this.displayPreference.notShowZeroLabelPoint? 1:0 },
+          data: { points_to_keep: group.points, points_to_drop: [], filter_id: item}
+        })
+        .then( res => res.data ) 
+        .then( seriesData => {
+          this.option.series.push({type: "scatter", data: seriesData.result, filter_id: seriesData.filter_id, 
+        symbolSize: 10, itemStyle: { color: group.color }, name: group.group_name});
+        })  
+      }
       /*
       let current_tsne_table = this.spaceTabs[this.spaceTab].tsne_table;
       this.option.series.splice(1); // only keep the first series
@@ -277,8 +302,8 @@ export default {
       let color = this.colorPalette.notUsed.shift();
       let id = this.$store.state.helper.guid();
       this.colorPalette.used.push(color);
-      this.$store.dispatch("addGraphFilter",{value: {name: this.newGroupDialog.name, 
-      points: points, color: color, id: id}})
+      this.$store.dispatch("addGraphFilter",{id: id, value: {group_name: this.newGroupDialog.name, 
+      points: points, color: color, type: "selected", dataset_name: this.$store.state.dataset}})
       this.newGroupDialog.toggle = false;
 
       this.redrawGraph();
@@ -315,23 +340,15 @@ export default {
     }
   },
   computed: {
-    labelCount() {
-      let z={};
-      for(let item in this.$store.state.label){
-        z[item] = Object.values( (({ id, ...o }) => o)(this.$store.state.label[item]) ).reduce((a, b) => a+b);
+    pointsToDrop() {
+      let z=[];
+      for(let item of Object.values(this.$store.state.graphFilter)){
+        item.points.forEach(x => z.includes(x)? void(0):z.push(x));
       }
       return z;
     },
-    labelCountRange() {
-      let arr = Object.values(this.labelCount);
-      let min = Math.min(...arr);
-      let max = Math.max(...arr);
-      return [min, max];
-    },
-    labelCountFilterResult() {
-      let min = this.displayPreference.notShowZeroLabelPoint? 1:0;
-      let max = this.labelCountRange[1];
-      return this.labelCountFilter(min,max);
+    legendData() {
+      return ["No Group"].concat(Object.values(this.$store.state.graphFilter).map(x => x.group_name));
     }
   }
 }

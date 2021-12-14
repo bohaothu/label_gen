@@ -16,7 +16,8 @@ export default new Vuex.Store({
         return  Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15);
       }
     },
-    dataset: ""
+    dataset: "birds",
+    graphFilter: {}
   },
   mutations: {
     addToTable(state, payload){
@@ -28,11 +29,17 @@ export default new Vuex.Store({
     },
     deleteArrayItemById(state, payload){
       state[payload.table] = state[payload.table].filter(x => x.id !== payload.id);
+    },
+    editGraphFilter(state, payload){
+      state.graphFilter[payload.id] = payload.value;
     }
   },
   actions: {
     importBuiltIn(context, payload){
       context.commit("addToTable",{table: "dataset", value: payload.dataset});
+    },
+    addGraphFilter(context, payload){
+      context.commit("editGraphFilter",{id: payload.id, value: payload.value});
     }
   },
   modules: {
