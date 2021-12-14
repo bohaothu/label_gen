@@ -25,22 +25,16 @@
                     </template>
                     <span>新建分组</span>
                   </v-tooltip>
-                  <v-tooltip bottom>
-                    <template v-slot:activator="{ on, attrs }">
-                      <v-btn icon color="secondary" v-bind="attrs" v-on="on" @click="saveFilter"><v-icon>mdi-content-save</v-icon></v-btn>
-                    </template>
-                    <span>保存分组</span>
-                  </v-tooltip>
                 </span>
                </v-card-title>
                <v-card-text class="px-0 pb-0 mb-0 fill-height">
-                 <v-row v-for="(item, item_id) in this.$store.state.graphFilter" :key="item_id" dense justify="space-between">
+                 <v-row v-for="(item, index) in graphFilters" :key="item._id.$oid" dense justify="space-between">
                     <v-col cols="11">
                       <v-tooltip bottom>
                         <template v-slot:activator="{ on, attrs }">
                           <v-btn color="warning" style="width: 100%" small block depressed outlined v-bind="attrs" v-on="on" @click="filterOnClick(item)">
                             <div class="d-flex align-center ml-4" style="width:100%;">
-                            <span class="pl-1" :style="{'color': item.color, 'margin-top': '-0.2rem', 'font-size': '2rem'}">&bull;</span>
+                            <span class="pl-1" :style="{'color': option.color[index], 'margin-top': '-0.2rem', 'font-size': '2rem'}">&bull;</span>
                             <span style="text-align: left; width: 16rem; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;">{{ item.group_name }}</span>
                             </div>
                           </v-btn>
@@ -49,7 +43,7 @@
                       </v-tooltip>
                     </v-col>
                     <v-col cols="1">
-                      <v-btn small icon @click="deleteGroup(item.id)"><v-icon>mdi-delete-forever</v-icon></v-btn>
+                      <v-btn small icon @click="deleteGroup(item._id.$oid)"><v-icon>mdi-delete-forever</v-icon></v-btn>
                     </v-col>
                   </v-row>
                </v-card-text>
@@ -125,7 +119,6 @@ export default {
     [UPDATE_OPTIONS_KEY]: true
   },
   created() {
-    this.redrawGraph();
   },
   mounted() {
     this.redrawGraph();
@@ -157,10 +150,8 @@ export default {
   },
   data() {
     return {
-      colorPalette: {
-        notUsed: ['#a1c9f4', '#ffb482', '#8de5a1', '#ff9f9b', '#d0bbff', '#debb9b', '#fab0e4', '#cfcfcf', '#fffea3', '#b9f2f0'],
-        used: []
-      },
+      dataSplit: "train",
+      graphFilters: [],
       displayPreference: {
         notShowZeroLabelPoint: false,
         symbolSizeByLabelCount: false
@@ -173,6 +164,7 @@ export default {
         yAxis: { type: "value" },
         legend: { y: "top", data: this.legendData },
         dataZoom: { type: "inside"},
+        color: ['#a1c9f4', '#ffb482', '#8de5a1', '#ff9f9b', '#d0bbff', '#debb9b', '#fab0e4', '#cfcfcf', '#fffea3', '#b9f2f0'],
         tooltip: {
           trigger: "item",
           position: "top",
@@ -232,63 +224,41 @@ export default {
     }
   },
   methods: {
-    setColorPalette() {
-      let usedColor = this.$store.state.graphFilter.map(x => x.color);
-      this.colorPalette.used = usedColor;
-      this.colorPalette.notUsed = this.colorPalette.notUsed.filter(x => !usedColor.includes(x));
-    },
-    importTsneWithQuery(tsne_type, config){
+    loadGroupFilters(){
       return axios({
-        method: "post",
-        url: `/tsne/${tsne_type}/${this.$store.state.dataset}/train`,
-        baseURL: this.$store.state.helper.apiAddr,
-        headers: {"Content-Type": "application/json;charset=UTF-8"},
-        params: config.params,
-        data: config.data,
-        params: { nolabel: this.displayPreference.notShowZeroLabelPoint? 1:0 },
-        data: { points_to_keep: config.data.points_to_keep, points_to_drop: config.data.points_to_drop, filter_id: config.data.filter_id}
+        method: "get",
+        url: `/group/load/${this.$store.state.dataset}/train`,
+        baseURL: this.$store.state.helper.apiAddr
       })
     },
+    importTsneWithQuery(tsne_type, params){
+      return axios.get(`${this.$store.state.helper.apiAddr}/tsne/${tsne_type}/${this.$store.state.dataset}/train`,
+      { params: params })
+    },
     redrawGraph() {
+      console.log(this.graphFilters)
       let current_tsne_type = this.spaceTabs[this.spaceTab].tsne_type;
-      this.importTsneWithQuery(current_tsne_type, {
-        params: { nolabel: this.displayPreference.notShowZeroLabelPoint? 1:0 },
-        data: { points_to_keep: [], points_to_drop: this.pointsToDrop }
-      }).then( res => res.data ) 
+      this.importTsneWithQuery(current_tsne_type, 
+        { nolabel: this.displayPreference.notShowZeroLabelPoint? 1:0 })
+      .then( res => res.data ) 
       .then( x => this.option.series[0].data = x.result );
       this.option.series.splice(1); // only keep the first series
 
-      for(let item in this.$store.state.graphFilter){
-        let group = this.$store.state.graphFilter[item];
+      this.loadGroupFilters()
+      .then(res => res.data )
+      .then( group => {
+        this.graphFilters = group.groups;
+        for(let item of this.graphFilters){
         this.importTsneWithQuery(current_tsne_type, {
-          params: { nolabel: this.displayPreference.notShowZeroLabelPoint? 1:0 },
-          data: { points_to_keep: group.points, points_to_drop: [], filter_id: item}
+          nolabel: this.displayPreference.notShowZeroLabelPoint? 1:0,
+          filter_id: item._id.$oid
+        }).then( res => res.data )
+        .then(x => {
+          this.option.series.push({type: "scatter", data: x.result, filter_id: x.filter_id, symbolSize: 10, name: item.group_name})
         })
-        .then( res => res.data ) 
-        .then( seriesData => {
-          this.option.series.push({type: "scatter", data: seriesData.result, filter_id: seriesData.filter_id, 
-        symbolSize: 10, itemStyle: { color: group.color }, name: group.group_name});
-        })  
       }
+      })
       /*
-      let current_tsne_table = this.spaceTabs[this.spaceTab].tsne_table;
-      this.option.series.splice(1); // only keep the first series
-      this.option.series[0].data = Object.values(this.$store.state[current_tsne_table]).map(z => [z.x,z.y,z.id]);
-      this.option.series[0].data = this.option.series[0].data.filter(x => this.labelCountFilterResult.includes(x[2]));
-      for(let filter of this.$store.state.graphFilter){
-        let new_series_data = [];
-
-        for(let point of filter.points){
-          if(this.labelCountFilterResult.includes(point)){
-            new_series_data.push([this.$store.state[current_tsne_table][point].x,this.$store.state[current_tsne_table][point].y,this.$store.state[current_tsne_table][point].id]);
-            this.option.series[0].data = this.option.series[0].data.filter(x => x[2] !== point);
-          }        
-        }
-
-        this.option.series.push({type: "scatter", data: new_series_data, filter_id: filter.id, 
-        symbolSize: this.getSymbolSize, itemStyle: { color: filter.color }, name: filter.name});
-        this.option.legend.data.push(filter.name);
-      }
       if(Object.keys(this.echartEvents.legendselected).length){
         this.option.legend.selected = this.echartEvents.legendselected;
       }
@@ -298,31 +268,31 @@ export default {
       this.redrawGraph();
     },
     submitNewGroup() {
-      let points = this.newGroupDialog.points;
-      let color = this.colorPalette.notUsed.shift();
-      let id = this.$store.state.helper.guid();
-      this.colorPalette.used.push(color);
-      this.$store.dispatch("addGraphFilter",{id: id, value: {group_name: this.newGroupDialog.name, 
-      points: points, color: color, type: "selected", dataset_name: this.$store.state.dataset}})
-      this.newGroupDialog.toggle = false;
-
-      this.redrawGraph();
+      axios({
+        method: "post",
+        url: `/group/add`,
+        baseURL: this.$store.state.helper.apiAddr,
+        headers: {"Content-Type": "application/json;charset=UTF-8"},
+        data: { dataset_name: this.$store.state.dataset, dataset_type: "train",
+        group_name: this.newGroupDialog.name, group_type: "selected", points: this.newGroupDialog.points}
+      }).then(() => {
+        this.newGroupDialog.name = "";
+        this.newGroupDialog.points = [];
+        this.newGroupDialog.toggle = false;
+        this.redrawGraph();
+      })   
     },
-    deleteGroup(filter_id) {
-      let targetIndex = this.option.series.findIndex(x => x.filter_id === filter_id);
-      let targetColor = this.option.series[targetIndex].itemStyle.color;
-      this.$store.dispatch("removeGraphFilter",{table:"graphFilter", id: filter_id});
-      this.colorPalette.notUsed.push(targetColor);
-      this.redrawGraph();
-    },
-    labelCountFilter(min, max){
-      let z=[];
-      for(let item in this.labelCount){
-        if(this.labelCount[item] >= min && this.labelCount[item] <= max){
-          z.push(item);
-        }
-      }
-      return z;
+    deleteGroup(group_id) {
+      axios({
+        method: "post",
+        url: `/group/remove`,
+        baseURL: this.$store.state.helper.apiAddr,
+        headers: {"Content-Type": "application/json;charset=UTF-8"},
+        data: { dataset_name: this.$store.state.dataset, dataset_type: "train", group_id: group_id}
+      }).then(() => {
+        this.redrawGraph();
+      })
+      
     },
     notShowZeroLabelPointOnChange() {
       this.redrawGraph();
@@ -332,21 +302,9 @@ export default {
     },
     getSymbolSize(val, params) {
       return this.displayPreference.symbolSizeByLabelCount? 10 + 2 * this.labelCount[val[2]]:10;
-    },
-    saveFilter() {
-      let outputContent = {dataset_name: this.$store.state.dataset, filters: this.$store.state.graphFilter}
-      let outputBlob = new Blob([JSON.stringify(outputContent)], {type: "text/plain; charset=utf-8"});
-      saveAs(outputBlob,"output.json");
     }
   },
   computed: {
-    pointsToDrop() {
-      let z=[];
-      for(let item of Object.values(this.$store.state.graphFilter)){
-        item.points.forEach(x => z.includes(x)? void(0):z.push(x));
-      }
-      return z;
-    },
     legendData() {
       return ["No Group"].concat(Object.values(this.$store.state.graphFilter).map(x => x.group_name));
     }
