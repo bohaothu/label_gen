@@ -3,12 +3,14 @@ from flask_cors import CORS
 from flask_pymongo import PyMongo
 import ujson
 import numpy as np
+import pandas as pd
 from bson import json_util
 from bson.objectid import ObjectId
+from nltk.corpus import stopwords
 
 app = Flask(__name__)
 CORS(app)
-mongo = PyMongo(app, uri="mongodb://localhost:27018")
+mongo = PyMongo(app, uri="mongodb://localhost:27017")
 
 @app.route("/hello/<string:dfname>/<string:dftype>")
 def hello(dfname, dftype):
@@ -47,24 +49,81 @@ def tsne(dfname, dftype, tsnetype):
                 
     # if filter_id exist, add that filter into query            
     filter_result = col_group.find_one({"_id": ObjectId(filter_id) })
+    
+    # when filter_id is given in post body, filter_result will not be None
+    if filter_result: # filter_result != None
+        if tsnetype != "labels_combination":
+            if filter_result["group_type"] == "selected" or filter_result["group_type"] == "selected_combination":
+                final_query = {"_id": {"$in": filter_result["points"], "$nin": nolabel_arr}}
+            elif filter_result["group_type"] == "query":
+                query_docs = db["labels"].find(filter_result["query"])
+                query_result = [ query_doc["_id"] for query_doc in query_docs ]
+                final_query = {"_id": {"$in": query_result, "$nin": nolabel_arr}}
+        elif tsnetype == "labels_combination":
+            if filter_result["group_type"] == "selected" or filter_result["group_type"] == "selected_combination":
+                final_query = {"_member": {"$in": filter_result["points"], "$nin": nolabel_arr}}
+            elif filter_result["group_type"] == "query":
+                query_docs = db["labels"].find(filter_result["query"])
+                query_result = [ query_doc["_id"] for query_doc in query_docs ]
+                final_query = {"_member": {"$in": query_result, "$nin": nolabel_arr}}
 
-    if filter_result:
-        docs=db[f"tsne_{tsnetype}"].find({"_id": {"$in": filter_result["points"], "$nin": nolabel_arr}})
-    else:
+        docs=db[f"tsne_{tsnetype}"].find(final_query)
+
+    # when filter_id is not given, search all group and exculde those points in result 
+    else: # filter_result == None
         nogroup = set()
         docs_group = col_group.find({})
-        for doc_group in docs_group:
-            filter_points = ujson.loads(json_util.dumps(doc_group))["points"]
+        for doc_group in docs_group: # if there is no group, this loop will not execute
+            if doc_group["group_type"] == "selected" or doc_group["group_type"] == "selected_combination":
+                filter_points = doc_group["points"]
+            elif doc_group["group_type"] == "query":
+                query_docs = db["labels"].find(doc_group["query"])
+                filter_points = [query_doc["_id"] for query_doc in query_docs]
             nogroup = nogroup.union(set(filter_points))
-        docs=db[f"tsne_{tsnetype}"].find({"_id": {"$nin": list(set(nolabel_arr).union(nogroup))}})
+        if tsnetype != "labels_combination":
+            docs=db[f"tsne_{tsnetype}"].find({"_id": {"$nin": list(set(nolabel_arr).union(nogroup))}}).limit(500)
+        elif tsnetype == "labels_combination":
+            docs=db[f"tsne_{tsnetype}"].find({"_member": {"$nin": list(set(nolabel_arr).union(nogroup))}}).limit(500) 
 
     res = []
     for doc in docs:
+        doc = ujson.loads(json_util.dumps(doc))
         res.append([doc["v1"],doc["v2"],doc["_id"]])
+
     resp = ujson.dumps({"dataset": dfname, "dataset_type": dftype,
     "tsne_type": tsnetype, "result": res, "filter_id": filter_id})
 
     return resp
+
+@app.route("/heatmap/<string:dfname>/<string:dftype>")
+def heatmap(dfname,dftype):
+    filter_id = request.args.get("filter_id")
+    db = mongo.cx[f"{dfname}_{dftype}"]
+
+    # read X from db
+    X_docs = db["features"].find({})
+    X_df = [doc for doc in X_docs]
+    X_df = pd.DataFrame(X_df, index=[x["_id"] for x in X_df]).drop("_id",axis=1)
+    # drop stop words
+    sw = stopwords.words('english')
+    tobedrop = set(X_df.columns) & set(sw)
+    X_df = X_df.drop(columns=tobedrop)
+    # keep the most 400 elements
+    X_df = X_df[X_df.sum().sort_values(ascending=False)[:400].index]
+
+    # read y from db
+    y_docs = db["labels"].find({})
+    y_df = [doc for doc in y_docs]
+    y_df = pd.DataFrame(y_df, index=[x["_id"] for x in y_df]).drop("_id",axis=1)
+
+    # calculate dot
+    echart_data = []
+    for col, feat in enumerate(X_df.columns):
+        for row, labl in enumerate(y_df.columns):
+            echart_data.append([int(row),int(col), np.dot(X_df[feat].to_numpy(), y_df[labl].to_numpy())])
+  
+    return ujson.dumps({"dataset": dfname, "dataset_type": dftype, "result": echart_data, "filter_id": filter_id})
+
 
 @app.route("/example/<string:dfname>/<string:dftype>/<string:exid>", methods=["GET","POST"])
 def example_details(dfname, dftype, exid):
@@ -73,13 +132,35 @@ def example_details(dfname, dftype, exid):
     del label_arr["_id"]
     return {"id": exid, "label": label_arr, "label_sum": sum(label_arr.values())}
 
+@app.route("/group/list/<string:dfname>/<string:dftype>")
+def list_group_name(dfname, dftype):
+    db = mongo.cx[f"{dfname}_{dftype}"]
+    docs = db["graph_filters"].find({})
+    try:
+        res = [{"id": str(doc["_id"]), "group_name": doc["group_name"]} for doc in docs]
+    except:
+        res = None
+    return ujson.dumps(res)
+
 @app.route("/group/load/<string:dfname>/<string:dftype>")
 def load_group(dfname, dftype):
     db = mongo.cx[f"{dfname}_{dftype}"]
     docs = db["graph_filters"].find({})
     graph_filters = []
     for doc in docs:
-        graph_filters.append(ujson.loads(json_util.dumps(doc)))
+        if doc["group_type"] == "selected":
+            item = ujson.loads(json_util.dumps(doc))
+        elif doc["group_type"] == "query":
+            item = ujson.loads(json_util.dumps(doc))
+            query_result = []
+            query_docs = db["labels"].find(item["query"])
+            print(item["query"])
+            for query_doc in query_docs:
+                query_result.append(query_doc["_id"])
+            item["points"] = query_result
+        elif doc["group_type"] == "selected_combination":
+            item = ujson.loads(json_util.dumps(doc))
+        graph_filters.append(item)
     return {"dataset_name": dfname, "dataset_type": dftype, "groups": graph_filters}
 
 @app.route("/group/add",methods=["POST"])
@@ -90,9 +171,23 @@ def add_group():
     group_name = request_body["group_name"]
     group_type = request_body["group_type"]
 
+    db = mongo.cx[f"{dfname}_{dftype}"]
+
     if group_type == "selected":
-        points = request_body["points"]
-        db = mongo.cx[f"{dfname}_{dftype}"]
+        points = request_body["points"]   
+        db["graph_filters"].insert_one({"dataset_name": dfname, "dataset_type": dftype,
+    "group_name": group_name, "group_type": group_type, "points": points})
+    elif group_type == "query":
+        query = request_body["query"]
+        db["graph_filters"].insert_one({"dataset_name": dfname, "dataset_type": dftype,
+    "group_name": group_name, "group_type": group_type, "query": query})
+    elif group_type == "selected_combination":
+        comb_ids = request_body["points"]
+        comb_ids = [ObjectId(x) for x in comb_ids]
+        points_doc = db["tsne_labels_combination"].find({"_id":{"$in": comb_ids}})
+        points = []
+        for doc in points_doc:
+            points += doc["_member"]
         db["graph_filters"].insert_one({"dataset_name": dfname, "dataset_type": dftype,
     "group_name": group_name, "group_type": group_type, "points": points})
 
@@ -120,9 +215,40 @@ def available_list():
         feature_counts = sum(doc["features_count"].values())
         res.append({"dataset_name": doc["dataset_name"],
         "features_count": feature_counts,
-        "labels_count": doc["labels_count"]})
+        "labels_count": len(doc["label_names"])})
     resp = ujson.dumps(res)
     return resp
+
+@app.route("/available/labels/<string:dfname>")
+def get_label_names(dfname):
+    db = mongo.cx["config"]
+    doc = db["avaliable_dataset"].find_one({"dataset_name": dfname})
+    return {"labels": doc["label_names"]}
+
+@app.route("/feature/count_100", methods=["POST"])
+def get_feature_count_100():
+    request_body = ujson.loads(request.data)
+    dfname = request_body["dataset_name"]
+    dftype = request_body["dataset_type"]
+    try:
+        group_id = request_body["group_id"]
+        #query = request_body["query"]
+    except KeyError:
+        group_id = "none"
+        #query = None
+    db = mongo.cx[f"cache_{dfname}_{dftype}"]
+    
+    if group_id == "none":
+        docs = db[group_id].find({}).sort("count",-1).limit(100)
+    else:
+        top100_docs = db["none"].find({}).sort("count",-1).limit(100)
+        top100_words = [ doc["key"] for doc in top100_docs ]
+        docs = db[group_id].find({"key": {"$in": top100_words}})
+    
+    res=[{"key": doc["key"], "count": doc["count"]} for doc in docs ]
+    
+    return {"group_id": group_id, "result": res}
+    
 
 if __name__ == "__main__":
     app.run(debug=True, host="127.0.0.1", port=5001)

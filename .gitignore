@@ -1,4 +1,6 @@
 mongo/db
+db/
+log/
 # Created by https://www.toptal.com/developers/gitignore/api/jupyternotebooks,python,flask,vue,macos,windows
 # Edit at https://www.toptal.com/developers/gitignore?templates=jupyternotebooks,python,flask,vue,macos,windows
 

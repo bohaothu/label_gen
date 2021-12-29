@@ -16,8 +16,7 @@ export default new Vuex.Store({
         return  Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15);
       }
     },
-    dataset: "birds",
-    graphFilter: {}
+    dataset: "bibtex"
   },
   mutations: {
     addToTable(state, payload){

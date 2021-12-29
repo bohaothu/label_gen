@@ -15,6 +15,10 @@ const routes = [
     name: 'LabelSpace',
     component: () => import('../views/LabelSpace.vue')
   },
+  { path: '/groupview',
+    name: 'Groupview',
+    component: () => import('../views/Groupview.vue')
+  },
   { path: '/overview',
     name: 'Overview',
     component: () => import('../views/Overview.vue')
