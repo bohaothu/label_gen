@@ -1,23 +1,30 @@
 <template>
   <div>
     <v-container fluid class="pa-1">
-      <v-row align="stretch" justify="space-between" style="height: calc(100vh - 16px)" dense>
-        <v-col cols="3" class="fill-height d-flex flex-column">
-          <v-card outlined class="fill-height px-4 pb-4 mx-auto mb-2 flex-grow-1" style="width: 100%">
-            <v-card-text>
-            </v-card-text>
-          </v-card>
-        </v-col>
+      <v-row align="stretch" justify="space-between" style="height: calc(100vh - 16px)" dense>  
         <v-col cols="9" class="fill-height d-flex flex-column">
           <v-row dense justify="space-between">
             <v-col cols="12">
               <v-card outlined class="fill-height px-4 pb-4 mx-auto mb-2 flex-grow-1" style="width: 100%">
-            <v-card-text>
-              world
-            </v-card-text>
-          </v-card>
+                <v-card-text class="d-flex flex-column align-center justify-center rounded pb-0" style="height: calc(100% - 72px)">
+                  <v-chart style="height: 100%; width: 100%;" :option="option" autoresize />              
+                </v-card-text>
+              </v-card>
             </v-col>
           </v-row>
+        </v-col>
+        <v-col cols="3" class="fill-height d-flex flex-column">
+          <v-card outlined class="fill-height px-4 pb-4 mx-auto mb-2 flex-grow-1" style="width: 100%">
+            <v-card-text class="px-0 pb-0 mb-0 fill-height">
+              <v-row v-for="item in graphFilters" :key="item._id.$oid" dense justify="space-between">
+                <v-col cols="12">
+                <v-btn color="warning" style="width: 100%" small block depressed outlined @click="filterOnClick(item._id.$oid)">
+                  {{ item.group_name }}
+                </v-btn>
+                </v-col>
+              </v-row>
+            </v-card-text>
+          </v-card>
         </v-col>
       </v-row>
     </v-container>
@@ -27,9 +34,18 @@
 <script>
 import { use } from "echarts/core";
 import { CanvasRenderer } from "echarts/renderers";
-import { BarChart, ScatterChart } from "echarts/charts";
+import { HeatmapChart } from "echarts/charts";
+import { GridComponent, TooltipComponent, VisualMapComponent } from 'echarts/components'
 import VChart, { THEME_KEY, UPDATE_OPTIONS_KEY } from "vue-echarts";
 import axios from 'axios';
+
+use([
+  HeatmapChart,
+  CanvasRenderer,
+  GridComponent,
+  VisualMapComponent,
+  TooltipComponent
+]);
 
 export default {
   name: "GroupView",
@@ -41,46 +57,71 @@ export default {
     [UPDATE_OPTIONS_KEY]: true
   },
   created() {
-    axios({
-      method: "get",
-      url: `/group/list/${this.$store.state.dataset}/train`,
-      baseURL: this.$store.state.helper.apiAddr
-    }).then(res => res.data)
-    .then(x => this.groupList = x)
   },
   mounted() {
-    axios({
-      method: "get",
-      url: `/group/list/${this.$store.state.dataset}/train`,
-      baseURL: this.$store.state.helper.apiAddr
-    }).then(res => res.data)
-    .then(x => this.groupList = x)
-    .then(() => {
-      axios({
-      method: "post",
-      url: `/feature/count_100`,
-      baseURL: this.$store.state.helper.apiAddr,
-      data: { dataset_name: this.$store.state.dataset, dataset_type: "train"}
-      }).then(res => res.data)
-      .then(x => this.featureCount.push(x))
-
-      for(let group of this.groupList){
-      axios({
-      method: "post",
-      url: `/feature/count_100`,
-      baseURL: this.$store.state.helper.apiAddr,
-      data: { dataset_name: this.$store.state.dataset, dataset_type: "train", group_id: group.id}
-      }).then(res => res.data)
-      .then(x=> this.featureCount.push(x))
-      }
+    this.redrawGraph();
+    this.loadGroupFilters()
+    .then( res => res.data )
+    .then( res => {
+      this.graphFilters = res.groups;
     })
   },
   data: () => ({
-    featureCount: [],
-    groupList: []
+    graphFilters: [],
+    option: {
+      xAxis: { 
+        type: "category",
+        data: [], 
+        splitArea: { show: true},
+        axisLabel: { interval: 0}
+      },
+      yAxis: {
+        type: "category",
+        data: [],
+        splitArea: { show: true} },
+      tooltip: {
+        formatter: (params) => {
+          return `${params.data[0]}<br>${params.data[1]}<br>${params.data[2]}`
+        }
+      },
+      grid: { height: '80%', top: '10%' },
+      visualMap: {
+      min: 20,
+      max: 200,
+      calculable: true,
+      realtime: false,
+      },
+      series: [{
+        type: "heatmap",
+        data: [],
+
+      }]
+    }
   }),
   methods: {
-
+    loadGroupFilters(){
+      return axios({
+        method: "get",
+        url: `/group/load/${this.$store.state.dataset}/train`,
+        baseURL: this.$store.state.helper.apiAddr
+      })
+    },
+    redrawGraph(oid){
+      axios({
+      method: "get",
+      url: `/heatmap/${this.$store.state.dataset}/train`,
+      baseURL: this.$store.state.helper.apiAddr,
+      params: {filter_id: oid? oid:null}
+      }).then( res => res.data)
+      .then( res => {
+        this.option.xAxis.data = res.echart_x;
+        this.option.yAxis.data = res.echart_y;
+        this.option.series[0].data = res.echart_data;
+      })
+    },
+    filterOnClick(oid){
+      this.redrawGraph(oid);
+    }
   }
 }
 </script>

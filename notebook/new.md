@@ -12,3 +12,9 @@
 ## milestones
 + At the end of May: first prototype
 + June: try more dataset
+
+## group
+feature -> group -> label
+select label -> label & group's connection
+1. label vs group
+2. group vs feature

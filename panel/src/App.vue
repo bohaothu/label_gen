@@ -27,8 +27,8 @@ export default {
     nav: null,
     nav_items: [
       { title: 'Import Data', icon: 'mdi-view-dashboard', link: "/" },
-      { title: 'Overview', icon: 'mdi-chart-bar', link: "/overview" },
       { title: 'Visualization', icon: 'mdi-image', link: "/labelspace" },
+      { title: 'Heatmap', icon: 'mdi-chart-bar', link: "/groupview" },
     ]
   }),
 };

@@ -7,6 +7,7 @@ import pandas as pd
 from bson import json_util
 from bson.objectid import ObjectId
 from nltk.corpus import stopwords
+from sklearn.metrics import normalized_mutual_info_score
 
 app = Flask(__name__)
 CORS(app)
@@ -97,11 +98,22 @@ def tsne(dfname, dftype, tsnetype):
 
 @app.route("/heatmap/<string:dfname>/<string:dftype>")
 def heatmap(dfname,dftype):
-    filter_id = request.args.get("filter_id")
+    filter_id = request.args.get("filter_id") if request.args.get("filter_id") else "null"
     db = mongo.cx[f"{dfname}_{dftype}"]
 
+    if filter_id != "null":
+        doc_group = db["graph_filters"].find_one({"_id": {"$eq": ObjectId(filter_id)}})
+
+        if doc_group["group_type"] == "selected" or doc_group["group_type"] == "selected_combination":
+            doc_query = {"_id": {"$in": doc_group["points"]}}
+        elif doc_group["group_type"] == "query":
+            query_docs = db["labels"].find(doc_group["query"])
+            doc_query = {"_id" : {"$in": [query_doc["_id"] for query_doc in query_docs]} }
+    elif filter_id == "null":
+        doc_query = {}
+
     # read X from db
-    X_docs = db["features"].find({})
+    X_docs = db["features"].find(doc_query)
     X_df = [doc for doc in X_docs]
     X_df = pd.DataFrame(X_df, index=[x["_id"] for x in X_df]).drop("_id",axis=1)
     # drop stop words
@@ -112,17 +124,21 @@ def heatmap(dfname,dftype):
     X_df = X_df[X_df.sum().sort_values(ascending=False)[:400].index]
 
     # read y from db
-    y_docs = db["labels"].find({})
+    y_docs = db["labels"].find(doc_query)
     y_df = [doc for doc in y_docs]
     y_df = pd.DataFrame(y_df, index=[x["_id"] for x in y_df]).drop("_id",axis=1)
 
     # calculate dot
     echart_data = []
-    for col, feat in enumerate(X_df.columns):
-        for row, labl in enumerate(y_df.columns):
-            echart_data.append([int(row),int(col), np.dot(X_df[feat].to_numpy(), y_df[labl].to_numpy())])
+    for feat in X_df.columns:
+        for labl in y_df.columns:
+            echart_data.append({"feature": feat, "label": labl, "dot": np.dot(X_df[feat].to_numpy(), y_df[labl].to_numpy())})
+    echart_data = pd.DataFrame(echart_data).sort_values("dot").tail(1000)
+    echart_x = list(set(echart_data["feature"]))
+    echart_y = list(set(echart_data["label"]))
   
-    return ujson.dumps({"dataset": dfname, "dataset_type": dftype, "result": echart_data, "filter_id": filter_id})
+    return ujson.dumps({"dataset": dfname, "dataset_type": dftype, "echart_x": echart_x,
+    "echart_y": echart_y, "echart_data": echart_data.values.tolist(), "filter_id": filter_id})
 
 
 @app.route("/example/<string:dfname>/<string:dftype>/<string:exid>", methods=["GET","POST"])
@@ -221,9 +237,11 @@ def available_list():
 
 @app.route("/available/labels/<string:dfname>")
 def get_label_names(dfname):
-    db = mongo.cx["config"]
-    doc = db["avaliable_dataset"].find_one({"dataset_name": dfname})
-    return {"labels": doc["label_names"]}
+    db = mongo.cx[f"{dfname}_train"]
+    doc = db["labels"].find_one({})
+    label_names = list(doc.keys())
+    label_names.remove("_id")
+    return {"labels": label_names}
 
 @app.route("/feature/count_100", methods=["POST"])
 def get_feature_count_100():
